@@ -332,16 +332,14 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\Projet2Eq1.cydsn\main_cm4.c" />
-</OpenDocs>
+<OpenDocs />
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="881, 260" SelectedTabbedMdiWindow="c226d532-ca10-47de-be2f-4a9003efc501"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f22d5f23-dea6-4133-85aa-ba5843a4e98e" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="c226d532-ca10-47de-be2f-4a9003efc501" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="973, 260" SelectedTabbedMdiWindow="f22d5f23-dea6-4133-85aa-ba5843a4e98e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f22d5f23-dea6-4133-85aa-ba5843a4e98e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
