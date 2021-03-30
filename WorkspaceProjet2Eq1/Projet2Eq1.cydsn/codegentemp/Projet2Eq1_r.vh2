@@ -1,5 +1,5 @@
 -- Project:   Projet2Eq1
--- Generated: 03/29/2021 16:59:50
+-- Generated: 03/30/2021 15:25:17
 -- PSoC Creator  4.4
 
 ENTITY Projet2Eq1 IS
@@ -15,8 +15,11 @@ ENTITY Projet2Eq1 IS
         CY_EINK_DispBusy(0)_PAD : IN std_ulogic;
         CY_EINK_Ssel(0)_PAD : OUT std_ulogic;
         SW2(0)_PAD : IN std_ulogic;
-        GreenLED(0)_PAD : OUT std_ulogic;
-        PWM_OUT(0)_PAD : OUT std_ulogic);
+        \UART:tx(0)_PAD\ : OUT std_ulogic;
+        \UART:rx(0)_PAD\ : IN std_ulogic;
+        \MAX_I2C:scl(0)_PAD\ : INOUT std_ulogic;
+        \MAX_I2C:sda(0)_PAD\ : INOUT std_ulogic;
+        MAX_power(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VBACKUP OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDD_NS OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CSD OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -33,7 +36,6 @@ ENTITY Projet2Eq1 IS
 END Projet2Eq1;
 
 ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
-    SIGNAL ADC_IN(0)__PA : bit;
     SIGNAL CPUSS_swj_swclk_tclk : bit;
     SIGNAL CPUSS_swj_swdio_tms : bit;
     SIGNAL CY_CPUSS_SWJ_SWCLK_TCLK(0)__PA : bit;
@@ -63,7 +65,7 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     ATTRIBUTE global_signal OF ClockBlock_PeriClk : SIGNAL IS true;
     SIGNAL ClockBlock_SlowClk : bit;
     SIGNAL ClockBlock_WCO : bit;
-    SIGNAL GreenLED(0)__PA : bit;
+    SIGNAL MAX_power(0)__PA : bit;
     SIGNAL Net_22 : bit;
     SIGNAL Net_23 : bit;
     SIGNAL Net_24 : bit;
@@ -71,41 +73,14 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     SIGNAL Net_3 : bit;
     SIGNAL Net_32 : bit;
     SIGNAL Net_4 : bit;
-    SIGNAL Net_504 : bit;
-    SIGNAL Net_505 : bit;
-    SIGNAL Net_506 : bit;
-    SIGNAL Net_507 : bit;
-    SIGNAL Net_508_ff11 : bit;
-    ATTRIBUTE global_signal OF Net_508_ff11 : SIGNAL IS true;
-    SIGNAL Net_510 : bit;
-    SIGNAL Net_518 : bit;
-    SIGNAL Net_700_ff12 : bit;
-    ATTRIBUTE global_signal OF Net_700_ff12 : SIGNAL IS true;
-    SIGNAL Net_728 : bit;
-    SIGNAL Net_741 : bit;
-    SIGNAL Net_742_0 : bit;
-    SIGNAL Net_742_1 : bit;
-    SIGNAL Net_742_2 : bit;
-    SIGNAL Net_742_3 : bit;
-    SIGNAL Net_743 : bit;
-    SIGNAL Net_744_0 : bit;
-    SIGNAL Net_744_1 : bit;
-    SIGNAL Net_744_10 : bit;
-    SIGNAL Net_744_11 : bit;
-    SIGNAL Net_744_2 : bit;
-    SIGNAL Net_744_3 : bit;
-    SIGNAL Net_744_4 : bit;
-    SIGNAL Net_744_5 : bit;
-    SIGNAL Net_744_6 : bit;
-    SIGNAL Net_744_7 : bit;
-    SIGNAL Net_744_8 : bit;
-    SIGNAL Net_744_9 : bit;
-    SIGNAL Net_745 : bit;
-    SIGNAL PWM_OUT(0)__PA : bit;
+    SIGNAL Net_700_ff11 : bit;
+    ATTRIBUTE global_signal OF Net_700_ff11 : SIGNAL IS true;
+    SIGNAL Net_782 : bit;
+    SIGNAL Net_783 : bit;
+    SIGNAL Net_788 : bit;
+    SIGNAL Net_789 : bit;
+    SIGNAL Net_790 : bit;
     SIGNAL SW2(0)__PA : bit;
-    SIGNAL \ADC:Net_423\ : bit;
-    SIGNAL \ADC:Net_428_ff49\ : bit;
-    ATTRIBUTE global_signal OF \ADC:Net_428_ff49\ : SIGNAL IS true;
     SIGNAL \CY_EINK_SPIM:Net_216\ : bit;
     SIGNAL \CY_EINK_SPIM:Net_488\ : bit;
     SIGNAL \CY_EINK_SPIM:Net_489\ : bit;
@@ -120,6 +95,24 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     SIGNAL \CY_EINK_SPIM:sclk_m_wire\ : bit;
     SIGNAL \CY_EINK_Timer:Net_1\ : bit;
     SIGNAL \CY_EINK_Timer:Net_2\ : bit;
+    SIGNAL \MAX_I2C:Net_1053\ : bit;
+    SIGNAL \MAX_I2C:Net_1062\ : bit;
+    SIGNAL \MAX_I2C:Net_162\ : bit;
+    SIGNAL \MAX_I2C:Net_163\ : bit;
+    SIGNAL \MAX_I2C:clock_wire_ff1\ : bit;
+    ATTRIBUTE global_signal OF \MAX_I2C:clock_wire_ff1\ : SIGNAL IS true;
+    SIGNAL \MAX_I2C:intr_wire\ : bit;
+    SIGNAL \\\MAX_I2C:scl(0)\\__PA\ : bit;
+    SIGNAL \\\MAX_I2C:sda(0)\\__PA\ : bit;
+    SIGNAL \UART:Net_1172\ : bit;
+    SIGNAL \UART:Net_161\ : bit;
+    SIGNAL \UART:Net_847_ff2\ : bit;
+    ATTRIBUTE global_signal OF \UART:Net_847_ff2\ : SIGNAL IS true;
+    SIGNAL \UART:intr_wire\ : bit;
+    SIGNAL \UART:rts_wire\ : bit;
+    SIGNAL \\\UART:rx(0)\\__PA\ : bit;
+    SIGNAL \\\UART:tx(0)\\__PA\ : bit;
+    SIGNAL \UART:tx_wire\ : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -158,21 +151,25 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     ATTRIBUTE Location OF CY_EINK_Ssel(0) : LABEL IS "P12[3]";
     ATTRIBUTE lib_model OF SW2(0) : LABEL IS "iocell13";
     ATTRIBUTE Location OF SW2(0) : LABEL IS "P0[4]";
-    ATTRIBUTE lib_model OF GreenLED(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF GreenLED(0) : LABEL IS "P1[1]";
-    ATTRIBUTE lib_model OF PWM_OUT(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF PWM_OUT(0) : LABEL IS "P6[2]";
-    ATTRIBUTE lib_model OF ADC_IN(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF ADC_IN(0) : LABEL IS "P10[6]";
+    ATTRIBUTE lib_model OF \UART:tx(0)\ : LABEL IS "iocell14";
+    ATTRIBUTE Location OF \UART:tx(0)\ : LABEL IS "P5[1]";
+    ATTRIBUTE lib_model OF \UART:rx(0)\ : LABEL IS "iocell15";
+    ATTRIBUTE Location OF \UART:rx(0)\ : LABEL IS "P5[0]";
+    ATTRIBUTE lib_model OF \MAX_I2C:scl(0)\ : LABEL IS "iocell16";
+    ATTRIBUTE Location OF \MAX_I2C:scl(0)\ : LABEL IS "P9[0]";
+    ATTRIBUTE lib_model OF \MAX_I2C:sda(0)\ : LABEL IS "iocell17";
+    ATTRIBUTE Location OF \MAX_I2C:sda(0)\ : LABEL IS "P9[1]";
+    ATTRIBUTE lib_model OF MAX_power(0) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF MAX_power(0) : LABEL IS "P9[2]";
     ATTRIBUTE Location OF \CY_EINK_SPIM:SCB\ : LABEL IS "F(SCB,6)";
     ATTRIBUTE Location OF \CY_EINK_SPIM:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(47)]";
     ATTRIBUTE Location OF \CY_EINK_Timer:TCPWM\ : LABEL IS "F(TCPWM,0)";
     ATTRIBUTE lib_model OF \Status_SW2:sts:sts_reg\ : LABEL IS "statuscell1";
     ATTRIBUTE Location OF \Status_SW2:sts:sts_reg\ : LABEL IS "U(1,5)";
-    ATTRIBUTE Location OF \PWM:TCPWM\ : LABEL IS "F(TCPWM,1)";
-    ATTRIBUTE Location OF \ADC:IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(138)]";
-    ATTRIBUTE Location OF \ADC:SAR\ : LABEL IS "F(SARADC,0)";
-    ATTRIBUTE Location OF adc_int : LABEL IS "[IntrContainer=(0)][IntrId=(122)]";
+    ATTRIBUTE Location OF \UART:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
+    ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,5)";
+    ATTRIBUTE Location OF \MAX_I2C:SCB\ : LABEL IS "F(SCB,2)";
+    ATTRIBUTE Location OF \MAX_I2C:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(43)]";
     COMPONENT CLK_GEN
         PORT (
             gen_clk_in_0 : IN std_ulogic;
@@ -502,38 +499,6 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
             out_clock_en : IN std_ulogic;
             out_reset : IN std_ulogic);
     END COMPONENT;
-    COMPONENT SARADC
-        PORT (
-            dsi_sar_sample_done : OUT std_ulogic;
-            dsi_sar_chan_id_valid : OUT std_ulogic;
-            dsi_sar_data_valid : OUT std_ulogic;
-            tr_sar_out : OUT std_ulogic;
-            dsi_sar_data_0 : OUT std_ulogic;
-            dsi_sar_data_1 : OUT std_ulogic;
-            dsi_sar_data_2 : OUT std_ulogic;
-            dsi_sar_data_3 : OUT std_ulogic;
-            dsi_sar_data_4 : OUT std_ulogic;
-            dsi_sar_data_5 : OUT std_ulogic;
-            dsi_sar_data_6 : OUT std_ulogic;
-            dsi_sar_data_7 : OUT std_ulogic;
-            dsi_sar_data_8 : OUT std_ulogic;
-            dsi_sar_data_9 : OUT std_ulogic;
-            dsi_sar_data_10 : OUT std_ulogic;
-            dsi_sar_data_11 : OUT std_ulogic;
-            dsi_sar_chan_id_0 : OUT std_ulogic;
-            dsi_sar_chan_id_1 : OUT std_ulogic;
-            dsi_sar_chan_id_2 : OUT std_ulogic;
-            dsi_sar_chan_id_3 : OUT std_ulogic;
-            dsi_sar_cfg_st_sel_0 : IN std_ulogic;
-            dsi_sar_cfg_st_sel_1 : IN std_ulogic;
-            dsi_sar_cfg_average : IN std_ulogic;
-            dsi_sar_cfg_differential : IN std_ulogic;
-            dsi_sar_sw_negvref : IN std_ulogic;
-            dsi_sar_data_hilo_sel : IN std_ulogic;
-            tr_sar_in : IN std_ulogic;
-            clock : IN std_ulogic;
-            interrupt : OUT std_ulogic);
-    END COMPONENT;
     COMPONENT SCB
         PORT (
             clock : IN std_ulogic;
@@ -608,9 +573,10 @@ BEGIN
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
             ff_div_0 => open,
-            ff_div_49 => \ADC:Net_428_ff49\,
-            ff_div_11 => Net_700_ff12,
-            ff_div_12 => Net_508_ff11,
+            ff_div_1 => open,
+            ff_div_2 => \MAX_I2C:clock_wire_ff1\,
+            ff_div_11 => Net_700_ff11,
+            ff_div_5 => \UART:Net_847_ff2\,
             ff_div_6 => \CY_EINK_SPIM:Net_847_ff0\,
             periclk_App => periclk_App);
 
@@ -1327,7 +1293,7 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    GreenLED:logicalport
+    \UART:tx\:logicalport
         GENERIC MAP(
             cy_registers => "",
             drive_mode => "110",
@@ -1335,7 +1301,7 @@ BEGIN
             hotswap_needed => "0",
             i2c_mode => "0",
             ibuf_enabled => "0",
-            id => "0113321b-4a37-46f6-8407-2f8646c68756",
+            id => "c781e74d-6404-46c3-b3a1-2ad1bd292865/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f",
             init_dr_st => "1",
             input_sync => "0",
             intr_mode => "00",
@@ -1362,20 +1328,20 @@ BEGIN
             out_clken_mode => 1,
             out_rst_inv => 0);
 
-    GreenLED(0):iocell
+    \UART:tx(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "GreenLED",
+            logicalport => "\UART:tx\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => GreenLED(0)__PA,
+            pa_out => \\\UART:tx(0)\\__PA\,
             oe => open,
-            pin_input => Net_518,
-            pad_out => GreenLED(0)_PAD,
-            pad_in => GreenLED(0)_PAD,
+            pin_input => \UART:tx_wire\,
+            pad_out => \UART:tx(0)_PAD\,
+            pad_in => \UART:tx(0)_PAD\,
             in_clock => open,
             in_clock_en => open,
             in_reset => open,
@@ -1383,71 +1349,15 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    PWM_OUT:logicalport
-        GENERIC MAP(
-            cy_registers => "",
-            drive_mode => "110",
-            drive_strength => "0",
-            hotswap_needed => "0",
-            i2c_mode => "0",
-            ibuf_enabled => "0",
-            id => "a61270bc-07ec-447d-ac9e-34cfe85c30e9",
-            init_dr_st => "1",
-            input_sync => "0",
-            intr_mode => "00",
-            io_voltage => "",
-            max_frequency => "100",
-            oe_conn => "0",
-            oe_sync => "0",
-            output_conn => "1",
-            output_current_cap => "8",
-            output_sync => "0",
-            pin_aliases => "",
-            pin_mode => "B",
-            sio_grp_cnt => 0,
-            slew_rate => "0",
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0);
-
-    PWM_OUT(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "PWM_OUT",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => PWM_OUT(0)__PA,
-            oe => open,
-            pin_input => Net_518,
-            pad_out => PWM_OUT(0)_PAD,
-            pad_in => PWM_OUT(0)_PAD,
-            in_clock => open,
-            in_clock_en => open,
-            in_reset => open,
-            out_clock => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    ADC_IN:logicalport
+    \UART:rx\:logicalport
         GENERIC MAP(
             cy_registers => "",
             drive_mode => "000",
             drive_strength => "0",
             hotswap_needed => "0",
             i2c_mode => "0",
-            ibuf_enabled => "0",
-            id => "c31afa66-62ec-4b78-ac12-7eade03c206c",
+            ibuf_enabled => "1",
+            id => "c781e74d-6404-46c3-b3a1-2ad1bd292865/b7e8018e-1ef7-49c0-b5a5-61641a03e31c",
             init_dr_st => "1",
             input_sync => "0",
             intr_mode => "00",
@@ -1459,7 +1369,7 @@ BEGIN
             output_current_cap => "8",
             output_sync => "0",
             pin_aliases => "",
-            pin_mode => "A",
+            pin_mode => "B",
             sio_grp_cnt => 0,
             slew_rate => "0",
             use_annotation => "0",
@@ -1474,17 +1384,185 @@ BEGIN
             out_clken_mode => 1,
             out_rst_inv => 0);
 
-    ADC_IN(0):iocell
+    \UART:rx(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "ADC_IN",
+            logicalport => "\UART:rx\",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => ADC_IN(0)__PA,
+            pa_out => \\\UART:rx(0)\\__PA\,
             oe => open,
+            fb => \UART:Net_1172\,
+            pad_in => \UART:rx(0)_PAD\,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \MAX_I2C:scl\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "100",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "1",
+            id => "781ea064-1910-4d76-9eee-088b0e38337a/69c3b5e8-b094-4d65-b96b-9f4f3a9a8641",
+            init_dr_st => "1",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "",
+            pin_mode => "B",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \MAX_I2C:scl(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\MAX_I2C:scl\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => \\\MAX_I2C:scl(0)\\__PA\,
+            oe => open,
+            fb => Net_788,
+            pin_input => open,
+            pad_in => \MAX_I2C:scl(0)_PAD\,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \MAX_I2C:sda\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "100",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "1",
+            id => "781ea064-1910-4d76-9eee-088b0e38337a/2aab8a93-e7dd-4bd4-8210-42652cd079c5",
+            init_dr_st => "1",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "",
+            pin_mode => "B",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \MAX_I2C:sda(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\MAX_I2C:sda\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => \\\MAX_I2C:sda(0)\\__PA\,
+            oe => open,
+            fb => Net_789,
+            pin_input => open,
+            pad_in => \MAX_I2C:sda(0)_PAD\,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    MAX_power:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "110",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "0",
+            id => "a61270bc-07ec-447d-ac9e-34cfe85c30e9",
+            init_dr_st => "0",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "",
+            pin_mode => "B",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    MAX_power(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "MAX_power",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => MAX_power(0)__PA,
+            oe => open,
+            pad_in => MAX_power(0)_PAD,
             in_clock => open,
             in_clock_en => open,
             in_reset => open,
@@ -1531,7 +1609,7 @@ BEGIN
             exact_width => 0,
             width => 16)
         PORT MAP(
-            clock => Net_700_ff12,
+            clock => Net_700_ff11,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1560,76 +1638,72 @@ BEGIN
             status_1 => open,
             status_0 => Net_32);
 
-    \PWM:TCPWM\:TCPWM
-        GENERIC MAP(
-            cy_registers => "",
-            exact_width => 0,
-            width => 16)
-        PORT MAP(
-            clock => Net_508_ff11,
-            capture => '0',
-            count => '1',
-            reload => '0',
-            stop => '0',
-            start => '0',
-            tr_underflow => Net_506,
-            tr_compare_match => Net_507,
-            tr_overflow => Net_505,
-            line_compl => Net_510,
-            line => Net_518,
-            interrupt => Net_504);
-
-    \ADC:IRQ\:interrupt
+    \UART:SCB_IRQ\:interrupt
         GENERIC MAP(
             cy_registers => "",
             deepsleep_required => 0,
             int_type => "10")
         PORT MAP(
-            interrupt => \ADC:Net_423\,
+            interrupt => \UART:intr_wire\,
             clock => ClockBlock_PeriClk);
 
-    \ADC:SAR\:SARADC
+    \UART:SCB\:SCB
         GENERIC MAP(
             cy_registers => "",
-            edge_trigger => 0)
+            master => 0,
+            mode => 2,
+            requires_io_preconfigure => 0)
         PORT MAP(
-            dsi_sar_sample_done => Net_741,
-            dsi_sar_chan_id_valid => Net_743,
-            dsi_sar_data_valid => Net_745,
-            tr_sar_out => Net_728,
-            dsi_sar_data_11 => Net_744_11,
-            dsi_sar_data_10 => Net_744_10,
-            dsi_sar_data_9 => Net_744_9,
-            dsi_sar_data_8 => Net_744_8,
-            dsi_sar_data_7 => Net_744_7,
-            dsi_sar_data_6 => Net_744_6,
-            dsi_sar_data_5 => Net_744_5,
-            dsi_sar_data_4 => Net_744_4,
-            dsi_sar_data_3 => Net_744_3,
-            dsi_sar_data_2 => Net_744_2,
-            dsi_sar_data_1 => Net_744_1,
-            dsi_sar_data_0 => Net_744_0,
-            dsi_sar_chan_id_3 => Net_742_3,
-            dsi_sar_chan_id_2 => Net_742_2,
-            dsi_sar_chan_id_1 => Net_742_1,
-            dsi_sar_chan_id_0 => Net_742_0,
-            dsi_sar_cfg_st_sel_1 => open,
-            dsi_sar_cfg_st_sel_0 => open,
-            dsi_sar_cfg_average => open,
-            dsi_sar_cfg_differential => open,
-            dsi_sar_sw_negvref => open,
-            dsi_sar_data_hilo_sel => open,
-            tr_sar_in => open,
-            clock => \ADC:Net_428_ff49\,
-            interrupt => \ADC:Net_423\);
+            clock => \UART:Net_847_ff2\,
+            uart_rx => \UART:Net_1172\,
+            uart_tx => \UART:tx_wire\,
+            uart_rts => \UART:rts_wire\,
+            uart_cts => open,
+            spi_clk => open,
+            spi_select_3 => open,
+            spi_select_2 => open,
+            spi_select_1 => open,
+            spi_select_0 => open,
+            spi_mosi => open,
+            spi_miso => open,
+            interrupt => \UART:intr_wire\,
+            tr_tx_req => Net_783,
+            tr_rx_req => Net_782,
+            tr_i2c_scl_filtered => \UART:Net_161\);
 
-    adc_int:interrupt
+    \MAX_I2C:SCB\:SCB
+        GENERIC MAP(
+            cy_registers => "",
+            master => 1,
+            mode => 0,
+            requires_io_preconfigure => 1)
+        PORT MAP(
+            clock => \MAX_I2C:clock_wire_ff1\,
+            uart_rx => open,
+            uart_tx => \MAX_I2C:Net_1062\,
+            uart_rts => \MAX_I2C:Net_1053\,
+            uart_cts => open,
+            i2c_scl => Net_788,
+            i2c_sda => Net_789,
+            spi_clk => open,
+            spi_select_3 => open,
+            spi_select_2 => open,
+            spi_select_1 => open,
+            spi_select_0 => open,
+            spi_mosi => open,
+            spi_miso => open,
+            interrupt => \MAX_I2C:intr_wire\,
+            tr_tx_req => \MAX_I2C:Net_162\,
+            tr_rx_req => \MAX_I2C:Net_163\,
+            tr_i2c_scl_filtered => Net_790);
+
+    \MAX_I2C:SCB_IRQ\:interrupt
         GENERIC MAP(
             cy_registers => "",
             deepsleep_required => 0,
             int_type => "10")
         PORT MAP(
-            interrupt => Net_728,
+            interrupt => \MAX_I2C:intr_wire\,
             clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

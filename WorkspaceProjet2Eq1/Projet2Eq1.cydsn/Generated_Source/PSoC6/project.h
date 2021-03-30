@@ -24,7 +24,6 @@
 #include "cy_lvd.h"
 #include "cy_profile.h"
 #include "cy_prot.h"
-#include "cy_sar.h"
 #include "cy_scb_common.h"
 #include "cy_scb_i2c.h"
 #include "cy_scb_ezi2c.h"
@@ -112,11 +111,11 @@
 #include "CY_EINK_Timer.h"
 #include "Status_SW2.h"
 #include "Clock_2.h"
-#include "PWM.h"
-#include "PWM_CLOCK.h"
-#include "ADC.h"
+#include "UART.h"
+#include "MAX_I2C.h"
 #include "CY_EINK_SPIM_SCBCLK.h"
-#include "ADC_intSarClock.h"
+#include "UART_SCBCLK.h"
+#include "MAX_I2C_SCBCLK.h"
 
 /*[]*/
 

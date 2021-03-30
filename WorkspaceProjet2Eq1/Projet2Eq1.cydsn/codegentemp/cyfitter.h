@@ -20,31 +20,36 @@
 #include "cyfitter_gpio.h"
 #include "cyfitter_sysint.h"
 
-/* ADC */
-#define ADC_intSarClock__DIV_IDX 1
-#define ADC_intSarClock__DIV_NUM 1
-#define ADC_intSarClock__DIV_TYPE CY_SYSCLK_DIV_8_BIT
-#define ADC_SAR__HW SAR
-#define ADC_SAR__IDX 0
-#define ADC_SAR__TR_SAR_IN TRIG6_OUT_PASS_TR_SAR_IN
-
-/* PWM */
-#define PWM_CLOCK__DIV_IDX 8
-#define PWM_CLOCK__DIV_NUM 0
-#define PWM_CLOCK__DIV_TYPE CY_SYSCLK_DIV_16_BIT
-#define PWM_TCPWM__CNT_HW TCPWM0_CNT1
-#define PWM_TCPWM__CNT_IDX 1u
-#define PWM_TCPWM__HW TCPWM0
-#define PWM_TCPWM__IDX 0u
+/* UART */
+#define UART_SCB__HW SCB5
+#define UART_SCB__IDX 5
+#define UART_SCB__SS0_POSITION 0u
+#define UART_SCB__SS1_POSITION 1u
+#define UART_SCB__SS2_POSITION 2u
+#define UART_SCB__SS3_POSITION 3u
+#define UART_SCBCLK__DIV_IDX 2
+#define UART_SCBCLK__DIV_NUM 2
+#define UART_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* Clock_2 */
 #define Clock_2__DIV_IDX 28
 #define Clock_2__DIV_NUM 0
 #define Clock_2__DIV_TYPE CY_SYSCLK_DIV_24_5_BIT
 
+/* MAX_I2C */
+#define MAX_I2C_SCB__HW SCB2
+#define MAX_I2C_SCB__IDX 2
+#define MAX_I2C_SCB__SS0_POSITION 0u
+#define MAX_I2C_SCB__SS1_POSITION 1u
+#define MAX_I2C_SCB__SS2_POSITION 2u
+#define MAX_I2C_SCB__SS3_POSITION 3u
+#define MAX_I2C_SCBCLK__DIV_IDX 1
+#define MAX_I2C_SCBCLK__DIV_NUM 1
+#define MAX_I2C_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
+
 /* EINK_Clock */
-#define EINK_Clock__DIV_IDX 9
-#define EINK_Clock__DIV_NUM 1
+#define EINK_Clock__DIV_IDX 8
+#define EINK_Clock__DIV_NUM 0
 #define EINK_Clock__DIV_TYPE CY_SYSCLK_DIV_16_BIT
 
 /* Status_SW2 */
