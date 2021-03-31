@@ -13,12 +13,27 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\main_cm4.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\TopDesign">
 <ExpandedNodeIds>
 <v>Projet2Eq1</v>
 <v>Projet2Eq1\Projet2Eq1</v>
+<v>Projet2Eq1\Projet2Eq1\TopDesign</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)</v>
+<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files</v>
+<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files\FreeRTOSConfig.h</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUI_X_RTOS.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.h</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.h</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6\pdl\cmsis\include</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6\pdl\devices\psoc6</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6\pdl\devices\psoc6\include</v>
+<v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6\pdl\devices\psoc6\include\ip</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Projet2Eq1</v>
@@ -32,6 +47,8 @@
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM MDK Generic</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files</v>
+<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files\debug.h</v>
+<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files\FreeRTOSConfig.h</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Images</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
@@ -40,8 +57,14 @@
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\main_cm4.c</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
 <v>Projet2Eq1\Projet2Eq1\Shared Files</v>
-<v>Projet2Eq1\Projet2Eq1\Generated_Source</v>
-<v>Projet2Eq1\CE223727_EmWin_EInk_Display.pdf</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUI_X_RTOS.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.h</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\LCDConf.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\LCDConf.h</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.h</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\system_psoc6.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -99,13 +122,15 @@
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\GUI_X.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\GUI_X_RTOS.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\GUIConf.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\LCDConf.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\Status_SW2.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Projet2Eq1.elf</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Projet2Eq1.hex</v>
@@ -118,6 +143,7 @@
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_INIT.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\croutine.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
@@ -154,15 +180,25 @@
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\Cypress Logo Full Color_PNG_1bpp.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\GUI_X.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\event_groups.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\GUI_X_RTOS.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\GUIConf.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\heap_1.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\LCDConf.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\list.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\pervasive_eink_hardware_driver.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\port.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\queue.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\Status_SW2.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\stream_buffer.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\tasks.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Listing Files\timers.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.elf</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.hex</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.map</v>
@@ -197,6 +233,7 @@
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
 <v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -239,14 +276,16 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Projet2Eq1.cydsn\main_cm4.c" />
+</OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="973, 260" SelectedTabbedMdiWindow="f22d5f23-dea6-4133-85aa-ba5843a4e98e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f22d5f23-dea6-4133-85aa-ba5843a4e98e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="881, 476" SelectedTabbedMdiWindow="81cbb999-9861-4986-8620-dd295ba33243"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f22d5f23-dea6-4133-85aa-ba5843a4e98e" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="81cbb999-9861-4986-8620-dd295ba33243" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -1,6 +1,6 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|95813742-37ce-47f3-b07b-f5e4d8dc6901
-C:\Users\Ariane\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|d2910030-be08-45d0-8c87-50db9072a639
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|226c0e06-746d-47ea-ba76-1d59eb6c81c6
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a8c57a90-f82d-48f0-9226-00c494b4e441
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4158d223-d39e-4267-87f2-6fdf5988371d
-C:\Users\Ariane\Documents\PSoC Creator\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cyprj|d4e76cf2-5a69-4647-97c9-3eb1fc39eb23
+C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cyprj|0e31f538-7b19-4471-8cfa-5bd6069b4708
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|49a6e1c1-bef2-4a38-9aec-e189f41d94fa
+C:\Users\Ariane\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|a382010e-ba53-4bb1-8235-e93a5490833b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|27e1a17b-775c-4a72-ba84-25855a622997
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7a4d3b1e-462c-4d59-8ce1-538fbad9cf70
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9efbee7e-e0d0-4828-8ed2-c047e1341085
