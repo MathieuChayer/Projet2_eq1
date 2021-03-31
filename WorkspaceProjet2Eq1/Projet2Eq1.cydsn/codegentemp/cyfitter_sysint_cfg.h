@@ -24,12 +24,6 @@
     #define CY_EINK_SPIM_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg;
 
-    #define adc_int__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t adc_int_cfg;
-
-    #define ADC_IRQ__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t ADC_IRQ_cfg;
-
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */
 
 

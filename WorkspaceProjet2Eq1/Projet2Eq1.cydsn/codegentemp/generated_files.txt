@@ -22,16 +22,7 @@
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\Status_SW2.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Status_SW2" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\Status_SW2.h" value="HEADER;;;;;Status_SW2" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\PWM.c" value="SOURCE_C;CortexM0p,CortexM4;;;;PWM" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\PWM.h" value="HEADER;;;;;PWM" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\PWM_CLOCK.h" value="HEADER;;;;;PWM_CLOCK" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ADC" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC.h" value="HEADER;;;;;ADC" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC_INT.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ADC" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC_INIT.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ADC" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC_PM.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ADC" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\CY_EINK_SPIM_SCBCLK.h" value="HEADER;;;;;CY_EINK_SPIM_SCBCLK" />
-  <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\ADC_intSarClock.h" value="HEADER;;;;;ADC_intSarClock" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />

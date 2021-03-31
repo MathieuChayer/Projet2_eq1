@@ -50,16 +50,12 @@
 #include "GUI.h"
 #include "pervasive_eink_hardware_driver.h"
 #include "cy_eink_library.h"
-#include "LCDConf.h"
-#include <stdlib.h>
-#include <math.h>
+
+#include "traitement.h"
+
 
 // Variables globales
-volatile int    compteur = 0;
-volatile float  bufferCirculaire[4000];
-volatile int    indexEcriture = 0;
-volatile int    processBufferIdx = 0;
-volatile bool   processBufferFlag = false; 
+bool processBufferFlag = true;
 
 //vecteur sinus de 150 élément entre -1 et 1
 float vectorSinus[]={0.099833,0.29552,0.47943,0.64422,0.78333,0.89121,0.96356,0.99749,0.99166,0.9463,0.86321,0.74571,0.59847,0.42738,0.23925,0.041581,-0.15775,-0.35078,-0.52984,-0.68777,-0.81828,-0.91617,-0.97753,-0.99992,-0.98245,-0.92581,-0.83227,-0.70554,-0.55069,-0.37388,-0.18216,0.016814,0.21512,0.40485,0.57844,0.72897,0.85044,0.938,0.98817,0.99894,0.96989,0.90217,0.79849,0.66297,0.50102,0.3191,0.12445,-0.075151,-0.27176,-0.45754,-0.62507,-0.76769,-0.8797,-0.95664,-0.99544,-0.99455,-0.95402,-0.87545,-0.76198,-0.61814,-0.44965,-0.26323,-0.066322,0.13323,0.32747,0.50866,0.66957,0.80378,0.90595,0.97201,0.99931,0.98677,0.9349,0.84575,0.72288,0.5712,0.39674,0.20647,0.0079632,-0.19086,-0.38207,-0.55805,-0.71179,-0.83714,-0.92912,-0.98407,-0.99977,-0.97563,-0.91258,-0.81316,-0.68131,-0.52231,-0.34248,-0.149,0.050423,0.24783,0.43537,0.60554,0.75157,0.86764,0.94912,0.99277,0.99683,0.96115,0.88716,0.77779,0.63742,0.47164,0.28705,0.091022,-0.10864,-0.30396,-0.48717,-0.65096,-0.7888,-0.89519,-0.96589,-0.99808,-0.99049,-0.9434,-0.85871,-0.73978,-0.59136,-0.41936,-0.23065};
@@ -150,96 +146,7 @@ void WaitforSwitchPressAndRelease(void)
     while(Status_SW2_Read() == 0);
 }
 
-// PARTIE 1, code 1.1
-void drawGraph(float *vector150elements){
-    GUI_SetPenSize(1);
-    GUI_DrawRect(7, 5, 257, 155);
-    int x1 = 7;
-    int y1 = 0;
-    int x2 = 9;
-    int y2 = 0;
-    for(uint i=0;i<125;i++){
-        y1 = (vector150elements[i]*75)+79;
-        y2 = (vector150elements[i+1]*75)+79;       
-        GUI_DrawLine(x1,y1,x2,y2);
-        x1 = x2;
-        x2 = x2 + 2;
-    }
-    UpdateDisplay(CY_EINK_FULL_4STAGE, true);
-}
 
-// PARTIE 1, code 1.2
-void updateParameters(int param1, int param2){
-
-    char str[100];
-    sprintf(str,"DutyCycle: %d %%       Moyenne: %d mV",param1, param2);
-    
-    GUI_DispStringHCenterAt(str, 129, 160);
-    UpdateDisplay(CY_EINK_FULL_4STAGE, true);
-}
-
-// PARTIE 3, code 3.2 et 3.3
-void adc_handler(){
-    bufferCirculaire[indexEcriture] = ADC_GetResult16(0);
-    indexEcriture=indexEcriture+1;
-    if(indexEcriture==2000){
-        processBufferFlag=true;
-        processBufferIdx = indexEcriture;
-    }
-    else if(indexEcriture==4000){
-        processBufferFlag=true;
-        processBufferIdx = indexEcriture;
-        
-        indexEcriture=0;
-    }
-    
-    NVIC_ClearPendingIRQ(adc_int_cfg.intrSrc);
-}
-
-// PARTIE 3, code 3.4 et 3.5
-void traitementSignal(){
-
-    compteur++;  
-    
-    double somme=0;
-    double resultatConvertit=0;
-    int i = 2000;
-    
-    while(i>0){
-        resultatConvertit=Cy_SAR_CountsTo_mVolts(SAR, 0 , bufferCirculaire[i--]);
-        somme += resultatConvertit; 
-    }
-    double moyenne = somme/2000;
-    double dutyCycle = moyenne*100/3300; 
-    
-    int moyenne_int = round(moyenne);
-    int dutyCycle_int = round(dutyCycle);
-    
-    if(compteur==3){
-        GUI_SetPenSize(1);
-        GUI_SetColor(GUI_BLACK);
-        GUI_SetBkColor(GUI_WHITE);
-        GUI_Clear();
-        
-        GUI_DrawRect(7, 5, 257, 155);
-        
-        int x = dutyCycle_int*2+17;
-        
-        GUI_DrawLine(17,145,17,15);
-        GUI_DrawLine(17,15,x,15);
-        GUI_DrawLine(x,15,x,145);
-        GUI_DrawLine(x,145,217,145);
-        
-        ADC_Stop();
-        updateParameters(dutyCycle_int,moyenne_int);
-        ADC_Start();
-        
-        compteur = 0;
-    }
-    
-    processBufferFlag = false;
-
-}
 
 /*******************************************************************************
 * Function Name: int main(void)
@@ -286,31 +193,15 @@ int main(void)
     GUI_SetTextAlign(GUI_TA_CENTER);
     GUI_DispStringAt("GBM2100", 132, 30);
     GUI_SetFont(GUI_FONT_16_1);
-    GUI_DispStringAt("Laboratoire 3", 132, 70);
+    GUI_DispStringAt("Projet", 132, 70);
     
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
     
-    // Test du code partie 1 
-    GUI_Clear();                 
-    drawGraph(vectorSinus);      
-    updateParameters(10,1666); 
-    GUI_Clear(); 
-    
-    // Démarrage du module PWM (LED clignote) pour la partie 2
-    PWM_Start();
-    
-    // Démarrage de l'ADC pour la partie 3
-    Cy_SysInt_Init(&adc_int_cfg,adc_handler);   // Init reference
-    NVIC_EnableIRQ(adc_int_cfg.intrSrc);        // Enable interrupt
-    ADC_Start();
-    ADC_StartConvert();
-    
+
+
     for(;;)
     {
-        // Vérification du flag et traitement si activé (PARTIE 3, code 3.3)
-        if(processBufferFlag==true){
-            traitementSignal();
-        }
+
     }
 }
 

@@ -1,5 +1,5 @@
 # Projet2Eq1
-# 2021-03-31 18:49:09Z
+# 2021-03-31 19:36:12Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -20,14 +20,7 @@ set_io "CY_EINK_DispIoEn(0)" iocell 0 2
 set_io "CY_EINK_DispBusy(0)" iocell 5 3
 set_io "CY_EINK_Ssel(0)" iocell 12 3
 set_io "SW2(0)" iocell 0 4
-set_io "GreenLED(0)" iocell 1 1
-set_io "PWM_OUT(0)" iocell 6 2
-set_io "ADC_IN(0)" iocell 10 6
 set_location "\CY_EINK_SPIM:SCB\" SCB -1 -1 6
 set_location "\CY_EINK_SPIM:SCB_IRQ\" interrupt -1 -1 47
 set_location "\CY_EINK_Timer:TCPWM\" TCPWM -1 -1 0
 set_location "\Status_SW2:sts:sts_reg\" 1 5 3
-set_location "\PWM:TCPWM\" TCPWM -1 -1 1
-set_location "\ADC:IRQ\" interrupt -1 -1 138
-set_location "\ADC:SAR\" SARADC -1 -1 0
-set_location "adc_int" interrupt -1 -1 122
