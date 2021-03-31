@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   28:GUIConf.c     **** Licensing information
   29:GUIConf.c     **** Licensor:                 SEGGER Microcontroller Systems LLC
   30:GUIConf.c     **** Licensed to:              Cypress Semiconductor Corp, 198 Champion Ct., San Jose, CA 95134, USA
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 2
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 2
 
 
   31:GUIConf.c     **** Licensed SEGGER software: emWin
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   53:GUIConf.c     **** //
   54:GUIConf.c     **** // Define the available number of bytes available for the GUI
   55:GUIConf.c     **** //
-  56:GUIConf.c     **** #define GUI_NUMBYTES  0x0100
+  56:GUIConf.c     **** #define GUI_NUMBYTES  0x8000
   57:GUIConf.c     **** 
   58:GUIConf.c     **** /*********************************************************************
   59:GUIConf.c     **** *
@@ -118,13 +118,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   77:GUIConf.c     ****   //
   78:GUIConf.c     ****   // Assign memory to emWin
   79:GUIConf.c     ****   //
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 3
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 3
 
 
   80:GUIConf.c     ****   GUI_ALLOC_AssignMemory(aMemory, GUI_NUMBYTES);
   36              		.loc 1 80 0
   37 0002 8021     		movs	r1, #128
-  38 0004 4900     		lsls	r1, r1, #1
+  38 0004 0902     		lsls	r1, r1, #8
   39 0006 0348     		ldr	r0, .L2
   40 0008 FFF7FEFF 		bl	GUI_ALLOC_AssignMemory
   41              	.LVL0:
@@ -151,10 +151,10 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   57              		.bss
   58              		.align	2
   59              		.set	.LANCHOR0,. + 0
-  60              		.type	aMemory.8078, %object
-  61              		.size	aMemory.8078, 256
-  62              	aMemory.8078:
-  63 0000 00000000 		.space	256
+  60              		.type	aMemory.8092, %object
+  61              		.size	aMemory.8092, 32768
+  62              	aMemory.8092:
+  63 0000 00000000 		.space	32768
   63      00000000 
   63      00000000 
   63      00000000 
@@ -165,7 +165,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   67              		.file 3 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/include/GUI.h"
   68              		.section	.debug_info,"",%progbits
   69              	.Ldebug_info0:
-  70 0000 3A060000 		.4byte	0x63a
+  70 0000 3B060000 		.4byte	0x63b
   71 0004 0400     		.2byte	0x4
   72 0006 00000000 		.4byte	.Ldebug_abbrev0
   73 000a 04       		.byte	0x4
@@ -173,12 +173,12 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
   75 000c 65000000 		.4byte	.LASF67
   76 0010 0C       		.byte	0xc
   77 0011 25030000 		.4byte	.LASF68
-  78 0015 80030000 		.4byte	.LASF69
+  78 0015 2F030000 		.4byte	.LASF69
   79 0019 00000000 		.4byte	.Ldebug_ranges0+0
   80 001d 00000000 		.4byte	0
   81 0021 00000000 		.4byte	.Ldebug_line0
   82 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 4
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 4
 
 
   83 0026 04       		.byte	0x4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  137 0089 04       		.byte	0x4
  138 008a 02       		.byte	0x2
  139 008b B6       		.byte	0xb6
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 5
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 5
 
 
  140 008c A7000000 		.4byte	0xa7
@@ -272,7 +272,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  168 00c1 81000000 		.4byte	0x81
  169 00c5 00       		.byte	0
  170 00c6 0A       		.uleb128 0xa
- 171 00c7 FA030000 		.4byte	.LASF10
+ 171 00c7 27040000 		.4byte	.LASF10
  172 00cb 02       		.byte	0x2
  173 00cc BD       		.byte	0xbd
  174 00cd 81000000 		.4byte	0x81
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  194 00f6 08       		.byte	0x8
  195 00f7 02       		.byte	0x2
  196 00f8 C1       		.byte	0xc1
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 6
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 6
 
 
  197 00f9 2E010000 		.4byte	0x12e
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  251 0165 0A       		.uleb128 0xa
  252 0166 5C020000 		.4byte	.LASF21
  253 016a 02       		.byte	0x2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 7
 
 
  254 016b CC       		.byte	0xcc
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  308 01d7 08       		.byte	0x8
  309 01d8 00       		.byte	0
  310 01d9 04       		.uleb128 0x4
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 8
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 8
 
 
  311 01da 04       		.byte	0x4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  365 0249 FA010000 		.4byte	0x1fa
  366 024d 09       		.uleb128 0x9
  367 024e 0B010000 		.4byte	.LASF29
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 9
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 9
 
 
  368 0252 02       		.byte	0x2
@@ -514,7 +514,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  398 028b 81000000 		.4byte	0x81
  399 028f 0C       		.byte	0xc
  400 0290 0A       		.uleb128 0xa
- 401 0291 FA030000 		.4byte	.LASF10
+ 401 0291 27040000 		.4byte	.LASF10
  402 0295 02       		.byte	0x2
  403 0296 E4       		.byte	0xe4
  404 0297 81000000 		.4byte	0x81
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  422 02bb 56000000 		.4byte	0x56
  423 02bf 12       		.byte	0x12
  424 02c0 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 10
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 10
 
 
  425 02c1 04       		.uleb128 0x4
@@ -582,7 +582,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  463 030e 04       		.byte	0x4
  464 030f 00       		.byte	0
  465 0310 09       		.uleb128 0x9
- 466 0311 ED030000 		.4byte	.LASF37
+ 466 0311 1A040000 		.4byte	.LASF37
  467 0315 02       		.byte	0x2
  468 0316 F6       		.byte	0xf6
  469 0317 D7020000 		.4byte	0x2d7
@@ -598,17 +598,17 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  479 0331 76000000 		.4byte	0x76
  480 0335 0E       		.uleb128 0xe
  481 0336 25000000 		.4byte	0x25
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 11
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 11
 
 
  482 033a 00       		.byte	0
  483 033b 0C       		.uleb128 0xc
- 484 033c 70030000 		.4byte	.LASF39
+ 484 033c E9030000 		.4byte	.LASF39
  485 0340 02       		.byte	0x2
  486 0341 1401     		.2byte	0x114
  487 0343 27030000 		.4byte	0x327
  488 0347 0C       		.uleb128 0xc
- 489 0348 E0030000 		.4byte	.LASF40
+ 489 0348 0D040000 		.4byte	.LASF40
  490 034c 02       		.byte	0x2
  491 034d 1501     		.2byte	0x115
  492 034f 53030000 		.4byte	0x353
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  536 03ac 1B01     		.2byte	0x11b
  537 03ae 63030000 		.4byte	0x363
  538 03b2 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 12
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 12
 
 
  539 03b3 DB020000 		.4byte	.LASF45
@@ -672,19 +672,19 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  547 03c5 B101     		.2byte	0x1b1
  548 03c7 80040000 		.4byte	0x480
  549 03cb 11       		.uleb128 0x11
- 550 03cc 5F030000 		.4byte	.LASF46
+ 550 03cc D8030000 		.4byte	.LASF46
  551 03d0 02       		.byte	0x2
  552 03d1 B201     		.2byte	0x1b2
  553 03d3 8B050000 		.4byte	0x58b
  554 03d7 00       		.byte	0
  555 03d8 11       		.uleb128 0x11
- 556 03d9 2F030000 		.4byte	.LASF47
+ 556 03d9 A8030000 		.4byte	.LASF47
  557 03dd 02       		.byte	0x2
  558 03de B301     		.2byte	0x1b3
  559 03e0 91050000 		.4byte	0x591
  560 03e4 04       		.byte	0x4
  561 03e5 11       		.uleb128 0x11
- 562 03e6 D2030000 		.4byte	.LASF48
+ 562 03e6 FF030000 		.4byte	.LASF48
  563 03ea 02       		.byte	0x2
  564 03eb B401     		.2byte	0x1b4
  565 03ed 97050000 		.4byte	0x597
@@ -714,16 +714,16 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  589 0421 56000000 		.4byte	0x56
  590 0425 18       		.byte	0x18
  591 0426 11       		.uleb128 0x11
- 592 0427 6A030000 		.4byte	.LASF52
+ 592 0427 E3030000 		.4byte	.LASF52
  593 042b 02       		.byte	0x2
  594 042c B901     		.2byte	0x1b9
  595 042e 56000000 		.4byte	0x56
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 13
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 13
 
 
  596 0432 19       		.byte	0x19
  597 0433 11       		.uleb128 0x11
- 598 0434 5A030000 		.4byte	.LASF53
+ 598 0434 D3030000 		.4byte	.LASF53
  599 0438 02       		.byte	0x2
  600 0439 BA01     		.2byte	0x1ba
  601 043b 56000000 		.4byte	0x56
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  650 04a4 25000000 		.4byte	0x25
  651 04a8 B7040000 		.4byte	0x4b7
  652 04ac 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 14
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 14
 
 
  653 04ad 81000000 		.4byte	0x81
@@ -789,7 +789,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  658 04b8 04       		.byte	0x4
  659 04b9 25000000 		.4byte	0x25
  660 04bd 0C       		.uleb128 0xc
- 661 04be 3E030000 		.4byte	.LASF57
+ 661 04be B7030000 		.4byte	.LASF57
  662 04c2 02       		.byte	0x2
  663 04c3 2801     		.2byte	0x128
  664 04c5 C9040000 		.4byte	0x4c9
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  707 052b 04       		.byte	0x4
  708 052c 91010000 		.4byte	0x191
  709 0530 14       		.uleb128 0x14
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 15
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 15
 
 
  710 0531 04       		.byte	0x4
@@ -856,7 +856,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  722 054b BE01     		.2byte	0x1be
  723 054d 6A050000 		.4byte	0x56a
  724 0551 15       		.uleb128 0x15
- 725 0552 CC030000 		.4byte	.LASF62
+ 725 0552 F9030000 		.4byte	.LASF62
  726 0556 02       		.byte	0x2
  727 0557 BF01     		.2byte	0x1bf
  728 0559 75050000 		.4byte	0x575
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  764 05a5 0A050000 		.4byte	0x50a
  765 05a9 04       		.uleb128 0x4
  766 05aa 04       		.byte	0x4
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 16
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 16
 
 
  767 05ab AF050000 		.4byte	0x5af
@@ -924,10 +924,10 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  787 05d7 09060000 		.4byte	0x609
  788 05db 05       		.uleb128 0x5
  789 05dc 03       		.byte	0x3
- 790 05dd 00000000 		.4byte	aMemory.8078
+ 790 05dd 00000000 		.4byte	aMemory.8092
  791 05e1 18       		.uleb128 0x18
  792 05e2 0C000000 		.4byte	.LVL0
- 793 05e6 25060000 		.4byte	0x625
+ 793 05e6 26060000 		.4byte	0x626
  794 05ea FF050000 		.4byte	0x5ff
  795 05ee 19       		.uleb128 0x19
  796 05ef 01       		.uleb128 0x1
@@ -940,38 +940,38 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  803 05f9 51       		.byte	0x51
  804 05fa 03       		.uleb128 0x3
  805 05fb 0A       		.byte	0xa
- 806 05fc 0001     		.2byte	0x100
+ 806 05fc 0080     		.2byte	0x8000
  807 05fe 00       		.byte	0
  808 05ff 1A       		.uleb128 0x1a
  809 0600 12000000 		.4byte	.LVL1
- 810 0604 31060000 		.4byte	0x631
+ 810 0604 32060000 		.4byte	0x632
  811 0608 00       		.byte	0
  812 0609 1B       		.uleb128 0x1b
  813 060a 41000000 		.4byte	0x41
- 814 060e 19060000 		.4byte	0x619
+ 814 060e 1A060000 		.4byte	0x61a
  815 0612 1C       		.uleb128 0x1c
  816 0613 B4050000 		.4byte	0x5b4
- 817 0617 3F       		.byte	0x3f
- 818 0618 00       		.byte	0
- 819 0619 1D       		.uleb128 0x1d
- 820 061a 4E030000 		.4byte	.LASF72
- 821 061e 03       		.byte	0x3
- 822 061f 1908     		.2byte	0x819
- 823 0621 DF040000 		.4byte	0x4df
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 17
+ 817 0617 FF1F     		.2byte	0x1fff
+ 818 0619 00       		.byte	0
+ 819 061a 1D       		.uleb128 0x1d
+ 820 061b C7030000 		.4byte	.LASF72
+ 821 061f 03       		.byte	0x3
+ 822 0620 1908     		.2byte	0x819
+ 823 0622 DF040000 		.4byte	0x4df
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 17
 
 
- 824 0625 1E       		.uleb128 0x1e
- 825 0626 41000000 		.4byte	.LASF65
- 826 062a 41000000 		.4byte	.LASF65
- 827 062e 03       		.byte	0x3
- 828 062f B203     		.2byte	0x3b2
- 829 0631 1E       		.uleb128 0x1e
- 830 0632 B6020000 		.4byte	.LASF66
- 831 0636 B6020000 		.4byte	.LASF66
- 832 063a 03       		.byte	0x3
- 833 063b 7801     		.2byte	0x178
- 834 063d 00       		.byte	0
+ 824 0626 1E       		.uleb128 0x1e
+ 825 0627 41000000 		.4byte	.LASF65
+ 826 062b 41000000 		.4byte	.LASF65
+ 827 062f 03       		.byte	0x3
+ 828 0630 B203     		.2byte	0x3b2
+ 829 0632 1E       		.uleb128 0x1e
+ 830 0633 B6020000 		.4byte	.LASF66
+ 831 0637 B6020000 		.4byte	.LASF66
+ 832 063b 03       		.byte	0x3
+ 833 063c 7801     		.2byte	0x178
+ 834 063e 00       		.byte	0
  835              		.section	.debug_abbrev,"",%progbits
  836              	.Ldebug_abbrev0:
  837 0000 01       		.uleb128 0x1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  878 0029 04       		.uleb128 0x4
  879 002a 0F       		.uleb128 0xf
  880 002b 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 18
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 18
 
 
  881 002c 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  935 0062 0B       		.uleb128 0xb
  936 0063 49       		.uleb128 0x49
  937 0064 13       		.uleb128 0x13
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 19
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 19
 
 
  938 0065 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  992 009b 00       		.byte	0
  993 009c 00       		.byte	0
  994 009d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 20
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 20
 
 
  995 009e 05       		.uleb128 0x5
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1049 00d4 01       		.uleb128 0x1
  1050 00d5 13       		.uleb128 0x13
  1051 00d6 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 21
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 21
 
 
  1052 00d7 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1106 010d 19       		.uleb128 0x19
  1107 010e 11       		.uleb128 0x11
  1108 010f 01       		.uleb128 0x1
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 22
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 22
 
 
  1109 0110 12       		.uleb128 0x12
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1163 014e 1B       		.uleb128 0x1b
  1164 014f 01       		.uleb128 0x1
  1165 0150 01       		.byte	0x1
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 23
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 23
 
 
  1166 0151 49       		.uleb128 0x49
@@ -1333,7 +1333,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1175 015a 49       		.uleb128 0x49
  1176 015b 13       		.uleb128 0x13
  1177 015c 2F       		.uleb128 0x2f
- 1178 015d 0B       		.uleb128 0xb
+ 1178 015d 05       		.uleb128 0x5
  1179 015e 00       		.byte	0
  1180 015f 00       		.byte	0
  1181 0160 1D       		.uleb128 0x1d
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1220 000a 04       		.byte	0x4
  1221 000b 00       		.byte	0
  1222 000c 0000     		.2byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 24
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 24
 
 
  1223 000e 0000     		.2byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1254      4C696E65 
  1254      00
  1255              	.LASF67:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 25
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 25
 
 
  1256 0065 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1278 015a 704D6F6E 		.ascii	"pMono\000"
  1278      6F00
  1279              	.LASF63:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 26
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 26
 
 
  1280 0160 7050726F 		.ascii	"pPropExt\000"
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1306      746100
  1307              	.LASF59:
  1308 01ed 4755495F 		.ascii	"GUI_GETCHARINFO\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 27
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 27
 
 
  1308      47455443 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1332      6500
  1333              	.LASF8:
  1334 0285 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 28
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 28
 
 
  1334      7420756E 
@@ -1678,75 +1678,80 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 1
  1356      5F4D4F4E 
  1356      4F00
  1357              	.LASF68:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 29
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 29
 
 
  1358 0325 47554943 		.ascii	"GUIConf.c\000"
  1358      6F6E662E 
  1358      6300
- 1359              	.LASF47:
- 1360 032f 70664765 		.ascii	"pfGetCharDistX\000"
- 1360      74436861 
- 1360      72446973 
- 1360      745800
- 1361              	.LASF57:
- 1362 033e 4755495F 		.ascii	"GUI_GETFONTINFO\000"
- 1362      47455446 
- 1362      4F4E5449 
- 1362      4E464F00 
- 1363              	.LASF72:
- 1364 034e 4755495F 		.ascii	"GUI_Font6x8\000"
- 1364      466F6E74 
- 1364      36783800 
- 1365              	.LASF53:
- 1366 035a 584D6167 		.ascii	"XMag\000"
- 1366      00
- 1367              	.LASF46:
- 1368 035f 70664469 		.ascii	"pfDispChar\000"
- 1368      73704368 
- 1368      617200
- 1369              	.LASF52:
- 1370 036a 59446973 		.ascii	"YDist\000"
- 1370      7400
- 1371              	.LASF39:
- 1372 0370 74475549 		.ascii	"tGUI_GetLineLen\000"
- 1372      5F476574 
- 1372      4C696E65 
- 1372      4C656E00 
- 1373              	.LASF69:
- 1374 0380 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Workspa"
- 1374      73657273 
- 1374      5C417269 
- 1374      616E655C 
- 1374      446F6375 
- 1375 03ae 63655072 		.ascii	"ceProjet2Eq1\\Projet2Eq1.cydsn\000"
- 1375      6F6A6574 
- 1375      32457131 
- 1375      5C50726F 
- 1375      6A657432 
- 1376              	.LASF62:
- 1377 03cc 7050726F 		.ascii	"pProp\000"
- 1377      7000
- 1378              	.LASF48:
- 1379 03d2 70664765 		.ascii	"pfGetFontInfo\000"
- 1379      74466F6E 
- 1379      74496E66 
- 1379      6F00
- 1380              	.LASF40:
- 1381 03e0 74474C5F 		.ascii	"tGL_DispLine\000"
- 1381      44697370 
- 1381      4C696E65 
- 1381      00
- 1382              	.LASF37:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\cc9Waw4X.s 			page 30
+ 1359              	.LASF69:
+ 1360 032f 433A5C55 		.ascii	"C:\\Users\\Andrea\\Documents\\poly 4\\Projet d'inst"
+ 1360      73657273 
+ 1360      5C416E64 
+ 1360      7265615C 
+ 1360      446F6375 
+ 1361 035d 72756D65 		.ascii	"rumentation biomedicale\\Repos_Projet2\\WorkspacePr"
+ 1361      6E746174 
+ 1361      696F6E20 
+ 1361      62696F6D 
+ 1361      65646963 
+ 1362 038e 6F6A6574 		.ascii	"ojet2Eq1\\Projet2Eq1.cydsn\000"
+ 1362      32457131 
+ 1362      5C50726F 
+ 1362      6A657432 
+ 1362      4571312E 
+ 1363              	.LASF47:
+ 1364 03a8 70664765 		.ascii	"pfGetCharDistX\000"
+ 1364      74436861 
+ 1364      72446973 
+ 1364      745800
+ 1365              	.LASF57:
+ 1366 03b7 4755495F 		.ascii	"GUI_GETFONTINFO\000"
+ 1366      47455446 
+ 1366      4F4E5449 
+ 1366      4E464F00 
+ 1367              	.LASF72:
+ 1368 03c7 4755495F 		.ascii	"GUI_Font6x8\000"
+ 1368      466F6E74 
+ 1368      36783800 
+ 1369              	.LASF53:
+ 1370 03d3 584D6167 		.ascii	"XMag\000"
+ 1370      00
+ 1371              	.LASF46:
+ 1372 03d8 70664469 		.ascii	"pfDispChar\000"
+ 1372      73704368 
+ 1372      617200
+ 1373              	.LASF52:
+ 1374 03e3 59446973 		.ascii	"YDist\000"
+ 1374      7400
+ 1375              	.LASF39:
+ 1376 03e9 74475549 		.ascii	"tGUI_GetLineLen\000"
+ 1376      5F476574 
+ 1376      4C696E65 
+ 1376      4C656E00 
+ 1377              	.LASF62:
+ 1378 03f9 7050726F 		.ascii	"pProp\000"
+ 1378      7000
+ 1379              	.LASF48:
+ 1380 03ff 70664765 		.ascii	"pfGetFontInfo\000"
+ 1380      74466F6E 
+ 1380      74496E66 
+ 1380      6F00
+ 1381              	.LASF40:
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccgchVjr.s 			page 30
 
 
- 1383 03ed 4755495F 		.ascii	"GUI_FONTINFO\000"
- 1383      464F4E54 
- 1383      494E464F 
- 1383      00
- 1384              	.LASF10:
- 1385 03fa 4C617374 		.ascii	"LastChar\000"
- 1385      43686172 
- 1385      00
- 1386              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1382 040d 74474C5F 		.ascii	"tGL_DispLine\000"
+ 1382      44697370 
+ 1382      4C696E65 
+ 1382      00
+ 1383              	.LASF37:
+ 1384 041a 4755495F 		.ascii	"GUI_FONTINFO\000"
+ 1384      464F4E54 
+ 1384      494E464F 
+ 1384      00
+ 1385              	.LASF10:
+ 1386 0427 4C617374 		.ascii	"LastChar\000"
+ 1386      43686172 
+ 1386      00
+ 1387              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,5086 @@
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"interface.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.cfi_sections	.debug_frame
+  20              		.section	.text.conversionVecteur,"ax",%progbits
+  21              		.align	2
+  22              		.global	conversionVecteur
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	conversionVecteur, %function
+  26              	conversionVecteur:
+  27              	.LFB638:
+  28              		.file 1 "interface.c"
+   1:interface.c   **** /* ========================================
+   2:interface.c   ****  *
+   3:interface.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:interface.c   ****  * All Rights Reserved
+   5:interface.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:interface.c   ****  *
+   7:interface.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:interface.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:interface.c   ****  *
+  10:interface.c   ****  * ========================================
+  11:interface.c   **** */
+  12:interface.c   **** #include "interface.h"
+  13:interface.c   **** 
+  14:interface.c   **** int bonneLongueur = 0;
+  15:interface.c   **** 
+  16:interface.c   **** //fonction pour convertir et raccourcir (nouvel échantantillonnage) le signal en vecteur de 
+  17:interface.c   **** //uint16 pour pouvoir l'utiliser dans DrawGraph par la suite
+  18:interface.c   **** 
+  19:interface.c   **** void conversionVecteur(uint32_t* vecteur,  int longueur, uint16_t* bonVecteur) {
+  29              		.loc 1 19 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              	.LVL0:
+  35 0000 70B4     		push	{r4, r5, r6}
+  36              		.cfi_def_cfa_offset 12
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 5, -8
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 2
+
+
+  39              		.cfi_offset 6, -4
+  40              	.LVL1:
+  41              	.LBB2:
+  20:interface.c   ****     int min = 2000;
+  21:interface.c   ****     int max = 2500;
+  22:interface.c   ****     int hauteur = 100; //pixels
+  23:interface.c   ****     int j =0;
+  24:interface.c   ****     for(int i=0; i<longueur; i+=5)
+  42              		.loc 1 24 0
+  43 0002 0024     		movs	r4, #0
+  44              	.LBE2:
+  23:interface.c   ****     for(int i=0; i<longueur; i+=5)
+  45              		.loc 1 23 0
+  46 0004 2546     		mov	r5, r4
+  47              	.LBB3:
+  48              		.loc 1 24 0
+  49 0006 0FE0     		b	.L2
+  50              	.LVL2:
+  51              	.L3:
+  25:interface.c   ****     {
+  26:interface.c   ****         bonVecteur[j]= (vecteur[i]/100 - min)/((max - min)/hauteur);
+  52              		.loc 1 26 0 discriminator 3
+  53 0008 50F82430 		ldr	r3, [r0, r4, lsl #2]
+  54 000c 0C4E     		ldr	r6, .L5
+  55 000e A6FB0363 		umull	r6, r3, r6, r3
+  56 0012 5B09     		lsrs	r3, r3, #5
+  57 0014 A3F5FA63 		sub	r3, r3, #2000
+  58 0018 0A4E     		ldr	r6, .L5+4
+  59 001a A6FB0363 		umull	r6, r3, r6, r3
+  60 001e 9B08     		lsrs	r3, r3, #2
+  61 0020 22F81530 		strh	r3, [r2, r5, lsl #1]	@ movhi
+  27:interface.c   ****         j++;
+  62              		.loc 1 27 0 discriminator 3
+  63 0024 0135     		adds	r5, r5, #1
+  64              	.LVL3:
+  24:interface.c   ****     {
+  65              		.loc 1 24 0 discriminator 3
+  66 0026 0534     		adds	r4, r4, #5
+  67              	.LVL4:
+  68              	.L2:
+  24:interface.c   ****     {
+  69              		.loc 1 24 0 is_stmt 0 discriminator 1
+  70 0028 8C42     		cmp	r4, r1
+  71 002a EDDB     		blt	.L3
+  72              	.LBE3:
+  28:interface.c   ****     }
+  29:interface.c   ****    bonneLongueur = longueur/5;
+  73              		.loc 1 29 0 is_stmt 1
+  74 002c 064B     		ldr	r3, .L5+8
+  75 002e 83FB0123 		smull	r2, r3, r3, r1
+  76              	.LVL5:
+  77 0032 C917     		asrs	r1, r1, #31
+  78              	.LVL6:
+  79 0034 C1EB6301 		rsb	r1, r1, r3, asr #1
+  80 0038 044B     		ldr	r3, .L5+12
+  81 003a 1960     		str	r1, [r3]
+  30:interface.c   **** }
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 3
+
+
+  82              		.loc 1 30 0
+  83 003c 70BC     		pop	{r4, r5, r6}
+  84              		.cfi_restore 6
+  85              		.cfi_restore 5
+  86              		.cfi_restore 4
+  87              		.cfi_def_cfa_offset 0
+  88              	.LVL7:
+  89 003e 7047     		bx	lr
+  90              	.L6:
+  91              		.align	2
+  92              	.L5:
+  93 0040 1F85EB51 		.word	1374389535
+  94 0044 CDCCCCCC 		.word	-858993459
+  95 0048 67666666 		.word	1717986919
+  96 004c 00000000 		.word	.LANCHOR0
+  97              		.cfi_endproc
+  98              	.LFE638:
+  99              		.size	conversionVecteur, .-conversionVecteur
+ 100              		.section	.text.drawGraph,"ax",%progbits
+ 101              		.align	2
+ 102              		.global	drawGraph
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	drawGraph, %function
+ 106              	drawGraph:
+ 107              	.LFB639:
+  31:interface.c   **** 
+  32:interface.c   **** // fonction pour dessiner graphique sur 100x250 pixels avec un offset de 20
+  33:interface.c   **** 
+  34:interface.c   **** void drawGraph(uint16_t *vecteur200elements){
+ 108              		.loc 1 34 0
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 112              	.LVL8:
+ 113 0000 70B5     		push	{r4, r5, r6, lr}
+ 114              		.cfi_def_cfa_offset 16
+ 115              		.cfi_offset 4, -16
+ 116              		.cfi_offset 5, -12
+ 117              		.cfi_offset 6, -8
+ 118              		.cfi_offset 14, -4
+ 119 0002 0646     		mov	r6, r0
+  35:interface.c   ****     GUI_SetPenSize(1);
+ 120              		.loc 1 35 0
+ 121 0004 0120     		movs	r0, #1
+ 122              	.LVL9:
+ 123 0006 FFF7FEFF 		bl	GUI_SetPenSize
+ 124              	.LVL10:
+  36:interface.c   ****     GUI_DrawRect(7, 15, 257, 115);
+ 125              		.loc 1 36 0
+ 126 000a 7323     		movs	r3, #115
+ 127 000c 40F20112 		movw	r2, #257
+ 128 0010 0F21     		movs	r1, #15
+ 129 0012 0720     		movs	r0, #7
+ 130 0014 FFF7FEFF 		bl	GUI_DrawRect
+ 131              	.LVL11:
+ 132              	.LBB4:
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 4
+
+
+  37:interface.c   ****     int x1 = 7;
+  38:interface.c   ****     int y1 = 0;
+  39:interface.c   ****     int x2 = 9;
+  40:interface.c   ****     int y2 = 0;
+  41:interface.c   ****     for(uint i=0;i<200;i++){
+ 133              		.loc 1 41 0
+ 134 0018 0024     		movs	r4, #0
+ 135              	.LBE4:
+  39:interface.c   ****     int y2 = 0;
+ 136              		.loc 1 39 0
+ 137 001a 0925     		movs	r5, #9
+  37:interface.c   ****     int x1 = 7;
+ 138              		.loc 1 37 0
+ 139 001c 0720     		movs	r0, #7
+ 140              	.LBB5:
+ 141              		.loc 1 41 0
+ 142 001e 10E0     		b	.L8
+ 143              	.LVL12:
+ 144              	.L9:
+  42:interface.c   ****         y1 = (vecteur200elements[i]*50)+65;
+ 145              		.loc 1 42 0 discriminator 3
+ 146 0020 36F81410 		ldrh	r1, [r6, r4, lsl #1]
+ 147 0024 3223     		movs	r3, #50
+ 148 0026 03FB01F1 		mul	r1, r3, r1
+ 149              	.LVL13:
+  43:interface.c   ****         y2 = (vecteur200elements[i+1]*50)+65;       
+ 150              		.loc 1 43 0 discriminator 3
+ 151 002a 0134     		adds	r4, r4, #1
+ 152              	.LVL14:
+ 153 002c 36F81420 		ldrh	r2, [r6, r4, lsl #1]
+ 154 0030 03FB02F3 		mul	r3, r3, r2
+ 155              	.LVL15:
+  44:interface.c   ****         GUI_DrawLine(x1,y1,x2,y2);
+ 156              		.loc 1 44 0 discriminator 3
+ 157 0034 4133     		adds	r3, r3, #65
+ 158              	.LVL16:
+ 159 0036 2A46     		mov	r2, r5
+ 160 0038 4131     		adds	r1, r1, #65
+ 161              	.LVL17:
+ 162 003a FFF7FEFF 		bl	GUI_DrawLine
+ 163              	.LVL18:
+  45:interface.c   ****         x1 = x2;
+ 164              		.loc 1 45 0 discriminator 3
+ 165 003e 2846     		mov	r0, r5
+  46:interface.c   ****         x2 = x2 + 2;
+ 166              		.loc 1 46 0 discriminator 3
+ 167 0040 0235     		adds	r5, r5, #2
+ 168              	.LVL19:
+ 169              	.L8:
+  41:interface.c   ****         y1 = (vecteur200elements[i]*50)+65;
+ 170              		.loc 1 41 0 discriminator 1
+ 171 0042 C72C     		cmp	r4, #199
+ 172 0044 ECD9     		bls	.L9
+ 173              	.LBE5:
+  47:interface.c   ****     }
+  48:interface.c   ****     
+  49:interface.c   **** }
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 5
+
+
+ 174              		.loc 1 49 0
+ 175 0046 70BD     		pop	{r4, r5, r6, pc}
+ 176              		.cfi_endproc
+ 177              	.LFE639:
+ 178              		.size	drawGraph, .-drawGraph
+ 179              		.section	.text.interface,"ax",%progbits
+ 180              		.align	2
+ 181              		.global	interface
+ 182              		.thumb
+ 183              		.thumb_func
+ 184              		.type	interface, %function
+ 185              	interface:
+ 186              	.LFB640:
+  50:interface.c   **** 
+  51:interface.c   **** // écrire le code que j'aurais écrit dans main.cm4 ici
+  52:interface.c   **** void interface() 
+  53:interface.c   **** {
+ 187              		.loc 1 53 0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 6000
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191 0000 00B5     		push	{lr}
+ 192              		.cfi_def_cfa_offset 4
+ 193              		.cfi_offset 14, -4
+ 194 0002 ADF5BB5D 		sub	sp, sp, #5984
+ 195              		.cfi_def_cfa_offset 5988
+ 196 0006 85B0     		sub	sp, sp, #20
+ 197              		.cfi_def_cfa_offset 6008
+  54:interface.c   ****    /* Initialize emWin Graphics */
+  55:interface.c   ****     GUI_Init();
+ 198              		.loc 1 55 0
+ 199 0008 FFF7FEFF 		bl	GUI_Init
+ 200              	.LVL20:
+  56:interface.c   ****     
+  57:interface.c   ****     //vecteur signal long de 6625 éléments en uint32
+  58:interface.c   ****     uint32_t signalLong[]={205973,207305,206168,208001,206188,208050,206371,208225,206544,208577,20
+ 201              		.loc 1 58 0
+ 202 000c 4FF47A62 		mov	r2, #4000
+ 203 0010 1349     		ldr	r1, .L13
+ 204 0012 0DF5FA60 		add	r0, sp, #2000
+ 205 0016 FFF7FEFF 		bl	memcpy
+ 206              	.LVL21:
+  59:interface.c   ****   
+  60:interface.c   ****     uint16_t signalCourt[sizeof(signalLong)/sizeof(uint32_t)]; // si problème, int taille = [...]
+  61:interface.c   ****     conversionVecteur(&signalLong[0],sizeof(signalLong)/sizeof(uint32_t),&signalCourt[0]);
+ 207              		.loc 1 61 0
+ 208 001a 6A46     		mov	r2, sp
+ 209 001c 4FF47A71 		mov	r1, #1000
+ 210 0020 0DF5FA60 		add	r0, sp, #2000
+ 211 0024 FFF7FEFF 		bl	conversionVecteur
+ 212              	.LVL22:
+  62:interface.c   **** 
+  63:interface.c   **** /* Start the eInk display interface and turn on the display power */
+  64:interface.c   ****     Cy_EINK_Start(20);
+ 213              		.loc 1 64 0
+ 214 0028 1420     		movs	r0, #20
+ 215 002a FFF7FEFF 		bl	Cy_EINK_Start
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 6
+
+
+ 216              	.LVL23:
+  65:interface.c   ****     Cy_EINK_Power(1);
+ 217              		.loc 1 65 0
+ 218 002e 0120     		movs	r0, #1
+ 219 0030 FFF7FEFF 		bl	Cy_EINK_Power
+ 220              	.LVL24:
+  66:interface.c   ****     
+  67:interface.c   ****     GUI_SetPenSize(1);
+ 221              		.loc 1 67 0
+ 222 0034 0120     		movs	r0, #1
+ 223 0036 FFF7FEFF 		bl	GUI_SetPenSize
+ 224              	.LVL25:
+  68:interface.c   ****     GUI_SetColor(GUI_BLACK);
+ 225              		.loc 1 68 0
+ 226 003a 0020     		movs	r0, #0
+ 227 003c FFF7FEFF 		bl	GUI_SetColor
+ 228              	.LVL26:
+  69:interface.c   ****     GUI_SetBkColor(GUI_WHITE);
+ 229              		.loc 1 69 0
+ 230 0040 6FF07F40 		mvn	r0, #-16777216
+ 231 0044 FFF7FEFF 		bl	GUI_SetBkColor
+ 232              	.LVL27:
+  70:interface.c   ****     GUI_Clear();
+ 233              		.loc 1 70 0
+ 234 0048 FFF7FEFF 		bl	GUI_Clear
+ 235              	.LVL28:
+  71:interface.c   ****   
+  72:interface.c   ****     drawGraph(signalCourt);      
+ 236              		.loc 1 72 0
+ 237 004c 6846     		mov	r0, sp
+ 238 004e FFF7FEFF 		bl	drawGraph
+ 239              	.LVL29:
+  73:interface.c   ****      
+  74:interface.c   ****     GUI_Clear();
+ 240              		.loc 1 74 0
+ 241 0052 FFF7FEFF 		bl	GUI_Clear
+ 242              	.LVL30:
+  75:interface.c   **** }
+ 243              		.loc 1 75 0
+ 244 0056 0DF5BB5D 		add	sp, sp, #5984
+ 245 005a 05B0     		add	sp, sp, #20
+ 246              		.cfi_def_cfa_offset 4
+ 247              		@ sp needed
+ 248 005c 5DF804FB 		ldr	pc, [sp], #4
+ 249              	.L14:
+ 250              		.align	2
+ 251              	.L13:
+ 252 0060 00000000 		.word	.LANCHOR1
+ 253              		.cfi_endproc
+ 254              	.LFE640:
+ 255              		.size	interface, .-interface
+ 256              		.global	bonneLongueur
+ 257              		.section	.rodata
+ 258              		.align	2
+ 259              		.set	.LANCHOR1,. + 0
+ 260              	.LC0:
+ 261 0000 95240300 		.word	205973
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 7
+
+
+ 262 0004 C9290300 		.word	207305
+ 263 0008 58250300 		.word	206168
+ 264 000c 812C0300 		.word	208001
+ 265 0010 6C250300 		.word	206188
+ 266 0014 B22C0300 		.word	208050
+ 267 0018 23260300 		.word	206371
+ 268 001c 612D0300 		.word	208225
+ 269 0020 D0260300 		.word	206544
+ 270 0024 C12E0300 		.word	208577
+ 271 0028 7F270300 		.word	206719
+ 272 002c 752E0300 		.word	208501
+ 273 0030 8E280300 		.word	206990
+ 274 0034 592E0300 		.word	208473
+ 275 0038 4F290300 		.word	207183
+ 276 003c 212E0300 		.word	208417
+ 277 0040 072A0300 		.word	207367
+ 278 0044 FB2D0300 		.word	208379
+ 279 0048 6C2B0300 		.word	207724
+ 280 004c 172D0300 		.word	208151
+ 281 0050 722C0300 		.word	207986
+ 282 0054 792C0300 		.word	207993
+ 283 0058 AF2D0300 		.word	208303
+ 284 005c BA2B0300 		.word	207802
+ 285 0060 2A2F0300 		.word	208682
+ 286 0064 062B0300 		.word	207622
+ 287 0068 5A2F0300 		.word	208730
+ 288 006c E32A0300 		.word	207587
+ 289 0070 D5310300 		.word	209365
+ 290 0074 5F2A0300 		.word	207455
+ 291 0078 39310300 		.word	209209
+ 292 007c B52A0300 		.word	207541
+ 293 0080 B9310300 		.word	209337
+ 294 0084 BD2A0300 		.word	207549
+ 295 0088 E3320300 		.word	209635
+ 296 008c BE2B0300 		.word	207806
+ 297 0090 5D320300 		.word	209501
+ 298 0094 552C0300 		.word	207957
+ 299 0098 35320300 		.word	209461
+ 300 009c 7C2C0300 		.word	207996
+ 301 00a0 A5310300 		.word	209317
+ 302 00a4 E72C0300 		.word	208103
+ 303 00a8 F4300300 		.word	209140
+ 304 00ac 6B2E0300 		.word	208491
+ 305 00b0 68300300 		.word	209000
+ 306 00b4 202F0300 		.word	208672
+ 307 00b8 6C2F0300 		.word	208748
+ 308 00bc 6E300300 		.word	209006
+ 309 00c0 6B2E0300 		.word	208491
+ 310 00c4 CD310300 		.word	209357
+ 311 00c8 DE2D0300 		.word	208350
+ 312 00cc AE310300 		.word	209326
+ 313 00d0 722D0300 		.word	208242
+ 314 00d4 1B340300 		.word	209947
+ 315 00d8 D92C0300 		.word	208089
+ 316 00dc A2330300 		.word	209826
+ 317 00e0 582D0300 		.word	208216
+ 318 00e4 6C340300 		.word	210028
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 8
+
+
+ 319 00e8 B22D0300 		.word	208306
+ 320 00ec DB350300 		.word	210395
+ 321 00f0 2D2E0300 		.word	208429
+ 322 00f4 1B350300 		.word	210203
+ 323 00f8 D42E0300 		.word	208596
+ 324 00fc 74350300 		.word	210292
+ 325 0100 2E2F0300 		.word	208686
+ 326 0104 F9340300 		.word	210169
+ 327 0108 3A300300 		.word	208954
+ 328 010c 87340300 		.word	210055
+ 329 0110 CA310300 		.word	209354
+ 330 0114 43340300 		.word	209987
+ 331 0118 EC320300 		.word	209644
+ 332 011c 9D330300 		.word	209821
+ 333 0120 6B340300 		.word	210027
+ 334 0124 FC320300 		.word	209660
+ 335 0128 08360300 		.word	210440
+ 336 012c 4B320300 		.word	209483
+ 337 0130 7C360300 		.word	210556
+ 338 0134 92320300 		.word	209554
+ 339 0138 68390300 		.word	211304
+ 340 013c 4C320300 		.word	209484
+ 341 0140 35390300 		.word	211253
+ 342 0144 20330300 		.word	209696
+ 343 0148 813A0300 		.word	211585
+ 344 014c 99330300 		.word	209817
+ 345 0150 023C0300 		.word	211970
+ 346 0154 5B340300 		.word	210011
+ 347 0158 823B0300 		.word	211842
+ 348 015c 02350300 		.word	210178
+ 349 0160 3C3B0300 		.word	211772
+ 350 0164 34340300 		.word	209972
+ 351 0168 07390300 		.word	211207
+ 352 016c C6320300 		.word	209606
+ 353 0170 36350300 		.word	210230
+ 354 0174 3A300300 		.word	208954
+ 355 0178 BD300300 		.word	209085
+ 356 017c AB2C0300 		.word	208043
+ 357 0180 5E2B0300 		.word	207710
+ 358 0184 9F290300 		.word	207263
+ 359 0188 BA250300 		.word	206266
+ 360 018c 67260300 		.word	206439
+ 361 0190 C9200300 		.word	205001
+ 362 0194 50220300 		.word	205392
+ 363 0198 2C1C0300 		.word	203820
+ 364 019c AA200300 		.word	204970
+ 365 01a0 04180300 		.word	202756
+ 366 01a4 B31C0300 		.word	203955
+ 367 01a8 59150300 		.word	202073
+ 368 01ac F81A0300 		.word	203512
+ 369 01b0 F3120300 		.word	201459
+ 370 01b4 711A0300 		.word	203377
+ 371 01b8 EA110300 		.word	201194
+ 372 01bc 07180300 		.word	202759
+ 373 01c0 21110300 		.word	200993
+ 374 01c4 D9170300 		.word	202713
+ 375 01c8 2A110300 		.word	201002
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 9
+
+
+ 376 01cc DB160300 		.word	202459
+ 377 01d0 EE110300 		.word	201198
+ 378 01d4 3E160300 		.word	202302
+ 379 01d8 29130300 		.word	201513
+ 380 01dc CC150300 		.word	202188
+ 381 01e0 6B140300 		.word	201835
+ 382 01e4 7C150300 		.word	202108
+ 383 01e8 57160300 		.word	202327
+ 384 01ec 61150300 		.word	202081
+ 385 01f0 48180300 		.word	202824
+ 386 01f4 ED140300 		.word	201965
+ 387 01f8 FB180300 		.word	203003
+ 388 01fc C0150300 		.word	202176
+ 389 0200 9C1C0300 		.word	203932
+ 390 0204 1B160300 		.word	202267
+ 391 0208 8E1C0300 		.word	203918
+ 392 020c 04170300 		.word	202500
+ 393 0210 941E0300 		.word	204436
+ 394 0214 19180300 		.word	202777
+ 395 0218 79200300 		.word	204921
+ 396 021c 18190300 		.word	203032
+ 397 0220 50200300 		.word	204880
+ 398 0224 301A0300 		.word	203312
+ 399 0228 65210300 		.word	205157
+ 400 022c 001B0300 		.word	203520
+ 401 0230 01210300 		.word	205057
+ 402 0234 221C0300 		.word	203810
+ 403 0238 EA200300 		.word	205034
+ 404 023c BD1D0300 		.word	204221
+ 405 0240 C5200300 		.word	204997
+ 406 0244 EF1E0300 		.word	204527
+ 407 0248 70200300 		.word	204912
+ 408 024c C2200300 		.word	204994
+ 409 0250 75200300 		.word	204917
+ 410 0254 68220300 		.word	205416
+ 411 0258 25200300 		.word	204837
+ 412 025c 67230300 		.word	205671
+ 413 0260 BC1F0300 		.word	204732
+ 414 0264 02260300 		.word	206338
+ 415 0268 711F0300 		.word	204657
+ 416 026c AB250300 		.word	206251
+ 417 0270 461F0300 		.word	204614
+ 418 0274 7C260300 		.word	206460
+ 419 0278 2F1F0300 		.word	204591
+ 420 027c 46270300 		.word	206662
+ 421 0280 251F0300 		.word	204581
+ 422 0284 1F260300 		.word	206367
+ 423 0288 2A1F0300 		.word	204586
+ 424 028c 42260300 		.word	206402
+ 425 0290 041F0300 		.word	204548
+ 426 0294 8F240300 		.word	205967
+ 427 0298 041F0300 		.word	204548
+ 428 029c 73230300 		.word	205683
+ 429 02a0 201F0300 		.word	204576
+ 430 02a4 00220300 		.word	205312
+ 431 02a8 061F0300 		.word	204550
+ 432 02ac C3200300 		.word	204995
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 10
+
+
+ 433 02b0 2C200300 		.word	204844
+ 434 02b4 671F0300 		.word	204647
+ 435 02b8 EB200300 		.word	205035
+ 436 02bc 281E0300 		.word	204328
+ 437 02c0 41210300 		.word	205121
+ 438 02c4 6F1D0300 		.word	204143
+ 439 02c8 8D230300 		.word	205709
+ 440 02cc A71C0300 		.word	203943
+ 441 02d0 A2220300 		.word	205474
+ 442 02d4 DB1C0300 		.word	203995
+ 443 02d8 56240300 		.word	205910
+ 444 02dc 2A1D0300 		.word	204074
+ 445 02e0 20250300 		.word	206112
+ 446 02e4 AF1D0300 		.word	204207
+ 447 02e8 77240300 		.word	205943
+ 448 02ec 5B1E0300 		.word	204379
+ 449 02f0 01260300 		.word	206337
+ 450 02f4 FF1E0300 		.word	204543
+ 451 02f8 71250300 		.word	206193
+ 452 02fc 4F200300 		.word	204879
+ 453 0300 83250300 		.word	206211
+ 454 0304 E9210300 		.word	205289
+ 455 0308 55250300 		.word	206165
+ 456 030c 0D230300 		.word	205581
+ 457 0310 46250300 		.word	206150
+ 458 0314 18250300 		.word	206104
+ 459 0318 3D250300 		.word	206141
+ 460 031c E6260300 		.word	206566
+ 461 0320 BA240300 		.word	206010
+ 462 0324 3E280300 		.word	206910
+ 463 0328 21250300 		.word	206113
+ 464 032c 022B0300 		.word	207618
+ 465 0330 FC240300 		.word	206076
+ 466 0334 F22A0300 		.word	207602
+ 467 0338 AC250300 		.word	206252
+ 468 033c 702D0300 		.word	208240
+ 469 0340 58260300 		.word	206424
+ 470 0344 B32E0300 		.word	208563
+ 471 0348 49270300 		.word	206665
+ 472 034c 162E0300 		.word	208406
+ 473 0350 26280300 		.word	206886
+ 474 0354 17300300 		.word	208919
+ 475 0358 E9280300 		.word	207081
+ 476 035c C32F0300 		.word	208835
+ 477 0360 072A0300 		.word	207367
+ 478 0364 7A2F0300 		.word	208762
+ 479 0368 162B0300 		.word	207638
+ 480 036c 592F0300 		.word	208729
+ 481 0370 182C0300 		.word	207896
+ 482 0374 8E2E0300 		.word	208526
+ 483 0378 DC2D0300 		.word	208348
+ 484 037c 032E0300 		.word	208387
+ 485 0380 5C2F0300 		.word	208732
+ 486 0384 4B2D0300 		.word	208203
+ 487 0388 7B300300 		.word	209019
+ 488 038c C62C0300 		.word	208070
+ 489 0390 EF310300 		.word	209391
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 11
+
+
+ 490 0394 2C2C0300 		.word	207916
+ 491 0398 9F310300 		.word	209311
+ 492 039c 1C2C0300 		.word	207900
+ 493 03a0 76330300 		.word	209782
+ 494 03a4 292C0300 		.word	207913
+ 495 03a8 3A340300 		.word	209978
+ 496 03ac A62C0300 		.word	208038
+ 497 03b0 C7330300 		.word	209863
+ 498 03b4 252D0300 		.word	208165
+ 499 03b8 D9340300 		.word	210137
+ 500 03bc 682D0300 		.word	208232
+ 501 03c0 2B340300 		.word	209963
+ 502 03c4 5D2E0300 		.word	208477
+ 503 03c8 A3330300 		.word	209827
+ 504 03cc D72E0300 		.word	208599
+ 505 03d0 0E330300 		.word	209678
+ 506 03d4 BD2F0300 		.word	208829
+ 507 03d8 40320300 		.word	209472
+ 508 03dc 48310300 		.word	209224
+ 509 03e0 F7310300 		.word	209399
+ 510 03e4 71320300 		.word	209521
+ 511 03e8 B7300300 		.word	209079
+ 512 03ec 43330300 		.word	209731
+ 513 03f0 24300300 		.word	208932
+ 514 03f4 F1340300 		.word	210161
+ 515 03f8 842F0300 		.word	208772
+ 516 03fc 01350300 		.word	210177
+ 517 0400 AA2F0300 		.word	208810
+ 518 0404 28370300 		.word	210728
+ 519 0408 B32F0300 		.word	208819
+ 520 040c 7F370300 		.word	210815
+ 521 0410 63300300 		.word	208995
+ 522 0414 AA370300 		.word	210858
+ 523 0418 F2300300 		.word	209138
+ 524 041c 58390300 		.word	211288
+ 525 0420 A7310300 		.word	209319
+ 526 0424 87380300 		.word	211079
+ 527 0428 A7320300 		.word	209575
+ 528 042c 74380300 		.word	211060
+ 529 0430 6D330300 		.word	209773
+ 530 0434 D5370300 		.word	210901
+ 531 0438 4B340300 		.word	209995
+ 532 043c 32370300 		.word	210738
+ 533 0440 07360300 		.word	210439
+ 534 0444 D5360300 		.word	210645
+ 535 0448 12370300 		.word	210706
+ 536 044c 61360300 		.word	210529
+ 537 0450 91380300 		.word	211089
+ 538 0454 E4350300 		.word	210404
+ 539 0458 A23A0300 		.word	211618
+ 540 045c BD350300 		.word	210365
+ 541 0460 D33A0300 		.word	211667
+ 542 0464 FD350300 		.word	210429
+ 543 0468 273D0300 		.word	212263
+ 544 046c F7350300 		.word	210423
+ 545 0470 D33D0300 		.word	212435
+ 546 0474 B1360300 		.word	210609
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 12
+
+
+ 547 0478 123E0300 		.word	212498
+ 548 047c 7B370300 		.word	210811
+ 549 0480 B53F0300 		.word	212917
+ 550 0484 2E380300 		.word	210990
+ 551 0488 EC3E0300 		.word	212716
+ 552 048c 2A390300 		.word	211242
+ 553 0490 273F0300 		.word	212775
+ 554 0494 FE390300 		.word	211454
+ 555 0498 E23E0300 		.word	212706
+ 556 049c 1D3B0300 		.word	211741
+ 557 04a0 493E0300 		.word	212553
+ 558 04a4 263C0300 		.word	212006
+ 559 04a8 6B3C0300 		.word	212075
+ 560 04ac 6E3B0300 		.word	211822
+ 561 04b0 C2390300 		.word	211394
+ 562 04b4 383A0300 		.word	211512
+ 563 04b8 C1350300 		.word	210369
+ 564 04bc 49380300 		.word	211017
+ 565 04c0 6C310300 		.word	209260
+ 566 04c4 53340300 		.word	210003
+ 567 04c8 892D0300 		.word	208265
+ 568 04cc 73320300 		.word	209523
+ 569 04d0 C3280300 		.word	207043
+ 570 04d4 5A2E0300 		.word	208474
+ 571 04d8 96250300 		.word	206230
+ 572 04dc DF2A0300 		.word	207583
+ 573 04e0 38220300 		.word	205368
+ 574 04e4 AC280300 		.word	207020
+ 575 04e8 C61F0300 		.word	204742
+ 576 04ec F5240300 		.word	206069
+ 577 04f0 5D1D0300 		.word	204125
+ 578 04f4 81220300 		.word	205441
+ 579 04f8 151C0300 		.word	203797
+ 580 04fc CD1F0300 		.word	204749
+ 581 0500 361B0300 		.word	203574
+ 582 0504 1F1E0300 		.word	204319
+ 583 0508 671B0300 		.word	203623
+ 584 050c A11C0300 		.word	203937
+ 585 0510 CE1B0300 		.word	203726
+ 586 0514 BF1B0300 		.word	203711
+ 587 0518 1C1D0300 		.word	204060
+ 588 051c 021B0300 		.word	203522
+ 589 0520 F71E0300 		.word	204535
+ 590 0524 BF1A0300 		.word	203455
+ 591 0528 681F0300 		.word	204648
+ 592 052c FA1A0300 		.word	203514
+ 593 0530 65220300 		.word	205413
+ 594 0534 501B0300 		.word	203600
+ 595 0538 AF220300 		.word	205487
+ 596 053c 951C0300 		.word	203925
+ 597 0540 0E240300 		.word	205838
+ 598 0544 6B1D0300 		.word	204139
+ 599 0548 13260300 		.word	206355
+ 600 054c 861E0300 		.word	204422
+ 601 0550 FB250300 		.word	206331
+ 602 0554 DD1F0300 		.word	204765
+ 603 0558 04260300 		.word	206340
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 13
+
+
+ 604 055c 69200300 		.word	204905
+ 605 0560 E6250300 		.word	206310
+ 606 0564 B5210300 		.word	205237
+ 607 0568 AA250300 		.word	206250
+ 608 056c 67230300 		.word	205671
+ 609 0570 52250300 		.word	206162
+ 610 0574 8E240300 		.word	205966
+ 611 0578 90240300 		.word	205968
+ 612 057c 2A260300 		.word	206378
+ 613 0580 96240300 		.word	205974
+ 614 0584 42280300 		.word	206914
+ 615 0588 F2230300 		.word	205810
+ 616 058c F6280300 		.word	207094
+ 617 0590 A5240300 		.word	205989
+ 618 0594 E82B0300 		.word	207848
+ 619 0598 CE240300 		.word	206030
+ 620 059c 002C0300 		.word	207872
+ 621 05a0 A3250300 		.word	206243
+ 622 05a4 FE2C0300 		.word	208126
+ 623 05a8 19260300 		.word	206361
+ 624 05ac 9C2E0300 		.word	208540
+ 625 05b0 85260300 		.word	206469
+ 626 05b4 212D0300 		.word	208161
+ 627 05b8 EB260300 		.word	206571
+ 628 05bc E82C0300 		.word	208104
+ 629 05c0 9F260300 		.word	206495
+ 630 05c4 F92B0300 		.word	207865
+ 631 05c8 D9260300 		.word	206553
+ 632 05cc 6D2A0300 		.word	207469
+ 633 05d0 5B270300 		.word	206683
+ 634 05d4 35290300 		.word	207157
+ 635 05d8 53270300 		.word	206675
+ 636 05dc 99270300 		.word	206745
+ 637 05e0 89280300 		.word	206985
+ 638 05e4 60260300 		.word	206432
+ 639 05e8 39290300 		.word	207161
+ 640 05ec 9B240300 		.word	205979
+ 641 05f0 BB280300 		.word	207035
+ 642 05f4 FF230300 		.word	205823
+ 643 05f8 B42A0300 		.word	207540
+ 644 05fc 3E230300 		.word	205630
+ 645 0600 D7290300 		.word	207319
+ 646 0604 45230300 		.word	205637
+ 647 0608 822A0300 		.word	207490
+ 648 060c 9D230300 		.word	205725
+ 649 0610 B32B0300 		.word	207795
+ 650 0614 30240300 		.word	205872
+ 651 0618 182B0300 		.word	207640
+ 652 061c EF240300 		.word	206063
+ 653 0620 582B0300 		.word	207704
+ 654 0624 6F250300 		.word	206191
+ 655 0628 2C2B0300 		.word	207660
+ 656 062c 73260300 		.word	206451
+ 657 0630 D22A0300 		.word	207570
+ 658 0634 04280300 		.word	206852
+ 659 0638 782A0300 		.word	207480
+ 660 063c EA280300 		.word	207082
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 14
+
+
+ 661 0640 272A0300 		.word	207399
+ 662 0644 A32A0300 		.word	207523
+ 663 0648 7A290300 		.word	207226
+ 664 064c 652C0300 		.word	207973
+ 665 0650 06290300 		.word	207110
+ 666 0654 182D0300 		.word	208152
+ 667 0658 77290300 		.word	207223
+ 668 065c 32300300 		.word	208946
+ 669 0660 27290300 		.word	207143
+ 670 0664 AA2F0300 		.word	208810
+ 671 0668 F9290300 		.word	207353
+ 672 066c 87310300 		.word	209287
+ 673 0670 D02A0300 		.word	207568
+ 674 0674 16330300 		.word	209686
+ 675 0678 892B0300 		.word	207753
+ 676 067c 69320300 		.word	209513
+ 677 0680 AF2C0300 		.word	208047
+ 678 0684 AD330300 		.word	209837
+ 679 0688 322D0300 		.word	208178
+ 680 068c 68330300 		.word	209768
+ 681 0690 902E0300 		.word	208528
+ 682 0694 4C330300 		.word	209740
+ 683 0698 A72F0300 		.word	208807
+ 684 069c E6320300 		.word	209638
+ 685 06a0 CE300300 		.word	209102
+ 686 06a4 73320300 		.word	209523
+ 687 06a8 D8320300 		.word	209624
+ 688 06ac D6310300 		.word	209366
+ 689 06b0 5C340300 		.word	210012
+ 690 06b4 31310300 		.word	209201
+ 691 06b8 19350300 		.word	210201
+ 692 06bc 45310300 		.word	209221
+ 693 06c0 B5370300 		.word	210869
+ 694 06c4 C2300300 		.word	209090
+ 695 06c8 1D370300 		.word	210717
+ 696 06cc 4F310300 		.word	209231
+ 697 06d0 B7380300 		.word	211127
+ 698 06d4 D4310300 		.word	209364
+ 699 06d8 313A0300 		.word	211505
+ 700 06dc 3F320300 		.word	209471
+ 701 06e0 35390300 		.word	211253
+ 702 06e4 E9320300 		.word	209641
+ 703 06e8 2E3A0300 		.word	211502
+ 704 06ec 55330300 		.word	209749
+ 705 06f0 54390300 		.word	211284
+ 706 06f4 55340300 		.word	210005
+ 707 06f8 D2380300 		.word	211154
+ 708 06fc 24350300 		.word	210212
+ 709 0700 DF370300 		.word	210911
+ 710 0704 78350300 		.word	210296
+ 711 0708 10370300 		.word	210704
+ 712 070c 19370300 		.word	210713
+ 713 0710 67360300 		.word	210535
+ 714 0714 75380300 		.word	211061
+ 715 0718 7D350300 		.word	210301
+ 716 071c E5380300 		.word	211173
+ 717 0720 0D350300 		.word	210189
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 15
+
+
+ 718 0724 3E3B0300 		.word	211774
+ 719 0728 77340300 		.word	210039
+ 720 072c 903A0300 		.word	211600
+ 721 0730 0D350300 		.word	210189
+ 722 0734 463C0300 		.word	212038
+ 723 0738 0E350300 		.word	210190
+ 724 073c 8A3D0300 		.word	212362
+ 725 0740 79350300 		.word	210297
+ 726 0744 803C0300 		.word	212096
+ 727 0748 E7350300 		.word	210407
+ 728 074c 5C3D0300 		.word	212316
+ 729 0750 2B360300 		.word	210475
+ 730 0754 6B3C0300 		.word	212075
+ 731 0758 17370300 		.word	210711
+ 732 075c EC3B0300 		.word	211948
+ 733 0760 0C380300 		.word	210956
+ 734 0764 5B3B0300 		.word	211803
+ 735 0768 0C390300 		.word	211212
+ 736 076c C53A0300 		.word	211653
+ 737 0770 553A0300 		.word	211541
+ 738 0774 023A0300 		.word	211458
+ 739 0778 EE3B0300 		.word	211950
+ 740 077c 61390300 		.word	211297
+ 741 0780 C23C0300 		.word	212162
+ 742 0784 CB380300 		.word	211147
+ 743 0788 C43E0300 		.word	212676
+ 744 078c 79380300 		.word	211065
+ 745 0790 3A3E0300 		.word	212538
+ 746 0794 A3380300 		.word	211107
+ 747 0798 24400300 		.word	213028
+ 748 079c B8380300 		.word	211128
+ 749 07a0 3D410300 		.word	213309
+ 750 07a4 5B390300 		.word	211291
+ 751 07a8 90400300 		.word	213136
+ 752 07ac 5E3A0300 		.word	211550
+ 753 07b0 11420300 		.word	213521
+ 754 07b4 C73A0300 		.word	211655
+ 755 07b8 6E410300 		.word	213358
+ 756 07bc FA3B0300 		.word	211962
+ 757 07c0 DD400300 		.word	213213
+ 758 07c4 E03C0300 		.word	212192
+ 759 07c8 86400300 		.word	213126
+ 760 07cc 643D0300 		.word	212324
+ 761 07d0 9C3F0300 		.word	212892
+ 762 07d4 093F0300 		.word	212745
+ 763 07d8 A13E0300 		.word	212641
+ 764 07dc A13F0300 		.word	212897
+ 765 07e0 0D3D0300 		.word	212237
+ 766 07e4 513F0300 		.word	212817
+ 767 07e8 BF3A0300 		.word	211647
+ 768 07ec 003F0300 		.word	212736
+ 769 07f0 0C370300 		.word	210700
+ 770 07f4 163B0300 		.word	211734
+ 771 07f8 D2330300 		.word	209874
+ 772 07fc 19390300 		.word	211225
+ 773 0800 C12F0300 		.word	208833
+ 774 0804 F8350300 		.word	210424
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 16
+
+
+ 775 0808 172C0300 		.word	207895
+ 776 080c 26310300 		.word	209190
+ 777 0810 9D280300 		.word	207005
+ 778 0814 6A2E0300 		.word	208490
+ 779 0818 5E250300 		.word	206174
+ 780 081c 7A2A0300 		.word	207482
+ 781 0820 70230300 		.word	205680
+ 782 0824 35270300 		.word	206645
+ 783 0828 26210300 		.word	205094
+ 784 082c E8230300 		.word	205800
+ 785 0830 C61F0300 		.word	204742
+ 786 0834 73210300 		.word	205171
+ 787 0838 AA1F0300 		.word	204714
+ 788 083c 451F0300 		.word	204613
+ 789 0840 511F0300 		.word	204625
+ 790 0844 451D0300 		.word	204101
+ 791 0848 AD1F0300 		.word	204717
+ 792 084c 111C0300 		.word	203793
+ 793 0850 5D210300 		.word	205149
+ 794 0854 341B0300 		.word	203572
+ 795 0858 CD200300 		.word	205005
+ 796 085c B01B0300 		.word	203696
+ 797 0860 F2220300 		.word	205554
+ 798 0864 CE1B0300 		.word	203726
+ 799 0868 04240300 		.word	205828
+ 800 086c A61C0300 		.word	203942
+ 801 0870 EB230300 		.word	205803
+ 802 0874 131E0300 		.word	204307
+ 803 0878 2C260300 		.word	206380
+ 804 087c 4E1F0300 		.word	204622
+ 805 0880 34260300 		.word	206388
+ 806 0884 04210300 		.word	205060
+ 807 0888 DF260300 		.word	206559
+ 808 088c 6D220300 		.word	205421
+ 809 0890 C5260300 		.word	206533
+ 810 0894 63230300 		.word	205667
+ 811 0898 C7260300 		.word	206535
+ 812 089c 64250300 		.word	206180
+ 813 08a0 91260300 		.word	206481
+ 814 08a4 9A260300 		.word	206490
+ 815 08a8 D4250300 		.word	206292
+ 816 08ac 23280300 		.word	206883
+ 817 08b0 50250300 		.word	206160
+ 818 08b4 682A0300 		.word	207464
+ 819 08b8 23250300 		.word	206115
+ 820 08bc A12A0300 		.word	207521
+ 821 08c0 D4250300 		.word	206292
+ 822 08c4 B12D0300 		.word	208305
+ 823 08c8 42260300 		.word	206402
+ 824 08cc 5A2E0300 		.word	208474
+ 825 08d0 5F270300 		.word	206687
+ 826 08d4 7F2E0300 		.word	208511
+ 827 08d8 18280300 		.word	206872
+ 828 08dc 2B300300 		.word	208939
+ 829 08e0 90280300 		.word	206992
+ 830 08e4 512F0300 		.word	208721
+ 831 08e8 30290300 		.word	207152
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 17
+
+
+ 832 08ec 772E0300 		.word	208503
+ 833 08f0 3B290300 		.word	207163
+ 834 08f4 882D0300 		.word	208264
+ 835 08f8 81290300 		.word	207233
+ 836 08fc 4B2C0300 		.word	207947
+ 837 0900 382A0300 		.word	207416
+ 838 0904 C82A0300 		.word	207560
+ 839 0908 A52A0300 		.word	207525
+ 840 090c 1C290300 		.word	207132
+ 841 0910 E82A0300 		.word	207592
+ 842 0914 EC270300 		.word	206828
+ 843 0918 052C0300 		.word	207877
+ 844 091c 6C260300 		.word	206444
+ 845 0920 3C2B0300 		.word	207676
+ 846 0924 FE250300 		.word	206334
+ 847 0928 0B2D0300 		.word	208139
+ 848 092c 38250300 		.word	206136
+ 849 0930 1D2C0300 		.word	207901
+ 850 0934 20250300 		.word	206112
+ 851 0938 F12B0300 		.word	207857
+ 852 093c 3C250300 		.word	206140
+ 853 0940 292D0300 		.word	208169
+ 854 0944 9E250300 		.word	206238
+ 855 0948 3B2C0300 		.word	207931
+ 856 094c 16260300 		.word	206358
+ 857 0950 CC2B0300 		.word	207820
+ 858 0954 6F260300 		.word	206447
+ 859 0958 612B0300 		.word	207713
+ 860 095c 2E270300 		.word	206638
+ 861 0960 6A2A0300 		.word	207466
+ 862 0964 81280300 		.word	206977
+ 863 0968 C7290300 		.word	207303
+ 864 096c AD290300 		.word	207277
+ 865 0970 58290300 		.word	207192
+ 866 0974 5A2B0300 		.word	207706
+ 867 0978 E9280300 		.word	207081
+ 868 097c E72C0300 		.word	208103
+ 869 0980 7D280300 		.word	206973
+ 870 0984 3C2D0300 		.word	208188
+ 871 0988 CE280300 		.word	207054
+ 872 098c 36300300 		.word	208950
+ 873 0990 12290300 		.word	207122
+ 874 0994 6D300300 		.word	209005
+ 875 0998 FD290300 		.word	207357
+ 876 099c 18310300 		.word	209176
+ 877 09a0 C72A0300 		.word	207559
+ 878 09a4 0D330300 		.word	209677
+ 879 09a8 882B0300 		.word	207752
+ 880 09ac D7320300 		.word	209623
+ 881 09b0 F32C0300 		.word	208115
+ 882 09b4 2F330300 		.word	209711
+ 883 09b8 982D0300 		.word	208280
+ 884 09bc F1320300 		.word	209649
+ 885 09c0 CC2E0300 		.word	208588
+ 886 09c4 8D320300 		.word	209549
+ 887 09c8 1A300300 		.word	208922
+ 888 09cc 90310300 		.word	209296
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 18
+
+
+ 889 09d0 07310300 		.word	209159
+ 890 09d4 38310300 		.word	209208
+ 891 09d8 66320300 		.word	209510
+ 892 09dc 85300300 		.word	209029
+ 893 09e0 42340300 		.word	209986
+ 894 09e4 0A300300 		.word	208906
+ 895 09e8 AC340300 		.word	210092
+ 896 09ec 07300300 		.word	208903
+ 897 09f0 17370300 		.word	210711
+ 898 09f4 FA2F0300 		.word	208890
+ 899 09f8 FA360300 		.word	210682
+ 900 09fc 8C300300 		.word	209036
+ 901 0a00 F0370300 		.word	210928
+ 902 0a04 0C310300 		.word	209164
+ 903 0a08 87390300 		.word	211335
+ 904 0a0c 9F310300 		.word	209311
+ 905 0a10 96380300 		.word	211094
+ 906 0a14 083B0300 		.word	211720
+ 907 0a18 56380300 		.word	211030
+ 908 0a1c 75320300 		.word	209525
+ 909 0a20 DB370300 		.word	210907
+ 910 0a24 79330300 		.word	209785
+ 911 0a28 4C370300 		.word	210764
+ 912 0a2c 6C340300 		.word	210028
+ 913 0a30 5C360300 		.word	210524
+ 914 0a34 6C350300 		.word	210284
+ 915 0a38 A9350300 		.word	210345
+ 916 0a3c 54360300 		.word	210516
+ 917 0a40 B1340300 		.word	210097
+ 918 0a44 DB370300 		.word	210907
+ 919 0a48 C8330300 		.word	209864
+ 920 0a4c 3E380300 		.word	211006
+ 921 0a50 E3330300 		.word	209891
+ 922 0a54 8D3A0300 		.word	211597
+ 923 0a58 54330300 		.word	209748
+ 924 0a5c FA390300 		.word	211450
+ 925 0a60 CE330300 		.word	209870
+ 926 0a64 FB3A0300 		.word	211707
+ 927 0a68 E2330300 		.word	209890
+ 928 0a6c 503C0300 		.word	212048
+ 929 0a70 43340300 		.word	209987
+ 930 0a74 353B0300 		.word	211765
+ 931 0a78 CF340300 		.word	210127
+ 932 0a7c 8E3B0300 		.word	211854
+ 933 0a80 19350300 		.word	210201
+ 934 0a84 A73A0300 		.word	211623
+ 935 0a88 25360300 		.word	210469
+ 936 0a8c 0E3A0300 		.word	211470
+ 937 0a90 2D370300 		.word	210733
+ 938 0a94 74390300 		.word	211316
+ 939 0a98 C8370300 		.word	210888
+ 940 0a9c AE380300 		.word	211118
+ 941 0aa0 FC380300 		.word	211196
+ 942 0aa4 F2370300 		.word	210930
+ 943 0aa8 933A0300 		.word	211603
+ 944 0aac EB360300 		.word	210667
+ 945 0ab0 EA3A0300 		.word	211690
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 19
+
+
+ 946 0ab4 AE360300 		.word	210606
+ 947 0ab8 763D0300 		.word	212342
+ 948 0abc 34360300 		.word	210484
+ 949 0ac0 DD3C0300 		.word	212189
+ 950 0ac4 93360300 		.word	210579
+ 951 0ac8 033E0300 		.word	212483
+ 952 0acc 06370300 		.word	210694
+ 953 0ad0 3F3F0300 		.word	212799
+ 954 0ad4 9A370300 		.word	210842
+ 955 0ad8 5D3E0300 		.word	212573
+ 956 0adc 4B380300 		.word	211019
+ 957 0ae0 443F0300 		.word	212804
+ 958 0ae4 B2380300 		.word	211122
+ 959 0ae8 A83E0300 		.word	212648
+ 960 0aec 7F390300 		.word	211327
+ 961 0af0 413E0300 		.word	212545
+ 962 0af4 1A3B0300 		.word	211738
+ 963 0af8 9D3D0300 		.word	212381
+ 964 0afc AC3B0300 		.word	211884
+ 965 0b00 EF3C0300 		.word	212207
+ 966 0b04 593D0300 		.word	212313
+ 967 0b08 1D3C0300 		.word	211997
+ 968 0b0c 4B3E0300 		.word	212555
+ 969 0b10 F13A0300 		.word	211697
+ 970 0b14 C13D0300 		.word	212417
+ 971 0b18 BA380300 		.word	211130
+ 972 0b1c FA3D0300 		.word	212474
+ 973 0b20 D8350300 		.word	210392
+ 974 0b24 CF3A0300 		.word	211663
+ 975 0b28 AE320300 		.word	209582
+ 976 0b2c 2A380300 		.word	210986
+ 977 0b30 982E0300 		.word	208536
+ 978 0b34 0A350300 		.word	210186
+ 979 0b38 EC2A0300 		.word	207596
+ 980 0b3c CD2F0300 		.word	208845
+ 981 0b40 5F270300 		.word	206687
+ 982 0b44 862C0300 		.word	208006
+ 983 0b48 F2230300 		.word	205810
+ 984 0b4c 0B280300 		.word	206859
+ 985 0b50 15210300 		.word	205077
+ 986 0b54 3F240300 		.word	205887
+ 987 0b58 151F0300 		.word	204565
+ 988 0b5c A7200300 		.word	204967
+ 989 0b60 031D0300 		.word	204035
+ 990 0b64 5E1D0300 		.word	204126
+ 991 0b68 701C0300 		.word	203888
+ 992 0b6c F81A0300 		.word	203512
+ 993 0b70 451C0300 		.word	203845
+ 994 0b74 D0180300 		.word	202960
+ 995 0b78 DA1B0300 		.word	203738
+ 996 0b7c 84170300 		.word	202628
+ 997 0b80 561D0300 		.word	204118
+ 998 0b84 C7160300 		.word	202439
+ 999 0b88 9F1C0300 		.word	203935
+ 1000 0b8c F8160300 		.word	202488
+ 1001 0b90 371E0300 		.word	204343
+ 1002 0b94 4F170300 		.word	202575
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 20
+
+
+ 1003 0b98 A31F0300 		.word	204707
+ 1004 0b9c 2B180300 		.word	202795
+ 1005 0ba0 601F0300 		.word	204640
+ 1006 0ba4 05190300 		.word	203013
+ 1007 0ba8 FC200300 		.word	205052
+ 1008 0bac 481A0300 		.word	203336
+ 1009 0bb0 89200300 		.word	204937
+ 1010 0bb4 941B0300 		.word	203668
+ 1011 0bb8 B1200300 		.word	204977
+ 1012 0bbc 081D0300 		.word	204040
+ 1013 0bc0 A9200300 		.word	204969
+ 1014 0bc4 2A1E0300 		.word	204330
+ 1015 0bc8 4C200300 		.word	204876
+ 1016 0bcc 1E200300 		.word	204830
+ 1017 0bd0 E81F0300 		.word	204776
+ 1018 0bd4 B5210300 		.word	205237
+ 1019 0bd8 8A1F0300 		.word	204682
+ 1020 0bdc CC220300 		.word	205516
+ 1021 0be0 621F0300 		.word	204642
+ 1022 0be4 1E250300 		.word	206110
+ 1023 0be8 0C1F0300 		.word	204556
+ 1024 0bec 28250300 		.word	206120
+ 1025 0bf0 BA1F0300 		.word	204730
+ 1026 0bf4 D9260300 		.word	206553
+ 1027 0bf8 DF1F0300 		.word	204767
+ 1028 0bfc 88280300 		.word	206984
+ 1029 0c00 1E210300 		.word	205086
+ 1030 0c04 FB270300 		.word	206843
+ 1031 0c08 FA210300 		.word	205306
+ 1032 0c0c B3290300 		.word	207283
+ 1033 0c10 CA220300 		.word	205514
+ 1034 0c14 53290300 		.word	207187
+ 1035 0c18 BE230300 		.word	205758
+ 1036 0c1c E1280300 		.word	207073
+ 1037 0c20 D4240300 		.word	206036
+ 1038 0c24 E1270300 		.word	206817
+ 1039 0c28 8D240300 		.word	205965
+ 1040 0c2c C8260300 		.word	206536
+ 1041 0c30 D0250300 		.word	206288
+ 1042 0c34 AC250300 		.word	206252
+ 1043 0c38 90260300 		.word	206480
+ 1044 0c3c BD230300 		.word	205757
+ 1045 0c40 8C260300 		.word	206476
+ 1046 0c44 D1220300 		.word	205521
+ 1047 0c48 D0270300 		.word	206800
+ 1048 0c4c 85210300 		.word	205189
+ 1049 0c50 91260300 		.word	206481
+ 1050 0c54 D6200300 		.word	205014
+ 1051 0c58 A1270300 		.word	206753
+ 1052 0c5c 44200300 		.word	204868
+ 1053 0c60 FA270300 		.word	206842
+ 1054 0c64 5C200300 		.word	204892
+ 1055 0c68 F0260300 		.word	206576
+ 1056 0c6c 2F200300 		.word	204847
+ 1057 0c70 CA270300 		.word	206794
+ 1058 0c74 40200300 		.word	204864
+ 1059 0c78 B0260300 		.word	206512
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 21
+
+
+ 1060 0c7c BF200300 		.word	204991
+ 1061 0c80 20260300 		.word	206368
+ 1062 0c84 89210300 		.word	205193
+ 1063 0c88 B3250300 		.word	206259
+ 1064 0c8c A7220300 		.word	205479
+ 1065 0c90 F3240300 		.word	206067
+ 1066 0c94 5D240300 		.word	205917
+ 1067 0c98 BB240300 		.word	206011
+ 1068 0c9c 69250300 		.word	206185
+ 1069 0ca0 08240300 		.word	205832
+ 1070 0ca4 A9260300 		.word	206505
+ 1071 0ca8 A8230300 		.word	205736
+ 1072 0cac C9280300 		.word	207049
+ 1073 0cb0 49230300 		.word	205641
+ 1074 0cb4 CE280300 		.word	207054
+ 1075 0cb8 B0230300 		.word	205744
+ 1076 0cbc 3D2B0300 		.word	207677
+ 1077 0cc0 F0230300 		.word	205808
+ 1078 0cc4 E12B0300 		.word	207841
+ 1079 0cc8 97240300 		.word	205975
+ 1080 0ccc 012C0300 		.word	207873
+ 1081 0cd0 8C250300 		.word	206220
+ 1082 0cd4 B32D0300 		.word	208307
+ 1083 0cd8 61260300 		.word	206433
+ 1084 0cdc 492D0300 		.word	208201
+ 1085 0ce0 E0270300 		.word	206816
+ 1086 0ce4 1C2D0300 		.word	208156
+ 1087 0ce8 6D280300 		.word	206957
+ 1088 0cec 262D0300 		.word	208166
+ 1089 0cf0 B0290300 		.word	207280
+ 1090 0cf4 4F2C0300 		.word	207951
+ 1091 0cf8 222B0300 		.word	207650
+ 1092 0cfc EB2B0300 		.word	207851
+ 1093 0d00 4F2C0300 		.word	207951
+ 1094 0d04 872B0300 		.word	207751
+ 1095 0d08 BE2D0300 		.word	208318
+ 1096 0d0c A42A0300 		.word	207524
+ 1097 0d10 6F2F0300 		.word	208751
+ 1098 0d14 002A0300 		.word	207360
+ 1099 0d18 5C2F0300 		.word	208732
+ 1100 0d1c 572A0300 		.word	207447
+ 1101 0d20 E1310300 		.word	209377
+ 1102 0d24 7E2A0300 		.word	207486
+ 1103 0d28 28320300 		.word	209448
+ 1104 0d2c 1F2B0300 		.word	207647
+ 1105 0d30 8B320300 		.word	209547
+ 1106 0d34 E52B0300 		.word	207845
+ 1107 0d38 1D340300 		.word	209949
+ 1108 0d3c C02C0300 		.word	208064
+ 1109 0d40 DC330300 		.word	209884
+ 1110 0d44 E92D0300 		.word	208361
+ 1111 0d48 69330300 		.word	209769
+ 1112 0d4c 3B2E0300 		.word	208443
+ 1113 0d50 0D330300 		.word	209677
+ 1114 0d54 0D2F0300 		.word	208653
+ 1115 0d58 5E320300 		.word	209502
+ 1116 0d5c 6E300300 		.word	209006
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 22
+
+
+ 1117 0d60 C2310300 		.word	209346
+ 1118 0d64 73310300 		.word	209267
+ 1119 0d68 D4300300 		.word	209108
+ 1120 0d6c 87320300 		.word	209543
+ 1121 0d70 F22F0300 		.word	208882
+ 1122 0d74 47340300 		.word	209991
+ 1123 0d78 4D2F0300 		.word	208717
+ 1124 0d7c 10340300 		.word	209936
+ 1125 0d80 8A2F0300 		.word	208778
+ 1126 0d84 84360300 		.word	210564
+ 1127 0d88 462F0300 		.word	208710
+ 1128 0d8c 96360300 		.word	210582
+ 1129 0d90 F52F0300 		.word	208885
+ 1130 0d94 E9360300 		.word	210665
+ 1131 0d98 54300300 		.word	208980
+ 1132 0d9c 47380300 		.word	211015
+ 1133 0da0 DF300300 		.word	209119
+ 1134 0da4 D2370300 		.word	210898
+ 1135 0da8 98310300 		.word	209304
+ 1136 0dac CA370300 		.word	210890
+ 1137 0db0 46320300 		.word	209478
+ 1138 0db4 50370300 		.word	210768
+ 1139 0db8 CD320300 		.word	209613
+ 1140 0dbc 83360300 		.word	210563
+ 1141 0dc0 4E340300 		.word	209998
+ 1142 0dc4 D4350300 		.word	210388
+ 1143 0dc8 6E350300 		.word	210286
+ 1144 0dcc E0340300 		.word	210144
+ 1145 0dd0 85360300 		.word	210565
+ 1146 0dd4 58340300 		.word	210008
+ 1147 0dd8 2C380300 		.word	210988
+ 1148 0ddc A2330300 		.word	209826
+ 1149 0de0 02380300 		.word	210946
+ 1150 0de4 38330300 		.word	209720
+ 1151 0de8 B43A0300 		.word	211636
+ 1152 0dec 8B330300 		.word	209803
+ 1153 0df0 993A0300 		.word	211609
+ 1154 0df4 F1330300 		.word	209905
+ 1155 0df8 4D3B0300 		.word	211789
+ 1156 0dfc 8B340300 		.word	210059
+ 1157 0e00 243D0300 		.word	212260
+ 1158 0e04 A4350300 		.word	210340
+ 1159 0e08 BC3C0300 		.word	212156
+ 1160 0e0c 87360300 		.word	210567
+ 1161 0e10 1E3D0300 		.word	212254
+ 1162 0e14 9D370300 		.word	210845
+ 1163 0e18 E03C0300 		.word	212192
+ 1164 0e1c DD380300 		.word	211165
+ 1165 0e20 1C3D0300 		.word	212252
+ 1166 0e24 5C3B0300 		.word	211804
+ 1167 0e28 B53D0300 		.word	212405
+ 1168 0e2c 3D3D0300 		.word	212285
+ 1169 0e30 413E0300 		.word	212545
+ 1170 0e34 EB3F0300 		.word	212971
+ 1171 0e38 C13E0300 		.word	212673
+ 1172 0e3c 5A420300 		.word	213594
+ 1173 0e40 783E0300 		.word	212600
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 23
+
+
+ 1174 0e44 58430300 		.word	213848
+ 1175 0e48 863F0300 		.word	212870
+ 1176 0e4c D1460300 		.word	214737
+ 1177 0e50 BF3F0300 		.word	212927
+ 1178 0e54 EA460300 		.word	214762
+ 1179 0e58 F0400300 		.word	213232
+ 1180 0e5c 4A480300 		.word	215114
+ 1181 0e60 6B410300 		.word	213355
+ 1182 0e64 E0490300 		.word	215520
+ 1183 0e68 B4410300 		.word	213428
+ 1184 0e6c D4470300 		.word	214996
+ 1185 0e70 7B400300 		.word	213115
+ 1186 0e74 19450300 		.word	214297
+ 1187 0e78 423D0300 		.word	212290
+ 1188 0e7c 53400300 		.word	213075
+ 1189 0e80 94390300 		.word	211348
+ 1190 0e84 673B0300 		.word	211815
+ 1191 0e88 2C360300 		.word	210476
+ 1192 0e8c 0F360300 		.word	210447
+ 1193 0e90 3E320300 		.word	209470
+ 1194 0e94 FE300300 		.word	209150
+ 1195 0e98 6C2F0300 		.word	208748
+ 1196 0e9c D42B0300 		.word	207828
+ 1197 0ea0 982C0300 		.word	208024
+ 1198 0ea4 35270300 		.word	206645
+ 1199 0ea8 81290300 		.word	207233
+ 1200 0eac B6230300 		.word	205750
+ 1201 0eb0 AF280300 		.word	207023
+ 1202 0eb4 AF200300 		.word	204975
+ 1203 0eb8 D3250300 		.word	206291
+ 1204 0ebc DC1E0300 		.word	204508
+ 1205 0ec0 C5240300 		.word	206021
+ 1206 0ec4 431D0300 		.word	204099
+ 1207 0ec8 AE240300 		.word	205998
+ 1208 0ecc E71C0300 		.word	204007
+ 1209 0ed0 11230300 		.word	205585
+ 1210 0ed4 F21C0300 		.word	204018
+ 1211 0ed8 4D230300 		.word	205645
+ 1212 0edc FD1C0300 		.word	204029
+ 1213 0ee0 8B220300 		.word	205451
+ 1214 0ee4 5E1E0300 		.word	204382
+ 1215 0ee8 94220300 		.word	205460
+ 1216 0eec 891F0300 		.word	204681
+ 1217 0ef0 58220300 		.word	205400
+ 1218 0ef4 FC200300 		.word	205052
+ 1219 0ef8 7B220300 		.word	205435
+ 1220 0efc F6220300 		.word	205558
+ 1221 0f00 28220300 		.word	205352
+ 1222 0f04 34250300 		.word	206132
+ 1223 0f08 49220300 		.word	205385
+ 1224 0f0c DC250300 		.word	206300
+ 1225 0f10 50220300 		.word	205392
+ 1226 0f14 C3280300 		.word	207043
+ 1227 0f18 41220300 		.word	205377
+ 1228 0f1c 81280300 		.word	206977
+ 1229 0f20 04230300 		.word	205572
+ 1230 0f24 452A0300 		.word	207429
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 24
+
+
+ 1231 0f28 82230300 		.word	205698
+ 1232 0f2c C02B0300 		.word	207808
+ 1233 0f30 1F240300 		.word	205855
+ 1234 0f34 362B0300 		.word	207670
+ 1235 0f38 20250300 		.word	206112
+ 1236 0f3c 522C0300 		.word	207954
+ 1237 0f40 89250300 		.word	206217
+ 1238 0f44 BA2B0300 		.word	207802
+ 1239 0f48 F3260300 		.word	206579
+ 1240 0f4c 5E2B0300 		.word	207710
+ 1241 0f50 F6270300 		.word	206838
+ 1242 0f54 4B2B0300 		.word	207691
+ 1243 0f58 34290300 		.word	207156
+ 1244 0f5c D32A0300 		.word	207571
+ 1245 0f60 2B2B0300 		.word	207659
+ 1246 0f64 A02A0300 		.word	207520
+ 1247 0f68 F92C0300 		.word	208121
+ 1248 0f6c 242A0300 		.word	207396
+ 1249 0f70 242D0300 		.word	208164
+ 1250 0f74 A2290300 		.word	207266
+ 1251 0f78 BF2F0300 		.word	208831
+ 1252 0f7c EF280300 		.word	207087
+ 1253 0f80 A52E0300 		.word	208549
+ 1254 0f84 B7280300 		.word	207031
+ 1255 0f88 F12F0300 		.word	208881
+ 1256 0f8c 59280300 		.word	206937
+ 1257 0f90 73300300 		.word	209011
+ 1258 0f94 69280300 		.word	206953
+ 1259 0f98 202F0300 		.word	208672
+ 1260 0f9c 3F280300 		.word	206911
+ 1261              		.bss
+ 1262              		.align	2
+ 1263              		.set	.LANCHOR0,. + 0
+ 1264              		.type	bonneLongueur, %object
+ 1265              		.size	bonneLongueur, 4
+ 1266              	bonneLongueur:
+ 1267 0000 00000000 		.space	4
+ 1268              		.text
+ 1269              	.Letext0:
+ 1270              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1271              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1272              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 1273              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/sar/cy_sar.h"
+ 1274              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
+ 1275              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+ 1276              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_pwm.h"
+ 1277              		.file 9 "Generated_Source\\PSoC6/ADC.h"
+ 1278              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 1279              		.file 11 "Generated_Source\\PSoC6\\pdl\\cmsis/include/core_cm4.h"
+ 1280              		.file 12 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
+ 1281              		.file 13 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
+ 1282              		.file 14 "Generated_Source\\PSoC6/PWM.h"
+ 1283              		.file 15 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/include/GUI.h"
+ 1284              		.file 16 ".\\eInk Library/cy_eink_library.h"
+ 1285              		.section	.debug_info,"",%progbits
+ 1286              	.Ldebug_info0:
+ 1287 0000 120D0000 		.4byte	0xd12
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 25
+
+
+ 1288 0004 0400     		.2byte	0x4
+ 1289 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1290 000a 04       		.byte	0x4
+ 1291 000b 01       		.uleb128 0x1
+ 1292 000c 52070000 		.4byte	.LASF214
+ 1293 0010 0C       		.byte	0xc
+ 1294 0011 8C000000 		.4byte	.LASF215
+ 1295 0015 48090000 		.4byte	.LASF216
+ 1296 0019 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 1297 001d 00000000 		.4byte	0
+ 1298 0021 00000000 		.4byte	.Ldebug_line0
+ 1299 0025 02       		.uleb128 0x2
+ 1300 0026 02       		.byte	0x2
+ 1301 0027 05       		.byte	0x5
+ 1302 0028 B1050000 		.4byte	.LASF0
+ 1303 002c 02       		.uleb128 0x2
+ 1304 002d 01       		.byte	0x1
+ 1305 002e 06       		.byte	0x6
+ 1306 002f A90C0000 		.4byte	.LASF1
+ 1307 0033 03       		.uleb128 0x3
+ 1308 0034 B4000000 		.4byte	.LASF3
+ 1309 0038 02       		.byte	0x2
+ 1310 0039 1D       		.byte	0x1d
+ 1311 003a 3E000000 		.4byte	0x3e
+ 1312 003e 02       		.uleb128 0x2
+ 1313 003f 01       		.byte	0x1
+ 1314 0040 08       		.byte	0x8
+ 1315 0041 98080000 		.4byte	.LASF2
+ 1316 0045 03       		.uleb128 0x3
+ 1317 0046 1D040000 		.4byte	.LASF4
+ 1318 004a 02       		.byte	0x2
+ 1319 004b 29       		.byte	0x29
+ 1320 004c 25000000 		.4byte	0x25
+ 1321 0050 03       		.uleb128 0x3
+ 1322 0051 BF0A0000 		.4byte	.LASF5
+ 1323 0055 02       		.byte	0x2
+ 1324 0056 2B       		.byte	0x2b
+ 1325 0057 5B000000 		.4byte	0x5b
+ 1326 005b 02       		.uleb128 0x2
+ 1327 005c 02       		.byte	0x2
+ 1328 005d 07       		.byte	0x7
+ 1329 005e BF030000 		.4byte	.LASF6
+ 1330 0062 03       		.uleb128 0x3
+ 1331 0063 C5050000 		.4byte	.LASF7
+ 1332 0067 02       		.byte	0x2
+ 1333 0068 3F       		.byte	0x3f
+ 1334 0069 6D000000 		.4byte	0x6d
+ 1335 006d 02       		.uleb128 0x2
+ 1336 006e 04       		.byte	0x4
+ 1337 006f 05       		.byte	0x5
+ 1338 0070 01030000 		.4byte	.LASF8
+ 1339 0074 03       		.uleb128 0x3
+ 1340 0075 F6030000 		.4byte	.LASF9
+ 1341 0079 02       		.byte	0x2
+ 1342 007a 41       		.byte	0x41
+ 1343 007b 7F000000 		.4byte	0x7f
+ 1344 007f 02       		.uleb128 0x2
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 26
+
+
+ 1345 0080 04       		.byte	0x4
+ 1346 0081 07       		.byte	0x7
+ 1347 0082 B4040000 		.4byte	.LASF10
+ 1348 0086 02       		.uleb128 0x2
+ 1349 0087 08       		.byte	0x8
+ 1350 0088 05       		.byte	0x5
+ 1351 0089 DB010000 		.4byte	.LASF11
+ 1352 008d 02       		.uleb128 0x2
+ 1353 008e 08       		.byte	0x8
+ 1354 008f 07       		.byte	0x7
+ 1355 0090 4C010000 		.4byte	.LASF12
+ 1356 0094 04       		.uleb128 0x4
+ 1357 0095 04       		.byte	0x4
+ 1358 0096 05       		.byte	0x5
+ 1359 0097 696E7400 		.ascii	"int\000"
+ 1360 009b 02       		.uleb128 0x2
+ 1361 009c 04       		.byte	0x4
+ 1362 009d 07       		.byte	0x7
+ 1363 009e 78040000 		.4byte	.LASF13
+ 1364 00a2 03       		.uleb128 0x3
+ 1365 00a3 FA0B0000 		.4byte	.LASF14
+ 1366 00a7 03       		.byte	0x3
+ 1367 00a8 18       		.byte	0x18
+ 1368 00a9 33000000 		.4byte	0x33
+ 1369 00ad 03       		.uleb128 0x3
+ 1370 00ae BF010000 		.4byte	.LASF15
+ 1371 00b2 03       		.byte	0x3
+ 1372 00b3 20       		.byte	0x20
+ 1373 00b4 45000000 		.4byte	0x45
+ 1374 00b8 03       		.uleb128 0x3
+ 1375 00b9 4F030000 		.4byte	.LASF16
+ 1376 00bd 03       		.byte	0x3
+ 1377 00be 24       		.byte	0x24
+ 1378 00bf 50000000 		.4byte	0x50
+ 1379 00c3 03       		.uleb128 0x3
+ 1380 00c4 90080000 		.4byte	.LASF17
+ 1381 00c8 03       		.byte	0x3
+ 1382 00c9 2C       		.byte	0x2c
+ 1383 00ca 62000000 		.4byte	0x62
+ 1384 00ce 03       		.uleb128 0x3
+ 1385 00cf 810B0000 		.4byte	.LASF18
+ 1386 00d3 03       		.byte	0x3
+ 1387 00d4 30       		.byte	0x30
+ 1388 00d5 74000000 		.4byte	0x74
+ 1389 00d9 02       		.uleb128 0x2
+ 1390 00da 04       		.byte	0x4
+ 1391 00db 07       		.byte	0x7
+ 1392 00dc 8A060000 		.4byte	.LASF19
+ 1393 00e0 05       		.uleb128 0x5
+ 1394 00e1 CE000000 		.4byte	0xce
+ 1395 00e5 02       		.uleb128 0x2
+ 1396 00e6 08       		.byte	0x8
+ 1397 00e7 04       		.byte	0x4
+ 1398 00e8 9E060000 		.4byte	.LASF20
+ 1399 00ec 06       		.uleb128 0x6
+ 1400 00ed B8       		.byte	0xb8
+ 1401 00ee 04       		.byte	0x4
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 27
+
+
+ 1402 00ef 34       		.byte	0x34
+ 1403 00f0 FD040000 		.4byte	0x4fd
+ 1404 00f4 07       		.uleb128 0x7
+ 1405 00f5 10010000 		.4byte	.LASF21
+ 1406 00f9 04       		.byte	0x4
+ 1407 00fa 37       		.byte	0x37
+ 1408 00fb CE000000 		.4byte	0xce
+ 1409 00ff 00       		.byte	0
+ 1410 0100 07       		.uleb128 0x7
+ 1411 0101 E6030000 		.4byte	.LASF22
+ 1412 0105 04       		.byte	0x4
+ 1413 0106 38       		.byte	0x38
+ 1414 0107 CE000000 		.4byte	0xce
+ 1415 010b 04       		.byte	0x4
+ 1416 010c 07       		.uleb128 0x7
+ 1417 010d 85040000 		.4byte	.LASF23
+ 1418 0111 04       		.byte	0x4
+ 1419 0112 39       		.byte	0x39
+ 1420 0113 CE000000 		.4byte	0xce
+ 1421 0117 08       		.byte	0x8
+ 1422 0118 07       		.uleb128 0x7
+ 1423 0119 60080000 		.4byte	.LASF24
+ 1424 011d 04       		.byte	0x4
+ 1425 011e 3A       		.byte	0x3a
+ 1426 011f CE000000 		.4byte	0xce
+ 1427 0123 0C       		.byte	0xc
+ 1428 0124 07       		.uleb128 0x7
+ 1429 0125 DE050000 		.4byte	.LASF25
+ 1430 0129 04       		.byte	0x4
+ 1431 012a 3B       		.byte	0x3b
+ 1432 012b CE000000 		.4byte	0xce
+ 1433 012f 10       		.byte	0x10
+ 1434 0130 07       		.uleb128 0x7
+ 1435 0131 C7020000 		.4byte	.LASF26
+ 1436 0135 04       		.byte	0x4
+ 1437 0136 3C       		.byte	0x3c
+ 1438 0137 CE000000 		.4byte	0xce
+ 1439 013b 14       		.byte	0x14
+ 1440 013c 07       		.uleb128 0x7
+ 1441 013d 6A0B0000 		.4byte	.LASF27
+ 1442 0141 04       		.byte	0x4
+ 1443 0142 3D       		.byte	0x3d
+ 1444 0143 CE000000 		.4byte	0xce
+ 1445 0147 18       		.byte	0x18
+ 1446 0148 07       		.uleb128 0x7
+ 1447 0149 AA060000 		.4byte	.LASF28
+ 1448 014d 04       		.byte	0x4
+ 1449 014e 3E       		.byte	0x3e
+ 1450 014f CE000000 		.4byte	0xce
+ 1451 0153 1C       		.byte	0x1c
+ 1452 0154 07       		.uleb128 0x7
+ 1453 0155 B50C0000 		.4byte	.LASF29
+ 1454 0159 04       		.byte	0x4
+ 1455 015a 3F       		.byte	0x3f
+ 1456 015b CE000000 		.4byte	0xce
+ 1457 015f 20       		.byte	0x20
+ 1458 0160 07       		.uleb128 0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 28
+
+
+ 1459 0161 0D060000 		.4byte	.LASF30
+ 1460 0165 04       		.byte	0x4
+ 1461 0166 40       		.byte	0x40
+ 1462 0167 CE000000 		.4byte	0xce
+ 1463 016b 24       		.byte	0x24
+ 1464 016c 07       		.uleb128 0x7
+ 1465 016d 050D0000 		.4byte	.LASF31
+ 1466 0171 04       		.byte	0x4
+ 1467 0172 43       		.byte	0x43
+ 1468 0173 A2000000 		.4byte	0xa2
+ 1469 0177 28       		.byte	0x28
+ 1470 0178 07       		.uleb128 0x7
+ 1471 0179 6F000000 		.4byte	.LASF32
+ 1472 017d 04       		.byte	0x4
+ 1473 017e 44       		.byte	0x44
+ 1474 017f A2000000 		.4byte	0xa2
+ 1475 0183 29       		.byte	0x29
+ 1476 0184 07       		.uleb128 0x7
+ 1477 0185 E80A0000 		.4byte	.LASF33
+ 1478 0189 04       		.byte	0x4
+ 1479 018a 45       		.byte	0x45
+ 1480 018b A2000000 		.4byte	0xa2
+ 1481 018f 2A       		.byte	0x2a
+ 1482 0190 07       		.uleb128 0x7
+ 1483 0191 29070000 		.4byte	.LASF34
+ 1484 0195 04       		.byte	0x4
+ 1485 0196 46       		.byte	0x46
+ 1486 0197 A2000000 		.4byte	0xa2
+ 1487 019b 2B       		.byte	0x2b
+ 1488 019c 07       		.uleb128 0x7
+ 1489 019d 34050000 		.4byte	.LASF35
+ 1490 01a1 04       		.byte	0x4
+ 1491 01a2 47       		.byte	0x47
+ 1492 01a3 A2000000 		.4byte	0xa2
+ 1493 01a7 2C       		.byte	0x2c
+ 1494 01a8 07       		.uleb128 0x7
+ 1495 01a9 F20A0000 		.4byte	.LASF36
+ 1496 01ad 04       		.byte	0x4
+ 1497 01ae 48       		.byte	0x48
+ 1498 01af A2000000 		.4byte	0xa2
+ 1499 01b3 2D       		.byte	0x2d
+ 1500 01b4 07       		.uleb128 0x7
+ 1501 01b5 77020000 		.4byte	.LASF37
+ 1502 01b9 04       		.byte	0x4
+ 1503 01ba 49       		.byte	0x49
+ 1504 01bb A2000000 		.4byte	0xa2
+ 1505 01bf 2E       		.byte	0x2e
+ 1506 01c0 07       		.uleb128 0x7
+ 1507 01c1 C1090000 		.4byte	.LASF38
+ 1508 01c5 04       		.byte	0x4
+ 1509 01c6 4A       		.byte	0x4a
+ 1510 01c7 A2000000 		.4byte	0xa2
+ 1511 01cb 2F       		.byte	0x2f
+ 1512 01cc 07       		.uleb128 0x7
+ 1513 01cd 04070000 		.4byte	.LASF39
+ 1514 01d1 04       		.byte	0x4
+ 1515 01d2 4B       		.byte	0x4b
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 29
+
+
+ 1516 01d3 A2000000 		.4byte	0xa2
+ 1517 01d7 30       		.byte	0x30
+ 1518 01d8 07       		.uleb128 0x7
+ 1519 01d9 C6040000 		.4byte	.LASF40
+ 1520 01dd 04       		.byte	0x4
+ 1521 01de 4E       		.byte	0x4e
+ 1522 01df A2000000 		.4byte	0xa2
+ 1523 01e3 31       		.byte	0x31
+ 1524 01e4 07       		.uleb128 0x7
+ 1525 01e5 A6000000 		.4byte	.LASF41
+ 1526 01e9 04       		.byte	0x4
+ 1527 01ea 4F       		.byte	0x4f
+ 1528 01eb A2000000 		.4byte	0xa2
+ 1529 01ef 32       		.byte	0x32
+ 1530 01f0 07       		.uleb128 0x7
+ 1531 01f1 D1040000 		.4byte	.LASF42
+ 1532 01f5 04       		.byte	0x4
+ 1533 01f6 50       		.byte	0x50
+ 1534 01f7 A2000000 		.4byte	0xa2
+ 1535 01fb 33       		.byte	0x33
+ 1536 01fc 07       		.uleb128 0x7
+ 1537 01fd CB000000 		.4byte	.LASF43
+ 1538 0201 04       		.byte	0x4
+ 1539 0202 51       		.byte	0x51
+ 1540 0203 A2000000 		.4byte	0xa2
+ 1541 0207 34       		.byte	0x34
+ 1542 0208 07       		.uleb128 0x7
+ 1543 0209 4D0B0000 		.4byte	.LASF44
+ 1544 020d 04       		.byte	0x4
+ 1545 020e 52       		.byte	0x52
+ 1546 020f AD000000 		.4byte	0xad
+ 1547 0213 36       		.byte	0x36
+ 1548 0214 07       		.uleb128 0x7
+ 1549 0215 1C0A0000 		.4byte	.LASF45
+ 1550 0219 04       		.byte	0x4
+ 1551 021a 53       		.byte	0x53
+ 1552 021b AD000000 		.4byte	0xad
+ 1553 021f 38       		.byte	0x38
+ 1554 0220 07       		.uleb128 0x7
+ 1555 0221 AF0B0000 		.4byte	.LASF46
+ 1556 0225 04       		.byte	0x4
+ 1557 0226 54       		.byte	0x54
+ 1558 0227 AD000000 		.4byte	0xad
+ 1559 022b 3A       		.byte	0x3a
+ 1560 022c 07       		.uleb128 0x7
+ 1561 022d 8A0C0000 		.4byte	.LASF47
+ 1562 0231 04       		.byte	0x4
+ 1563 0232 55       		.byte	0x55
+ 1564 0233 A2000000 		.4byte	0xa2
+ 1565 0237 3C       		.byte	0x3c
+ 1566 0238 07       		.uleb128 0x7
+ 1567 0239 74030000 		.4byte	.LASF48
+ 1568 023d 04       		.byte	0x4
+ 1569 023e 56       		.byte	0x56
+ 1570 023f A2000000 		.4byte	0xa2
+ 1571 0243 3D       		.byte	0x3d
+ 1572 0244 07       		.uleb128 0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 30
+
+
+ 1573 0245 EF090000 		.4byte	.LASF49
+ 1574 0249 04       		.byte	0x4
+ 1575 024a 57       		.byte	0x57
+ 1576 024b A2000000 		.4byte	0xa2
+ 1577 024f 3E       		.byte	0x3e
+ 1578 0250 07       		.uleb128 0x7
+ 1579 0251 21010000 		.4byte	.LASF50
+ 1580 0255 04       		.byte	0x4
+ 1581 0256 58       		.byte	0x58
+ 1582 0257 A2000000 		.4byte	0xa2
+ 1583 025b 3F       		.byte	0x3f
+ 1584 025c 07       		.uleb128 0x7
+ 1585 025d 37070000 		.4byte	.LASF51
+ 1586 0261 04       		.byte	0x4
+ 1587 0262 59       		.byte	0x59
+ 1588 0263 A2000000 		.4byte	0xa2
+ 1589 0267 40       		.byte	0x40
+ 1590 0268 07       		.uleb128 0x7
+ 1591 0269 01040000 		.4byte	.LASF52
+ 1592 026d 04       		.byte	0x4
+ 1593 026e 5A       		.byte	0x5a
+ 1594 026f A2000000 		.4byte	0xa2
+ 1595 0273 41       		.byte	0x41
+ 1596 0274 07       		.uleb128 0x7
+ 1597 0275 DF060000 		.4byte	.LASF53
+ 1598 0279 04       		.byte	0x4
+ 1599 027a 5B       		.byte	0x5b
+ 1600 027b A2000000 		.4byte	0xa2
+ 1601 027f 42       		.byte	0x42
+ 1602 0280 07       		.uleb128 0x7
+ 1603 0281 1E070000 		.4byte	.LASF54
+ 1604 0285 04       		.byte	0x4
+ 1605 0286 5C       		.byte	0x5c
+ 1606 0287 A2000000 		.4byte	0xa2
+ 1607 028b 43       		.byte	0x43
+ 1608 028c 07       		.uleb128 0x7
+ 1609 028d 26030000 		.4byte	.LASF55
+ 1610 0291 04       		.byte	0x4
+ 1611 0292 5D       		.byte	0x5d
+ 1612 0293 A2000000 		.4byte	0xa2
+ 1613 0297 44       		.byte	0x44
+ 1614 0298 07       		.uleb128 0x7
+ 1615 0299 00000000 		.4byte	.LASF56
+ 1616 029d 04       		.byte	0x4
+ 1617 029e 5E       		.byte	0x5e
+ 1618 029f CE000000 		.4byte	0xce
+ 1619 02a3 48       		.byte	0x48
+ 1620 02a4 07       		.uleb128 0x7
+ 1621 02a5 0A030000 		.4byte	.LASF57
+ 1622 02a9 04       		.byte	0x4
+ 1623 02aa 5F       		.byte	0x5f
+ 1624 02ab CE000000 		.4byte	0xce
+ 1625 02af 4C       		.byte	0x4c
+ 1626 02b0 07       		.uleb128 0x7
+ 1627 02b1 120D0000 		.4byte	.LASF58
+ 1628 02b5 04       		.byte	0x4
+ 1629 02b6 60       		.byte	0x60
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 31
+
+
+ 1630 02b7 A2000000 		.4byte	0xa2
+ 1631 02bb 50       		.byte	0x50
+ 1632 02bc 07       		.uleb128 0x7
+ 1633 02bd 99010000 		.4byte	.LASF59
+ 1634 02c1 04       		.byte	0x4
+ 1635 02c2 61       		.byte	0x61
+ 1636 02c3 A2000000 		.4byte	0xa2
+ 1637 02c7 51       		.byte	0x51
+ 1638 02c8 07       		.uleb128 0x7
+ 1639 02c9 D20B0000 		.4byte	.LASF60
+ 1640 02cd 04       		.byte	0x4
+ 1641 02ce 62       		.byte	0x62
+ 1642 02cf A2000000 		.4byte	0xa2
+ 1643 02d3 52       		.byte	0x52
+ 1644 02d4 07       		.uleb128 0x7
+ 1645 02d5 E40C0000 		.4byte	.LASF61
+ 1646 02d9 04       		.byte	0x4
+ 1647 02da 63       		.byte	0x63
+ 1648 02db A2000000 		.4byte	0xa2
+ 1649 02df 53       		.byte	0x53
+ 1650 02e0 07       		.uleb128 0x7
+ 1651 02e1 0C0A0000 		.4byte	.LASF62
+ 1652 02e5 04       		.byte	0x4
+ 1653 02e6 64       		.byte	0x64
+ 1654 02e7 A2000000 		.4byte	0xa2
+ 1655 02eb 54       		.byte	0x54
+ 1656 02ec 07       		.uleb128 0x7
+ 1657 02ed AB010000 		.4byte	.LASF63
+ 1658 02f1 04       		.byte	0x4
+ 1659 02f2 65       		.byte	0x65
+ 1660 02f3 A2000000 		.4byte	0xa2
+ 1661 02f7 55       		.byte	0x55
+ 1662 02f8 07       		.uleb128 0x7
+ 1663 02f9 8E0A0000 		.4byte	.LASF64
+ 1664 02fd 04       		.byte	0x4
+ 1665 02fe 66       		.byte	0x66
+ 1666 02ff A2000000 		.4byte	0xa2
+ 1667 0303 56       		.byte	0x56
+ 1668 0304 07       		.uleb128 0x7
+ 1669 0305 DD040000 		.4byte	.LASF65
+ 1670 0309 04       		.byte	0x4
+ 1671 030a 67       		.byte	0x67
+ 1672 030b A2000000 		.4byte	0xa2
+ 1673 030f 57       		.byte	0x57
+ 1674 0310 07       		.uleb128 0x7
+ 1675 0311 32000000 		.4byte	.LASF66
+ 1676 0315 04       		.byte	0x4
+ 1677 0316 68       		.byte	0x68
+ 1678 0317 A2000000 		.4byte	0xa2
+ 1679 031b 58       		.byte	0x58
+ 1680 031c 07       		.uleb128 0x7
+ 1681 031d A6080000 		.4byte	.LASF67
+ 1682 0321 04       		.byte	0x4
+ 1683 0322 69       		.byte	0x69
+ 1684 0323 A2000000 		.4byte	0xa2
+ 1685 0327 59       		.byte	0x59
+ 1686 0328 07       		.uleb128 0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 32
+
+
+ 1687 0329 93060000 		.4byte	.LASF68
+ 1688 032d 04       		.byte	0x4
+ 1689 032e 6E       		.byte	0x6e
+ 1690 032f B8000000 		.4byte	0xb8
+ 1691 0333 5A       		.byte	0x5a
+ 1692 0334 07       		.uleb128 0x7
+ 1693 0335 2C0B0000 		.4byte	.LASF69
+ 1694 0339 04       		.byte	0x4
+ 1695 033a 6F       		.byte	0x6f
+ 1696 033b B8000000 		.4byte	0xb8
+ 1697 033f 5C       		.byte	0x5c
+ 1698 0340 07       		.uleb128 0x7
+ 1699 0341 7D000000 		.4byte	.LASF70
+ 1700 0345 04       		.byte	0x4
+ 1701 0346 70       		.byte	0x70
+ 1702 0347 A2000000 		.4byte	0xa2
+ 1703 034b 5E       		.byte	0x5e
+ 1704 034c 07       		.uleb128 0x7
+ 1705 034d 3A080000 		.4byte	.LASF71
+ 1706 0351 04       		.byte	0x4
+ 1707 0352 71       		.byte	0x71
+ 1708 0353 A2000000 		.4byte	0xa2
+ 1709 0357 5F       		.byte	0x5f
+ 1710 0358 07       		.uleb128 0x7
+ 1711 0359 D30C0000 		.4byte	.LASF72
+ 1712 035d 04       		.byte	0x4
+ 1713 035e 72       		.byte	0x72
+ 1714 035f A2000000 		.4byte	0xa2
+ 1715 0363 60       		.byte	0x60
+ 1716 0364 07       		.uleb128 0x7
+ 1717 0365 13080000 		.4byte	.LASF73
+ 1718 0369 04       		.byte	0x4
+ 1719 036a 73       		.byte	0x73
+ 1720 036b CE000000 		.4byte	0xce
+ 1721 036f 64       		.byte	0x64
+ 1722 0370 07       		.uleb128 0x7
+ 1723 0371 2B090000 		.4byte	.LASF74
+ 1724 0375 04       		.byte	0x4
+ 1725 0376 76       		.byte	0x76
+ 1726 0377 B8000000 		.4byte	0xb8
+ 1727 037b 68       		.byte	0x68
+ 1728 037c 07       		.uleb128 0x7
+ 1729 037d 8E040000 		.4byte	.LASF75
+ 1730 0381 04       		.byte	0x4
+ 1731 0382 77       		.byte	0x77
+ 1732 0383 B8000000 		.4byte	0xb8
+ 1733 0387 6A       		.byte	0x6a
+ 1734 0388 07       		.uleb128 0x7
+ 1735 0389 0C050000 		.4byte	.LASF76
+ 1736 038d 04       		.byte	0x4
+ 1737 038e 78       		.byte	0x78
+ 1738 038f B8000000 		.4byte	0xb8
+ 1739 0393 6C       		.byte	0x6c
+ 1740 0394 07       		.uleb128 0x7
+ 1741 0395 270A0000 		.4byte	.LASF77
+ 1742 0399 04       		.byte	0x4
+ 1743 039a 79       		.byte	0x79
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 33
+
+
+ 1744 039b B8000000 		.4byte	0xb8
+ 1745 039f 6E       		.byte	0x6e
+ 1746 03a0 07       		.uleb128 0x7
+ 1747 03a1 A0040000 		.4byte	.LASF78
+ 1748 03a5 04       		.byte	0x4
+ 1749 03a6 7B       		.byte	0x7b
+ 1750 03a7 A2000000 		.4byte	0xa2
+ 1751 03ab 70       		.byte	0x70
+ 1752 03ac 07       		.uleb128 0x7
+ 1753 03ad 1E020000 		.4byte	.LASF79
+ 1754 03b1 04       		.byte	0x4
+ 1755 03b2 7C       		.byte	0x7c
+ 1756 03b3 A2000000 		.4byte	0xa2
+ 1757 03b7 71       		.byte	0x71
+ 1758 03b8 07       		.uleb128 0x7
+ 1759 03b9 BD0C0000 		.4byte	.LASF80
+ 1760 03bd 04       		.byte	0x4
+ 1761 03be 7D       		.byte	0x7d
+ 1762 03bf A2000000 		.4byte	0xa2
+ 1763 03c3 72       		.byte	0x72
+ 1764 03c4 07       		.uleb128 0x7
+ 1765 03c5 C8060000 		.4byte	.LASF81
+ 1766 03c9 04       		.byte	0x4
+ 1767 03ca 7E       		.byte	0x7e
+ 1768 03cb A2000000 		.4byte	0xa2
+ 1769 03cf 73       		.byte	0x73
+ 1770 03d0 07       		.uleb128 0x7
+ 1771 03d1 AD030000 		.4byte	.LASF82
+ 1772 03d5 04       		.byte	0x4
+ 1773 03d6 80       		.byte	0x80
+ 1774 03d7 B8000000 		.4byte	0xb8
+ 1775 03db 74       		.byte	0x74
+ 1776 03dc 07       		.uleb128 0x7
+ 1777 03dd D50A0000 		.4byte	.LASF83
+ 1778 03e1 04       		.byte	0x4
+ 1779 03e2 81       		.byte	0x81
+ 1780 03e3 B8000000 		.4byte	0xb8
+ 1781 03e7 76       		.byte	0x76
+ 1782 03e8 07       		.uleb128 0x7
+ 1783 03e9 5F030000 		.4byte	.LASF84
+ 1784 03ed 04       		.byte	0x4
+ 1785 03ee 82       		.byte	0x82
+ 1786 03ef B8000000 		.4byte	0xb8
+ 1787 03f3 78       		.byte	0x78
+ 1788 03f4 07       		.uleb128 0x7
+ 1789 03f5 DB080000 		.4byte	.LASF85
+ 1790 03f9 04       		.byte	0x4
+ 1791 03fa 83       		.byte	0x83
+ 1792 03fb B8000000 		.4byte	0xb8
+ 1793 03ff 7A       		.byte	0x7a
+ 1794 0400 07       		.uleb128 0x7
+ 1795 0401 360C0000 		.4byte	.LASF86
+ 1796 0405 04       		.byte	0x4
+ 1797 0406 86       		.byte	0x86
+ 1798 0407 A2000000 		.4byte	0xa2
+ 1799 040b 7C       		.byte	0x7c
+ 1800 040c 07       		.uleb128 0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 34
+
+
+ 1801 040d 57050000 		.4byte	.LASF87
+ 1802 0411 04       		.byte	0x4
+ 1803 0412 87       		.byte	0x87
+ 1804 0413 A2000000 		.4byte	0xa2
+ 1805 0417 7D       		.byte	0x7d
+ 1806 0418 07       		.uleb128 0x7
+ 1807 0419 46000000 		.4byte	.LASF88
+ 1808 041d 04       		.byte	0x4
+ 1809 041e 88       		.byte	0x88
+ 1810 041f A2000000 		.4byte	0xa2
+ 1811 0423 7E       		.byte	0x7e
+ 1812 0424 07       		.uleb128 0x7
+ 1813 0425 D2030000 		.4byte	.LASF89
+ 1814 0429 04       		.byte	0x4
+ 1815 042a 89       		.byte	0x89
+ 1816 042b A2000000 		.4byte	0xa2
+ 1817 042f 7F       		.byte	0x7f
+ 1818 0430 07       		.uleb128 0x7
+ 1819 0431 4F040000 		.4byte	.LASF90
+ 1820 0435 04       		.byte	0x4
+ 1821 0436 8A       		.byte	0x8a
+ 1822 0437 A2000000 		.4byte	0xa2
+ 1823 043b 80       		.byte	0x80
+ 1824 043c 07       		.uleb128 0x7
+ 1825 043d F6050000 		.4byte	.LASF91
+ 1826 0441 04       		.byte	0x4
+ 1827 0442 8D       		.byte	0x8d
+ 1828 0443 CE000000 		.4byte	0xce
+ 1829 0447 84       		.byte	0x84
+ 1830 0448 07       		.uleb128 0x7
+ 1831 0449 DC000000 		.4byte	.LASF92
+ 1832 044d 04       		.byte	0x4
+ 1833 044e 8E       		.byte	0x8e
+ 1834 044f CE000000 		.4byte	0xce
+ 1835 0453 88       		.byte	0x88
+ 1836 0454 07       		.uleb128 0x7
+ 1837 0455 210C0000 		.4byte	.LASF93
+ 1838 0459 04       		.byte	0x4
+ 1839 045a 8F       		.byte	0x8f
+ 1840 045b CE000000 		.4byte	0xce
+ 1841 045f 8C       		.byte	0x8c
+ 1842 0460 07       		.uleb128 0x7
+ 1843 0461 63040000 		.4byte	.LASF94
+ 1844 0465 04       		.byte	0x4
+ 1845 0466 90       		.byte	0x90
+ 1846 0467 CE000000 		.4byte	0xce
+ 1847 046b 90       		.byte	0x90
+ 1848 046c 07       		.uleb128 0x7
+ 1849 046d 30040000 		.4byte	.LASF95
+ 1850 0471 04       		.byte	0x4
+ 1851 0472 91       		.byte	0x91
+ 1852 0473 CE000000 		.4byte	0xce
+ 1853 0477 94       		.byte	0x94
+ 1854 0478 07       		.uleb128 0x7
+ 1855 0479 61020000 		.4byte	.LASF96
+ 1856 047d 04       		.byte	0x4
+ 1857 047e 92       		.byte	0x92
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 35
+
+
+ 1858 047f CE000000 		.4byte	0xce
+ 1859 0483 98       		.byte	0x98
+ 1860 0484 07       		.uleb128 0x7
+ 1861 0485 15090000 		.4byte	.LASF97
+ 1862 0489 04       		.byte	0x4
+ 1863 048a 93       		.byte	0x93
+ 1864 048b CE000000 		.4byte	0xce
+ 1865 048f 9C       		.byte	0x9c
+ 1866 0490 07       		.uleb128 0x7
+ 1867 0491 7D010000 		.4byte	.LASF98
+ 1868 0495 04       		.byte	0x4
+ 1869 0496 94       		.byte	0x94
+ 1870 0497 CE000000 		.4byte	0xce
+ 1871 049b A0       		.byte	0xa0
+ 1872 049c 07       		.uleb128 0x7
+ 1873 049d 82020000 		.4byte	.LASF99
+ 1874 04a1 04       		.byte	0x4
+ 1875 04a2 95       		.byte	0x95
+ 1876 04a3 B8000000 		.4byte	0xb8
+ 1877 04a7 A4       		.byte	0xa4
+ 1878 04a8 07       		.uleb128 0x7
+ 1879 04a9 340A0000 		.4byte	.LASF100
+ 1880 04ad 04       		.byte	0x4
+ 1881 04ae 96       		.byte	0x96
+ 1882 04af B8000000 		.4byte	0xb8
+ 1883 04b3 A6       		.byte	0xa6
+ 1884 04b4 07       		.uleb128 0x7
+ 1885 04b5 2E080000 		.4byte	.LASF101
+ 1886 04b9 04       		.byte	0x4
+ 1887 04ba 97       		.byte	0x97
+ 1888 04bb B8000000 		.4byte	0xb8
+ 1889 04bf A8       		.byte	0xa8
+ 1890 04c0 07       		.uleb128 0x7
+ 1891 04c1 4D060000 		.4byte	.LASF102
+ 1892 04c5 04       		.byte	0x4
+ 1893 04c6 98       		.byte	0x98
+ 1894 04c7 B8000000 		.4byte	0xb8
+ 1895 04cb AA       		.byte	0xaa
+ 1896 04cc 07       		.uleb128 0x7
+ 1897 04cd 1B050000 		.4byte	.LASF103
+ 1898 04d1 04       		.byte	0x4
+ 1899 04d2 99       		.byte	0x99
+ 1900 04d3 B8000000 		.4byte	0xb8
+ 1901 04d7 AC       		.byte	0xac
+ 1902 04d8 07       		.uleb128 0x7
+ 1903 04d9 98000000 		.4byte	.LASF104
+ 1904 04dd 04       		.byte	0x4
+ 1905 04de 9A       		.byte	0x9a
+ 1906 04df B8000000 		.4byte	0xb8
+ 1907 04e3 AE       		.byte	0xae
+ 1908 04e4 07       		.uleb128 0x7
+ 1909 04e5 3F0B0000 		.4byte	.LASF105
+ 1910 04e9 04       		.byte	0x4
+ 1911 04ea 9D       		.byte	0x9d
+ 1912 04eb B8000000 		.4byte	0xb8
+ 1913 04ef B0       		.byte	0xb0
+ 1914 04f0 07       		.uleb128 0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 36
+
+
+ 1915 04f1 C7080000 		.4byte	.LASF106
+ 1916 04f5 04       		.byte	0x4
+ 1917 04f6 9E       		.byte	0x9e
+ 1918 04f7 CE000000 		.4byte	0xce
+ 1919 04fb B4       		.byte	0xb4
+ 1920 04fc 00       		.byte	0
+ 1921 04fd 03       		.uleb128 0x3
+ 1922 04fe 7D050000 		.4byte	.LASF107
+ 1923 0502 04       		.byte	0x4
+ 1924 0503 9F       		.byte	0x9f
+ 1925 0504 EC000000 		.4byte	0xec
+ 1926 0508 02       		.uleb128 0x2
+ 1927 0509 01       		.byte	0x1
+ 1928 050a 08       		.byte	0x8
+ 1929 050b 890A0000 		.4byte	.LASF108
+ 1930 050f 02       		.uleb128 0x2
+ 1931 0510 04       		.byte	0x4
+ 1932 0511 04       		.byte	0x4
+ 1933 0512 0D080000 		.4byte	.LASF109
+ 1934 0516 02       		.uleb128 0x2
+ 1935 0517 08       		.byte	0x8
+ 1936 0518 04       		.byte	0x4
+ 1937 0519 58030000 		.4byte	.LASF110
+ 1938 051d 08       		.uleb128 0x8
+ 1939 051e 04       		.byte	0x4
+ 1940 051f CE000000 		.4byte	0xce
+ 1941 0523 09       		.uleb128 0x9
+ 1942 0524 04       		.byte	0x4
+ 1943 0525 02       		.uleb128 0x2
+ 1944 0526 01       		.byte	0x1
+ 1945 0527 02       		.byte	0x2
+ 1946 0528 8A0B0000 		.4byte	.LASF111
+ 1947 052c 0A       		.uleb128 0xa
+ 1948 052d 01       		.byte	0x1
+ 1949 052e 3E000000 		.4byte	0x3e
+ 1950 0532 05       		.byte	0x5
+ 1951 0533 1304     		.2byte	0x413
+ 1952 0535 52050000 		.4byte	0x552
+ 1953 0539 0B       		.uleb128 0xb
+ 1954 053a E9020000 		.4byte	.LASF112
+ 1955 053e 00       		.byte	0
+ 1956 053f 0B       		.uleb128 0xb
+ 1957 0540 68080000 		.4byte	.LASF113
+ 1958 0544 01       		.byte	0x1
+ 1959 0545 0B       		.uleb128 0xb
+ 1960 0546 37030000 		.4byte	.LASF114
+ 1961 054a 02       		.byte	0x2
+ 1962 054b 0B       		.uleb128 0xb
+ 1963 054c 33060000 		.4byte	.LASF115
+ 1964 0550 03       		.byte	0x3
+ 1965 0551 00       		.byte	0
+ 1966 0552 0C       		.uleb128 0xc
+ 1967 0553 33020000 		.4byte	.LASF116
+ 1968 0557 05       		.byte	0x5
+ 1969 0558 1804     		.2byte	0x418
+ 1970 055a 2C050000 		.4byte	0x52c
+ 1971 055e 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 37
+
+
+ 1972 055f 78       		.byte	0x78
+ 1973 0560 05       		.byte	0x5
+ 1974 0561 0205     		.2byte	0x502
+ 1975 0563 2B060000 		.4byte	0x62b
+ 1976 0567 0E       		.uleb128 0xe
+ 1977 0568 FF0A0000 		.4byte	.LASF117
+ 1978 056c 05       		.byte	0x5
+ 1979 056d 0405     		.2byte	0x504
+ 1980 056f CE000000 		.4byte	0xce
+ 1981 0573 00       		.byte	0
+ 1982 0574 0E       		.uleb128 0xe
+ 1983 0575 E20B0000 		.4byte	.LASF118
+ 1984 0579 05       		.byte	0x5
+ 1985 057a 0505     		.2byte	0x505
+ 1986 057c CE000000 		.4byte	0xce
+ 1987 0580 04       		.byte	0x4
+ 1988 0581 0E       		.uleb128 0xe
+ 1989 0582 FF040000 		.4byte	.LASF119
+ 1990 0586 05       		.byte	0x5
+ 1991 0587 0605     		.2byte	0x506
+ 1992 0589 CE000000 		.4byte	0xce
+ 1993 058d 08       		.byte	0x8
+ 1994 058e 0E       		.uleb128 0xe
+ 1995 058f BB060000 		.4byte	.LASF120
+ 1996 0593 05       		.byte	0x5
+ 1997 0594 0705     		.2byte	0x507
+ 1998 0596 CE000000 		.4byte	0xce
+ 1999 059a 0C       		.byte	0xc
+ 2000 059b 0E       		.uleb128 0xe
+ 2001 059c 29050000 		.4byte	.LASF121
+ 2002 05a0 05       		.byte	0x5
+ 2003 05a1 0805     		.2byte	0x508
+ 2004 05a3 CE000000 		.4byte	0xce
+ 2005 05a7 10       		.byte	0x10
+ 2006 05a8 0E       		.uleb128 0xe
+ 2007 05a9 900B0000 		.4byte	.LASF122
+ 2008 05ad 05       		.byte	0x5
+ 2009 05ae 0905     		.2byte	0x509
+ 2010 05b0 52050000 		.4byte	0x552
+ 2011 05b4 14       		.byte	0x14
+ 2012 05b5 0E       		.uleb128 0xe
+ 2013 05b6 59080000 		.4byte	.LASF123
+ 2014 05ba 05       		.byte	0x5
+ 2015 05bb 0A05     		.2byte	0x50a
+ 2016 05bd CE000000 		.4byte	0xce
+ 2017 05c1 18       		.byte	0x18
+ 2018 05c2 0E       		.uleb128 0xe
+ 2019 05c3 8D050000 		.4byte	.LASF124
+ 2020 05c7 05       		.byte	0x5
+ 2021 05c8 0B05     		.2byte	0x50b
+ 2022 05ca 2B060000 		.4byte	0x62b
+ 2023 05ce 1C       		.byte	0x1c
+ 2024 05cf 0E       		.uleb128 0xe
+ 2025 05d0 0C090000 		.4byte	.LASF125
+ 2026 05d4 05       		.byte	0x5
+ 2027 05d5 0C05     		.2byte	0x50c
+ 2028 05d7 CE000000 		.4byte	0xce
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 38
+
+
+ 2029 05db 5C       		.byte	0x5c
+ 2030 05dc 0E       		.uleb128 0xe
+ 2031 05dd 63000000 		.4byte	.LASF126
+ 2032 05e1 05       		.byte	0x5
+ 2033 05e2 0D05     		.2byte	0x50d
+ 2034 05e4 CE000000 		.4byte	0xce
+ 2035 05e8 60       		.byte	0x60
+ 2036 05e9 0E       		.uleb128 0xe
+ 2037 05ea 44070000 		.4byte	.LASF127
+ 2038 05ee 05       		.byte	0x5
+ 2039 05ef 0E05     		.2byte	0x50e
+ 2040 05f1 CE000000 		.4byte	0xce
+ 2041 05f5 64       		.byte	0x64
+ 2042 05f6 0E       		.uleb128 0xe
+ 2043 05f7 02090000 		.4byte	.LASF128
+ 2044 05fb 05       		.byte	0x5
+ 2045 05fc 0F05     		.2byte	0x50f
+ 2046 05fe CE000000 		.4byte	0xce
+ 2047 0602 68       		.byte	0x68
+ 2048 0603 0E       		.uleb128 0xe
+ 2049 0604 990C0000 		.4byte	.LASF129
+ 2050 0608 05       		.byte	0x5
+ 2051 0609 1005     		.2byte	0x510
+ 2052 060b CE000000 		.4byte	0xce
+ 2053 060f 6C       		.byte	0x6c
+ 2054 0610 0E       		.uleb128 0xe
+ 2055 0611 B10A0000 		.4byte	.LASF130
+ 2056 0615 05       		.byte	0x5
+ 2057 0616 1105     		.2byte	0x511
+ 2058 0618 25050000 		.4byte	0x525
+ 2059 061c 70       		.byte	0x70
+ 2060 061d 0E       		.uleb128 0xe
+ 2061 061e 600A0000 		.4byte	.LASF131
+ 2062 0622 05       		.byte	0x5
+ 2063 0623 1205     		.2byte	0x512
+ 2064 0625 CE000000 		.4byte	0xce
+ 2065 0629 74       		.byte	0x74
+ 2066 062a 00       		.byte	0
+ 2067 062b 0F       		.uleb128 0xf
+ 2068 062c CE000000 		.4byte	0xce
+ 2069 0630 3B060000 		.4byte	0x63b
+ 2070 0634 10       		.uleb128 0x10
+ 2071 0635 D9000000 		.4byte	0xd9
+ 2072 0639 0F       		.byte	0xf
+ 2073 063a 00       		.byte	0
+ 2074 063b 0C       		.uleb128 0xc
+ 2075 063c C7010000 		.4byte	.LASF132
+ 2076 0640 05       		.byte	0x5
+ 2077 0641 1305     		.2byte	0x513
+ 2078 0643 5E050000 		.4byte	0x55e
+ 2079 0647 08       		.uleb128 0x8
+ 2080 0648 04       		.byte	0x4
+ 2081 0649 4D060000 		.4byte	0x64d
+ 2082 064d 11       		.uleb128 0x11
+ 2083 064e 58060000 		.4byte	0x658
+ 2084 0652 12       		.uleb128 0x12
+ 2085 0653 CE000000 		.4byte	0xce
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 39
+
+
+ 2086 0657 00       		.byte	0
+ 2087 0658 0C       		.uleb128 0xc
+ 2088 0659 A9020000 		.4byte	.LASF133
+ 2089 065d 06       		.byte	0x6
+ 2090 065e F201     		.2byte	0x1f2
+ 2091 0660 47060000 		.4byte	0x647
+ 2092 0664 13       		.uleb128 0x13
+ 2093 0665 07020000 		.4byte	.LASF144
+ 2094 0669 24       		.byte	0x24
+ 2095 066a 06       		.byte	0x6
+ 2096 066b 7402     		.2byte	0x274
+ 2097 066d E7060000 		.4byte	0x6e7
+ 2098 0671 0E       		.uleb128 0xe
+ 2099 0672 1F030000 		.4byte	.LASF134
+ 2100 0676 06       		.byte	0x6
+ 2101 0677 7702     		.2byte	0x277
+ 2102 0679 E0000000 		.4byte	0xe0
+ 2103 067d 00       		.byte	0
+ 2104 067e 0E       		.uleb128 0xe
+ 2105 067f 7B0B0000 		.4byte	.LASF135
+ 2106 0683 06       		.byte	0x6
+ 2107 0684 7902     		.2byte	0x279
+ 2108 0686 23050000 		.4byte	0x523
+ 2109 068a 04       		.byte	0x4
+ 2110 068b 0E       		.uleb128 0xe
+ 2111 068c 1A000000 		.4byte	.LASF136
+ 2112 0690 06       		.byte	0x6
+ 2113 0691 7A02     		.2byte	0x27a
+ 2114 0693 CE000000 		.4byte	0xce
+ 2115 0697 08       		.byte	0x8
+ 2116 0698 0E       		.uleb128 0xe
+ 2117 0699 27040000 		.4byte	.LASF137
+ 2118 069d 06       		.byte	0x6
+ 2119 069e 7B02     		.2byte	0x27b
+ 2120 06a0 E0000000 		.4byte	0xe0
+ 2121 06a4 0C       		.byte	0xc
+ 2122 06a5 0E       		.uleb128 0xe
+ 2123 06a6 93010000 		.4byte	.LASF138
+ 2124 06aa 06       		.byte	0x6
+ 2125 06ab 7D02     		.2byte	0x27d
+ 2126 06ad 23050000 		.4byte	0x523
+ 2127 06b1 10       		.byte	0x10
+ 2128 06b2 0E       		.uleb128 0xe
+ 2129 06b3 45040000 		.4byte	.LASF139
+ 2130 06b7 06       		.byte	0x6
+ 2131 06b8 7E02     		.2byte	0x27e
+ 2132 06ba CE000000 		.4byte	0xce
+ 2133 06be 14       		.byte	0x14
+ 2134 06bf 0E       		.uleb128 0xe
+ 2135 06c0 68050000 		.4byte	.LASF140
+ 2136 06c4 06       		.byte	0x6
+ 2137 06c5 7F02     		.2byte	0x27f
+ 2138 06c7 E0000000 		.4byte	0xe0
+ 2139 06cb 18       		.byte	0x18
+ 2140 06cc 0E       		.uleb128 0xe
+ 2141 06cd 4E050000 		.4byte	.LASF141
+ 2142 06d1 06       		.byte	0x6
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 40
+
+
+ 2143 06d2 8502     		.2byte	0x285
+ 2144 06d4 58060000 		.4byte	0x658
+ 2145 06d8 1C       		.byte	0x1c
+ 2146 06d9 0E       		.uleb128 0xe
+ 2147 06da 730B0000 		.4byte	.LASF142
+ 2148 06de 06       		.byte	0x6
+ 2149 06df 8802     		.2byte	0x288
+ 2150 06e1 CE000000 		.4byte	0xce
+ 2151 06e5 20       		.byte	0x20
+ 2152 06e6 00       		.byte	0
+ 2153 06e7 0C       		.uleb128 0xc
+ 2154 06e8 98050000 		.4byte	.LASF143
+ 2155 06ec 06       		.byte	0x6
+ 2156 06ed 8B02     		.2byte	0x28b
+ 2157 06ef 64060000 		.4byte	0x664
+ 2158 06f3 14       		.uleb128 0x14
+ 2159 06f4 5B060000 		.4byte	.LASF145
+ 2160 06f8 4C       		.byte	0x4c
+ 2161 06f9 07       		.byte	0x7
+ 2162 06fa 2F       		.byte	0x2f
+ 2163 06fb E4070000 		.4byte	0x7e4
+ 2164 06ff 07       		.uleb128 0x7
+ 2165 0700 1A010000 		.4byte	.LASF146
+ 2166 0704 07       		.byte	0x7
+ 2167 0705 31       		.byte	0x31
+ 2168 0706 CE000000 		.4byte	0xce
+ 2169 070a 00       		.byte	0
+ 2170 070b 07       		.uleb128 0x7
+ 2171 070c 63010000 		.4byte	.LASF147
+ 2172 0710 07       		.byte	0x7
+ 2173 0711 33       		.byte	0x33
+ 2174 0712 CE000000 		.4byte	0xce
+ 2175 0716 04       		.byte	0x4
+ 2176 0717 07       		.uleb128 0x7
+ 2177 0718 12000000 		.4byte	.LASF148
+ 2178 071c 07       		.byte	0x7
+ 2179 071d 34       		.byte	0x34
+ 2180 071e CE000000 		.4byte	0xce
+ 2181 0722 08       		.byte	0x8
+ 2182 0723 07       		.uleb128 0x7
+ 2183 0724 F3000000 		.4byte	.LASF149
+ 2184 0728 07       		.byte	0x7
+ 2185 0729 35       		.byte	0x35
+ 2186 072a CE000000 		.4byte	0xce
+ 2187 072e 0C       		.byte	0xc
+ 2188 072f 07       		.uleb128 0x7
+ 2189 0730 DE090000 		.4byte	.LASF150
+ 2190 0734 07       		.byte	0x7
+ 2191 0735 37       		.byte	0x37
+ 2192 0736 CE000000 		.4byte	0xce
+ 2193 073a 10       		.byte	0x10
+ 2194 073b 07       		.uleb128 0x7
+ 2195 073c 6C0A0000 		.4byte	.LASF151
+ 2196 0740 07       		.byte	0x7
+ 2197 0741 38       		.byte	0x38
+ 2198 0742 CE000000 		.4byte	0xce
+ 2199 0746 14       		.byte	0x14
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 41
+
+
+ 2200 0747 07       		.uleb128 0x7
+ 2201 0748 750A0000 		.4byte	.LASF152
+ 2202 074c 07       		.byte	0x7
+ 2203 074d 39       		.byte	0x39
+ 2204 074e CE000000 		.4byte	0xce
+ 2205 0752 18       		.byte	0x18
+ 2206 0753 07       		.uleb128 0x7
+ 2207 0754 F0080000 		.4byte	.LASF153
+ 2208 0758 07       		.byte	0x7
+ 2209 0759 3A       		.byte	0x3a
+ 2210 075a 25050000 		.4byte	0x525
+ 2211 075e 1C       		.byte	0x1c
+ 2212 075f 07       		.uleb128 0x7
+ 2213 0760 040B0000 		.4byte	.LASF154
+ 2214 0764 07       		.byte	0x7
+ 2215 0765 3C       		.byte	0x3c
+ 2216 0766 CE000000 		.4byte	0xce
+ 2217 076a 20       		.byte	0x20
+ 2218 076b 07       		.uleb128 0x7
+ 2219 076c 9C030000 		.4byte	.LASF155
+ 2220 0770 07       		.byte	0x7
+ 2221 0771 3D       		.byte	0x3d
+ 2222 0772 CE000000 		.4byte	0xce
+ 2223 0776 24       		.byte	0x24
+ 2224 0777 07       		.uleb128 0x7
+ 2225 0778 2D010000 		.4byte	.LASF156
+ 2226 077c 07       		.byte	0x7
+ 2227 077d 3F       		.byte	0x3f
+ 2228 077e CE000000 		.4byte	0xce
+ 2229 0782 28       		.byte	0x28
+ 2230 0783 07       		.uleb128 0x7
+ 2231 0784 650C0000 		.4byte	.LASF157
+ 2232 0788 07       		.byte	0x7
+ 2233 0789 40       		.byte	0x40
+ 2234 078a CE000000 		.4byte	0xce
+ 2235 078e 2C       		.byte	0x2c
+ 2236 078f 07       		.uleb128 0x7
+ 2237 0790 150B0000 		.4byte	.LASF158
+ 2238 0794 07       		.byte	0x7
+ 2239 0795 42       		.byte	0x42
+ 2240 0796 CE000000 		.4byte	0xce
+ 2241 079a 30       		.byte	0x30
+ 2242 079b 07       		.uleb128 0x7
+ 2243 079c 81080000 		.4byte	.LASF159
+ 2244 07a0 07       		.byte	0x7
+ 2245 07a1 43       		.byte	0x43
+ 2246 07a2 CE000000 		.4byte	0xce
+ 2247 07a6 34       		.byte	0x34
+ 2248 07a7 07       		.uleb128 0x7
+ 2249 07a8 310D0000 		.4byte	.LASF160
+ 2250 07ac 07       		.byte	0x7
+ 2251 07ad 45       		.byte	0x45
+ 2252 07ae CE000000 		.4byte	0xce
+ 2253 07b2 38       		.byte	0x38
+ 2254 07b3 07       		.uleb128 0x7
+ 2255 07b4 02010000 		.4byte	.LASF161
+ 2256 07b8 07       		.byte	0x7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 42
+
+
+ 2257 07b9 46       		.byte	0x46
+ 2258 07ba CE000000 		.4byte	0xce
+ 2259 07be 3C       		.byte	0x3c
+ 2260 07bf 07       		.uleb128 0x7
+ 2261 07c0 350B0000 		.4byte	.LASF162
+ 2262 07c4 07       		.byte	0x7
+ 2263 07c5 48       		.byte	0x48
+ 2264 07c6 CE000000 		.4byte	0xce
+ 2265 07ca 40       		.byte	0x40
+ 2266 07cb 07       		.uleb128 0x7
+ 2267 07cc E7050000 		.4byte	.LASF163
+ 2268 07d0 07       		.byte	0x7
+ 2269 07d1 49       		.byte	0x49
+ 2270 07d2 CE000000 		.4byte	0xce
+ 2271 07d6 44       		.byte	0x44
+ 2272 07d7 07       		.uleb128 0x7
+ 2273 07d8 7E0A0000 		.4byte	.LASF164
+ 2274 07dc 07       		.byte	0x7
+ 2275 07dd 4B       		.byte	0x4b
+ 2276 07de CE000000 		.4byte	0xce
+ 2277 07e2 48       		.byte	0x48
+ 2278 07e3 00       		.byte	0
+ 2279 07e4 03       		.uleb128 0x3
+ 2280 07e5 E9010000 		.4byte	.LASF165
+ 2281 07e9 07       		.byte	0x7
+ 2282 07ea 4C       		.byte	0x4c
+ 2283 07eb F3060000 		.4byte	0x6f3
+ 2284 07ef 14       		.uleb128 0x14
+ 2285 07f0 D1020000 		.4byte	.LASF166
+ 2286 07f4 64       		.byte	0x64
+ 2287 07f5 08       		.byte	0x8
+ 2288 07f6 2F       		.byte	0x2f
+ 2289 07f7 28090000 		.4byte	0x928
+ 2290 07fb 07       		.uleb128 0x7
+ 2291 07fc 05080000 		.4byte	.LASF167
+ 2292 0800 08       		.byte	0x8
+ 2293 0801 31       		.byte	0x31
+ 2294 0802 CE000000 		.4byte	0xce
+ 2295 0806 00       		.byte	0
+ 2296 0807 07       		.uleb128 0x7
+ 2297 0808 63010000 		.4byte	.LASF147
+ 2298 080c 08       		.byte	0x8
+ 2299 080d 33       		.byte	0x33
+ 2300 080e CE000000 		.4byte	0xce
+ 2301 0812 04       		.byte	0x4
+ 2302 0813 07       		.uleb128 0x7
+ 2303 0814 3B090000 		.4byte	.LASF168
+ 2304 0818 08       		.byte	0x8
+ 2305 0819 34       		.byte	0x34
+ 2306 081a CE000000 		.4byte	0xce
+ 2307 081e 08       		.byte	0x8
+ 2308 081f 07       		.uleb128 0x7
+ 2309 0820 CF050000 		.4byte	.LASF169
+ 2310 0824 08       		.byte	0x8
+ 2311 0825 35       		.byte	0x35
+ 2312 0826 CE000000 		.4byte	0xce
+ 2313 082a 0C       		.byte	0xc
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 43
+
+
+ 2314 082b 07       		.uleb128 0x7
+ 2315 082c 12000000 		.4byte	.LASF148
+ 2316 0830 08       		.byte	0x8
+ 2317 0831 36       		.byte	0x36
+ 2318 0832 CE000000 		.4byte	0xce
+ 2319 0836 10       		.byte	0x10
+ 2320 0837 07       		.uleb128 0x7
+ 2321 0838 5A0B0000 		.4byte	.LASF170
+ 2322 083c 08       		.byte	0x8
+ 2323 083d 37       		.byte	0x37
+ 2324 083e CE000000 		.4byte	0xce
+ 2325 0842 14       		.byte	0x14
+ 2326 0843 07       		.uleb128 0x7
+ 2327 0844 620B0000 		.4byte	.LASF171
+ 2328 0848 08       		.byte	0x8
+ 2329 0849 38       		.byte	0x38
+ 2330 084a CE000000 		.4byte	0xce
+ 2331 084e 18       		.byte	0x18
+ 2332 084f 07       		.uleb128 0x7
+ 2333 0850 CD090000 		.4byte	.LASF172
+ 2334 0854 08       		.byte	0x8
+ 2335 0855 39       		.byte	0x39
+ 2336 0856 25050000 		.4byte	0x525
+ 2337 085a 1C       		.byte	0x1c
+ 2338 085b 07       		.uleb128 0x7
+ 2339 085c 6C0A0000 		.4byte	.LASF151
+ 2340 0860 08       		.byte	0x8
+ 2341 0861 3A       		.byte	0x3a
+ 2342 0862 CE000000 		.4byte	0xce
+ 2343 0866 20       		.byte	0x20
+ 2344 0867 07       		.uleb128 0x7
+ 2345 0868 750A0000 		.4byte	.LASF152
+ 2346 086c 08       		.byte	0x8
+ 2347 086d 3B       		.byte	0x3b
+ 2348 086e CE000000 		.4byte	0xce
+ 2349 0872 24       		.byte	0x24
+ 2350 0873 07       		.uleb128 0x7
+ 2351 0874 F0080000 		.4byte	.LASF153
+ 2352 0878 08       		.byte	0x8
+ 2353 0879 3C       		.byte	0x3c
+ 2354 087a 25050000 		.4byte	0x525
+ 2355 087e 28       		.byte	0x28
+ 2356 087f 07       		.uleb128 0x7
+ 2357 0880 040B0000 		.4byte	.LASF154
+ 2358 0884 08       		.byte	0x8
+ 2359 0885 3E       		.byte	0x3e
+ 2360 0886 CE000000 		.4byte	0xce
+ 2361 088a 2C       		.byte	0x2c
+ 2362 088b 07       		.uleb128 0x7
+ 2363 088c 490A0000 		.4byte	.LASF173
+ 2364 0890 08       		.byte	0x8
+ 2365 0891 3F       		.byte	0x3f
+ 2366 0892 CE000000 		.4byte	0xce
+ 2367 0896 30       		.byte	0x30
+ 2368 0897 07       		.uleb128 0x7
+ 2369 0898 C40B0000 		.4byte	.LASF174
+ 2370 089c 08       		.byte	0x8
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 44
+
+
+ 2371 089d 40       		.byte	0x40
+ 2372 089e CE000000 		.4byte	0xce
+ 2373 08a2 34       		.byte	0x34
+ 2374 08a3 07       		.uleb128 0x7
+ 2375 08a4 50080000 		.4byte	.LASF175
+ 2376 08a8 08       		.byte	0x8
+ 2377 08a9 41       		.byte	0x41
+ 2378 08aa CE000000 		.4byte	0xce
+ 2379 08ae 38       		.byte	0x38
+ 2380 08af 07       		.uleb128 0x7
+ 2381 08b0 F1040000 		.4byte	.LASF176
+ 2382 08b4 08       		.byte	0x8
+ 2383 08b5 42       		.byte	0x42
+ 2384 08b6 CE000000 		.4byte	0xce
+ 2385 08ba 3C       		.byte	0x3c
+ 2386 08bb 07       		.uleb128 0x7
+ 2387 08bc 020C0000 		.4byte	.LASF177
+ 2388 08c0 08       		.byte	0x8
+ 2389 08c1 44       		.byte	0x44
+ 2390 08c2 CE000000 		.4byte	0xce
+ 2391 08c6 40       		.byte	0x40
+ 2392 08c7 07       		.uleb128 0x7
+ 2393 08c8 650C0000 		.4byte	.LASF157
+ 2394 08cc 08       		.byte	0x8
+ 2395 08cd 45       		.byte	0x45
+ 2396 08ce CE000000 		.4byte	0xce
+ 2397 08d2 44       		.byte	0x44
+ 2398 08d3 07       		.uleb128 0x7
+ 2399 08d4 150B0000 		.4byte	.LASF158
+ 2400 08d8 08       		.byte	0x8
+ 2401 08d9 47       		.byte	0x47
+ 2402 08da CE000000 		.4byte	0xce
+ 2403 08de 48       		.byte	0x48
+ 2404 08df 07       		.uleb128 0x7
+ 2405 08e0 81080000 		.4byte	.LASF159
+ 2406 08e4 08       		.byte	0x8
+ 2407 08e5 48       		.byte	0x48
+ 2408 08e6 CE000000 		.4byte	0xce
+ 2409 08ea 4C       		.byte	0x4c
+ 2410 08eb 07       		.uleb128 0x7
+ 2411 08ec 310D0000 		.4byte	.LASF160
+ 2412 08f0 08       		.byte	0x8
+ 2413 08f1 4A       		.byte	0x4a
+ 2414 08f2 CE000000 		.4byte	0xce
+ 2415 08f6 50       		.byte	0x50
+ 2416 08f7 07       		.uleb128 0x7
+ 2417 08f8 40050000 		.4byte	.LASF178
+ 2418 08fc 08       		.byte	0x8
+ 2419 08fd 4B       		.byte	0x4b
+ 2420 08fe CE000000 		.4byte	0xce
+ 2421 0902 54       		.byte	0x54
+ 2422 0903 07       		.uleb128 0x7
+ 2423 0904 59000000 		.4byte	.LASF179
+ 2424 0908 08       		.byte	0x8
+ 2425 0909 4D       		.byte	0x4d
+ 2426 090a CE000000 		.4byte	0xce
+ 2427 090e 58       		.byte	0x58
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 45
+
+
+ 2428 090f 07       		.uleb128 0x7
+ 2429 0910 E7050000 		.4byte	.LASF163
+ 2430 0914 08       		.byte	0x8
+ 2431 0915 4E       		.byte	0x4e
+ 2432 0916 CE000000 		.4byte	0xce
+ 2433 091a 5C       		.byte	0x5c
+ 2434 091b 07       		.uleb128 0x7
+ 2435 091c 7E0A0000 		.4byte	.LASF164
+ 2436 0920 08       		.byte	0x8
+ 2437 0921 50       		.byte	0x50
+ 2438 0922 CE000000 		.4byte	0xce
+ 2439 0926 60       		.byte	0x60
+ 2440 0927 00       		.byte	0
+ 2441 0928 03       		.uleb128 0x3
+ 2442 0929 4B0C0000 		.4byte	.LASF180
+ 2443 092d 08       		.byte	0x8
+ 2444 092e 51       		.byte	0x51
+ 2445 092f EF070000 		.4byte	0x7ef
+ 2446 0933 06       		.uleb128 0x6
+ 2447 0934 14       		.byte	0x14
+ 2448 0935 09       		.byte	0x9
+ 2449 0936 3B       		.byte	0x3b
+ 2450 0937 78090000 		.4byte	0x978
+ 2451 093b 07       		.uleb128 0x7
+ 2452 093c 750C0000 		.4byte	.LASF181
+ 2453 0940 09       		.byte	0x9
+ 2454 0941 3D       		.byte	0x3d
+ 2455 0942 CE000000 		.4byte	0xce
+ 2456 0946 00       		.byte	0
+ 2457 0947 07       		.uleb128 0x7
+ 2458 0948 71050000 		.4byte	.LASF182
+ 2459 094c 09       		.byte	0x9
+ 2460 094d 3E       		.byte	0x3e
+ 2461 094e CE000000 		.4byte	0xce
+ 2462 0952 04       		.byte	0x4
+ 2463 0953 07       		.uleb128 0x7
+ 2464 0954 11040000 		.4byte	.LASF183
+ 2465 0958 09       		.byte	0x9
+ 2466 0959 3F       		.byte	0x3f
+ 2467 095a 78090000 		.4byte	0x978
+ 2468 095e 08       		.byte	0x8
+ 2469 095f 07       		.uleb128 0x7
+ 2470 0960 210B0000 		.4byte	.LASF184
+ 2471 0964 09       		.byte	0x9
+ 2472 0965 40       		.byte	0x40
+ 2473 0966 CE000000 		.4byte	0xce
+ 2474 096a 0C       		.byte	0xc
+ 2475 096b 07       		.uleb128 0x7
+ 2476 096c 56020000 		.4byte	.LASF185
+ 2477 0970 09       		.byte	0x9
+ 2478 0971 45       		.byte	0x45
+ 2479 0972 CE000000 		.4byte	0xce
+ 2480 0976 10       		.byte	0x10
+ 2481 0977 00       		.byte	0
+ 2482 0978 08       		.uleb128 0x8
+ 2483 0979 04       		.byte	0x4
+ 2484 097a 7E090000 		.4byte	0x97e
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 46
+
+
+ 2485 097e 15       		.uleb128 0x15
+ 2486 097f 3B060000 		.4byte	0x63b
+ 2487 0983 03       		.uleb128 0x3
+ 2488 0984 8A030000 		.4byte	.LASF186
+ 2489 0988 09       		.byte	0x9
+ 2490 0989 48       		.byte	0x48
+ 2491 098a 33090000 		.4byte	0x933
+ 2492 098e 03       		.uleb128 0x3
+ 2493 098f F1030000 		.4byte	.LASF187
+ 2494 0993 0A       		.byte	0xa
+ 2495 0994 6C       		.byte	0x6c
+ 2496 0995 9B000000 		.4byte	0x9b
+ 2497 0999 16       		.uleb128 0x16
+ 2498 099a 97020000 		.4byte	.LASF192
+ 2499 099e 01       		.byte	0x1
+ 2500 099f 13       		.byte	0x13
+ 2501 09a0 00000000 		.4byte	.LFB638
+ 2502 09a4 50000000 		.4byte	.LFE638-.LFB638
+ 2503 09a8 01       		.uleb128 0x1
+ 2504 09a9 9C       		.byte	0x9c
+ 2505 09aa 200A0000 		.4byte	0xa20
+ 2506 09ae 17       		.uleb128 0x17
+ 2507 09af B3060000 		.4byte	.LASF188
+ 2508 09b3 01       		.byte	0x1
+ 2509 09b4 13       		.byte	0x13
+ 2510 09b5 1D050000 		.4byte	0x51d
+ 2511 09b9 01       		.uleb128 0x1
+ 2512 09ba 50       		.byte	0x50
+ 2513 09bb 18       		.uleb128 0x18
+ 2514 09bc 22060000 		.4byte	.LASF189
+ 2515 09c0 01       		.byte	0x1
+ 2516 09c1 13       		.byte	0x13
+ 2517 09c2 94000000 		.4byte	0x94
+ 2518 09c6 00000000 		.4byte	.LLST0
+ 2519 09ca 18       		.uleb128 0x18
+ 2520 09cb 7F030000 		.4byte	.LASF190
+ 2521 09cf 01       		.byte	0x1
+ 2522 09d0 13       		.byte	0x13
+ 2523 09d1 200A0000 		.4byte	0xa20
+ 2524 09d5 21000000 		.4byte	.LLST1
+ 2525 09d9 19       		.uleb128 0x19
+ 2526 09da 6D696E00 		.ascii	"min\000"
+ 2527 09de 01       		.byte	0x1
+ 2528 09df 14       		.byte	0x14
+ 2529 09e0 94000000 		.4byte	0x94
+ 2530 09e4 D007     		.2byte	0x7d0
+ 2531 09e6 19       		.uleb128 0x19
+ 2532 09e7 6D617800 		.ascii	"max\000"
+ 2533 09eb 01       		.byte	0x1
+ 2534 09ec 15       		.byte	0x15
+ 2535 09ed 94000000 		.4byte	0x94
+ 2536 09f1 C409     		.2byte	0x9c4
+ 2537 09f3 1A       		.uleb128 0x1a
+ 2538 09f4 2B060000 		.4byte	.LASF191
+ 2539 09f8 01       		.byte	0x1
+ 2540 09f9 16       		.byte	0x16
+ 2541 09fa 94000000 		.4byte	0x94
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 47
+
+
+ 2542 09fe 64       		.byte	0x64
+ 2543 09ff 1B       		.uleb128 0x1b
+ 2544 0a00 6A00     		.ascii	"j\000"
+ 2545 0a02 01       		.byte	0x1
+ 2546 0a03 17       		.byte	0x17
+ 2547 0a04 94000000 		.4byte	0x94
+ 2548 0a08 42000000 		.4byte	.LLST2
+ 2549 0a0c 1C       		.uleb128 0x1c
+ 2550 0a0d 00000000 		.4byte	.Ldebug_ranges0+0
+ 2551 0a11 1B       		.uleb128 0x1b
+ 2552 0a12 6900     		.ascii	"i\000"
+ 2553 0a14 01       		.byte	0x1
+ 2554 0a15 18       		.byte	0x18
+ 2555 0a16 94000000 		.4byte	0x94
+ 2556 0a1a 61000000 		.4byte	.LLST3
+ 2557 0a1e 00       		.byte	0
+ 2558 0a1f 00       		.byte	0
+ 2559 0a20 08       		.uleb128 0x8
+ 2560 0a21 04       		.byte	0x4
+ 2561 0a22 B8000000 		.4byte	0xb8
+ 2562 0a26 16       		.uleb128 0x16
+ 2563 0a27 18060000 		.4byte	.LASF193
+ 2564 0a2b 01       		.byte	0x1
+ 2565 0a2c 22       		.byte	0x22
+ 2566 0a2d 00000000 		.4byte	.LFB639
+ 2567 0a31 48000000 		.4byte	.LFE639-.LFB639
+ 2568 0a35 01       		.uleb128 0x1
+ 2569 0a36 9C       		.byte	0x9c
+ 2570 0a37 DE0A0000 		.4byte	0xade
+ 2571 0a3b 18       		.uleb128 0x18
+ 2572 0a3c 77060000 		.4byte	.LASF194
+ 2573 0a40 01       		.byte	0x1
+ 2574 0a41 22       		.byte	0x22
+ 2575 0a42 200A0000 		.4byte	0xa20
+ 2576 0a46 80000000 		.4byte	.LLST4
+ 2577 0a4a 1B       		.uleb128 0x1b
+ 2578 0a4b 783100   		.ascii	"x1\000"
+ 2579 0a4e 01       		.byte	0x1
+ 2580 0a4f 25       		.byte	0x25
+ 2581 0a50 94000000 		.4byte	0x94
+ 2582 0a54 9E000000 		.4byte	.LLST5
+ 2583 0a58 1B       		.uleb128 0x1b
+ 2584 0a59 793100   		.ascii	"y1\000"
+ 2585 0a5c 01       		.byte	0x1
+ 2586 0a5d 26       		.byte	0x26
+ 2587 0a5e 94000000 		.4byte	0x94
+ 2588 0a62 D3000000 		.4byte	.LLST6
+ 2589 0a66 1B       		.uleb128 0x1b
+ 2590 0a67 783200   		.ascii	"x2\000"
+ 2591 0a6a 01       		.byte	0x1
+ 2592 0a6b 27       		.byte	0x27
+ 2593 0a6c 94000000 		.4byte	0x94
+ 2594 0a70 00010000 		.4byte	.LLST7
+ 2595 0a74 1B       		.uleb128 0x1b
+ 2596 0a75 793200   		.ascii	"y2\000"
+ 2597 0a78 01       		.byte	0x1
+ 2598 0a79 28       		.byte	0x28
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 48
+
+
+ 2599 0a7a 94000000 		.4byte	0x94
+ 2600 0a7e 37010000 		.4byte	.LLST8
+ 2601 0a82 1D       		.uleb128 0x1d
+ 2602 0a83 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 2603 0a87 A90A0000 		.4byte	0xaa9
+ 2604 0a8b 1B       		.uleb128 0x1b
+ 2605 0a8c 6900     		.ascii	"i\000"
+ 2606 0a8e 01       		.byte	0x1
+ 2607 0a8f 29       		.byte	0x29
+ 2608 0a90 8E090000 		.4byte	0x98e
+ 2609 0a94 64010000 		.4byte	.LLST9
+ 2610 0a98 1E       		.uleb128 0x1e
+ 2611 0a99 3E000000 		.4byte	.LVL18
+ 2612 0a9d A20C0000 		.4byte	0xca2
+ 2613 0aa1 1F       		.uleb128 0x1f
+ 2614 0aa2 01       		.uleb128 0x1
+ 2615 0aa3 52       		.byte	0x52
+ 2616 0aa4 02       		.uleb128 0x2
+ 2617 0aa5 75       		.byte	0x75
+ 2618 0aa6 00       		.sleb128 0
+ 2619 0aa7 00       		.byte	0
+ 2620 0aa8 00       		.byte	0
+ 2621 0aa9 20       		.uleb128 0x20
+ 2622 0aaa 0A000000 		.4byte	.LVL10
+ 2623 0aae AE0C0000 		.4byte	0xcae
+ 2624 0ab2 BC0A0000 		.4byte	0xabc
+ 2625 0ab6 1F       		.uleb128 0x1f
+ 2626 0ab7 01       		.uleb128 0x1
+ 2627 0ab8 50       		.byte	0x50
+ 2628 0ab9 01       		.uleb128 0x1
+ 2629 0aba 31       		.byte	0x31
+ 2630 0abb 00       		.byte	0
+ 2631 0abc 1E       		.uleb128 0x1e
+ 2632 0abd 18000000 		.4byte	.LVL11
+ 2633 0ac1 BA0C0000 		.4byte	0xcba
+ 2634 0ac5 1F       		.uleb128 0x1f
+ 2635 0ac6 01       		.uleb128 0x1
+ 2636 0ac7 50       		.byte	0x50
+ 2637 0ac8 01       		.uleb128 0x1
+ 2638 0ac9 37       		.byte	0x37
+ 2639 0aca 1F       		.uleb128 0x1f
+ 2640 0acb 01       		.uleb128 0x1
+ 2641 0acc 51       		.byte	0x51
+ 2642 0acd 01       		.uleb128 0x1
+ 2643 0ace 3F       		.byte	0x3f
+ 2644 0acf 1F       		.uleb128 0x1f
+ 2645 0ad0 01       		.uleb128 0x1
+ 2646 0ad1 52       		.byte	0x52
+ 2647 0ad2 03       		.uleb128 0x3
+ 2648 0ad3 0A       		.byte	0xa
+ 2649 0ad4 0101     		.2byte	0x101
+ 2650 0ad6 1F       		.uleb128 0x1f
+ 2651 0ad7 01       		.uleb128 0x1
+ 2652 0ad8 53       		.byte	0x53
+ 2653 0ad9 02       		.uleb128 0x2
+ 2654 0ada 08       		.byte	0x8
+ 2655 0adb 73       		.byte	0x73
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 49
+
+
+ 2656 0adc 00       		.byte	0
+ 2657 0add 00       		.byte	0
+ 2658 0ade 21       		.uleb128 0x21
+ 2659 0adf BB050000 		.4byte	.LASF217
+ 2660 0ae3 01       		.byte	0x1
+ 2661 0ae4 34       		.byte	0x34
+ 2662 0ae5 00000000 		.4byte	.LFB640
+ 2663 0ae9 64000000 		.4byte	.LFE640-.LFB640
+ 2664 0aed 01       		.uleb128 0x1
+ 2665 0aee 9C       		.byte	0x9c
+ 2666 0aef EB0B0000 		.4byte	0xbeb
+ 2667 0af3 22       		.uleb128 0x22
+ 2668 0af4 72010000 		.4byte	.LASF195
+ 2669 0af8 01       		.byte	0x1
+ 2670 0af9 3A       		.byte	0x3a
+ 2671 0afa EB0B0000 		.4byte	0xbeb
+ 2672 0afe 03       		.uleb128 0x3
+ 2673 0aff 91       		.byte	0x91
+ 2674 0b00 D860     		.sleb128 -4008
+ 2675 0b02 22       		.uleb128 0x22
+ 2676 0b03 F8060000 		.4byte	.LASF196
+ 2677 0b07 01       		.byte	0x1
+ 2678 0b08 3C       		.byte	0x3c
+ 2679 0b09 FC0B0000 		.4byte	0xbfc
+ 2680 0b0d 03       		.uleb128 0x3
+ 2681 0b0e 91       		.byte	0x91
+ 2682 0b0f 8851     		.sleb128 -6008
+ 2683 0b11 23       		.uleb128 0x23
+ 2684 0b12 0C000000 		.4byte	.LVL20
+ 2685 0b16 C60C0000 		.4byte	0xcc6
+ 2686 0b1a 20       		.uleb128 0x20
+ 2687 0b1b 1A000000 		.4byte	.LVL21
+ 2688 0b1f D20C0000 		.4byte	0xcd2
+ 2689 0b23 3F0B0000 		.4byte	0xb3f
+ 2690 0b27 1F       		.uleb128 0x1f
+ 2691 0b28 01       		.uleb128 0x1
+ 2692 0b29 50       		.byte	0x50
+ 2693 0b2a 03       		.uleb128 0x3
+ 2694 0b2b 91       		.byte	0x91
+ 2695 0b2c D860     		.sleb128 -4008
+ 2696 0b2e 1F       		.uleb128 0x1f
+ 2697 0b2f 01       		.uleb128 0x1
+ 2698 0b30 51       		.byte	0x51
+ 2699 0b31 05       		.uleb128 0x5
+ 2700 0b32 03       		.byte	0x3
+ 2701 0b33 00000000 		.4byte	.LANCHOR1
+ 2702 0b37 1F       		.uleb128 0x1f
+ 2703 0b38 01       		.uleb128 0x1
+ 2704 0b39 52       		.byte	0x52
+ 2705 0b3a 03       		.uleb128 0x3
+ 2706 0b3b 0A       		.byte	0xa
+ 2707 0b3c A00F     		.2byte	0xfa0
+ 2708 0b3e 00       		.byte	0
+ 2709 0b3f 20       		.uleb128 0x20
+ 2710 0b40 28000000 		.4byte	.LVL22
+ 2711 0b44 99090000 		.4byte	0x999
+ 2712 0b48 610B0000 		.4byte	0xb61
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 50
+
+
+ 2713 0b4c 1F       		.uleb128 0x1f
+ 2714 0b4d 01       		.uleb128 0x1
+ 2715 0b4e 50       		.byte	0x50
+ 2716 0b4f 03       		.uleb128 0x3
+ 2717 0b50 91       		.byte	0x91
+ 2718 0b51 D860     		.sleb128 -4008
+ 2719 0b53 1F       		.uleb128 0x1f
+ 2720 0b54 01       		.uleb128 0x1
+ 2721 0b55 51       		.byte	0x51
+ 2722 0b56 03       		.uleb128 0x3
+ 2723 0b57 0A       		.byte	0xa
+ 2724 0b58 E803     		.2byte	0x3e8
+ 2725 0b5a 1F       		.uleb128 0x1f
+ 2726 0b5b 01       		.uleb128 0x1
+ 2727 0b5c 52       		.byte	0x52
+ 2728 0b5d 02       		.uleb128 0x2
+ 2729 0b5e 7D       		.byte	0x7d
+ 2730 0b5f 00       		.sleb128 0
+ 2731 0b60 00       		.byte	0
+ 2732 0b61 20       		.uleb128 0x20
+ 2733 0b62 2E000000 		.4byte	.LVL23
+ 2734 0b66 DB0C0000 		.4byte	0xcdb
+ 2735 0b6a 740B0000 		.4byte	0xb74
+ 2736 0b6e 1F       		.uleb128 0x1f
+ 2737 0b6f 01       		.uleb128 0x1
+ 2738 0b70 50       		.byte	0x50
+ 2739 0b71 01       		.uleb128 0x1
+ 2740 0b72 44       		.byte	0x44
+ 2741 0b73 00       		.byte	0
+ 2742 0b74 20       		.uleb128 0x20
+ 2743 0b75 34000000 		.4byte	.LVL24
+ 2744 0b79 E60C0000 		.4byte	0xce6
+ 2745 0b7d 870B0000 		.4byte	0xb87
+ 2746 0b81 1F       		.uleb128 0x1f
+ 2747 0b82 01       		.uleb128 0x1
+ 2748 0b83 50       		.byte	0x50
+ 2749 0b84 01       		.uleb128 0x1
+ 2750 0b85 31       		.byte	0x31
+ 2751 0b86 00       		.byte	0
+ 2752 0b87 20       		.uleb128 0x20
+ 2753 0b88 3A000000 		.4byte	.LVL25
+ 2754 0b8c AE0C0000 		.4byte	0xcae
+ 2755 0b90 9A0B0000 		.4byte	0xb9a
+ 2756 0b94 1F       		.uleb128 0x1f
+ 2757 0b95 01       		.uleb128 0x1
+ 2758 0b96 50       		.byte	0x50
+ 2759 0b97 01       		.uleb128 0x1
+ 2760 0b98 31       		.byte	0x31
+ 2761 0b99 00       		.byte	0
+ 2762 0b9a 20       		.uleb128 0x20
+ 2763 0b9b 40000000 		.4byte	.LVL26
+ 2764 0b9f F10C0000 		.4byte	0xcf1
+ 2765 0ba3 AD0B0000 		.4byte	0xbad
+ 2766 0ba7 1F       		.uleb128 0x1f
+ 2767 0ba8 01       		.uleb128 0x1
+ 2768 0ba9 50       		.byte	0x50
+ 2769 0baa 01       		.uleb128 0x1
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 51
+
+
+ 2770 0bab 30       		.byte	0x30
+ 2771 0bac 00       		.byte	0
+ 2772 0bad 20       		.uleb128 0x20
+ 2773 0bae 48000000 		.4byte	.LVL27
+ 2774 0bb2 FD0C0000 		.4byte	0xcfd
+ 2775 0bb6 C40B0000 		.4byte	0xbc4
+ 2776 0bba 1F       		.uleb128 0x1f
+ 2777 0bbb 01       		.uleb128 0x1
+ 2778 0bbc 50       		.byte	0x50
+ 2779 0bbd 05       		.uleb128 0x5
+ 2780 0bbe 0C       		.byte	0xc
+ 2781 0bbf FFFFFF00 		.4byte	0xffffff
+ 2782 0bc3 00       		.byte	0
+ 2783 0bc4 23       		.uleb128 0x23
+ 2784 0bc5 4C000000 		.4byte	.LVL28
+ 2785 0bc9 090D0000 		.4byte	0xd09
+ 2786 0bcd 20       		.uleb128 0x20
+ 2787 0bce 52000000 		.4byte	.LVL29
+ 2788 0bd2 260A0000 		.4byte	0xa26
+ 2789 0bd6 E10B0000 		.4byte	0xbe1
+ 2790 0bda 1F       		.uleb128 0x1f
+ 2791 0bdb 01       		.uleb128 0x1
+ 2792 0bdc 50       		.byte	0x50
+ 2793 0bdd 02       		.uleb128 0x2
+ 2794 0bde 7D       		.byte	0x7d
+ 2795 0bdf 00       		.sleb128 0
+ 2796 0be0 00       		.byte	0
+ 2797 0be1 23       		.uleb128 0x23
+ 2798 0be2 56000000 		.4byte	.LVL30
+ 2799 0be6 090D0000 		.4byte	0xd09
+ 2800 0bea 00       		.byte	0
+ 2801 0beb 0F       		.uleb128 0xf
+ 2802 0bec CE000000 		.4byte	0xce
+ 2803 0bf0 FC0B0000 		.4byte	0xbfc
+ 2804 0bf4 24       		.uleb128 0x24
+ 2805 0bf5 D9000000 		.4byte	0xd9
+ 2806 0bf9 E703     		.2byte	0x3e7
+ 2807 0bfb 00       		.byte	0
+ 2808 0bfc 0F       		.uleb128 0xf
+ 2809 0bfd B8000000 		.4byte	0xb8
+ 2810 0c01 0D0C0000 		.4byte	0xc0d
+ 2811 0c05 24       		.uleb128 0x24
+ 2812 0c06 D9000000 		.4byte	0xd9
+ 2813 0c0a E703     		.2byte	0x3e7
+ 2814 0c0c 00       		.byte	0
+ 2815 0c0d 25       		.uleb128 0x25
+ 2816 0c0e BA080000 		.4byte	.LASF197
+ 2817 0c12 0B       		.byte	0xb
+ 2818 0c13 F907     		.2byte	0x7f9
+ 2819 0c15 190C0000 		.4byte	0xc19
+ 2820 0c19 05       		.uleb128 0x5
+ 2821 0c1a C3000000 		.4byte	0xc3
+ 2822 0c1e 26       		.uleb128 0x26
+ 2823 0c1f 24080000 		.4byte	.LASF198
+ 2824 0c23 04       		.byte	0x4
+ 2825 0c24 A7       		.byte	0xa7
+ 2826 0c25 290C0000 		.4byte	0xc29
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 52
+
+
+ 2827 0c29 08       		.uleb128 0x8
+ 2828 0c2a 04       		.byte	0x4
+ 2829 0c2b 2F0C0000 		.4byte	0xc2f
+ 2830 0c2f 15       		.uleb128 0x15
+ 2831 0c30 FD040000 		.4byte	0x4fd
+ 2832 0c34 26       		.uleb128 0x26
+ 2833 0c35 9A0B0000 		.4byte	.LASF199
+ 2834 0c39 0C       		.byte	0xc
+ 2835 0c3a 5E       		.byte	0x5e
+ 2836 0c3b E7060000 		.4byte	0x6e7
+ 2837 0c3f 26       		.uleb128 0x26
+ 2838 0c40 0C0C0000 		.4byte	.LASF200
+ 2839 0c44 0D       		.byte	0xd
+ 2840 0c45 1F       		.byte	0x1f
+ 2841 0c46 4A0C0000 		.4byte	0xc4a
+ 2842 0c4a 15       		.uleb128 0x15
+ 2843 0c4b E4070000 		.4byte	0x7e4
+ 2844 0c4f 26       		.uleb128 0x26
+ 2845 0c50 CA0A0000 		.4byte	.LASF201
+ 2846 0c54 0E       		.byte	0xe
+ 2847 0c55 1F       		.byte	0x1f
+ 2848 0c56 5A0C0000 		.4byte	0xc5a
+ 2849 0c5a 15       		.uleb128 0x15
+ 2850 0c5b 28090000 		.4byte	0x928
+ 2851 0c5f 25       		.uleb128 0x25
+ 2852 0c60 3A010000 		.4byte	.LASF202
+ 2853 0c64 09       		.byte	0x9
+ 2854 0c65 6001     		.2byte	0x160
+ 2855 0c67 CE000000 		.4byte	0xce
+ 2856 0c6b 0F       		.uleb128 0xf
+ 2857 0c6c 7B0C0000 		.4byte	0xc7b
+ 2858 0c70 7B0C0000 		.4byte	0xc7b
+ 2859 0c74 10       		.uleb128 0x10
+ 2860 0c75 D9000000 		.4byte	0xd9
+ 2861 0c79 00       		.byte	0
+ 2862 0c7a 00       		.byte	0
+ 2863 0c7b 15       		.uleb128 0x15
+ 2864 0c7c 83090000 		.4byte	0x983
+ 2865 0c80 25       		.uleb128 0x25
+ 2866 0c81 A20A0000 		.4byte	.LASF203
+ 2867 0c85 09       		.byte	0x9
+ 2868 0c86 6401     		.2byte	0x164
+ 2869 0c88 8C0C0000 		.4byte	0xc8c
+ 2870 0c8c 15       		.uleb128 0x15
+ 2871 0c8d 6B0C0000 		.4byte	0xc6b
+ 2872 0c91 27       		.uleb128 0x27
+ 2873 0c92 10070000 		.4byte	.LASF204
+ 2874 0c96 01       		.byte	0x1
+ 2875 0c97 0E       		.byte	0xe
+ 2876 0c98 94000000 		.4byte	0x94
+ 2877 0c9c 05       		.uleb128 0x5
+ 2878 0c9d 03       		.byte	0x3
+ 2879 0c9e 00000000 		.4byte	bonneLongueur
+ 2880 0ca2 28       		.uleb128 0x28
+ 2881 0ca3 ED0B0000 		.4byte	.LASF205
+ 2882 0ca7 ED0B0000 		.4byte	.LASF205
+ 2883 0cab 0F       		.byte	0xf
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 53
+
+
+ 2884 0cac 0902     		.2byte	0x209
+ 2885 0cae 28       		.uleb128 0x28
+ 2886 0caf F60C0000 		.4byte	.LASF206
+ 2887 0cb3 F60C0000 		.4byte	.LASF206
+ 2888 0cb7 0F       		.byte	0xf
+ 2889 0cb8 C501     		.2byte	0x1c5
+ 2890 0cba 28       		.uleb128 0x28
+ 2891 0cbb EB060000 		.4byte	.LASF207
+ 2892 0cbf EB060000 		.4byte	.LASF207
+ 2893 0cc3 0F       		.byte	0xf
+ 2894 0cc4 1202     		.2byte	0x212
+ 2895 0cc6 28       		.uleb128 0x28
+ 2896 0cc7 810C0000 		.4byte	.LASF208
+ 2897 0ccb 810C0000 		.4byte	.LASF208
+ 2898 0ccf 0F       		.byte	0xf
+ 2899 0cd0 6D01     		.2byte	0x16d
+ 2900 0cd2 29       		.uleb128 0x29
+ 2901 0cd3 18030000 		.4byte	.LASF218
+ 2902 0cd7 18030000 		.4byte	.LASF218
+ 2903 0cdb 2A       		.uleb128 0x2a
+ 2904 0cdc 24000000 		.4byte	.LASF209
+ 2905 0ce0 24000000 		.4byte	.LASF209
+ 2906 0ce4 10       		.byte	0x10
+ 2907 0ce5 79       		.byte	0x79
+ 2908 0ce6 2A       		.uleb128 0x2a
+ 2909 0ce7 230D0000 		.4byte	.LASF210
+ 2910 0ceb 230D0000 		.4byte	.LASF210
+ 2911 0cef 10       		.byte	0x10
+ 2912 0cf0 7A       		.byte	0x7a
+ 2913 0cf1 28       		.uleb128 0x28
+ 2914 0cf2 BE000000 		.4byte	.LASF211
+ 2915 0cf6 BE000000 		.4byte	.LASF211
+ 2916 0cfa 0F       		.byte	0xf
+ 2917 0cfb C101     		.2byte	0x1c1
+ 2918 0cfd 28       		.uleb128 0x28
+ 2919 0cfe FD090000 		.4byte	.LASF212
+ 2920 0d02 FD090000 		.4byte	.LASF212
+ 2921 0d06 0F       		.byte	0xf
+ 2922 0d07 C001     		.2byte	0x1c0
+ 2923 0d09 28       		.uleb128 0x28
+ 2924 0d0a 560A0000 		.4byte	.LASF213
+ 2925 0d0e 560A0000 		.4byte	.LASF213
+ 2926 0d12 0F       		.byte	0xf
+ 2927 0d13 F601     		.2byte	0x1f6
+ 2928 0d15 00       		.byte	0
+ 2929              		.section	.debug_abbrev,"",%progbits
+ 2930              	.Ldebug_abbrev0:
+ 2931 0000 01       		.uleb128 0x1
+ 2932 0001 11       		.uleb128 0x11
+ 2933 0002 01       		.byte	0x1
+ 2934 0003 25       		.uleb128 0x25
+ 2935 0004 0E       		.uleb128 0xe
+ 2936 0005 13       		.uleb128 0x13
+ 2937 0006 0B       		.uleb128 0xb
+ 2938 0007 03       		.uleb128 0x3
+ 2939 0008 0E       		.uleb128 0xe
+ 2940 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 54
+
+
+ 2941 000a 0E       		.uleb128 0xe
+ 2942 000b 55       		.uleb128 0x55
+ 2943 000c 17       		.uleb128 0x17
+ 2944 000d 11       		.uleb128 0x11
+ 2945 000e 01       		.uleb128 0x1
+ 2946 000f 10       		.uleb128 0x10
+ 2947 0010 17       		.uleb128 0x17
+ 2948 0011 00       		.byte	0
+ 2949 0012 00       		.byte	0
+ 2950 0013 02       		.uleb128 0x2
+ 2951 0014 24       		.uleb128 0x24
+ 2952 0015 00       		.byte	0
+ 2953 0016 0B       		.uleb128 0xb
+ 2954 0017 0B       		.uleb128 0xb
+ 2955 0018 3E       		.uleb128 0x3e
+ 2956 0019 0B       		.uleb128 0xb
+ 2957 001a 03       		.uleb128 0x3
+ 2958 001b 0E       		.uleb128 0xe
+ 2959 001c 00       		.byte	0
+ 2960 001d 00       		.byte	0
+ 2961 001e 03       		.uleb128 0x3
+ 2962 001f 16       		.uleb128 0x16
+ 2963 0020 00       		.byte	0
+ 2964 0021 03       		.uleb128 0x3
+ 2965 0022 0E       		.uleb128 0xe
+ 2966 0023 3A       		.uleb128 0x3a
+ 2967 0024 0B       		.uleb128 0xb
+ 2968 0025 3B       		.uleb128 0x3b
+ 2969 0026 0B       		.uleb128 0xb
+ 2970 0027 49       		.uleb128 0x49
+ 2971 0028 13       		.uleb128 0x13
+ 2972 0029 00       		.byte	0
+ 2973 002a 00       		.byte	0
+ 2974 002b 04       		.uleb128 0x4
+ 2975 002c 24       		.uleb128 0x24
+ 2976 002d 00       		.byte	0
+ 2977 002e 0B       		.uleb128 0xb
+ 2978 002f 0B       		.uleb128 0xb
+ 2979 0030 3E       		.uleb128 0x3e
+ 2980 0031 0B       		.uleb128 0xb
+ 2981 0032 03       		.uleb128 0x3
+ 2982 0033 08       		.uleb128 0x8
+ 2983 0034 00       		.byte	0
+ 2984 0035 00       		.byte	0
+ 2985 0036 05       		.uleb128 0x5
+ 2986 0037 35       		.uleb128 0x35
+ 2987 0038 00       		.byte	0
+ 2988 0039 49       		.uleb128 0x49
+ 2989 003a 13       		.uleb128 0x13
+ 2990 003b 00       		.byte	0
+ 2991 003c 00       		.byte	0
+ 2992 003d 06       		.uleb128 0x6
+ 2993 003e 13       		.uleb128 0x13
+ 2994 003f 01       		.byte	0x1
+ 2995 0040 0B       		.uleb128 0xb
+ 2996 0041 0B       		.uleb128 0xb
+ 2997 0042 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 55
+
+
+ 2998 0043 0B       		.uleb128 0xb
+ 2999 0044 3B       		.uleb128 0x3b
+ 3000 0045 0B       		.uleb128 0xb
+ 3001 0046 01       		.uleb128 0x1
+ 3002 0047 13       		.uleb128 0x13
+ 3003 0048 00       		.byte	0
+ 3004 0049 00       		.byte	0
+ 3005 004a 07       		.uleb128 0x7
+ 3006 004b 0D       		.uleb128 0xd
+ 3007 004c 00       		.byte	0
+ 3008 004d 03       		.uleb128 0x3
+ 3009 004e 0E       		.uleb128 0xe
+ 3010 004f 3A       		.uleb128 0x3a
+ 3011 0050 0B       		.uleb128 0xb
+ 3012 0051 3B       		.uleb128 0x3b
+ 3013 0052 0B       		.uleb128 0xb
+ 3014 0053 49       		.uleb128 0x49
+ 3015 0054 13       		.uleb128 0x13
+ 3016 0055 38       		.uleb128 0x38
+ 3017 0056 0B       		.uleb128 0xb
+ 3018 0057 00       		.byte	0
+ 3019 0058 00       		.byte	0
+ 3020 0059 08       		.uleb128 0x8
+ 3021 005a 0F       		.uleb128 0xf
+ 3022 005b 00       		.byte	0
+ 3023 005c 0B       		.uleb128 0xb
+ 3024 005d 0B       		.uleb128 0xb
+ 3025 005e 49       		.uleb128 0x49
+ 3026 005f 13       		.uleb128 0x13
+ 3027 0060 00       		.byte	0
+ 3028 0061 00       		.byte	0
+ 3029 0062 09       		.uleb128 0x9
+ 3030 0063 0F       		.uleb128 0xf
+ 3031 0064 00       		.byte	0
+ 3032 0065 0B       		.uleb128 0xb
+ 3033 0066 0B       		.uleb128 0xb
+ 3034 0067 00       		.byte	0
+ 3035 0068 00       		.byte	0
+ 3036 0069 0A       		.uleb128 0xa
+ 3037 006a 04       		.uleb128 0x4
+ 3038 006b 01       		.byte	0x1
+ 3039 006c 0B       		.uleb128 0xb
+ 3040 006d 0B       		.uleb128 0xb
+ 3041 006e 49       		.uleb128 0x49
+ 3042 006f 13       		.uleb128 0x13
+ 3043 0070 3A       		.uleb128 0x3a
+ 3044 0071 0B       		.uleb128 0xb
+ 3045 0072 3B       		.uleb128 0x3b
+ 3046 0073 05       		.uleb128 0x5
+ 3047 0074 01       		.uleb128 0x1
+ 3048 0075 13       		.uleb128 0x13
+ 3049 0076 00       		.byte	0
+ 3050 0077 00       		.byte	0
+ 3051 0078 0B       		.uleb128 0xb
+ 3052 0079 28       		.uleb128 0x28
+ 3053 007a 00       		.byte	0
+ 3054 007b 03       		.uleb128 0x3
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 56
+
+
+ 3055 007c 0E       		.uleb128 0xe
+ 3056 007d 1C       		.uleb128 0x1c
+ 3057 007e 0B       		.uleb128 0xb
+ 3058 007f 00       		.byte	0
+ 3059 0080 00       		.byte	0
+ 3060 0081 0C       		.uleb128 0xc
+ 3061 0082 16       		.uleb128 0x16
+ 3062 0083 00       		.byte	0
+ 3063 0084 03       		.uleb128 0x3
+ 3064 0085 0E       		.uleb128 0xe
+ 3065 0086 3A       		.uleb128 0x3a
+ 3066 0087 0B       		.uleb128 0xb
+ 3067 0088 3B       		.uleb128 0x3b
+ 3068 0089 05       		.uleb128 0x5
+ 3069 008a 49       		.uleb128 0x49
+ 3070 008b 13       		.uleb128 0x13
+ 3071 008c 00       		.byte	0
+ 3072 008d 00       		.byte	0
+ 3073 008e 0D       		.uleb128 0xd
+ 3074 008f 13       		.uleb128 0x13
+ 3075 0090 01       		.byte	0x1
+ 3076 0091 0B       		.uleb128 0xb
+ 3077 0092 0B       		.uleb128 0xb
+ 3078 0093 3A       		.uleb128 0x3a
+ 3079 0094 0B       		.uleb128 0xb
+ 3080 0095 3B       		.uleb128 0x3b
+ 3081 0096 05       		.uleb128 0x5
+ 3082 0097 01       		.uleb128 0x1
+ 3083 0098 13       		.uleb128 0x13
+ 3084 0099 00       		.byte	0
+ 3085 009a 00       		.byte	0
+ 3086 009b 0E       		.uleb128 0xe
+ 3087 009c 0D       		.uleb128 0xd
+ 3088 009d 00       		.byte	0
+ 3089 009e 03       		.uleb128 0x3
+ 3090 009f 0E       		.uleb128 0xe
+ 3091 00a0 3A       		.uleb128 0x3a
+ 3092 00a1 0B       		.uleb128 0xb
+ 3093 00a2 3B       		.uleb128 0x3b
+ 3094 00a3 05       		.uleb128 0x5
+ 3095 00a4 49       		.uleb128 0x49
+ 3096 00a5 13       		.uleb128 0x13
+ 3097 00a6 38       		.uleb128 0x38
+ 3098 00a7 0B       		.uleb128 0xb
+ 3099 00a8 00       		.byte	0
+ 3100 00a9 00       		.byte	0
+ 3101 00aa 0F       		.uleb128 0xf
+ 3102 00ab 01       		.uleb128 0x1
+ 3103 00ac 01       		.byte	0x1
+ 3104 00ad 49       		.uleb128 0x49
+ 3105 00ae 13       		.uleb128 0x13
+ 3106 00af 01       		.uleb128 0x1
+ 3107 00b0 13       		.uleb128 0x13
+ 3108 00b1 00       		.byte	0
+ 3109 00b2 00       		.byte	0
+ 3110 00b3 10       		.uleb128 0x10
+ 3111 00b4 21       		.uleb128 0x21
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 57
+
+
+ 3112 00b5 00       		.byte	0
+ 3113 00b6 49       		.uleb128 0x49
+ 3114 00b7 13       		.uleb128 0x13
+ 3115 00b8 2F       		.uleb128 0x2f
+ 3116 00b9 0B       		.uleb128 0xb
+ 3117 00ba 00       		.byte	0
+ 3118 00bb 00       		.byte	0
+ 3119 00bc 11       		.uleb128 0x11
+ 3120 00bd 15       		.uleb128 0x15
+ 3121 00be 01       		.byte	0x1
+ 3122 00bf 27       		.uleb128 0x27
+ 3123 00c0 19       		.uleb128 0x19
+ 3124 00c1 01       		.uleb128 0x1
+ 3125 00c2 13       		.uleb128 0x13
+ 3126 00c3 00       		.byte	0
+ 3127 00c4 00       		.byte	0
+ 3128 00c5 12       		.uleb128 0x12
+ 3129 00c6 05       		.uleb128 0x5
+ 3130 00c7 00       		.byte	0
+ 3131 00c8 49       		.uleb128 0x49
+ 3132 00c9 13       		.uleb128 0x13
+ 3133 00ca 00       		.byte	0
+ 3134 00cb 00       		.byte	0
+ 3135 00cc 13       		.uleb128 0x13
+ 3136 00cd 13       		.uleb128 0x13
+ 3137 00ce 01       		.byte	0x1
+ 3138 00cf 03       		.uleb128 0x3
+ 3139 00d0 0E       		.uleb128 0xe
+ 3140 00d1 0B       		.uleb128 0xb
+ 3141 00d2 0B       		.uleb128 0xb
+ 3142 00d3 3A       		.uleb128 0x3a
+ 3143 00d4 0B       		.uleb128 0xb
+ 3144 00d5 3B       		.uleb128 0x3b
+ 3145 00d6 05       		.uleb128 0x5
+ 3146 00d7 01       		.uleb128 0x1
+ 3147 00d8 13       		.uleb128 0x13
+ 3148 00d9 00       		.byte	0
+ 3149 00da 00       		.byte	0
+ 3150 00db 14       		.uleb128 0x14
+ 3151 00dc 13       		.uleb128 0x13
+ 3152 00dd 01       		.byte	0x1
+ 3153 00de 03       		.uleb128 0x3
+ 3154 00df 0E       		.uleb128 0xe
+ 3155 00e0 0B       		.uleb128 0xb
+ 3156 00e1 0B       		.uleb128 0xb
+ 3157 00e2 3A       		.uleb128 0x3a
+ 3158 00e3 0B       		.uleb128 0xb
+ 3159 00e4 3B       		.uleb128 0x3b
+ 3160 00e5 0B       		.uleb128 0xb
+ 3161 00e6 01       		.uleb128 0x1
+ 3162 00e7 13       		.uleb128 0x13
+ 3163 00e8 00       		.byte	0
+ 3164 00e9 00       		.byte	0
+ 3165 00ea 15       		.uleb128 0x15
+ 3166 00eb 26       		.uleb128 0x26
+ 3167 00ec 00       		.byte	0
+ 3168 00ed 49       		.uleb128 0x49
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 58
+
+
+ 3169 00ee 13       		.uleb128 0x13
+ 3170 00ef 00       		.byte	0
+ 3171 00f0 00       		.byte	0
+ 3172 00f1 16       		.uleb128 0x16
+ 3173 00f2 2E       		.uleb128 0x2e
+ 3174 00f3 01       		.byte	0x1
+ 3175 00f4 3F       		.uleb128 0x3f
+ 3176 00f5 19       		.uleb128 0x19
+ 3177 00f6 03       		.uleb128 0x3
+ 3178 00f7 0E       		.uleb128 0xe
+ 3179 00f8 3A       		.uleb128 0x3a
+ 3180 00f9 0B       		.uleb128 0xb
+ 3181 00fa 3B       		.uleb128 0x3b
+ 3182 00fb 0B       		.uleb128 0xb
+ 3183 00fc 27       		.uleb128 0x27
+ 3184 00fd 19       		.uleb128 0x19
+ 3185 00fe 11       		.uleb128 0x11
+ 3186 00ff 01       		.uleb128 0x1
+ 3187 0100 12       		.uleb128 0x12
+ 3188 0101 06       		.uleb128 0x6
+ 3189 0102 40       		.uleb128 0x40
+ 3190 0103 18       		.uleb128 0x18
+ 3191 0104 9742     		.uleb128 0x2117
+ 3192 0106 19       		.uleb128 0x19
+ 3193 0107 01       		.uleb128 0x1
+ 3194 0108 13       		.uleb128 0x13
+ 3195 0109 00       		.byte	0
+ 3196 010a 00       		.byte	0
+ 3197 010b 17       		.uleb128 0x17
+ 3198 010c 05       		.uleb128 0x5
+ 3199 010d 00       		.byte	0
+ 3200 010e 03       		.uleb128 0x3
+ 3201 010f 0E       		.uleb128 0xe
+ 3202 0110 3A       		.uleb128 0x3a
+ 3203 0111 0B       		.uleb128 0xb
+ 3204 0112 3B       		.uleb128 0x3b
+ 3205 0113 0B       		.uleb128 0xb
+ 3206 0114 49       		.uleb128 0x49
+ 3207 0115 13       		.uleb128 0x13
+ 3208 0116 02       		.uleb128 0x2
+ 3209 0117 18       		.uleb128 0x18
+ 3210 0118 00       		.byte	0
+ 3211 0119 00       		.byte	0
+ 3212 011a 18       		.uleb128 0x18
+ 3213 011b 05       		.uleb128 0x5
+ 3214 011c 00       		.byte	0
+ 3215 011d 03       		.uleb128 0x3
+ 3216 011e 0E       		.uleb128 0xe
+ 3217 011f 3A       		.uleb128 0x3a
+ 3218 0120 0B       		.uleb128 0xb
+ 3219 0121 3B       		.uleb128 0x3b
+ 3220 0122 0B       		.uleb128 0xb
+ 3221 0123 49       		.uleb128 0x49
+ 3222 0124 13       		.uleb128 0x13
+ 3223 0125 02       		.uleb128 0x2
+ 3224 0126 17       		.uleb128 0x17
+ 3225 0127 00       		.byte	0
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 59
+
+
+ 3226 0128 00       		.byte	0
+ 3227 0129 19       		.uleb128 0x19
+ 3228 012a 34       		.uleb128 0x34
+ 3229 012b 00       		.byte	0
+ 3230 012c 03       		.uleb128 0x3
+ 3231 012d 08       		.uleb128 0x8
+ 3232 012e 3A       		.uleb128 0x3a
+ 3233 012f 0B       		.uleb128 0xb
+ 3234 0130 3B       		.uleb128 0x3b
+ 3235 0131 0B       		.uleb128 0xb
+ 3236 0132 49       		.uleb128 0x49
+ 3237 0133 13       		.uleb128 0x13
+ 3238 0134 1C       		.uleb128 0x1c
+ 3239 0135 05       		.uleb128 0x5
+ 3240 0136 00       		.byte	0
+ 3241 0137 00       		.byte	0
+ 3242 0138 1A       		.uleb128 0x1a
+ 3243 0139 34       		.uleb128 0x34
+ 3244 013a 00       		.byte	0
+ 3245 013b 03       		.uleb128 0x3
+ 3246 013c 0E       		.uleb128 0xe
+ 3247 013d 3A       		.uleb128 0x3a
+ 3248 013e 0B       		.uleb128 0xb
+ 3249 013f 3B       		.uleb128 0x3b
+ 3250 0140 0B       		.uleb128 0xb
+ 3251 0141 49       		.uleb128 0x49
+ 3252 0142 13       		.uleb128 0x13
+ 3253 0143 1C       		.uleb128 0x1c
+ 3254 0144 0B       		.uleb128 0xb
+ 3255 0145 00       		.byte	0
+ 3256 0146 00       		.byte	0
+ 3257 0147 1B       		.uleb128 0x1b
+ 3258 0148 34       		.uleb128 0x34
+ 3259 0149 00       		.byte	0
+ 3260 014a 03       		.uleb128 0x3
+ 3261 014b 08       		.uleb128 0x8
+ 3262 014c 3A       		.uleb128 0x3a
+ 3263 014d 0B       		.uleb128 0xb
+ 3264 014e 3B       		.uleb128 0x3b
+ 3265 014f 0B       		.uleb128 0xb
+ 3266 0150 49       		.uleb128 0x49
+ 3267 0151 13       		.uleb128 0x13
+ 3268 0152 02       		.uleb128 0x2
+ 3269 0153 17       		.uleb128 0x17
+ 3270 0154 00       		.byte	0
+ 3271 0155 00       		.byte	0
+ 3272 0156 1C       		.uleb128 0x1c
+ 3273 0157 0B       		.uleb128 0xb
+ 3274 0158 01       		.byte	0x1
+ 3275 0159 55       		.uleb128 0x55
+ 3276 015a 17       		.uleb128 0x17
+ 3277 015b 00       		.byte	0
+ 3278 015c 00       		.byte	0
+ 3279 015d 1D       		.uleb128 0x1d
+ 3280 015e 0B       		.uleb128 0xb
+ 3281 015f 01       		.byte	0x1
+ 3282 0160 55       		.uleb128 0x55
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 60
+
+
+ 3283 0161 17       		.uleb128 0x17
+ 3284 0162 01       		.uleb128 0x1
+ 3285 0163 13       		.uleb128 0x13
+ 3286 0164 00       		.byte	0
+ 3287 0165 00       		.byte	0
+ 3288 0166 1E       		.uleb128 0x1e
+ 3289 0167 898201   		.uleb128 0x4109
+ 3290 016a 01       		.byte	0x1
+ 3291 016b 11       		.uleb128 0x11
+ 3292 016c 01       		.uleb128 0x1
+ 3293 016d 31       		.uleb128 0x31
+ 3294 016e 13       		.uleb128 0x13
+ 3295 016f 00       		.byte	0
+ 3296 0170 00       		.byte	0
+ 3297 0171 1F       		.uleb128 0x1f
+ 3298 0172 8A8201   		.uleb128 0x410a
+ 3299 0175 00       		.byte	0
+ 3300 0176 02       		.uleb128 0x2
+ 3301 0177 18       		.uleb128 0x18
+ 3302 0178 9142     		.uleb128 0x2111
+ 3303 017a 18       		.uleb128 0x18
+ 3304 017b 00       		.byte	0
+ 3305 017c 00       		.byte	0
+ 3306 017d 20       		.uleb128 0x20
+ 3307 017e 898201   		.uleb128 0x4109
+ 3308 0181 01       		.byte	0x1
+ 3309 0182 11       		.uleb128 0x11
+ 3310 0183 01       		.uleb128 0x1
+ 3311 0184 31       		.uleb128 0x31
+ 3312 0185 13       		.uleb128 0x13
+ 3313 0186 01       		.uleb128 0x1
+ 3314 0187 13       		.uleb128 0x13
+ 3315 0188 00       		.byte	0
+ 3316 0189 00       		.byte	0
+ 3317 018a 21       		.uleb128 0x21
+ 3318 018b 2E       		.uleb128 0x2e
+ 3319 018c 01       		.byte	0x1
+ 3320 018d 3F       		.uleb128 0x3f
+ 3321 018e 19       		.uleb128 0x19
+ 3322 018f 03       		.uleb128 0x3
+ 3323 0190 0E       		.uleb128 0xe
+ 3324 0191 3A       		.uleb128 0x3a
+ 3325 0192 0B       		.uleb128 0xb
+ 3326 0193 3B       		.uleb128 0x3b
+ 3327 0194 0B       		.uleb128 0xb
+ 3328 0195 11       		.uleb128 0x11
+ 3329 0196 01       		.uleb128 0x1
+ 3330 0197 12       		.uleb128 0x12
+ 3331 0198 06       		.uleb128 0x6
+ 3332 0199 40       		.uleb128 0x40
+ 3333 019a 18       		.uleb128 0x18
+ 3334 019b 9742     		.uleb128 0x2117
+ 3335 019d 19       		.uleb128 0x19
+ 3336 019e 01       		.uleb128 0x1
+ 3337 019f 13       		.uleb128 0x13
+ 3338 01a0 00       		.byte	0
+ 3339 01a1 00       		.byte	0
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 61
+
+
+ 3340 01a2 22       		.uleb128 0x22
+ 3341 01a3 34       		.uleb128 0x34
+ 3342 01a4 00       		.byte	0
+ 3343 01a5 03       		.uleb128 0x3
+ 3344 01a6 0E       		.uleb128 0xe
+ 3345 01a7 3A       		.uleb128 0x3a
+ 3346 01a8 0B       		.uleb128 0xb
+ 3347 01a9 3B       		.uleb128 0x3b
+ 3348 01aa 0B       		.uleb128 0xb
+ 3349 01ab 49       		.uleb128 0x49
+ 3350 01ac 13       		.uleb128 0x13
+ 3351 01ad 02       		.uleb128 0x2
+ 3352 01ae 18       		.uleb128 0x18
+ 3353 01af 00       		.byte	0
+ 3354 01b0 00       		.byte	0
+ 3355 01b1 23       		.uleb128 0x23
+ 3356 01b2 898201   		.uleb128 0x4109
+ 3357 01b5 00       		.byte	0
+ 3358 01b6 11       		.uleb128 0x11
+ 3359 01b7 01       		.uleb128 0x1
+ 3360 01b8 31       		.uleb128 0x31
+ 3361 01b9 13       		.uleb128 0x13
+ 3362 01ba 00       		.byte	0
+ 3363 01bb 00       		.byte	0
+ 3364 01bc 24       		.uleb128 0x24
+ 3365 01bd 21       		.uleb128 0x21
+ 3366 01be 00       		.byte	0
+ 3367 01bf 49       		.uleb128 0x49
+ 3368 01c0 13       		.uleb128 0x13
+ 3369 01c1 2F       		.uleb128 0x2f
+ 3370 01c2 05       		.uleb128 0x5
+ 3371 01c3 00       		.byte	0
+ 3372 01c4 00       		.byte	0
+ 3373 01c5 25       		.uleb128 0x25
+ 3374 01c6 34       		.uleb128 0x34
+ 3375 01c7 00       		.byte	0
+ 3376 01c8 03       		.uleb128 0x3
+ 3377 01c9 0E       		.uleb128 0xe
+ 3378 01ca 3A       		.uleb128 0x3a
+ 3379 01cb 0B       		.uleb128 0xb
+ 3380 01cc 3B       		.uleb128 0x3b
+ 3381 01cd 05       		.uleb128 0x5
+ 3382 01ce 49       		.uleb128 0x49
+ 3383 01cf 13       		.uleb128 0x13
+ 3384 01d0 3F       		.uleb128 0x3f
+ 3385 01d1 19       		.uleb128 0x19
+ 3386 01d2 3C       		.uleb128 0x3c
+ 3387 01d3 19       		.uleb128 0x19
+ 3388 01d4 00       		.byte	0
+ 3389 01d5 00       		.byte	0
+ 3390 01d6 26       		.uleb128 0x26
+ 3391 01d7 34       		.uleb128 0x34
+ 3392 01d8 00       		.byte	0
+ 3393 01d9 03       		.uleb128 0x3
+ 3394 01da 0E       		.uleb128 0xe
+ 3395 01db 3A       		.uleb128 0x3a
+ 3396 01dc 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 62
+
+
+ 3397 01dd 3B       		.uleb128 0x3b
+ 3398 01de 0B       		.uleb128 0xb
+ 3399 01df 49       		.uleb128 0x49
+ 3400 01e0 13       		.uleb128 0x13
+ 3401 01e1 3F       		.uleb128 0x3f
+ 3402 01e2 19       		.uleb128 0x19
+ 3403 01e3 3C       		.uleb128 0x3c
+ 3404 01e4 19       		.uleb128 0x19
+ 3405 01e5 00       		.byte	0
+ 3406 01e6 00       		.byte	0
+ 3407 01e7 27       		.uleb128 0x27
+ 3408 01e8 34       		.uleb128 0x34
+ 3409 01e9 00       		.byte	0
+ 3410 01ea 03       		.uleb128 0x3
+ 3411 01eb 0E       		.uleb128 0xe
+ 3412 01ec 3A       		.uleb128 0x3a
+ 3413 01ed 0B       		.uleb128 0xb
+ 3414 01ee 3B       		.uleb128 0x3b
+ 3415 01ef 0B       		.uleb128 0xb
+ 3416 01f0 49       		.uleb128 0x49
+ 3417 01f1 13       		.uleb128 0x13
+ 3418 01f2 3F       		.uleb128 0x3f
+ 3419 01f3 19       		.uleb128 0x19
+ 3420 01f4 02       		.uleb128 0x2
+ 3421 01f5 18       		.uleb128 0x18
+ 3422 01f6 00       		.byte	0
+ 3423 01f7 00       		.byte	0
+ 3424 01f8 28       		.uleb128 0x28
+ 3425 01f9 2E       		.uleb128 0x2e
+ 3426 01fa 00       		.byte	0
+ 3427 01fb 3F       		.uleb128 0x3f
+ 3428 01fc 19       		.uleb128 0x19
+ 3429 01fd 3C       		.uleb128 0x3c
+ 3430 01fe 19       		.uleb128 0x19
+ 3431 01ff 6E       		.uleb128 0x6e
+ 3432 0200 0E       		.uleb128 0xe
+ 3433 0201 03       		.uleb128 0x3
+ 3434 0202 0E       		.uleb128 0xe
+ 3435 0203 3A       		.uleb128 0x3a
+ 3436 0204 0B       		.uleb128 0xb
+ 3437 0205 3B       		.uleb128 0x3b
+ 3438 0206 05       		.uleb128 0x5
+ 3439 0207 00       		.byte	0
+ 3440 0208 00       		.byte	0
+ 3441 0209 29       		.uleb128 0x29
+ 3442 020a 2E       		.uleb128 0x2e
+ 3443 020b 00       		.byte	0
+ 3444 020c 3F       		.uleb128 0x3f
+ 3445 020d 19       		.uleb128 0x19
+ 3446 020e 3C       		.uleb128 0x3c
+ 3447 020f 19       		.uleb128 0x19
+ 3448 0210 6E       		.uleb128 0x6e
+ 3449 0211 0E       		.uleb128 0xe
+ 3450 0212 03       		.uleb128 0x3
+ 3451 0213 0E       		.uleb128 0xe
+ 3452 0214 00       		.byte	0
+ 3453 0215 00       		.byte	0
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 63
+
+
+ 3454 0216 2A       		.uleb128 0x2a
+ 3455 0217 2E       		.uleb128 0x2e
+ 3456 0218 00       		.byte	0
+ 3457 0219 3F       		.uleb128 0x3f
+ 3458 021a 19       		.uleb128 0x19
+ 3459 021b 3C       		.uleb128 0x3c
+ 3460 021c 19       		.uleb128 0x19
+ 3461 021d 6E       		.uleb128 0x6e
+ 3462 021e 0E       		.uleb128 0xe
+ 3463 021f 03       		.uleb128 0x3
+ 3464 0220 0E       		.uleb128 0xe
+ 3465 0221 3A       		.uleb128 0x3a
+ 3466 0222 0B       		.uleb128 0xb
+ 3467 0223 3B       		.uleb128 0x3b
+ 3468 0224 0B       		.uleb128 0xb
+ 3469 0225 00       		.byte	0
+ 3470 0226 00       		.byte	0
+ 3471 0227 00       		.byte	0
+ 3472              		.section	.debug_loc,"",%progbits
+ 3473              	.Ldebug_loc0:
+ 3474              	.LLST0:
+ 3475 0000 00000000 		.4byte	.LVL0
+ 3476 0004 34000000 		.4byte	.LVL6
+ 3477 0008 0100     		.2byte	0x1
+ 3478 000a 51       		.byte	0x51
+ 3479 000b 34000000 		.4byte	.LVL6
+ 3480 000f 50000000 		.4byte	.LFE638
+ 3481 0013 0400     		.2byte	0x4
+ 3482 0015 F3       		.byte	0xf3
+ 3483 0016 01       		.uleb128 0x1
+ 3484 0017 51       		.byte	0x51
+ 3485 0018 9F       		.byte	0x9f
+ 3486 0019 00000000 		.4byte	0
+ 3487 001d 00000000 		.4byte	0
+ 3488              	.LLST1:
+ 3489 0021 00000000 		.4byte	.LVL0
+ 3490 0025 32000000 		.4byte	.LVL5
+ 3491 0029 0100     		.2byte	0x1
+ 3492 002b 52       		.byte	0x52
+ 3493 002c 32000000 		.4byte	.LVL5
+ 3494 0030 50000000 		.4byte	.LFE638
+ 3495 0034 0400     		.2byte	0x4
+ 3496 0036 F3       		.byte	0xf3
+ 3497 0037 01       		.uleb128 0x1
+ 3498 0038 52       		.byte	0x52
+ 3499 0039 9F       		.byte	0x9f
+ 3500 003a 00000000 		.4byte	0
+ 3501 003e 00000000 		.4byte	0
+ 3502              	.LLST2:
+ 3503 0042 02000000 		.4byte	.LVL1
+ 3504 0046 08000000 		.4byte	.LVL2
+ 3505 004a 0200     		.2byte	0x2
+ 3506 004c 30       		.byte	0x30
+ 3507 004d 9F       		.byte	0x9f
+ 3508 004e 08000000 		.4byte	.LVL2
+ 3509 0052 3E000000 		.4byte	.LVL7
+ 3510 0056 0100     		.2byte	0x1
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 64
+
+
+ 3511 0058 55       		.byte	0x55
+ 3512 0059 00000000 		.4byte	0
+ 3513 005d 00000000 		.4byte	0
+ 3514              	.LLST3:
+ 3515 0061 02000000 		.4byte	.LVL1
+ 3516 0065 08000000 		.4byte	.LVL2
+ 3517 0069 0200     		.2byte	0x2
+ 3518 006b 30       		.byte	0x30
+ 3519 006c 9F       		.byte	0x9f
+ 3520 006d 08000000 		.4byte	.LVL2
+ 3521 0071 3E000000 		.4byte	.LVL7
+ 3522 0075 0100     		.2byte	0x1
+ 3523 0077 54       		.byte	0x54
+ 3524 0078 00000000 		.4byte	0
+ 3525 007c 00000000 		.4byte	0
+ 3526              	.LLST4:
+ 3527 0080 00000000 		.4byte	.LVL8
+ 3528 0084 06000000 		.4byte	.LVL9
+ 3529 0088 0100     		.2byte	0x1
+ 3530 008a 50       		.byte	0x50
+ 3531 008b 06000000 		.4byte	.LVL9
+ 3532 008f 48000000 		.4byte	.LFE639
+ 3533 0093 0100     		.2byte	0x1
+ 3534 0095 56       		.byte	0x56
+ 3535 0096 00000000 		.4byte	0
+ 3536 009a 00000000 		.4byte	0
+ 3537              	.LLST5:
+ 3538 009e 18000000 		.4byte	.LVL11
+ 3539 00a2 20000000 		.4byte	.LVL12
+ 3540 00a6 0200     		.2byte	0x2
+ 3541 00a8 37       		.byte	0x37
+ 3542 00a9 9F       		.byte	0x9f
+ 3543 00aa 20000000 		.4byte	.LVL12
+ 3544 00ae 3D000000 		.4byte	.LVL18-1
+ 3545 00b2 0100     		.2byte	0x1
+ 3546 00b4 50       		.byte	0x50
+ 3547 00b5 3E000000 		.4byte	.LVL18
+ 3548 00b9 42000000 		.4byte	.LVL19
+ 3549 00bd 0100     		.2byte	0x1
+ 3550 00bf 55       		.byte	0x55
+ 3551 00c0 42000000 		.4byte	.LVL19
+ 3552 00c4 48000000 		.4byte	.LFE639
+ 3553 00c8 0100     		.2byte	0x1
+ 3554 00ca 50       		.byte	0x50
+ 3555 00cb 00000000 		.4byte	0
+ 3556 00cf 00000000 		.4byte	0
+ 3557              	.LLST6:
+ 3558 00d3 18000000 		.4byte	.LVL11
+ 3559 00d7 20000000 		.4byte	.LVL12
+ 3560 00db 0200     		.2byte	0x2
+ 3561 00dd 30       		.byte	0x30
+ 3562 00de 9F       		.byte	0x9f
+ 3563 00df 2A000000 		.4byte	.LVL13
+ 3564 00e3 3A000000 		.4byte	.LVL17
+ 3565 00e7 0400     		.2byte	0x4
+ 3566 00e9 71       		.byte	0x71
+ 3567 00ea C100     		.sleb128 65
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 65
+
+
+ 3568 00ec 9F       		.byte	0x9f
+ 3569 00ed 3A000000 		.4byte	.LVL17
+ 3570 00f1 3D000000 		.4byte	.LVL18-1
+ 3571 00f5 0100     		.2byte	0x1
+ 3572 00f7 51       		.byte	0x51
+ 3573 00f8 00000000 		.4byte	0
+ 3574 00fc 00000000 		.4byte	0
+ 3575              	.LLST7:
+ 3576 0100 18000000 		.4byte	.LVL11
+ 3577 0104 20000000 		.4byte	.LVL12
+ 3578 0108 0200     		.2byte	0x2
+ 3579 010a 39       		.byte	0x39
+ 3580 010b 9F       		.byte	0x9f
+ 3581 010c 20000000 		.4byte	.LVL12
+ 3582 0110 3E000000 		.4byte	.LVL18
+ 3583 0114 0100     		.2byte	0x1
+ 3584 0116 55       		.byte	0x55
+ 3585 0117 3E000000 		.4byte	.LVL18
+ 3586 011b 42000000 		.4byte	.LVL19
+ 3587 011f 0300     		.2byte	0x3
+ 3588 0121 75       		.byte	0x75
+ 3589 0122 02       		.sleb128 2
+ 3590 0123 9F       		.byte	0x9f
+ 3591 0124 42000000 		.4byte	.LVL19
+ 3592 0128 48000000 		.4byte	.LFE639
+ 3593 012c 0100     		.2byte	0x1
+ 3594 012e 55       		.byte	0x55
+ 3595 012f 00000000 		.4byte	0
+ 3596 0133 00000000 		.4byte	0
+ 3597              	.LLST8:
+ 3598 0137 18000000 		.4byte	.LVL11
+ 3599 013b 20000000 		.4byte	.LVL12
+ 3600 013f 0200     		.2byte	0x2
+ 3601 0141 30       		.byte	0x30
+ 3602 0142 9F       		.byte	0x9f
+ 3603 0143 34000000 		.4byte	.LVL15
+ 3604 0147 36000000 		.4byte	.LVL16
+ 3605 014b 0400     		.2byte	0x4
+ 3606 014d 73       		.byte	0x73
+ 3607 014e C100     		.sleb128 65
+ 3608 0150 9F       		.byte	0x9f
+ 3609 0151 36000000 		.4byte	.LVL16
+ 3610 0155 3D000000 		.4byte	.LVL18-1
+ 3611 0159 0100     		.2byte	0x1
+ 3612 015b 53       		.byte	0x53
+ 3613 015c 00000000 		.4byte	0
+ 3614 0160 00000000 		.4byte	0
+ 3615              	.LLST9:
+ 3616 0164 18000000 		.4byte	.LVL11
+ 3617 0168 20000000 		.4byte	.LVL12
+ 3618 016c 0200     		.2byte	0x2
+ 3619 016e 30       		.byte	0x30
+ 3620 016f 9F       		.byte	0x9f
+ 3621 0170 20000000 		.4byte	.LVL12
+ 3622 0174 2C000000 		.4byte	.LVL14
+ 3623 0178 0100     		.2byte	0x1
+ 3624 017a 54       		.byte	0x54
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 66
+
+
+ 3625 017b 2C000000 		.4byte	.LVL14
+ 3626 017f 3E000000 		.4byte	.LVL18
+ 3627 0183 0300     		.2byte	0x3
+ 3628 0185 74       		.byte	0x74
+ 3629 0186 7F       		.sleb128 -1
+ 3630 0187 9F       		.byte	0x9f
+ 3631 0188 3E000000 		.4byte	.LVL18
+ 3632 018c 48000000 		.4byte	.LFE639
+ 3633 0190 0100     		.2byte	0x1
+ 3634 0192 54       		.byte	0x54
+ 3635 0193 00000000 		.4byte	0
+ 3636 0197 00000000 		.4byte	0
+ 3637              		.section	.debug_aranges,"",%progbits
+ 3638 0000 2C000000 		.4byte	0x2c
+ 3639 0004 0200     		.2byte	0x2
+ 3640 0006 00000000 		.4byte	.Ldebug_info0
+ 3641 000a 04       		.byte	0x4
+ 3642 000b 00       		.byte	0
+ 3643 000c 0000     		.2byte	0
+ 3644 000e 0000     		.2byte	0
+ 3645 0010 00000000 		.4byte	.LFB638
+ 3646 0014 50000000 		.4byte	.LFE638-.LFB638
+ 3647 0018 00000000 		.4byte	.LFB639
+ 3648 001c 48000000 		.4byte	.LFE639-.LFB639
+ 3649 0020 00000000 		.4byte	.LFB640
+ 3650 0024 64000000 		.4byte	.LFE640-.LFB640
+ 3651 0028 00000000 		.4byte	0
+ 3652 002c 00000000 		.4byte	0
+ 3653              		.section	.debug_ranges,"",%progbits
+ 3654              	.Ldebug_ranges0:
+ 3655 0000 02000000 		.4byte	.LBB2
+ 3656 0004 04000000 		.4byte	.LBE2
+ 3657 0008 06000000 		.4byte	.LBB3
+ 3658 000c 2C000000 		.4byte	.LBE3
+ 3659 0010 00000000 		.4byte	0
+ 3660 0014 00000000 		.4byte	0
+ 3661 0018 18000000 		.4byte	.LBB4
+ 3662 001c 1A000000 		.4byte	.LBE4
+ 3663 0020 1E000000 		.4byte	.LBB5
+ 3664 0024 46000000 		.4byte	.LBE5
+ 3665 0028 00000000 		.4byte	0
+ 3666 002c 00000000 		.4byte	0
+ 3667 0030 00000000 		.4byte	.LFB638
+ 3668 0034 50000000 		.4byte	.LFE638
+ 3669 0038 00000000 		.4byte	.LFB639
+ 3670 003c 48000000 		.4byte	.LFE639
+ 3671 0040 00000000 		.4byte	.LFB640
+ 3672 0044 64000000 		.4byte	.LFE640
+ 3673 0048 00000000 		.4byte	0
+ 3674 004c 00000000 		.4byte	0
+ 3675              		.section	.debug_line,"",%progbits
+ 3676              	.Ldebug_line0:
+ 3677 0000 B4030000 		.section	.debug_str,"MS",%progbits,1
+ 3677      02003503 
+ 3677      00000201 
+ 3677      FB0E0D00 
+ 3677      01010101 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 67
+
+
+ 3678              	.LASF56:
+ 3679 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 3679      4275734D 
+ 3679      61737465 
+ 3679      724D6173 
+ 3679      6B00
+ 3680              	.LASF148:
+ 3681 0012 72756E4D 		.ascii	"runMode\000"
+ 3681      6F646500 
+ 3682              	.LASF136:
+ 3683 001a 72784275 		.ascii	"rxBufSize\000"
+ 3683      6653697A 
+ 3683      6500
+ 3684              	.LASF209:
+ 3685 0024 43795F45 		.ascii	"Cy_EINK_Start\000"
+ 3685      494E4B5F 
+ 3685      53746172 
+ 3685      7400
+ 3686              	.LASF66:
+ 3687 0032 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 3687      6843746C 
+ 3687      4D61696E 
+ 3687      57733346 
+ 3687      72657100 
+ 3688              	.LASF88:
+ 3689 0046 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 3689      50727443 
+ 3689      6667496E 
+ 3689      4F666673 
+ 3689      657400
+ 3690              	.LASF179:
+ 3691 0059 6B696C6C 		.ascii	"killInput\000"
+ 3691      496E7075 
+ 3691      7400
+ 3692              	.LASF126:
+ 3693 0063 73617449 		.ascii	"satIntrMask\000"
+ 3693      6E74724D 
+ 3693      61736B00 
+ 3694              	.LASF32:
+ 3695 006f 63727970 		.ascii	"cryptoVersion\000"
+ 3695      746F5665 
+ 3695      7273696F 
+ 3695      6E00
+ 3696              	.LASF70:
+ 3697 007d 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 3697      43746C50 
+ 3697      72696F50 
+ 3697      6F7300
+ 3698              	.LASF215:
+ 3699 008c 696E7465 		.ascii	"interface.c\000"
+ 3699      72666163 
+ 3699      652E6300 
+ 3700              	.LASF104:
+ 3701 0098 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 3701      7352616D 
+ 3701      3243746C 
+ 3701      3000
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 68
+
+
+ 3702              	.LASF41:
+ 3703 00a6 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 3703      73497063 
+ 3703      4972714E 
+ 3703      7200
+ 3704              	.LASF3:
+ 3705 00b4 5F5F7569 		.ascii	"__uint8_t\000"
+ 3705      6E74385F 
+ 3705      7400
+ 3706              	.LASF211:
+ 3707 00be 4755495F 		.ascii	"GUI_SetColor\000"
+ 3707      53657443 
+ 3707      6F6C6F72 
+ 3707      00
+ 3708              	.LASF43:
+ 3709 00cb 63707573 		.ascii	"cpussFlashPaSize\000"
+ 3709      73466C61 
+ 3709      73685061 
+ 3709      53697A65 
+ 3709      00
+ 3710              	.LASF92:
+ 3711 00dc 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 3711      73436D34 
+ 3711      436C6F63 
+ 3711      6B43746C 
+ 3711      4F666673 
+ 3712              	.LASF149:
+ 3713 00f3 636F756E 		.ascii	"countDirection\000"
+ 3713      74446972 
+ 3713      65637469 
+ 3713      6F6E00
+ 3714              	.LASF161:
+ 3715 0102 73746F70 		.ascii	"stopInputMode\000"
+ 3715      496E7075 
+ 3715      744D6F64 
+ 3715      6500
+ 3716              	.LASF21:
+ 3717 0110 63707573 		.ascii	"cpussBase\000"
+ 3717      73426173 
+ 3717      6500
+ 3718              	.LASF146:
+ 3719 011a 70657269 		.ascii	"period\000"
+ 3719      6F6400
+ 3720              	.LASF50:
+ 3721 0121 70657269 		.ascii	"periClockNr\000"
+ 3721      436C6F63 
+ 3721      6B4E7200 
+ 3722              	.LASF156:
+ 3723 012d 63617074 		.ascii	"captureInput\000"
+ 3723      75726549 
+ 3723      6E707574 
+ 3723      00
+ 3724              	.LASF202:
+ 3725 013a 4144435F 		.ascii	"ADC_currentConfig\000"
+ 3725      63757272 
+ 3725      656E7443 
+ 3725      6F6E6669 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 69
+
+
+ 3725      6700
+ 3726              	.LASF12:
+ 3727 014c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3727      206C6F6E 
+ 3727      6720756E 
+ 3727      7369676E 
+ 3727      65642069 
+ 3728              	.LASF147:
+ 3729 0163 636C6F63 		.ascii	"clockPrescaler\000"
+ 3729      6B507265 
+ 3729      7363616C 
+ 3729      657200
+ 3730              	.LASF195:
+ 3731 0172 7369676E 		.ascii	"signalLong\000"
+ 3731      616C4C6F 
+ 3731      6E6700
+ 3732              	.LASF98:
+ 3733 017d 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 3733      73537973 
+ 3733      5469636B 
+ 3733      43746C4F 
+ 3733      66667365 
+ 3734              	.LASF138:
+ 3735 0193 74784275 		.ascii	"txBuf\000"
+ 3735      6600
+ 3736              	.LASF59:
+ 3737 0199 666C6173 		.ascii	"flashPipeRequired\000"
+ 3737      68506970 
+ 3737      65526571 
+ 3737      75697265 
+ 3737      6400
+ 3738              	.LASF63:
+ 3739 01ab 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 3739      6843746C 
+ 3739      4D61696E 
+ 3739      57733046 
+ 3739      72657100 
+ 3740              	.LASF15:
+ 3741 01bf 696E7431 		.ascii	"int16_t\000"
+ 3741      365F7400 
+ 3742              	.LASF132:
+ 3743 01c7 63795F73 		.ascii	"cy_stc_sar_config_t\000"
+ 3743      74635F73 
+ 3743      61725F63 
+ 3743      6F6E6669 
+ 3743      675F7400 
+ 3744              	.LASF11:
+ 3745 01db 6C6F6E67 		.ascii	"long long int\000"
+ 3745      206C6F6E 
+ 3745      6720696E 
+ 3745      7400
+ 3746              	.LASF165:
+ 3747 01e9 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 3747      74635F74 
+ 3747      6370776D 
+ 3747      5F636F75 
+ 3747      6E746572 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 70
+
+
+ 3748              	.LASF144:
+ 3749 0207 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 3749      74635F73 
+ 3749      63625F73 
+ 3749      70695F63 
+ 3749      6F6E7465 
+ 3750              	.LASF79:
+ 3751 021e 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 3751      44697643 
+ 3751      6D645479 
+ 3751      70655365 
+ 3751      6C506F73 
+ 3752              	.LASF116:
+ 3753 0233 63795F65 		.ascii	"cy_en_sar_range_detect_condition_t\000"
+ 3753      6E5F7361 
+ 3753      725F7261 
+ 3753      6E67655F 
+ 3753      64657465 
+ 3754              	.LASF185:
+ 3755 0256 636C6B44 		.ascii	"clkDivider\000"
+ 3755      69766964 
+ 3755      657200
+ 3756              	.LASF96:
+ 3757 0261 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 3757      73547269 
+ 3757      6D52616D 
+ 3757      43746C4F 
+ 3757      66667365 
+ 3758              	.LASF37:
+ 3759 0277 69706356 		.ascii	"ipcVersion\000"
+ 3759      65727369 
+ 3759      6F6E00
+ 3760              	.LASF99:
+ 3761 0282 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 3761      73436D30 
+ 3761      4E6D6943 
+ 3761      746C4F66 
+ 3761      66736574 
+ 3762              	.LASF192:
+ 3763 0297 636F6E76 		.ascii	"conversionVecteur\000"
+ 3763      65727369 
+ 3763      6F6E5665 
+ 3763      63746575 
+ 3763      7200
+ 3764              	.LASF133:
+ 3765 02a9 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 3765      625F7363 
+ 3765      625F7370 
+ 3765      695F6861 
+ 3765      6E646C65 
+ 3766              	.LASF26:
+ 3767 02c7 6873696F 		.ascii	"hsiomBase\000"
+ 3767      6D426173 
+ 3767      6500
+ 3768              	.LASF166:
+ 3769 02d1 63795F73 		.ascii	"cy_stc_tcpwm_pwm_config\000"
+ 3769      74635F74 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 71
+
+
+ 3769      6370776D 
+ 3769      5F70776D 
+ 3769      5F636F6E 
+ 3770              	.LASF112:
+ 3771 02e9 43595F53 		.ascii	"CY_SAR_RANGE_COND_BELOW\000"
+ 3771      41525F52 
+ 3771      414E4745 
+ 3771      5F434F4E 
+ 3771      445F4245 
+ 3772              	.LASF8:
+ 3773 0301 6C6F6E67 		.ascii	"long int\000"
+ 3773      20696E74 
+ 3773      00
+ 3774              	.LASF57:
+ 3775 030a 63727970 		.ascii	"cryptoMemSize\000"
+ 3775      746F4D65 
+ 3775      6D53697A 
+ 3775      6500
+ 3776              	.LASF218:
+ 3777 0318 6D656D63 		.ascii	"memcpy\000"
+ 3777      707900
+ 3778              	.LASF134:
+ 3779 031f 73746174 		.ascii	"status\000"
+ 3779      757300
+ 3780              	.LASF55:
+ 3781 0326 73797350 		.ascii	"sysPmSimoPresent\000"
+ 3781      6D53696D 
+ 3781      6F507265 
+ 3781      73656E74 
+ 3781      00
+ 3782              	.LASF114:
+ 3783 0337 43595F53 		.ascii	"CY_SAR_RANGE_COND_ABOVE\000"
+ 3783      41525F52 
+ 3783      414E4745 
+ 3783      5F434F4E 
+ 3783      445F4142 
+ 3784              	.LASF16:
+ 3785 034f 75696E74 		.ascii	"uint16_t\000"
+ 3785      31365F74 
+ 3785      00
+ 3786              	.LASF110:
+ 3787 0358 646F7562 		.ascii	"double\000"
+ 3787      6C6500
+ 3788              	.LASF84:
+ 3789 035f 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 3789      44697631 
+ 3789      365F3543 
+ 3789      746C4F66 
+ 3789      66736574 
+ 3790              	.LASF48:
+ 3791 0374 73727373 		.ascii	"srssNumPll\000"
+ 3791      4E756D50 
+ 3791      6C6C00
+ 3792              	.LASF190:
+ 3793 037f 626F6E56 		.ascii	"bonVecteur\000"
+ 3793      65637465 
+ 3793      757200
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 72
+
+
+ 3794              	.LASF186:
+ 3795 038a 4144435F 		.ascii	"ADC_CONFIG_STRUCT\000"
+ 3795      434F4E46 
+ 3795      49475F53 
+ 3795      54525543 
+ 3795      5400
+ 3796              	.LASF155:
+ 3797 039c 63617074 		.ascii	"captureInputMode\000"
+ 3797      75726549 
+ 3797      6E707574 
+ 3797      4D6F6465 
+ 3797      00
+ 3798              	.LASF82:
+ 3799 03ad 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 3799      44697638 
+ 3799      43746C4F 
+ 3799      66667365 
+ 3799      7400
+ 3800              	.LASF6:
+ 3801 03bf 73686F72 		.ascii	"short unsigned int\000"
+ 3801      7420756E 
+ 3801      7369676E 
+ 3801      65642069 
+ 3801      6E7400
+ 3802              	.LASF89:
+ 3803 03d2 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 3803      50727443 
+ 3803      66674F75 
+ 3803      744F6666 
+ 3803      73657400 
+ 3804              	.LASF22:
+ 3805 03e6 666C6173 		.ascii	"flashcBase\000"
+ 3805      68634261 
+ 3805      736500
+ 3806              	.LASF187:
+ 3807 03f1 75696E74 		.ascii	"uint\000"
+ 3807      00
+ 3808              	.LASF9:
+ 3809 03f6 5F5F7569 		.ascii	"__uint32_t\000"
+ 3809      6E743332 
+ 3809      5F7400
+ 3810              	.LASF52:
+ 3811 0401 70617373 		.ascii	"passSarChannels\000"
+ 3811      53617243 
+ 3811      68616E6E 
+ 3811      656C7300 
+ 3812              	.LASF183:
+ 3813 0411 6877436F 		.ascii	"hwConfigStc\000"
+ 3813      6E666967 
+ 3813      53746300 
+ 3814              	.LASF4:
+ 3815 041d 5F5F696E 		.ascii	"__int16_t\000"
+ 3815      7431365F 
+ 3815      7400
+ 3816              	.LASF137:
+ 3817 0427 72784275 		.ascii	"rxBufIdx\000"
+ 3817      66496478 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 73
+
+
+ 3817      00
+ 3818              	.LASF95:
+ 3819 0430 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 3819      73436D34 
+ 3819      50777243 
+ 3819      746C4F66 
+ 3819      66736574 
+ 3820              	.LASF139:
+ 3821 0445 74784275 		.ascii	"txBufSize\000"
+ 3821      6653697A 
+ 3821      6500
+ 3822              	.LASF90:
+ 3823 044f 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 3823      50727443 
+ 3823      66675369 
+ 3823      6F4F6666 
+ 3823      73657400 
+ 3824              	.LASF94:
+ 3825 0463 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 3825      73436D30 
+ 3825      53746174 
+ 3825      75734F66 
+ 3825      66736574 
+ 3826              	.LASF13:
+ 3827 0478 756E7369 		.ascii	"unsigned int\000"
+ 3827      676E6564 
+ 3827      20696E74 
+ 3827      00
+ 3828              	.LASF23:
+ 3829 0485 70657269 		.ascii	"periBase\000"
+ 3829      42617365 
+ 3829      00
+ 3830              	.LASF75:
+ 3831 048e 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 3831      5472436D 
+ 3831      64477253 
+ 3831      656C4D73 
+ 3831      6B00
+ 3832              	.LASF78:
+ 3833 04a0 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 3833      44697643 
+ 3833      6D644469 
+ 3833      7653656C 
+ 3833      4D736B00 
+ 3834              	.LASF10:
+ 3835 04b4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3835      20756E73 
+ 3835      69676E65 
+ 3835      6420696E 
+ 3835      7400
+ 3836              	.LASF40:
+ 3837 04c6 63707573 		.ascii	"cpussIpcNr\000"
+ 3837      73497063 
+ 3837      4E7200
+ 3838              	.LASF42:
+ 3839 04d1 63707573 		.ascii	"cpussDwChNr\000"
+ 3839      73447743 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 74
+
+
+ 3839      684E7200 
+ 3840              	.LASF65:
+ 3841 04dd 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 3841      6843746C 
+ 3841      4D61696E 
+ 3841      57733246 
+ 3841      72657100 
+ 3842              	.LASF176:
+ 3843 04f1 73776170 		.ascii	"swapInputMode\000"
+ 3843      496E7075 
+ 3843      744D6F64 
+ 3843      6500
+ 3844              	.LASF119:
+ 3845 04ff 73616D70 		.ascii	"sampleTime01\000"
+ 3845      6C655469 
+ 3845      6D653031 
+ 3845      00
+ 3846              	.LASF76:
+ 3847 050c 70657269 		.ascii	"periTrGrOffset\000"
+ 3847      54724772 
+ 3847      4F666673 
+ 3847      657400
+ 3848              	.LASF103:
+ 3849 051b 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 3849      7352616D 
+ 3849      3143746C 
+ 3849      3000
+ 3850              	.LASF121:
+ 3851 0529 72616E67 		.ascii	"rangeThres\000"
+ 3851      65546872 
+ 3851      657300
+ 3852              	.LASF35:
+ 3853 0534 6770696F 		.ascii	"gpioVersion\000"
+ 3853      56657273 
+ 3853      696F6E00 
+ 3854              	.LASF178:
+ 3855 0540 6B696C6C 		.ascii	"killInputMode\000"
+ 3855      496E7075 
+ 3855      744D6F64 
+ 3855      6500
+ 3856              	.LASF141:
+ 3857 054e 63624576 		.ascii	"cbEvents\000"
+ 3857      656E7473 
+ 3857      00
+ 3858              	.LASF87:
+ 3859 0557 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 3859      50727443 
+ 3859      66674F66 
+ 3859      66736574 
+ 3859      00
+ 3860              	.LASF140:
+ 3861 0568 74784275 		.ascii	"txBufIdx\000"
+ 3861      66496478 
+ 3861      00
+ 3862              	.LASF182:
+ 3863 0571 6E756D43 		.ascii	"numChannels\000"
+ 3863      68616E6E 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 75
+
+
+ 3863      656C7300 
+ 3864              	.LASF107:
+ 3865 057d 63795F73 		.ascii	"cy_stc_device_t\000"
+ 3865      74635F64 
+ 3865      65766963 
+ 3865      655F7400 
+ 3866              	.LASF124:
+ 3867 058d 6368616E 		.ascii	"chanConfig\000"
+ 3867      436F6E66 
+ 3867      696700
+ 3868              	.LASF143:
+ 3869 0598 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 3869      74635F73 
+ 3869      63625F73 
+ 3869      70695F63 
+ 3869      6F6E7465 
+ 3870              	.LASF0:
+ 3871 05b1 73686F72 		.ascii	"short int\000"
+ 3871      7420696E 
+ 3871      7400
+ 3872              	.LASF217:
+ 3873 05bb 696E7465 		.ascii	"interface\000"
+ 3873      72666163 
+ 3873      6500
+ 3874              	.LASF7:
+ 3875 05c5 5F5F696E 		.ascii	"__int32_t\000"
+ 3875      7433325F 
+ 3875      7400
+ 3876              	.LASF169:
+ 3877 05cf 64656164 		.ascii	"deadTimeClocks\000"
+ 3877      54696D65 
+ 3877      436C6F63 
+ 3877      6B7300
+ 3878              	.LASF25:
+ 3879 05de 70726F74 		.ascii	"protBase\000"
+ 3879      42617365 
+ 3879      00
+ 3880              	.LASF163:
+ 3881 05e7 636F756E 		.ascii	"countInputMode\000"
+ 3881      74496E70 
+ 3881      75744D6F 
+ 3881      646500
+ 3882              	.LASF91:
+ 3883 05f6 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 3883      73436D30 
+ 3883      436C6F63 
+ 3883      6B43746C 
+ 3883      4F666673 
+ 3884              	.LASF30:
+ 3885 060d 63727970 		.ascii	"cryptoBase\000"
+ 3885      746F4261 
+ 3885      736500
+ 3886              	.LASF193:
+ 3887 0618 64726177 		.ascii	"drawGraph\000"
+ 3887      47726170 
+ 3887      6800
+ 3888              	.LASF189:
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 76
+
+
+ 3889 0622 6C6F6E67 		.ascii	"longueur\000"
+ 3889      75657572 
+ 3889      00
+ 3890              	.LASF191:
+ 3891 062b 68617574 		.ascii	"hauteur\000"
+ 3891      65757200 
+ 3892              	.LASF115:
+ 3893 0633 43595F53 		.ascii	"CY_SAR_RANGE_COND_OUTSIDE\000"
+ 3893      41525F52 
+ 3893      414E4745 
+ 3893      5F434F4E 
+ 3893      445F4F55 
+ 3894              	.LASF102:
+ 3895 064d 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 3895      7352616D 
+ 3895      3043746C 
+ 3895      3000
+ 3896              	.LASF145:
+ 3897 065b 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 3897      74635F74 
+ 3897      6370776D 
+ 3897      5F636F75 
+ 3897      6E746572 
+ 3898              	.LASF194:
+ 3899 0677 76656374 		.ascii	"vecteur200elements\000"
+ 3899      65757232 
+ 3899      3030656C 
+ 3899      656D656E 
+ 3899      747300
+ 3900              	.LASF19:
+ 3901 068a 73697A65 		.ascii	"sizetype\000"
+ 3901      74797065 
+ 3901      00
+ 3902              	.LASF68:
+ 3903 0693 64774368 		.ascii	"dwChOffset\000"
+ 3903      4F666673 
+ 3903      657400
+ 3904              	.LASF20:
+ 3905 069e 6C6F6E67 		.ascii	"long double\000"
+ 3905      20646F75 
+ 3905      626C6500 
+ 3906              	.LASF28:
+ 3907 06aa 70617373 		.ascii	"passBase\000"
+ 3907      42617365 
+ 3907      00
+ 3908              	.LASF188:
+ 3909 06b3 76656374 		.ascii	"vecteur\000"
+ 3909      65757200 
+ 3910              	.LASF120:
+ 3911 06bb 73616D70 		.ascii	"sampleTime23\000"
+ 3911      6C655469 
+ 3911      6D653233 
+ 3911      00
+ 3912              	.LASF81:
+ 3913 06c8 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 3913      44697643 
+ 3913      6D645061 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 77
+
+
+ 3913      54797065 
+ 3913      53656C50 
+ 3914              	.LASF53:
+ 3915 06df 65704D6F 		.ascii	"epMonitorNr\000"
+ 3915      6E69746F 
+ 3915      724E7200 
+ 3916              	.LASF207:
+ 3917 06eb 4755495F 		.ascii	"GUI_DrawRect\000"
+ 3917      44726177 
+ 3917      52656374 
+ 3917      00
+ 3918              	.LASF196:
+ 3919 06f8 7369676E 		.ascii	"signalCourt\000"
+ 3919      616C436F 
+ 3919      75727400 
+ 3920              	.LASF39:
+ 3921 0704 70726F74 		.ascii	"protVersion\000"
+ 3921      56657273 
+ 3921      696F6E00 
+ 3922              	.LASF204:
+ 3923 0710 626F6E6E 		.ascii	"bonneLongueur\000"
+ 3923      654C6F6E 
+ 3923      67756575 
+ 3923      7200
+ 3924              	.LASF54:
+ 3925 071e 75646250 		.ascii	"udbPresent\000"
+ 3925      72657365 
+ 3925      6E7400
+ 3926              	.LASF34:
+ 3927 0729 666C6173 		.ascii	"flashcVersion\000"
+ 3927      68635665 
+ 3927      7273696F 
+ 3927      6E00
+ 3928              	.LASF51:
+ 3929 0737 736D6966 		.ascii	"smifDeviceNr\000"
+ 3929      44657669 
+ 3929      63654E72 
+ 3929      00
+ 3930              	.LASF127:
+ 3931 0744 72616E67 		.ascii	"rangeIntrMask\000"
+ 3931      65496E74 
+ 3931      724D6173 
+ 3931      6B00
+ 3932              	.LASF214:
+ 3933 0752 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3933      43313120 
+ 3933      352E342E 
+ 3933      31203230 
+ 3933      31363036 
+ 3934 0785 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 3934      20726576 
+ 3934      6973696F 
+ 3934      6E203233 
+ 3934      37373135 
+ 3935 07b8 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 3935      70202D6D 
+ 3935      6670753D 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 78
+
+
+ 3935      66707634 
+ 3935      2D73702D 
+ 3936 07eb 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 3936      6F6E7320 
+ 3936      2D666661 
+ 3936      742D6C74 
+ 3936      6F2D6F62 
+ 3937              	.LASF167:
+ 3938 0805 70776D4D 		.ascii	"pwmMode\000"
+ 3938      6F646500 
+ 3939              	.LASF109:
+ 3940 080d 666C6F61 		.ascii	"float\000"
+ 3940      7400
+ 3941              	.LASF73:
+ 3942 0813 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 3942      61747573 
+ 3942      43684964 
+ 3942      784D736B 
+ 3942      00
+ 3943              	.LASF198:
+ 3944 0824 63795F64 		.ascii	"cy_device\000"
+ 3944      65766963 
+ 3944      6500
+ 3945              	.LASF101:
+ 3946 082e 63707573 		.ascii	"cpussRomCtl\000"
+ 3946      73526F6D 
+ 3946      43746C00 
+ 3947              	.LASF71:
+ 3948 083a 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 3948      43746C50 
+ 3948      7265656D 
+ 3948      70746162 
+ 3948      6C65506F 
+ 3949              	.LASF175:
+ 3950 0850 6B696C6C 		.ascii	"killMode\000"
+ 3950      4D6F6465 
+ 3950      00
+ 3951              	.LASF123:
+ 3952 0859 6368616E 		.ascii	"chanEn\000"
+ 3952      456E00
+ 3953              	.LASF24:
+ 3954 0860 75646242 		.ascii	"udbBase\000"
+ 3954      61736500 
+ 3955              	.LASF113:
+ 3956 0868 43595F53 		.ascii	"CY_SAR_RANGE_COND_INSIDE\000"
+ 3956      41525F52 
+ 3956      414E4745 
+ 3956      5F434F4E 
+ 3956      445F494E 
+ 3957              	.LASF159:
+ 3958 0881 73746172 		.ascii	"startInputMode\000"
+ 3958      74496E70 
+ 3958      75744D6F 
+ 3958      646500
+ 3959              	.LASF17:
+ 3960 0890 696E7433 		.ascii	"int32_t\000"
+ 3960      325F7400 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 79
+
+
+ 3961              	.LASF2:
+ 3962 0898 756E7369 		.ascii	"unsigned char\000"
+ 3962      676E6564 
+ 3962      20636861 
+ 3962      7200
+ 3963              	.LASF67:
+ 3964 08a6 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 3964      6843746C 
+ 3964      4D61696E 
+ 3964      57733446 
+ 3964      72657100 
+ 3965              	.LASF197:
+ 3966 08ba 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3966      52784275 
+ 3966      66666572 
+ 3966      00
+ 3967              	.LASF106:
+ 3968 08c7 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 3968      6F636B53 
+ 3968      74617475 
+ 3968      734F6666 
+ 3968      73657400 
+ 3969              	.LASF85:
+ 3970 08db 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 3970      44697632 
+ 3970      345F3543 
+ 3970      746C4F66 
+ 3970      66736574 
+ 3971              	.LASF153:
+ 3972 08f0 656E6162 		.ascii	"enableCompareSwap\000"
+ 3972      6C65436F 
+ 3972      6D706172 
+ 3972      65537761 
+ 3972      7000
+ 3973              	.LASF128:
+ 3974 0902 6D757853 		.ascii	"muxSwitch\000"
+ 3974      77697463 
+ 3974      6800
+ 3975              	.LASF125:
+ 3976 090c 696E7472 		.ascii	"intrMask\000"
+ 3976      4D61736B 
+ 3976      00
+ 3977              	.LASF97:
+ 3978 0915 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 3978      73547269 
+ 3978      6D526F6D 
+ 3978      43746C4F 
+ 3978      66667365 
+ 3979              	.LASF74:
+ 3980 092b 70657269 		.ascii	"periTrCmdOffset\000"
+ 3980      5472436D 
+ 3980      644F6666 
+ 3980      73657400 
+ 3981              	.LASF168:
+ 3982 093b 70776D41 		.ascii	"pwmAlignment\000"
+ 3982      6C69676E 
+ 3982      6D656E74 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 80
+
+
+ 3982      00
+ 3983              	.LASF216:
+ 3984 0948 433A5C55 		.ascii	"C:\\Users\\Andrea\\Documents\\poly 4\\Projet d'inst"
+ 3984      73657273 
+ 3984      5C416E64 
+ 3984      7265615C 
+ 3984      446F6375 
+ 3985 0976 72756D65 		.ascii	"rumentation biomedicale\\Repos_Projet2\\WorkspacePr"
+ 3985      6E746174 
+ 3985      696F6E20 
+ 3985      62696F6D 
+ 3985      65646963 
+ 3986 09a7 6F6A6574 		.ascii	"ojet2Eq1\\Projet2Eq1.cydsn\000"
+ 3986      32457131 
+ 3986      5C50726F 
+ 3986      6A657432 
+ 3986      4571312E 
+ 3987              	.LASF38:
+ 3988 09c1 70657269 		.ascii	"periVersion\000"
+ 3988      56657273 
+ 3988      696F6E00 
+ 3989              	.LASF172:
+ 3990 09cd 656E6162 		.ascii	"enablePeriodSwap\000"
+ 3990      6C655065 
+ 3990      72696F64 
+ 3990      53776170 
+ 3990      00
+ 3991              	.LASF150:
+ 3992 09de 636F6D70 		.ascii	"compareOrCapture\000"
+ 3992      6172654F 
+ 3992      72436170 
+ 3992      74757265 
+ 3992      00
+ 3993              	.LASF49:
+ 3994 09ef 73727373 		.ascii	"srssNumHfroot\000"
+ 3994      4E756D48 
+ 3994      66726F6F 
+ 3994      7400
+ 3995              	.LASF212:
+ 3996 09fd 4755495F 		.ascii	"GUI_SetBkColor\000"
+ 3996      53657442 
+ 3996      6B436F6C 
+ 3996      6F7200
+ 3997              	.LASF62:
+ 3998 0a0c 666C6173 		.ascii	"flashEraseDelay\000"
+ 3998      68457261 
+ 3998      73654465 
+ 3998      6C617900 
+ 3999              	.LASF45:
+ 4000 0a1c 63707573 		.ascii	"cpussFmIrq\000"
+ 4000      73466D49 
+ 4000      727100
+ 4001              	.LASF77:
+ 4002 0a27 70657269 		.ascii	"periTrGrSize\000"
+ 4002      54724772 
+ 4002      53697A65 
+ 4002      00
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 81
+
+
+ 4003              	.LASF100:
+ 4004 0a34 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 4004      73436D34 
+ 4004      4E6D6943 
+ 4004      746C4F66 
+ 4004      66736574 
+ 4005              	.LASF173:
+ 4006 0a49 696E7665 		.ascii	"invertPWMOut\000"
+ 4006      72745057 
+ 4006      4D4F7574 
+ 4006      00
+ 4007              	.LASF213:
+ 4008 0a56 4755495F 		.ascii	"GUI_Clear\000"
+ 4008      436C6561 
+ 4008      7200
+ 4009              	.LASF131:
+ 4010 0a60 76726566 		.ascii	"vrefMvValue\000"
+ 4010      4D765661 
+ 4010      6C756500 
+ 4011              	.LASF151:
+ 4012 0a6c 636F6D70 		.ascii	"compare0\000"
+ 4012      61726530 
+ 4012      00
+ 4013              	.LASF152:
+ 4014 0a75 636F6D70 		.ascii	"compare1\000"
+ 4014      61726531 
+ 4014      00
+ 4015              	.LASF164:
+ 4016 0a7e 636F756E 		.ascii	"countInput\000"
+ 4016      74496E70 
+ 4016      757400
+ 4017              	.LASF108:
+ 4018 0a89 63686172 		.ascii	"char\000"
+ 4018      00
+ 4019              	.LASF64:
+ 4020 0a8e 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 4020      6843746C 
+ 4020      4D61696E 
+ 4020      57733146 
+ 4020      72657100 
+ 4021              	.LASF203:
+ 4022 0aa2 4144435F 		.ascii	"ADC_allConfigs\000"
+ 4022      616C6C43 
+ 4022      6F6E6669 
+ 4022      677300
+ 4023              	.LASF130:
+ 4024 0ab1 636F6E66 		.ascii	"configRouting\000"
+ 4024      6967526F 
+ 4024      7574696E 
+ 4024      6700
+ 4025              	.LASF5:
+ 4026 0abf 5F5F7569 		.ascii	"__uint16_t\000"
+ 4026      6E743136 
+ 4026      5F7400
+ 4027              	.LASF201:
+ 4028 0aca 50574D5F 		.ascii	"PWM_config\000"
+ 4028      636F6E66 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 82
+
+
+ 4028      696700
+ 4029              	.LASF83:
+ 4030 0ad5 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 4030      44697631 
+ 4030      3643746C 
+ 4030      4F666673 
+ 4030      657400
+ 4031              	.LASF33:
+ 4032 0ae8 64775665 		.ascii	"dwVersion\000"
+ 4032      7273696F 
+ 4032      6E00
+ 4033              	.LASF36:
+ 4034 0af2 6873696F 		.ascii	"hsiomVersion\000"
+ 4034      6D566572 
+ 4034      73696F6E 
+ 4034      00
+ 4035              	.LASF117:
+ 4036 0aff 6374726C 		.ascii	"ctrl\000"
+ 4036      00
+ 4037              	.LASF154:
+ 4038 0b04 696E7465 		.ascii	"interruptSources\000"
+ 4038      72727570 
+ 4038      74536F75 
+ 4038      72636573 
+ 4038      00
+ 4039              	.LASF158:
+ 4040 0b15 72656C6F 		.ascii	"reloadInput\000"
+ 4040      6164496E 
+ 4040      70757400 
+ 4041              	.LASF184:
+ 4042 0b21 6D697363 		.ascii	"miscConfig\000"
+ 4042      436F6E66 
+ 4042      696700
+ 4043              	.LASF69:
+ 4044 0b2c 64774368 		.ascii	"dwChSize\000"
+ 4044      53697A65 
+ 4044      00
+ 4045              	.LASF162:
+ 4046 0b35 73746F70 		.ascii	"stopInput\000"
+ 4046      496E7075 
+ 4046      7400
+ 4047              	.LASF105:
+ 4048 0b3f 69706353 		.ascii	"ipcStructSize\000"
+ 4048      74727563 
+ 4048      7453697A 
+ 4048      6500
+ 4049              	.LASF44:
+ 4050 0b4d 63707573 		.ascii	"cpussIpc0Irq\000"
+ 4050      73497063 
+ 4050      30497271 
+ 4050      00
+ 4051              	.LASF170:
+ 4052 0b5a 70657269 		.ascii	"period0\000"
+ 4052      6F643000 
+ 4053              	.LASF171:
+ 4054 0b62 70657269 		.ascii	"period1\000"
+ 4054      6F643100 
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 83
+
+
+ 4055              	.LASF27:
+ 4056 0b6a 6770696F 		.ascii	"gpioBase\000"
+ 4056      42617365 
+ 4056      00
+ 4057              	.LASF142:
+ 4058 0b73 696E6974 		.ascii	"initKey\000"
+ 4058      4B657900 
+ 4059              	.LASF135:
+ 4060 0b7b 72784275 		.ascii	"rxBuf\000"
+ 4060      6600
+ 4061              	.LASF18:
+ 4062 0b81 75696E74 		.ascii	"uint32_t\000"
+ 4062      33325F74 
+ 4062      00
+ 4063              	.LASF111:
+ 4064 0b8a 5F426F6F 		.ascii	"_Bool\000"
+ 4064      6C00
+ 4065              	.LASF122:
+ 4066 0b90 72616E67 		.ascii	"rangeCond\000"
+ 4066      65436F6E 
+ 4066      6400
+ 4067              	.LASF199:
+ 4068 0b9a 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 4068      494E4B5F 
+ 4068      5350494D 
+ 4068      5F636F6E 
+ 4068      74657874 
+ 4069              	.LASF46:
+ 4070 0baf 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 4070      734E6F74 
+ 4070      436F6E6E 
+ 4070      65637465 
+ 4070      64497271 
+ 4071              	.LASF174:
+ 4072 0bc4 696E7665 		.ascii	"invertPWMOutN\000"
+ 4072      72745057 
+ 4072      4D4F7574 
+ 4072      4E00
+ 4073              	.LASF60:
+ 4074 0bd2 666C6173 		.ascii	"flashWriteDelay\000"
+ 4074      68577269 
+ 4074      74654465 
+ 4074      6C617900 
+ 4075              	.LASF118:
+ 4076 0be2 73616D70 		.ascii	"sampleCtrl\000"
+ 4076      6C654374 
+ 4076      726C00
+ 4077              	.LASF205:
+ 4078 0bed 4755495F 		.ascii	"GUI_DrawLine\000"
+ 4078      44726177 
+ 4078      4C696E65 
+ 4078      00
+ 4079              	.LASF14:
+ 4080 0bfa 75696E74 		.ascii	"uint8_t\000"
+ 4080      385F7400 
+ 4081              	.LASF177:
+ 4082 0c02 73776170 		.ascii	"swapInput\000"
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 84
+
+
+ 4082      496E7075 
+ 4082      7400
+ 4083              	.LASF200:
+ 4084 0c0c 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 4084      494E4B5F 
+ 4084      54696D65 
+ 4084      725F636F 
+ 4084      6E666967 
+ 4085              	.LASF93:
+ 4086 0c21 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 4086      73436D34 
+ 4086      53746174 
+ 4086      75734F66 
+ 4086      66736574 
+ 4087              	.LASF86:
+ 4088 0c36 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 4088      50727449 
+ 4088      6E747243 
+ 4088      66674F66 
+ 4088      66736574 
+ 4089              	.LASF180:
+ 4090 0c4b 63795F73 		.ascii	"cy_stc_tcpwm_pwm_config_t\000"
+ 4090      74635F74 
+ 4090      6370776D 
+ 4090      5F70776D 
+ 4090      5F636F6E 
+ 4091              	.LASF157:
+ 4092 0c65 72656C6F 		.ascii	"reloadInputMode\000"
+ 4092      6164496E 
+ 4092      7075744D 
+ 4092      6F646500 
+ 4093              	.LASF181:
+ 4094 0c75 6368616E 		.ascii	"channelBase\000"
+ 4094      6E656C42 
+ 4094      61736500 
+ 4095              	.LASF208:
+ 4096 0c81 4755495F 		.ascii	"GUI_Init\000"
+ 4096      496E6974 
+ 4096      00
+ 4097              	.LASF47:
+ 4098 0c8a 73727373 		.ascii	"srssNumClkpath\000"
+ 4098      4E756D43 
+ 4098      6C6B7061 
+ 4098      746800
+ 4099              	.LASF129:
+ 4100 0c99 6D757853 		.ascii	"muxSwitchSqCtrl\000"
+ 4100      77697463 
+ 4100      68537143 
+ 4100      74726C00 
+ 4101              	.LASF1:
+ 4102 0ca9 7369676E 		.ascii	"signed char\000"
+ 4102      65642063 
+ 4102      68617200 
+ 4103              	.LASF29:
+ 4104 0cb5 69706342 		.ascii	"ipcBase\000"
+ 4104      61736500 
+ 4105              	.LASF80:
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccuVlyEu.s 			page 85
+
+
+ 4106 0cbd 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 4106      44697643 
+ 4106      6D645061 
+ 4106      44697653 
+ 4106      656C506F 
+ 4107              	.LASF72:
+ 4108 0cd3 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 4108      61747573 
+ 4108      43684964 
+ 4108      78506F73 
+ 4108      00
+ 4109              	.LASF61:
+ 4110 0ce4 666C6173 		.ascii	"flashProgramDelay\000"
+ 4110      6850726F 
+ 4110      6772616D 
+ 4110      44656C61 
+ 4110      7900
+ 4111              	.LASF206:
+ 4112 0cf6 4755495F 		.ascii	"GUI_SetPenSize\000"
+ 4112      53657450 
+ 4112      656E5369 
+ 4112      7A6500
+ 4113              	.LASF31:
+ 4114 0d05 63707573 		.ascii	"cpussVersion\000"
+ 4114      73566572 
+ 4114      73696F6E 
+ 4114      00
+ 4115              	.LASF58:
+ 4116 0d12 666C6173 		.ascii	"flashRwwRequired\000"
+ 4116      68527777 
+ 4116      52657175 
+ 4116      69726564 
+ 4116      00
+ 4117              	.LASF210:
+ 4118 0d23 43795F45 		.ascii	"Cy_EINK_Power\000"
+ 4118      494E4B5F 
+ 4118      506F7765 
+ 4118      7200
+ 4119              	.LASF160:
+ 4120 0d31 73746172 		.ascii	"startInput\000"
+ 4120      74496E70 
+ 4120      757400
+ 4121              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

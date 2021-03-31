@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
   27:Generated_Source\PSoC6/PWM.c **** *  associated PWM_Init() function.
   28:Generated_Source\PSoC6/PWM.c **** */ 
   29:Generated_Source\PSoC6/PWM.c **** cy_stc_tcpwm_pwm_config_t const PWM_config =
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 2
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 2
 
 
   30:Generated_Source\PSoC6/PWM.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
   39 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   40 0006 3BB9     		cbnz	r3, .L2
   74:Generated_Source\PSoC6/PWM.c ****     {
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 3
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 3
 
 
   75:Generated_Source\PSoC6/PWM.c ****         (void) Cy_TCPWM_PWM_Init(PWM_HW, PWM_CNT_NUM, &PWM_config);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
   37:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * the TCPWM being used must be passed first, followed by the index of 
   38:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * the counter you want to touch next. 
   39:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * For some functions, you can manage multiple counters simultaneously. You 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 4
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 4
 
 
   40:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * provide a bit field representing each counter, rather than the single counter 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
   94:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *
   95:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * \n
   96:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * \b Quadrature \b Decoder
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 5
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 5
 
 
   97:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  151:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * \subsection group_tcpwm_pins Assign and Configure Pins
  152:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * The dedicated TCPWM pins can be used. The HSIOM register must be configured to
  153:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * connect the block to the pins. Use the \ref group_gpio driver API to do that.
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 6
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 6
 
 
  154:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  208:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *   </tr>
  209:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *   <tr>
  210:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *     <td>1.0</td>
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 7
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 7
 
 
  211:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *     <td>Initial version</td>
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  265:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** /** Driver minor version */
  266:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** #define CY_TCPWM_DRV_VERSION_MINOR       10
  267:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 8
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 8
 
 
  268:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  322:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** #define CY_TCPWM_INT_ON_CC              (2U) /**< Interrupt on Compare/Capture(CC) */
  323:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** #define CY_TCPWM_INT_NONE               (0U) /**< No Interrupt */
  324:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** #define CY_TCPWM_INT_ON_CC_OR_TC        (3U) /**< Interrupt on TC or CC */
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 9
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 9
 
 
  325:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** /** \} group_tcpwm_interrupt_sources */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  379:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *******************************************************************************/
  380:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** 
  381:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** /**
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 10
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 10
 
 
  382:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * \addtogroup group_tcpwm_functions_common
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  427:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * Disables the counter(s) in the TCPWM block. Multiple TCPWM can be disabled 
  428:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * simultaneously.
  429:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** *
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 11
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 11
 
 
  430:Generated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/cy_tcpwm.h **** * \param base
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
   84              		.set	.LANCHOR1,. + 0
   85              		.type	PWM_config, %object
   86              		.size	PWM_config, 100
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 12
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 12
 
 
   87              	PWM_config:
@@ -713,12 +713,12 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  136 000c DB000000 		.4byte	.LASF79
  137 0010 0C       		.byte	0xc
  138 0011 A1000000 		.4byte	.LASF80
- 139 0015 77040000 		.4byte	.LASF81
+ 139 0015 E8030000 		.4byte	.LASF81
  140 0019 00000000 		.4byte	.Ldebug_ranges0+0
  141 001d 00000000 		.4byte	0
  142 0021 00000000 		.4byte	.Ldebug_line0
  143 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 13
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 13
 
 
  144 0026 02       		.byte	0x2
@@ -742,7 +742,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  162 0047 07       		.byte	0x7
  163 0048 4D030000 		.4byte	.LASF3
  164 004c 03       		.uleb128 0x3
- 165 004d EB030000 		.4byte	.LASF5
+ 165 004d DE030000 		.4byte	.LASF5
  166 0051 03       		.byte	0x3
  167 0052 3F       		.byte	0x3f
  168 0053 57000000 		.4byte	0x57
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  198 008c 03       		.uleb128 0x3
  199 008d DA010000 		.4byte	.LASF12
  200 0091 04       		.byte	0x4
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 14
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 14
 
 
  201 0092 18       		.byte	0x18
@@ -819,7 +819,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  236 00d9 B9000000 		.4byte	0xb9
  237 00dd 04       		.byte	0x4
  238 00de 08       		.uleb128 0x8
- 239 00df 3A040000 		.4byte	.LASF18
+ 239 00df A6040000 		.4byte	.LASF18
  240 00e3 05       		.byte	0x5
  241 00e4 25       		.byte	0x25
  242 00e5 B4000000 		.4byte	0xb4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  255 0100 10       		.byte	0x10
  256 0101 08       		.uleb128 0x8
  257 0102 46030000 		.4byte	.LASF20
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 15
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 15
 
 
  258 0106 05       		.byte	0x5
@@ -852,7 +852,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  266 0114 B4000000 		.4byte	0xb4
  267 0118 18       		.byte	0x18
  268 0119 08       		.uleb128 0x8
- 269 011a 55040000 		.4byte	.LASF22
+ 269 011a C1040000 		.4byte	.LASF22
  270 011e 05       		.byte	0x5
  271 011f 2A       		.byte	0x2a
  272 0120 B9000000 		.4byte	0xb9
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  312 0172 05       		.byte	0x5
  313 0173 31       		.byte	0x31
  314 0174 B4000000 		.4byte	0xb4
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 16
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 16
 
 
  315 0178 38       		.byte	0x38
@@ -926,7 +926,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  337 01a1 B4000000 		.4byte	0xb4
  338 01a5 00       		.byte	0
  339 01a6 08       		.uleb128 0x8
- 340 01a7 F5030000 		.4byte	.LASF32
+ 340 01a7 61040000 		.4byte	.LASF32
  341 01ab 05       		.byte	0x5
  342 01ac 3A       		.byte	0x3a
  343 01ad B4000000 		.4byte	0xb4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  369 01e2 08       		.uleb128 0x8
  370 01e3 09020000 		.4byte	.LASF37
  371 01e7 05       		.byte	0x5
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 17
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 17
 
 
  372 01e8 3F       		.byte	0x3f
@@ -971,7 +971,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  379 01f5 B9000000 		.4byte	0xb9
  380 01f9 1C       		.byte	0x1c
  381 01fa 08       		.uleb128 0x8
- 382 01fb 55040000 		.4byte	.LASF22
+ 382 01fb C1040000 		.4byte	.LASF22
  383 01ff 05       		.byte	0x5
  384 0200 41       		.byte	0x41
  385 0201 29020000 		.4byte	0x229
@@ -1007,7 +1007,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  415 0244 43       		.byte	0x43
  416 0245 91010000 		.4byte	0x191
  417 0249 0E       		.uleb128 0xe
- 418 024a C3040000 		.4byte	.LASF40
+ 418 024a F0040000 		.4byte	.LASF40
  419 024e 06       		.byte	0x6
  420 024f 4206     		.2byte	0x642
  421 0251 3E020000 		.4byte	0x23e
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  426 025c 02       		.uleb128 0x2
  427 025d 01       		.byte	0x1
  428 025e 08       		.byte	0x8
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 18
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 18
 
 
  429 025f 60030000 		.4byte	.LASF42
@@ -1037,7 +1037,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  442 0278 2F       		.byte	0x2f
  443 0279 AA030000 		.4byte	0x3aa
  444 027d 08       		.uleb128 0x8
- 445 027e 4D040000 		.4byte	.LASF45
+ 445 027e B9040000 		.4byte	.LASF45
  446 0282 07       		.byte	0x7
  447 0283 31       		.byte	0x31
  448 0284 A2000000 		.4byte	0xa2
@@ -1049,7 +1049,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  454 0290 A2000000 		.4byte	0xa2
  455 0294 04       		.byte	0x4
  456 0295 08       		.uleb128 0x8
- 457 0296 FE030000 		.4byte	.LASF47
+ 457 0296 6A040000 		.4byte	.LASF47
  458 029a 07       		.byte	0x7
  459 029b 34       		.byte	0x34
  460 029c A2000000 		.4byte	0xa2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  483 02cb 38       		.byte	0x38
  484 02cc A2000000 		.4byte	0xa2
  485 02d0 18       		.byte	0x18
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 19
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 19
 
 
  486 02d1 08       		.uleb128 0x8
@@ -1112,7 +1112,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  514 0308 A2000000 		.4byte	0xa2
  515 030c 2C       		.byte	0x2c
  516 030d 08       		.uleb128 0x8
- 517 030e 1F040000 		.4byte	.LASF57
+ 517 030e 8B040000 		.4byte	.LASF57
  518 0312 07       		.byte	0x7
  519 0313 3F       		.byte	0x3f
  520 0314 A2000000 		.4byte	0xa2
@@ -1136,9 +1136,9 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  538 0338 A2000000 		.4byte	0xa2
  539 033c 3C       		.byte	0x3c
  540 033d 08       		.uleb128 0x8
- 541 033e 15040000 		.4byte	.LASF61
+ 541 033e 81040000 		.4byte	.LASF61
  542 0342 07       		.byte	0x7
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 20
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 20
 
 
  543 0343 44       		.byte	0x44
@@ -1163,13 +1163,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  562 0368 A2000000 		.4byte	0xa2
  563 036c 4C       		.byte	0x4c
  564 036d 08       		.uleb128 0x8
- 565 036e E0030000 		.4byte	.LASF65
+ 565 036e D3030000 		.4byte	.LASF65
  566 0372 07       		.byte	0x7
  567 0373 4A       		.byte	0x4a
  568 0374 A2000000 		.4byte	0xa2
  569 0378 50       		.byte	0x50
  570 0379 08       		.uleb128 0x8
- 571 037a 2C040000 		.4byte	.LASF66
+ 571 037a 98040000 		.4byte	.LASF66
  572 037e 07       		.byte	0x7
  573 037f 4B       		.byte	0x4b
  574 0380 A2000000 		.4byte	0xa2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  597 03ac 02       		.byte	0x2
  598 03ad 85030000 		.4byte	.LASF70
  599 03b1 03       		.uleb128 0x3
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 21
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 21
 
 
  600 03b2 4D000000 		.4byte	.LASF71
@@ -1212,12 +1212,12 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  608 03c4 03       		.byte	0x3
  609 03c5 E2030000 		.4byte	0x3e2
  610 03c9 11       		.uleb128 0x11
- 611 03ca CE040000 		.4byte	.LASF72
+ 611 03ca FB040000 		.4byte	.LASF72
  612 03ce 02       		.byte	0x2
  613 03cf CE01     		.2byte	0x1ce
  614 03d1 E2030000 		.4byte	0x3e2
  615 03d5 11       		.uleb128 0x11
- 616 03d6 D3040000 		.4byte	.LASF73
+ 616 03d6 00050000 		.4byte	.LASF73
  617 03da 02       		.byte	0x2
  618 03db CE01     		.2byte	0x1ce
  619 03dd A2000000 		.4byte	0xa2
@@ -1226,24 +1226,24 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  622 03e3 04       		.byte	0x4
  623 03e4 49020000 		.4byte	0x249
  624 03e8 10       		.uleb128 0x10
- 625 03e9 5E040000 		.4byte	.LASF75
+ 625 03e9 CA040000 		.4byte	.LASF75
  626 03ed 02       		.byte	0x2
  627 03ee A101     		.2byte	0x1a1
  628 03f0 03       		.byte	0x3
  629 03f1 0E040000 		.4byte	0x40e
  630 03f5 11       		.uleb128 0x11
- 631 03f6 CE040000 		.4byte	.LASF72
+ 631 03f6 FB040000 		.4byte	.LASF72
  632 03fa 02       		.byte	0x2
  633 03fb A101     		.2byte	0x1a1
  634 03fd E2030000 		.4byte	0x3e2
  635 0401 11       		.uleb128 0x11
- 636 0402 D3040000 		.4byte	.LASF73
+ 636 0402 00050000 		.4byte	.LASF73
  637 0406 02       		.byte	0x2
  638 0407 A101     		.2byte	0x1a1
  639 0409 A2000000 		.4byte	0xa2
  640 040d 00       		.byte	0
  641 040e 13       		.uleb128 0x13
- 642 040f 0B040000 		.4byte	.LASF83
+ 642 040f 77040000 		.4byte	.LASF83
  643 0413 01       		.byte	0x1
  644 0414 47       		.byte	0x47
  645 0415 00000000 		.4byte	.LFB186
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  654 0430 01       		.byte	0x1
  655 0431 50       		.byte	0x50
  656 0432 49040000 		.4byte	0x449
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 22
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 22
 
 
  657 0436 15       		.uleb128 0x15
@@ -1305,7 +1305,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  698 048f 00       		.byte	0
  699 0490 00       		.byte	0
  700 0491 18       		.uleb128 0x18
- 701 0492 D3030000 		.4byte	.LASF76
+ 701 0492 E3040000 		.4byte	.LASF76
  702 0496 08       		.byte	0x8
  703 0497 F907     		.2byte	0x7f9
  704 0499 9D040000 		.4byte	0x49d
@@ -1318,12 +1318,12 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  711 04a9 8C000000 		.4byte	0x8c
  712 04ad 05       		.uleb128 0x5
  713 04ae 03       		.byte	0x3
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 23
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 23
 
 
  714 04af 00000000 		.4byte	PWM_initVar
  715 04b3 19       		.uleb128 0x19
- 716 04b4 42040000 		.4byte	.LASF78
+ 716 04b4 AE040000 		.4byte	.LASF78
  717 04b8 01       		.byte	0x1
  718 04b9 1D       		.byte	0x1d
  719 04ba C4040000 		.4byte	0x4c4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  768 0023 3A       		.uleb128 0x3a
  769 0024 0B       		.uleb128 0xb
  770 0025 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 24
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 24
 
 
  771 0026 0B       		.uleb128 0xb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  825 005c 38       		.uleb128 0x38
  826 005d 0B       		.uleb128 0xb
  827 005e 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 25
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 25
 
 
  828 005f 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  882 0095 21       		.uleb128 0x21
  883 0096 00       		.byte	0
  884 0097 49       		.uleb128 0x49
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 26
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 26
 
 
  885 0098 13       		.uleb128 0x13
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  939 00ce 0E       		.uleb128 0xe
  940 00cf 3A       		.uleb128 0x3a
  941 00d0 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 27
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 27
 
 
  942 00d1 3B       		.uleb128 0x3b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  996 0108 13       		.uleb128 0x13
  997 0109 00       		.byte	0
  998 010a 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 28
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 28
 
 
  999 010b 15       		.uleb128 0x15
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1053 0146 13       		.uleb128 0x13
  1054 0147 3F       		.uleb128 0x3f
  1055 0148 19       		.uleb128 0x19
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 29
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 29
 
 
  1056 0149 02       		.uleb128 0x2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1110 004b 00003840 		.4byte	0x40380000
  1111 004f 9F       		.byte	0x9f
  1112 0050 00000000 		.4byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 30
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 30
 
 
  1113 0054 00000000 		.4byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1147              	.LASF71:
  1148 004d 63795F73 		.ascii	"cy_stc_tcpwm_pwm_config_t\000"
  1148      74635F74 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 31
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 31
 
 
  1148      6370776D 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1170 0141 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
  1170      70202D6D 
  1170      6670753D 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 32
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 32
 
 
  1170      66707634 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1193 0213 50574D5F 		.ascii	"PWM_initVar\000"
  1193      696E6974 
  1193      56617200 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 33
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 33
 
 
  1194              	.LASF43:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1221      646500
  1222              	.LASF2:
  1223 02bc 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 34
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 34
 
 
  1223      676E6564 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1249 034d 73686F72 		.ascii	"short unsigned int\000"
  1249      7420756E 
  1249      7369676E 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 35
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 35
 
 
  1249      65642069 
@@ -2088,92 +2088,97 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 1
  1271      496E7075 
  1271      744D6F64 
  1271      6500
- 1272              	.LASF76:
- 1273 03d3 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1273      52784275 
- 1273      66666572 
- 1273      00
- 1274              	.LASF65:
- 1275 03e0 73746172 		.ascii	"startInput\000"
- 1275      74496E70 
- 1275      757400
- 1276              	.LASF5:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 36
+ 1272              	.LASF65:
+ 1273 03d3 73746172 		.ascii	"startInput\000"
+ 1273      74496E70 
+ 1273      757400
+ 1274              	.LASF5:
+ 1275 03de 5F5F696E 		.ascii	"__int32_t\000"
+ 1275      7433325F 
+ 1275      7400
+ 1276              	.LASF81:
+ 1277 03e8 433A5C55 		.ascii	"C:\\Users\\Andrea\\Documents\\poly 4\\Projet d'inst"
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 36
 
 
- 1277 03eb 5F5F696E 		.ascii	"__int32_t\000"
- 1277      7433325F 
- 1277      7400
- 1278              	.LASF32:
- 1279 03f5 4354524C 		.ascii	"CTRL_CLR\000"
- 1279      5F434C52 
- 1279      00
- 1280              	.LASF47:
- 1281 03fe 70776D41 		.ascii	"pwmAlignment\000"
- 1281      6C69676E 
- 1281      6D656E74 
+ 1277      73657273 
+ 1277      5C416E64 
+ 1277      7265615C 
+ 1277      446F6375 
+ 1278 0416 72756D65 		.ascii	"rumentation biomedicale\\Repos_Projet2\\WorkspacePr"
+ 1278      6E746174 
+ 1278      696F6E20 
+ 1278      62696F6D 
+ 1278      65646963 
+ 1279 0447 6F6A6574 		.ascii	"ojet2Eq1\\Projet2Eq1.cydsn\000"
+ 1279      32457131 
+ 1279      5C50726F 
+ 1279      6A657432 
+ 1279      4571312E 
+ 1280              	.LASF32:
+ 1281 0461 4354524C 		.ascii	"CTRL_CLR\000"
+ 1281      5F434C52 
  1281      00
- 1282              	.LASF83:
- 1283 040b 50574D5F 		.ascii	"PWM_Start\000"
- 1283      53746172 
- 1283      7400
- 1284              	.LASF61:
- 1285 0415 73776170 		.ascii	"swapInput\000"
- 1285      496E7075 
+ 1282              	.LASF47:
+ 1283 046a 70776D41 		.ascii	"pwmAlignment\000"
+ 1283      6C69676E 
+ 1283      6D656E74 
+ 1283      00
+ 1284              	.LASF83:
+ 1285 0477 50574D5F 		.ascii	"PWM_Start\000"
+ 1285      53746172 
  1285      7400
- 1286              	.LASF57:
- 1287 041f 696E7665 		.ascii	"invertPWMOut\000"
- 1287      72745057 
- 1287      4D4F7574 
- 1287      00
- 1288              	.LASF66:
- 1289 042c 6B696C6C 		.ascii	"killInputMode\000"
- 1289      496E7075 
- 1289      744D6F64 
- 1289      6500
- 1290              	.LASF18:
- 1291 043a 434F554E 		.ascii	"COUNTER\000"
- 1291      54455200 
- 1292              	.LASF78:
- 1293 0442 50574D5F 		.ascii	"PWM_config\000"
- 1293      636F6E66 
- 1293      696700
- 1294              	.LASF45:
- 1295 044d 70776D4D 		.ascii	"pwmMode\000"
- 1295      6F646500 
- 1296              	.LASF22:
- 1297 0455 52455345 		.ascii	"RESERVED\000"
- 1297      52564544 
- 1297      00
- 1298              	.LASF75:
- 1299 045e 43795F54 		.ascii	"Cy_TCPWM_Enable_Multiple\000"
- 1299      4350574D 
- 1299      5F456E61 
- 1299      626C655F 
- 1299      4D756C74 
- 1300              	.LASF81:
- 1301 0477 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Workspa"
- 1301      73657273 
- 1301      5C417269 
- 1301      616E655C 
- 1301      446F6375 
- 1302 04a5 63655072 		.ascii	"ceProjet2Eq1\\Projet2Eq1.cydsn\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccG0q3Wl.s 			page 37
+ 1286              	.LASF61:
+ 1287 0481 73776170 		.ascii	"swapInput\000"
+ 1287      496E7075 
+ 1287      7400
+ 1288              	.LASF57:
+ 1289 048b 696E7665 		.ascii	"invertPWMOut\000"
+ 1289      72745057 
+ 1289      4D4F7574 
+ 1289      00
+ 1290              	.LASF66:
+ 1291 0498 6B696C6C 		.ascii	"killInputMode\000"
+ 1291      496E7075 
+ 1291      744D6F64 
+ 1291      6500
+ 1292              	.LASF18:
+ 1293 04a6 434F554E 		.ascii	"COUNTER\000"
+ 1293      54455200 
+ 1294              	.LASF78:
+ 1295 04ae 50574D5F 		.ascii	"PWM_config\000"
+ 1295      636F6E66 
+ 1295      696700
+ 1296              	.LASF45:
+ 1297 04b9 70776D4D 		.ascii	"pwmMode\000"
+ 1297      6F646500 
+ 1298              	.LASF22:
+ 1299 04c1 52455345 		.ascii	"RESERVED\000"
+ 1299      52564544 
+ 1299      00
+ 1300              	.LASF75:
+ 1301 04ca 43795F54 		.ascii	"Cy_TCPWM_Enable_Multiple\000"
+ARM GAS  C:\Users\Andrea\AppData\Local\Temp\ccxJmxyb.s 			page 37
 
 
- 1302      6F6A6574 
- 1302      32457131 
- 1302      5C50726F 
- 1302      6A657432 
- 1303              	.LASF40:
- 1304 04c3 54435057 		.ascii	"TCPWM_Type\000"
- 1304      4D5F5479 
- 1304      706500
- 1305              	.LASF72:
- 1306 04ce 62617365 		.ascii	"base\000"
- 1306      00
- 1307              	.LASF73:
- 1308 04d3 636F756E 		.ascii	"counters\000"
- 1308      74657273 
- 1308      00
- 1309              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1301      4350574D 
+ 1301      5F456E61 
+ 1301      626C655F 
+ 1301      4D756C74 
+ 1302              	.LASF76:
+ 1303 04e3 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1303      52784275 
+ 1303      66666572 
+ 1303      00
+ 1304              	.LASF40:
+ 1305 04f0 54435057 		.ascii	"TCPWM_Type\000"
+ 1305      4D5F5479 
+ 1305      706500
+ 1306              	.LASF72:
+ 1307 04fb 62617365 		.ascii	"base\000"
+ 1307      00
+ 1308              	.LASF73:
+ 1309 0500 636F756E 		.ascii	"counters\000"
+ 1309      74657273 
+ 1309      00
+ 1310              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
