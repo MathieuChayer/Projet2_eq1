@@ -26,6 +26,12 @@
         .intrPriority = MAX_I2C_SCB_IRQ__INTC_CORTEXM4_PRIORITY
     };
 
+    /* BMI_I2C_SCB_IRQ */
+    const cy_stc_sysint_t BMI_I2C_SCB_IRQ_cfg = {
+        .intrSrc = (IRQn_Type)BMI_I2C_SCB_IRQ__INTC_NUMBER,
+        .intrPriority = BMI_I2C_SCB_IRQ__INTC_CORTEXM4_PRIORITY
+    };
+
     /* UART_SCB_IRQ */
     const cy_stc_sysint_t UART_SCB_IRQ_cfg = {
         .intrSrc = (IRQn_Type)UART_SCB_IRQ__INTC_NUMBER,
@@ -36,6 +42,12 @@
     const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg = {
         .intrSrc = (IRQn_Type)CY_EINK_SPIM_SCB_IRQ__INTC_NUMBER,
         .intrPriority = CY_EINK_SPIM_SCB_IRQ__INTC_CORTEXM4_PRIORITY
+    };
+
+    /* SysInt_AnyMotionINT */
+    const cy_stc_sysint_t SysInt_AnyMotionINT_cfg = {
+        .intrSrc = (IRQn_Type)SysInt_AnyMotionINT__INTC_NUMBER,
+        .intrPriority = SysInt_AnyMotionINT__INTC_CORTEXM4_PRIORITY
     };
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */

@@ -24,11 +24,17 @@
     #define MAX_I2C_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t MAX_I2C_SCB_IRQ_cfg;
 
+    #define BMI_I2C_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t BMI_I2C_SCB_IRQ_cfg;
+
     #define UART_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t UART_SCB_IRQ_cfg;
 
     #define CY_EINK_SPIM_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg;
+
+    #define SysInt_AnyMotionINT__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t SysInt_AnyMotionINT_cfg;
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */
 

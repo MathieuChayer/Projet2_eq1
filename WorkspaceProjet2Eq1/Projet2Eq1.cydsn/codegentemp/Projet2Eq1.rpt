@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.332ms
+Loading plugins phase: Elapsed time ==> 0s.575ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cyprj -d CY8C6347BZI-BLD53 -s C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Generated_Source\PSoC6 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.068ms
+Elaboration phase: Elapsed time ==> 3s.899ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.124ms
+HDL generation phase: Elapsed time ==> 0s.589ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Mathi
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Mar 30 15:24:57 2021
+Mon Apr 05 22:40:30 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Projet2Eq1.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Mar 30 15:24:57 2021
+Mon Apr 05 22:40:30 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -86,7 +86,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Mathi
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Mar 30 15:24:58 2021
+Mon Apr 05 22:40:32 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -116,7 +116,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Mathi
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Mar 30 15:24:59 2021
+Mon Apr 05 22:40:34 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -160,9 +160,11 @@ Detecting unused logic.
 	Net_778
 	\MAX_I2C:Net_224\
 	\MAX_I2C:Net_223\
+	\BMI_I2C:Net_224\
+	\BMI_I2C:Net_223\
 
 
-Deleted 19 User equations/components.
+Deleted 21 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -190,6 +192,12 @@ Aliasing \MAX_I2C:Net_281\ to zero
 Aliasing \MAX_I2C:Net_280\ to zero
 Aliasing \MAX_I2C:Net_279\ to zero
 Aliasing \MAX_I2C:Net_278\ to zero
+Aliasing \BMI_I2C:Net_283\ to zero
+Aliasing \BMI_I2C:Net_282\ to zero
+Aliasing \BMI_I2C:Net_281\ to zero
+Aliasing \BMI_I2C:Net_280\ to zero
+Aliasing \BMI_I2C:Net_279\ to zero
+Aliasing \BMI_I2C:Net_278\ to zero
 Removing Lhs of wire \CY_EINK_SPIM:clock_wire\[18] = \CY_EINK_SPIM:Net_847\[1]
 Removing Lhs of wire \CY_EINK_SPIM:sclk_s_wire\[27] = zero[14]
 Removing Lhs of wire \CY_EINK_SPIM:select_s_wire\[32] = zero[14]
@@ -218,9 +226,16 @@ Removing Lhs of wire \MAX_I2C:Net_281\[154] = zero[14]
 Removing Lhs of wire \MAX_I2C:Net_280\[159] = zero[14]
 Removing Lhs of wire \MAX_I2C:Net_279\[161] = zero[14]
 Removing Lhs of wire \MAX_I2C:Net_278\[162] = zero[14]
+Removing Rhs of wire \BMI_I2C:clock_wire\[194] = \BMI_I2C:Net_847\[219]
+Removing Lhs of wire \BMI_I2C:Net_283\[195] = zero[14]
+Removing Lhs of wire \BMI_I2C:Net_282\[198] = zero[14]
+Removing Lhs of wire \BMI_I2C:Net_281\[203] = zero[14]
+Removing Lhs of wire \BMI_I2C:Net_280\[208] = zero[14]
+Removing Lhs of wire \BMI_I2C:Net_279\[210] = zero[14]
+Removing Lhs of wire \BMI_I2C:Net_278\[211] = zero[14]
 
 ------------------------------------------------------
-Aliased 0 equations, 28 wires.
+Aliased 0 equations, 35 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -244,14 +259,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cyprj -dcpsoc3 Projet2Eq1.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 3s.158ms
+Warp synthesis phase: Elapsed time ==> 5s.179ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 30 March 2021 15:25:00
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 05 April 2021 22:40:34
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cyprj -d CY8C6347BZI-BLD53 Projet2Eq1.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 1s.463ms
+Design parsing phase: Elapsed time ==> 2s.378ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -260,8 +275,9 @@ Removing unused cells resulting from optimization
 Done removing unused cells.
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Fixed Function Clock 0: Automatic-assigning  clock 'CY_EINK_SPIM_SCBCLK'. Signal=\CY_EINK_SPIM:Net_847_ff0\
-    Fixed Function Clock 1: Automatic-assigning  clock 'MAX_I2C_SCBCLK'. Signal=\MAX_I2C:clock_wire_ff1\
-    Fixed Function Clock 2: Automatic-assigning  clock 'UART_SCBCLK'. Signal=\UART:Net_847_ff2\
+    Fixed Function Clock 1: Automatic-assigning  clock 'BMI_I2C_SCBCLK'. Signal=\BMI_I2C:clock_wire_ff1\
+    Fixed Function Clock 2: Automatic-assigning  clock 'MAX_I2C_SCBCLK'. Signal=\MAX_I2C:clock_wire_ff2\
+    Fixed Function Clock 3: Automatic-assigning  clock 'UART_SCBCLK'. Signal=\UART:Net_847_ff3\
     Fixed Function Clock 11: Automatic-assigning  clock 'EINK_Clock'. Signal=Net_700_ff11
     Alignment-Only Clock: Automatic-assigning  clock 'Clock_2'. Fanout=0
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
@@ -999,6 +1015,243 @@ Design Equations
         Properties:
         {
         }
+
+    Pin : Name = MAX_int(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => MAX_int(0)__PA ,
+            pad => MAX_int(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = Pin_AnyMotion_INT(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: True
+            Interrupt mode: RISING
+            Drive mode: RES_PULL_DOWN
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: False
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Pin_AnyMotion_INT(0)__PA ,
+            fb => Net_803 ,
+            pad => Pin_AnyMotion_INT(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = \BMI_I2C:scl(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: OPEN_DRAIN_LO
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \BMI_I2C:scl(0)\__PA ,
+            fb => Net_800 ,
+            pad => \BMI_I2C:scl(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \BMI_I2C:sda(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: OPEN_DRAIN_LO
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \BMI_I2C:sda(0)\__PA ,
+            fb => Net_802 ,
+            pad => \BMI_I2C:sda(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = ERROR_LED(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => ERROR_LED(0)__PA ,
+            pad => ERROR_LED(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = WORKING_LED(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: INP_DIS_HI_Z
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => WORKING_LED(0)__PA ,
+            pad => WORKING_LED(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
     </CYPRESSTAG>
@@ -1065,6 +1318,26 @@ Design Equations
             deepsleep_required = 0
             int_type = "10"
         }
+
+    interrupt: Name =SysInt_AnyMotionINT
+        PORT MAP (
+            interrupt => Net_803 );
+        Properties:
+        {
+            cy_registers = ""
+            deepsleep_required = 0
+            int_type = "00"
+        }
+
+    interrupt: Name =\BMI_I2C:SCB_IRQ\
+        PORT MAP (
+            interrupt => \BMI_I2C:intr_wire\ );
+        Properties:
+        {
+            cy_registers = ""
+            deepsleep_required = 0
+            int_type = "10"
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1078,8 +1351,8 @@ Resource Type                 : Used : Free :  Max :  % Used
 Digital Clocks                :    0 :    8 :    8 :  0.00 %
 Crypto Accelerator            :    0 :    1 :    1 :  0.00 %
 Interrupts [CM0+]             :    5 :   27 :   32 : 15.63 %
-Interrupts [CM4]              :    3 :  144 :  147 :  2.04 %
-IO                            :   18 :   60 :   78 : 23.08 %
+Interrupts [CM4]              :    5 :  142 :  147 :  3.40 %
+IO                            :   24 :   54 :   78 : 30.77 %
 Interprocessor Communication  :    0 :   16 :   16 :  0.00 %
 MCWDT                         :    0 :    2 :    2 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
@@ -1088,7 +1361,7 @@ Real Time Clock               :    0 :    1 :    1 :  0.00 %
 Bluetooth Low Energy          :    0 :    1 :    1 :  0.00 %
 I2S                           :    0 :    1 :    1 :  0.00 %
 PDM/PCM                       :    0 :    1 :    1 :  0.00 %
-SCB                           :    3 :    6 :    9 : 33.33 %
+SCB                           :    4 :    5 :    9 : 44.44 %
 Serial Memory Interface       :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   32 :   32 :  0.00 %
 LCD                           :    0 :    1 :    1 :  0.00 %
@@ -1110,8 +1383,8 @@ Sample and Hold               :    0 :    1 :    1 :  0.00 %
 SAR ADC                       :    0 :    1 :    1 :  0.00 %
 DieTemp Sensor                :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.139ms
-Tech Mapping phase: Elapsed time ==> 0s.283ms
+Technology Mapping: Elapsed time ==> 0s.500ms
+Tech Mapping phase: Elapsed time ==> 0s.848ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1137,25 +1410,32 @@ SW2(0)                              : [IOP=(0)][IoId=(4)]
 \MAX_I2C:scl(0)\                    : [IOP=(9)][IoId=(0)]                
 \MAX_I2C:sda(0)\                    : [IOP=(9)][IoId=(1)]                
 MAX_power(0)                        : [IOP=(9)][IoId=(2)]                
+MAX_int(0)                          : [IOP=(13)][IoId=(7)]               
+Pin_AnyMotion_INT(0)                : [IOP=(13)][IoId=(0)]               
+\BMI_I2C:scl(0)\                    : [IOP=(6)][IoId=(0)]                
+\BMI_I2C:sda(0)\                    : [IOP=(6)][IoId=(1)]                
+ERROR_LED(0)                        : [IOP=(0)][IoId=(3)]                
+WORKING_LED(0)                      : [IOP=(1)][IoId=(1)]                
 ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
 CPUSS                               : CPUSS_[FFB(CPUSS,0)]               
 \CY_EINK_SPIM:SCB\                  : SCB_[FFB(SCB,6)]                   
 \UART:SCB\                          : SCB_[FFB(SCB,5)]                   
 \MAX_I2C:SCB\                       : SCB_[FFB(SCB,2)]                   
+\BMI_I2C:SCB\                       : SCB_[FFB(SCB,3)]                   
 \CY_EINK_Timer:TCPWM\               : TCPWM_[FFB(TCPWM,0)]               
 
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.7316825s
+Elapsed time ==> 0.7404933s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 4s.223ms
+Analog Placement phase: Elapsed time ==> 4s.800ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0019058 secs
+Route success=True, Iterations=1 Elapsed=0.0384800 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.001ms
+Analog Routing phase: Elapsed time ==> 0s.054ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1166,7 +1446,7 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.039ms
+Analog Code Generation phase: Elapsed time ==> 0s.145ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -1178,14 +1458,14 @@ I2076: Total run-time: 0.8 sec.
 <CYPRESSTAG name="PLD Packing Summary">
 No PLDs were packed.
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.000ms
+PLD Packing: Elapsed time ==> 0s.033ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.042ms
+Partitioning: Elapsed time ==> 0s.185ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1235,6 +1515,16 @@ Intr container @ [IntrContainer=(0)]:
             deepsleep_required = 0
             int_type = "10"
         }
+  Intr@ [IntrContainer=(0)][IntrId=(44)] 
+    interrupt: Name =\BMI_I2C:SCB_IRQ\
+        PORT MAP (
+            interrupt => \BMI_I2C:intr_wire\ );
+        Properties:
+        {
+            cy_registers = ""
+            deepsleep_required = 0
+            int_type = "10"
+        }
   Intr@ [IntrContainer=(0)][IntrId=(46)] 
     interrupt: Name =\UART:SCB_IRQ\
         PORT MAP (
@@ -1254,6 +1544,16 @@ Intr container @ [IntrContainer=(0)]:
             cy_registers = ""
             deepsleep_required = 0
             int_type = "10"
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(122)] 
+    interrupt: Name =SysInt_AnyMotionINT
+        PORT MAP (
+            interrupt => Net_803 );
+        Properties:
+        {
+            cy_registers = ""
+            deepsleep_required = 0
+            int_type = "00"
         }
 Drq container @ [DrqContainer=(0)]: empty
 Port 0 contains the following IO cells:
@@ -1293,6 +1593,46 @@ Pin : Name = CY_EINK_DispIoEn(0)
     PORT MAP (
         pa_out => CY_EINK_DispIoEn(0)__PA ,
         pad => CY_EINK_DispIoEn(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = ERROR_LED(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => ERROR_LED(0)__PA ,
+        pad => ERROR_LED(0)_PAD );
     Properties:
     {
     }
@@ -1339,6 +1679,46 @@ Pin : Name = SW2(0)
     }
 
 Port 1 contains the following IO cells:
+[IoId=1]: 
+Pin : Name = WORKING_LED(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => WORKING_LED(0)__PA ,
+        pad => WORKING_LED(0)_PAD );
+    Properties:
+    {
+    }
+
 Port 5 contains the following IO cells:
 [IoId=0]: 
 Pin : Name = \UART:rx(0)\
@@ -1623,6 +2003,88 @@ Pin : Name = CY_EINK_Border(0)
     }
 
 Port 6 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = \BMI_I2C:scl(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: OPEN_DRAIN_LO
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \BMI_I2C:scl(0)\__PA ,
+        fb => Net_800 ,
+        pad => \BMI_I2C:scl(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = \BMI_I2C:sda(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: OPEN_DRAIN_LO
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \BMI_I2C:sda(0)\__PA ,
+        fb => Net_802 ,
+        pad => \BMI_I2C:sda(0)_PAD\ );
+    Properties:
+    {
+    }
+
 [IoId=6]: 
 Pin : Name = CY_CPUSS_SWJ_SWDIO_TMS(0)
     Attributes:
@@ -1994,7 +2456,119 @@ Pin : Name = CY_EINK_Ssel(0)
     {
     }
 
-Port 13 contains the following IO cells:
+Port 13 generates interrupt for logical port:
+    logicalport: Name =Pin_AnyMotion_INT
+        PORT MAP (
+             );
+        Properties:
+        {
+            cy_registers = ""
+            drive_mode = "011"
+            drive_strength = "0"
+            hotswap_needed = "0"
+            i2c_mode = "0"
+            ibuf_enabled = "1"
+            id = "3816c3f1-d930-4e65-aace-fa02ab3c1d1e"
+            init_dr_st = "0"
+            input_sync = "0"
+            intr_mode = "01"
+            io_voltage = ""
+            max_frequency = "100"
+            oe_conn = "0"
+            oe_sync = "0"
+            output_conn = "0"
+            output_current_cap = "8"
+            output_sync = "0"
+            pin_aliases = ""
+            pin_mode = "B"
+            sio_grp_cnt = 0
+            slew_rate = "0"
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
+[IoId=0]: 
+Pin : Name = Pin_AnyMotion_INT(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: RISING
+        Drive mode: RES_PULL_DOWN
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Pin_AnyMotion_INT(0)__PA ,
+        fb => Net_803 ,
+        pad => Pin_AnyMotion_INT(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = MAX_int(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: INP_DIS_HI_Z
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => MAX_int(0)__PA ,
+        pad => MAX_int(0)_PAD );
+    Properties:
+    {
+    }
+
 Clock group 0: 
     Clock Block @ F(Clock,0): 
     Clock: Name =ClockBlock
@@ -2017,8 +2591,9 @@ Clock group 0:
             wco => ClockBlock_WCO ,
             lfclk => ClockBlock_LFClk ,
             ff_div_0 => \CY_EINK_SPIM:Net_847_ff0\ ,
-            ff_div_1 => \MAX_I2C:clock_wire_ff1\ ,
-            ff_div_2 => \UART:Net_847_ff2\ ,
+            ff_div_1 => \BMI_I2C:clock_wire_ff1\ ,
+            ff_div_2 => \MAX_I2C:clock_wire_ff2\ ,
+            ff_div_3 => \UART:Net_847_ff3\ ,
             ff_div_11 => Net_700_ff11 );
         Properties:
         {
@@ -2030,7 +2605,7 @@ SCB group 0:
     SCB @ F(SCB,2): 
     SCB: Name =\MAX_I2C:SCB\
         PORT MAP (
-            clock => \MAX_I2C:clock_wire_ff1\ ,
+            clock => \MAX_I2C:clock_wire_ff2\ ,
             uart_tx => \MAX_I2C:Net_1062\ ,
             uart_rts => \MAX_I2C:Net_1053\ ,
             i2c_scl => Net_788 ,
@@ -2046,10 +2621,29 @@ SCB group 0:
             mode = 0
             requires_io_preconfigure = 1
         }
+    SCB @ F(SCB,3): 
+    SCB: Name =\BMI_I2C:SCB\
+        PORT MAP (
+            clock => \BMI_I2C:clock_wire_ff1\ ,
+            uart_tx => \BMI_I2C:Net_1062\ ,
+            uart_rts => \BMI_I2C:Net_1053\ ,
+            i2c_scl => Net_800 ,
+            i2c_sda => Net_802 ,
+            interrupt => \BMI_I2C:intr_wire\ ,
+            tr_tx_req => \BMI_I2C:Net_162\ ,
+            tr_rx_req => \BMI_I2C:Net_163\ ,
+            tr_i2c_scl_filtered => Net_801 );
+        Properties:
+        {
+            cy_registers = ""
+            master = 1
+            mode = 0
+            requires_io_preconfigure = 1
+        }
     SCB @ F(SCB,5): 
     SCB: Name =\UART:SCB\
         PORT MAP (
-            clock => \UART:Net_847_ff2\ ,
+            clock => \UART:Net_847_ff3\ ,
             uart_rx => \UART:Net_1172\ ,
             uart_tx => \UART:tx_wire\ ,
             uart_rts => \UART:rts_wire\ ,
@@ -2155,7 +2749,10 @@ Port Configuration report
 Port | Pin | Fixed |      Type |       Drive Mode |                       Name | Connections
 -----+-----+-------+-----------+------------------+----------------------------+-------------------------------
    0 |   2 |     * |      NONE |         CMOS_OUT |        CY_EINK_DispIoEn(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |               ERROR_LED(0) | 
      |   4 |     * |      NONE |      RES_PULL_UP |                     SW2(0) | FB(Net_32)
+-----+-----+-------+-----------+------------------+----------------------------+-------------------------------
+   1 |   1 |     * |      NONE |         CMOS_OUT |             WORKING_LED(0) | 
 -----+-----+-------+-----------+------------------+----------------------------+-------------------------------
    5 |   0 |     * |      NONE |      HI_Z_ANALOG |               \UART:rx(0)\ | FB(\UART:Net_1172\)
      |   1 |     * |      NONE |         CMOS_OUT |               \UART:tx(0)\ | In(\UART:tx_wire\)
@@ -2165,7 +2762,9 @@ Port | Pin | Fixed |      Type |       Drive Mode |                       Name |
      |   5 |     * |      NONE |         CMOS_OUT |       CY_EINK_Discharge(0) | 
      |   6 |     * |      NONE |         CMOS_OUT |          CY_EINK_Border(0) | 
 -----+-----+-------+-----------+------------------+----------------------------+-------------------------------
-   6 |   6 |     * |      NONE |      RES_PULL_UP |  CY_CPUSS_SWJ_SWDIO_TMS(0) | FB(CPUSS_swj_swdio_tms)
+   6 |   0 |     * |      NONE |    OPEN_DRAIN_LO |           \BMI_I2C:scl(0)\ | FB(Net_800)
+     |   1 |     * |      NONE |    OPEN_DRAIN_LO |           \BMI_I2C:sda(0)\ | FB(Net_802)
+     |   6 |     * |      NONE |      RES_PULL_UP |  CY_CPUSS_SWJ_SWDIO_TMS(0) | FB(CPUSS_swj_swdio_tms)
      |   7 |     * |      NONE |    RES_PULL_DOWN | CY_CPUSS_SWJ_SWCLK_TCLK(0) | FB(CPUSS_swj_swclk_tclk)
 -----+-----+-------+-----------+------------------+----------------------------+-------------------------------
    9 |   0 |     * |      NONE |    OPEN_DRAIN_LO |           \MAX_I2C:scl(0)\ | FB(Net_788)
@@ -2176,37 +2775,40 @@ Port | Pin | Fixed |      Type |       Drive Mode |                       Name |
      |   1 |     * |      NONE |      HI_Z_ANALOG |   \CY_EINK_SPIM:miso_m(0)\ | In(\CY_EINK_SPIM:Net_216\)
      |   2 |     * |      NONE |         CMOS_OUT |   \CY_EINK_SPIM:sclk_m(0)\ | In(\CY_EINK_SPIM:sclk_m_wire\)
      |   3 |     * |      NONE |         CMOS_OUT |            CY_EINK_Ssel(0) | 
+-----+-----+-------+-----------+------------------+----------------------------+-------------------------------
+  13 |   0 |     * |    RISING |    RES_PULL_DOWN |       Pin_AnyMotion_INT(0) | FB(Net_803)
+     |   7 |     * |      NONE |      RES_PULL_UP |                 MAX_int(0) | 
 ---------------------------------------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.057ms
-Digital Placement phase: Elapsed time ==> 10s.127ms
+Digital component placer commit/Report: Elapsed time ==> 0s.117ms
+Digital Placement phase: Elapsed time ==> 12s.814ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata" --vh2-path "Projet2Eq1_r.vh2" --pcf-path "Projet2Eq1.pco" --des-name "Projet2Eq1" --dsf-path "Projet2Eq1.dsf" --sdc-path "Projet2Eq1.sdc" --lib-path "Projet2Eq1_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.332ms
+Digital Routing phase: Elapsed time ==> 2s.848ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 1s.434ms
+Bitstream Generation phase: Elapsed time ==> 1s.580ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.001ms
+Bitstream Verification phase: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Projet2Eq1_timing.html.
-Static timing analysis phase: Elapsed time ==> 19s.348ms
+Static timing analysis phase: Elapsed time ==> 14s.654ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.000ms
+Data reporting phase: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.247ms
+Design database save phase: Elapsed time ==> 0s.284ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 39s.582ms
+cydsfit: Elapsed time ==> 40s.600ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 39s.583ms
-API generation phase: Elapsed time ==> 2s.687ms
-Dependency generation phase: Elapsed time ==> 0s.051ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 40s.622ms
+API generation phase: Elapsed time ==> 3s.052ms
+Dependency generation phase: Elapsed time ==> 0s.093ms
+Cleanup phase: Elapsed time ==> 0s.005ms

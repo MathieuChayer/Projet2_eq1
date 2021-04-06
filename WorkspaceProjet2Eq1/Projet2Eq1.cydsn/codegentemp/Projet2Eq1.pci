@@ -1,5 +1,5 @@
 # Projet2Eq1
-# 2021-03-30 19:25:15Z
+# 2021-04-06 02:40:54Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -23,3 +23,9 @@ set_io "\UART:rx(0)\" iocell 5 0
 set_io "\MAX_I2C:scl(0)\" iocell 9 0
 set_io "\MAX_I2C:sda(0)\" iocell 9 1
 set_io "MAX_power(0)" iocell 9 2
+set_io "MAX_int(0)" iocell 13 7
+set_io "Pin_AnyMotion_INT(0)" iocell 13 0
+set_io "\BMI_I2C:scl(0)\" iocell 6 0
+set_io "\BMI_I2C:sda(0)\" iocell 6 1
+set_io "ERROR_LED(0)" iocell 0 3
+set_io "WORKING_LED(0)" iocell 1 1

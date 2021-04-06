@@ -26,9 +26,12 @@
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\MAX_I2C.c" value="SOURCE_C;CortexM0p,CortexM4;;;;MAX_I2C" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\MAX_I2C.h" value="HEADER;;;;;MAX_I2C" />
+  <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\BMI_I2C.c" value="SOURCE_C;CortexM0p,CortexM4;;;;BMI_I2C" />
+  <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\BMI_I2C.h" value="HEADER;;;;;BMI_I2C" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\CY_EINK_SPIM_SCBCLK.h" value="HEADER;;;;;CY_EINK_SPIM_SCBCLK" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\MAX_I2C_SCBCLK.h" value="HEADER;;;;;MAX_I2C_SCBCLK" />
+  <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\BMI_I2C_SCBCLK.h" value="HEADER;;;;;BMI_I2C_SCBCLK" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />

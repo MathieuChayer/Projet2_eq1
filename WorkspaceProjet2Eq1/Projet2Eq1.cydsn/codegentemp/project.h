@@ -113,9 +113,11 @@
 #include "Clock_2.h"
 #include "UART.h"
 #include "MAX_I2C.h"
+#include "BMI_I2C.h"
 #include "CY_EINK_SPIM_SCBCLK.h"
 #include "UART_SCBCLK.h"
 #include "MAX_I2C_SCBCLK.h"
+#include "BMI_I2C_SCBCLK.h"
 
 /*[]*/
 

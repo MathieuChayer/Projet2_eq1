@@ -16,7 +16,8 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 13
+Number of clocks: 14
+Clock: BMI_I2C_SCBCLK       | N/A  | Target: 7.69 MHz    | 
 Clock: CY_EINK_SPIM_SCBCLK  | N/A  | Target: 100.00 MHz  | 
 Clock: CyClk_Fast           | N/A  | Target: 100.00 MHz  | 
 Clock: CyClk_HF0            | N/A  | Target: 100.00 MHz  | 

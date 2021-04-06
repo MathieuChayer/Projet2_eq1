@@ -1,6 +1,6 @@
 // ======================================================================
 // Projet2Eq1.v generated from TopDesign.cysch
-// 03/30/2021 at 15:24
+// 04/05/2021 at 22:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -833,9 +833,195 @@ module SCB_I2C_PDL_v2_0_3 (
 
 endmodule
 
+// SCB_I2C_PDL_v2_0(AcceptAddress=false, AcceptGeneralCall=false, ClkDesFrequency=7820, ClkMinusTolerance=5, ClkPlusTolerance=127.877237851662, ClockFromTerm=false, DataRate=400, DeepSleepCapable=false, EnableManualSclControl=false, EnableRxFifo=false, EnableSclAccess=false, EnableTxFifo=false, EnableWakeup=false, HighPhaseDutyCycle=8, I2cMode=0, IsEnableRxFifoVisible=true, IsMasterEnabled=true, IsSlaveVisible=false, LowPhaseDutyCycle=8, Mode=2, ShowTerminals=false, SlaveAddress=8, SlaveAddressMask=254, SymbolShape=0, CY_API_CALLBACK_HEADER_INCLUDE=, CY_COMMENT=, CY_COMPONENT_NAME=SCB_I2C_PDL_v2_0, CY_CONFIG_TITLE=BMI_I2C, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=BMI_I2C, CY_INSTANCE_SHORT_NAME=BMI_I2C, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=scb, CY_PDL_DRIVER_REQ_VERSION=2.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=BMI_I2C, )
+module SCB_I2C_PDL_v2_0_4 (
+    clock,
+    scl_b,
+    scl_trig,
+    sda_b);
+    input       clock;
+    inout       scl_b;
+    output      scl_trig;
+    inout       sda_b;
+
+
+          wire  clock_wire;
+          wire  Net_222;
+          wire  Net_223;
+          wire  Net_224;
+          wire  Net_277;
+          wire  Net_1062;
+          wire  Net_283;
+          wire  Net_1053;
+          wire  Net_282;
+          wire  Net_162;
+          wire  intr_wire;
+          wire  Net_163;
+          wire  Net_280;
+          wire [3:0] Net_87;
+          wire  Net_278;
+          wire  Net_1061;
+          wire  Net_1055;
+          wire  Net_279;
+          wire  Net_281;
+          wire  Net_1059;
+          wire  Net_847;
+
+    cy_mxs40_scb_v1_10 SCB (
+        .clock(clock_wire),
+        .i2c_scl(scl_b),
+        .i2c_sda(sda_b),
+        .interrupt(intr_wire),
+        .spi_clk_m(Net_1059),
+        .spi_clk_s(Net_281),
+        .spi_miso_m(Net_279),
+        .spi_miso_s(Net_1055),
+        .spi_mosi_m(Net_1061),
+        .spi_mosi_s(Net_278),
+        .spi_select_m(Net_87[3:0]),
+        .spi_select_s(Net_280),
+        .tr_i2c_scl_filtered(scl_trig),
+        .tr_rx_req(Net_163),
+        .tr_tx_req(Net_162),
+        .uart_cts(Net_282),
+        .uart_rts(Net_1053),
+        .uart_rx(Net_283),
+        .uart_tx(Net_1062),
+        .uart_tx_en(Net_277));
+    defparam SCB.master = 1;
+    defparam SCB.mode = 0;
+    defparam SCB.requires_io_preconfigure = 1;
+
+
+    assign Net_224 = Net_223 | Net_847;
+
+    ZeroTerminal ZeroTerminal_7 (
+        .z(Net_223));
+
+	// clock_VM (cy_virtualmux_v1_0)
+	assign clock_wire = Net_847;
+
+    ZeroTerminal ZeroTerminal_6 (
+        .z(Net_278));
+
+    ZeroTerminal ZeroTerminal_5 (
+        .z(Net_279));
+
+    ZeroTerminal ZeroTerminal_4 (
+        .z(Net_280));
+
+    ZeroTerminal ZeroTerminal_3 (
+        .z(Net_281));
+
+    ZeroTerminal ZeroTerminal_2 (
+        .z(Net_282));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_283));
+
+
+	cy_mxs40_isr_v1_0
+		#(.deepsleep_required(0),
+		  .int_type(2'b10))
+		SCB_IRQ
+		 (.int_signal(intr_wire));
+
+
+
+	cy_clock_v1_0
+		#(.id("610ab426-70b5-47e7-9d26-bd29656adaf0/b68e5b9d-7828-482d-a282-930f990e3b3e"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("127877237.851662"),
+		  .is_direct(0),
+		  .is_digital(0))
+		SCBCLK
+		 (.clock_out(Net_847));
+
+
+	wire [0:0] tmpFB_0__scl_net;
+	electrical [0:0] tmpSIOVREF__scl_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("610ab426-70b5-47e7-9d26-bd29656adaf0/69c3b5e8-b094-4d65-b96b-9f4f3a9a8641"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("4"),
+		  .ibuf_enabled("1"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("B"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		scl
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__scl_net[0:0]}),
+		  .io({scl_b}),
+		  .siovref(tmpSIOVREF__scl_net));
+
+
+	wire [0:0] tmpFB_0__sda_net;
+	electrical [0:0] tmpSIOVREF__sda_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("610ab426-70b5-47e7-9d26-bd29656adaf0/2aab8a93-e7dd-4bd4-8210-42652cd079c5"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("4"),
+		  .ibuf_enabled("1"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("B"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		sda
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__sda_net[0:0]}),
+		  .io({sda_b}),
+		  .siovref(tmpSIOVREF__sda_net));
+
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_802;
+          wire  Net_801;
+          wire  Net_800;
+          wire  Net_799;
+          wire  Net_803;
+    electrical  Net_804;
           wire  Net_789;
           wire  Net_790;
           wire  Net_788;
@@ -1306,6 +1492,164 @@ module top ;
 		  .fb({tmpFB_0__MAX_power_net[0:0]}),
 		  .io({tmpIO_0__MAX_power_net[0:0]}),
 		  .siovref(tmpSIOVREF__MAX_power_net));
+
+
+	wire [0:0] tmpFB_0__MAX_int_net;
+	wire [0:0] tmpIO_0__MAX_int_net;
+	electrical [0:0] tmpSIOVREF__MAX_int_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("c6995d70-6e23-4043-a50d-b71333ae4a38"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("2"),
+		  .ibuf_enabled("1"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("1"),
+		  .hotswap_needed("0"))
+		MAX_int
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__MAX_int_net[0:0]}),
+		  .io({tmpIO_0__MAX_int_net[0:0]}),
+		  .siovref(tmpSIOVREF__MAX_int_net),
+		  .annotation({Net_804}));
+
+
+	wire [0:0] tmpIO_0__Pin_AnyMotion_INT_net;
+	electrical [0:0] tmpSIOVREF__Pin_AnyMotion_INT_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("3816c3f1-d930-4e65-aace-fa02ab3c1d1e"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("3"),
+		  .ibuf_enabled("1"),
+		  .init_dr_st("0"),
+		  .input_sync("0"),
+		  .intr_mode("1"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		Pin_AnyMotion_INT
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({Net_803}),
+		  .io({tmpIO_0__Pin_AnyMotion_INT_net[0:0]}),
+		  .siovref(tmpSIOVREF__Pin_AnyMotion_INT_net));
+
+
+
+	cy_mxs40_isr_v1_0
+		#(.deepsleep_required(0),
+		  .int_type(2'b00))
+		SysInt_AnyMotionINT
+		 (.int_signal(Net_803));
+
+
+    SCB_I2C_PDL_v2_0_4 BMI_I2C (
+        .clock(1'b0),
+        .scl_b(Net_800),
+        .scl_trig(Net_801),
+        .sda_b(Net_802));
+
+	wire [0:0] tmpFB_0__ERROR_LED_net;
+	wire [0:0] tmpIO_0__ERROR_LED_net;
+	electrical [0:0] tmpSIOVREF__ERROR_LED_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("8fb08f0a-2d9f-4753-bc0d-3e501173702b"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("6"),
+		  .ibuf_enabled("0"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		ERROR_LED
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__ERROR_LED_net[0:0]}),
+		  .io({tmpIO_0__ERROR_LED_net[0:0]}),
+		  .siovref(tmpSIOVREF__ERROR_LED_net));
+
+
+	wire [0:0] tmpFB_0__WORKING_LED_net;
+	wire [0:0] tmpIO_0__WORKING_LED_net;
+	electrical [0:0] tmpSIOVREF__WORKING_LED_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("7602754b-bc64-438d-880c-8b52a29f1a9b"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("6"),
+		  .ibuf_enabled("0"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		WORKING_LED
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__WORKING_LED_net[0:0]}),
+		  .io({tmpIO_0__WORKING_LED_net[0:0]}),
+		  .siovref(tmpSIOVREF__WORKING_LED_net));
 
 
 
