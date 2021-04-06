@@ -95,9 +95,6 @@
 <v>Projet2Eq1\CE223727_EmWin_EInk_Display.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\cy_eink_fonts.h</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\cy_eink_library.c</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\cy_eink_library.h</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.c</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.h</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\eInk Library\pervasive_eink_configuration.h</v>
@@ -127,6 +124,9 @@
 <v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.c</v>
 <v>Projet2Eq1\Projet2Eq1\Shared Files\GUIConf.h</v>
 <v>Projet2Eq1\Projet2Eq1\Shared Files\LCDConf.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\LCDConf.h</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.c</v>
+<v>Projet2Eq1\Projet2Eq1\Shared Files\stdio_user.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -359,11 +359,12 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Projet2Eq1.cydsn\main_cm4.c" />
-<name v=".\Projet2Eq1.cydsn\stdio_user.h" />
-<name v=".\Projet2Eq1.cydsn\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\tasks.c" />
 <name v=".\Projet2Eq1.cydsn\Projet2Eq1.cydwr" />
-<name v=".\Projet2Eq1.cydsn\FreeRTOSConfig.h" />
+<name v=".\Projet2Eq1.cydsn\main_cm4.c" />
+<name v=".\Projet2Eq1.cydsn\communication.c" />
+<name v=".\Projet2Eq1.cydsn\communication.h" />
+<name v=".\BMI160\bmi160.h" />
+<name v=".\BMI160\bmi160_defs.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -371,7 +372,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="740, 446" SelectedTabbedMdiWindow="ae4dbd36-daf5-4d72-879c-71c445e1335c"><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="a593407d-c57f-4a8b-bca0-7a97413f0b17" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="ae4dbd36-daf5-4d72-879c-71c445e1335c" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\stdio_user.h" Guid="af0a1076-8a4e-488a-a8ec-e1025ebdf608" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\tasks.c" Guid="6cd1f512-72ba-4af3-bae7-c74bd6f9503f" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cydwr" Guid="cef90bd5-3706-43e6-9191-31376d892f0c" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\FreeRTOSConfig.h" Guid="5b86e18a-d545-4b4f-87d9-58373c489395" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="832, 463" SelectedTabbedMdiWindow="ae4dbd36-daf5-4d72-879c-71c445e1335c"><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="a593407d-c57f-4a8b-bca0-7a97413f0b17" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cydwr" Guid="cef90bd5-3706-43e6-9191-31376d892f0c" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="ae4dbd36-daf5-4d72-879c-71c445e1335c" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.c" Guid="2ebb1d08-4e80-4545-93df-5495aeba86ed" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.h" Guid="7ab0198d-9fd6-42c7-beca-2fc16af6c53d" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\BMI160\bmi160.h" Guid="752a7292-48e9-4e41-a54f-81af6ac1613b" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\BMI160\bmi160_defs.h" Guid="84f24cf5-71b5-42c2-a183-d70c3dcbf77d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

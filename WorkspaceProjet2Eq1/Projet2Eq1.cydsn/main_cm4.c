@@ -25,32 +25,39 @@
 /* Image buffer cache */
 uint8 imageBufferCache[CY_EINK_FRAME_SIZE] = {0};
 
-volatile uint32_t IR_data[1000]; //Buffer de la LED IR
-volatile uint32_t RED_data[1000]; //Buffer de la LED RED
+volatile uint32_t IR_data[500]; //Buffer de la LED IR
+volatile uint32_t RED_data[500]; //Buffer de la LED RED
 volatile uint8_t data = 0; //Variable temporaire de lecture/éc
+
+//FLAGS
+
+int FLAG_mesure = 1; //Flag qui indique que l'utilisateur est en mode utilisation!
 
 //Tâche principale
 void Task_principal(void)
 {
-	    
-    Start_Oxymeter();
-
-    MAX_ReadFIFO(&IR_data, &RED_data); //Lecture du FIFO --> 1000 samples@100sps = 10 secs
     
-    //Affichage des données dans TERA
-    for (int i=0;i<1000;i++)
-    {
-        printf("RED : %lu   IR : %lu\r\n",RED_data[i],IR_data[i]);
-    }
-
-    //Remettre la LED verte et fermer la LED rouge éventuellement (prochain cycle)
-    vTaskDelay(1000);
-    Cy_GPIO_Write(WORKING_LED_0_PORT,WORKING_LED_0_NUM,0);
-    Cy_GPIO_Write(ERROR_LED_0_PORT,ERROR_LED_0_NUM,1);
+    Start_Oxymeter();
     
     for(;;)
 	{  
-    
+        if(FLAG_mesure)
+        {
+            MAX_ReadFIFO(&IR_data, &RED_data); //Lecture du FIFO --> 1000 samples@100sps = 10 secs
+            
+            //Affichage des données dans TERA
+            for (int i=0;i<500;i++)
+            {
+                printf("RED : %lu   IR : %lu\r\n",RED_data[i],IR_data[i]);
+                //printf("%lu \r\n",RED_data[i]);
+                //printf("%lu \r\n",IR_data[i]);
+            }
+
+            //Remettre la LED verte et fermer la LED rouge éventuellement (prochain cycle)
+            vTaskDelay(1000);
+            Cy_GPIO_Write(WORKING_LED_0_PORT,WORKING_LED_0_NUM,0);
+            Cy_GPIO_Write(ERROR_LED_0_PORT,ERROR_LED_0_NUM,1);
+        }
 	}
 }
 
@@ -185,13 +192,23 @@ int main(void)
 {
     
     __enable_irq(); /* Enable global interrupts. */
+    
     /* Clear any pending interrupts */
+    NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
     Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
     NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
+        
     
     UART_Start(); 
     Cy_GPIO_Write(MAX_power_0_PORT,MAX_power_0_NUM, 1); //Alimentation du MAX30102
     printf("___Communication I2C__\r\n");
+    
+    for(int i =1;i<6;i++)
+    {
+        printf("%d\r\n",i);
+        Cy_SysLib_Delay(1000);   
+    }
+    
     
     /* Initialize emWin Graphics */
     GUI_Init();

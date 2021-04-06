@@ -25,6 +25,9 @@ void AnyMotion_Interrupt(void)
 {
     Cy_SysLib_Delay(200);//Debounce
     
+    //Désactiver l'interruption quand le capteur n'est pas en contexte de lecture!
+    
+    
     //Routine 
     printf("Mouvement detected! \r\n");
     Cy_GPIO_Write(WORKING_LED_0_PORT,WORKING_LED_0_NUM,1);
@@ -85,9 +88,9 @@ void MotionSensor_ConfigAnyMotionIntr(void)
    //***SENSIBILITÉ de l'intteruption***//
     
    // na - any-motion duration. This is the consecutive datapoints -> see datasheet pg32 section 2.6.1 <int_anym_dur> and pg78
-   int_config.int_type_cfg.acc_any_motion_int.anymotion_dur = 10;            
+   int_config.int_type_cfg.acc_any_motion_int.anymotion_dur = 2;            
    // na - An interrupt will be generated if the absolute value of two consecutive accelation signal exceeds the threshold value -> see datasheet pg32 section 2.6.1 <int_anym_th> and pg78 INT_MOTION[1] 
-   int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 3;          
+   int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 1;          
    // na - (2-g range) -> (anymotion_thr) * 3.91 mg, (4-g range) -> (anymotion_thr) * 7.81 mg, (8-g range) ->(anymotion_thr) * 15.63 mg, (16-g range) -> (anymotion_thr) * 31.25 mg
 
     
@@ -454,10 +457,16 @@ void MAX_init(void)
 *******************************************************************************/
 void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
 {
+    NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc); 
+    Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
+    NVIC_EnableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
     
     uint8_t temp_data_buffer[6]; //Stockage temporaire des bytes du FIFO
  
     uint32_t temp; //Stockage temporaire d'un échantillon (3 bytes) du FIFO
+    
+    
+    
     
     // Lire le FIFO en entier une fois pour supprimer les échantillons non significatifs
     for (int i=0;i<32;i++)
@@ -466,8 +475,10 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
     }
     
     // Lecture 
-    for (int i=0;i<1000;i++)
+    for (int i=0;i<500;i++)
     {
+        IR_data[i] = 0;
+        RED_data[i] = 0;
         
         while(Cy_GPIO_Read(MAX_int_0_PORT,MAX_int_0_NUM)){;} //Wait for new data in FIFO
         
@@ -499,6 +510,11 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
         //printf("%lu\r\n",IR_data[i]);
         //printf("RED : %lu   IR : %lu\r\n",RED_data[i],IR_data[i]);
     }
+    
+    NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
+	Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
+    NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc); 
+     
 
         
 }
