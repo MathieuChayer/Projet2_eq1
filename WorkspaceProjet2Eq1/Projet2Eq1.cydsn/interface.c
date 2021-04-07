@@ -33,9 +33,9 @@ void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
 void updateParameters(int param1, int param2){
 
     char str[100];
-    sprintf(str,"HR : %d bpm       SpO2: %d %%",param1, param2);
+    sprintf(str,"%d                                        %d",param1, param2);
     
-    GUI_DispStringHCenterAt(str, 129, 160);
+    GUI_DispStringHCenterAt(str, 129, 152);
 }
 
 /*******************************************************************************
@@ -119,45 +119,47 @@ void drawAffichageCourbe(void)
     {
         GUI_FillRect(127,10,135,18);
         GUI_DrawRect(187,10,195,18);
-        GUI_DrawGraph(signalCourt,200,7,58);
+        GUI_DrawGraph(signalCourt,200,7,65);
         //Gui_drawgraph(&rouge)
     }
     else
     {
         GUI_DrawRect(127,10,135,18);
         GUI_FillRect(187,10,195,18);
-        //GUI_DrawGraph(signalCourt,200,7,58); IR
+        //GUI_DrawGraph(signalCourt,200,7,65); IR
     }
     
     GUI_DrawRect(7,28,257,128); //graphique
     
-    GUI_DrawRect(7,132,107,172); //HR
+    GUI_DrawRect(7,132,132,172); //HR
     GUI_DispStringAt("HR (BPM) : ", 26, 140);
     
-    GUI_DrawRect(117,132,217,172); //SPO2
-    GUI_DispStringAt("SpO2 (%) : ", 137, 140);
+    GUI_DrawRect(137,132,257,172); //SPO2
+    GUI_DispStringAt("SpO2 (%) : ", 157, 140);
         
     
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
 }
+
 // fonction pour dessiner graphique sur 100x250 pixels avec un offset de 20
-/*
-void drawGraph(uint16_t *vecteur200elements){
-    GUI_SetPenSize(1);
-    GUI_DrawRect(7, 15, 257, 115);
-    int x1 = 7;
-    int y1 = 0;
-    int x2 = 9;
-    int y2 = 0;
-    for(uint i=0;i<200;i++){
-        y1 = (vecteur200elements[i]*50)+65;
-        y2 = (vecteur200elements[i+1]*50)+65;       
-        GUI_DrawLine(x1,y1,x2,y2);
-        x1 = x2;
-        x2 = x2 + 2;
-    }
-    
-}*/
+// semble ne pas être fonctionnelle, zut
+
+//void drawGraph(uint16_t *vecteur200elements){
+//    GUI_SetPenSize(1);
+//    GUI_DrawRect(7, 15, 257, 115);
+//    int x1 = 7;
+//    int y1 = 0;
+//    int x2 = 9;
+//    int y2 = 0;
+//    for(uint i=0;i<200;i++){
+//        y1 = (vecteur200elements[i]*50)+65;
+//        y2 = (vecteur200elements[i+1]*50)+65;       
+//        GUI_DrawLine(x1,y1,x2,y2);
+//        x1 = x2;
+//        x2 = x2 + 2;
+//    }   
+//    
+//}
 
 // écrire le code que j'aurais écrit dans main.cm4 ici
 void interface(void *pvParameters) 
@@ -186,7 +188,7 @@ void interface(void *pvParameters)
    //Write a title and subtile	
     GUI_SetFont(GUI_FONT_32B_1);
     GUI_SetTextAlign(GUI_TA_CENTER);
-    GUI_DispStringAt("GBM2110", 132, 30);
+    GUI_DispStringAt("GBM2100", 132, 30);
     GUI_SetFont(GUI_FONT_16_1);
     GUI_DispStringAt("Laboratoire 123", 132, 70);
     
@@ -208,7 +210,7 @@ void interface(void *pvParameters)
     GUI_Clear();  
     drawAffichageCourbe();
           
-    //updateParameters(70,99); 
+    updateParameters(70,99); 
     
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
     vTaskDelay(pdMS_TO_TICKS(1000));

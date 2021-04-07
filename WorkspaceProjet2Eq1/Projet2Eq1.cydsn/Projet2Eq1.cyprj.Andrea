@@ -3246,7 +3246,15 @@
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\GUI_Version.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\Global.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\LCD.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\FreeRTOS.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\list.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\mpu_wrappers.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\portable.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\projdefs.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\task.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\GCC\CM4F\portmacro.h" />
 <dep name=".\Generated_Source\PSoC6\project.h" />
+<dep name=".\FreeRTOSConfig.h" />
 <dep name=".\GUIConf.h" />
 <dep name=".\LCDConf.h" />
 <dep name=".\interface.c" />
@@ -3365,7 +3373,15 @@
 <file name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\GUI_Version.h" />
 <file name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\Global.h" />
 <file name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\LCD.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\FreeRTOS.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\list.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\mpu_wrappers.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\portable.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\projdefs.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\task.h" />
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\GCC\CM4F\portmacro.h" />
 <file name=".\Generated_Source\PSoC6\project.h" />
+<file name=".\FreeRTOSConfig.h" />
 <file name=".\GUIConf.h" />
 <file name=".\LCDConf.h" />
 <file name=".\interface.c" />
@@ -3484,13 +3500,23 @@
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\GUI_Version.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\Global.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\LCD.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\FreeRTOS.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\list.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\mpu_wrappers.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\portable.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\projdefs.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\queue.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\task.h" />
+<dep name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\GCC\CM4F\portmacro.h" />
 <dep name=".\Generated_Source\PSoC6\project.h" />
+<dep name=".\FreeRTOSConfig.h" />
 <dep name=".\GUIConf.h" />
 <dep name=".\LCDConf.h" />
 <dep name=".\interface.h" />
 <dep name=".\main_cm4.c" />
 <dep name=".\system_psoc6.h" />
 </file>
+<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\queue.h" />
 <file name=".\main_cm4.c" />
 <file name=".\CortexM4\ARM_GCC_541\Debug\GUI_X_RTOS.o">
 <dep name=".\Generated_Source\PSoC6\cyfitter.h" />
@@ -3575,16 +3601,7 @@
 <dep name=".\GUI_X_RTOS.c" />
 <dep name=".\system_psoc6.h" />
 </file>
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\FreeRTOS.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\list.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\mpu_wrappers.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\portable.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\projdefs.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\queue.h" />
 <file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\semphr.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\task.h" />
-<file name=".\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\GCC\CM4F\portmacro.h" />
-<file name=".\FreeRTOSConfig.h" />
 <file name=".\GUI_X_RTOS.c" />
 <file name=".\CortexM4\ARM_GCC_541\Debug\croutine.o">
 <dep name=".\Generated_Source\PSoC6\cyfitter.h" />
@@ -7428,7 +7445,70 @@
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" xml_contents_version="2">
-<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1" />
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.hex">
+<dep name=".\CortexM4\ARM_GCC_541\Debug\startup_psoc6_01_cm4.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\main_cm4.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\system_psoc6_cm4.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\interface.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\pervasive_eink_hardware_driver.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_eink_library.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_eink_psoc_interface.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\Cypress Logo Full Color_PNG_1bpp.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\LCDConf.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\GUI_X_RTOS.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\GUIConf.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cyfitter_sysint_cfg.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cymetadata.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\CY_EINK_SPIM.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\CY_EINK_Timer.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\Status_SW2.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_efuse.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_flash.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_gpio.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_ipc_drv.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_ipc_sema.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_ipc_pipe.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_lvd.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_profile.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_prot.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_scb_common.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_scb_i2c.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_scb_ezi2c.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_scb_spi.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_scb_uart.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_sysanalog.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_sysclk.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_sysint.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_syslib.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_syslib_gcc.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_syspm.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_systick.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_tcpwm_counter.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_tcpwm_pwm.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_tcpwm_quaddec.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_trigmux.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_wdt.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_device.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_sar.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\cy_ble_clk.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\croutine.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\event_groups.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\list.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\queue.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\tasks.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\timers.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\stream_buffer.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\port.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\heap_1.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\ADC.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\ADC_INT.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\ADC_INIT.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\ADC_PM.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\PWM.o" />
+<dep name=".\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.a" />
+</file>
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
 </name>
@@ -8048,7 +8128,7 @@
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p" v="132623021641704792" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" v="132623021757264819" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" v="132623098939521146" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
