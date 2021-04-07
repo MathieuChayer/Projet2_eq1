@@ -1,0 +1,6 @@
+C:\Users\Andrea\Documents\poly 4\Projet d'instrumentation biomedicale\Repos_Projet2\WorkspaceProjet2Eq1\WorkspaceProjet2Eq1_corrige\Projet2Eq1.cydsn\Projet2Eq1.cyprj|10f07adb-f988-4f37-bc5b-a3a2e3c838c5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ac9e5be8-267f-46d0-993b-28fdd7f68be5
+C:\Users\Andrea\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|00773e6e-6069-4a54-b147-0ac51f4b4193
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a8fbdf67-98a2-4dbb-a568-68f5fa0ea72e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6f0a7179-98f2-40cb-9932-0342b2c571ca
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9ad3a084-dfaf-48a9-934d-f9afe0c31c95
