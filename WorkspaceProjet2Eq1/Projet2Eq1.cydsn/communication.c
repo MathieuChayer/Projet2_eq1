@@ -434,13 +434,13 @@ void MAX_init(void)
     value = 0x03;
     MAX_WriteBytes(REG_MODE_CONFIG,&value); //0x02 for Red only, 0x03 for SpO2 mode 0x07 multimode LED
     
-    value = 0x27; // 0 01 001 11
-    MAX_WriteBytes(REG_SPO2_CONFIG,&value); // SPO2_ADC range = 4096nA, SPO2 sample rate (100 Hz), 18 bit resolution
+    value = 0x2B; // 0x27 -->100HZ // 0x2B --> 200Hz
+    MAX_WriteBytes(REG_SPO2_CONFIG,&value); // SPO2_ADC range = 4096nA, SPO2 sample rate (200 Hz), 18 bit resolution
     
-    value = 0x10;
+    value = 0x15;
     MAX_WriteBytes(REG_LED1_PA,&value); //Current LED1 (rouge)
     
-    value = 0x10;
+    value = 0x15;
     MAX_WriteBytes(REG_LED2_PA,&value); //Current LED2 (IR)
 
 }
@@ -475,7 +475,7 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
     }
     
     // Lecture 
-    for (int i=0;i<500;i++)
+    for (int i=0;i<1000;i++)
     {
         IR_data[i] = 0;
         RED_data[i] = 0;
