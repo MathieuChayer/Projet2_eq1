@@ -70,6 +70,7 @@
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -280,7 +281,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="977, 338" SelectedTabbedMdiWindow="bf2b05d8-e1c6-4a21-bf34-3e7e91cdbc52"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f22d5f23-dea6-4133-85aa-ba5843a4e98e" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="81cbb999-9861-4986-8620-dd295ba33243" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="cefaf2f5-22af-4b20-950b-c82fa6ce40ed" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\CMSIS\DSP\Include\arm_math.h" Guid="8b702b2a-64ca-4252-a170-1f4c7aa7eaa1" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\traitement.c" Guid="bf2b05d8-e1c6-4a21-bf34-3e7e91cdbc52" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\traitement.h" Guid="ddad27ff-734a-4010-8145-e55f8ed0d281" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="870, 489" SelectedTabbedMdiWindow="81cbb999-9861-4986-8620-dd295ba33243"><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="81cbb999-9861-4986-8620-dd295ba33243" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="cefaf2f5-22af-4b20-950b-c82fa6ce40ed" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\CMSIS\DSP\Include\arm_math.h" Guid="8b702b2a-64ca-4252-a170-1f4c7aa7eaa1" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\traitement.c" Guid="bf2b05d8-e1c6-4a21-bf34-3e7e91cdbc52" /><DocumentWindow Key="C:\Users\Ariane\Documents\PSoC Creator\Projet_eq1\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\traitement.h" Guid="ddad27ff-734a-4010-8145-e55f8ed0d281" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
