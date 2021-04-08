@@ -25,8 +25,8 @@
 /* Image buffer cache */
 uint8 imageBufferCache[CY_EINK_FRAME_SIZE] = {0};
 
-volatile uint32_t IR_data[1000]; //Buffer de la LED IR
-volatile uint32_t RED_data[1000]; //Buffer de la LED RED
+volatile uint32_t IR_data[2000]; //Buffer de la LED IR
+volatile uint32_t RED_data[2000]; //Buffer de la LED RED
 volatile uint8_t data = 0; //Variable temporaire de lecture/éc
 
 //FLAGS
@@ -46,7 +46,7 @@ void Task_principal(void)
             MAX_ReadFIFO(&IR_data, &RED_data); //Lecture du FIFO --> 1000 samples@200sps = 5 secs
             
             //Affichage des données dans TERA
-            for (int i=0;i<1000;i++)
+            for (int i=0;i<2000;i++)
             {
                 printf("RED : %lu   IR : %lu\r\n",RED_data[i],IR_data[i]);
                 //printf("%lu \r\n",RED_data[i]);

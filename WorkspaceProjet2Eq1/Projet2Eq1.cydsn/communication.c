@@ -475,7 +475,7 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
     }
     
     // Lecture 
-    for (int i=0;i<1000;i++)
+    for (int i=0;i<2000;i++)
     {
         IR_data[i] = 0;
         RED_data[i] = 0;
