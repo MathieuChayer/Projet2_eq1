@@ -18,11 +18,11 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-void acquisitionSignaux();                  // met lecture de Mathieu dans buffer circulaire (interruption = flag "Données à lire" et quand flag on traite)
-void traitementSignal(uint32_t *buffer);    // + filtres utilisés, flag mi-chemin du buffer = traitement
-uint8_t calculFrequenceCardiaque();         // va probablement avoir des params
-uint8_t calculSaturation(uint32_t AC_red, uint32_t DC_red,uint32_t AC_IR,uint32_t DC_IR);
+void traitementCompletSignaux(uint32_t *bufferRed,  uint32_t *bufferIR);
+void acquisitionSignaux(uint32_t *data_red,  uint32_t *data_IR,uint32_t *bufferRed,  uint32_t *bufferIR, uint16_t *indice);  
+uint8_t traitementSignal(uint32_t *buffer,uint32_t *bufferFiltre, uint32_t *AC,uint32_t *DC);                            
+void calculFrequenceCardiaque(uint8_t compteur, uint8_t *bpm);                             
+void calculSaturation(uint32_t AC_red, uint32_t DC_red,uint32_t AC_IR,uint32_t DC_IR, uint8_t *saturation);
 
 
 /* [] END OF FILE */

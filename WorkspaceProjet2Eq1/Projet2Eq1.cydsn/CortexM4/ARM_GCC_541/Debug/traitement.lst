@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 1
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 1
 
 
    1              		.syntax unified
@@ -20,13 +20,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 1
   17              		.text
   18              	.Ltext0:
   19              		.cfi_sections	.debug_frame
-  20              		.section	.text.acquisitionSignaux,"ax",%progbits
+  20              		.section	.text.traitementCompletSignaux,"ax",%progbits
   21              		.align	2
-  22              		.global	acquisitionSignaux
+  22              		.global	traitementCompletSignaux
   23              		.thumb
   24              		.thumb_func
-  25              		.type	acquisitionSignaux, %function
-  26              	acquisitionSignaux:
+  25              		.type	traitementCompletSignaux, %function
+  26              	traitementCompletSignaux:
   27              	.LFB589:
   28              		.file 1 "traitement.c"
    1:traitement.c  **** /* ========================================
@@ -42,2398 +42,3052 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 1
   11:traitement.c  **** */
   12:traitement.c  **** #include "traitement.h"
   13:traitement.c  **** 
-  14:traitement.c  **** 
-  15:traitement.c  **** // extern int testVar; --> communication entre Mathieu et moi pour les flag et entre moi Andréa
+  14:traitement.c  **** uint32_t bufferRed[4000];   // buffer circulaire rouge
+  15:traitement.c  **** uint32_t bufferIR[4000];    // buffer circulaire infrarouge
   16:traitement.c  **** 
-  17:traitement.c  **** 
-  18:traitement.c  **** void acquisitionSignaux()
-  19:traitement.c  **** {
-  29              		.loc 1 19 0
+  17:traitement.c  **** uint8_t  bpm = 0;
+  18:traitement.c  **** 
+  19:traitement.c  **** uint32_t AC_red = 0;
+  20:traitement.c  **** uint32_t DC_red = 0;
+  21:traitement.c  **** uint32_t AC_IR = 0;
+  22:traitement.c  **** uint32_t DC_IR = 0;
+  23:traitement.c  **** 
+  24:traitement.c  **** void traitementCompletSignaux(uint32_t *IR_data,  uint32_t *RED_data)
+  25:traitement.c  **** {
+  29              		.loc 1 25 0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 2
+
+
   33              		@ link register save eliminated.
-  34 0000 7047     		bx	lr
-  35              		.cfi_endproc
-  36              	.LFE589:
-  37              		.size	acquisitionSignaux, .-acquisitionSignaux
-  38 0002 00BF     		.section	.text.traitementSignal,"ax",%progbits
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 2
-
-
-  39              		.align	2
-  40              		.global	traitementSignal
-  41              		.thumb
-  42              		.thumb_func
-  43              		.type	traitementSignal, %function
-  44              	traitementSignal:
-  45              	.LFB590:
-  20:traitement.c  ****     
-  21:traitement.c  ****     
-  22:traitement.c  **** }
-  23:traitement.c  **** 
-  24:traitement.c  **** void traitementSignal(uint32_t *buffer)
-  25:traitement.c  **** {
-  46              		.loc 1 25 0
-  47              		.cfi_startproc
-  48              		@ args = 0, pretend = 0, frame = 0
-  49              		@ frame_needed = 0, uses_anonymous_args = 0
-  50              		@ link register save eliminated.
-  51              	.LVL0:
-  52 0000 7047     		bx	lr
-  53              		.cfi_endproc
-  54              	.LFE590:
-  55              		.size	traitementSignal, .-traitementSignal
-  56 0002 00BF     		.section	.text.calculFrequenceCardiaque,"ax",%progbits
-  57              		.align	2
-  58              		.global	calculFrequenceCardiaque
-  59              		.thumb
-  60              		.thumb_func
-  61              		.type	calculFrequenceCardiaque, %function
-  62              	calculFrequenceCardiaque:
-  63              	.LFB591:
-  26:traitement.c  ****    
-  27:traitement.c  ****     
-  28:traitement.c  **** }
-  29:traitement.c  **** 
-  30:traitement.c  **** uint8_t calculFrequenceCardiaque()
-  31:traitement.c  **** {
-  64              		.loc 1 31 0
-  65              		.cfi_startproc
-  66              		@ args = 0, pretend = 0, frame = 0
-  67              		@ frame_needed = 0, uses_anonymous_args = 0
-  68              		@ link register save eliminated.
-  32:traitement.c  ****    return 1;
-  33:traitement.c  ****     
-  34:traitement.c  **** }
-  69              		.loc 1 34 0
-  70 0000 0120     		movs	r0, #1
-  71 0002 7047     		bx	lr
-  72              		.cfi_endproc
-  73              	.LFE591:
-  74              		.size	calculFrequenceCardiaque, .-calculFrequenceCardiaque
-  75              		.section	.text.calculSaturation,"ax",%progbits
-  76              		.align	2
-  77              		.global	calculSaturation
-  78              		.thumb
-  79              		.thumb_func
-  80              		.type	calculSaturation, %function
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 3
-
-
-  81              	calculSaturation:
-  82              	.LFB592:
-  35:traitement.c  **** 
-  36:traitement.c  **** uint8_t calculSaturation(uint32_t AC_red, uint32_t DC_red,uint32_t AC_IR,uint32_t DC_IR)
-  37:traitement.c  **** {
-  83              		.loc 1 37 0
-  84              		.cfi_startproc
-  85              		@ args = 0, pretend = 0, frame = 0
-  86              		@ frame_needed = 0, uses_anonymous_args = 0
-  87              		@ link register save eliminated.
-  88              	.LVL1:
-  38:traitement.c  ****     
-  39:traitement.c  ****     return AC_red;
-  40:traitement.c  ****     
-  41:traitement.c  **** }
-  89              		.loc 1 41 0
-  90 0000 C0B2     		uxtb	r0, r0
-  91              	.LVL2:
-  92 0002 7047     		bx	lr
-  93              		.cfi_endproc
-  94              	.LFE592:
-  95              		.size	calculSaturation, .-calculSaturation
-  96              		.text
-  97              	.Letext0:
-  98              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
-  99              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 100              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
- 101              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
- 102              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
- 103              		.file 7 ".\\CMSIS\\Core\\Include/core_cm4.h"
- 104              		.file 8 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
- 105              		.file 9 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
- 106              		.section	.debug_info,"",%progbits
- 107              	.Ldebug_info0:
- 108 0000 AC070000 		.4byte	0x7ac
- 109 0004 0400     		.2byte	0x4
- 110 0006 00000000 		.4byte	.Ldebug_abbrev0
- 111 000a 04       		.byte	0x4
- 112 000b 01       		.uleb128 0x1
- 113 000c A7050000 		.4byte	.LASF154
- 114 0010 0C       		.byte	0xc
- 115 0011 24080000 		.4byte	.LASF155
- 116 0015 5F000000 		.4byte	.LASF156
- 117 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 118 001d 00000000 		.4byte	0
- 119 0021 00000000 		.4byte	.Ldebug_line0
- 120 0025 02       		.uleb128 0x2
- 121 0026 02       		.byte	0x2
- 122 0027 05       		.byte	0x5
- 123 0028 AF040000 		.4byte	.LASF0
- 124 002c 02       		.uleb128 0x2
- 125 002d 01       		.byte	0x1
- 126 002e 06       		.byte	0x6
- 127 002f 84090000 		.4byte	.LASF1
- 128 0033 03       		.uleb128 0x3
- 129 0034 F8000000 		.4byte	.LASF3
- 130 0038 02       		.byte	0x2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 4
-
-
- 131 0039 1D       		.byte	0x1d
- 132 003a 3E000000 		.4byte	0x3e
- 133 003e 02       		.uleb128 0x2
- 134 003f 01       		.byte	0x1
- 135 0040 08       		.byte	0x8
- 136 0041 C3060000 		.4byte	.LASF2
- 137 0045 03       		.uleb128 0x3
- 138 0046 73030000 		.4byte	.LASF4
- 139 004a 02       		.byte	0x2
- 140 004b 29       		.byte	0x29
- 141 004c 25000000 		.4byte	0x25
- 142 0050 03       		.uleb128 0x3
- 143 0051 E5070000 		.4byte	.LASF5
- 144 0055 02       		.byte	0x2
- 145 0056 2B       		.byte	0x2b
- 146 0057 5B000000 		.4byte	0x5b
- 147 005b 02       		.uleb128 0x2
- 148 005c 02       		.byte	0x2
- 149 005d 07       		.byte	0x7
- 150 005e 4E080000 		.4byte	.LASF6
- 151 0062 03       		.uleb128 0x3
- 152 0063 03080000 		.4byte	.LASF7
- 153 0067 02       		.byte	0x2
- 154 0068 3F       		.byte	0x3f
- 155 0069 6D000000 		.4byte	0x6d
- 156 006d 02       		.uleb128 0x2
- 157 006e 04       		.byte	0x4
- 158 006f 05       		.byte	0x5
- 159 0070 A7020000 		.4byte	.LASF8
- 160 0074 03       		.uleb128 0x3
- 161 0075 58030000 		.4byte	.LASF9
- 162 0079 02       		.byte	0x2
- 163 007a 41       		.byte	0x41
- 164 007b 7F000000 		.4byte	0x7f
- 165 007f 02       		.uleb128 0x2
- 166 0080 04       		.byte	0x4
- 167 0081 07       		.byte	0x7
- 168 0082 06040000 		.4byte	.LASF10
- 169 0086 02       		.uleb128 0x2
- 170 0087 08       		.byte	0x8
- 171 0088 05       		.byte	0x5
- 172 0089 F1010000 		.4byte	.LASF11
- 173 008d 02       		.uleb128 0x2
- 174 008e 08       		.byte	0x8
- 175 008f 07       		.byte	0x7
- 176 0090 71010000 		.4byte	.LASF12
- 177 0094 04       		.uleb128 0x4
- 178 0095 04       		.byte	0x4
- 179 0096 05       		.byte	0x5
- 180 0097 696E7400 		.ascii	"int\000"
- 181 009b 02       		.uleb128 0x2
- 182 009c 04       		.byte	0x4
- 183 009d 07       		.byte	0x7
- 184 009e CE030000 		.4byte	.LASF13
- 185 00a2 03       		.uleb128 0x3
- 186 00a3 08090000 		.4byte	.LASF14
- 187 00a7 03       		.byte	0x3
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 5
-
-
- 188 00a8 18       		.byte	0x18
- 189 00a9 33000000 		.4byte	0x33
- 190 00ad 03       		.uleb128 0x3
- 191 00ae E9010000 		.4byte	.LASF15
- 192 00b2 03       		.byte	0x3
- 193 00b3 20       		.byte	0x20
- 194 00b4 45000000 		.4byte	0x45
- 195 00b8 03       		.uleb128 0x3
- 196 00b9 D8020000 		.4byte	.LASF16
- 197 00bd 03       		.byte	0x3
- 198 00be 24       		.byte	0x24
- 199 00bf 50000000 		.4byte	0x50
- 200 00c3 03       		.uleb128 0x3
- 201 00c4 BB060000 		.4byte	.LASF17
- 202 00c8 03       		.byte	0x3
- 203 00c9 2C       		.byte	0x2c
- 204 00ca 62000000 		.4byte	0x62
- 205 00ce 03       		.uleb128 0x3
- 206 00cf BF080000 		.4byte	.LASF18
- 207 00d3 03       		.byte	0x3
- 208 00d4 30       		.byte	0x30
- 209 00d5 74000000 		.4byte	0x74
- 210 00d9 02       		.uleb128 0x2
- 211 00da 04       		.byte	0x4
- 212 00db 07       		.byte	0x7
- 213 00dc 1B050000 		.4byte	.LASF19
- 214 00e0 05       		.uleb128 0x5
- 215 00e1 CE000000 		.4byte	0xce
- 216 00e5 02       		.uleb128 0x2
- 217 00e6 08       		.byte	0x8
- 218 00e7 04       		.byte	0x4
- 219 00e8 35050000 		.4byte	.LASF20
- 220 00ec 06       		.uleb128 0x6
- 221 00ed B8       		.byte	0xb8
- 222 00ee 04       		.byte	0x4
- 223 00ef 34       		.byte	0x34
- 224 00f0 FD040000 		.4byte	0x4fd
- 225 00f4 07       		.uleb128 0x7
- 226 00f5 47010000 		.4byte	.LASF21
- 227 00f9 04       		.byte	0x4
- 228 00fa 37       		.byte	0x37
- 229 00fb CE000000 		.4byte	0xce
- 230 00ff 00       		.byte	0
- 231 0100 07       		.uleb128 0x7
- 232 0101 4D030000 		.4byte	.LASF22
- 233 0105 04       		.byte	0x4
- 234 0106 38       		.byte	0x38
- 235 0107 CE000000 		.4byte	0xce
- 236 010b 04       		.byte	0x4
- 237 010c 07       		.uleb128 0x7
- 238 010d BE020000 		.4byte	.LASF23
- 239 0111 04       		.byte	0x4
- 240 0112 39       		.byte	0x39
- 241 0113 CE000000 		.4byte	0xce
- 242 0117 08       		.byte	0x8
- 243 0118 07       		.uleb128 0x7
- 244 0119 A4060000 		.4byte	.LASF24
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 6
-
-
- 245 011d 04       		.byte	0x4
- 246 011e 3A       		.byte	0x3a
- 247 011f CE000000 		.4byte	0xce
- 248 0123 0C       		.byte	0xc
- 249 0124 07       		.uleb128 0x7
- 250 0125 B9040000 		.4byte	.LASF25
- 251 0129 04       		.byte	0x4
- 252 012a 3B       		.byte	0x3b
- 253 012b CE000000 		.4byte	0xce
- 254 012f 10       		.byte	0x10
- 255 0130 07       		.uleb128 0x7
- 256 0131 9D020000 		.4byte	.LASF26
- 257 0135 04       		.byte	0x4
- 258 0136 3C       		.byte	0x3c
- 259 0137 CE000000 		.4byte	0xce
- 260 013b 14       		.byte	0x14
- 261 013c 07       		.uleb128 0x7
- 262 013d A8080000 		.4byte	.LASF27
- 263 0141 04       		.byte	0x4
- 264 0142 3D       		.byte	0x3d
- 265 0143 CE000000 		.4byte	0xce
- 266 0147 18       		.byte	0x18
- 267 0148 07       		.uleb128 0x7
- 268 0149 D3000000 		.4byte	.LASF28
- 269 014d 04       		.byte	0x4
- 270 014e 3E       		.byte	0x3e
- 271 014f CE000000 		.4byte	0xce
- 272 0153 1C       		.byte	0x1c
- 273 0154 07       		.uleb128 0x7
- 274 0155 90090000 		.4byte	.LASF29
- 275 0159 04       		.byte	0x4
- 276 015a 3F       		.byte	0x3f
- 277 015b CE000000 		.4byte	0xce
- 278 015f 20       		.byte	0x20
- 279 0160 07       		.uleb128 0x7
- 280 0161 E8040000 		.4byte	.LASF30
- 281 0165 04       		.byte	0x4
- 282 0166 40       		.byte	0x40
- 283 0167 CE000000 		.4byte	0xce
- 284 016b 24       		.byte	0x24
- 285 016c 07       		.uleb128 0x7
- 286 016d D1090000 		.4byte	.LASF31
- 287 0171 04       		.byte	0x4
- 288 0172 43       		.byte	0x43
- 289 0173 A2000000 		.4byte	0xa2
- 290 0177 28       		.byte	0x28
- 291 0178 07       		.uleb128 0x7
- 292 0179 B6000000 		.4byte	.LASF32
- 293 017d 04       		.byte	0x4
- 294 017e 44       		.byte	0x44
- 295 017f A2000000 		.4byte	0xa2
- 296 0183 29       		.byte	0x29
- 297 0184 07       		.uleb128 0x7
- 298 0185 0D080000 		.4byte	.LASF33
- 299 0189 04       		.byte	0x4
- 300 018a 45       		.byte	0x45
- 301 018b A2000000 		.4byte	0xa2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 7
-
-
- 302 018f 2A       		.byte	0x2a
- 303 0190 07       		.uleb128 0x7
- 304 0191 8C050000 		.4byte	.LASF34
- 305 0195 04       		.byte	0x4
- 306 0196 46       		.byte	0x46
- 307 0197 A2000000 		.4byte	0xa2
- 308 019b 2B       		.byte	0x2b
- 309 019c 07       		.uleb128 0x7
- 310 019d 7A040000 		.4byte	.LASF35
- 311 01a1 04       		.byte	0x4
- 312 01a2 47       		.byte	0x47
- 313 01a3 A2000000 		.4byte	0xa2
- 314 01a7 2C       		.byte	0x2c
- 315 01a8 07       		.uleb128 0x7
- 316 01a9 17080000 		.4byte	.LASF36
- 317 01ad 04       		.byte	0x4
- 318 01ae 48       		.byte	0x48
- 319 01af A2000000 		.4byte	0xa2
- 320 01b3 2D       		.byte	0x2d
- 321 01b4 07       		.uleb128 0x7
- 322 01b5 5F020000 		.4byte	.LASF37
- 323 01b9 04       		.byte	0x4
- 324 01ba 49       		.byte	0x49
- 325 01bb A2000000 		.4byte	0xa2
- 326 01bf 2E       		.byte	0x2e
- 327 01c0 07       		.uleb128 0x7
- 328 01c1 F3040000 		.4byte	.LASF38
- 329 01c5 04       		.byte	0x4
- 330 01c6 4A       		.byte	0x4a
- 331 01c7 A2000000 		.4byte	0xa2
- 332 01cb 2F       		.byte	0x2f
- 333 01cc 07       		.uleb128 0x7
- 334 01cd 64050000 		.4byte	.LASF39
- 335 01d1 04       		.byte	0x4
- 336 01d2 4B       		.byte	0x4b
- 337 01d3 A2000000 		.4byte	0xa2
- 338 01d7 30       		.byte	0x30
- 339 01d8 07       		.uleb128 0x7
- 340 01d9 18040000 		.4byte	.LASF40
- 341 01dd 04       		.byte	0x4
- 342 01de 4E       		.byte	0x4e
- 343 01df A2000000 		.4byte	0xa2
- 344 01e3 31       		.byte	0x31
- 345 01e4 07       		.uleb128 0x7
- 346 01e5 EA000000 		.4byte	.LASF41
- 347 01e9 04       		.byte	0x4
- 348 01ea 4F       		.byte	0x4f
- 349 01eb A2000000 		.4byte	0xa2
- 350 01ef 32       		.byte	0x32
- 351 01f0 07       		.uleb128 0x7
- 352 01f1 23040000 		.4byte	.LASF42
- 353 01f5 04       		.byte	0x4
- 354 01f6 50       		.byte	0x50
- 355 01f7 A2000000 		.4byte	0xa2
- 356 01fb 33       		.byte	0x33
- 357 01fc 07       		.uleb128 0x7
- 358 01fd 02010000 		.4byte	.LASF43
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 8
-
-
- 359 0201 04       		.byte	0x4
- 360 0202 51       		.byte	0x51
- 361 0203 A2000000 		.4byte	0xa2
- 362 0207 34       		.byte	0x34
- 363 0208 07       		.uleb128 0x7
- 364 0209 82080000 		.4byte	.LASF44
- 365 020d 04       		.byte	0x4
- 366 020e 52       		.byte	0x52
- 367 020f AD000000 		.4byte	0xad
- 368 0213 36       		.byte	0x36
- 369 0214 07       		.uleb128 0x7
- 370 0215 82070000 		.4byte	.LASF45
- 371 0219 04       		.byte	0x4
- 372 021a 53       		.byte	0x53
- 373 021b AD000000 		.4byte	0xad
- 374 021f 38       		.byte	0x38
- 375 0220 07       		.uleb128 0x7
- 376 0221 E3080000 		.4byte	.LASF46
- 377 0225 04       		.byte	0x4
- 378 0226 54       		.byte	0x54
- 379 0227 AD000000 		.4byte	0xad
- 380 022b 3A       		.byte	0x3a
- 381 022c 07       		.uleb128 0x7
- 382 022d 75090000 		.4byte	.LASF47
- 383 0231 04       		.byte	0x4
- 384 0232 55       		.byte	0x55
- 385 0233 A2000000 		.4byte	0xa2
- 386 0237 3C       		.byte	0x3c
- 387 0238 07       		.uleb128 0x7
- 388 0239 FD020000 		.4byte	.LASF48
- 389 023d 04       		.byte	0x4
- 390 023e 56       		.byte	0x56
- 391 023f A2000000 		.4byte	0xa2
- 392 0243 3D       		.byte	0x3d
- 393 0244 07       		.uleb128 0x7
- 394 0245 64070000 		.4byte	.LASF49
- 395 0249 04       		.byte	0x4
- 396 024a 57       		.byte	0x57
- 397 024b A2000000 		.4byte	0xa2
- 398 024f 3E       		.byte	0x3e
- 399 0250 07       		.uleb128 0x7
- 400 0251 58010000 		.4byte	.LASF50
- 401 0255 04       		.byte	0x4
- 402 0256 58       		.byte	0x58
- 403 0257 A2000000 		.4byte	0xa2
- 404 025b 3F       		.byte	0x3f
- 405 025c 07       		.uleb128 0x7
- 406 025d 9A050000 		.4byte	.LASF51
- 407 0261 04       		.byte	0x4
- 408 0262 59       		.byte	0x59
- 409 0263 A2000000 		.4byte	0xa2
- 410 0267 40       		.byte	0x40
- 411 0268 07       		.uleb128 0x7
- 412 0269 63030000 		.4byte	.LASF52
- 413 026d 04       		.byte	0x4
- 414 026e 5A       		.byte	0x5a
- 415 026f A2000000 		.4byte	0xa2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 9
-
-
- 416 0273 41       		.byte	0x41
- 417 0274 07       		.uleb128 0x7
- 418 0275 58050000 		.4byte	.LASF53
- 419 0279 04       		.byte	0x4
- 420 027a 5B       		.byte	0x5b
- 421 027b A2000000 		.4byte	0xa2
- 422 027f 42       		.byte	0x42
- 423 0280 07       		.uleb128 0x7
- 424 0281 81050000 		.4byte	.LASF54
- 425 0285 04       		.byte	0x4
- 426 0286 5C       		.byte	0x5c
- 427 0287 A2000000 		.4byte	0xa2
- 428 028b 43       		.byte	0x43
- 429 028c 07       		.uleb128 0x7
- 430 028d C7020000 		.4byte	.LASF55
- 431 0291 04       		.byte	0x4
- 432 0292 5D       		.byte	0x5d
- 433 0293 A2000000 		.4byte	0xa2
- 434 0297 44       		.byte	0x44
- 435 0298 07       		.uleb128 0x7
- 436 0299 00000000 		.4byte	.LASF56
- 437 029d 04       		.byte	0x4
- 438 029e 5E       		.byte	0x5e
- 439 029f CE000000 		.4byte	0xce
- 440 02a3 48       		.byte	0x48
- 441 02a4 07       		.uleb128 0x7
- 442 02a5 B0020000 		.4byte	.LASF57
- 443 02a9 04       		.byte	0x4
- 444 02aa 5F       		.byte	0x5f
- 445 02ab CE000000 		.4byte	0xce
- 446 02af 4C       		.byte	0x4c
- 447 02b0 07       		.uleb128 0x7
- 448 02b1 DE090000 		.4byte	.LASF58
- 449 02b5 04       		.byte	0x4
- 450 02b6 60       		.byte	0x60
- 451 02b7 A2000000 		.4byte	0xa2
- 452 02bb 50       		.byte	0x50
- 453 02bc 07       		.uleb128 0x7
- 454 02bd C3010000 		.4byte	.LASF59
- 455 02c1 04       		.byte	0x4
- 456 02c2 61       		.byte	0x61
- 457 02c3 A2000000 		.4byte	0xa2
- 458 02c7 51       		.byte	0x51
- 459 02c8 07       		.uleb128 0x7
- 460 02c9 F8080000 		.4byte	.LASF60
- 461 02cd 04       		.byte	0x4
- 462 02ce 62       		.byte	0x62
- 463 02cf A2000000 		.4byte	0xa2
- 464 02d3 52       		.byte	0x52
- 465 02d4 07       		.uleb128 0x7
- 466 02d5 BF090000 		.4byte	.LASF61
- 467 02d9 04       		.byte	0x4
- 468 02da 63       		.byte	0x63
- 469 02db A2000000 		.4byte	0xa2
- 470 02df 53       		.byte	0x53
- 471 02e0 07       		.uleb128 0x7
- 472 02e1 72070000 		.4byte	.LASF62
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 10
-
-
- 473 02e5 04       		.byte	0x4
- 474 02e6 64       		.byte	0x64
- 475 02e7 A2000000 		.4byte	0xa2
- 476 02eb 54       		.byte	0x54
- 477 02ec 07       		.uleb128 0x7
- 478 02ed D5010000 		.4byte	.LASF63
- 479 02f1 04       		.byte	0x4
- 480 02f2 65       		.byte	0x65
- 481 02f3 A2000000 		.4byte	0xa2
- 482 02f7 55       		.byte	0x55
- 483 02f8 07       		.uleb128 0x7
- 484 02f9 D1070000 		.4byte	.LASF64
- 485 02fd 04       		.byte	0x4
- 486 02fe 66       		.byte	0x66
- 487 02ff A2000000 		.4byte	0xa2
- 488 0303 56       		.byte	0x56
- 489 0304 07       		.uleb128 0x7
- 490 0305 2F040000 		.4byte	.LASF65
- 491 0309 04       		.byte	0x4
- 492 030a 67       		.byte	0x67
- 493 030b A2000000 		.4byte	0xa2
- 494 030f 57       		.byte	0x57
- 495 0310 07       		.uleb128 0x7
- 496 0311 24000000 		.4byte	.LASF66
- 497 0315 04       		.byte	0x4
- 498 0316 68       		.byte	0x68
- 499 0317 A2000000 		.4byte	0xa2
- 500 031b 58       		.byte	0x58
- 501 031c 07       		.uleb128 0x7
- 502 031d D1060000 		.4byte	.LASF67
- 503 0321 04       		.byte	0x4
- 504 0322 69       		.byte	0x69
- 505 0323 A2000000 		.4byte	0xa2
- 506 0327 59       		.byte	0x59
- 507 0328 07       		.uleb128 0x7
- 508 0329 24050000 		.4byte	.LASF68
- 509 032d 04       		.byte	0x4
- 510 032e 6E       		.byte	0x6e
- 511 032f B8000000 		.4byte	0xb8
- 512 0333 5A       		.byte	0x5a
- 513 0334 07       		.uleb128 0x7
- 514 0335 61080000 		.4byte	.LASF69
- 515 0339 04       		.byte	0x4
- 516 033a 6F       		.byte	0x6f
- 517 033b B8000000 		.4byte	0xb8
- 518 033f 5C       		.byte	0x5c
- 519 0340 07       		.uleb128 0x7
- 520 0341 C4000000 		.4byte	.LASF70
- 521 0345 04       		.byte	0x4
- 522 0346 70       		.byte	0x70
- 523 0347 A2000000 		.4byte	0xa2
- 524 034b 5E       		.byte	0x5e
- 525 034c 07       		.uleb128 0x7
- 526 034d 8E060000 		.4byte	.LASF71
- 527 0351 04       		.byte	0x4
- 528 0352 71       		.byte	0x71
- 529 0353 A2000000 		.4byte	0xa2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 11
-
-
- 530 0357 5F       		.byte	0x5f
- 531 0358 07       		.uleb128 0x7
- 532 0359 70050000 		.4byte	.LASF72
- 533 035d 04       		.byte	0x4
- 534 035e 72       		.byte	0x72
- 535 035f A2000000 		.4byte	0xa2
- 536 0363 60       		.byte	0x60
- 537 0364 07       		.uleb128 0x7
- 538 0365 67060000 		.4byte	.LASF73
- 539 0369 04       		.byte	0x4
- 540 036a 73       		.byte	0x73
- 541 036b CE000000 		.4byte	0xce
- 542 036f 64       		.byte	0x64
- 543 0370 07       		.uleb128 0x7
- 544 0371 97010000 		.4byte	.LASF74
- 545 0375 04       		.byte	0x4
- 546 0376 76       		.byte	0x76
- 547 0377 B8000000 		.4byte	0xb8
- 548 037b 68       		.byte	0x68
- 549 037c 07       		.uleb128 0x7
- 550 037d F4030000 		.4byte	.LASF75
- 551 0381 04       		.byte	0x4
- 552 0382 77       		.byte	0x77
- 553 0383 B8000000 		.4byte	0xb8
- 554 0387 6A       		.byte	0x6a
- 555 0388 07       		.uleb128 0x7
- 556 0389 43040000 		.4byte	.LASF76
- 557 038d 04       		.byte	0x4
- 558 038e 78       		.byte	0x78
- 559 038f B8000000 		.4byte	0xb8
- 560 0393 6C       		.byte	0x6c
- 561 0394 07       		.uleb128 0x7
- 562 0395 8D070000 		.4byte	.LASF77
- 563 0399 04       		.byte	0x4
- 564 039a 79       		.byte	0x79
- 565 039b B8000000 		.4byte	0xb8
- 566 039f 6E       		.byte	0x6e
- 567 03a0 07       		.uleb128 0x7
- 568 03a1 3F070000 		.4byte	.LASF78
- 569 03a5 04       		.byte	0x4
- 570 03a6 7B       		.byte	0x7b
- 571 03a7 A2000000 		.4byte	0xa2
- 572 03ab 70       		.byte	0x70
- 573 03ac 07       		.uleb128 0x7
- 574 03ad 34020000 		.4byte	.LASF79
- 575 03b1 04       		.byte	0x4
- 576 03b2 7C       		.byte	0x7c
- 577 03b3 A2000000 		.4byte	0xa2
- 578 03b7 71       		.byte	0x71
- 579 03b8 07       		.uleb128 0x7
- 580 03b9 A9090000 		.4byte	.LASF80
- 581 03bd 04       		.byte	0x4
- 582 03be 7D       		.byte	0x7d
- 583 03bf A2000000 		.4byte	0xa2
- 584 03c3 72       		.byte	0x72
- 585 03c4 07       		.uleb128 0x7
- 586 03c5 41050000 		.4byte	.LASF81
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 12
-
-
- 587 03c9 04       		.byte	0x4
- 588 03ca 7E       		.byte	0x7e
- 589 03cb A2000000 		.4byte	0xa2
- 590 03cf 73       		.byte	0x73
- 591 03d0 07       		.uleb128 0x7
- 592 03d1 27030000 		.4byte	.LASF82
- 593 03d5 04       		.byte	0x4
- 594 03d6 80       		.byte	0x80
- 595 03d7 B8000000 		.4byte	0xb8
- 596 03db 74       		.byte	0x74
- 597 03dc 07       		.uleb128 0x7
- 598 03dd F0070000 		.4byte	.LASF83
- 599 03e1 04       		.byte	0x4
- 600 03e2 81       		.byte	0x81
- 601 03e3 B8000000 		.4byte	0xb8
- 602 03e7 76       		.byte	0x76
- 603 03e8 07       		.uleb128 0x7
- 604 03e9 E8020000 		.4byte	.LASF84
- 605 03ed 04       		.byte	0x4
- 606 03ee 82       		.byte	0x82
- 607 03ef B8000000 		.4byte	0xb8
- 608 03f3 78       		.byte	0x78
- 609 03f4 07       		.uleb128 0x7
- 610 03f5 F2060000 		.4byte	.LASF85
- 611 03f9 04       		.byte	0x4
- 612 03fa 83       		.byte	0x83
- 613 03fb B8000000 		.4byte	0xb8
- 614 03ff 7A       		.byte	0x7a
- 615 0400 07       		.uleb128 0x7
- 616 0401 3A090000 		.4byte	.LASF86
- 617 0405 04       		.byte	0x4
- 618 0406 86       		.byte	0x86
- 619 0407 A2000000 		.4byte	0xa2
- 620 040b 7C       		.byte	0x7c
- 621 040c 07       		.uleb128 0x7
- 622 040d 69040000 		.4byte	.LASF87
- 623 0411 04       		.byte	0x4
- 624 0412 87       		.byte	0x87
- 625 0413 A2000000 		.4byte	0xa2
- 626 0417 7D       		.byte	0x7d
- 627 0418 07       		.uleb128 0x7
- 628 0419 38000000 		.4byte	.LASF88
- 629 041d 04       		.byte	0x4
- 630 041e 88       		.byte	0x88
- 631 041f A2000000 		.4byte	0xa2
- 632 0423 7E       		.byte	0x7e
- 633 0424 07       		.uleb128 0x7
- 634 0425 39030000 		.4byte	.LASF89
- 635 0429 04       		.byte	0x4
- 636 042a 89       		.byte	0x89
- 637 042b A2000000 		.4byte	0xa2
- 638 042f 7F       		.byte	0x7f
- 639 0430 07       		.uleb128 0x7
- 640 0431 A5030000 		.4byte	.LASF90
- 641 0435 04       		.byte	0x4
- 642 0436 8A       		.byte	0x8a
- 643 0437 A2000000 		.4byte	0xa2
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 13
-
-
- 644 043b 80       		.byte	0x80
- 645 043c 07       		.uleb128 0x7
- 646 043d D1040000 		.4byte	.LASF91
- 647 0441 04       		.byte	0x4
- 648 0442 8D       		.byte	0x8d
- 649 0443 CE000000 		.4byte	0xce
- 650 0447 84       		.byte	0x84
- 651 0448 07       		.uleb128 0x7
- 652 0449 13010000 		.4byte	.LASF92
- 653 044d 04       		.byte	0x4
- 654 044e 8E       		.byte	0x8e
- 655 044f CE000000 		.4byte	0xce
- 656 0453 88       		.byte	0x88
- 657 0454 07       		.uleb128 0x7
- 658 0455 25090000 		.4byte	.LASF93
- 659 0459 04       		.byte	0x4
- 660 045a 8F       		.byte	0x8f
- 661 045b CE000000 		.4byte	0xce
- 662 045f 8C       		.byte	0x8c
- 663 0460 07       		.uleb128 0x7
- 664 0461 B9030000 		.4byte	.LASF94
- 665 0465 04       		.byte	0x4
- 666 0466 90       		.byte	0x90
- 667 0467 CE000000 		.4byte	0xce
- 668 046b 90       		.byte	0x90
- 669 046c 07       		.uleb128 0x7
- 670 046d 86030000 		.4byte	.LASF95
- 671 0471 04       		.byte	0x4
- 672 0472 91       		.byte	0x91
- 673 0473 CE000000 		.4byte	0xce
- 674 0477 94       		.byte	0x94
- 675 0478 07       		.uleb128 0x7
- 676 0479 49020000 		.4byte	.LASF96
- 677 047d 04       		.byte	0x4
- 678 047e 92       		.byte	0x92
- 679 047f CE000000 		.4byte	0xce
- 680 0483 98       		.byte	0x98
- 681 0484 07       		.uleb128 0x7
- 682 0485 5F090000 		.4byte	.LASF97
- 683 0489 04       		.byte	0x4
- 684 048a 93       		.byte	0x93
- 685 048b CE000000 		.4byte	0xce
- 686 048f 9C       		.byte	0x9c
- 687 0490 07       		.uleb128 0x7
- 688 0491 A7010000 		.4byte	.LASF98
- 689 0495 04       		.byte	0x4
- 690 0496 94       		.byte	0x94
- 691 0497 CE000000 		.4byte	0xce
- 692 049b A0       		.byte	0xa0
- 693 049c 07       		.uleb128 0x7
- 694 049d 6A020000 		.4byte	.LASF99
- 695 04a1 04       		.byte	0x4
- 696 04a2 95       		.byte	0x95
- 697 04a3 B8000000 		.4byte	0xb8
- 698 04a7 A4       		.byte	0xa4
- 699 04a8 07       		.uleb128 0x7
- 700 04a9 9A070000 		.4byte	.LASF100
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 14
-
-
- 701 04ad 04       		.byte	0x4
- 702 04ae 96       		.byte	0x96
- 703 04af B8000000 		.4byte	0xb8
- 704 04b3 A6       		.byte	0xa6
- 705 04b4 07       		.uleb128 0x7
- 706 04b5 82060000 		.4byte	.LASF101
- 707 04b9 04       		.byte	0x4
- 708 04ba 97       		.byte	0x97
- 709 04bb B8000000 		.4byte	0xb8
- 710 04bf A8       		.byte	0xa8
- 711 04c0 07       		.uleb128 0x7
- 712 04c1 19070000 		.4byte	.LASF102
- 713 04c5 04       		.byte	0x4
- 714 04c6 98       		.byte	0x98
- 715 04c7 B8000000 		.4byte	0xb8
- 716 04cb AA       		.byte	0xaa
- 717 04cc 07       		.uleb128 0x7
- 718 04cd 52040000 		.4byte	.LASF103
- 719 04d1 04       		.byte	0x4
- 720 04d2 99       		.byte	0x99
- 721 04d3 B8000000 		.4byte	0xb8
- 722 04d7 AC       		.byte	0xac
- 723 04d8 07       		.uleb128 0x7
- 724 04d9 DC000000 		.4byte	.LASF104
- 725 04dd 04       		.byte	0x4
- 726 04de 9A       		.byte	0x9a
- 727 04df B8000000 		.4byte	0xb8
- 728 04e3 AE       		.byte	0xae
- 729 04e4 07       		.uleb128 0x7
- 730 04e5 74080000 		.4byte	.LASF105
- 731 04e9 04       		.byte	0x4
- 732 04ea 9D       		.byte	0x9d
- 733 04eb B8000000 		.4byte	0xb8
- 734 04ef B0       		.byte	0xb0
- 735 04f0 07       		.uleb128 0x7
- 736 04f1 4B000000 		.4byte	.LASF106
- 737 04f5 04       		.byte	0x4
- 738 04f6 9E       		.byte	0x9e
- 739 04f7 CE000000 		.4byte	0xce
- 740 04fb B4       		.byte	0xb4
- 741 04fc 00       		.byte	0
- 742 04fd 03       		.uleb128 0x3
- 743 04fe 86040000 		.4byte	.LASF107
- 744 0502 04       		.byte	0x4
- 745 0503 9F       		.byte	0x9f
- 746 0504 EC000000 		.4byte	0xec
- 747 0508 02       		.uleb128 0x2
- 748 0509 01       		.byte	0x1
- 749 050a 08       		.byte	0x8
- 750 050b CC070000 		.4byte	.LASF108
- 751 050f 02       		.uleb128 0x2
- 752 0510 04       		.byte	0x4
- 753 0511 04       		.byte	0x4
- 754 0512 61060000 		.4byte	.LASF109
- 755 0516 02       		.uleb128 0x2
- 756 0517 08       		.byte	0x8
- 757 0518 04       		.byte	0x4
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 15
-
-
- 758 0519 E1020000 		.4byte	.LASF110
- 759 051d 08       		.uleb128 0x8
- 760 051e 04       		.byte	0x4
- 761 051f CE000000 		.4byte	0xce
- 762 0523 09       		.uleb128 0x9
- 763 0524 04       		.byte	0x4
- 764 0525 02       		.uleb128 0x2
- 765 0526 01       		.byte	0x1
- 766 0527 02       		.byte	0x2
- 767 0528 C8080000 		.4byte	.LASF111
- 768 052c 08       		.uleb128 0x8
- 769 052d 04       		.byte	0x4
- 770 052e 32050000 		.4byte	0x532
- 771 0532 0A       		.uleb128 0xa
- 772 0533 3D050000 		.4byte	0x53d
- 773 0537 0B       		.uleb128 0xb
- 774 0538 CE000000 		.4byte	0xce
- 775 053c 00       		.byte	0
- 776 053d 0C       		.uleb128 0xc
- 777 053e 7F020000 		.4byte	.LASF112
- 778 0542 05       		.byte	0x5
- 779 0543 F201     		.2byte	0x1f2
- 780 0545 2C050000 		.4byte	0x52c
- 781 0549 0D       		.uleb128 0xd
- 782 054a 1D020000 		.4byte	.LASF123
- 783 054e 24       		.byte	0x24
- 784 054f 05       		.byte	0x5
- 785 0550 7402     		.2byte	0x274
- 786 0552 CC050000 		.4byte	0x5cc
- 787 0556 0E       		.uleb128 0xe
- 788 0557 38070000 		.4byte	.LASF113
- 789 055b 05       		.byte	0x5
- 790 055c 7702     		.2byte	0x277
- 791 055e E0000000 		.4byte	0xe0
- 792 0562 00       		.byte	0
- 793 0563 0E       		.uleb128 0xe
- 794 0564 B9080000 		.4byte	.LASF114
- 795 0568 05       		.byte	0x5
- 796 0569 7902     		.2byte	0x279
- 797 056b 23050000 		.4byte	0x523
- 798 056f 04       		.byte	0x4
- 799 0570 0E       		.uleb128 0xe
- 800 0571 1A000000 		.4byte	.LASF115
- 801 0575 05       		.byte	0x5
- 802 0576 7A02     		.2byte	0x27a
- 803 0578 CE000000 		.4byte	0xce
- 804 057c 08       		.byte	0x8
- 805 057d 0E       		.uleb128 0xe
- 806 057e 7D030000 		.4byte	.LASF116
- 807 0582 05       		.byte	0x5
- 808 0583 7B02     		.2byte	0x27b
- 809 0585 E0000000 		.4byte	0xe0
- 810 0589 0C       		.byte	0xc
- 811 058a 0E       		.uleb128 0xe
- 812 058b BD010000 		.4byte	.LASF117
- 813 058f 05       		.byte	0x5
- 814 0590 7D02     		.2byte	0x27d
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 16
-
-
- 815 0592 23050000 		.4byte	0x523
- 816 0596 10       		.byte	0x10
- 817 0597 0E       		.uleb128 0xe
- 818 0598 9B030000 		.4byte	.LASF118
- 819 059c 05       		.byte	0x5
- 820 059d 7E02     		.2byte	0x27e
- 821 059f CE000000 		.4byte	0xce
- 822 05a3 14       		.byte	0x14
- 823 05a4 0E       		.uleb128 0xe
- 824 05a5 EF090000 		.4byte	.LASF119
- 825 05a9 05       		.byte	0x5
- 826 05aa 7F02     		.2byte	0x27f
- 827 05ac E0000000 		.4byte	0xe0
- 828 05b0 18       		.byte	0x18
- 829 05b1 0E       		.uleb128 0xe
- 830 05b2 60040000 		.4byte	.LASF120
- 831 05b6 05       		.byte	0x5
- 832 05b7 8502     		.2byte	0x285
- 833 05b9 3D050000 		.4byte	0x53d
- 834 05bd 1C       		.byte	0x1c
- 835 05be 0E       		.uleb128 0xe
- 836 05bf B1080000 		.4byte	.LASF121
- 837 05c3 05       		.byte	0x5
- 838 05c4 8802     		.2byte	0x288
- 839 05c6 CE000000 		.4byte	0xce
- 840 05ca 20       		.byte	0x20
- 841 05cb 00       		.byte	0
- 842 05cc 0C       		.uleb128 0xc
- 843 05cd 96040000 		.4byte	.LASF122
- 844 05d1 05       		.byte	0x5
- 845 05d2 8B02     		.2byte	0x28b
- 846 05d4 49050000 		.4byte	0x549
- 847 05d8 0F       		.uleb128 0xf
- 848 05d9 FF040000 		.4byte	.LASF124
- 849 05dd 4C       		.byte	0x4c
- 850 05de 06       		.byte	0x6
- 851 05df 2F       		.byte	0x2f
- 852 05e0 C9060000 		.4byte	0x6c9
- 853 05e4 07       		.uleb128 0x7
- 854 05e5 51010000 		.4byte	.LASF125
- 855 05e9 06       		.byte	0x6
- 856 05ea 31       		.byte	0x31
- 857 05eb CE000000 		.4byte	0xce
- 858 05ef 00       		.byte	0
- 859 05f0 07       		.uleb128 0x7
- 860 05f1 88010000 		.4byte	.LASF126
- 861 05f5 06       		.byte	0x6
- 862 05f6 33       		.byte	0x33
- 863 05f7 CE000000 		.4byte	0xce
- 864 05fb 04       		.byte	0x4
- 865 05fc 07       		.uleb128 0x7
- 866 05fd 12000000 		.4byte	.LASF127
- 867 0601 06       		.byte	0x6
- 868 0602 34       		.byte	0x34
- 869 0603 CE000000 		.4byte	0xce
- 870 0607 08       		.byte	0x8
- 871 0608 07       		.uleb128 0x7
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 17
-
-
- 872 0609 2A010000 		.4byte	.LASF128
- 873 060d 06       		.byte	0x6
- 874 060e 35       		.byte	0x35
- 875 060f CE000000 		.4byte	0xce
- 876 0613 0C       		.byte	0xc
- 877 0614 07       		.uleb128 0x7
- 878 0615 53070000 		.4byte	.LASF129
- 879 0619 06       		.byte	0x6
- 880 061a 37       		.byte	0x37
- 881 061b CE000000 		.4byte	0xce
- 882 061f 10       		.byte	0x10
- 883 0620 07       		.uleb128 0x7
- 884 0621 AF070000 		.4byte	.LASF130
- 885 0625 06       		.byte	0x6
- 886 0626 38       		.byte	0x38
- 887 0627 CE000000 		.4byte	0xce
- 888 062b 14       		.byte	0x14
- 889 062c 07       		.uleb128 0x7
- 890 062d B8070000 		.4byte	.LASF131
- 891 0631 06       		.byte	0x6
- 892 0632 39       		.byte	0x39
- 893 0633 CE000000 		.4byte	0xce
- 894 0637 18       		.byte	0x18
- 895 0638 07       		.uleb128 0x7
- 896 0639 07070000 		.4byte	.LASF132
- 897 063d 06       		.byte	0x6
- 898 063e 3A       		.byte	0x3a
- 899 063f 25050000 		.4byte	0x525
- 900 0643 1C       		.byte	0x1c
- 901 0644 07       		.uleb128 0x7
- 902 0645 31080000 		.4byte	.LASF133
- 903 0649 06       		.byte	0x6
- 904 064a 3C       		.byte	0x3c
- 905 064b CE000000 		.4byte	0xce
- 906 064f 20       		.byte	0x20
- 907 0650 07       		.uleb128 0x7
- 908 0651 16030000 		.4byte	.LASF134
- 909 0655 06       		.byte	0x6
- 910 0656 3D       		.byte	0x3d
- 911 0657 CE000000 		.4byte	0xce
- 912 065b 24       		.byte	0x24
- 913 065c 07       		.uleb128 0x7
- 914 065d 64010000 		.4byte	.LASF135
- 915 0661 06       		.byte	0x6
- 916 0662 3F       		.byte	0x3f
- 917 0663 CE000000 		.4byte	0xce
- 918 0667 28       		.byte	0x28
- 919 0668 07       		.uleb128 0x7
- 920 0669 4F090000 		.4byte	.LASF136
- 921 066d 06       		.byte	0x6
- 922 066e 40       		.byte	0x40
- 923 066f CE000000 		.4byte	0xce
- 924 0673 2C       		.byte	0x2c
- 925 0674 07       		.uleb128 0x7
- 926 0675 42080000 		.4byte	.LASF137
- 927 0679 06       		.byte	0x6
- 928 067a 42       		.byte	0x42
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 18
-
-
- 929 067b CE000000 		.4byte	0xce
- 930 067f 30       		.byte	0x30
- 931 0680 07       		.uleb128 0x7
- 932 0681 AC060000 		.4byte	.LASF138
- 933 0685 06       		.byte	0x6
- 934 0686 43       		.byte	0x43
- 935 0687 CE000000 		.4byte	0xce
- 936 068b 34       		.byte	0x34
- 937 068c 07       		.uleb128 0x7
- 938 068d F8090000 		.4byte	.LASF139
- 939 0691 06       		.byte	0x6
- 940 0692 45       		.byte	0x45
- 941 0693 CE000000 		.4byte	0xce
- 942 0697 38       		.byte	0x38
- 943 0698 07       		.uleb128 0x7
- 944 0699 39010000 		.4byte	.LASF140
- 945 069d 06       		.byte	0x6
- 946 069e 46       		.byte	0x46
- 947 069f CE000000 		.4byte	0xce
- 948 06a3 3C       		.byte	0x3c
- 949 06a4 07       		.uleb128 0x7
- 950 06a5 6A080000 		.4byte	.LASF141
- 951 06a9 06       		.byte	0x6
- 952 06aa 48       		.byte	0x48
- 953 06ab CE000000 		.4byte	0xce
- 954 06af 40       		.byte	0x40
- 955 06b0 07       		.uleb128 0x7
- 956 06b1 C2040000 		.4byte	.LASF142
- 957 06b5 06       		.byte	0x6
- 958 06b6 49       		.byte	0x49
- 959 06b7 CE000000 		.4byte	0xce
- 960 06bb 44       		.byte	0x44
- 961 06bc 07       		.uleb128 0x7
- 962 06bd C1070000 		.4byte	.LASF143
- 963 06c1 06       		.byte	0x6
- 964 06c2 4B       		.byte	0x4b
- 965 06c3 CE000000 		.4byte	0xce
- 966 06c7 48       		.byte	0x48
- 967 06c8 00       		.byte	0
- 968 06c9 03       		.uleb128 0x3
- 969 06ca FF010000 		.4byte	.LASF144
- 970 06ce 06       		.byte	0x6
- 971 06cf 4C       		.byte	0x4c
- 972 06d0 D8050000 		.4byte	0x5d8
- 973 06d4 10       		.uleb128 0x10
- 974 06d5 DB030000 		.4byte	.LASF157
- 975 06d9 01       		.byte	0x1
- 976 06da 12       		.byte	0x12
- 977 06db 00000000 		.4byte	.LFB589
- 978 06df 02000000 		.4byte	.LFE589-.LFB589
- 979 06e3 01       		.uleb128 0x1
- 980 06e4 9C       		.byte	0x9c
- 981 06e5 11       		.uleb128 0x11
- 982 06e6 98090000 		.4byte	.LASF158
- 983 06ea 01       		.byte	0x1
- 984 06eb 18       		.byte	0x18
- 985 06ec 00000000 		.4byte	.LFB590
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 19
-
-
- 986 06f0 02000000 		.4byte	.LFE590-.LFB590
- 987 06f4 01       		.uleb128 0x1
- 988 06f5 9C       		.byte	0x9c
- 989 06f6 08070000 		.4byte	0x708
- 990 06fa 12       		.uleb128 0x12
- 991 06fb 08030000 		.4byte	.LASF145
- 992 06ff 01       		.byte	0x1
- 993 0700 18       		.byte	0x18
- 994 0701 1D050000 		.4byte	0x51d
- 995 0705 01       		.uleb128 0x1
- 996 0706 50       		.byte	0x50
- 997 0707 00       		.byte	0
- 998 0708 13       		.uleb128 0x13
- 999 0709 8F080000 		.4byte	.LASF159
- 1000 070d 01       		.byte	0x1
- 1001 070e 1E       		.byte	0x1e
- 1002 070f A2000000 		.4byte	0xa2
- 1003 0713 00000000 		.4byte	.LFB591
- 1004 0717 04000000 		.4byte	.LFE591-.LFB591
- 1005 071b 01       		.uleb128 0x1
- 1006 071c 9C       		.byte	0x9c
- 1007 071d 14       		.uleb128 0x14
- 1008 071e 27070000 		.4byte	.LASF160
- 1009 0722 01       		.byte	0x1
- 1010 0723 24       		.byte	0x24
- 1011 0724 A2000000 		.4byte	0xa2
- 1012 0728 00000000 		.4byte	.LFB592
- 1013 072c 04000000 		.4byte	.LFE592-.LFB592
- 1014 0730 01       		.uleb128 0x1
- 1015 0731 9C       		.byte	0x9c
- 1016 0732 6D070000 		.4byte	0x76d
- 1017 0736 15       		.uleb128 0x15
- 1018 0737 5A060000 		.4byte	.LASF146
- 1019 073b 01       		.byte	0x1
- 1020 073c 24       		.byte	0x24
- 1021 073d CE000000 		.4byte	0xce
- 1022 0741 00000000 		.4byte	.LLST0
- 1023 0745 12       		.uleb128 0x12
- 1024 0746 0F030000 		.4byte	.LASF147
- 1025 074a 01       		.byte	0x1
- 1026 074b 24       		.byte	0x24
- 1027 074c CE000000 		.4byte	0xce
- 1028 0750 01       		.uleb128 0x1
- 1029 0751 51       		.byte	0x51
- 1030 0752 12       		.uleb128 0x12
- 1031 0753 2F050000 		.4byte	.LASF148
- 1032 0757 01       		.byte	0x1
- 1033 0758 24       		.byte	0x24
- 1034 0759 CE000000 		.4byte	0xce
- 1035 075d 01       		.uleb128 0x1
- 1036 075e 52       		.byte	0x52
- 1037 075f 12       		.uleb128 0x12
- 1038 0760 EE030000 		.4byte	.LASF149
- 1039 0764 01       		.byte	0x1
- 1040 0765 24       		.byte	0x24
- 1041 0766 CE000000 		.4byte	0xce
- 1042 076a 01       		.uleb128 0x1
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 20
-
-
- 1043 076b 53       		.byte	0x53
- 1044 076c 00       		.byte	0
- 1045 076d 16       		.uleb128 0x16
- 1046 076e E5060000 		.4byte	.LASF150
- 1047 0772 07       		.byte	0x7
- 1048 0773 0108     		.2byte	0x801
- 1049 0775 79070000 		.4byte	0x779
- 1050 0779 05       		.uleb128 0x5
- 1051 077a C3000000 		.4byte	0xc3
- 1052 077e 17       		.uleb128 0x17
- 1053 077f 78060000 		.4byte	.LASF151
- 1054 0783 04       		.byte	0x4
- 1055 0784 A7       		.byte	0xa7
- 1056 0785 89070000 		.4byte	0x789
- 1057 0789 08       		.uleb128 0x8
- 1058 078a 04       		.byte	0x4
- 1059 078b 8F070000 		.4byte	0x78f
- 1060 078f 18       		.uleb128 0x18
- 1061 0790 FD040000 		.4byte	0x4fd
- 1062 0794 17       		.uleb128 0x17
- 1063 0795 CE080000 		.4byte	.LASF152
- 1064 0799 08       		.byte	0x8
- 1065 079a 5E       		.byte	0x5e
- 1066 079b CC050000 		.4byte	0x5cc
- 1067 079f 17       		.uleb128 0x17
- 1068 07a0 10090000 		.4byte	.LASF153
- 1069 07a4 09       		.byte	0x9
- 1070 07a5 1F       		.byte	0x1f
- 1071 07a6 AA070000 		.4byte	0x7aa
- 1072 07aa 18       		.uleb128 0x18
- 1073 07ab C9060000 		.4byte	0x6c9
- 1074 07af 00       		.byte	0
- 1075              		.section	.debug_abbrev,"",%progbits
- 1076              	.Ldebug_abbrev0:
- 1077 0000 01       		.uleb128 0x1
- 1078 0001 11       		.uleb128 0x11
- 1079 0002 01       		.byte	0x1
- 1080 0003 25       		.uleb128 0x25
- 1081 0004 0E       		.uleb128 0xe
- 1082 0005 13       		.uleb128 0x13
- 1083 0006 0B       		.uleb128 0xb
- 1084 0007 03       		.uleb128 0x3
- 1085 0008 0E       		.uleb128 0xe
- 1086 0009 1B       		.uleb128 0x1b
- 1087 000a 0E       		.uleb128 0xe
- 1088 000b 55       		.uleb128 0x55
- 1089 000c 17       		.uleb128 0x17
- 1090 000d 11       		.uleb128 0x11
- 1091 000e 01       		.uleb128 0x1
- 1092 000f 10       		.uleb128 0x10
- 1093 0010 17       		.uleb128 0x17
- 1094 0011 00       		.byte	0
- 1095 0012 00       		.byte	0
- 1096 0013 02       		.uleb128 0x2
- 1097 0014 24       		.uleb128 0x24
- 1098 0015 00       		.byte	0
- 1099 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 21
-
-
- 1100 0017 0B       		.uleb128 0xb
- 1101 0018 3E       		.uleb128 0x3e
- 1102 0019 0B       		.uleb128 0xb
- 1103 001a 03       		.uleb128 0x3
- 1104 001b 0E       		.uleb128 0xe
- 1105 001c 00       		.byte	0
- 1106 001d 00       		.byte	0
- 1107 001e 03       		.uleb128 0x3
- 1108 001f 16       		.uleb128 0x16
- 1109 0020 00       		.byte	0
- 1110 0021 03       		.uleb128 0x3
- 1111 0022 0E       		.uleb128 0xe
- 1112 0023 3A       		.uleb128 0x3a
- 1113 0024 0B       		.uleb128 0xb
- 1114 0025 3B       		.uleb128 0x3b
- 1115 0026 0B       		.uleb128 0xb
- 1116 0027 49       		.uleb128 0x49
- 1117 0028 13       		.uleb128 0x13
- 1118 0029 00       		.byte	0
- 1119 002a 00       		.byte	0
- 1120 002b 04       		.uleb128 0x4
- 1121 002c 24       		.uleb128 0x24
- 1122 002d 00       		.byte	0
- 1123 002e 0B       		.uleb128 0xb
- 1124 002f 0B       		.uleb128 0xb
- 1125 0030 3E       		.uleb128 0x3e
- 1126 0031 0B       		.uleb128 0xb
- 1127 0032 03       		.uleb128 0x3
- 1128 0033 08       		.uleb128 0x8
- 1129 0034 00       		.byte	0
- 1130 0035 00       		.byte	0
- 1131 0036 05       		.uleb128 0x5
- 1132 0037 35       		.uleb128 0x35
- 1133 0038 00       		.byte	0
- 1134 0039 49       		.uleb128 0x49
- 1135 003a 13       		.uleb128 0x13
- 1136 003b 00       		.byte	0
- 1137 003c 00       		.byte	0
- 1138 003d 06       		.uleb128 0x6
- 1139 003e 13       		.uleb128 0x13
- 1140 003f 01       		.byte	0x1
- 1141 0040 0B       		.uleb128 0xb
- 1142 0041 0B       		.uleb128 0xb
- 1143 0042 3A       		.uleb128 0x3a
- 1144 0043 0B       		.uleb128 0xb
- 1145 0044 3B       		.uleb128 0x3b
- 1146 0045 0B       		.uleb128 0xb
- 1147 0046 01       		.uleb128 0x1
- 1148 0047 13       		.uleb128 0x13
- 1149 0048 00       		.byte	0
- 1150 0049 00       		.byte	0
- 1151 004a 07       		.uleb128 0x7
- 1152 004b 0D       		.uleb128 0xd
- 1153 004c 00       		.byte	0
- 1154 004d 03       		.uleb128 0x3
- 1155 004e 0E       		.uleb128 0xe
- 1156 004f 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 22
-
-
- 1157 0050 0B       		.uleb128 0xb
- 1158 0051 3B       		.uleb128 0x3b
- 1159 0052 0B       		.uleb128 0xb
- 1160 0053 49       		.uleb128 0x49
- 1161 0054 13       		.uleb128 0x13
- 1162 0055 38       		.uleb128 0x38
- 1163 0056 0B       		.uleb128 0xb
- 1164 0057 00       		.byte	0
- 1165 0058 00       		.byte	0
- 1166 0059 08       		.uleb128 0x8
- 1167 005a 0F       		.uleb128 0xf
- 1168 005b 00       		.byte	0
- 1169 005c 0B       		.uleb128 0xb
- 1170 005d 0B       		.uleb128 0xb
- 1171 005e 49       		.uleb128 0x49
- 1172 005f 13       		.uleb128 0x13
- 1173 0060 00       		.byte	0
- 1174 0061 00       		.byte	0
- 1175 0062 09       		.uleb128 0x9
- 1176 0063 0F       		.uleb128 0xf
- 1177 0064 00       		.byte	0
- 1178 0065 0B       		.uleb128 0xb
- 1179 0066 0B       		.uleb128 0xb
- 1180 0067 00       		.byte	0
- 1181 0068 00       		.byte	0
- 1182 0069 0A       		.uleb128 0xa
- 1183 006a 15       		.uleb128 0x15
- 1184 006b 01       		.byte	0x1
- 1185 006c 27       		.uleb128 0x27
- 1186 006d 19       		.uleb128 0x19
- 1187 006e 01       		.uleb128 0x1
- 1188 006f 13       		.uleb128 0x13
- 1189 0070 00       		.byte	0
- 1190 0071 00       		.byte	0
- 1191 0072 0B       		.uleb128 0xb
- 1192 0073 05       		.uleb128 0x5
- 1193 0074 00       		.byte	0
- 1194 0075 49       		.uleb128 0x49
- 1195 0076 13       		.uleb128 0x13
- 1196 0077 00       		.byte	0
- 1197 0078 00       		.byte	0
- 1198 0079 0C       		.uleb128 0xc
- 1199 007a 16       		.uleb128 0x16
- 1200 007b 00       		.byte	0
- 1201 007c 03       		.uleb128 0x3
- 1202 007d 0E       		.uleb128 0xe
- 1203 007e 3A       		.uleb128 0x3a
- 1204 007f 0B       		.uleb128 0xb
- 1205 0080 3B       		.uleb128 0x3b
- 1206 0081 05       		.uleb128 0x5
- 1207 0082 49       		.uleb128 0x49
- 1208 0083 13       		.uleb128 0x13
- 1209 0084 00       		.byte	0
- 1210 0085 00       		.byte	0
- 1211 0086 0D       		.uleb128 0xd
- 1212 0087 13       		.uleb128 0x13
- 1213 0088 01       		.byte	0x1
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 23
-
-
- 1214 0089 03       		.uleb128 0x3
- 1215 008a 0E       		.uleb128 0xe
- 1216 008b 0B       		.uleb128 0xb
- 1217 008c 0B       		.uleb128 0xb
- 1218 008d 3A       		.uleb128 0x3a
- 1219 008e 0B       		.uleb128 0xb
- 1220 008f 3B       		.uleb128 0x3b
- 1221 0090 05       		.uleb128 0x5
- 1222 0091 01       		.uleb128 0x1
- 1223 0092 13       		.uleb128 0x13
- 1224 0093 00       		.byte	0
- 1225 0094 00       		.byte	0
- 1226 0095 0E       		.uleb128 0xe
- 1227 0096 0D       		.uleb128 0xd
- 1228 0097 00       		.byte	0
- 1229 0098 03       		.uleb128 0x3
- 1230 0099 0E       		.uleb128 0xe
- 1231 009a 3A       		.uleb128 0x3a
- 1232 009b 0B       		.uleb128 0xb
- 1233 009c 3B       		.uleb128 0x3b
- 1234 009d 05       		.uleb128 0x5
- 1235 009e 49       		.uleb128 0x49
- 1236 009f 13       		.uleb128 0x13
- 1237 00a0 38       		.uleb128 0x38
- 1238 00a1 0B       		.uleb128 0xb
- 1239 00a2 00       		.byte	0
- 1240 00a3 00       		.byte	0
- 1241 00a4 0F       		.uleb128 0xf
- 1242 00a5 13       		.uleb128 0x13
- 1243 00a6 01       		.byte	0x1
- 1244 00a7 03       		.uleb128 0x3
- 1245 00a8 0E       		.uleb128 0xe
- 1246 00a9 0B       		.uleb128 0xb
- 1247 00aa 0B       		.uleb128 0xb
- 1248 00ab 3A       		.uleb128 0x3a
- 1249 00ac 0B       		.uleb128 0xb
- 1250 00ad 3B       		.uleb128 0x3b
- 1251 00ae 0B       		.uleb128 0xb
- 1252 00af 01       		.uleb128 0x1
- 1253 00b0 13       		.uleb128 0x13
- 1254 00b1 00       		.byte	0
- 1255 00b2 00       		.byte	0
- 1256 00b3 10       		.uleb128 0x10
- 1257 00b4 2E       		.uleb128 0x2e
- 1258 00b5 00       		.byte	0
- 1259 00b6 3F       		.uleb128 0x3f
- 1260 00b7 19       		.uleb128 0x19
- 1261 00b8 03       		.uleb128 0x3
- 1262 00b9 0E       		.uleb128 0xe
- 1263 00ba 3A       		.uleb128 0x3a
- 1264 00bb 0B       		.uleb128 0xb
- 1265 00bc 3B       		.uleb128 0x3b
- 1266 00bd 0B       		.uleb128 0xb
- 1267 00be 11       		.uleb128 0x11
- 1268 00bf 01       		.uleb128 0x1
- 1269 00c0 12       		.uleb128 0x12
- 1270 00c1 06       		.uleb128 0x6
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 24
-
-
- 1271 00c2 40       		.uleb128 0x40
- 1272 00c3 18       		.uleb128 0x18
- 1273 00c4 9742     		.uleb128 0x2117
- 1274 00c6 19       		.uleb128 0x19
- 1275 00c7 00       		.byte	0
- 1276 00c8 00       		.byte	0
- 1277 00c9 11       		.uleb128 0x11
- 1278 00ca 2E       		.uleb128 0x2e
- 1279 00cb 01       		.byte	0x1
- 1280 00cc 3F       		.uleb128 0x3f
- 1281 00cd 19       		.uleb128 0x19
- 1282 00ce 03       		.uleb128 0x3
- 1283 00cf 0E       		.uleb128 0xe
- 1284 00d0 3A       		.uleb128 0x3a
- 1285 00d1 0B       		.uleb128 0xb
- 1286 00d2 3B       		.uleb128 0x3b
- 1287 00d3 0B       		.uleb128 0xb
- 1288 00d4 27       		.uleb128 0x27
- 1289 00d5 19       		.uleb128 0x19
- 1290 00d6 11       		.uleb128 0x11
- 1291 00d7 01       		.uleb128 0x1
- 1292 00d8 12       		.uleb128 0x12
- 1293 00d9 06       		.uleb128 0x6
- 1294 00da 40       		.uleb128 0x40
- 1295 00db 18       		.uleb128 0x18
- 1296 00dc 9742     		.uleb128 0x2117
- 1297 00de 19       		.uleb128 0x19
- 1298 00df 01       		.uleb128 0x1
- 1299 00e0 13       		.uleb128 0x13
- 1300 00e1 00       		.byte	0
- 1301 00e2 00       		.byte	0
- 1302 00e3 12       		.uleb128 0x12
- 1303 00e4 05       		.uleb128 0x5
- 1304 00e5 00       		.byte	0
- 1305 00e6 03       		.uleb128 0x3
- 1306 00e7 0E       		.uleb128 0xe
- 1307 00e8 3A       		.uleb128 0x3a
- 1308 00e9 0B       		.uleb128 0xb
- 1309 00ea 3B       		.uleb128 0x3b
- 1310 00eb 0B       		.uleb128 0xb
- 1311 00ec 49       		.uleb128 0x49
- 1312 00ed 13       		.uleb128 0x13
- 1313 00ee 02       		.uleb128 0x2
- 1314 00ef 18       		.uleb128 0x18
- 1315 00f0 00       		.byte	0
- 1316 00f1 00       		.byte	0
- 1317 00f2 13       		.uleb128 0x13
- 1318 00f3 2E       		.uleb128 0x2e
- 1319 00f4 00       		.byte	0
- 1320 00f5 3F       		.uleb128 0x3f
- 1321 00f6 19       		.uleb128 0x19
- 1322 00f7 03       		.uleb128 0x3
- 1323 00f8 0E       		.uleb128 0xe
- 1324 00f9 3A       		.uleb128 0x3a
- 1325 00fa 0B       		.uleb128 0xb
- 1326 00fb 3B       		.uleb128 0x3b
- 1327 00fc 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 25
-
-
- 1328 00fd 49       		.uleb128 0x49
- 1329 00fe 13       		.uleb128 0x13
- 1330 00ff 11       		.uleb128 0x11
- 1331 0100 01       		.uleb128 0x1
- 1332 0101 12       		.uleb128 0x12
- 1333 0102 06       		.uleb128 0x6
- 1334 0103 40       		.uleb128 0x40
- 1335 0104 18       		.uleb128 0x18
- 1336 0105 9742     		.uleb128 0x2117
- 1337 0107 19       		.uleb128 0x19
- 1338 0108 00       		.byte	0
- 1339 0109 00       		.byte	0
- 1340 010a 14       		.uleb128 0x14
- 1341 010b 2E       		.uleb128 0x2e
- 1342 010c 01       		.byte	0x1
- 1343 010d 3F       		.uleb128 0x3f
- 1344 010e 19       		.uleb128 0x19
- 1345 010f 03       		.uleb128 0x3
- 1346 0110 0E       		.uleb128 0xe
- 1347 0111 3A       		.uleb128 0x3a
- 1348 0112 0B       		.uleb128 0xb
- 1349 0113 3B       		.uleb128 0x3b
- 1350 0114 0B       		.uleb128 0xb
- 1351 0115 27       		.uleb128 0x27
- 1352 0116 19       		.uleb128 0x19
- 1353 0117 49       		.uleb128 0x49
- 1354 0118 13       		.uleb128 0x13
- 1355 0119 11       		.uleb128 0x11
- 1356 011a 01       		.uleb128 0x1
- 1357 011b 12       		.uleb128 0x12
- 1358 011c 06       		.uleb128 0x6
- 1359 011d 40       		.uleb128 0x40
- 1360 011e 18       		.uleb128 0x18
- 1361 011f 9742     		.uleb128 0x2117
- 1362 0121 19       		.uleb128 0x19
- 1363 0122 01       		.uleb128 0x1
- 1364 0123 13       		.uleb128 0x13
- 1365 0124 00       		.byte	0
- 1366 0125 00       		.byte	0
- 1367 0126 15       		.uleb128 0x15
- 1368 0127 05       		.uleb128 0x5
- 1369 0128 00       		.byte	0
- 1370 0129 03       		.uleb128 0x3
- 1371 012a 0E       		.uleb128 0xe
- 1372 012b 3A       		.uleb128 0x3a
- 1373 012c 0B       		.uleb128 0xb
- 1374 012d 3B       		.uleb128 0x3b
- 1375 012e 0B       		.uleb128 0xb
- 1376 012f 49       		.uleb128 0x49
- 1377 0130 13       		.uleb128 0x13
- 1378 0131 02       		.uleb128 0x2
- 1379 0132 17       		.uleb128 0x17
- 1380 0133 00       		.byte	0
- 1381 0134 00       		.byte	0
- 1382 0135 16       		.uleb128 0x16
- 1383 0136 34       		.uleb128 0x34
- 1384 0137 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 26
-
-
- 1385 0138 03       		.uleb128 0x3
- 1386 0139 0E       		.uleb128 0xe
- 1387 013a 3A       		.uleb128 0x3a
- 1388 013b 0B       		.uleb128 0xb
- 1389 013c 3B       		.uleb128 0x3b
- 1390 013d 05       		.uleb128 0x5
- 1391 013e 49       		.uleb128 0x49
- 1392 013f 13       		.uleb128 0x13
- 1393 0140 3F       		.uleb128 0x3f
- 1394 0141 19       		.uleb128 0x19
- 1395 0142 3C       		.uleb128 0x3c
- 1396 0143 19       		.uleb128 0x19
- 1397 0144 00       		.byte	0
- 1398 0145 00       		.byte	0
- 1399 0146 17       		.uleb128 0x17
- 1400 0147 34       		.uleb128 0x34
- 1401 0148 00       		.byte	0
- 1402 0149 03       		.uleb128 0x3
- 1403 014a 0E       		.uleb128 0xe
- 1404 014b 3A       		.uleb128 0x3a
- 1405 014c 0B       		.uleb128 0xb
- 1406 014d 3B       		.uleb128 0x3b
- 1407 014e 0B       		.uleb128 0xb
- 1408 014f 49       		.uleb128 0x49
- 1409 0150 13       		.uleb128 0x13
- 1410 0151 3F       		.uleb128 0x3f
- 1411 0152 19       		.uleb128 0x19
- 1412 0153 3C       		.uleb128 0x3c
- 1413 0154 19       		.uleb128 0x19
- 1414 0155 00       		.byte	0
- 1415 0156 00       		.byte	0
- 1416 0157 18       		.uleb128 0x18
- 1417 0158 26       		.uleb128 0x26
- 1418 0159 00       		.byte	0
- 1419 015a 49       		.uleb128 0x49
- 1420 015b 13       		.uleb128 0x13
- 1421 015c 00       		.byte	0
- 1422 015d 00       		.byte	0
- 1423 015e 00       		.byte	0
- 1424              		.section	.debug_loc,"",%progbits
- 1425              	.Ldebug_loc0:
- 1426              	.LLST0:
- 1427 0000 00000000 		.4byte	.LVL1
- 1428 0004 02000000 		.4byte	.LVL2
- 1429 0008 0100     		.2byte	0x1
- 1430 000a 50       		.byte	0x50
- 1431 000b 02000000 		.4byte	.LVL2
- 1432 000f 04000000 		.4byte	.LFE592
- 1433 0013 0400     		.2byte	0x4
- 1434 0015 F3       		.byte	0xf3
- 1435 0016 01       		.uleb128 0x1
- 1436 0017 50       		.byte	0x50
- 1437 0018 9F       		.byte	0x9f
- 1438 0019 00000000 		.4byte	0
- 1439 001d 00000000 		.4byte	0
- 1440              		.section	.debug_aranges,"",%progbits
- 1441 0000 34000000 		.4byte	0x34
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 27
-
-
- 1442 0004 0200     		.2byte	0x2
- 1443 0006 00000000 		.4byte	.Ldebug_info0
- 1444 000a 04       		.byte	0x4
- 1445 000b 00       		.byte	0
- 1446 000c 0000     		.2byte	0
- 1447 000e 0000     		.2byte	0
- 1448 0010 00000000 		.4byte	.LFB589
- 1449 0014 02000000 		.4byte	.LFE589-.LFB589
- 1450 0018 00000000 		.4byte	.LFB590
- 1451 001c 02000000 		.4byte	.LFE590-.LFB590
- 1452 0020 00000000 		.4byte	.LFB591
- 1453 0024 04000000 		.4byte	.LFE591-.LFB591
- 1454 0028 00000000 		.4byte	.LFB592
- 1455 002c 04000000 		.4byte	.LFE592-.LFB592
- 1456 0030 00000000 		.4byte	0
- 1457 0034 00000000 		.4byte	0
- 1458              		.section	.debug_ranges,"",%progbits
- 1459              	.Ldebug_ranges0:
- 1460 0000 00000000 		.4byte	.LFB589
- 1461 0004 02000000 		.4byte	.LFE589
- 1462 0008 00000000 		.4byte	.LFB590
- 1463 000c 02000000 		.4byte	.LFE590
- 1464 0010 00000000 		.4byte	.LFB591
- 1465 0014 04000000 		.4byte	.LFE591
- 1466 0018 00000000 		.4byte	.LFB592
- 1467 001c 04000000 		.4byte	.LFE592
- 1468 0020 00000000 		.4byte	0
- 1469 0024 00000000 		.4byte	0
- 1470              		.section	.debug_line,"",%progbits
- 1471              	.Ldebug_line0:
- 1472 0000 93020000 		.section	.debug_str,"MS",%progbits,1
- 1472      02004F02 
- 1472      00000201 
- 1472      FB0E0D00 
- 1472      01010101 
- 1473              	.LASF56:
- 1474 0000 70726F74 		.ascii	"protBusMasterMask\000"
- 1474      4275734D 
- 1474      61737465 
- 1474      724D6173 
- 1474      6B00
- 1475              	.LASF127:
- 1476 0012 72756E4D 		.ascii	"runMode\000"
- 1476      6F646500 
- 1477              	.LASF115:
- 1478 001a 72784275 		.ascii	"rxBufSize\000"
- 1478      6653697A 
- 1478      6500
- 1479              	.LASF66:
- 1480 0024 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
- 1480      6843746C 
- 1480      4D61696E 
- 1480      57733346 
- 1480      72657100 
- 1481              	.LASF88:
- 1482 0038 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
- 1482      50727443 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 28
-
-
- 1482      6667496E 
- 1482      4F666673 
- 1482      657400
- 1483              	.LASF106:
- 1484 004b 6970634C 		.ascii	"ipcLockStatusOffset\000"
- 1484      6F636B53 
- 1484      74617475 
- 1484      734F6666 
- 1484      73657400 
- 1485              	.LASF156:
- 1486 005f 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Projet_"
- 1486      73657273 
- 1486      5C417269 
- 1486      616E655C 
- 1486      446F6375 
- 1487 008d 6571315C 		.ascii	"eq1\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
- 1487      576F726B 
- 1487      73706163 
- 1487      6550726F 
- 1487      6A657432 
- 1488              	.LASF32:
- 1489 00b6 63727970 		.ascii	"cryptoVersion\000"
- 1489      746F5665 
- 1489      7273696F 
- 1489      6E00
- 1490              	.LASF70:
- 1491 00c4 64774368 		.ascii	"dwChCtlPrioPos\000"
- 1491      43746C50 
- 1491      72696F50 
- 1491      6F7300
- 1492              	.LASF28:
- 1493 00d3 70617373 		.ascii	"passBase\000"
- 1493      42617365 
- 1493      00
- 1494              	.LASF104:
- 1495 00dc 63707573 		.ascii	"cpussRam2Ctl0\000"
- 1495      7352616D 
- 1495      3243746C 
- 1495      3000
- 1496              	.LASF41:
- 1497 00ea 63707573 		.ascii	"cpussIpcIrqNr\000"
- 1497      73497063 
- 1497      4972714E 
- 1497      7200
- 1498              	.LASF3:
- 1499 00f8 5F5F7569 		.ascii	"__uint8_t\000"
- 1499      6E74385F 
- 1499      7400
- 1500              	.LASF43:
- 1501 0102 63707573 		.ascii	"cpussFlashPaSize\000"
- 1501      73466C61 
- 1501      73685061 
- 1501      53697A65 
- 1501      00
- 1502              	.LASF92:
- 1503 0113 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
- 1503      73436D34 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 29
-
-
- 1503      436C6F63 
- 1503      6B43746C 
- 1503      4F666673 
- 1504              	.LASF128:
- 1505 012a 636F756E 		.ascii	"countDirection\000"
- 1505      74446972 
- 1505      65637469 
- 1505      6F6E00
- 1506              	.LASF140:
- 1507 0139 73746F70 		.ascii	"stopInputMode\000"
- 1507      496E7075 
- 1507      744D6F64 
- 1507      6500
- 1508              	.LASF21:
- 1509 0147 63707573 		.ascii	"cpussBase\000"
- 1509      73426173 
- 1509      6500
- 1510              	.LASF125:
- 1511 0151 70657269 		.ascii	"period\000"
- 1511      6F6400
- 1512              	.LASF50:
- 1513 0158 70657269 		.ascii	"periClockNr\000"
- 1513      436C6F63 
- 1513      6B4E7200 
- 1514              	.LASF135:
- 1515 0164 63617074 		.ascii	"captureInput\000"
- 1515      75726549 
- 1515      6E707574 
- 1515      00
- 1516              	.LASF12:
- 1517 0171 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1517      206C6F6E 
- 1517      6720756E 
- 1517      7369676E 
- 1517      65642069 
- 1518              	.LASF126:
- 1519 0188 636C6F63 		.ascii	"clockPrescaler\000"
- 1519      6B507265 
- 1519      7363616C 
- 1519      657200
- 1520              	.LASF74:
- 1521 0197 70657269 		.ascii	"periTrCmdOffset\000"
- 1521      5472436D 
- 1521      644F6666 
- 1521      73657400 
- 1522              	.LASF98:
- 1523 01a7 63707573 		.ascii	"cpussSysTickCtlOffset\000"
- 1523      73537973 
- 1523      5469636B 
- 1523      43746C4F 
- 1523      66667365 
- 1524              	.LASF117:
- 1525 01bd 74784275 		.ascii	"txBuf\000"
- 1525      6600
- 1526              	.LASF59:
- 1527 01c3 666C6173 		.ascii	"flashPipeRequired\000"
- 1527      68506970 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 30
-
-
- 1527      65526571 
- 1527      75697265 
- 1527      6400
- 1528              	.LASF63:
- 1529 01d5 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
- 1529      6843746C 
- 1529      4D61696E 
- 1529      57733046 
- 1529      72657100 
- 1530              	.LASF15:
- 1531 01e9 696E7431 		.ascii	"int16_t\000"
- 1531      365F7400 
- 1532              	.LASF11:
- 1533 01f1 6C6F6E67 		.ascii	"long long int\000"
- 1533      206C6F6E 
- 1533      6720696E 
- 1533      7400
- 1534              	.LASF144:
- 1535 01ff 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
- 1535      74635F74 
- 1535      6370776D 
- 1535      5F636F75 
- 1535      6E746572 
- 1536              	.LASF123:
- 1537 021d 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
- 1537      74635F73 
- 1537      63625F73 
- 1537      70695F63 
- 1537      6F6E7465 
- 1538              	.LASF79:
- 1539 0234 70657269 		.ascii	"periDivCmdTypeSelPos\000"
- 1539      44697643 
- 1539      6D645479 
- 1539      70655365 
- 1539      6C506F73 
- 1540              	.LASF96:
- 1541 0249 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
- 1541      73547269 
- 1541      6D52616D 
- 1541      43746C4F 
- 1541      66667365 
- 1542              	.LASF37:
- 1543 025f 69706356 		.ascii	"ipcVersion\000"
- 1543      65727369 
- 1543      6F6E00
- 1544              	.LASF99:
- 1545 026a 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
- 1545      73436D30 
- 1545      4E6D6943 
- 1545      746C4F66 
- 1545      66736574 
- 1546              	.LASF112:
- 1547 027f 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
- 1547      625F7363 
- 1547      625F7370 
- 1547      695F6861 
- 1547      6E646C65 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 31
-
-
- 1548              	.LASF26:
- 1549 029d 6873696F 		.ascii	"hsiomBase\000"
- 1549      6D426173 
- 1549      6500
- 1550              	.LASF8:
- 1551 02a7 6C6F6E67 		.ascii	"long int\000"
- 1551      20696E74 
- 1551      00
- 1552              	.LASF57:
- 1553 02b0 63727970 		.ascii	"cryptoMemSize\000"
- 1553      746F4D65 
- 1553      6D53697A 
- 1553      6500
- 1554              	.LASF23:
- 1555 02be 70657269 		.ascii	"periBase\000"
- 1555      42617365 
- 1555      00
- 1556              	.LASF55:
- 1557 02c7 73797350 		.ascii	"sysPmSimoPresent\000"
- 1557      6D53696D 
- 1557      6F507265 
- 1557      73656E74 
- 1557      00
- 1558              	.LASF16:
- 1559 02d8 75696E74 		.ascii	"uint16_t\000"
- 1559      31365F74 
- 1559      00
- 1560              	.LASF110:
- 1561 02e1 646F7562 		.ascii	"double\000"
- 1561      6C6500
- 1562              	.LASF84:
- 1563 02e8 70657269 		.ascii	"periDiv16_5CtlOffset\000"
- 1563      44697631 
- 1563      365F3543 
- 1563      746C4F66 
- 1563      66736574 
- 1564              	.LASF48:
- 1565 02fd 73727373 		.ascii	"srssNumPll\000"
- 1565      4E756D50 
- 1565      6C6C00
- 1566              	.LASF145:
- 1567 0308 62756666 		.ascii	"buffer\000"
- 1567      657200
- 1568              	.LASF147:
- 1569 030f 44435F72 		.ascii	"DC_red\000"
- 1569      656400
- 1570              	.LASF134:
- 1571 0316 63617074 		.ascii	"captureInputMode\000"
- 1571      75726549 
- 1571      6E707574 
- 1571      4D6F6465 
- 1571      00
- 1572              	.LASF82:
- 1573 0327 70657269 		.ascii	"periDiv8CtlOffset\000"
- 1573      44697638 
- 1573      43746C4F 
- 1573      66667365 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 32
-
-
- 1573      7400
- 1574              	.LASF89:
- 1575 0339 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
- 1575      50727443 
- 1575      66674F75 
- 1575      744F6666 
- 1575      73657400 
- 1576              	.LASF22:
- 1577 034d 666C6173 		.ascii	"flashcBase\000"
- 1577      68634261 
- 1577      736500
- 1578              	.LASF9:
- 1579 0358 5F5F7569 		.ascii	"__uint32_t\000"
- 1579      6E743332 
- 1579      5F7400
- 1580              	.LASF52:
- 1581 0363 70617373 		.ascii	"passSarChannels\000"
- 1581      53617243 
- 1581      68616E6E 
- 1581      656C7300 
- 1582              	.LASF4:
- 1583 0373 5F5F696E 		.ascii	"__int16_t\000"
- 1583      7431365F 
- 1583      7400
- 1584              	.LASF116:
- 1585 037d 72784275 		.ascii	"rxBufIdx\000"
- 1585      66496478 
- 1585      00
- 1586              	.LASF95:
- 1587 0386 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
- 1587      73436D34 
- 1587      50777243 
- 1587      746C4F66 
- 1587      66736574 
- 1588              	.LASF118:
- 1589 039b 74784275 		.ascii	"txBufSize\000"
- 1589      6653697A 
- 1589      6500
- 1590              	.LASF90:
- 1591 03a5 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
- 1591      50727443 
- 1591      66675369 
- 1591      6F4F6666 
- 1591      73657400 
- 1592              	.LASF94:
- 1593 03b9 63707573 		.ascii	"cpussCm0StatusOffset\000"
- 1593      73436D30 
- 1593      53746174 
- 1593      75734F66 
- 1593      66736574 
- 1594              	.LASF13:
- 1595 03ce 756E7369 		.ascii	"unsigned int\000"
- 1595      676E6564 
- 1595      20696E74 
- 1595      00
- 1596              	.LASF157:
- 1597 03db 61637175 		.ascii	"acquisitionSignaux\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 33
-
-
- 1597      69736974 
- 1597      696F6E53 
- 1597      69676E61 
- 1597      757800
- 1598              	.LASF149:
- 1599 03ee 44435F49 		.ascii	"DC_IR\000"
- 1599      5200
- 1600              	.LASF75:
- 1601 03f4 70657269 		.ascii	"periTrCmdGrSelMsk\000"
- 1601      5472436D 
- 1601      64477253 
- 1601      656C4D73 
- 1601      6B00
- 1602              	.LASF10:
- 1603 0406 6C6F6E67 		.ascii	"long unsigned int\000"
- 1603      20756E73 
- 1603      69676E65 
- 1603      6420696E 
- 1603      7400
- 1604              	.LASF40:
- 1605 0418 63707573 		.ascii	"cpussIpcNr\000"
- 1605      73497063 
- 1605      4E7200
- 1606              	.LASF42:
- 1607 0423 63707573 		.ascii	"cpussDwChNr\000"
- 1607      73447743 
- 1607      684E7200 
- 1608              	.LASF65:
- 1609 042f 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
- 1609      6843746C 
- 1609      4D61696E 
- 1609      57733246 
- 1609      72657100 
- 1610              	.LASF76:
- 1611 0443 70657269 		.ascii	"periTrGrOffset\000"
- 1611      54724772 
- 1611      4F666673 
- 1611      657400
- 1612              	.LASF103:
- 1613 0452 63707573 		.ascii	"cpussRam1Ctl0\000"
- 1613      7352616D 
- 1613      3143746C 
- 1613      3000
- 1614              	.LASF120:
- 1615 0460 63624576 		.ascii	"cbEvents\000"
- 1615      656E7473 
- 1615      00
- 1616              	.LASF87:
- 1617 0469 6770696F 		.ascii	"gpioPrtCfgOffset\000"
- 1617      50727443 
- 1617      66674F66 
- 1617      66736574 
- 1617      00
- 1618              	.LASF35:
- 1619 047a 6770696F 		.ascii	"gpioVersion\000"
- 1619      56657273 
- 1619      696F6E00 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 34
-
-
- 1620              	.LASF107:
- 1621 0486 63795F73 		.ascii	"cy_stc_device_t\000"
- 1621      74635F64 
- 1621      65766963 
- 1621      655F7400 
- 1622              	.LASF122:
- 1623 0496 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
- 1623      74635F73 
- 1623      63625F73 
- 1623      70695F63 
- 1623      6F6E7465 
- 1624              	.LASF0:
- 1625 04af 73686F72 		.ascii	"short int\000"
- 1625      7420696E 
- 1625      7400
- 1626              	.LASF25:
- 1627 04b9 70726F74 		.ascii	"protBase\000"
- 1627      42617365 
- 1627      00
- 1628              	.LASF142:
- 1629 04c2 636F756E 		.ascii	"countInputMode\000"
- 1629      74496E70 
- 1629      75744D6F 
- 1629      646500
- 1630              	.LASF91:
- 1631 04d1 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
- 1631      73436D30 
- 1631      436C6F63 
- 1631      6B43746C 
- 1631      4F666673 
- 1632              	.LASF30:
- 1633 04e8 63727970 		.ascii	"cryptoBase\000"
- 1633      746F4261 
- 1633      736500
- 1634              	.LASF38:
- 1635 04f3 70657269 		.ascii	"periVersion\000"
- 1635      56657273 
- 1635      696F6E00 
- 1636              	.LASF124:
- 1637 04ff 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
- 1637      74635F74 
- 1637      6370776D 
- 1637      5F636F75 
- 1637      6E746572 
- 1638              	.LASF19:
- 1639 051b 73697A65 		.ascii	"sizetype\000"
- 1639      74797065 
- 1639      00
- 1640              	.LASF68:
- 1641 0524 64774368 		.ascii	"dwChOffset\000"
- 1641      4F666673 
- 1641      657400
- 1642              	.LASF148:
- 1643 052f 41435F49 		.ascii	"AC_IR\000"
- 1643      5200
- 1644              	.LASF20:
- 1645 0535 6C6F6E67 		.ascii	"long double\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 35
-
-
- 1645      20646F75 
- 1645      626C6500 
- 1646              	.LASF81:
- 1647 0541 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
- 1647      44697643 
- 1647      6D645061 
- 1647      54797065 
- 1647      53656C50 
- 1648              	.LASF53:
- 1649 0558 65704D6F 		.ascii	"epMonitorNr\000"
- 1649      6E69746F 
- 1649      724E7200 
- 1650              	.LASF39:
- 1651 0564 70726F74 		.ascii	"protVersion\000"
- 1651      56657273 
- 1651      696F6E00 
- 1652              	.LASF72:
- 1653 0570 64775374 		.ascii	"dwStatusChIdxPos\000"
- 1653      61747573 
- 1653      43684964 
- 1653      78506F73 
- 1653      00
- 1654              	.LASF54:
- 1655 0581 75646250 		.ascii	"udbPresent\000"
- 1655      72657365 
- 1655      6E7400
- 1656              	.LASF34:
- 1657 058c 666C6173 		.ascii	"flashcVersion\000"
- 1657      68635665 
- 1657      7273696F 
- 1657      6E00
- 1658              	.LASF51:
- 1659 059a 736D6966 		.ascii	"smifDeviceNr\000"
- 1659      44657669 
- 1659      63654E72 
- 1659      00
- 1660              	.LASF154:
- 1661 05a7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1661      43313120 
- 1661      352E342E 
- 1661      31203230 
- 1661      31363036 
- 1662 05da 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
- 1662      20726576 
- 1662      6973696F 
- 1662      6E203233 
- 1662      37373135 
- 1663 060d 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
- 1663      70202D6D 
- 1663      6670753D 
- 1663      66707634 
- 1663      2D73702D 
- 1664 0640 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 1664      6F6E7320 
- 1664      2D666661 
- 1664      742D6C74 
- 1664      6F2D6F62 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 36
-
-
- 1665              	.LASF146:
- 1666 065a 41435F72 		.ascii	"AC_red\000"
- 1666      656400
- 1667              	.LASF109:
- 1668 0661 666C6F61 		.ascii	"float\000"
- 1668      7400
- 1669              	.LASF73:
- 1670 0667 64775374 		.ascii	"dwStatusChIdxMsk\000"
- 1670      61747573 
- 1670      43684964 
- 1670      784D736B 
- 1670      00
- 1671              	.LASF151:
- 1672 0678 63795F64 		.ascii	"cy_device\000"
- 1672      65766963 
- 1672      6500
- 1673              	.LASF101:
- 1674 0682 63707573 		.ascii	"cpussRomCtl\000"
- 1674      73526F6D 
- 1674      43746C00 
- 1675              	.LASF71:
- 1676 068e 64774368 		.ascii	"dwChCtlPreemptablePos\000"
- 1676      43746C50 
- 1676      7265656D 
- 1676      70746162 
- 1676      6C65506F 
- 1677              	.LASF24:
- 1678 06a4 75646242 		.ascii	"udbBase\000"
- 1678      61736500 
- 1679              	.LASF138:
- 1680 06ac 73746172 		.ascii	"startInputMode\000"
- 1680      74496E70 
- 1680      75744D6F 
- 1680      646500
- 1681              	.LASF17:
- 1682 06bb 696E7433 		.ascii	"int32_t\000"
- 1682      325F7400 
- 1683              	.LASF2:
- 1684 06c3 756E7369 		.ascii	"unsigned char\000"
- 1684      676E6564 
- 1684      20636861 
- 1684      7200
- 1685              	.LASF67:
- 1686 06d1 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
- 1686      6843746C 
- 1686      4D61696E 
- 1686      57733446 
- 1686      72657100 
- 1687              	.LASF150:
- 1688 06e5 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1688      52784275 
- 1688      66666572 
- 1688      00
- 1689              	.LASF85:
- 1690 06f2 70657269 		.ascii	"periDiv24_5CtlOffset\000"
- 1690      44697632 
- 1690      345F3543 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 37
-
-
- 1690      746C4F66 
- 1690      66736574 
- 1691              	.LASF132:
- 1692 0707 656E6162 		.ascii	"enableCompareSwap\000"
- 1692      6C65436F 
- 1692      6D706172 
- 1692      65537761 
- 1692      7000
- 1693              	.LASF102:
- 1694 0719 63707573 		.ascii	"cpussRam0Ctl0\000"
- 1694      7352616D 
- 1694      3043746C 
- 1694      3000
- 1695              	.LASF160:
- 1696 0727 63616C63 		.ascii	"calculSaturation\000"
- 1696      756C5361 
- 1696      74757261 
- 1696      74696F6E 
- 1696      00
- 1697              	.LASF113:
- 1698 0738 73746174 		.ascii	"status\000"
- 1698      757300
- 1699              	.LASF78:
- 1700 073f 70657269 		.ascii	"periDivCmdDivSelMsk\000"
- 1700      44697643 
- 1700      6D644469 
- 1700      7653656C 
- 1700      4D736B00 
- 1701              	.LASF129:
- 1702 0753 636F6D70 		.ascii	"compareOrCapture\000"
- 1702      6172654F 
- 1702      72436170 
- 1702      74757265 
- 1702      00
- 1703              	.LASF49:
- 1704 0764 73727373 		.ascii	"srssNumHfroot\000"
- 1704      4E756D48 
- 1704      66726F6F 
- 1704      7400
- 1705              	.LASF62:
- 1706 0772 666C6173 		.ascii	"flashEraseDelay\000"
- 1706      68457261 
- 1706      73654465 
- 1706      6C617900 
- 1707              	.LASF45:
- 1708 0782 63707573 		.ascii	"cpussFmIrq\000"
- 1708      73466D49 
- 1708      727100
- 1709              	.LASF77:
- 1710 078d 70657269 		.ascii	"periTrGrSize\000"
- 1710      54724772 
- 1710      53697A65 
- 1710      00
- 1711              	.LASF100:
- 1712 079a 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
- 1712      73436D34 
- 1712      4E6D6943 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 38
-
-
- 1712      746C4F66 
- 1712      66736574 
- 1713              	.LASF130:
- 1714 07af 636F6D70 		.ascii	"compare0\000"
- 1714      61726530 
- 1714      00
- 1715              	.LASF131:
- 1716 07b8 636F6D70 		.ascii	"compare1\000"
- 1716      61726531 
- 1716      00
- 1717              	.LASF143:
- 1718 07c1 636F756E 		.ascii	"countInput\000"
- 1718      74496E70 
- 1718      757400
- 1719              	.LASF108:
- 1720 07cc 63686172 		.ascii	"char\000"
- 1720      00
- 1721              	.LASF64:
- 1722 07d1 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
- 1722      6843746C 
- 1722      4D61696E 
- 1722      57733146 
- 1722      72657100 
- 1723              	.LASF5:
- 1724 07e5 5F5F7569 		.ascii	"__uint16_t\000"
- 1724      6E743136 
- 1724      5F7400
- 1725              	.LASF83:
- 1726 07f0 70657269 		.ascii	"periDiv16CtlOffset\000"
- 1726      44697631 
- 1726      3643746C 
- 1726      4F666673 
- 1726      657400
- 1727              	.LASF7:
- 1728 0803 5F5F696E 		.ascii	"__int32_t\000"
- 1728      7433325F 
- 1728      7400
- 1729              	.LASF33:
- 1730 080d 64775665 		.ascii	"dwVersion\000"
- 1730      7273696F 
- 1730      6E00
- 1731              	.LASF36:
- 1732 0817 6873696F 		.ascii	"hsiomVersion\000"
- 1732      6D566572 
- 1732      73696F6E 
- 1732      00
- 1733              	.LASF155:
- 1734 0824 74726169 		.ascii	"traitement.c\000"
- 1734      74656D65 
- 1734      6E742E63 
- 1734      00
- 1735              	.LASF133:
- 1736 0831 696E7465 		.ascii	"interruptSources\000"
- 1736      72727570 
- 1736      74536F75 
- 1736      72636573 
- 1736      00
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 39
-
-
- 1737              	.LASF137:
- 1738 0842 72656C6F 		.ascii	"reloadInput\000"
- 1738      6164496E 
- 1738      70757400 
- 1739              	.LASF6:
- 1740 084e 73686F72 		.ascii	"short unsigned int\000"
- 1740      7420756E 
- 1740      7369676E 
- 1740      65642069 
- 1740      6E7400
- 1741              	.LASF69:
- 1742 0861 64774368 		.ascii	"dwChSize\000"
- 1742      53697A65 
- 1742      00
- 1743              	.LASF141:
- 1744 086a 73746F70 		.ascii	"stopInput\000"
- 1744      496E7075 
- 1744      7400
- 1745              	.LASF105:
- 1746 0874 69706353 		.ascii	"ipcStructSize\000"
- 1746      74727563 
- 1746      7453697A 
- 1746      6500
- 1747              	.LASF44:
- 1748 0882 63707573 		.ascii	"cpussIpc0Irq\000"
- 1748      73497063 
- 1748      30497271 
- 1748      00
- 1749              	.LASF159:
- 1750 088f 63616C63 		.ascii	"calculFrequenceCardiaque\000"
- 1750      756C4672 
- 1750      65717565 
- 1750      6E636543 
- 1750      61726469 
- 1751              	.LASF27:
- 1752 08a8 6770696F 		.ascii	"gpioBase\000"
- 1752      42617365 
- 1752      00
- 1753              	.LASF121:
- 1754 08b1 696E6974 		.ascii	"initKey\000"
- 1754      4B657900 
- 1755              	.LASF114:
- 1756 08b9 72784275 		.ascii	"rxBuf\000"
- 1756      6600
- 1757              	.LASF18:
- 1758 08bf 75696E74 		.ascii	"uint32_t\000"
- 1758      33325F74 
- 1758      00
- 1759              	.LASF111:
- 1760 08c8 5F426F6F 		.ascii	"_Bool\000"
- 1760      6C00
- 1761              	.LASF152:
- 1762 08ce 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
- 1762      494E4B5F 
- 1762      5350494D 
- 1762      5F636F6E 
- 1762      74657874 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 40
-
-
- 1763              	.LASF46:
- 1764 08e3 63707573 		.ascii	"cpussNotConnectedIrq\000"
- 1764      734E6F74 
- 1764      436F6E6E 
- 1764      65637465 
- 1764      64497271 
- 1765              	.LASF60:
- 1766 08f8 666C6173 		.ascii	"flashWriteDelay\000"
- 1766      68577269 
- 1766      74654465 
- 1766      6C617900 
- 1767              	.LASF14:
- 1768 0908 75696E74 		.ascii	"uint8_t\000"
- 1768      385F7400 
- 1769              	.LASF153:
- 1770 0910 43595F45 		.ascii	"CY_EINK_Timer_config\000"
- 1770      494E4B5F 
- 1770      54696D65 
- 1770      725F636F 
- 1770      6E666967 
- 1771              	.LASF93:
- 1772 0925 63707573 		.ascii	"cpussCm4StatusOffset\000"
- 1772      73436D34 
- 1772      53746174 
- 1772      75734F66 
- 1772      66736574 
- 1773              	.LASF86:
- 1774 093a 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
- 1774      50727449 
- 1774      6E747243 
- 1774      66674F66 
- 1774      66736574 
- 1775              	.LASF136:
- 1776 094f 72656C6F 		.ascii	"reloadInputMode\000"
- 1776      6164496E 
- 1776      7075744D 
- 1776      6F646500 
- 1777              	.LASF97:
- 1778 095f 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
- 1778      73547269 
- 1778      6D526F6D 
- 1778      43746C4F 
- 1778      66667365 
- 1779              	.LASF47:
- 1780 0975 73727373 		.ascii	"srssNumClkpath\000"
- 1780      4E756D43 
- 1780      6C6B7061 
- 1780      746800
- 1781              	.LASF1:
- 1782 0984 7369676E 		.ascii	"signed char\000"
- 1782      65642063 
- 1782      68617200 
- 1783              	.LASF29:
- 1784 0990 69706342 		.ascii	"ipcBase\000"
- 1784      61736500 
- 1785              	.LASF158:
- 1786 0998 74726169 		.ascii	"traitementSignal\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccSI84Ew.s 			page 41
-
-
- 1786      74656D65 
- 1786      6E745369 
- 1786      676E616C 
- 1786      00
- 1787              	.LASF80:
- 1788 09a9 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
- 1788      44697643 
- 1788      6D645061 
- 1788      44697653 
- 1788      656C506F 
- 1789              	.LASF61:
- 1790 09bf 666C6173 		.ascii	"flashProgramDelay\000"
- 1790      6850726F 
- 1790      6772616D 
- 1790      44656C61 
- 1790      7900
- 1791              	.LASF31:
- 1792 09d1 63707573 		.ascii	"cpussVersion\000"
- 1792      73566572 
- 1792      73696F6E 
- 1792      00
- 1793              	.LASF58:
- 1794 09de 666C6173 		.ascii	"flashRwwRequired\000"
- 1794      68527777 
- 1794      52657175 
- 1794      69726564 
- 1794      00
- 1795              	.LASF119:
- 1796 09ef 74784275 		.ascii	"txBufIdx\000"
- 1796      66496478 
- 1796      00
- 1797              	.LASF139:
- 1798 09f8 73746172 		.ascii	"startInput\000"
- 1798      74496E70 
- 1798      757400
- 1799              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+  34              	.LVL0:
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE589:
+  38              		.size	traitementCompletSignaux, .-traitementCompletSignaux
+  39 0002 00BF     		.section	.text.acquisitionSignaux,"ax",%progbits
+  40              		.align	2
+  41              		.global	acquisitionSignaux
+  42              		.thumb
+  43              		.thumb_func
+  44              		.type	acquisitionSignaux, %function
+  45              	acquisitionSignaux:
+  46              	.LFB590:
+  26:traitement.c  ****     // gestion de l'appel des différentes fonctions de traitement (traitement première moitiée v
+  27:traitement.c  ****     acquisitionSignaux(IR_data,RED_data);
+  28:traitement.c  ****     traitementSignal(&bufferIR[0], &AC_IR, &DC_IR);
+  29:traitement.c  ****     traitementSignal(&bufferRed[0], &AC_red, &DC_red);
+  30:traitement.c  ****     
+  31:traitement.c  **** }
+  32:traitement.c  **** 
+  33:traitement.c  **** void acquisitionSignaux(uint32_t *bufferRed,  uint32_t *bufferIR) // params: les 2 pointeurs des bu
+  34:traitement.c  **** {
+  47              		.loc 1 34 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51              		@ link register save eliminated.
+  52              	.LVL1:
+  53 0000 7047     		bx	lr
+  54              		.cfi_endproc
+  55              	.LFE590:
+  56              		.size	acquisitionSignaux, .-acquisitionSignaux
+  57 0002 00BF     		.section	.text.traitementSignal,"ax",%progbits
+  58              		.align	2
+  59              		.global	traitementSignal
+  60              		.thumb
+  61              		.thumb_func
+  62              		.type	traitementSignal, %function
+  63              	traitementSignal:
+  64              	.LFB591:
+  35:traitement.c  ****     // récupérer donnnées et mettre dans les buffers circulaire. Gestion taille, index, etc.
+  36:traitement.c  ****     // on connait la taille des buffers on transfère ca dans notre buffer circulaire (premiere moi
+  37:traitement.c  **** }
+  38:traitement.c  **** 
+  39:traitement.c  **** uint8_t traitementSignal(uint32_t *buffer,uint32_t *AC,uint32_t *DC) // pointeur AC/DC rouge ou inf
+  40:traitement.c  **** {
+  65              		.loc 1 40 0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  70              	.LVL2:
+  41:traitement.c  ****    // filtration + extraction AC/DC (max, min, compteur, moyenne)
+  42:traitement.c  ****     
+  43:traitement.c  ****    uint8_t compteurMax = 0;
+  44:traitement.c  ****     
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 3
+
+
+  45:traitement.c  ****     // algo matlab à transéfrer (sections: création filtres et traitement signal X (sans afficha
+  46:traitement.c  ****     // transféré signal traité pour l'affichage avec Interface (ajouter paramètre : pointeur ve
+  47:traitement.c  ****     
+  48:traitement.c  ****    return compteurMax;
+  49:traitement.c  **** }
+  71              		.loc 1 49 0
+  72 0000 0020     		movs	r0, #0
+  73              	.LVL3:
+  74 0002 7047     		bx	lr
+  75              		.cfi_endproc
+  76              	.LFE591:
+  77              		.size	traitementSignal, .-traitementSignal
+  78              		.section	.text.calculFrequenceCardiaque,"ax",%progbits
+  79              		.align	2
+  80              		.global	calculFrequenceCardiaque
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	calculFrequenceCardiaque, %function
+  84              	calculFrequenceCardiaque:
+  85              	.LFB592:
+  50:traitement.c  **** 
+  51:traitement.c  **** uint8_t calculFrequenceCardiaque(uint8_t compteur) 
+  52:traitement.c  **** { 
+  86              		.loc 1 52 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90              		@ link register save eliminated.
+  91              	.LVL4:
+  53:traitement.c  ****     uint8_t temps_acquisition = 10; // variable à effacer si le temps d'acquisition reste fixe
+  54:traitement.c  ****     return (compteur/temps_acquisition*60);
+  92              		.loc 1 54 0
+  93 0000 044B     		ldr	r3, .L5
+  94 0002 A3FB0023 		umull	r2, r3, r3, r0
+  95 0006 DB08     		lsrs	r3, r3, #3
+  96 0008 C3EB0313 		rsb	r3, r3, r3, lsl #4
+  97 000c 9800     		lsls	r0, r3, #2
+  98              	.LVL5:
+  55:traitement.c  **** }
+  99              		.loc 1 55 0
+ 100 000e 00F0FC00 		and	r0, r0, #252
+ 101 0012 7047     		bx	lr
+ 102              	.L6:
+ 103              		.align	2
+ 104              	.L5:
+ 105 0014 CDCCCCCC 		.word	-858993459
+ 106              		.cfi_endproc
+ 107              	.LFE592:
+ 108              		.size	calculFrequenceCardiaque, .-calculFrequenceCardiaque
+ 109              		.global	__aeabi_f2d
+ 110              		.global	__aeabi_dmul
+ 111              		.global	__aeabi_dadd
+ 112              		.global	__aeabi_d2uiz
+ 113              		.section	.text.calculSaturation,"ax",%progbits
+ 114              		.align	2
+ 115              		.global	calculSaturation
+ 116              		.thumb
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 4
+
+
+ 117              		.thumb_func
+ 118              		.type	calculSaturation, %function
+ 119              	calculSaturation:
+ 120              	.LFB593:
+  56:traitement.c  **** 
+  57:traitement.c  **** uint8_t calculSaturation(uint32_t AC_red, uint32_t DC_red,uint32_t AC_IR,uint32_t DC_IR)
+  58:traitement.c  **** {
+ 121              		.loc 1 58 0
+ 122              		.cfi_startproc
+ 123              		@ args = 0, pretend = 0, frame = 0
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              	.LVL6:
+ 126 0000 38B5     		push	{r3, r4, r5, lr}
+ 127              		.cfi_def_cfa_offset 16
+ 128              		.cfi_offset 3, -16
+ 129              		.cfi_offset 4, -12
+ 130              		.cfi_offset 5, -8
+ 131              		.cfi_offset 14, -4
+ 132 0002 2DED028B 		vpush.64	{d8}
+ 133              		.cfi_def_cfa_offset 24
+ 134              		.cfi_offset 80, -24
+ 135              		.cfi_offset 81, -20
+  59:traitement.c  ****     
+  60:traitement.c  ****     float ratio = (AC_red*DC_red)/(AC_IR*DC_IR);
+ 136              		.loc 1 60 0
+ 137 0006 01FB00F1 		mul	r1, r1, r0
+ 138              	.LVL7:
+ 139 000a 03FB02F2 		mul	r2, r3, r2
+ 140              	.LVL8:
+ 141 000e B1FBF2F1 		udiv	r1, r1, r2
+ 142 0012 07EE901A 		vmov	s15, r1	@ int
+ 143 0016 B8EE678A 		vcvt.f32.u32	s16, s15
+ 144              	.LVL9:
+  61:traitement.c  ****     
+  62:traitement.c  ****     float a = 1.5958422;
+  63:traitement.c  ****     float b = -34.6596622;
+  64:traitement.c  ****     float c = 112.6898759;
+  65:traitement.c  ****     
+  66:traitement.c  ****     uint8_t saturation = a*pow(ratio,2) + b*ratio + c; // mettre direct dans return?
+ 145              		.loc 1 66 0
+ 146 001a 18EE100A 		vmov	r0, s16
+ 147              	.LVL10:
+ 148 001e FFF7FEFF 		bl	__aeabi_f2d
+ 149              	.LVL11:
+ 150 0022 0022     		movs	r2, #0
+ 151 0024 4FF08043 		mov	r3, #1073741824
+ 152 0028 FFF7FEFF 		bl	pow
+ 153              	.LVL12:
+ 154 002c 11A3     		adr	r3, .L9+12
+ 155 002e D3E90023 		ldrd	r2, [r3]
+ 156 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 157              	.LVL13:
+ 158 0036 0446     		mov	r4, r0
+ 159 0038 0D46     		mov	r5, r1
+ 160 003a DFED0D7A 		vldr.32	s15, .L9+8
+ 161 003e 68EE277A 		vmul.f32	s15, s16, s15
+ 162 0042 17EE900A 		vmov	r0, s15
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 5
+
+
+ 163 0046 FFF7FEFF 		bl	__aeabi_f2d
+ 164              	.LVL14:
+ 165 004a 2246     		mov	r2, r4
+ 166 004c 2B46     		mov	r3, r5
+ 167 004e FFF7FEFF 		bl	__aeabi_dadd
+ 168              	.LVL15:
+ 169 0052 05A3     		adr	r3, .L9
+ 170 0054 D3E90023 		ldrd	r2, [r3]
+ 171 0058 FFF7FEFF 		bl	__aeabi_dadd
+ 172              	.LVL16:
+ 173 005c FFF7FEFF 		bl	__aeabi_d2uiz
+ 174              	.LVL17:
+  67:traitement.c  ****     
+  68:traitement.c  ****     return saturation;
+  69:traitement.c  **** }
+ 175              		.loc 1 69 0
+ 176 0060 C0B2     		uxtb	r0, r0
+ 177 0062 BDEC028B 		vldm	sp!, {d8}
+ 178              		.cfi_restore 80
+ 179              		.cfi_restore 81
+ 180              		.cfi_def_cfa_offset 16
+ 181              	.LVL18:
+ 182 0066 38BD     		pop	{r3, r4, r5, pc}
+ 183              	.L10:
+ 184              		.align	3
+ 185              	.L9:
+ 186 0068 000000E0 		.word	-536870912
+ 187 006c 262C5C40 		.word	1079782438
+ 188 0070 7EA30AC2 		.word	-1039490178
+ 189 0074 000000E0 		.word	-536870912
+ 190 0078 9188F93F 		.word	1073318033
+ 191              		.cfi_endproc
+ 192              	.LFE593:
+ 193              		.size	calculSaturation, .-calculSaturation
+ 194              		.global	DC_IR
+ 195              		.global	AC_IR
+ 196              		.global	DC_red
+ 197              		.global	AC_red
+ 198              		.global	bpm
+ 199              		.comm	bufferIR,16000,4
+ 200              		.comm	bufferRed,16000,4
+ 201              		.bss
+ 202              		.align	2
+ 203              		.type	DC_IR, %object
+ 204              		.size	DC_IR, 4
+ 205              	DC_IR:
+ 206 0000 00000000 		.space	4
+ 207              		.type	AC_IR, %object
+ 208              		.size	AC_IR, 4
+ 209              	AC_IR:
+ 210 0004 00000000 		.space	4
+ 211              		.type	DC_red, %object
+ 212              		.size	DC_red, 4
+ 213              	DC_red:
+ 214 0008 00000000 		.space	4
+ 215              		.type	AC_red, %object
+ 216              		.size	AC_red, 4
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 6
+
+
+ 217              	AC_red:
+ 218 000c 00000000 		.space	4
+ 219              		.type	bpm, %object
+ 220              		.size	bpm, 1
+ 221              	bpm:
+ 222 0010 00       		.space	1
+ 223              		.text
+ 224              	.Letext0:
+ 225              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 226              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 227              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 228              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
+ 229              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+ 230              		.file 7 ".\\CMSIS\\Core\\Include/core_cm4.h"
+ 231              		.file 8 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
+ 232              		.file 9 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
+ 233              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 234              		.section	.debug_info,"",%progbits
+ 235              	.Ldebug_info0:
+ 236 0000 2D090000 		.4byte	0x92d
+ 237 0004 0400     		.2byte	0x4
+ 238 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 239 000a 04       		.byte	0x4
+ 240 000b 01       		.uleb128 0x1
+ 241 000c ED050000 		.4byte	.LASF168
+ 242 0010 0C       		.byte	0xc
+ 243 0011 66080000 		.4byte	.LASF169
+ 244 0015 70000000 		.4byte	.LASF170
+ 245 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 246 001d 00000000 		.4byte	0
+ 247 0021 00000000 		.4byte	.Ldebug_line0
+ 248 0025 02       		.uleb128 0x2
+ 249 0026 04       		.byte	0x4
+ 250 0027 07       		.byte	0x7
+ 251 0028 F9030000 		.4byte	.LASF0
+ 252 002c 02       		.uleb128 0x2
+ 253 002d 04       		.byte	0x4
+ 254 002e 04       		.byte	0x4
+ 255 002f A7060000 		.4byte	.LASF1
+ 256 0033 02       		.uleb128 0x2
+ 257 0034 02       		.byte	0x2
+ 258 0035 05       		.byte	0x5
+ 259 0036 F5040000 		.4byte	.LASF2
+ 260 003a 02       		.uleb128 0x2
+ 261 003b 01       		.byte	0x1
+ 262 003c 06       		.byte	0x6
+ 263 003d E0090000 		.4byte	.LASF3
+ 264 0041 03       		.uleb128 0x3
+ 265 0042 09010000 		.4byte	.LASF5
+ 266 0046 02       		.byte	0x2
+ 267 0047 1D       		.byte	0x1d
+ 268 0048 4C000000 		.4byte	0x4c
+ 269 004c 02       		.uleb128 0x2
+ 270 004d 01       		.byte	0x1
+ 271 004e 08       		.byte	0x8
+ 272 004f 09070000 		.4byte	.LASF4
+ 273 0053 03       		.uleb128 0x3
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 7
+
+
+ 274 0054 9E030000 		.4byte	.LASF6
+ 275 0058 02       		.byte	0x2
+ 276 0059 29       		.byte	0x29
+ 277 005a 33000000 		.4byte	0x33
+ 278 005e 03       		.uleb128 0x3
+ 279 005f 21080000 		.4byte	.LASF7
+ 280 0063 02       		.byte	0x2
+ 281 0064 2B       		.byte	0x2b
+ 282 0065 69000000 		.4byte	0x69
+ 283 0069 02       		.uleb128 0x2
+ 284 006a 02       		.byte	0x2
+ 285 006b 07       		.byte	0x7
+ 286 006c 90080000 		.4byte	.LASF8
+ 287 0070 03       		.uleb128 0x3
+ 288 0071 45080000 		.4byte	.LASF9
+ 289 0075 02       		.byte	0x2
+ 290 0076 3F       		.byte	0x3f
+ 291 0077 7B000000 		.4byte	0x7b
+ 292 007b 02       		.uleb128 0x2
+ 293 007c 04       		.byte	0x4
+ 294 007d 05       		.byte	0x5
+ 295 007e C0020000 		.4byte	.LASF10
+ 296 0082 03       		.uleb128 0x3
+ 297 0083 83030000 		.4byte	.LASF11
+ 298 0087 02       		.byte	0x2
+ 299 0088 41       		.byte	0x41
+ 300 0089 8D000000 		.4byte	0x8d
+ 301 008d 02       		.uleb128 0x2
+ 302 008e 04       		.byte	0x4
+ 303 008f 07       		.byte	0x7
+ 304 0090 3A040000 		.4byte	.LASF12
+ 305 0094 02       		.uleb128 0x2
+ 306 0095 08       		.byte	0x8
+ 307 0096 05       		.byte	0x5
+ 308 0097 0A020000 		.4byte	.LASF13
+ 309 009b 02       		.uleb128 0x2
+ 310 009c 08       		.byte	0x8
+ 311 009d 07       		.byte	0x7
+ 312 009e 8A010000 		.4byte	.LASF14
+ 313 00a2 04       		.uleb128 0x4
+ 314 00a3 04       		.byte	0x4
+ 315 00a4 05       		.byte	0x5
+ 316 00a5 696E7400 		.ascii	"int\000"
+ 317 00a9 03       		.uleb128 0x3
+ 318 00aa 58090000 		.4byte	.LASF15
+ 319 00ae 03       		.byte	0x3
+ 320 00af 18       		.byte	0x18
+ 321 00b0 41000000 		.4byte	0x41
+ 322 00b4 03       		.uleb128 0x3
+ 323 00b5 02020000 		.4byte	.LASF16
+ 324 00b9 03       		.byte	0x3
+ 325 00ba 20       		.byte	0x20
+ 326 00bb 53000000 		.4byte	0x53
+ 327 00bf 03       		.uleb128 0x3
+ 328 00c0 F1020000 		.4byte	.LASF17
+ 329 00c4 03       		.byte	0x3
+ 330 00c5 24       		.byte	0x24
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 8
+
+
+ 331 00c6 5E000000 		.4byte	0x5e
+ 332 00ca 03       		.uleb128 0x3
+ 333 00cb 01070000 		.4byte	.LASF18
+ 334 00cf 03       		.byte	0x3
+ 335 00d0 2C       		.byte	0x2c
+ 336 00d1 70000000 		.4byte	0x70
+ 337 00d5 03       		.uleb128 0x3
+ 338 00d6 01090000 		.4byte	.LASF19
+ 339 00da 03       		.byte	0x3
+ 340 00db 30       		.byte	0x30
+ 341 00dc 82000000 		.4byte	0x82
+ 342 00e0 02       		.uleb128 0x2
+ 343 00e1 04       		.byte	0x4
+ 344 00e2 07       		.byte	0x7
+ 345 00e3 61050000 		.4byte	.LASF20
+ 346 00e7 05       		.uleb128 0x5
+ 347 00e8 D5000000 		.4byte	0xd5
+ 348 00ec 02       		.uleb128 0x2
+ 349 00ed 08       		.byte	0x8
+ 350 00ee 04       		.byte	0x4
+ 351 00ef 7B050000 		.4byte	.LASF21
+ 352 00f3 06       		.uleb128 0x6
+ 353 00f4 B8       		.byte	0xb8
+ 354 00f5 04       		.byte	0x4
+ 355 00f6 34       		.byte	0x34
+ 356 00f7 04050000 		.4byte	0x504
+ 357 00fb 07       		.uleb128 0x7
+ 358 00fc 60010000 		.4byte	.LASF22
+ 359 0100 04       		.byte	0x4
+ 360 0101 37       		.byte	0x37
+ 361 0102 D5000000 		.4byte	0xd5
+ 362 0106 00       		.byte	0
+ 363 0107 07       		.uleb128 0x7
+ 364 0108 78030000 		.4byte	.LASF23
+ 365 010c 04       		.byte	0x4
+ 366 010d 38       		.byte	0x38
+ 367 010e D5000000 		.4byte	0xd5
+ 368 0112 04       		.byte	0x4
+ 369 0113 07       		.uleb128 0x7
+ 370 0114 D7020000 		.4byte	.LASF24
+ 371 0118 04       		.byte	0x4
+ 372 0119 39       		.byte	0x39
+ 373 011a D5000000 		.4byte	0xd5
+ 374 011e 08       		.byte	0x8
+ 375 011f 07       		.uleb128 0x7
+ 376 0120 EA060000 		.4byte	.LASF25
+ 377 0124 04       		.byte	0x4
+ 378 0125 3A       		.byte	0x3a
+ 379 0126 D5000000 		.4byte	0xd5
+ 380 012a 0C       		.byte	0xc
+ 381 012b 07       		.uleb128 0x7
+ 382 012c FF040000 		.4byte	.LASF26
+ 383 0130 04       		.byte	0x4
+ 384 0131 3B       		.byte	0x3b
+ 385 0132 D5000000 		.4byte	0xd5
+ 386 0136 10       		.byte	0x10
+ 387 0137 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 9
+
+
+ 388 0138 B6020000 		.4byte	.LASF27
+ 389 013c 04       		.byte	0x4
+ 390 013d 3C       		.byte	0x3c
+ 391 013e D5000000 		.4byte	0xd5
+ 392 0142 14       		.byte	0x14
+ 393 0143 07       		.uleb128 0x7
+ 394 0144 EA080000 		.4byte	.LASF28
+ 395 0148 04       		.byte	0x4
+ 396 0149 3D       		.byte	0x3d
+ 397 014a D5000000 		.4byte	0xd5
+ 398 014e 18       		.byte	0x18
+ 399 014f 07       		.uleb128 0x7
+ 400 0150 E4000000 		.4byte	.LASF29
+ 401 0154 04       		.byte	0x4
+ 402 0155 3E       		.byte	0x3e
+ 403 0156 D5000000 		.4byte	0xd5
+ 404 015a 1C       		.byte	0x1c
+ 405 015b 07       		.uleb128 0x7
+ 406 015c EC090000 		.4byte	.LASF30
+ 407 0160 04       		.byte	0x4
+ 408 0161 3F       		.byte	0x3f
+ 409 0162 D5000000 		.4byte	0xd5
+ 410 0166 20       		.byte	0x20
+ 411 0167 07       		.uleb128 0x7
+ 412 0168 2E050000 		.4byte	.LASF31
+ 413 016c 04       		.byte	0x4
+ 414 016d 40       		.byte	0x40
+ 415 016e D5000000 		.4byte	0xd5
+ 416 0172 24       		.byte	0x24
+ 417 0173 07       		.uleb128 0x7
+ 418 0174 460A0000 		.4byte	.LASF32
+ 419 0178 04       		.byte	0x4
+ 420 0179 43       		.byte	0x43
+ 421 017a A9000000 		.4byte	0xa9
+ 422 017e 28       		.byte	0x28
+ 423 017f 07       		.uleb128 0x7
+ 424 0180 C7000000 		.4byte	.LASF33
+ 425 0184 04       		.byte	0x4
+ 426 0185 44       		.byte	0x44
+ 427 0186 A9000000 		.4byte	0xa9
+ 428 018a 29       		.byte	0x29
+ 429 018b 07       		.uleb128 0x7
+ 430 018c 4F080000 		.4byte	.LASF34
+ 431 0190 04       		.byte	0x4
+ 432 0191 45       		.byte	0x45
+ 433 0192 A9000000 		.4byte	0xa9
+ 434 0196 2A       		.byte	0x2a
+ 435 0197 07       		.uleb128 0x7
+ 436 0198 D2050000 		.4byte	.LASF35
+ 437 019c 04       		.byte	0x4
+ 438 019d 46       		.byte	0x46
+ 439 019e A9000000 		.4byte	0xa9
+ 440 01a2 2B       		.byte	0x2b
+ 441 01a3 07       		.uleb128 0x7
+ 442 01a4 C0040000 		.4byte	.LASF36
+ 443 01a8 04       		.byte	0x4
+ 444 01a9 47       		.byte	0x47
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 10
+
+
+ 445 01aa A9000000 		.4byte	0xa9
+ 446 01ae 2C       		.byte	0x2c
+ 447 01af 07       		.uleb128 0x7
+ 448 01b0 59080000 		.4byte	.LASF37
+ 449 01b4 04       		.byte	0x4
+ 450 01b5 48       		.byte	0x48
+ 451 01b6 A9000000 		.4byte	0xa9
+ 452 01ba 2D       		.byte	0x2d
+ 453 01bb 07       		.uleb128 0x7
+ 454 01bc 78020000 		.4byte	.LASF38
+ 455 01c0 04       		.byte	0x4
+ 456 01c1 49       		.byte	0x49
+ 457 01c2 A9000000 		.4byte	0xa9
+ 458 01c6 2E       		.byte	0x2e
+ 459 01c7 07       		.uleb128 0x7
+ 460 01c8 39050000 		.4byte	.LASF39
+ 461 01cc 04       		.byte	0x4
+ 462 01cd 4A       		.byte	0x4a
+ 463 01ce A9000000 		.4byte	0xa9
+ 464 01d2 2F       		.byte	0x2f
+ 465 01d3 07       		.uleb128 0x7
+ 466 01d4 AA050000 		.4byte	.LASF40
+ 467 01d8 04       		.byte	0x4
+ 468 01d9 4B       		.byte	0x4b
+ 469 01da A9000000 		.4byte	0xa9
+ 470 01de 30       		.byte	0x30
+ 471 01df 07       		.uleb128 0x7
+ 472 01e0 5E040000 		.4byte	.LASF41
+ 473 01e4 04       		.byte	0x4
+ 474 01e5 4E       		.byte	0x4e
+ 475 01e6 A9000000 		.4byte	0xa9
+ 476 01ea 31       		.byte	0x31
+ 477 01eb 07       		.uleb128 0x7
+ 478 01ec FB000000 		.4byte	.LASF42
+ 479 01f0 04       		.byte	0x4
+ 480 01f1 4F       		.byte	0x4f
+ 481 01f2 A9000000 		.4byte	0xa9
+ 482 01f6 32       		.byte	0x32
+ 483 01f7 07       		.uleb128 0x7
+ 484 01f8 69040000 		.4byte	.LASF43
+ 485 01fc 04       		.byte	0x4
+ 486 01fd 50       		.byte	0x50
+ 487 01fe A9000000 		.4byte	0xa9
+ 488 0202 33       		.byte	0x33
+ 489 0203 07       		.uleb128 0x7
+ 490 0204 13010000 		.4byte	.LASF44
+ 491 0208 04       		.byte	0x4
+ 492 0209 51       		.byte	0x51
+ 493 020a A9000000 		.4byte	0xa9
+ 494 020e 34       		.byte	0x34
+ 495 020f 07       		.uleb128 0x7
+ 496 0210 C4080000 		.4byte	.LASF45
+ 497 0214 04       		.byte	0x4
+ 498 0215 52       		.byte	0x52
+ 499 0216 B4000000 		.4byte	0xb4
+ 500 021a 36       		.byte	0x36
+ 501 021b 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 11
+
+
+ 502 021c 9C070000 		.4byte	.LASF46
+ 503 0220 04       		.byte	0x4
+ 504 0221 53       		.byte	0x53
+ 505 0222 B4000000 		.4byte	0xb4
+ 506 0226 38       		.byte	0x38
+ 507 0227 07       		.uleb128 0x7
+ 508 0228 33090000 		.4byte	.LASF47
+ 509 022c 04       		.byte	0x4
+ 510 022d 54       		.byte	0x54
+ 511 022e B4000000 		.4byte	0xb4
+ 512 0232 3A       		.byte	0x3a
+ 513 0233 07       		.uleb128 0x7
+ 514 0234 D1090000 		.4byte	.LASF48
+ 515 0238 04       		.byte	0x4
+ 516 0239 55       		.byte	0x55
+ 517 023a A9000000 		.4byte	0xa9
+ 518 023e 3C       		.byte	0x3c
+ 519 023f 07       		.uleb128 0x7
+ 520 0240 16030000 		.4byte	.LASF49
+ 521 0244 04       		.byte	0x4
+ 522 0245 56       		.byte	0x56
+ 523 0246 A9000000 		.4byte	0xa9
+ 524 024a 3D       		.byte	0x3d
+ 525 024b 07       		.uleb128 0x7
+ 526 024c 10090000 		.4byte	.LASF50
+ 527 0250 04       		.byte	0x4
+ 528 0251 57       		.byte	0x57
+ 529 0252 A9000000 		.4byte	0xa9
+ 530 0256 3E       		.byte	0x3e
+ 531 0257 07       		.uleb128 0x7
+ 532 0258 71010000 		.4byte	.LASF51
+ 533 025c 04       		.byte	0x4
+ 534 025d 58       		.byte	0x58
+ 535 025e A9000000 		.4byte	0xa9
+ 536 0262 3F       		.byte	0x3f
+ 537 0263 07       		.uleb128 0x7
+ 538 0264 E0050000 		.4byte	.LASF52
+ 539 0268 04       		.byte	0x4
+ 540 0269 59       		.byte	0x59
+ 541 026a A9000000 		.4byte	0xa9
+ 542 026e 40       		.byte	0x40
+ 543 026f 07       		.uleb128 0x7
+ 544 0270 8E030000 		.4byte	.LASF53
+ 545 0274 04       		.byte	0x4
+ 546 0275 5A       		.byte	0x5a
+ 547 0276 A9000000 		.4byte	0xa9
+ 548 027a 41       		.byte	0x41
+ 549 027b 07       		.uleb128 0x7
+ 550 027c 9E050000 		.4byte	.LASF54
+ 551 0280 04       		.byte	0x4
+ 552 0281 5B       		.byte	0x5b
+ 553 0282 A9000000 		.4byte	0xa9
+ 554 0286 42       		.byte	0x42
+ 555 0287 07       		.uleb128 0x7
+ 556 0288 C7050000 		.4byte	.LASF55
+ 557 028c 04       		.byte	0x4
+ 558 028d 5C       		.byte	0x5c
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 12
+
+
+ 559 028e A9000000 		.4byte	0xa9
+ 560 0292 43       		.byte	0x43
+ 561 0293 07       		.uleb128 0x7
+ 562 0294 E0020000 		.4byte	.LASF56
+ 563 0298 04       		.byte	0x4
+ 564 0299 5D       		.byte	0x5d
+ 565 029a A9000000 		.4byte	0xa9
+ 566 029e 44       		.byte	0x44
+ 567 029f 07       		.uleb128 0x7
+ 568 02a0 11000000 		.4byte	.LASF57
+ 569 02a4 04       		.byte	0x4
+ 570 02a5 5E       		.byte	0x5e
+ 571 02a6 D5000000 		.4byte	0xd5
+ 572 02aa 48       		.byte	0x48
+ 573 02ab 07       		.uleb128 0x7
+ 574 02ac C9020000 		.4byte	.LASF58
+ 575 02b0 04       		.byte	0x4
+ 576 02b1 5F       		.byte	0x5f
+ 577 02b2 D5000000 		.4byte	0xd5
+ 578 02b6 4C       		.byte	0x4c
+ 579 02b7 07       		.uleb128 0x7
+ 580 02b8 530A0000 		.4byte	.LASF59
+ 581 02bc 04       		.byte	0x4
+ 582 02bd 60       		.byte	0x60
+ 583 02be A9000000 		.4byte	0xa9
+ 584 02c2 50       		.byte	0x50
+ 585 02c3 07       		.uleb128 0x7
+ 586 02c4 DC010000 		.4byte	.LASF60
+ 587 02c8 04       		.byte	0x4
+ 588 02c9 61       		.byte	0x61
+ 589 02ca A9000000 		.4byte	0xa9
+ 590 02ce 51       		.byte	0x51
+ 591 02cf 07       		.uleb128 0x7
+ 592 02d0 48090000 		.4byte	.LASF61
+ 593 02d4 04       		.byte	0x4
+ 594 02d5 62       		.byte	0x62
+ 595 02d6 A9000000 		.4byte	0xa9
+ 596 02da 52       		.byte	0x52
+ 597 02db 07       		.uleb128 0x7
+ 598 02dc 1B0A0000 		.4byte	.LASF62
+ 599 02e0 04       		.byte	0x4
+ 600 02e1 63       		.byte	0x63
+ 601 02e2 A9000000 		.4byte	0xa9
+ 602 02e6 53       		.byte	0x53
+ 603 02e7 07       		.uleb128 0x7
+ 604 02e8 A7070000 		.4byte	.LASF63
+ 605 02ec 04       		.byte	0x4
+ 606 02ed 64       		.byte	0x64
+ 607 02ee A9000000 		.4byte	0xa9
+ 608 02f2 54       		.byte	0x54
+ 609 02f3 07       		.uleb128 0x7
+ 610 02f4 EE010000 		.4byte	.LASF64
+ 611 02f8 04       		.byte	0x4
+ 612 02f9 65       		.byte	0x65
+ 613 02fa A9000000 		.4byte	0xa9
+ 614 02fe 55       		.byte	0x55
+ 615 02ff 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 13
+
+
+ 616 0300 0D080000 		.4byte	.LASF65
+ 617 0304 04       		.byte	0x4
+ 618 0305 66       		.byte	0x66
+ 619 0306 A9000000 		.4byte	0xa9
+ 620 030a 56       		.byte	0x56
+ 621 030b 07       		.uleb128 0x7
+ 622 030c 75040000 		.4byte	.LASF66
+ 623 0310 04       		.byte	0x4
+ 624 0311 67       		.byte	0x67
+ 625 0312 A9000000 		.4byte	0xa9
+ 626 0316 57       		.byte	0x57
+ 627 0317 07       		.uleb128 0x7
+ 628 0318 35000000 		.4byte	.LASF67
+ 629 031c 04       		.byte	0x4
+ 630 031d 68       		.byte	0x68
+ 631 031e A9000000 		.4byte	0xa9
+ 632 0322 58       		.byte	0x58
+ 633 0323 07       		.uleb128 0x7
+ 634 0324 17070000 		.4byte	.LASF68
+ 635 0328 04       		.byte	0x4
+ 636 0329 69       		.byte	0x69
+ 637 032a A9000000 		.4byte	0xa9
+ 638 032e 59       		.byte	0x59
+ 639 032f 07       		.uleb128 0x7
+ 640 0330 6A050000 		.4byte	.LASF69
+ 641 0334 04       		.byte	0x4
+ 642 0335 6E       		.byte	0x6e
+ 643 0336 BF000000 		.4byte	0xbf
+ 644 033a 5A       		.byte	0x5a
+ 645 033b 07       		.uleb128 0x7
+ 646 033c A3080000 		.4byte	.LASF70
+ 647 0340 04       		.byte	0x4
+ 648 0341 6F       		.byte	0x6f
+ 649 0342 BF000000 		.4byte	0xbf
+ 650 0346 5C       		.byte	0x5c
+ 651 0347 07       		.uleb128 0x7
+ 652 0348 D5000000 		.4byte	.LASF71
+ 653 034c 04       		.byte	0x4
+ 654 034d 70       		.byte	0x70
+ 655 034e A9000000 		.4byte	0xa9
+ 656 0352 5E       		.byte	0x5e
+ 657 0353 07       		.uleb128 0x7
+ 658 0354 D4060000 		.4byte	.LASF72
+ 659 0358 04       		.byte	0x4
+ 660 0359 71       		.byte	0x71
+ 661 035a A9000000 		.4byte	0xa9
+ 662 035e 5F       		.byte	0x5f
+ 663 035f 07       		.uleb128 0x7
+ 664 0360 B6050000 		.4byte	.LASF73
+ 665 0364 04       		.byte	0x4
+ 666 0365 72       		.byte	0x72
+ 667 0366 A9000000 		.4byte	0xa9
+ 668 036a 60       		.byte	0x60
+ 669 036b 07       		.uleb128 0x7
+ 670 036c AD060000 		.4byte	.LASF74
+ 671 0370 04       		.byte	0x4
+ 672 0371 73       		.byte	0x73
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 14
+
+
+ 673 0372 D5000000 		.4byte	0xd5
+ 674 0376 64       		.byte	0x64
+ 675 0377 07       		.uleb128 0x7
+ 676 0378 B0010000 		.4byte	.LASF75
+ 677 037c 04       		.byte	0x4
+ 678 037d 76       		.byte	0x76
+ 679 037e BF000000 		.4byte	0xbf
+ 680 0382 68       		.byte	0x68
+ 681 0383 07       		.uleb128 0x7
+ 682 0384 28040000 		.4byte	.LASF76
+ 683 0388 04       		.byte	0x4
+ 684 0389 77       		.byte	0x77
+ 685 038a BF000000 		.4byte	0xbf
+ 686 038e 6A       		.byte	0x6a
+ 687 038f 07       		.uleb128 0x7
+ 688 0390 89040000 		.4byte	.LASF77
+ 689 0394 04       		.byte	0x4
+ 690 0395 78       		.byte	0x78
+ 691 0396 BF000000 		.4byte	0xbf
+ 692 039a 6C       		.byte	0x6c
+ 693 039b 07       		.uleb128 0x7
+ 694 039c C9070000 		.4byte	.LASF78
+ 695 03a0 04       		.byte	0x4
+ 696 03a1 79       		.byte	0x79
+ 697 03a2 BF000000 		.4byte	0xbf
+ 698 03a6 6E       		.byte	0x6e
+ 699 03a7 07       		.uleb128 0x7
+ 700 03a8 77070000 		.4byte	.LASF79
+ 701 03ac 04       		.byte	0x4
+ 702 03ad 7B       		.byte	0x7b
+ 703 03ae A9000000 		.4byte	0xa9
+ 704 03b2 70       		.byte	0x70
+ 705 03b3 07       		.uleb128 0x7
+ 706 03b4 4D020000 		.4byte	.LASF80
+ 707 03b8 04       		.byte	0x4
+ 708 03b9 7C       		.byte	0x7c
+ 709 03ba A9000000 		.4byte	0xa9
+ 710 03be 71       		.byte	0x71
+ 711 03bf 07       		.uleb128 0x7
+ 712 03c0 050A0000 		.4byte	.LASF81
+ 713 03c4 04       		.byte	0x4
+ 714 03c5 7D       		.byte	0x7d
+ 715 03c6 A9000000 		.4byte	0xa9
+ 716 03ca 72       		.byte	0x72
+ 717 03cb 07       		.uleb128 0x7
+ 718 03cc 87050000 		.4byte	.LASF82
+ 719 03d0 04       		.byte	0x4
+ 720 03d1 7E       		.byte	0x7e
+ 721 03d2 A9000000 		.4byte	0xa9
+ 722 03d6 73       		.byte	0x73
+ 723 03d7 07       		.uleb128 0x7
+ 724 03d8 49030000 		.4byte	.LASF83
+ 725 03dc 04       		.byte	0x4
+ 726 03dd 80       		.byte	0x80
+ 727 03de BF000000 		.4byte	0xbf
+ 728 03e2 74       		.byte	0x74
+ 729 03e3 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 15
+
+
+ 730 03e4 2C080000 		.4byte	.LASF84
+ 731 03e8 04       		.byte	0x4
+ 732 03e9 81       		.byte	0x81
+ 733 03ea BF000000 		.4byte	0xbf
+ 734 03ee 76       		.byte	0x76
+ 735 03ef 07       		.uleb128 0x7
+ 736 03f0 01030000 		.4byte	.LASF85
+ 737 03f4 04       		.byte	0x4
+ 738 03f5 82       		.byte	0x82
+ 739 03f6 BF000000 		.4byte	0xbf
+ 740 03fa 78       		.byte	0x78
+ 741 03fb 07       		.uleb128 0x7
+ 742 03fc 38070000 		.4byte	.LASF86
+ 743 0400 04       		.byte	0x4
+ 744 0401 83       		.byte	0x83
+ 745 0402 BF000000 		.4byte	0xbf
+ 746 0406 7A       		.byte	0x7a
+ 747 0407 07       		.uleb128 0x7
+ 748 0408 96090000 		.4byte	.LASF87
+ 749 040c 04       		.byte	0x4
+ 750 040d 86       		.byte	0x86
+ 751 040e A9000000 		.4byte	0xa9
+ 752 0412 7C       		.byte	0x7c
+ 753 0413 07       		.uleb128 0x7
+ 754 0414 AF040000 		.4byte	.LASF88
+ 755 0418 04       		.byte	0x4
+ 756 0419 87       		.byte	0x87
+ 757 041a A9000000 		.4byte	0xa9
+ 758 041e 7D       		.byte	0x7d
+ 759 041f 07       		.uleb128 0x7
+ 760 0420 49000000 		.4byte	.LASF89
+ 761 0424 04       		.byte	0x4
+ 762 0425 88       		.byte	0x88
+ 763 0426 A9000000 		.4byte	0xa9
+ 764 042a 7E       		.byte	0x7e
+ 765 042b 07       		.uleb128 0x7
+ 766 042c 64030000 		.4byte	.LASF90
+ 767 0430 04       		.byte	0x4
+ 768 0431 89       		.byte	0x89
+ 769 0432 A9000000 		.4byte	0xa9
+ 770 0436 7F       		.byte	0x7f
+ 771 0437 07       		.uleb128 0x7
+ 772 0438 D0030000 		.4byte	.LASF91
+ 773 043c 04       		.byte	0x4
+ 774 043d 8A       		.byte	0x8a
+ 775 043e A9000000 		.4byte	0xa9
+ 776 0442 80       		.byte	0x80
+ 777 0443 07       		.uleb128 0x7
+ 778 0444 17050000 		.4byte	.LASF92
+ 779 0448 04       		.byte	0x4
+ 780 0449 8D       		.byte	0x8d
+ 781 044a D5000000 		.4byte	0xd5
+ 782 044e 84       		.byte	0x84
+ 783 044f 07       		.uleb128 0x7
+ 784 0450 24010000 		.4byte	.LASF93
+ 785 0454 04       		.byte	0x4
+ 786 0455 8E       		.byte	0x8e
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 16
+
+
+ 787 0456 D5000000 		.4byte	0xd5
+ 788 045a 88       		.byte	0x88
+ 789 045b 07       		.uleb128 0x7
+ 790 045c 81090000 		.4byte	.LASF94
+ 791 0460 04       		.byte	0x4
+ 792 0461 8F       		.byte	0x8f
+ 793 0462 D5000000 		.4byte	0xd5
+ 794 0466 8C       		.byte	0x8c
+ 795 0467 07       		.uleb128 0x7
+ 796 0468 E4030000 		.4byte	.LASF95
+ 797 046c 04       		.byte	0x4
+ 798 046d 90       		.byte	0x90
+ 799 046e D5000000 		.4byte	0xd5
+ 800 0472 90       		.byte	0x90
+ 801 0473 07       		.uleb128 0x7
+ 802 0474 B1030000 		.4byte	.LASF96
+ 803 0478 04       		.byte	0x4
+ 804 0479 91       		.byte	0x91
+ 805 047a D5000000 		.4byte	0xd5
+ 806 047e 94       		.byte	0x94
+ 807 047f 07       		.uleb128 0x7
+ 808 0480 62020000 		.4byte	.LASF97
+ 809 0484 04       		.byte	0x4
+ 810 0485 92       		.byte	0x92
+ 811 0486 D5000000 		.4byte	0xd5
+ 812 048a 98       		.byte	0x98
+ 813 048b 07       		.uleb128 0x7
+ 814 048c BB090000 		.4byte	.LASF98
+ 815 0490 04       		.byte	0x4
+ 816 0491 93       		.byte	0x93
+ 817 0492 D5000000 		.4byte	0xd5
+ 818 0496 9C       		.byte	0x9c
+ 819 0497 07       		.uleb128 0x7
+ 820 0498 C0010000 		.4byte	.LASF99
+ 821 049c 04       		.byte	0x4
+ 822 049d 94       		.byte	0x94
+ 823 049e D5000000 		.4byte	0xd5
+ 824 04a2 A0       		.byte	0xa0
+ 825 04a3 07       		.uleb128 0x7
+ 826 04a4 83020000 		.4byte	.LASF100
+ 827 04a8 04       		.byte	0x4
+ 828 04a9 95       		.byte	0x95
+ 829 04aa BF000000 		.4byte	0xbf
+ 830 04ae A4       		.byte	0xa4
+ 831 04af 07       		.uleb128 0x7
+ 832 04b0 D6070000 		.4byte	.LASF101
+ 833 04b4 04       		.byte	0x4
+ 834 04b5 96       		.byte	0x96
+ 835 04b6 BF000000 		.4byte	0xbf
+ 836 04ba A6       		.byte	0xa6
+ 837 04bb 07       		.uleb128 0x7
+ 838 04bc C8060000 		.4byte	.LASF102
+ 839 04c0 04       		.byte	0x4
+ 840 04c1 97       		.byte	0x97
+ 841 04c2 BF000000 		.4byte	0xbf
+ 842 04c6 A8       		.byte	0xa8
+ 843 04c7 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 17
+
+
+ 844 04c8 4D070000 		.4byte	.LASF103
+ 845 04cc 04       		.byte	0x4
+ 846 04cd 98       		.byte	0x98
+ 847 04ce BF000000 		.4byte	0xbf
+ 848 04d2 AA       		.byte	0xaa
+ 849 04d3 07       		.uleb128 0x7
+ 850 04d4 98040000 		.4byte	.LASF104
+ 851 04d8 04       		.byte	0x4
+ 852 04d9 99       		.byte	0x99
+ 853 04da BF000000 		.4byte	0xbf
+ 854 04de AC       		.byte	0xac
+ 855 04df 07       		.uleb128 0x7
+ 856 04e0 ED000000 		.4byte	.LASF105
+ 857 04e4 04       		.byte	0x4
+ 858 04e5 9A       		.byte	0x9a
+ 859 04e6 BF000000 		.4byte	0xbf
+ 860 04ea AE       		.byte	0xae
+ 861 04eb 07       		.uleb128 0x7
+ 862 04ec B6080000 		.4byte	.LASF106
+ 863 04f0 04       		.byte	0x4
+ 864 04f1 9D       		.byte	0x9d
+ 865 04f2 BF000000 		.4byte	0xbf
+ 866 04f6 B0       		.byte	0xb0
+ 867 04f7 07       		.uleb128 0x7
+ 868 04f8 5C000000 		.4byte	.LASF107
+ 869 04fc 04       		.byte	0x4
+ 870 04fd 9E       		.byte	0x9e
+ 871 04fe D5000000 		.4byte	0xd5
+ 872 0502 B4       		.byte	0xb4
+ 873 0503 00       		.byte	0
+ 874 0504 03       		.uleb128 0x3
+ 875 0505 CC040000 		.4byte	.LASF108
+ 876 0509 04       		.byte	0x4
+ 877 050a 9F       		.byte	0x9f
+ 878 050b F3000000 		.4byte	0xf3
+ 879 050f 02       		.uleb128 0x2
+ 880 0510 01       		.byte	0x1
+ 881 0511 08       		.byte	0x8
+ 882 0512 08080000 		.4byte	.LASF109
+ 883 0516 02       		.uleb128 0x2
+ 884 0517 08       		.byte	0x8
+ 885 0518 04       		.byte	0x4
+ 886 0519 FA020000 		.4byte	.LASF110
+ 887 051d 08       		.uleb128 0x8
+ 888 051e 04       		.byte	0x4
+ 889 051f D5000000 		.4byte	0xd5
+ 890 0523 09       		.uleb128 0x9
+ 891 0524 04       		.byte	0x4
+ 892 0525 02       		.uleb128 0x2
+ 893 0526 01       		.byte	0x1
+ 894 0527 02       		.byte	0x2
+ 895 0528 0A090000 		.4byte	.LASF111
+ 896 052c 08       		.uleb128 0x8
+ 897 052d 04       		.byte	0x4
+ 898 052e 32050000 		.4byte	0x532
+ 899 0532 0A       		.uleb128 0xa
+ 900 0533 3D050000 		.4byte	0x53d
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 18
+
+
+ 901 0537 0B       		.uleb128 0xb
+ 902 0538 D5000000 		.4byte	0xd5
+ 903 053c 00       		.byte	0
+ 904 053d 0C       		.uleb128 0xc
+ 905 053e 98020000 		.4byte	.LASF112
+ 906 0542 05       		.byte	0x5
+ 907 0543 F201     		.2byte	0x1f2
+ 908 0545 2C050000 		.4byte	0x52c
+ 909 0549 0D       		.uleb128 0xd
+ 910 054a 36020000 		.4byte	.LASF123
+ 911 054e 24       		.byte	0x24
+ 912 054f 05       		.byte	0x5
+ 913 0550 7402     		.2byte	0x274
+ 914 0552 CC050000 		.4byte	0x5cc
+ 915 0556 0E       		.uleb128 0xe
+ 916 0557 70070000 		.4byte	.LASF113
+ 917 055b 05       		.byte	0x5
+ 918 055c 7702     		.2byte	0x277
+ 919 055e E7000000 		.4byte	0xe7
+ 920 0562 00       		.byte	0
+ 921 0563 0E       		.uleb128 0xe
+ 922 0564 FB080000 		.4byte	.LASF114
+ 923 0568 05       		.byte	0x5
+ 924 0569 7902     		.2byte	0x279
+ 925 056b 23050000 		.4byte	0x523
+ 926 056f 04       		.byte	0x4
+ 927 0570 0E       		.uleb128 0xe
+ 928 0571 2B000000 		.4byte	.LASF115
+ 929 0575 05       		.byte	0x5
+ 930 0576 7A02     		.2byte	0x27a
+ 931 0578 D5000000 		.4byte	0xd5
+ 932 057c 08       		.byte	0x8
+ 933 057d 0E       		.uleb128 0xe
+ 934 057e A8030000 		.4byte	.LASF116
+ 935 0582 05       		.byte	0x5
+ 936 0583 7B02     		.2byte	0x27b
+ 937 0585 E7000000 		.4byte	0xe7
+ 938 0589 0C       		.byte	0xc
+ 939 058a 0E       		.uleb128 0xe
+ 940 058b D6010000 		.4byte	.LASF117
+ 941 058f 05       		.byte	0x5
+ 942 0590 7D02     		.2byte	0x27d
+ 943 0592 23050000 		.4byte	0x523
+ 944 0596 10       		.byte	0x10
+ 945 0597 0E       		.uleb128 0xe
+ 946 0598 C6030000 		.4byte	.LASF118
+ 947 059c 05       		.byte	0x5
+ 948 059d 7E02     		.2byte	0x27e
+ 949 059f D5000000 		.4byte	0xd5
+ 950 05a3 14       		.byte	0x14
+ 951 05a4 0E       		.uleb128 0xe
+ 952 05a5 640A0000 		.4byte	.LASF119
+ 953 05a9 05       		.byte	0x5
+ 954 05aa 7F02     		.2byte	0x27f
+ 955 05ac E7000000 		.4byte	0xe7
+ 956 05b0 18       		.byte	0x18
+ 957 05b1 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 19
+
+
+ 958 05b2 A6040000 		.4byte	.LASF120
+ 959 05b6 05       		.byte	0x5
+ 960 05b7 8502     		.2byte	0x285
+ 961 05b9 3D050000 		.4byte	0x53d
+ 962 05bd 1C       		.byte	0x1c
+ 963 05be 0E       		.uleb128 0xe
+ 964 05bf F3080000 		.4byte	.LASF121
+ 965 05c3 05       		.byte	0x5
+ 966 05c4 8802     		.2byte	0x288
+ 967 05c6 D5000000 		.4byte	0xd5
+ 968 05ca 20       		.byte	0x20
+ 969 05cb 00       		.byte	0
+ 970 05cc 0C       		.uleb128 0xc
+ 971 05cd DC040000 		.4byte	.LASF122
+ 972 05d1 05       		.byte	0x5
+ 973 05d2 8B02     		.2byte	0x28b
+ 974 05d4 49050000 		.4byte	0x549
+ 975 05d8 0F       		.uleb128 0xf
+ 976 05d9 45050000 		.4byte	.LASF124
+ 977 05dd 4C       		.byte	0x4c
+ 978 05de 06       		.byte	0x6
+ 979 05df 2F       		.byte	0x2f
+ 980 05e0 C9060000 		.4byte	0x6c9
+ 981 05e4 07       		.uleb128 0x7
+ 982 05e5 6A010000 		.4byte	.LASF125
+ 983 05e9 06       		.byte	0x6
+ 984 05ea 31       		.byte	0x31
+ 985 05eb D5000000 		.4byte	0xd5
+ 986 05ef 00       		.byte	0
+ 987 05f0 07       		.uleb128 0x7
+ 988 05f1 A1010000 		.4byte	.LASF126
+ 989 05f5 06       		.byte	0x6
+ 990 05f6 33       		.byte	0x33
+ 991 05f7 D5000000 		.4byte	0xd5
+ 992 05fb 04       		.byte	0x4
+ 993 05fc 07       		.uleb128 0x7
+ 994 05fd 23000000 		.4byte	.LASF127
+ 995 0601 06       		.byte	0x6
+ 996 0602 34       		.byte	0x34
+ 997 0603 D5000000 		.4byte	0xd5
+ 998 0607 08       		.byte	0x8
+ 999 0608 07       		.uleb128 0x7
+ 1000 0609 3B010000 		.4byte	.LASF128
+ 1001 060d 06       		.byte	0x6
+ 1002 060e 35       		.byte	0x35
+ 1003 060f D5000000 		.4byte	0xd5
+ 1004 0613 0C       		.byte	0xc
+ 1005 0614 07       		.uleb128 0x7
+ 1006 0615 8B070000 		.4byte	.LASF129
+ 1007 0619 06       		.byte	0x6
+ 1008 061a 37       		.byte	0x37
+ 1009 061b D5000000 		.4byte	0xd5
+ 1010 061f 10       		.byte	0x10
+ 1011 0620 07       		.uleb128 0x7
+ 1012 0621 EB070000 		.4byte	.LASF130
+ 1013 0625 06       		.byte	0x6
+ 1014 0626 38       		.byte	0x38
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 20
+
+
+ 1015 0627 D5000000 		.4byte	0xd5
+ 1016 062b 14       		.byte	0x14
+ 1017 062c 07       		.uleb128 0x7
+ 1018 062d F4070000 		.4byte	.LASF131
+ 1019 0631 06       		.byte	0x6
+ 1020 0632 39       		.byte	0x39
+ 1021 0633 D5000000 		.4byte	0xd5
+ 1022 0637 18       		.byte	0x18
+ 1023 0638 07       		.uleb128 0x7
+ 1024 0639 4C040000 		.4byte	.LASF132
+ 1025 063d 06       		.byte	0x6
+ 1026 063e 3A       		.byte	0x3a
+ 1027 063f 25050000 		.4byte	0x525
+ 1028 0643 1C       		.byte	0x1c
+ 1029 0644 07       		.uleb128 0x7
+ 1030 0645 73080000 		.4byte	.LASF133
+ 1031 0649 06       		.byte	0x6
+ 1032 064a 3C       		.byte	0x3c
+ 1033 064b D5000000 		.4byte	0xd5
+ 1034 064f 20       		.byte	0x20
+ 1035 0650 07       		.uleb128 0x7
+ 1036 0651 38030000 		.4byte	.LASF134
+ 1037 0655 06       		.byte	0x6
+ 1038 0656 3D       		.byte	0x3d
+ 1039 0657 D5000000 		.4byte	0xd5
+ 1040 065b 24       		.byte	0x24
+ 1041 065c 07       		.uleb128 0x7
+ 1042 065d 7D010000 		.4byte	.LASF135
+ 1043 0661 06       		.byte	0x6
+ 1044 0662 3F       		.byte	0x3f
+ 1045 0663 D5000000 		.4byte	0xd5
+ 1046 0667 28       		.byte	0x28
+ 1047 0668 07       		.uleb128 0x7
+ 1048 0669 AB090000 		.4byte	.LASF136
+ 1049 066d 06       		.byte	0x6
+ 1050 066e 40       		.byte	0x40
+ 1051 066f D5000000 		.4byte	0xd5
+ 1052 0673 2C       		.byte	0x2c
+ 1053 0674 07       		.uleb128 0x7
+ 1054 0675 84080000 		.4byte	.LASF137
+ 1055 0679 06       		.byte	0x6
+ 1056 067a 42       		.byte	0x42
+ 1057 067b D5000000 		.4byte	0xd5
+ 1058 067f 30       		.byte	0x30
+ 1059 0680 07       		.uleb128 0x7
+ 1060 0681 F2060000 		.4byte	.LASF138
+ 1061 0685 06       		.byte	0x6
+ 1062 0686 43       		.byte	0x43
+ 1063 0687 D5000000 		.4byte	0xd5
+ 1064 068b 34       		.byte	0x34
+ 1065 068c 07       		.uleb128 0x7
+ 1066 068d 6D0A0000 		.4byte	.LASF139
+ 1067 0691 06       		.byte	0x6
+ 1068 0692 45       		.byte	0x45
+ 1069 0693 D5000000 		.4byte	0xd5
+ 1070 0697 38       		.byte	0x38
+ 1071 0698 07       		.uleb128 0x7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 21
+
+
+ 1072 0699 52010000 		.4byte	.LASF140
+ 1073 069d 06       		.byte	0x6
+ 1074 069e 46       		.byte	0x46
+ 1075 069f D5000000 		.4byte	0xd5
+ 1076 06a3 3C       		.byte	0x3c
+ 1077 06a4 07       		.uleb128 0x7
+ 1078 06a5 AC080000 		.4byte	.LASF141
+ 1079 06a9 06       		.byte	0x6
+ 1080 06aa 48       		.byte	0x48
+ 1081 06ab D5000000 		.4byte	0xd5
+ 1082 06af 40       		.byte	0x40
+ 1083 06b0 07       		.uleb128 0x7
+ 1084 06b1 08050000 		.4byte	.LASF142
+ 1085 06b5 06       		.byte	0x6
+ 1086 06b6 49       		.byte	0x49
+ 1087 06b7 D5000000 		.4byte	0xd5
+ 1088 06bb 44       		.byte	0x44
+ 1089 06bc 07       		.uleb128 0x7
+ 1090 06bd FD070000 		.4byte	.LASF143
+ 1091 06c1 06       		.byte	0x6
+ 1092 06c2 4B       		.byte	0x4b
+ 1093 06c3 D5000000 		.4byte	0xd5
+ 1094 06c7 48       		.byte	0x48
+ 1095 06c8 00       		.byte	0
+ 1096 06c9 03       		.uleb128 0x3
+ 1097 06ca 18020000 		.4byte	.LASF144
+ 1098 06ce 06       		.byte	0x6
+ 1099 06cf 4C       		.byte	0x4c
+ 1100 06d0 D8050000 		.4byte	0x5d8
+ 1101 06d4 10       		.uleb128 0x10
+ 1102 06d5 2D0A0000 		.4byte	.LASF147
+ 1103 06d9 01       		.byte	0x1
+ 1104 06da 18       		.byte	0x18
+ 1105 06db 00000000 		.4byte	.LFB589
+ 1106 06df 02000000 		.4byte	.LFE589-.LFB589
+ 1107 06e3 01       		.uleb128 0x1
+ 1108 06e4 9C       		.byte	0x9c
+ 1109 06e5 04070000 		.4byte	0x704
+ 1110 06e9 11       		.uleb128 0x11
+ 1111 06ea 4A010000 		.4byte	.LASF145
+ 1112 06ee 01       		.byte	0x1
+ 1113 06ef 18       		.byte	0x18
+ 1114 06f0 1D050000 		.4byte	0x51d
+ 1115 06f4 01       		.uleb128 0x1
+ 1116 06f5 50       		.byte	0x50
+ 1117 06f6 11       		.uleb128 0x11
+ 1118 06f7 5B030000 		.4byte	.LASF146
+ 1119 06fb 01       		.byte	0x1
+ 1120 06fc 18       		.byte	0x18
+ 1121 06fd 1D050000 		.4byte	0x51d
+ 1122 0701 01       		.uleb128 0x1
+ 1123 0702 51       		.byte	0x51
+ 1124 0703 00       		.byte	0
+ 1125 0704 10       		.uleb128 0x10
+ 1126 0705 06040000 		.4byte	.LASF148
+ 1127 0709 01       		.byte	0x1
+ 1128 070a 21       		.byte	0x21
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 22
+
+
+ 1129 070b 00000000 		.4byte	.LFB590
+ 1130 070f 02000000 		.4byte	.LFE590-.LFB590
+ 1131 0713 01       		.uleb128 0x1
+ 1132 0714 9C       		.byte	0x9c
+ 1133 0715 34070000 		.4byte	0x734
+ 1134 0719 11       		.uleb128 0x11
+ 1135 071a 66070000 		.4byte	.LASF149
+ 1136 071e 01       		.byte	0x1
+ 1137 071f 21       		.byte	0x21
+ 1138 0720 1D050000 		.4byte	0x51d
+ 1139 0724 01       		.uleb128 0x1
+ 1140 0725 50       		.byte	0x50
+ 1141 0726 11       		.uleb128 0x11
+ 1142 0727 1F040000 		.4byte	.LASF150
+ 1143 072b 01       		.byte	0x1
+ 1144 072c 21       		.byte	0x21
+ 1145 072d 1D050000 		.4byte	0x51d
+ 1146 0731 01       		.uleb128 0x1
+ 1147 0732 51       		.byte	0x51
+ 1148 0733 00       		.byte	0
+ 1149 0734 12       		.uleb128 0x12
+ 1150 0735 F4090000 		.4byte	.LASF152
+ 1151 0739 01       		.byte	0x1
+ 1152 073a 27       		.byte	0x27
+ 1153 073b A9000000 		.4byte	0xa9
+ 1154 073f 00000000 		.4byte	.LFB591
+ 1155 0743 04000000 		.4byte	.LFE591-.LFB591
+ 1156 0747 01       		.uleb128 0x1
+ 1157 0748 9C       		.byte	0x9c
+ 1158 0749 81070000 		.4byte	0x781
+ 1159 074d 13       		.uleb128 0x13
+ 1160 074e 21030000 		.4byte	.LASF151
+ 1161 0752 01       		.byte	0x1
+ 1162 0753 27       		.byte	0x27
+ 1163 0754 1D050000 		.4byte	0x51d
+ 1164 0758 00000000 		.4byte	.LLST0
+ 1165 075c 14       		.uleb128 0x14
+ 1166 075d 414300   		.ascii	"AC\000"
+ 1167 0760 01       		.byte	0x1
+ 1168 0761 27       		.byte	0x27
+ 1169 0762 1D050000 		.4byte	0x51d
+ 1170 0766 01       		.uleb128 0x1
+ 1171 0767 51       		.byte	0x51
+ 1172 0768 14       		.uleb128 0x14
+ 1173 0769 444300   		.ascii	"DC\000"
+ 1174 076c 01       		.byte	0x1
+ 1175 076d 27       		.byte	0x27
+ 1176 076e 1D050000 		.4byte	0x51d
+ 1177 0772 01       		.uleb128 0x1
+ 1178 0773 52       		.byte	0x52
+ 1179 0774 15       		.uleb128 0x15
+ 1180 0775 60090000 		.4byte	.LASF155
+ 1181 0779 01       		.byte	0x1
+ 1182 077a 2B       		.byte	0x2b
+ 1183 077b A9000000 		.4byte	0xa9
+ 1184 077f 00       		.byte	0
+ 1185 0780 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 23
+
+
+ 1186 0781 12       		.uleb128 0x12
+ 1187 0782 D1080000 		.4byte	.LASF153
+ 1188 0786 01       		.byte	0x1
+ 1189 0787 33       		.byte	0x33
+ 1190 0788 A9000000 		.4byte	0xa9
+ 1191 078c 00000000 		.4byte	.LFB592
+ 1192 0790 18000000 		.4byte	.LFE592-.LFB592
+ 1193 0794 01       		.uleb128 0x1
+ 1194 0795 9C       		.byte	0x9c
+ 1195 0796 B6070000 		.4byte	0x7b6
+ 1196 079a 13       		.uleb128 0x13
+ 1197 079b 28030000 		.4byte	.LASF154
+ 1198 079f 01       		.byte	0x1
+ 1199 07a0 33       		.byte	0x33
+ 1200 07a1 A9000000 		.4byte	0xa9
+ 1201 07a5 21000000 		.4byte	.LLST1
+ 1202 07a9 15       		.uleb128 0x15
+ 1203 07aa B7070000 		.4byte	.LASF156
+ 1204 07ae 01       		.byte	0x1
+ 1205 07af 35       		.byte	0x35
+ 1206 07b0 A9000000 		.4byte	0xa9
+ 1207 07b4 0A       		.byte	0xa
+ 1208 07b5 00       		.byte	0
+ 1209 07b6 16       		.uleb128 0x16
+ 1210 07b7 00000000 		.4byte	.LASF157
+ 1211 07bb 01       		.byte	0x1
+ 1212 07bc 39       		.byte	0x39
+ 1213 07bd A9000000 		.4byte	0xa9
+ 1214 07c1 00000000 		.4byte	.LFB593
+ 1215 07c5 7C000000 		.4byte	.LFE593-.LFB593
+ 1216 07c9 01       		.uleb128 0x1
+ 1217 07ca 9C       		.byte	0x9c
+ 1218 07cb 5B080000 		.4byte	0x85b
+ 1219 07cf 13       		.uleb128 0x13
+ 1220 07d0 A0060000 		.4byte	.LASF158
+ 1221 07d4 01       		.byte	0x1
+ 1222 07d5 39       		.byte	0x39
+ 1223 07d6 D5000000 		.4byte	0xd5
+ 1224 07da 42000000 		.4byte	.LLST2
+ 1225 07de 13       		.uleb128 0x13
+ 1226 07df 31030000 		.4byte	.LASF159
+ 1227 07e3 01       		.byte	0x1
+ 1228 07e4 39       		.byte	0x39
+ 1229 07e5 D5000000 		.4byte	0xd5
+ 1230 07e9 63000000 		.4byte	.LLST3
+ 1231 07ed 13       		.uleb128 0x13
+ 1232 07ee 75050000 		.4byte	.LASF160
+ 1233 07f2 01       		.byte	0x1
+ 1234 07f3 39       		.byte	0x39
+ 1235 07f4 D5000000 		.4byte	0xd5
+ 1236 07f8 84000000 		.4byte	.LLST4
+ 1237 07fc 13       		.uleb128 0x13
+ 1238 07fd 19040000 		.4byte	.LASF161
+ 1239 0801 01       		.byte	0x1
+ 1240 0802 39       		.byte	0x39
+ 1241 0803 D5000000 		.4byte	0xd5
+ 1242 0807 A5000000 		.4byte	.LLST5
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 24
+
+
+ 1243 080b 17       		.uleb128 0x17
+ 1244 080c 3F080000 		.4byte	.LASF162
+ 1245 0810 01       		.byte	0x1
+ 1246 0811 3C       		.byte	0x3c
+ 1247 0812 2C000000 		.4byte	0x2c
+ 1248 0816 C6000000 		.4byte	.LLST6
+ 1249 081a 18       		.uleb128 0x18
+ 1250 081b 6100     		.ascii	"a\000"
+ 1251 081d 01       		.byte	0x1
+ 1252 081e 3E       		.byte	0x3e
+ 1253 081f 2C000000 		.4byte	0x2c
+ 1254 0823 04       		.byte	0x4
+ 1255 0824 8F44CC3F 		.4byte	0x3fcc448f
+ 1256 0828 18       		.uleb128 0x18
+ 1257 0829 6200     		.ascii	"b\000"
+ 1258 082b 01       		.byte	0x1
+ 1259 082c 3F       		.byte	0x3f
+ 1260 082d 2C000000 		.4byte	0x2c
+ 1261 0831 04       		.byte	0x4
+ 1262 0832 7EA30AC2 		.4byte	0xc20aa37e
+ 1263 0836 18       		.uleb128 0x18
+ 1264 0837 6300     		.ascii	"c\000"
+ 1265 0839 01       		.byte	0x1
+ 1266 083a 40       		.byte	0x40
+ 1267 083b 2C000000 		.4byte	0x2c
+ 1268 083f 04       		.byte	0x4
+ 1269 0840 3761E142 		.4byte	0x42e16137
+ 1270 0844 19       		.uleb128 0x19
+ 1271 0845 5B070000 		.4byte	.LASF163
+ 1272 0849 01       		.byte	0x1
+ 1273 084a 42       		.byte	0x42
+ 1274 084b A9000000 		.4byte	0xa9
+ 1275 084f 01       		.uleb128 0x1
+ 1276 0850 50       		.byte	0x50
+ 1277 0851 1A       		.uleb128 0x1a
+ 1278 0852 2C000000 		.4byte	.LVL12
+ 1279 0856 25090000 		.4byte	0x925
+ 1280 085a 00       		.byte	0
+ 1281 085b 1B       		.uleb128 0x1b
+ 1282 085c 2B070000 		.4byte	.LASF164
+ 1283 0860 07       		.byte	0x7
+ 1284 0861 0108     		.2byte	0x801
+ 1285 0863 67080000 		.4byte	0x867
+ 1286 0867 05       		.uleb128 0x5
+ 1287 0868 CA000000 		.4byte	0xca
+ 1288 086c 1C       		.uleb128 0x1c
+ 1289 086d BE060000 		.4byte	.LASF165
+ 1290 0871 04       		.byte	0x4
+ 1291 0872 A7       		.byte	0xa7
+ 1292 0873 77080000 		.4byte	0x877
+ 1293 0877 08       		.uleb128 0x8
+ 1294 0878 04       		.byte	0x4
+ 1295 0879 7D080000 		.4byte	0x87d
+ 1296 087d 1D       		.uleb128 0x1d
+ 1297 087e 04050000 		.4byte	0x504
+ 1298 0882 1C       		.uleb128 0x1c
+ 1299 0883 1E090000 		.4byte	.LASF166
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 25
+
+
+ 1300 0887 08       		.byte	0x8
+ 1301 0888 5E       		.byte	0x5e
+ 1302 0889 CC050000 		.4byte	0x5cc
+ 1303 088d 1C       		.uleb128 0x1c
+ 1304 088e 6C090000 		.4byte	.LASF167
+ 1305 0892 09       		.byte	0x9
+ 1306 0893 1F       		.byte	0x1f
+ 1307 0894 98080000 		.4byte	0x898
+ 1308 0898 1D       		.uleb128 0x1d
+ 1309 0899 C9060000 		.4byte	0x6c9
+ 1310 089d 1E       		.uleb128 0x1e
+ 1311 089e D5000000 		.4byte	0xd5
+ 1312 08a2 AE080000 		.4byte	0x8ae
+ 1313 08a6 1F       		.uleb128 0x1f
+ 1314 08a7 E0000000 		.4byte	0xe0
+ 1315 08ab 9F0F     		.2byte	0xf9f
+ 1316 08ad 00       		.byte	0
+ 1317 08ae 20       		.uleb128 0x20
+ 1318 08af 66070000 		.4byte	.LASF149
+ 1319 08b3 01       		.byte	0x1
+ 1320 08b4 0E       		.byte	0xe
+ 1321 08b5 9D080000 		.4byte	0x89d
+ 1322 08b9 05       		.uleb128 0x5
+ 1323 08ba 03       		.byte	0x3
+ 1324 08bb 00000000 		.4byte	bufferRed
+ 1325 08bf 20       		.uleb128 0x20
+ 1326 08c0 1F040000 		.4byte	.LASF150
+ 1327 08c4 01       		.byte	0x1
+ 1328 08c5 0F       		.byte	0xf
+ 1329 08c6 9D080000 		.4byte	0x89d
+ 1330 08ca 05       		.uleb128 0x5
+ 1331 08cb 03       		.byte	0x3
+ 1332 08cc 00000000 		.4byte	bufferIR
+ 1333 08d0 21       		.uleb128 0x21
+ 1334 08d1 62706D00 		.ascii	"bpm\000"
+ 1335 08d5 01       		.byte	0x1
+ 1336 08d6 11       		.byte	0x11
+ 1337 08d7 A9000000 		.4byte	0xa9
+ 1338 08db 05       		.uleb128 0x5
+ 1339 08dc 03       		.byte	0x3
+ 1340 08dd 00000000 		.4byte	bpm
+ 1341 08e1 20       		.uleb128 0x20
+ 1342 08e2 A0060000 		.4byte	.LASF158
+ 1343 08e6 01       		.byte	0x1
+ 1344 08e7 13       		.byte	0x13
+ 1345 08e8 D5000000 		.4byte	0xd5
+ 1346 08ec 05       		.uleb128 0x5
+ 1347 08ed 03       		.byte	0x3
+ 1348 08ee 00000000 		.4byte	AC_red
+ 1349 08f2 20       		.uleb128 0x20
+ 1350 08f3 31030000 		.4byte	.LASF159
+ 1351 08f7 01       		.byte	0x1
+ 1352 08f8 14       		.byte	0x14
+ 1353 08f9 D5000000 		.4byte	0xd5
+ 1354 08fd 05       		.uleb128 0x5
+ 1355 08fe 03       		.byte	0x3
+ 1356 08ff 00000000 		.4byte	DC_red
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 26
+
+
+ 1357 0903 20       		.uleb128 0x20
+ 1358 0904 75050000 		.4byte	.LASF160
+ 1359 0908 01       		.byte	0x1
+ 1360 0909 15       		.byte	0x15
+ 1361 090a D5000000 		.4byte	0xd5
+ 1362 090e 05       		.uleb128 0x5
+ 1363 090f 03       		.byte	0x3
+ 1364 0910 00000000 		.4byte	AC_IR
+ 1365 0914 20       		.uleb128 0x20
+ 1366 0915 19040000 		.4byte	.LASF161
+ 1367 0919 01       		.byte	0x1
+ 1368 091a 16       		.byte	0x16
+ 1369 091b D5000000 		.4byte	0xd5
+ 1370 091f 05       		.uleb128 0x5
+ 1371 0920 03       		.byte	0x3
+ 1372 0921 00000000 		.4byte	DC_IR
+ 1373 0925 22       		.uleb128 0x22
+ 1374 0926 706F7700 		.ascii	"pow\000"
+ 1375 092a 706F7700 		.ascii	"pow\000"
+ 1376 092e 0A       		.byte	0xa
+ 1377 092f 86       		.byte	0x86
+ 1378 0930 00       		.byte	0
+ 1379              		.section	.debug_abbrev,"",%progbits
+ 1380              	.Ldebug_abbrev0:
+ 1381 0000 01       		.uleb128 0x1
+ 1382 0001 11       		.uleb128 0x11
+ 1383 0002 01       		.byte	0x1
+ 1384 0003 25       		.uleb128 0x25
+ 1385 0004 0E       		.uleb128 0xe
+ 1386 0005 13       		.uleb128 0x13
+ 1387 0006 0B       		.uleb128 0xb
+ 1388 0007 03       		.uleb128 0x3
+ 1389 0008 0E       		.uleb128 0xe
+ 1390 0009 1B       		.uleb128 0x1b
+ 1391 000a 0E       		.uleb128 0xe
+ 1392 000b 55       		.uleb128 0x55
+ 1393 000c 17       		.uleb128 0x17
+ 1394 000d 11       		.uleb128 0x11
+ 1395 000e 01       		.uleb128 0x1
+ 1396 000f 10       		.uleb128 0x10
+ 1397 0010 17       		.uleb128 0x17
+ 1398 0011 00       		.byte	0
+ 1399 0012 00       		.byte	0
+ 1400 0013 02       		.uleb128 0x2
+ 1401 0014 24       		.uleb128 0x24
+ 1402 0015 00       		.byte	0
+ 1403 0016 0B       		.uleb128 0xb
+ 1404 0017 0B       		.uleb128 0xb
+ 1405 0018 3E       		.uleb128 0x3e
+ 1406 0019 0B       		.uleb128 0xb
+ 1407 001a 03       		.uleb128 0x3
+ 1408 001b 0E       		.uleb128 0xe
+ 1409 001c 00       		.byte	0
+ 1410 001d 00       		.byte	0
+ 1411 001e 03       		.uleb128 0x3
+ 1412 001f 16       		.uleb128 0x16
+ 1413 0020 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 27
+
+
+ 1414 0021 03       		.uleb128 0x3
+ 1415 0022 0E       		.uleb128 0xe
+ 1416 0023 3A       		.uleb128 0x3a
+ 1417 0024 0B       		.uleb128 0xb
+ 1418 0025 3B       		.uleb128 0x3b
+ 1419 0026 0B       		.uleb128 0xb
+ 1420 0027 49       		.uleb128 0x49
+ 1421 0028 13       		.uleb128 0x13
+ 1422 0029 00       		.byte	0
+ 1423 002a 00       		.byte	0
+ 1424 002b 04       		.uleb128 0x4
+ 1425 002c 24       		.uleb128 0x24
+ 1426 002d 00       		.byte	0
+ 1427 002e 0B       		.uleb128 0xb
+ 1428 002f 0B       		.uleb128 0xb
+ 1429 0030 3E       		.uleb128 0x3e
+ 1430 0031 0B       		.uleb128 0xb
+ 1431 0032 03       		.uleb128 0x3
+ 1432 0033 08       		.uleb128 0x8
+ 1433 0034 00       		.byte	0
+ 1434 0035 00       		.byte	0
+ 1435 0036 05       		.uleb128 0x5
+ 1436 0037 35       		.uleb128 0x35
+ 1437 0038 00       		.byte	0
+ 1438 0039 49       		.uleb128 0x49
+ 1439 003a 13       		.uleb128 0x13
+ 1440 003b 00       		.byte	0
+ 1441 003c 00       		.byte	0
+ 1442 003d 06       		.uleb128 0x6
+ 1443 003e 13       		.uleb128 0x13
+ 1444 003f 01       		.byte	0x1
+ 1445 0040 0B       		.uleb128 0xb
+ 1446 0041 0B       		.uleb128 0xb
+ 1447 0042 3A       		.uleb128 0x3a
+ 1448 0043 0B       		.uleb128 0xb
+ 1449 0044 3B       		.uleb128 0x3b
+ 1450 0045 0B       		.uleb128 0xb
+ 1451 0046 01       		.uleb128 0x1
+ 1452 0047 13       		.uleb128 0x13
+ 1453 0048 00       		.byte	0
+ 1454 0049 00       		.byte	0
+ 1455 004a 07       		.uleb128 0x7
+ 1456 004b 0D       		.uleb128 0xd
+ 1457 004c 00       		.byte	0
+ 1458 004d 03       		.uleb128 0x3
+ 1459 004e 0E       		.uleb128 0xe
+ 1460 004f 3A       		.uleb128 0x3a
+ 1461 0050 0B       		.uleb128 0xb
+ 1462 0051 3B       		.uleb128 0x3b
+ 1463 0052 0B       		.uleb128 0xb
+ 1464 0053 49       		.uleb128 0x49
+ 1465 0054 13       		.uleb128 0x13
+ 1466 0055 38       		.uleb128 0x38
+ 1467 0056 0B       		.uleb128 0xb
+ 1468 0057 00       		.byte	0
+ 1469 0058 00       		.byte	0
+ 1470 0059 08       		.uleb128 0x8
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 28
+
+
+ 1471 005a 0F       		.uleb128 0xf
+ 1472 005b 00       		.byte	0
+ 1473 005c 0B       		.uleb128 0xb
+ 1474 005d 0B       		.uleb128 0xb
+ 1475 005e 49       		.uleb128 0x49
+ 1476 005f 13       		.uleb128 0x13
+ 1477 0060 00       		.byte	0
+ 1478 0061 00       		.byte	0
+ 1479 0062 09       		.uleb128 0x9
+ 1480 0063 0F       		.uleb128 0xf
+ 1481 0064 00       		.byte	0
+ 1482 0065 0B       		.uleb128 0xb
+ 1483 0066 0B       		.uleb128 0xb
+ 1484 0067 00       		.byte	0
+ 1485 0068 00       		.byte	0
+ 1486 0069 0A       		.uleb128 0xa
+ 1487 006a 15       		.uleb128 0x15
+ 1488 006b 01       		.byte	0x1
+ 1489 006c 27       		.uleb128 0x27
+ 1490 006d 19       		.uleb128 0x19
+ 1491 006e 01       		.uleb128 0x1
+ 1492 006f 13       		.uleb128 0x13
+ 1493 0070 00       		.byte	0
+ 1494 0071 00       		.byte	0
+ 1495 0072 0B       		.uleb128 0xb
+ 1496 0073 05       		.uleb128 0x5
+ 1497 0074 00       		.byte	0
+ 1498 0075 49       		.uleb128 0x49
+ 1499 0076 13       		.uleb128 0x13
+ 1500 0077 00       		.byte	0
+ 1501 0078 00       		.byte	0
+ 1502 0079 0C       		.uleb128 0xc
+ 1503 007a 16       		.uleb128 0x16
+ 1504 007b 00       		.byte	0
+ 1505 007c 03       		.uleb128 0x3
+ 1506 007d 0E       		.uleb128 0xe
+ 1507 007e 3A       		.uleb128 0x3a
+ 1508 007f 0B       		.uleb128 0xb
+ 1509 0080 3B       		.uleb128 0x3b
+ 1510 0081 05       		.uleb128 0x5
+ 1511 0082 49       		.uleb128 0x49
+ 1512 0083 13       		.uleb128 0x13
+ 1513 0084 00       		.byte	0
+ 1514 0085 00       		.byte	0
+ 1515 0086 0D       		.uleb128 0xd
+ 1516 0087 13       		.uleb128 0x13
+ 1517 0088 01       		.byte	0x1
+ 1518 0089 03       		.uleb128 0x3
+ 1519 008a 0E       		.uleb128 0xe
+ 1520 008b 0B       		.uleb128 0xb
+ 1521 008c 0B       		.uleb128 0xb
+ 1522 008d 3A       		.uleb128 0x3a
+ 1523 008e 0B       		.uleb128 0xb
+ 1524 008f 3B       		.uleb128 0x3b
+ 1525 0090 05       		.uleb128 0x5
+ 1526 0091 01       		.uleb128 0x1
+ 1527 0092 13       		.uleb128 0x13
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 29
+
+
+ 1528 0093 00       		.byte	0
+ 1529 0094 00       		.byte	0
+ 1530 0095 0E       		.uleb128 0xe
+ 1531 0096 0D       		.uleb128 0xd
+ 1532 0097 00       		.byte	0
+ 1533 0098 03       		.uleb128 0x3
+ 1534 0099 0E       		.uleb128 0xe
+ 1535 009a 3A       		.uleb128 0x3a
+ 1536 009b 0B       		.uleb128 0xb
+ 1537 009c 3B       		.uleb128 0x3b
+ 1538 009d 05       		.uleb128 0x5
+ 1539 009e 49       		.uleb128 0x49
+ 1540 009f 13       		.uleb128 0x13
+ 1541 00a0 38       		.uleb128 0x38
+ 1542 00a1 0B       		.uleb128 0xb
+ 1543 00a2 00       		.byte	0
+ 1544 00a3 00       		.byte	0
+ 1545 00a4 0F       		.uleb128 0xf
+ 1546 00a5 13       		.uleb128 0x13
+ 1547 00a6 01       		.byte	0x1
+ 1548 00a7 03       		.uleb128 0x3
+ 1549 00a8 0E       		.uleb128 0xe
+ 1550 00a9 0B       		.uleb128 0xb
+ 1551 00aa 0B       		.uleb128 0xb
+ 1552 00ab 3A       		.uleb128 0x3a
+ 1553 00ac 0B       		.uleb128 0xb
+ 1554 00ad 3B       		.uleb128 0x3b
+ 1555 00ae 0B       		.uleb128 0xb
+ 1556 00af 01       		.uleb128 0x1
+ 1557 00b0 13       		.uleb128 0x13
+ 1558 00b1 00       		.byte	0
+ 1559 00b2 00       		.byte	0
+ 1560 00b3 10       		.uleb128 0x10
+ 1561 00b4 2E       		.uleb128 0x2e
+ 1562 00b5 01       		.byte	0x1
+ 1563 00b6 3F       		.uleb128 0x3f
+ 1564 00b7 19       		.uleb128 0x19
+ 1565 00b8 03       		.uleb128 0x3
+ 1566 00b9 0E       		.uleb128 0xe
+ 1567 00ba 3A       		.uleb128 0x3a
+ 1568 00bb 0B       		.uleb128 0xb
+ 1569 00bc 3B       		.uleb128 0x3b
+ 1570 00bd 0B       		.uleb128 0xb
+ 1571 00be 27       		.uleb128 0x27
+ 1572 00bf 19       		.uleb128 0x19
+ 1573 00c0 11       		.uleb128 0x11
+ 1574 00c1 01       		.uleb128 0x1
+ 1575 00c2 12       		.uleb128 0x12
+ 1576 00c3 06       		.uleb128 0x6
+ 1577 00c4 40       		.uleb128 0x40
+ 1578 00c5 18       		.uleb128 0x18
+ 1579 00c6 9742     		.uleb128 0x2117
+ 1580 00c8 19       		.uleb128 0x19
+ 1581 00c9 01       		.uleb128 0x1
+ 1582 00ca 13       		.uleb128 0x13
+ 1583 00cb 00       		.byte	0
+ 1584 00cc 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 30
+
+
+ 1585 00cd 11       		.uleb128 0x11
+ 1586 00ce 05       		.uleb128 0x5
+ 1587 00cf 00       		.byte	0
+ 1588 00d0 03       		.uleb128 0x3
+ 1589 00d1 0E       		.uleb128 0xe
+ 1590 00d2 3A       		.uleb128 0x3a
+ 1591 00d3 0B       		.uleb128 0xb
+ 1592 00d4 3B       		.uleb128 0x3b
+ 1593 00d5 0B       		.uleb128 0xb
+ 1594 00d6 49       		.uleb128 0x49
+ 1595 00d7 13       		.uleb128 0x13
+ 1596 00d8 02       		.uleb128 0x2
+ 1597 00d9 18       		.uleb128 0x18
+ 1598 00da 00       		.byte	0
+ 1599 00db 00       		.byte	0
+ 1600 00dc 12       		.uleb128 0x12
+ 1601 00dd 2E       		.uleb128 0x2e
+ 1602 00de 01       		.byte	0x1
+ 1603 00df 3F       		.uleb128 0x3f
+ 1604 00e0 19       		.uleb128 0x19
+ 1605 00e1 03       		.uleb128 0x3
+ 1606 00e2 0E       		.uleb128 0xe
+ 1607 00e3 3A       		.uleb128 0x3a
+ 1608 00e4 0B       		.uleb128 0xb
+ 1609 00e5 3B       		.uleb128 0x3b
+ 1610 00e6 0B       		.uleb128 0xb
+ 1611 00e7 27       		.uleb128 0x27
+ 1612 00e8 19       		.uleb128 0x19
+ 1613 00e9 49       		.uleb128 0x49
+ 1614 00ea 13       		.uleb128 0x13
+ 1615 00eb 11       		.uleb128 0x11
+ 1616 00ec 01       		.uleb128 0x1
+ 1617 00ed 12       		.uleb128 0x12
+ 1618 00ee 06       		.uleb128 0x6
+ 1619 00ef 40       		.uleb128 0x40
+ 1620 00f0 18       		.uleb128 0x18
+ 1621 00f1 9742     		.uleb128 0x2117
+ 1622 00f3 19       		.uleb128 0x19
+ 1623 00f4 01       		.uleb128 0x1
+ 1624 00f5 13       		.uleb128 0x13
+ 1625 00f6 00       		.byte	0
+ 1626 00f7 00       		.byte	0
+ 1627 00f8 13       		.uleb128 0x13
+ 1628 00f9 05       		.uleb128 0x5
+ 1629 00fa 00       		.byte	0
+ 1630 00fb 03       		.uleb128 0x3
+ 1631 00fc 0E       		.uleb128 0xe
+ 1632 00fd 3A       		.uleb128 0x3a
+ 1633 00fe 0B       		.uleb128 0xb
+ 1634 00ff 3B       		.uleb128 0x3b
+ 1635 0100 0B       		.uleb128 0xb
+ 1636 0101 49       		.uleb128 0x49
+ 1637 0102 13       		.uleb128 0x13
+ 1638 0103 02       		.uleb128 0x2
+ 1639 0104 17       		.uleb128 0x17
+ 1640 0105 00       		.byte	0
+ 1641 0106 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 31
+
+
+ 1642 0107 14       		.uleb128 0x14
+ 1643 0108 05       		.uleb128 0x5
+ 1644 0109 00       		.byte	0
+ 1645 010a 03       		.uleb128 0x3
+ 1646 010b 08       		.uleb128 0x8
+ 1647 010c 3A       		.uleb128 0x3a
+ 1648 010d 0B       		.uleb128 0xb
+ 1649 010e 3B       		.uleb128 0x3b
+ 1650 010f 0B       		.uleb128 0xb
+ 1651 0110 49       		.uleb128 0x49
+ 1652 0111 13       		.uleb128 0x13
+ 1653 0112 02       		.uleb128 0x2
+ 1654 0113 18       		.uleb128 0x18
+ 1655 0114 00       		.byte	0
+ 1656 0115 00       		.byte	0
+ 1657 0116 15       		.uleb128 0x15
+ 1658 0117 34       		.uleb128 0x34
+ 1659 0118 00       		.byte	0
+ 1660 0119 03       		.uleb128 0x3
+ 1661 011a 0E       		.uleb128 0xe
+ 1662 011b 3A       		.uleb128 0x3a
+ 1663 011c 0B       		.uleb128 0xb
+ 1664 011d 3B       		.uleb128 0x3b
+ 1665 011e 0B       		.uleb128 0xb
+ 1666 011f 49       		.uleb128 0x49
+ 1667 0120 13       		.uleb128 0x13
+ 1668 0121 1C       		.uleb128 0x1c
+ 1669 0122 0B       		.uleb128 0xb
+ 1670 0123 00       		.byte	0
+ 1671 0124 00       		.byte	0
+ 1672 0125 16       		.uleb128 0x16
+ 1673 0126 2E       		.uleb128 0x2e
+ 1674 0127 01       		.byte	0x1
+ 1675 0128 3F       		.uleb128 0x3f
+ 1676 0129 19       		.uleb128 0x19
+ 1677 012a 03       		.uleb128 0x3
+ 1678 012b 0E       		.uleb128 0xe
+ 1679 012c 3A       		.uleb128 0x3a
+ 1680 012d 0B       		.uleb128 0xb
+ 1681 012e 3B       		.uleb128 0x3b
+ 1682 012f 0B       		.uleb128 0xb
+ 1683 0130 27       		.uleb128 0x27
+ 1684 0131 19       		.uleb128 0x19
+ 1685 0132 49       		.uleb128 0x49
+ 1686 0133 13       		.uleb128 0x13
+ 1687 0134 11       		.uleb128 0x11
+ 1688 0135 01       		.uleb128 0x1
+ 1689 0136 12       		.uleb128 0x12
+ 1690 0137 06       		.uleb128 0x6
+ 1691 0138 40       		.uleb128 0x40
+ 1692 0139 18       		.uleb128 0x18
+ 1693 013a 9642     		.uleb128 0x2116
+ 1694 013c 19       		.uleb128 0x19
+ 1695 013d 01       		.uleb128 0x1
+ 1696 013e 13       		.uleb128 0x13
+ 1697 013f 00       		.byte	0
+ 1698 0140 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 32
+
+
+ 1699 0141 17       		.uleb128 0x17
+ 1700 0142 34       		.uleb128 0x34
+ 1701 0143 00       		.byte	0
+ 1702 0144 03       		.uleb128 0x3
+ 1703 0145 0E       		.uleb128 0xe
+ 1704 0146 3A       		.uleb128 0x3a
+ 1705 0147 0B       		.uleb128 0xb
+ 1706 0148 3B       		.uleb128 0x3b
+ 1707 0149 0B       		.uleb128 0xb
+ 1708 014a 49       		.uleb128 0x49
+ 1709 014b 13       		.uleb128 0x13
+ 1710 014c 02       		.uleb128 0x2
+ 1711 014d 17       		.uleb128 0x17
+ 1712 014e 00       		.byte	0
+ 1713 014f 00       		.byte	0
+ 1714 0150 18       		.uleb128 0x18
+ 1715 0151 34       		.uleb128 0x34
+ 1716 0152 00       		.byte	0
+ 1717 0153 03       		.uleb128 0x3
+ 1718 0154 08       		.uleb128 0x8
+ 1719 0155 3A       		.uleb128 0x3a
+ 1720 0156 0B       		.uleb128 0xb
+ 1721 0157 3B       		.uleb128 0x3b
+ 1722 0158 0B       		.uleb128 0xb
+ 1723 0159 49       		.uleb128 0x49
+ 1724 015a 13       		.uleb128 0x13
+ 1725 015b 1C       		.uleb128 0x1c
+ 1726 015c 0A       		.uleb128 0xa
+ 1727 015d 00       		.byte	0
+ 1728 015e 00       		.byte	0
+ 1729 015f 19       		.uleb128 0x19
+ 1730 0160 34       		.uleb128 0x34
+ 1731 0161 00       		.byte	0
+ 1732 0162 03       		.uleb128 0x3
+ 1733 0163 0E       		.uleb128 0xe
+ 1734 0164 3A       		.uleb128 0x3a
+ 1735 0165 0B       		.uleb128 0xb
+ 1736 0166 3B       		.uleb128 0x3b
+ 1737 0167 0B       		.uleb128 0xb
+ 1738 0168 49       		.uleb128 0x49
+ 1739 0169 13       		.uleb128 0x13
+ 1740 016a 02       		.uleb128 0x2
+ 1741 016b 18       		.uleb128 0x18
+ 1742 016c 00       		.byte	0
+ 1743 016d 00       		.byte	0
+ 1744 016e 1A       		.uleb128 0x1a
+ 1745 016f 898201   		.uleb128 0x4109
+ 1746 0172 00       		.byte	0
+ 1747 0173 11       		.uleb128 0x11
+ 1748 0174 01       		.uleb128 0x1
+ 1749 0175 31       		.uleb128 0x31
+ 1750 0176 13       		.uleb128 0x13
+ 1751 0177 00       		.byte	0
+ 1752 0178 00       		.byte	0
+ 1753 0179 1B       		.uleb128 0x1b
+ 1754 017a 34       		.uleb128 0x34
+ 1755 017b 00       		.byte	0
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 33
+
+
+ 1756 017c 03       		.uleb128 0x3
+ 1757 017d 0E       		.uleb128 0xe
+ 1758 017e 3A       		.uleb128 0x3a
+ 1759 017f 0B       		.uleb128 0xb
+ 1760 0180 3B       		.uleb128 0x3b
+ 1761 0181 05       		.uleb128 0x5
+ 1762 0182 49       		.uleb128 0x49
+ 1763 0183 13       		.uleb128 0x13
+ 1764 0184 3F       		.uleb128 0x3f
+ 1765 0185 19       		.uleb128 0x19
+ 1766 0186 3C       		.uleb128 0x3c
+ 1767 0187 19       		.uleb128 0x19
+ 1768 0188 00       		.byte	0
+ 1769 0189 00       		.byte	0
+ 1770 018a 1C       		.uleb128 0x1c
+ 1771 018b 34       		.uleb128 0x34
+ 1772 018c 00       		.byte	0
+ 1773 018d 03       		.uleb128 0x3
+ 1774 018e 0E       		.uleb128 0xe
+ 1775 018f 3A       		.uleb128 0x3a
+ 1776 0190 0B       		.uleb128 0xb
+ 1777 0191 3B       		.uleb128 0x3b
+ 1778 0192 0B       		.uleb128 0xb
+ 1779 0193 49       		.uleb128 0x49
+ 1780 0194 13       		.uleb128 0x13
+ 1781 0195 3F       		.uleb128 0x3f
+ 1782 0196 19       		.uleb128 0x19
+ 1783 0197 3C       		.uleb128 0x3c
+ 1784 0198 19       		.uleb128 0x19
+ 1785 0199 00       		.byte	0
+ 1786 019a 00       		.byte	0
+ 1787 019b 1D       		.uleb128 0x1d
+ 1788 019c 26       		.uleb128 0x26
+ 1789 019d 00       		.byte	0
+ 1790 019e 49       		.uleb128 0x49
+ 1791 019f 13       		.uleb128 0x13
+ 1792 01a0 00       		.byte	0
+ 1793 01a1 00       		.byte	0
+ 1794 01a2 1E       		.uleb128 0x1e
+ 1795 01a3 01       		.uleb128 0x1
+ 1796 01a4 01       		.byte	0x1
+ 1797 01a5 49       		.uleb128 0x49
+ 1798 01a6 13       		.uleb128 0x13
+ 1799 01a7 01       		.uleb128 0x1
+ 1800 01a8 13       		.uleb128 0x13
+ 1801 01a9 00       		.byte	0
+ 1802 01aa 00       		.byte	0
+ 1803 01ab 1F       		.uleb128 0x1f
+ 1804 01ac 21       		.uleb128 0x21
+ 1805 01ad 00       		.byte	0
+ 1806 01ae 49       		.uleb128 0x49
+ 1807 01af 13       		.uleb128 0x13
+ 1808 01b0 2F       		.uleb128 0x2f
+ 1809 01b1 05       		.uleb128 0x5
+ 1810 01b2 00       		.byte	0
+ 1811 01b3 00       		.byte	0
+ 1812 01b4 20       		.uleb128 0x20
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 34
+
+
+ 1813 01b5 34       		.uleb128 0x34
+ 1814 01b6 00       		.byte	0
+ 1815 01b7 03       		.uleb128 0x3
+ 1816 01b8 0E       		.uleb128 0xe
+ 1817 01b9 3A       		.uleb128 0x3a
+ 1818 01ba 0B       		.uleb128 0xb
+ 1819 01bb 3B       		.uleb128 0x3b
+ 1820 01bc 0B       		.uleb128 0xb
+ 1821 01bd 49       		.uleb128 0x49
+ 1822 01be 13       		.uleb128 0x13
+ 1823 01bf 3F       		.uleb128 0x3f
+ 1824 01c0 19       		.uleb128 0x19
+ 1825 01c1 02       		.uleb128 0x2
+ 1826 01c2 18       		.uleb128 0x18
+ 1827 01c3 00       		.byte	0
+ 1828 01c4 00       		.byte	0
+ 1829 01c5 21       		.uleb128 0x21
+ 1830 01c6 34       		.uleb128 0x34
+ 1831 01c7 00       		.byte	0
+ 1832 01c8 03       		.uleb128 0x3
+ 1833 01c9 08       		.uleb128 0x8
+ 1834 01ca 3A       		.uleb128 0x3a
+ 1835 01cb 0B       		.uleb128 0xb
+ 1836 01cc 3B       		.uleb128 0x3b
+ 1837 01cd 0B       		.uleb128 0xb
+ 1838 01ce 49       		.uleb128 0x49
+ 1839 01cf 13       		.uleb128 0x13
+ 1840 01d0 3F       		.uleb128 0x3f
+ 1841 01d1 19       		.uleb128 0x19
+ 1842 01d2 02       		.uleb128 0x2
+ 1843 01d3 18       		.uleb128 0x18
+ 1844 01d4 00       		.byte	0
+ 1845 01d5 00       		.byte	0
+ 1846 01d6 22       		.uleb128 0x22
+ 1847 01d7 2E       		.uleb128 0x2e
+ 1848 01d8 00       		.byte	0
+ 1849 01d9 3F       		.uleb128 0x3f
+ 1850 01da 19       		.uleb128 0x19
+ 1851 01db 3C       		.uleb128 0x3c
+ 1852 01dc 19       		.uleb128 0x19
+ 1853 01dd 6E       		.uleb128 0x6e
+ 1854 01de 08       		.uleb128 0x8
+ 1855 01df 03       		.uleb128 0x3
+ 1856 01e0 08       		.uleb128 0x8
+ 1857 01e1 3A       		.uleb128 0x3a
+ 1858 01e2 0B       		.uleb128 0xb
+ 1859 01e3 3B       		.uleb128 0x3b
+ 1860 01e4 0B       		.uleb128 0xb
+ 1861 01e5 00       		.byte	0
+ 1862 01e6 00       		.byte	0
+ 1863 01e7 00       		.byte	0
+ 1864              		.section	.debug_loc,"",%progbits
+ 1865              	.Ldebug_loc0:
+ 1866              	.LLST0:
+ 1867 0000 00000000 		.4byte	.LVL2
+ 1868 0004 02000000 		.4byte	.LVL3
+ 1869 0008 0100     		.2byte	0x1
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 35
+
+
+ 1870 000a 50       		.byte	0x50
+ 1871 000b 02000000 		.4byte	.LVL3
+ 1872 000f 04000000 		.4byte	.LFE591
+ 1873 0013 0400     		.2byte	0x4
+ 1874 0015 F3       		.byte	0xf3
+ 1875 0016 01       		.uleb128 0x1
+ 1876 0017 50       		.byte	0x50
+ 1877 0018 9F       		.byte	0x9f
+ 1878 0019 00000000 		.4byte	0
+ 1879 001d 00000000 		.4byte	0
+ 1880              	.LLST1:
+ 1881 0021 00000000 		.4byte	.LVL4
+ 1882 0025 0E000000 		.4byte	.LVL5
+ 1883 0029 0100     		.2byte	0x1
+ 1884 002b 50       		.byte	0x50
+ 1885 002c 0E000000 		.4byte	.LVL5
+ 1886 0030 18000000 		.4byte	.LFE592
+ 1887 0034 0400     		.2byte	0x4
+ 1888 0036 F3       		.byte	0xf3
+ 1889 0037 01       		.uleb128 0x1
+ 1890 0038 50       		.byte	0x50
+ 1891 0039 9F       		.byte	0x9f
+ 1892 003a 00000000 		.4byte	0
+ 1893 003e 00000000 		.4byte	0
+ 1894              	.LLST2:
+ 1895 0042 00000000 		.4byte	.LVL6
+ 1896 0046 1E000000 		.4byte	.LVL10
+ 1897 004a 0100     		.2byte	0x1
+ 1898 004c 50       		.byte	0x50
+ 1899 004d 1E000000 		.4byte	.LVL10
+ 1900 0051 7C000000 		.4byte	.LFE593
+ 1901 0055 0400     		.2byte	0x4
+ 1902 0057 F3       		.byte	0xf3
+ 1903 0058 01       		.uleb128 0x1
+ 1904 0059 50       		.byte	0x50
+ 1905 005a 9F       		.byte	0x9f
+ 1906 005b 00000000 		.4byte	0
+ 1907 005f 00000000 		.4byte	0
+ 1908              	.LLST3:
+ 1909 0063 00000000 		.4byte	.LVL6
+ 1910 0067 0A000000 		.4byte	.LVL7
+ 1911 006b 0100     		.2byte	0x1
+ 1912 006d 51       		.byte	0x51
+ 1913 006e 0A000000 		.4byte	.LVL7
+ 1914 0072 7C000000 		.4byte	.LFE593
+ 1915 0076 0400     		.2byte	0x4
+ 1916 0078 F3       		.byte	0xf3
+ 1917 0079 01       		.uleb128 0x1
+ 1918 007a 51       		.byte	0x51
+ 1919 007b 9F       		.byte	0x9f
+ 1920 007c 00000000 		.4byte	0
+ 1921 0080 00000000 		.4byte	0
+ 1922              	.LLST4:
+ 1923 0084 00000000 		.4byte	.LVL6
+ 1924 0088 0E000000 		.4byte	.LVL8
+ 1925 008c 0100     		.2byte	0x1
+ 1926 008e 52       		.byte	0x52
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 36
+
+
+ 1927 008f 0E000000 		.4byte	.LVL8
+ 1928 0093 7C000000 		.4byte	.LFE593
+ 1929 0097 0400     		.2byte	0x4
+ 1930 0099 F3       		.byte	0xf3
+ 1931 009a 01       		.uleb128 0x1
+ 1932 009b 52       		.byte	0x52
+ 1933 009c 9F       		.byte	0x9f
+ 1934 009d 00000000 		.4byte	0
+ 1935 00a1 00000000 		.4byte	0
+ 1936              	.LLST5:
+ 1937 00a5 00000000 		.4byte	.LVL6
+ 1938 00a9 21000000 		.4byte	.LVL11-1
+ 1939 00ad 0100     		.2byte	0x1
+ 1940 00af 53       		.byte	0x53
+ 1941 00b0 21000000 		.4byte	.LVL11-1
+ 1942 00b4 7C000000 		.4byte	.LFE593
+ 1943 00b8 0400     		.2byte	0x4
+ 1944 00ba F3       		.byte	0xf3
+ 1945 00bb 01       		.uleb128 0x1
+ 1946 00bc 53       		.byte	0x53
+ 1947 00bd 9F       		.byte	0x9f
+ 1948 00be 00000000 		.4byte	0
+ 1949 00c2 00000000 		.4byte	0
+ 1950              	.LLST6:
+ 1951 00c6 1A000000 		.4byte	.LVL9
+ 1952 00ca 66000000 		.4byte	.LVL18
+ 1953 00ce 0200     		.2byte	0x2
+ 1954 00d0 90       		.byte	0x90
+ 1955 00d1 50       		.uleb128 0x50
+ 1956 00d2 66000000 		.4byte	.LVL18
+ 1957 00d6 7C000000 		.4byte	.LFE593
+ 1958 00da 1A00     		.2byte	0x1a
+ 1959 00dc F3       		.byte	0xf3
+ 1960 00dd 01       		.uleb128 0x1
+ 1961 00de 51       		.byte	0x51
+ 1962 00df F3       		.byte	0xf3
+ 1963 00e0 01       		.uleb128 0x1
+ 1964 00e1 50       		.byte	0x50
+ 1965 00e2 1E       		.byte	0x1e
+ 1966 00e3 F7       		.byte	0xf7
+ 1967 00e4 25       		.uleb128 0x25
+ 1968 00e5 F3       		.byte	0xf3
+ 1969 00e6 01       		.uleb128 0x1
+ 1970 00e7 53       		.byte	0x53
+ 1971 00e8 F3       		.byte	0xf3
+ 1972 00e9 01       		.uleb128 0x1
+ 1973 00ea 52       		.byte	0x52
+ 1974 00eb 1E       		.byte	0x1e
+ 1975 00ec F7       		.byte	0xf7
+ 1976 00ed 25       		.uleb128 0x25
+ 1977 00ee 1B       		.byte	0x1b
+ 1978 00ef F7       		.byte	0xf7
+ 1979 00f0 00       		.uleb128 0
+ 1980 00f1 F7       		.byte	0xf7
+ 1981 00f2 25       		.uleb128 0x25
+ 1982 00f3 F7       		.byte	0xf7
+ 1983 00f4 2C       		.uleb128 0x2c
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 37
+
+
+ 1984 00f5 9F       		.byte	0x9f
+ 1985 00f6 00000000 		.4byte	0
+ 1986 00fa 00000000 		.4byte	0
+ 1987              		.section	.debug_aranges,"",%progbits
+ 1988 0000 3C000000 		.4byte	0x3c
+ 1989 0004 0200     		.2byte	0x2
+ 1990 0006 00000000 		.4byte	.Ldebug_info0
+ 1991 000a 04       		.byte	0x4
+ 1992 000b 00       		.byte	0
+ 1993 000c 0000     		.2byte	0
+ 1994 000e 0000     		.2byte	0
+ 1995 0010 00000000 		.4byte	.LFB589
+ 1996 0014 02000000 		.4byte	.LFE589-.LFB589
+ 1997 0018 00000000 		.4byte	.LFB590
+ 1998 001c 02000000 		.4byte	.LFE590-.LFB590
+ 1999 0020 00000000 		.4byte	.LFB591
+ 2000 0024 04000000 		.4byte	.LFE591-.LFB591
+ 2001 0028 00000000 		.4byte	.LFB592
+ 2002 002c 18000000 		.4byte	.LFE592-.LFB592
+ 2003 0030 00000000 		.4byte	.LFB593
+ 2004 0034 7C000000 		.4byte	.LFE593-.LFB593
+ 2005 0038 00000000 		.4byte	0
+ 2006 003c 00000000 		.4byte	0
+ 2007              		.section	.debug_ranges,"",%progbits
+ 2008              	.Ldebug_ranges0:
+ 2009 0000 00000000 		.4byte	.LFB589
+ 2010 0004 02000000 		.4byte	.LFE589
+ 2011 0008 00000000 		.4byte	.LFB590
+ 2012 000c 02000000 		.4byte	.LFE590
+ 2013 0010 00000000 		.4byte	.LFB591
+ 2014 0014 04000000 		.4byte	.LFE591
+ 2015 0018 00000000 		.4byte	.LFB592
+ 2016 001c 18000000 		.4byte	.LFE592
+ 2017 0020 00000000 		.4byte	.LFB593
+ 2018 0024 7C000000 		.4byte	.LFE593
+ 2019 0028 00000000 		.4byte	0
+ 2020 002c 00000000 		.4byte	0
+ 2021              		.section	.debug_line,"",%progbits
+ 2022              	.Ldebug_line0:
+ 2023 0000 1C030000 		.section	.debug_str,"MS",%progbits,1
+ 2023      0200C102 
+ 2023      00000201 
+ 2023      FB0E0D00 
+ 2023      01010101 
+ 2024              	.LASF157:
+ 2025 0000 63616C63 		.ascii	"calculSaturation\000"
+ 2025      756C5361 
+ 2025      74757261 
+ 2025      74696F6E 
+ 2025      00
+ 2026              	.LASF57:
+ 2027 0011 70726F74 		.ascii	"protBusMasterMask\000"
+ 2027      4275734D 
+ 2027      61737465 
+ 2027      724D6173 
+ 2027      6B00
+ 2028              	.LASF127:
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 38
+
+
+ 2029 0023 72756E4D 		.ascii	"runMode\000"
+ 2029      6F646500 
+ 2030              	.LASF115:
+ 2031 002b 72784275 		.ascii	"rxBufSize\000"
+ 2031      6653697A 
+ 2031      6500
+ 2032              	.LASF67:
+ 2033 0035 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 2033      6843746C 
+ 2033      4D61696E 
+ 2033      57733346 
+ 2033      72657100 
+ 2034              	.LASF89:
+ 2035 0049 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 2035      50727443 
+ 2035      6667496E 
+ 2035      4F666673 
+ 2035      657400
+ 2036              	.LASF107:
+ 2037 005c 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 2037      6F636B53 
+ 2037      74617475 
+ 2037      734F6666 
+ 2037      73657400 
+ 2038              	.LASF170:
+ 2039 0070 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Projet_"
+ 2039      73657273 
+ 2039      5C417269 
+ 2039      616E655C 
+ 2039      446F6375 
+ 2040 009e 6571315C 		.ascii	"eq1\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
+ 2040      576F726B 
+ 2040      73706163 
+ 2040      6550726F 
+ 2040      6A657432 
+ 2041              	.LASF33:
+ 2042 00c7 63727970 		.ascii	"cryptoVersion\000"
+ 2042      746F5665 
+ 2042      7273696F 
+ 2042      6E00
+ 2043              	.LASF71:
+ 2044 00d5 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 2044      43746C50 
+ 2044      72696F50 
+ 2044      6F7300
+ 2045              	.LASF29:
+ 2046 00e4 70617373 		.ascii	"passBase\000"
+ 2046      42617365 
+ 2046      00
+ 2047              	.LASF105:
+ 2048 00ed 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 2048      7352616D 
+ 2048      3243746C 
+ 2048      3000
+ 2049              	.LASF42:
+ 2050 00fb 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 2050      73497063 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 39
+
+
+ 2050      4972714E 
+ 2050      7200
+ 2051              	.LASF5:
+ 2052 0109 5F5F7569 		.ascii	"__uint8_t\000"
+ 2052      6E74385F 
+ 2052      7400
+ 2053              	.LASF44:
+ 2054 0113 63707573 		.ascii	"cpussFlashPaSize\000"
+ 2054      73466C61 
+ 2054      73685061 
+ 2054      53697A65 
+ 2054      00
+ 2055              	.LASF93:
+ 2056 0124 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 2056      73436D34 
+ 2056      436C6F63 
+ 2056      6B43746C 
+ 2056      4F666673 
+ 2057              	.LASF128:
+ 2058 013b 636F756E 		.ascii	"countDirection\000"
+ 2058      74446972 
+ 2058      65637469 
+ 2058      6F6E00
+ 2059              	.LASF145:
+ 2060 014a 49525F64 		.ascii	"IR_data\000"
+ 2060      61746100 
+ 2061              	.LASF140:
+ 2062 0152 73746F70 		.ascii	"stopInputMode\000"
+ 2062      496E7075 
+ 2062      744D6F64 
+ 2062      6500
+ 2063              	.LASF22:
+ 2064 0160 63707573 		.ascii	"cpussBase\000"
+ 2064      73426173 
+ 2064      6500
+ 2065              	.LASF125:
+ 2066 016a 70657269 		.ascii	"period\000"
+ 2066      6F6400
+ 2067              	.LASF51:
+ 2068 0171 70657269 		.ascii	"periClockNr\000"
+ 2068      436C6F63 
+ 2068      6B4E7200 
+ 2069              	.LASF135:
+ 2070 017d 63617074 		.ascii	"captureInput\000"
+ 2070      75726549 
+ 2070      6E707574 
+ 2070      00
+ 2071              	.LASF14:
+ 2072 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2072      206C6F6E 
+ 2072      6720756E 
+ 2072      7369676E 
+ 2072      65642069 
+ 2073              	.LASF126:
+ 2074 01a1 636C6F63 		.ascii	"clockPrescaler\000"
+ 2074      6B507265 
+ 2074      7363616C 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 40
+
+
+ 2074      657200
+ 2075              	.LASF75:
+ 2076 01b0 70657269 		.ascii	"periTrCmdOffset\000"
+ 2076      5472436D 
+ 2076      644F6666 
+ 2076      73657400 
+ 2077              	.LASF99:
+ 2078 01c0 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 2078      73537973 
+ 2078      5469636B 
+ 2078      43746C4F 
+ 2078      66667365 
+ 2079              	.LASF117:
+ 2080 01d6 74784275 		.ascii	"txBuf\000"
+ 2080      6600
+ 2081              	.LASF60:
+ 2082 01dc 666C6173 		.ascii	"flashPipeRequired\000"
+ 2082      68506970 
+ 2082      65526571 
+ 2082      75697265 
+ 2082      6400
+ 2083              	.LASF64:
+ 2084 01ee 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 2084      6843746C 
+ 2084      4D61696E 
+ 2084      57733046 
+ 2084      72657100 
+ 2085              	.LASF16:
+ 2086 0202 696E7431 		.ascii	"int16_t\000"
+ 2086      365F7400 
+ 2087              	.LASF13:
+ 2088 020a 6C6F6E67 		.ascii	"long long int\000"
+ 2088      206C6F6E 
+ 2088      6720696E 
+ 2088      7400
+ 2089              	.LASF144:
+ 2090 0218 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 2090      74635F74 
+ 2090      6370776D 
+ 2090      5F636F75 
+ 2090      6E746572 
+ 2091              	.LASF123:
+ 2092 0236 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 2092      74635F73 
+ 2092      63625F73 
+ 2092      70695F63 
+ 2092      6F6E7465 
+ 2093              	.LASF80:
+ 2094 024d 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 2094      44697643 
+ 2094      6D645479 
+ 2094      70655365 
+ 2094      6C506F73 
+ 2095              	.LASF97:
+ 2096 0262 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 2096      73547269 
+ 2096      6D52616D 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 41
+
+
+ 2096      43746C4F 
+ 2096      66667365 
+ 2097              	.LASF38:
+ 2098 0278 69706356 		.ascii	"ipcVersion\000"
+ 2098      65727369 
+ 2098      6F6E00
+ 2099              	.LASF100:
+ 2100 0283 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 2100      73436D30 
+ 2100      4E6D6943 
+ 2100      746C4F66 
+ 2100      66736574 
+ 2101              	.LASF112:
+ 2102 0298 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 2102      625F7363 
+ 2102      625F7370 
+ 2102      695F6861 
+ 2102      6E646C65 
+ 2103              	.LASF27:
+ 2104 02b6 6873696F 		.ascii	"hsiomBase\000"
+ 2104      6D426173 
+ 2104      6500
+ 2105              	.LASF10:
+ 2106 02c0 6C6F6E67 		.ascii	"long int\000"
+ 2106      20696E74 
+ 2106      00
+ 2107              	.LASF58:
+ 2108 02c9 63727970 		.ascii	"cryptoMemSize\000"
+ 2108      746F4D65 
+ 2108      6D53697A 
+ 2108      6500
+ 2109              	.LASF24:
+ 2110 02d7 70657269 		.ascii	"periBase\000"
+ 2110      42617365 
+ 2110      00
+ 2111              	.LASF56:
+ 2112 02e0 73797350 		.ascii	"sysPmSimoPresent\000"
+ 2112      6D53696D 
+ 2112      6F507265 
+ 2112      73656E74 
+ 2112      00
+ 2113              	.LASF17:
+ 2114 02f1 75696E74 		.ascii	"uint16_t\000"
+ 2114      31365F74 
+ 2114      00
+ 2115              	.LASF110:
+ 2116 02fa 646F7562 		.ascii	"double\000"
+ 2116      6C6500
+ 2117              	.LASF85:
+ 2118 0301 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 2118      44697631 
+ 2118      365F3543 
+ 2118      746C4F66 
+ 2118      66736574 
+ 2119              	.LASF49:
+ 2120 0316 73727373 		.ascii	"srssNumPll\000"
+ 2120      4E756D50 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 42
+
+
+ 2120      6C6C00
+ 2121              	.LASF151:
+ 2122 0321 62756666 		.ascii	"buffer\000"
+ 2122      657200
+ 2123              	.LASF154:
+ 2124 0328 636F6D70 		.ascii	"compteur\000"
+ 2124      74657572 
+ 2124      00
+ 2125              	.LASF159:
+ 2126 0331 44435F72 		.ascii	"DC_red\000"
+ 2126      656400
+ 2127              	.LASF134:
+ 2128 0338 63617074 		.ascii	"captureInputMode\000"
+ 2128      75726549 
+ 2128      6E707574 
+ 2128      4D6F6465 
+ 2128      00
+ 2129              	.LASF83:
+ 2130 0349 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 2130      44697638 
+ 2130      43746C4F 
+ 2130      66667365 
+ 2130      7400
+ 2131              	.LASF146:
+ 2132 035b 5245445F 		.ascii	"RED_data\000"
+ 2132      64617461 
+ 2132      00
+ 2133              	.LASF90:
+ 2134 0364 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 2134      50727443 
+ 2134      66674F75 
+ 2134      744F6666 
+ 2134      73657400 
+ 2135              	.LASF23:
+ 2136 0378 666C6173 		.ascii	"flashcBase\000"
+ 2136      68634261 
+ 2136      736500
+ 2137              	.LASF11:
+ 2138 0383 5F5F7569 		.ascii	"__uint32_t\000"
+ 2138      6E743332 
+ 2138      5F7400
+ 2139              	.LASF53:
+ 2140 038e 70617373 		.ascii	"passSarChannels\000"
+ 2140      53617243 
+ 2140      68616E6E 
+ 2140      656C7300 
+ 2141              	.LASF6:
+ 2142 039e 5F5F696E 		.ascii	"__int16_t\000"
+ 2142      7431365F 
+ 2142      7400
+ 2143              	.LASF116:
+ 2144 03a8 72784275 		.ascii	"rxBufIdx\000"
+ 2144      66496478 
+ 2144      00
+ 2145              	.LASF96:
+ 2146 03b1 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 2146      73436D34 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 43
+
+
+ 2146      50777243 
+ 2146      746C4F66 
+ 2146      66736574 
+ 2147              	.LASF118:
+ 2148 03c6 74784275 		.ascii	"txBufSize\000"
+ 2148      6653697A 
+ 2148      6500
+ 2149              	.LASF91:
+ 2150 03d0 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 2150      50727443 
+ 2150      66675369 
+ 2150      6F4F6666 
+ 2150      73657400 
+ 2151              	.LASF95:
+ 2152 03e4 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 2152      73436D30 
+ 2152      53746174 
+ 2152      75734F66 
+ 2152      66736574 
+ 2153              	.LASF0:
+ 2154 03f9 756E7369 		.ascii	"unsigned int\000"
+ 2154      676E6564 
+ 2154      20696E74 
+ 2154      00
+ 2155              	.LASF148:
+ 2156 0406 61637175 		.ascii	"acquisitionSignaux\000"
+ 2156      69736974 
+ 2156      696F6E53 
+ 2156      69676E61 
+ 2156      757800
+ 2157              	.LASF161:
+ 2158 0419 44435F49 		.ascii	"DC_IR\000"
+ 2158      5200
+ 2159              	.LASF150:
+ 2160 041f 62756666 		.ascii	"bufferIR\000"
+ 2160      65724952 
+ 2160      00
+ 2161              	.LASF76:
+ 2162 0428 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 2162      5472436D 
+ 2162      64477253 
+ 2162      656C4D73 
+ 2162      6B00
+ 2163              	.LASF12:
+ 2164 043a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2164      20756E73 
+ 2164      69676E65 
+ 2164      6420696E 
+ 2164      7400
+ 2165              	.LASF132:
+ 2166 044c 656E6162 		.ascii	"enableCompareSwap\000"
+ 2166      6C65436F 
+ 2166      6D706172 
+ 2166      65537761 
+ 2166      7000
+ 2167              	.LASF41:
+ 2168 045e 63707573 		.ascii	"cpussIpcNr\000"
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 44
+
+
+ 2168      73497063 
+ 2168      4E7200
+ 2169              	.LASF43:
+ 2170 0469 63707573 		.ascii	"cpussDwChNr\000"
+ 2170      73447743 
+ 2170      684E7200 
+ 2171              	.LASF66:
+ 2172 0475 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 2172      6843746C 
+ 2172      4D61696E 
+ 2172      57733246 
+ 2172      72657100 
+ 2173              	.LASF77:
+ 2174 0489 70657269 		.ascii	"periTrGrOffset\000"
+ 2174      54724772 
+ 2174      4F666673 
+ 2174      657400
+ 2175              	.LASF104:
+ 2176 0498 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 2176      7352616D 
+ 2176      3143746C 
+ 2176      3000
+ 2177              	.LASF120:
+ 2178 04a6 63624576 		.ascii	"cbEvents\000"
+ 2178      656E7473 
+ 2178      00
+ 2179              	.LASF88:
+ 2180 04af 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 2180      50727443 
+ 2180      66674F66 
+ 2180      66736574 
+ 2180      00
+ 2181              	.LASF36:
+ 2182 04c0 6770696F 		.ascii	"gpioVersion\000"
+ 2182      56657273 
+ 2182      696F6E00 
+ 2183              	.LASF108:
+ 2184 04cc 63795F73 		.ascii	"cy_stc_device_t\000"
+ 2184      74635F64 
+ 2184      65766963 
+ 2184      655F7400 
+ 2185              	.LASF122:
+ 2186 04dc 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 2186      74635F73 
+ 2186      63625F73 
+ 2186      70695F63 
+ 2186      6F6E7465 
+ 2187              	.LASF2:
+ 2188 04f5 73686F72 		.ascii	"short int\000"
+ 2188      7420696E 
+ 2188      7400
+ 2189              	.LASF26:
+ 2190 04ff 70726F74 		.ascii	"protBase\000"
+ 2190      42617365 
+ 2190      00
+ 2191              	.LASF142:
+ 2192 0508 636F756E 		.ascii	"countInputMode\000"
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 45
+
+
+ 2192      74496E70 
+ 2192      75744D6F 
+ 2192      646500
+ 2193              	.LASF92:
+ 2194 0517 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 2194      73436D30 
+ 2194      436C6F63 
+ 2194      6B43746C 
+ 2194      4F666673 
+ 2195              	.LASF31:
+ 2196 052e 63727970 		.ascii	"cryptoBase\000"
+ 2196      746F4261 
+ 2196      736500
+ 2197              	.LASF39:
+ 2198 0539 70657269 		.ascii	"periVersion\000"
+ 2198      56657273 
+ 2198      696F6E00 
+ 2199              	.LASF124:
+ 2200 0545 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 2200      74635F74 
+ 2200      6370776D 
+ 2200      5F636F75 
+ 2200      6E746572 
+ 2201              	.LASF20:
+ 2202 0561 73697A65 		.ascii	"sizetype\000"
+ 2202      74797065 
+ 2202      00
+ 2203              	.LASF69:
+ 2204 056a 64774368 		.ascii	"dwChOffset\000"
+ 2204      4F666673 
+ 2204      657400
+ 2205              	.LASF160:
+ 2206 0575 41435F49 		.ascii	"AC_IR\000"
+ 2206      5200
+ 2207              	.LASF21:
+ 2208 057b 6C6F6E67 		.ascii	"long double\000"
+ 2208      20646F75 
+ 2208      626C6500 
+ 2209              	.LASF82:
+ 2210 0587 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 2210      44697643 
+ 2210      6D645061 
+ 2210      54797065 
+ 2210      53656C50 
+ 2211              	.LASF54:
+ 2212 059e 65704D6F 		.ascii	"epMonitorNr\000"
+ 2212      6E69746F 
+ 2212      724E7200 
+ 2213              	.LASF40:
+ 2214 05aa 70726F74 		.ascii	"protVersion\000"
+ 2214      56657273 
+ 2214      696F6E00 
+ 2215              	.LASF73:
+ 2216 05b6 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 2216      61747573 
+ 2216      43684964 
+ 2216      78506F73 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 46
+
+
+ 2216      00
+ 2217              	.LASF55:
+ 2218 05c7 75646250 		.ascii	"udbPresent\000"
+ 2218      72657365 
+ 2218      6E7400
+ 2219              	.LASF35:
+ 2220 05d2 666C6173 		.ascii	"flashcVersion\000"
+ 2220      68635665 
+ 2220      7273696F 
+ 2220      6E00
+ 2221              	.LASF52:
+ 2222 05e0 736D6966 		.ascii	"smifDeviceNr\000"
+ 2222      44657669 
+ 2222      63654E72 
+ 2222      00
+ 2223              	.LASF168:
+ 2224 05ed 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2224      43313120 
+ 2224      352E342E 
+ 2224      31203230 
+ 2224      31363036 
+ 2225 0620 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 2225      20726576 
+ 2225      6973696F 
+ 2225      6E203233 
+ 2225      37373135 
+ 2226 0653 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 2226      70202D6D 
+ 2226      6670753D 
+ 2226      66707634 
+ 2226      2D73702D 
+ 2227 0686 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 2227      6F6E7320 
+ 2227      2D666661 
+ 2227      742D6C74 
+ 2227      6F2D6F62 
+ 2228              	.LASF158:
+ 2229 06a0 41435F72 		.ascii	"AC_red\000"
+ 2229      656400
+ 2230              	.LASF1:
+ 2231 06a7 666C6F61 		.ascii	"float\000"
+ 2231      7400
+ 2232              	.LASF74:
+ 2233 06ad 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 2233      61747573 
+ 2233      43684964 
+ 2233      784D736B 
+ 2233      00
+ 2234              	.LASF165:
+ 2235 06be 63795F64 		.ascii	"cy_device\000"
+ 2235      65766963 
+ 2235      6500
+ 2236              	.LASF102:
+ 2237 06c8 63707573 		.ascii	"cpussRomCtl\000"
+ 2237      73526F6D 
+ 2237      43746C00 
+ 2238              	.LASF72:
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 47
+
+
+ 2239 06d4 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 2239      43746C50 
+ 2239      7265656D 
+ 2239      70746162 
+ 2239      6C65506F 
+ 2240              	.LASF25:
+ 2241 06ea 75646242 		.ascii	"udbBase\000"
+ 2241      61736500 
+ 2242              	.LASF138:
+ 2243 06f2 73746172 		.ascii	"startInputMode\000"
+ 2243      74496E70 
+ 2243      75744D6F 
+ 2243      646500
+ 2244              	.LASF18:
+ 2245 0701 696E7433 		.ascii	"int32_t\000"
+ 2245      325F7400 
+ 2246              	.LASF4:
+ 2247 0709 756E7369 		.ascii	"unsigned char\000"
+ 2247      676E6564 
+ 2247      20636861 
+ 2247      7200
+ 2248              	.LASF68:
+ 2249 0717 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 2249      6843746C 
+ 2249      4D61696E 
+ 2249      57733446 
+ 2249      72657100 
+ 2250              	.LASF164:
+ 2251 072b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2251      52784275 
+ 2251      66666572 
+ 2251      00
+ 2252              	.LASF86:
+ 2253 0738 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 2253      44697632 
+ 2253      345F3543 
+ 2253      746C4F66 
+ 2253      66736574 
+ 2254              	.LASF103:
+ 2255 074d 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 2255      7352616D 
+ 2255      3043746C 
+ 2255      3000
+ 2256              	.LASF163:
+ 2257 075b 73617475 		.ascii	"saturation\000"
+ 2257      72617469 
+ 2257      6F6E00
+ 2258              	.LASF149:
+ 2259 0766 62756666 		.ascii	"bufferRed\000"
+ 2259      65725265 
+ 2259      6400
+ 2260              	.LASF113:
+ 2261 0770 73746174 		.ascii	"status\000"
+ 2261      757300
+ 2262              	.LASF79:
+ 2263 0777 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 2263      44697643 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 48
+
+
+ 2263      6D644469 
+ 2263      7653656C 
+ 2263      4D736B00 
+ 2264              	.LASF129:
+ 2265 078b 636F6D70 		.ascii	"compareOrCapture\000"
+ 2265      6172654F 
+ 2265      72436170 
+ 2265      74757265 
+ 2265      00
+ 2266              	.LASF46:
+ 2267 079c 63707573 		.ascii	"cpussFmIrq\000"
+ 2267      73466D49 
+ 2267      727100
+ 2268              	.LASF63:
+ 2269 07a7 666C6173 		.ascii	"flashEraseDelay\000"
+ 2269      68457261 
+ 2269      73654465 
+ 2269      6C617900 
+ 2270              	.LASF156:
+ 2271 07b7 74656D70 		.ascii	"temps_acquisition\000"
+ 2271      735F6163 
+ 2271      71756973 
+ 2271      6974696F 
+ 2271      6E00
+ 2272              	.LASF78:
+ 2273 07c9 70657269 		.ascii	"periTrGrSize\000"
+ 2273      54724772 
+ 2273      53697A65 
+ 2273      00
+ 2274              	.LASF101:
+ 2275 07d6 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 2275      73436D34 
+ 2275      4E6D6943 
+ 2275      746C4F66 
+ 2275      66736574 
+ 2276              	.LASF130:
+ 2277 07eb 636F6D70 		.ascii	"compare0\000"
+ 2277      61726530 
+ 2277      00
+ 2278              	.LASF131:
+ 2279 07f4 636F6D70 		.ascii	"compare1\000"
+ 2279      61726531 
+ 2279      00
+ 2280              	.LASF143:
+ 2281 07fd 636F756E 		.ascii	"countInput\000"
+ 2281      74496E70 
+ 2281      757400
+ 2282              	.LASF109:
+ 2283 0808 63686172 		.ascii	"char\000"
+ 2283      00
+ 2284              	.LASF65:
+ 2285 080d 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 2285      6843746C 
+ 2285      4D61696E 
+ 2285      57733146 
+ 2285      72657100 
+ 2286              	.LASF7:
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 49
+
+
+ 2287 0821 5F5F7569 		.ascii	"__uint16_t\000"
+ 2287      6E743136 
+ 2287      5F7400
+ 2288              	.LASF84:
+ 2289 082c 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 2289      44697631 
+ 2289      3643746C 
+ 2289      4F666673 
+ 2289      657400
+ 2290              	.LASF162:
+ 2291 083f 72617469 		.ascii	"ratio\000"
+ 2291      6F00
+ 2292              	.LASF9:
+ 2293 0845 5F5F696E 		.ascii	"__int32_t\000"
+ 2293      7433325F 
+ 2293      7400
+ 2294              	.LASF34:
+ 2295 084f 64775665 		.ascii	"dwVersion\000"
+ 2295      7273696F 
+ 2295      6E00
+ 2296              	.LASF37:
+ 2297 0859 6873696F 		.ascii	"hsiomVersion\000"
+ 2297      6D566572 
+ 2297      73696F6E 
+ 2297      00
+ 2298              	.LASF169:
+ 2299 0866 74726169 		.ascii	"traitement.c\000"
+ 2299      74656D65 
+ 2299      6E742E63 
+ 2299      00
+ 2300              	.LASF133:
+ 2301 0873 696E7465 		.ascii	"interruptSources\000"
+ 2301      72727570 
+ 2301      74536F75 
+ 2301      72636573 
+ 2301      00
+ 2302              	.LASF137:
+ 2303 0884 72656C6F 		.ascii	"reloadInput\000"
+ 2303      6164496E 
+ 2303      70757400 
+ 2304              	.LASF8:
+ 2305 0890 73686F72 		.ascii	"short unsigned int\000"
+ 2305      7420756E 
+ 2305      7369676E 
+ 2305      65642069 
+ 2305      6E7400
+ 2306              	.LASF70:
+ 2307 08a3 64774368 		.ascii	"dwChSize\000"
+ 2307      53697A65 
+ 2307      00
+ 2308              	.LASF141:
+ 2309 08ac 73746F70 		.ascii	"stopInput\000"
+ 2309      496E7075 
+ 2309      7400
+ 2310              	.LASF106:
+ 2311 08b6 69706353 		.ascii	"ipcStructSize\000"
+ 2311      74727563 
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 50
+
+
+ 2311      7453697A 
+ 2311      6500
+ 2312              	.LASF45:
+ 2313 08c4 63707573 		.ascii	"cpussIpc0Irq\000"
+ 2313      73497063 
+ 2313      30497271 
+ 2313      00
+ 2314              	.LASF153:
+ 2315 08d1 63616C63 		.ascii	"calculFrequenceCardiaque\000"
+ 2315      756C4672 
+ 2315      65717565 
+ 2315      6E636543 
+ 2315      61726469 
+ 2316              	.LASF28:
+ 2317 08ea 6770696F 		.ascii	"gpioBase\000"
+ 2317      42617365 
+ 2317      00
+ 2318              	.LASF121:
+ 2319 08f3 696E6974 		.ascii	"initKey\000"
+ 2319      4B657900 
+ 2320              	.LASF114:
+ 2321 08fb 72784275 		.ascii	"rxBuf\000"
+ 2321      6600
+ 2322              	.LASF19:
+ 2323 0901 75696E74 		.ascii	"uint32_t\000"
+ 2323      33325F74 
+ 2323      00
+ 2324              	.LASF111:
+ 2325 090a 5F426F6F 		.ascii	"_Bool\000"
+ 2325      6C00
+ 2326              	.LASF50:
+ 2327 0910 73727373 		.ascii	"srssNumHfroot\000"
+ 2327      4E756D48 
+ 2327      66726F6F 
+ 2327      7400
+ 2328              	.LASF166:
+ 2329 091e 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 2329      494E4B5F 
+ 2329      5350494D 
+ 2329      5F636F6E 
+ 2329      74657874 
+ 2330              	.LASF47:
+ 2331 0933 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 2331      734E6F74 
+ 2331      436F6E6E 
+ 2331      65637465 
+ 2331      64497271 
+ 2332              	.LASF61:
+ 2333 0948 666C6173 		.ascii	"flashWriteDelay\000"
+ 2333      68577269 
+ 2333      74654465 
+ 2333      6C617900 
+ 2334              	.LASF15:
+ 2335 0958 75696E74 		.ascii	"uint8_t\000"
+ 2335      385F7400 
+ 2336              	.LASF155:
+ 2337 0960 636F6D70 		.ascii	"compteurMax\000"
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 51
+
+
+ 2337      74657572 
+ 2337      4D617800 
+ 2338              	.LASF167:
+ 2339 096c 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 2339      494E4B5F 
+ 2339      54696D65 
+ 2339      725F636F 
+ 2339      6E666967 
+ 2340              	.LASF94:
+ 2341 0981 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 2341      73436D34 
+ 2341      53746174 
+ 2341      75734F66 
+ 2341      66736574 
+ 2342              	.LASF87:
+ 2343 0996 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 2343      50727449 
+ 2343      6E747243 
+ 2343      66674F66 
+ 2343      66736574 
+ 2344              	.LASF136:
+ 2345 09ab 72656C6F 		.ascii	"reloadInputMode\000"
+ 2345      6164496E 
+ 2345      7075744D 
+ 2345      6F646500 
+ 2346              	.LASF98:
+ 2347 09bb 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 2347      73547269 
+ 2347      6D526F6D 
+ 2347      43746C4F 
+ 2347      66667365 
+ 2348              	.LASF48:
+ 2349 09d1 73727373 		.ascii	"srssNumClkpath\000"
+ 2349      4E756D43 
+ 2349      6C6B7061 
+ 2349      746800
+ 2350              	.LASF3:
+ 2351 09e0 7369676E 		.ascii	"signed char\000"
+ 2351      65642063 
+ 2351      68617200 
+ 2352              	.LASF30:
+ 2353 09ec 69706342 		.ascii	"ipcBase\000"
+ 2353      61736500 
+ 2354              	.LASF152:
+ 2355 09f4 74726169 		.ascii	"traitementSignal\000"
+ 2355      74656D65 
+ 2355      6E745369 
+ 2355      676E616C 
+ 2355      00
+ 2356              	.LASF81:
+ 2357 0a05 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 2357      44697643 
+ 2357      6D645061 
+ 2357      44697653 
+ 2357      656C506F 
+ 2358              	.LASF62:
+ 2359 0a1b 666C6173 		.ascii	"flashProgramDelay\000"
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccqWtHJX.s 			page 52
+
+
+ 2359      6850726F 
+ 2359      6772616D 
+ 2359      44656C61 
+ 2359      7900
+ 2360              	.LASF147:
+ 2361 0a2d 74726169 		.ascii	"traitementCompletSignaux\000"
+ 2361      74656D65 
+ 2361      6E74436F 
+ 2361      6D706C65 
+ 2361      74536967 
+ 2362              	.LASF32:
+ 2363 0a46 63707573 		.ascii	"cpussVersion\000"
+ 2363      73566572 
+ 2363      73696F6E 
+ 2363      00
+ 2364              	.LASF59:
+ 2365 0a53 666C6173 		.ascii	"flashRwwRequired\000"
+ 2365      68527777 
+ 2365      52657175 
+ 2365      69726564 
+ 2365      00
+ 2366              	.LASF119:
+ 2367 0a64 74784275 		.ascii	"txBufIdx\000"
+ 2367      66496478 
+ 2367      00
+ 2368              	.LASF139:
+ 2369 0a6d 73746172 		.ascii	"startInput\000"
+ 2369      74496E70 
+ 2369      757400
+ 2370              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
