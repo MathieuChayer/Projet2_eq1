@@ -20,22 +20,22 @@
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
 
+    /* SW2_isr */
+    const cy_stc_sysint_t SW2_isr_cfg = {
+        .intrSrc = (IRQn_Type)SW2_isr__INTC_NUMBER,
+        .intrPriority = SW2_isr__INTC_CORTEXM4_PRIORITY
+    };
+
     /* CY_EINK_SPIM_SCB_IRQ */
     const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg = {
         .intrSrc = (IRQn_Type)CY_EINK_SPIM_SCB_IRQ__INTC_NUMBER,
         .intrPriority = CY_EINK_SPIM_SCB_IRQ__INTC_CORTEXM4_PRIORITY
     };
 
-    /* adc_int */
-    const cy_stc_sysint_t adc_int_cfg = {
-        .intrSrc = (IRQn_Type)adc_int__INTC_NUMBER,
-        .intrPriority = adc_int__INTC_CORTEXM4_PRIORITY
-    };
-
-    /* ADC_IRQ */
-    const cy_stc_sysint_t ADC_IRQ_cfg = {
-        .intrSrc = (IRQn_Type)ADC_IRQ__INTC_NUMBER,
-        .intrPriority = ADC_IRQ__INTC_CORTEXM4_PRIORITY
+    /* CapSense_ISR */
+    const cy_stc_sysint_t CapSense_ISR_cfg = {
+        .intrSrc = (IRQn_Type)CapSense_ISR__INTC_NUMBER,
+        .intrPriority = CapSense_ISR__INTC_CORTEXM4_PRIORITY
     };
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */

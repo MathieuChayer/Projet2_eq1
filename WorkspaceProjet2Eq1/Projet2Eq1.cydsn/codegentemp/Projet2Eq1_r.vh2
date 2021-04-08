@@ -1,5 +1,5 @@
 -- Project:   Projet2Eq1
--- Generated: 03/31/2021 14:17:14
+-- Generated: 04/08/2021 17:10:14
 -- PSoC Creator  4.4
 
 ENTITY Projet2Eq1 IS
@@ -15,8 +15,7 @@ ENTITY Projet2Eq1 IS
         CY_EINK_DispBusy(0)_PAD : IN std_ulogic;
         CY_EINK_Ssel(0)_PAD : OUT std_ulogic;
         SW2(0)_PAD : IN std_ulogic;
-        GreenLED(0)_PAD : OUT std_ulogic;
-        PWM_OUT(0)_PAD : OUT std_ulogic);
+        BlueLED(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VBACKUP OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDD_NS OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CSD OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -33,7 +32,7 @@ ENTITY Projet2Eq1 IS
 END Projet2Eq1;
 
 ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
-    SIGNAL ADC_IN(0)__PA : bit;
+    SIGNAL BlueLED(0)__PA : bit;
     SIGNAL CPUSS_swj_swclk_tclk : bit;
     SIGNAL CPUSS_swj_swdio_tms : bit;
     SIGNAL CY_CPUSS_SWJ_SWCLK_TCLK(0)__PA : bit;
@@ -63,49 +62,16 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     ATTRIBUTE global_signal OF ClockBlock_PeriClk : SIGNAL IS true;
     SIGNAL ClockBlock_SlowClk : bit;
     SIGNAL ClockBlock_WCO : bit;
-    SIGNAL GreenLED(0)__PA : bit;
+    SIGNAL INDIVIDUAL_PICU_OUT_0 : bit;
     SIGNAL Net_22 : bit;
     SIGNAL Net_23 : bit;
     SIGNAL Net_24 : bit;
     SIGNAL Net_25 : bit;
     SIGNAL Net_3 : bit;
-    SIGNAL Net_32 : bit;
     SIGNAL Net_4 : bit;
-    SIGNAL Net_504 : bit;
-    SIGNAL Net_505 : bit;
-    SIGNAL Net_506 : bit;
-    SIGNAL Net_507 : bit;
-    SIGNAL Net_508_ff11 : bit;
-    ATTRIBUTE global_signal OF Net_508_ff11 : SIGNAL IS true;
-    SIGNAL Net_510 : bit;
-    SIGNAL Net_518 : bit;
-    SIGNAL Net_700_ff12 : bit;
-    ATTRIBUTE global_signal OF Net_700_ff12 : SIGNAL IS true;
-    SIGNAL Net_728 : bit;
-    SIGNAL Net_741 : bit;
-    SIGNAL Net_742_0 : bit;
-    SIGNAL Net_742_1 : bit;
-    SIGNAL Net_742_2 : bit;
-    SIGNAL Net_742_3 : bit;
-    SIGNAL Net_743 : bit;
-    SIGNAL Net_744_0 : bit;
-    SIGNAL Net_744_1 : bit;
-    SIGNAL Net_744_10 : bit;
-    SIGNAL Net_744_11 : bit;
-    SIGNAL Net_744_2 : bit;
-    SIGNAL Net_744_3 : bit;
-    SIGNAL Net_744_4 : bit;
-    SIGNAL Net_744_5 : bit;
-    SIGNAL Net_744_6 : bit;
-    SIGNAL Net_744_7 : bit;
-    SIGNAL Net_744_8 : bit;
-    SIGNAL Net_744_9 : bit;
-    SIGNAL Net_745 : bit;
-    SIGNAL PWM_OUT(0)__PA : bit;
+    SIGNAL Net_700_ff11 : bit;
+    ATTRIBUTE global_signal OF Net_700_ff11 : SIGNAL IS true;
     SIGNAL SW2(0)__PA : bit;
-    SIGNAL \ADC:Net_423\ : bit;
-    SIGNAL \ADC:Net_428_ff49\ : bit;
-    ATTRIBUTE global_signal OF \ADC:Net_428_ff49\ : SIGNAL IS true;
     SIGNAL \CY_EINK_SPIM:Net_216\ : bit;
     SIGNAL \CY_EINK_SPIM:Net_488\ : bit;
     SIGNAL \CY_EINK_SPIM:Net_489\ : bit;
@@ -120,6 +86,45 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     SIGNAL \CY_EINK_SPIM:sclk_m_wire\ : bit;
     SIGNAL \CY_EINK_Timer:Net_1\ : bit;
     SIGNAL \CY_EINK_Timer:Net_2\ : bit;
+    SIGNAL \\\CapSense:CintA(0)\\__PA\ : bit;
+    SIGNAL \\\CapSense:CintB(0)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
+    SIGNAL \CapSense:Net_611_ff43\ : bit;
+    ATTRIBUTE global_signal OF \CapSense:Net_611_ff43\ : SIGNAL IS true;
+    SIGNAL \CapSense:Net_813\ : bit;
+    SIGNAL \CapSense:Net_814\ : bit;
+    SIGNAL \CapSense:Net_815\ : bit;
+    SIGNAL \CapSense:Net_817\ : bit;
+    SIGNAL \CapSense:Net_818\ : bit;
+    SIGNAL \CapSense:Net_819\ : bit;
+    SIGNAL \CapSense:Net_821\ : bit;
+    SIGNAL \CapSense:Net_822\ : bit;
+    SIGNAL \CapSense:Net_828_0\ : bit;
+    SIGNAL \CapSense:Net_828_10\ : bit;
+    SIGNAL \CapSense:Net_828_11\ : bit;
+    SIGNAL \CapSense:Net_828_12\ : bit;
+    SIGNAL \CapSense:Net_828_13\ : bit;
+    SIGNAL \CapSense:Net_828_14\ : bit;
+    SIGNAL \CapSense:Net_828_15\ : bit;
+    SIGNAL \CapSense:Net_828_1\ : bit;
+    SIGNAL \CapSense:Net_828_2\ : bit;
+    SIGNAL \CapSense:Net_828_3\ : bit;
+    SIGNAL \CapSense:Net_828_4\ : bit;
+    SIGNAL \CapSense:Net_828_5\ : bit;
+    SIGNAL \CapSense:Net_828_6\ : bit;
+    SIGNAL \CapSense:Net_828_7\ : bit;
+    SIGNAL \CapSense:Net_828_8\ : bit;
+    SIGNAL \CapSense:Net_828_9\ : bit;
+    SIGNAL \CapSense:Net_845\ : bit;
+    SIGNAL \CapSense:Net_849\ : bit;
+    SIGNAL \\\CapSense:Rx(0)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Rx(1)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Sns(0)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Sns(1)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Sns(2)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Sns(3)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Sns(4)\\__PA\ : bit;
+    SIGNAL \\\CapSense:Tx(0)\\__PA\ : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -158,21 +163,39 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
     ATTRIBUTE Location OF CY_EINK_Ssel(0) : LABEL IS "P12[3]";
     ATTRIBUTE lib_model OF SW2(0) : LABEL IS "iocell13";
     ATTRIBUTE Location OF SW2(0) : LABEL IS "P0[4]";
-    ATTRIBUTE lib_model OF GreenLED(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF GreenLED(0) : LABEL IS "P1[1]";
-    ATTRIBUTE lib_model OF PWM_OUT(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF PWM_OUT(0) : LABEL IS "P6[2]";
-    ATTRIBUTE lib_model OF ADC_IN(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF ADC_IN(0) : LABEL IS "P10[6]";
+    ATTRIBUTE lib_model OF BlueLED(0) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF BlueLED(0) : LABEL IS "P11[1]";
+    ATTRIBUTE lib_model OF \CapSense:Cmod(0)\ : LABEL IS "iocell15";
+    ATTRIBUTE Location OF \CapSense:Cmod(0)\ : LABEL IS "P7[7]";
+    ATTRIBUTE lib_model OF \CapSense:Rx(0)\ : LABEL IS "iocell16";
+    ATTRIBUTE Location OF \CapSense:Rx(0)\ : LABEL IS "P8[2]";
+    ATTRIBUTE lib_model OF \CapSense:Rx(1)\ : LABEL IS "iocell17";
+    ATTRIBUTE Location OF \CapSense:Rx(1)\ : LABEL IS "P8[1]";
+    ATTRIBUTE lib_model OF \CapSense:CintB(0)\ : LABEL IS "iocell18";
+    ATTRIBUTE Location OF \CapSense:CintB(0)\ : LABEL IS "P7[2]";
+    ATTRIBUTE lib_model OF \CapSense:CintA(0)\ : LABEL IS "iocell19";
+    ATTRIBUTE Location OF \CapSense:CintA(0)\ : LABEL IS "P7[1]";
+    ATTRIBUTE lib_model OF \CapSense:Sns(0)\ : LABEL IS "iocell20";
+    ATTRIBUTE Location OF \CapSense:Sns(0)\ : LABEL IS "P8[3]";
+    ATTRIBUTE lib_model OF \CapSense:Sns(1)\ : LABEL IS "iocell21";
+    ATTRIBUTE Location OF \CapSense:Sns(1)\ : LABEL IS "P8[4]";
+    ATTRIBUTE lib_model OF \CapSense:Sns(2)\ : LABEL IS "iocell22";
+    ATTRIBUTE Location OF \CapSense:Sns(2)\ : LABEL IS "P8[5]";
+    ATTRIBUTE lib_model OF \CapSense:Sns(3)\ : LABEL IS "iocell23";
+    ATTRIBUTE Location OF \CapSense:Sns(3)\ : LABEL IS "P8[6]";
+    ATTRIBUTE lib_model OF \CapSense:Sns(4)\ : LABEL IS "iocell24";
+    ATTRIBUTE Location OF \CapSense:Sns(4)\ : LABEL IS "P8[7]";
+    ATTRIBUTE lib_model OF \CapSense:Tx(0)\ : LABEL IS "iocell25";
+    ATTRIBUTE Location OF \CapSense:Tx(0)\ : LABEL IS "P1[0]";
     ATTRIBUTE Location OF \CY_EINK_SPIM:SCB\ : LABEL IS "F(SCB,6)";
     ATTRIBUTE Location OF \CY_EINK_SPIM:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(47)]";
     ATTRIBUTE Location OF \CY_EINK_Timer:TCPWM\ : LABEL IS "F(TCPWM,0)";
-    ATTRIBUTE lib_model OF \Status_SW2:sts:sts_reg\ : LABEL IS "statuscell1";
-    ATTRIBUTE Location OF \Status_SW2:sts:sts_reg\ : LABEL IS "U(1,5)";
-    ATTRIBUTE Location OF \PWM:TCPWM\ : LABEL IS "F(TCPWM,1)";
-    ATTRIBUTE Location OF \ADC:IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(138)]";
-    ATTRIBUTE Location OF \ADC:SAR\ : LABEL IS "F(SARADC,0)";
-    ATTRIBUTE Location OF adc_int : LABEL IS "[IntrContainer=(0)][IntrId=(122)]";
+    ATTRIBUTE Location OF SW2_isr : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
+    ATTRIBUTE Location OF \CapSense:IDACMod\ : LABEL IS "F(CSIDAC7,0)";
+    ATTRIBUTE Location OF \CapSense:IDACComp\ : LABEL IS "F(CSIDAC7,1)";
+    ATTRIBUTE Location OF \CapSense:CSD\ : LABEL IS "F(CSD,0)";
+    ATTRIBUTE Location OF \CapSense:ISR\ : LABEL IS "[IntrContainer=(0)][IntrId=(49)]";
+    ATTRIBUTE Location OF IOSS : LABEL IS "F(IOSS,0)";
     COMPONENT CLK_GEN
         PORT (
             gen_clk_in_0 : IN std_ulogic;
@@ -469,6 +492,49 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
             trace_data_3 : OUT std_ulogic;
             clock_trace_in : IN std_ulogic);
     END COMPONENT;
+    COMPONENT CSD
+        PORT (
+            dsi_sense_out : OUT std_ulogic;
+            dsi_sample_out : OUT std_ulogic;
+            dsi_sense_in : IN std_ulogic;
+            dsi_sample_in : IN std_ulogic;
+            irq : OUT std_ulogic;
+            comp : OUT std_ulogic;
+            clk : IN std_ulogic;
+            dsi_csh_tank : OUT std_ulogic;
+            dsi_cmod : OUT std_ulogic;
+            dsi_hscmp : OUT std_ulogic;
+            dsi_start : IN std_ulogic;
+            dsi_sampling : OUT std_ulogic;
+            dsi_adc_on : OUT std_ulogic;
+            dsi_count_0 : OUT std_ulogic;
+            dsi_count_1 : OUT std_ulogic;
+            dsi_count_2 : OUT std_ulogic;
+            dsi_count_3 : OUT std_ulogic;
+            dsi_count_4 : OUT std_ulogic;
+            dsi_count_5 : OUT std_ulogic;
+            dsi_count_6 : OUT std_ulogic;
+            dsi_count_7 : OUT std_ulogic;
+            dsi_count_8 : OUT std_ulogic;
+            dsi_count_9 : OUT std_ulogic;
+            dsi_count_10 : OUT std_ulogic;
+            dsi_count_11 : OUT std_ulogic;
+            dsi_count_12 : OUT std_ulogic;
+            dsi_count_13 : OUT std_ulogic;
+            dsi_count_14 : OUT std_ulogic;
+            dsi_count_15 : OUT std_ulogic;
+            dsi_count_val_sel : IN std_ulogic;
+            tr_adc_done : OUT std_ulogic;
+            csd_tx : OUT std_ulogic;
+            csd_tx_n : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT CSIDAC7
+        PORT (
+            dsi_idac_leg1_en : IN std_ulogic;
+            dsi_idac_leg2_en : IN std_ulogic;
+            dsi_idac_leg3_en : IN std_ulogic;
+            dsi_idac_pol : IN std_ulogic);
+    END COMPONENT;
     COMPONENT interrupt
         PORT (
             interrupt : IN std_ulogic;
@@ -491,6 +557,26 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
             out_clock_en : IN std_ulogic;
             out_reset : IN std_ulogic);
     END COMPONENT;
+    COMPONENT IOSS
+        PORT (
+            interrupt_gpio : OUT std_ulogic;
+            interrupt_vdd : OUT std_ulogic;
+            interrupt_port_0 : OUT std_ulogic;
+            interrupt_port_1 : OUT std_ulogic;
+            interrupt_port_2 : OUT std_ulogic;
+            interrupt_port_3 : OUT std_ulogic;
+            interrupt_port_4 : OUT std_ulogic;
+            interrupt_port_5 : OUT std_ulogic;
+            interrupt_port_6 : OUT std_ulogic;
+            interrupt_port_7 : OUT std_ulogic;
+            interrupt_port_8 : OUT std_ulogic;
+            interrupt_port_9 : OUT std_ulogic;
+            interrupt_port_10 : OUT std_ulogic;
+            interrupt_port_11 : OUT std_ulogic;
+            interrupt_port_12 : OUT std_ulogic;
+            interrupt_port_13 : OUT std_ulogic;
+            interrupt_port_14 : OUT std_ulogic);
+    END COMPONENT;
     COMPONENT logicalport
         PORT (
             interrupt : OUT std_ulogic;
@@ -501,38 +587,6 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
             out_clock : IN std_ulogic;
             out_clock_en : IN std_ulogic;
             out_reset : IN std_ulogic);
-    END COMPONENT;
-    COMPONENT SARADC
-        PORT (
-            dsi_sar_sample_done : OUT std_ulogic;
-            dsi_sar_chan_id_valid : OUT std_ulogic;
-            dsi_sar_data_valid : OUT std_ulogic;
-            tr_sar_out : OUT std_ulogic;
-            dsi_sar_data_0 : OUT std_ulogic;
-            dsi_sar_data_1 : OUT std_ulogic;
-            dsi_sar_data_2 : OUT std_ulogic;
-            dsi_sar_data_3 : OUT std_ulogic;
-            dsi_sar_data_4 : OUT std_ulogic;
-            dsi_sar_data_5 : OUT std_ulogic;
-            dsi_sar_data_6 : OUT std_ulogic;
-            dsi_sar_data_7 : OUT std_ulogic;
-            dsi_sar_data_8 : OUT std_ulogic;
-            dsi_sar_data_9 : OUT std_ulogic;
-            dsi_sar_data_10 : OUT std_ulogic;
-            dsi_sar_data_11 : OUT std_ulogic;
-            dsi_sar_chan_id_0 : OUT std_ulogic;
-            dsi_sar_chan_id_1 : OUT std_ulogic;
-            dsi_sar_chan_id_2 : OUT std_ulogic;
-            dsi_sar_chan_id_3 : OUT std_ulogic;
-            dsi_sar_cfg_st_sel_0 : IN std_ulogic;
-            dsi_sar_cfg_st_sel_1 : IN std_ulogic;
-            dsi_sar_cfg_average : IN std_ulogic;
-            dsi_sar_cfg_differential : IN std_ulogic;
-            dsi_sar_sw_negvref : IN std_ulogic;
-            dsi_sar_data_hilo_sel : IN std_ulogic;
-            tr_sar_in : IN std_ulogic;
-            clock : IN std_ulogic;
-            interrupt : OUT std_ulogic);
     END COMPONENT;
     COMPONENT SCB
         PORT (
@@ -554,20 +608,6 @@ ARCHITECTURE __DEFAULT__ OF Projet2Eq1 IS
             tr_tx_req : OUT std_ulogic;
             tr_rx_req : OUT std_ulogic;
             tr_i2c_scl_filtered : OUT std_ulogic);
-    END COMPONENT;
-    COMPONENT statuscell
-        PORT (
-            status_0 : IN std_ulogic;
-            status_1 : IN std_ulogic;
-            status_2 : IN std_ulogic;
-            status_3 : IN std_ulogic;
-            status_4 : IN std_ulogic;
-            status_5 : IN std_ulogic;
-            status_6 : IN std_ulogic;
-            status_7 : IN std_ulogic;
-            clock : IN std_ulogic;
-            reset : IN std_ulogic;
-            clk_en : IN std_ulogic);
     END COMPONENT;
     COMPONENT TCPWM
         PORT (
@@ -607,10 +647,9 @@ BEGIN
             ilo => ClockBlock_ILO,
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
+            ff_div_43 => \CapSense:Net_611_ff43\,
             ff_div_0 => open,
-            ff_div_49 => \ADC:Net_428_ff49\,
-            ff_div_11 => Net_700_ff12,
-            ff_div_12 => Net_508_ff11,
+            ff_div_11 => Net_700_ff11,
             ff_div_6 => \CY_EINK_SPIM:Net_847_ff0\,
             periclk_App => periclk_App);
 
@@ -1280,10 +1319,10 @@ BEGIN
             hotswap_needed => "0",
             i2c_mode => "0",
             ibuf_enabled => "1",
-            id => "122d9389-0083-4701-afa6-d5a418aa7bf2",
+            id => "6eebe438-f42f-4eff-bced-a99375a87007",
             init_dr_st => "1",
             input_sync => "0",
-            intr_mode => "00",
+            intr_mode => "10",
             io_voltage => "",
             max_frequency => "100",
             oe_conn => "0",
@@ -1314,11 +1353,10 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "SW2",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => SW2(0)__PA,
             oe => open,
-            fb => Net_32,
             pad_in => SW2(0)_PAD,
             in_clock => open,
             in_clock_en => open,
@@ -1327,7 +1365,7 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    GreenLED:logicalport
+    BlueLED:logicalport
         GENERIC MAP(
             cy_registers => "",
             drive_mode => "110",
@@ -1343,7 +1381,7 @@ BEGIN
             max_frequency => "100",
             oe_conn => "0",
             oe_sync => "0",
-            output_conn => "1",
+            output_conn => "0",
             output_current_cap => "8",
             output_sync => "0",
             pin_aliases => "",
@@ -1362,20 +1400,18 @@ BEGIN
             out_clken_mode => 1,
             out_rst_inv => 0);
 
-    GreenLED(0):iocell
+    BlueLED(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "GreenLED",
+            logicalport => "BlueLED",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => GreenLED(0)__PA,
+            pa_out => BlueLED(0)__PA,
             oe => open,
-            pin_input => Net_518,
-            pad_out => GreenLED(0)_PAD,
-            pad_in => GreenLED(0)_PAD,
+            pad_in => BlueLED(0)_PAD,
             in_clock => open,
             in_clock_en => open,
             in_reset => open,
@@ -1383,63 +1419,7 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    PWM_OUT:logicalport
-        GENERIC MAP(
-            cy_registers => "",
-            drive_mode => "110",
-            drive_strength => "0",
-            hotswap_needed => "0",
-            i2c_mode => "0",
-            ibuf_enabled => "0",
-            id => "a61270bc-07ec-447d-ac9e-34cfe85c30e9",
-            init_dr_st => "1",
-            input_sync => "0",
-            intr_mode => "00",
-            io_voltage => "",
-            max_frequency => "100",
-            oe_conn => "0",
-            oe_sync => "0",
-            output_conn => "1",
-            output_current_cap => "8",
-            output_sync => "0",
-            pin_aliases => "",
-            pin_mode => "B",
-            sio_grp_cnt => 0,
-            slew_rate => "0",
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0);
-
-    PWM_OUT(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "PWM_OUT",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => PWM_OUT(0)__PA,
-            oe => open,
-            pin_input => Net_518,
-            pad_out => PWM_OUT(0)_PAD,
-            pad_in => PWM_OUT(0)_PAD,
-            in_clock => open,
-            in_clock_en => open,
-            in_reset => open,
-            out_clock => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    ADC_IN:logicalport
+    \CapSense:Cmod\:logicalport
         GENERIC MAP(
             cy_registers => "",
             drive_mode => "000",
@@ -1447,7 +1427,131 @@ BEGIN
             hotswap_needed => "0",
             i2c_mode => "0",
             ibuf_enabled => "0",
-            id => "c31afa66-62ec-4b78-ac12-7eade03c206c",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/4db2e9d3-9f70-4f4e-a919-7eefada41863",
+            init_dr_st => "1",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "Cmod",
+            pin_mode => "A",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \CapSense:Cmod(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Cmod\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Cmod(0)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Rx\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "000_000",
+            drive_strength => "0_0",
+            hotswap_needed => "0_0",
+            i2c_mode => "0,0",
+            ibuf_enabled => "0_0",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/77fd7f86-2082-41fa-a471-914d5f07502d",
+            init_dr_st => "1_1",
+            input_sync => "0,0",
+            intr_mode => "00_00",
+            io_voltage => ",",
+            max_frequency => "100,100",
+            oe_conn => "0_0",
+            oe_sync => "0_0",
+            output_conn => "0_0",
+            output_current_cap => "8,8",
+            output_sync => "0_0",
+            pin_aliases => "Button1_Rx0,Button0_Rx0",
+            pin_mode => "AA",
+            sio_grp_cnt => 0,
+            slew_rate => "0_0",
+            use_annotation => "0,0",
+            vtrip => "00_00",
+            width => 2,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \CapSense:Rx(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Rx\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Rx(0)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Rx(1)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Rx\",
+            logicalport_pin_id => 1,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Rx(1)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:CintB\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "000",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "0",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/dbc12ae1-a607-4701-99cc-6261716a9147",
             init_dr_st => "1",
             input_sync => "0",
             intr_mode => "00",
@@ -1474,16 +1578,247 @@ BEGIN
             out_clken_mode => 1,
             out_rst_inv => 0);
 
-    ADC_IN(0):iocell
+    \CapSense:CintB(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "ADC_IN",
+            logicalport => "\CapSense:CintB\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000000")
+        PORT MAP(
+            pa_out => \\\CapSense:CintB(0)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:CintA\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "000",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "0",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/2605f567-73b7-435d-b3b9-174766b96934",
+            init_dr_st => "1",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "",
+            pin_mode => "A",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \CapSense:CintA(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:CintA\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000000")
+        PORT MAP(
+            pa_out => \\\CapSense:CintA(0)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Sns\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "000_000_000_000_000",
+            drive_strength => "0_0_0_0_0",
+            hotswap_needed => "0_0_0_0_0",
+            i2c_mode => "0,0,0,0,0",
+            ibuf_enabled => "0_0_0_0_0",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/0113321b-4a37-46f6-8407-2f8646c68756",
+            init_dr_st => "1_1_1_1_1",
+            input_sync => "0,0,0,0,0",
+            intr_mode => "00_00_00_00_00",
+            io_voltage => ",,,,",
+            max_frequency => "100,100,100,100,100",
+            oe_conn => "0_0_0_0_0",
+            oe_sync => "0_0_0_0_0",
+            output_conn => "0_0_0_0_0",
+            output_current_cap => "8,8,8,8,8",
+            output_sync => "0_0_0_0_0",
+            pin_aliases => "LinearSlider0_Sns0,LinearSlider0_Sns1,LinearSlider0_Sns2,LinearSlider0_Sns3,LinearSlider0_Sns4",
+            pin_mode => "AAAAA",
+            sio_grp_cnt => 0,
+            slew_rate => "0_0_0_0_0",
+            use_annotation => "0,0,0,0,0",
+            vtrip => "00_00_00_00_00",
+            width => 5,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \CapSense:Sns(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Sns\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
         PORT MAP(
-            pa_out => ADC_IN(0)__PA,
+            pa_out => \\\CapSense:Sns(0)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Sns(1)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Sns\",
+            logicalport_pin_id => 1,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Sns(1)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Sns(2)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Sns\",
+            logicalport_pin_id => 2,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Sns(2)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Sns(3)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Sns\",
+            logicalport_pin_id => 3,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Sns(3)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Sns(4)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Sns\",
+            logicalport_pin_id => 4,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Sns(4)\\__PA\,
+            oe => open,
+            in_clock => open,
+            in_clock_en => open,
+            in_reset => open,
+            out_clock => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \CapSense:Tx\:logicalport
+        GENERIC MAP(
+            cy_registers => "",
+            drive_mode => "000",
+            drive_strength => "0",
+            hotswap_needed => "0",
+            i2c_mode => "0",
+            ibuf_enabled => "0",
+            id => "5b7b152f-9017-40d4-92e7-e2b26eaeb772/8ed50244-d239-4c9b-9207-b8e71ce193dc",
+            init_dr_st => "1",
+            input_sync => "0",
+            intr_mode => "00",
+            io_voltage => "",
+            max_frequency => "100",
+            oe_conn => "0",
+            oe_sync => "0",
+            output_conn => "0",
+            output_current_cap => "8",
+            output_sync => "0",
+            pin_aliases => "Button0_Tx",
+            pin_mode => "A",
+            sio_grp_cnt => 0,
+            slew_rate => "0",
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0);
+
+    \CapSense:Tx(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\CapSense:Tx\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
+        PORT MAP(
+            pa_out => \\\CapSense:Tx(0)\\__PA\,
             oe => open,
             in_clock => open,
             in_clock_en => open,
@@ -1531,7 +1866,7 @@ BEGIN
             exact_width => 0,
             width => 16)
         PORT MAP(
-            clock => Net_700_ff12,
+            clock => Net_700_ff11,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1544,92 +1879,92 @@ BEGIN
             line => \CY_EINK_Timer:Net_2\,
             interrupt => Net_22);
 
-    \Status_SW2:sts:sts_reg\:statuscell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_md_select => "00000000",
-            clken_mode => 1)
-        PORT MAP(
-            clock => open,
-            status_7 => open,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => open,
-            status_2 => open,
-            status_1 => open,
-            status_0 => Net_32);
-
-    \PWM:TCPWM\:TCPWM
-        GENERIC MAP(
-            cy_registers => "",
-            exact_width => 0,
-            width => 16)
-        PORT MAP(
-            clock => Net_508_ff11,
-            capture => '0',
-            count => '1',
-            reload => '0',
-            stop => '0',
-            start => '0',
-            tr_underflow => Net_506,
-            tr_compare_match => Net_507,
-            tr_overflow => Net_505,
-            line_compl => Net_510,
-            line => Net_518,
-            interrupt => Net_504);
-
-    \ADC:IRQ\:interrupt
+    SW2_isr:interrupt
         GENERIC MAP(
             cy_registers => "",
             deepsleep_required => 0,
             int_type => "10")
         PORT MAP(
-            interrupt => \ADC:Net_423\,
+            interrupt => INDIVIDUAL_PICU_OUT_0,
             clock => ClockBlock_PeriClk);
 
-    \ADC:SAR\:SARADC
+    \CapSense:IDACMod\:CSIDAC7
         GENERIC MAP(
             cy_registers => "",
-            edge_trigger => 0)
+            leg3_needed => 0)
         PORT MAP(
-            dsi_sar_sample_done => Net_741,
-            dsi_sar_chan_id_valid => Net_743,
-            dsi_sar_data_valid => Net_745,
-            tr_sar_out => Net_728,
-            dsi_sar_data_11 => Net_744_11,
-            dsi_sar_data_10 => Net_744_10,
-            dsi_sar_data_9 => Net_744_9,
-            dsi_sar_data_8 => Net_744_8,
-            dsi_sar_data_7 => Net_744_7,
-            dsi_sar_data_6 => Net_744_6,
-            dsi_sar_data_5 => Net_744_5,
-            dsi_sar_data_4 => Net_744_4,
-            dsi_sar_data_3 => Net_744_3,
-            dsi_sar_data_2 => Net_744_2,
-            dsi_sar_data_1 => Net_744_1,
-            dsi_sar_data_0 => Net_744_0,
-            dsi_sar_chan_id_3 => Net_742_3,
-            dsi_sar_chan_id_2 => Net_742_2,
-            dsi_sar_chan_id_1 => Net_742_1,
-            dsi_sar_chan_id_0 => Net_742_0,
-            dsi_sar_cfg_st_sel_1 => open,
-            dsi_sar_cfg_st_sel_0 => open,
-            dsi_sar_cfg_average => open,
-            dsi_sar_cfg_differential => open,
-            dsi_sar_sw_negvref => open,
-            dsi_sar_data_hilo_sel => open,
-            tr_sar_in => open,
-            clock => \ADC:Net_428_ff49\,
-            interrupt => \ADC:Net_423\);
+            dsi_idac_leg1_en => open,
+            dsi_idac_leg2_en => open,
+            dsi_idac_leg3_en => open,
+            dsi_idac_pol => open);
 
-    adc_int:interrupt
+    \CapSense:IDACComp\:CSIDAC7
+        GENERIC MAP(
+            cy_registers => "",
+            leg3_needed => 1)
+        PORT MAP(
+            dsi_idac_leg1_en => open,
+            dsi_idac_leg2_en => open,
+            dsi_idac_leg3_en => open,
+            dsi_idac_pol => open);
+
+    \CapSense:CSD\:CSD
+        GENERIC MAP(
+            adc_channel_count => 1,
+            cy_registers => "",
+            dedicated_io_count => 2,
+            is_capsense => 1,
+            is_cmod_charge => 1,
+            rx_count => 2,
+            sense_as_shield => 0,
+            sensors_count => 5,
+            shield_as_sense => 0,
+            shield_count => 1,
+            tx_count => 1)
+        PORT MAP(
+            dsi_sense_out => \CapSense:Net_813\,
+            dsi_sample_out => \CapSense:Net_814\,
+            dsi_sense_in => open,
+            dsi_sample_in => open,
+            dsi_csh_tank => \CapSense:Net_815\,
+            dsi_cmod => \CapSense:Net_845\,
+            dsi_hscmp => \CapSense:Net_817\,
+            dsi_start => open,
+            dsi_sampling => \CapSense:Net_818\,
+            dsi_adc_on => \CapSense:Net_819\,
+            dsi_count_15 => \CapSense:Net_828_15\,
+            dsi_count_14 => \CapSense:Net_828_14\,
+            dsi_count_13 => \CapSense:Net_828_13\,
+            dsi_count_12 => \CapSense:Net_828_12\,
+            dsi_count_11 => \CapSense:Net_828_11\,
+            dsi_count_10 => \CapSense:Net_828_10\,
+            dsi_count_9 => \CapSense:Net_828_9\,
+            dsi_count_8 => \CapSense:Net_828_8\,
+            dsi_count_7 => \CapSense:Net_828_7\,
+            dsi_count_6 => \CapSense:Net_828_6\,
+            dsi_count_5 => \CapSense:Net_828_5\,
+            dsi_count_4 => \CapSense:Net_828_4\,
+            dsi_count_3 => \CapSense:Net_828_3\,
+            dsi_count_2 => \CapSense:Net_828_2\,
+            dsi_count_1 => \CapSense:Net_828_1\,
+            dsi_count_0 => \CapSense:Net_828_0\,
+            dsi_count_val_sel => open,
+            csd_tx => \CapSense:Net_821\,
+            csd_tx_n => \CapSense:Net_822\,
+            clk => \CapSense:Net_611_ff43\,
+            irq => \CapSense:Net_849\);
+
+    \CapSense:ISR\:interrupt
         GENERIC MAP(
             cy_registers => "",
             deepsleep_required => 0,
             int_type => "10")
         PORT MAP(
-            interrupt => Net_728,
+            interrupt => \CapSense:Net_849\,
             clock => ClockBlock_PeriClk);
+
+    IOSS:IOSS
+        PORT MAP(
+            interrupt_port_0 => INDIVIDUAL_PICU_OUT_0);
 
 END __DEFAULT__;

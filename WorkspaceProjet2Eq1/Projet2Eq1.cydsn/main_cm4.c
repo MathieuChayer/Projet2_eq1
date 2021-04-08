@@ -58,28 +58,6 @@
 #include "FreeRTOS.h"
 #include "task.h" 
 #include "queue.h"
-//#include "params.h"
-
-// Variables globales
-volatile int    compteur = 0;
-volatile float  bufferCirculaire[4000];
-volatile int    indexEcriture = 0;
-volatile int    processBufferIdx = 0;
-volatile bool   processBufferFlag = false; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*******************************************************************************

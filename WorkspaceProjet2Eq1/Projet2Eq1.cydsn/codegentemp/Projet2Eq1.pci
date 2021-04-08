@@ -1,5 +1,5 @@
 # Projet2Eq1
-# 2021-03-31 18:17:13Z
+# 2021-04-08 21:10:12Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -18,7 +18,18 @@ set_io "CY_EINK_DispIoEn(0)" iocell 0 2
 set_io "CY_EINK_DispBusy(0)" iocell 5 3
 set_io "CY_EINK_Ssel(0)" iocell 12 3
 set_io "SW2(0)" iocell 0 4
-set_io "GreenLED(0)" iocell 1 1
-set_io "PWM_OUT(0)" iocell 6 2
-set_io "ADC_IN(0)" iocell 10 6
-set_location "\ADC:SAR\" SARADC -1 -1 0
+set_io "BlueLED(0)" iocell 11 1
+set_io "\CapSense:Cmod(0)\" iocell 7 7
+set_io "\CapSense:Rx(0)\" iocell 8 2
+set_io "\CapSense:Rx(1)\" iocell 8 1
+set_io "\CapSense:CintB(0)\" iocell 7 2
+set_io "\CapSense:CintA(0)\" iocell 7 1
+set_io "\CapSense:Sns(0)\" iocell 8 3
+set_io "\CapSense:Sns(1)\" iocell 8 4
+set_io "\CapSense:Sns(2)\" iocell 8 5
+set_io "\CapSense:Sns(3)\" iocell 8 6
+set_io "\CapSense:Sns(4)\" iocell 8 7
+set_io "\CapSense:Tx(0)\" iocell 1 0
+set_location "\CapSense:IDACMod\" CSIDAC7 -1 -1 0
+set_location "\CapSense:IDACComp\" CSIDAC7 -1 -1 1
+set_location "\CapSense:CSD\" CSD -1 -1 0

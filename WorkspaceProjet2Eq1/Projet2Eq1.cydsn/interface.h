@@ -18,6 +18,9 @@
 #include <math.h>
 #include "FreeRTOS.h"
 #include "task.h"
+#include <stdio.h>
+#include <math.h>
+
 //#include "touch_task.h"
 //#include "display_task.h"
 //#include "uart_debug.h" 
@@ -28,5 +31,8 @@ void drawGraph(uint16_t *vecteur200elements);
 void updateParameters(int param1, int param2);
 void interface(void *pvParameters);
 void drawAffichageCourbe(void);
+void isr_SW2(void);
+void draw_SousMenu(void);
+void draw_MenuPrincipal(void);
 
 /* [] END OF FILE */
