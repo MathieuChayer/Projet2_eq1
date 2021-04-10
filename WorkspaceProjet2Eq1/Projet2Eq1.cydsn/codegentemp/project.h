@@ -111,7 +111,9 @@
 #include "CY_EINK_Timer.h"
 #include "Status_SW2.h"
 #include "Clock_2.h"
+#include "UART_1.h"
 #include "CY_EINK_SPIM_SCBCLK.h"
+#include "UART_1_SCBCLK.h"
 
 /*[]*/
 

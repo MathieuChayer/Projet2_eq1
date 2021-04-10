@@ -177,6 +177,7 @@ int main(void)
     
     /* Initialize emWin Graphics */
     GUI_Init();
+    UART_1_Start();
 
     /* Start the eInk display interface and turn on the display power */
     Cy_EINK_Start(20);
@@ -207,7 +208,30 @@ int main(void)
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
     
     // INTERRUPTIONS: initialiser/organiser
-
+    
+    // TESTS TRAITEMENTS
+    uint32_t buffer[20] = {54573,54583,54544,54569,54550,54551,54565,54558,54574,54568,54553,54574,54563,54558,54548,54558,54563,54549,54556,54553};
+    float32_t bufferFiltre[20];
+    uint32_t AC = 0;
+    uint32_t DC = 0;
+    
+    
+    
+    traitementSignal(&buffer[0], &bufferFiltre[0], &AC, &DC);
+    char buffer_test[100]="";
+    for(int i =0; i<20;i++){
+        sprintf(buffer_test,"%e\n\r",bufferFiltre[i]);
+        UART_1_PutString(buffer_test);
+    }
+    
+//    uint32_t bufferR[2000] = {1,2,3};
+//    uint32_t bufferIR[2000] = {4,5,6};
+//    uint32_t bufferCirculaireR[4000];
+//    uint32_t bufferCirculaireIR[4000];
+//    uint16_t indice = 0;
+//    
+//    acquisitionSignaux(&bufferR[0],&bufferIR[0],&bufferCirculaireR[indice], &bufferCirculaireIR[indice], &indice);
+//    
     for(;;)
     {
         // APPEL DES 3 FONCTIONS (communication, traitement, affichage) en boucle

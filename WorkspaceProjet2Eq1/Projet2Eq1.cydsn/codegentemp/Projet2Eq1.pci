@@ -1,5 +1,5 @@
 # Projet2Eq1
-# 2021-04-08 01:14:53Z
+# 2021-04-10 21:07:23Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -18,3 +18,5 @@ set_io "CY_EINK_DispIoEn(0)" iocell 0 2
 set_io "CY_EINK_DispBusy(0)" iocell 5 3
 set_io "CY_EINK_Ssel(0)" iocell 12 3
 set_io "SW2(0)" iocell 0 4
+set_io "\UART_1:tx(0)\" iocell 5 1
+set_io "\UART_1:rx(0)\" iocell 5 0

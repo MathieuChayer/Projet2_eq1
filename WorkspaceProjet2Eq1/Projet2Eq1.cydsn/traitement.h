@@ -20,7 +20,7 @@
 
 void traitementCompletSignaux(uint32_t *bufferRed,  uint32_t *bufferIR);
 void acquisitionSignaux(uint32_t *data_red,  uint32_t *data_IR,uint32_t *bufferRed,  uint32_t *bufferIR, uint16_t *indice);  
-uint8_t traitementSignal(uint32_t *buffer,uint32_t *bufferFiltre, uint32_t *AC,uint32_t *DC);                            
+uint8_t traitementSignal(uint32_t *buffer,float32_t *bufferFiltre, uint32_t *AC,uint32_t *DC);                            
 void calculFrequenceCardiaque(uint8_t compteur, uint8_t *bpm);                             
 void calculSaturation(uint32_t AC_red, uint32_t DC_red,uint32_t AC_IR,uint32_t DC_IR, uint8_t *saturation);
 
