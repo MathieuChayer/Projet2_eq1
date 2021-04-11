@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
   27:eInk Library/pervasive_eink_hardware_driver.c **** *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   28:eInk Library/pervasive_eink_hardware_driver.c **** *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   29:eInk Library/pervasive_eink_hardware_driver.c **** *******************************************************************************/
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 2
 
 
   30:eInk Library/pervasive_eink_hardware_driver.c **** /******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
   84:eInk Library/pervasive_eink_hardware_driver.c **** driver_data_packet_t  static driverPacket;
   85:eInk Library/pervasive_eink_hardware_driver.c **** 
   86:eInk Library/pervasive_eink_hardware_driver.c **** /* Scan table for the four stages of display update*/
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 3
 
 
   87:eInk Library/pervasive_eink_hardware_driver.c **** uint8_t const               scanTable[PV_EINK_SCAN_TABLE_SIZE] =
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
   47              	.LBB59:
   48              		.file 2 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/gpio/cy_gpio.h"
    1:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /***************************************************************************//**
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 4
 
 
    2:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \file cy_gpio.h
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
   56:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * 4. Digital input buffer provides a high-impedance buffer for the external 
   57:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *    digital input. The input buffer is connected to the HSIOM for routing to 
   58:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *    the CPU port registers and selected peripheral. Enabling the input 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 5
 
 
   59:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *    buffer provides possibility to read the pin state via the CPU.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  113:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *     <td>Driver library directory-structure simplification.</td>
  114:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *   </tr>
  115:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *   <tr>
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 6
 
 
  116:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *     <td>Added the functions for configuring the AMux bus splitter switch cells:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  170:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** extern "C" {
  171:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #endif
  172:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 7
 
 
  173:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /** \addtogroup group_gpio_macros
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  227:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
  228:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
  229:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /***************************************
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 8
 
 
  230:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *       Configuration Structures
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  284:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_OUT_MASK                       (0x01UL)   /**< Single pin mask for OUT register */
  285:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IN_MASK                        (0x01UL)   /**< Single pin mask for IN register */
  286:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_CFG_DM_MASK                    (0x0FUL)   /**< Single pin mask for drive mode in CF
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 9
 
 
  287:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_CFG_IN_VTRIP_SEL_MASK          (0x01UL)   /**< Single pin mask for VTRIP selection 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  341:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_PIN_VALID(pinNum)           (CY_GPIO_PINS_MAX > (pinNum))
  342:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_FILTER_PIN_VALID(pinNum)    (CY_GPIO_PINS_MAX >= (pinNum))
  343:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_VALUE_VALID(outVal)         (1UL >= (outVal))
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 10
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 10
 
 
  344:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_DM_VALID(driveMode)         (0U == ((driveMode) & (uint32_t)~CY_GPIO_CFG_DM_MASK
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  398:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \addtogroup group_gpio_macros
  399:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \{
  400:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 11
 
 
  401:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  455:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Constants to be used for setting the interrupt trigger type on the pin.
  456:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** */
  457:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_INTR_DISABLE                   (0x00UL) /**< Disable the pin interrupt generation *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 12
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 12
 
 
  458:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_INTR_RISING                    (0x01UL) /**< Rising-Edge interrupt */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  512:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_SIO_VOH_2_08                        (0x04UL) /**< Voh = 2.08 x Reference */
  513:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_SIO_VOH_2_50                        (0x05UL) /**< Voh = 2.50 x Reference */
  514:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_SIO_VOH_2_78                        (0x06UL) /**< Voh = 2.78 x Reference */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 13
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 13
 
 
  515:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_SIO_VOH_4_16                        (0x07UL) /**< Voh = 4.16 x Reference */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  569:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /**
  570:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \addtogroup group_gpio_functions_sio
  571:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \{
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 14
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 14
 
 
  572:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  626:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Pointer to the pin's port register base address
  627:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
  628:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param pinNum
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 15
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 15
 
 
  629:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Position of the pin bit-field within the port register
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  683:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \funcusage
  684:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \snippet gpio/gpio_v1_10_sut_01.cydsn/main_cm4.c snippet_Cy_GPIO_SetHSIOM
  685:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 16
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 16
 
 
  686:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *******************************************************************************/
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  740:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     {
  741:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****         /* Error: Return default base address */
  742:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****         portBase = (GPIO_PRT_Type *)(CY_GPIO_BASE);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 17
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 17
 
 
  743:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  797:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
  798:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param value
  799:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Logic level to drive out on the pin
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 18
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 18
 
 
  800:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
   78              	.LBE62:
  129:eInk Library/pervasive_eink_hardware_driver.c ****     /* Push the chip select line HIGH to end communication */
  130:eInk Library/pervasive_eink_hardware_driver.c ****     CY_EINK_CsHigh;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 19
 
 
  131:eInk Library/pervasive_eink_hardware_driver.c ****     
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  152:eInk Library/pervasive_eink_hardware_driver.c ****     CY_EINK_CsHigh;
  153:eInk Library/pervasive_eink_hardware_driver.c **** }
  154:eInk Library/pervasive_eink_hardware_driver.c **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 20
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 20
 
 
  155:eInk Library/pervasive_eink_hardware_driver.c **** /*******************************************************************************
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  145              	.LFB657:
  176:eInk Library/pervasive_eink_hardware_driver.c **** 
  177:eInk Library/pervasive_eink_hardware_driver.c **** /*******************************************************************************
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 21
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 21
 
 
  178:eInk Library/pervasive_eink_hardware_driver.c **** * Function Name: uint8_t Pv_EINK_ReadByte(uint8_t regAddr, uint8_t data)
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  174 000e FFF7FEFF 		bl	Cy_EINK_WriteSPI
  175              	.LVL19:
  203:eInk Library/pervasive_eink_hardware_driver.c ****     /* Send the register address */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 22
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 22
 
 
  204:eInk Library/pervasive_eink_hardware_driver.c ****     Cy_EINK_WriteSPI(regAddr);
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  210 002a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  211              	.L10:
  212              		.align	2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 23
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 23
 
 
  213              	.L9:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  248 0008 084C     		ldr	r4, .L13+4
  249 000a 4023     		movs	r3, #64
  250 000c 6360     		str	r3, [r4, #4]
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 24
 
 
  251              	.LVL28:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  288              	.LVL34:
  289 0026 38BD     		pop	{r3, r4, r5, pc}
  290              	.L14:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 25
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 25
 
 
  291              		.align	2
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  320 0008 2046     		mov	r0, r4
  321 000a FFF7FEFF 		bl	memset
  322              	.LVL36:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 26
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 26
 
 
  282:eInk Library/pervasive_eink_hardware_driver.c ****     
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  306:eInk Library/pervasive_eink_hardware_driver.c ****     if ((Pv_EINK_ReadByte(PV_EINK_DRIVER_ID_COMMAND_INDEX, 
  352              		.loc 1 306 0
  353 0038 0021     		movs	r1, #0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 27
 
 
  354 003a 7220     		movs	r0, #114
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  333:eInk Library/pervasive_eink_hardware_driver.c ****                     (uint8_t*) &channelSelect,
  334:eInk Library/pervasive_eink_hardware_driver.c ****                      PV_EINK_CHANNEL_SEL_SIZE);
  335:eInk Library/pervasive_eink_hardware_driver.c ****     
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 28
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 28
 
 
  336:eInk Library/pervasive_eink_hardware_driver.c ****     /* High Power Mode Oscillator Setting */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  278:eInk Library/pervasive_eink_hardware_driver.c ****     
  416              		.loc 1 278 0
  417 00a4 0024     		movs	r4, #0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 29
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 29
 
 
  418 00a6 00E0     		b	.L21
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  436 00ba 0520     		movs	r0, #5
  437 00bc FFF7FEFF 		bl	Pv_EINK_SendByte
  438              	.LVL57:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 30
 
 
  368:eInk Library/pervasive_eink_hardware_driver.c ****         
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  480 00fa 0520     		movs	r0, #5
  481 00fc 10BD     		pop	{r4, pc}
  482              	.LVL65:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 31
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 31
 
 
  483              	.L22:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  413:eInk Library/pervasive_eink_hardware_driver.c **** *  None
  414:eInk Library/pervasive_eink_hardware_driver.c **** *
  415:eInk Library/pervasive_eink_hardware_driver.c **** * Side Effects:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 32
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 32
 
 
  416:eInk Library/pervasive_eink_hardware_driver.c **** *  None
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  446:eInk Library/pervasive_eink_hardware_driver.c ****     }
  447:eInk Library/pervasive_eink_hardware_driver.c ****     else if (PV_EINK_TEMP_DEG_40 >= temperature)
  541              		.loc 1 447 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 33
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 33
 
 
  542 001c 2828     		cmp	r0, #40
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  580 004c A3F87E20 		strh	r2, [r3, #126]	@ movhi
  581 0050 7047     		bx	lr
  582              	.L40:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 34
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 34
 
 
  583 0052 00BF     		.align	2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  605              		.cfi_offset 4, -36
  606              		.cfi_offset 5, -32
  607              		.cfi_offset 6, -28
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 35
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 35
 
 
  608              		.cfi_offset 7, -24
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  630              	.LVL72:
  631 0016 03E0     		b	.L42
  632              	.LVL73:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 36
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 36
 
 
  633              	.L90:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  665 0044 0BF1010E 		add	lr, fp, #1
  666 0048 BC4B     		ldr	r3, .L125+4
  667 004a C3F870E0 		str	lr, [r3, #112]
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 37
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 37
 
 
  542:eInk Library/pervasive_eink_hardware_driver.c ****         dataLineOdd  = &bulkDriverPacket[y].lineDataBySize.odd[0];
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  704              		.p2align 1
  705              	.L47:
  560:eInk Library/pervasive_eink_hardware_driver.c ****             {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 38
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 38
 
 
  561:eInk Library/pervasive_eink_hardware_driver.c ****             /* Stage 1: Calculate the inverted Even and Odd bytes of 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  750              	.L55:
  751              		.loc 1 570 0 discriminator 4
  752 00da 4AEA0101 		orr	r1, r10, r1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 39
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 39
 
 
  753 00de 8CF80010 		strb	r1, [ip]
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  799 0132 6FF03F0A 		mvn	r10, #63
  800 0136 01E0     		b	.L59
  801              	.L99:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 40
 
 
  802 0138 6FF07F0A 		mvn	r10, #127
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  589:eInk Library/pervasive_eink_hardware_driver.c ****                                         PV_EINK_WHITE1 : PV_EINK_NOTHING1);
  590:eInk Library/pervasive_eink_hardware_driver.c ****                 dataLineOdd[x]      |= ((tempByte & PV_EINK_ODD_MASK_D)  ? 
  846              		.loc 1 590 0 is_stmt 1 discriminator 4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 41
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 41
 
 
  847 018c 14F0010F 		tst	r4, #1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  597:eInk Library/pervasive_eink_hardware_driver.c ****                                         PV_EINK_WHITE2 : PV_EINK_NOTHING2);
  598:eInk Library/pervasive_eink_hardware_driver.c ****                 dataLineEven[k--]   |= ((tempByte & PV_EINK_EVEN_MASK_D) ? 
  895              		.loc 1 598 0 is_stmt 1 discriminator 4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 42
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 42
 
 
  896 01ea 013A     		subs	r2, r2, #1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  940 023a 02D0     		beq	.L110
  941              		.loc 1 608 0 is_stmt 0
  942 023c 4FF00C0A 		mov	r10, #12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 43
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 43
 
 
  943 0240 01E0     		b	.L70
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  989 0298 02D0     		beq	.L114
  990              		.loc 1 616 0 is_stmt 0
  991 029a 4FF0300A 		mov	r10, #48
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 44
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 44
 
 
  992 029e 01E0     		b	.L74
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1036              	.L117:
  1037 02ec 4FF0300A 		mov	r10, #48
  1038              	.L77:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 45
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 45
 
 
  1039              		.loc 1 626 0 discriminator 4
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1085 034a 49B2     		sxtb	r1, r1
  1086 034c 14F0200F 		tst	r4, #32
  1087 0350 02D0     		beq	.L121
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 46
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 46
 
 
  1088              		.loc 1 634 0 is_stmt 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  639:eInk Library/pervasive_eink_hardware_driver.c ****                                         PV_EINK_WHITE3 : PV_EINK_BLACK3);
  640:eInk Library/pervasive_eink_hardware_driver.c ****                 break;
  641:eInk Library/pervasive_eink_hardware_driver.c ****             }
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 47
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 47
 
 
  642:eInk Library/pervasive_eink_hardware_driver.c ****         }
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1170 03d4 0024     		movs	r4, #0
  1171 03d6 0FE0     		b	.L87
  1172              	.LVL103:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 48
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 48
 
 
  1173              	.L88:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1207 040a FFF7FEFF 		bl	Cy_EINK_TimerStop
  1208              	.LVL110:
  1209 040e BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 49
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 49
 
 
  1210              	.LVL111:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1231              		@ args = 0, pretend = 0, frame = 0
  1232              		@ frame_needed = 0, uses_anonymous_args = 0
  1233              	.LVL112:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 50
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 50
 
 
  1234 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1261 0018 C4EBC407 		rsb	r7, r4, r4, lsl #3
  1262 001c C4EB0717 		rsb	r7, r4, r7, lsl #4
  1263 0020 DFF80082 		ldr	r8, .L163+12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 51
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 51
 
 
  1264 0024 07EB0809 		add	r9, r7, r8
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1301              	.LVL123:
  753:eInk Library/pervasive_eink_hardware_driver.c ****             
  754:eInk Library/pervasive_eink_hardware_driver.c ****             /* Calculate the Even and Odd bytes for partial update stage. Also, 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 52
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 52
 
 
  755:eInk Library/pervasive_eink_hardware_driver.c ****                if the new data byte is same as the previous data byte, store a 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1343 00aa 12F0040F 		tst	r2, #4
  1344 00ae 05D0     		beq	.L150
  1345              		.loc 1 767 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 53
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 53
 
 
  1346 00b0 19F0040F 		tst	r9, #4
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1392 0106 0323     		movs	r3, #3
  1393              	.L136:
  1394              		.loc 1 775 0 discriminator 8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 54
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 54
 
 
  1395 0108 2B70     		strb	r3, [r5]
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1437              	.LVL127:
  1438 0154 12F0020F 		tst	r2, #2
  1439 0158 05D0     		beq	.L160
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 55
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 55
 
 
  1440              		.loc 1 787 0 is_stmt 0 discriminator 1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1479 018a 1340     		ands	r3, r3, r2
  1480              	.LVL134:
  1481 018c 03D5     		bpl	.L141
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 56
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 56
 
 
  1482 018e 013B     		subs	r3, r3, #1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  813:eInk Library/pervasive_eink_hardware_driver.c ****             Pv_EINK_SendByte(PV_EINK_ENABLE_OE_COMMAND_INDEX,
  1518              		.loc 1 813 0 discriminator 3
  1519 01c6 0721     		movs	r1, #7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 57
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 57
 
 
  1520 01c8 0220     		movs	r0, #2
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  833:eInk Library/pervasive_eink_hardware_driver.c ****     while (partialUpdateTime > Cy_EINK_GetTimeTick());
  1553              		.loc 1 833 0 is_stmt 1
  1554 01f8 074B     		ldr	r3, .L163
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 58
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 58
 
 
  1555 01fa B3F87E40 		ldrh	r4, [r3, #126]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  854:eInk Library/pervasive_eink_hardware_driver.c **** * Return:
  855:eInk Library/pervasive_eink_hardware_driver.c **** *  None
  856:eInk Library/pervasive_eink_hardware_driver.c **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 59
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 59
 
 
  857:eInk Library/pervasive_eink_hardware_driver.c **** * Side Effects:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  870:eInk Library/pervasive_eink_hardware_driver.c ****     }
  871:eInk Library/pervasive_eink_hardware_driver.c ****     /* Send the same horizontal data for all vertical lines */
  872:eInk Library/pervasive_eink_hardware_driver.c ****     for (byteCounter = 0; byteCounter < PV_EINK_VERTICAL_SIZE; byteCounter++)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 60
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 60
 
 
  873:eInk Library/pervasive_eink_hardware_driver.c ****     {
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  889:eInk Library/pervasive_eink_hardware_driver.c **** }
  1662              		.loc 1 889 0 is_stmt 1
  1663 0050 70BD     		pop	{r4, r5, r6, pc}
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 61
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 61
 
 
  1664              	.LVL161:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1694              	.L175:
  914:eInk Library/pervasive_eink_hardware_driver.c ****                                         / CY_EINK_BYTE_SIZE);
  915:eInk Library/pervasive_eink_hardware_driver.c ****          byteCounter++)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 62
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 62
 
 
  916:eInk Library/pervasive_eink_hardware_driver.c ****     {
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1734              		.global	Pv_EINK_HardwarePowerOn
  1735              		.thumb
  1736              		.thumb_func
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 63
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 63
 
 
  1737              		.type	Pv_EINK_HardwarePowerOn, %function
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  956:eInk Library/pervasive_eink_hardware_driver.c ****     Cy_EINK_AttachSPI();
  1764              		.loc 1 956 0
  1765 000e FFF7FEFF 		bl	Cy_EINK_AttachSPI
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 64
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 64
 
 
  1766              	.LVL172:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1810              	.LBE97:
  1811              	.LBE96:
  966:eInk Library/pervasive_eink_hardware_driver.c ****     CY_EINK_RstHigh;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 65
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 65
 
 
  967:eInk Library/pervasive_eink_hardware_driver.c ****     CY_EINK_Delay(PV_EINK_PIN_DELAY);
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1842              		.cfi_def_cfa_offset 16
  1843              		.cfi_offset 3, -16
  1844              		.cfi_offset 4, -12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 66
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 66
 
 
  1845              		.cfi_offset 5, -8
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
 1005:eInk Library/pervasive_eink_hardware_driver.c ****         ) == PV_EINK_DC_LEVEL_CHECK)
 1006:eInk Library/pervasive_eink_hardware_driver.c ****     {
 1007:eInk Library/pervasive_eink_hardware_driver.c ****         /* Return error message for improper DC level */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 67
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 67
 
 
 1008:eInk Library/pervasive_eink_hardware_driver.c ****         return(PV_EINK_ERROR_DC);
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1916 005e FFF7FEFF 		bl	Pv_EINK_SendByte
  1917              	.LVL195:
 1030:eInk Library/pervasive_eink_hardware_driver.c ****                      PV_EINK_CH_PUMP_OFF_COMMAND_DATA);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 68
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 68
 
 
 1031:eInk Library/pervasive_eink_hardware_driver.c ****     /* Turn off OSC */
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  1958              	.LBB109:
  1959 0086 0423     		movs	r3, #4
  1960 0088 6360     		str	r3, [r4, #4]
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 69
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 69
 
 
  1961              	.LVL203:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2004              		.set	.LANCHOR1,. + 0
  2005              		.type	channelSelect, %object
  2006              		.size	channelSelect, 8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 70
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 70
 
 
  2007              	channelSelect:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2057              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
  2058              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
  2059              		.file 9 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_i2c.h"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 71
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 71
 
 
  2060              		.file 10 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2114 005a 5E000000 		.4byte	0x5e
  2115 005e 03       		.uleb128 0x3
  2116 005f 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 72
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 72
 
 
  2117 0060 08       		.byte	0x8
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2171 00c9 04       		.byte	0x4
  2172 00ca 14       		.byte	0x14
  2173 00cb 41000000 		.4byte	0x41
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 73
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 73
 
 
  2174 00cf 04       		.uleb128 0x4
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2228 0141 88060000 		.4byte	.LASF25
  2229 0145 05       		.byte	0x5
  2230 0146 25       		.byte	0x25
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 74
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 74
 
 
  2231 0147 06010000 		.4byte	0x106
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2285 01b2 06010000 		.4byte	0x106
  2286 01b6 2C       		.byte	0x2c
  2287 01b7 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 75
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 75
 
 
  2288 01b8 31060000 		.4byte	.LASF33
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2342 0225 0B010000 		.4byte	0x10b
  2343 0229 0040     		.2byte	0x4000
  2344 022b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 76
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 76
 
 
  2345 022c 1D000000 		.4byte	.LASF40
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2399 02a3 00       		.byte	0
  2400 02a4 04       		.uleb128 0x4
  2401 02a5 67040000 		.4byte	.LASF48
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 77
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 77
 
 
  2402 02a9 05       		.byte	0x5
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2456 0317 0C       		.uleb128 0xc
  2457 0318 F4060000 		.4byte	.LASF57
  2458 031c 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 78
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 78
 
 
  2459 031d 3D       		.byte	0x3d
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2513 0389 48       		.byte	0x48
  2514 038a CF000000 		.4byte	0xcf
  2515 038e 2D       		.byte	0x2d
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 79
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 79
 
 
  2516 038f 0C       		.uleb128 0xc
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2570 03fb 0C       		.uleb128 0xc
  2571 03fc EF010000 		.4byte	.LASF76
  2572 0400 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 80
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 80
 
 
  2573 0401 54       		.byte	0x54
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2627 046d 5D       		.byte	0x5d
  2628 046e CF000000 		.4byte	0xcf
  2629 0472 44       		.byte	0x44
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 81
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 81
 
 
  2630 0473 0C       		.uleb128 0xc
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2684 04df 0C       		.uleb128 0xc
  2685 04e0 3C0C0000 		.4byte	.LASF95
  2686 04e4 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 82
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 82
 
 
  2687 04e5 67       		.byte	0x67
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2741 0551 76       		.byte	0x76
  2742 0552 E5000000 		.4byte	0xe5
  2743 0556 68       		.byte	0x68
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 83
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 83
 
 
  2744 0557 0C       		.uleb128 0xc
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2798 05c3 0C       		.uleb128 0xc
  2799 05c4 B8080000 		.4byte	.LASF114
  2800 05c8 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 84
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 84
 
 
  2801 05c9 82       		.byte	0x82
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2855 0635 8F       		.byte	0x8f
  2856 0636 FB000000 		.4byte	0xfb
  2857 063a 8C       		.byte	0x8c
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 85
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 85
 
 
  2858 063b 0C       		.uleb128 0xc
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2912 06a7 0C       		.uleb128 0xc
  2913 06a8 7D020000 		.4byte	.LASF133
  2914 06ac 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 86
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 86
 
 
  2915 06ad 99       		.byte	0x99
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  2969 0719 2A070000 		.4byte	0x72a
  2970 071d 11       		.uleb128 0x11
  2971 071e 04020000 		.4byte	.LASF143
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 87
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 87
 
 
  2972 0722 00       		.byte	0
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3026 079a 01       		.byte	0x1
  3027 079b 17       		.uleb128 0x17
  3028 079c 900F0000 		.4byte	.LASF150
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 88
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 88
 
 
  3029 07a0 09       		.byte	0x9
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3083 0815 09       		.byte	0x9
  3084 0816 D502     		.2byte	0x2d5
  3085 0818 99080000 		.4byte	0x899
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 89
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 89
 
 
  3086 081c 24       		.byte	0x24
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3140 0891 48       		.byte	0x48
  3141 0892 00       		.byte	0
  3142 0893 12       		.uleb128 0x12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 90
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 90
 
 
  3143 0894 04       		.byte	0x4
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3197 090c FB000000 		.4byte	0xfb
  3198 0910 14       		.byte	0x14
  3199 0911 17       		.uleb128 0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 91
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 91
 
 
  3200 0912 90010000 		.4byte	.LASF179
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3254 098a 0B       		.byte	0xb
  3255 098b 7C02     		.2byte	0x27c
  3256 098d FB000000 		.4byte	0xfb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 92
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 92
 
 
  3257 0991 0C       		.byte	0xc
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3311 0a06 30       		.byte	0x30
  3312 0a07 17       		.uleb128 0x17
  3313 0a08 2B080000 		.4byte	.LASF180
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 93
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 93
 
 
  3314 0a0c 0B       		.byte	0xb
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3368 0a7a 0C       		.byte	0xc
  3369 0a7b 39       		.byte	0x39
  3370 0a7c FB000000 		.4byte	0xfb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 94
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 94
 
 
  3371 0a80 18       		.byte	0x18
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3425 0aec 3C       		.byte	0x3c
  3426 0aed 0C       		.uleb128 0xc
  3427 0aee 13020000 		.4byte	.LASF209
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 95
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 95
 
 
  3428 0af2 0C       		.byte	0xc
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3482 0b5e 0D       		.byte	0xd
  3483 0b5f 40       		.byte	0x40
  3484 0b60 280B0000 		.4byte	0xb28
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 96
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 96
 
 
  3485 0b64 19       		.uleb128 0x19
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3539 0bd0 00       		.byte	0
  3540 0bd1 08       		.uleb128 0x8
  3541 0bd2 CF000000 		.4byte	0xcf
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 97
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 97
 
 
  3542 0bd6 E10B0000 		.4byte	0xbe1
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3596 0c4a 2503     		.2byte	0x325
  3597 0c4c FB000000 		.4byte	0xfb
  3598 0c50 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 98
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 98
 
 
  3599 0c51 2B060000 		.4byte	.LASF235
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3653 0cd9 1C000000 		.4byte	.LBB60
  3654 0cdd 02000000 		.4byte	.LBE60-.LBB60
  3655 0ce1 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 99
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 99
 
 
  3656 0ce2 82       		.byte	0x82
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3710 0d72 08       		.byte	0x8
  3711 0d73 70       		.byte	0x70
  3712 0d74 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 100
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 100
 
 
  3713 0d75 22       		.uleb128 0x22
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3767 0dd8 1F       		.uleb128 0x1f
  3768 0dd9 1D080000 		.4byte	.LASF237
  3769 0ddd 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 101
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 101
 
 
  3770 0dde AB       		.byte	0xab
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3824 0e50 700E0000 		.4byte	0xe70
  3825 0e54 21       		.uleb128 0x21
  3826 0e55 500C0000 		.4byte	0xc50
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 102
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 102
 
 
  3827 0e59 FC010000 		.4byte	.LLST19
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3881 0eef D0020000 		.4byte	.LLST29
  3882 0ef3 21       		.uleb128 0x21
  3883 0ef4 380C0000 		.4byte	0xc38
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 103
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 103
 
 
  3884 0ef8 E4020000 		.4byte	.LLST30
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3938 0f5b 8C100000 		.4byte	0x108c
  3939 0f5f 20       		.uleb128 0x20
  3940 0f60 2B0C0000 		.4byte	0xc2b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 104
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 104
 
 
  3941 0f64 02000000 		.4byte	.LBB74
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  3995 0ffa FB       		.byte	0xfb
  3996 0ffb 1B100000 		.4byte	0x101b
  3997 0fff 21       		.uleb128 0x21
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 105
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 105
 
 
  3998 1000 500C0000 		.4byte	0xc50
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4052 1094 590B0000 		.4byte	0xb59
  4053 1098 00000000 		.4byte	.LFB659
  4054 109c 18010000 		.4byte	.LFE659-.LFB659
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 106
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 106
 
 
  4055 10a0 01       		.uleb128 0x1
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4109 110d 01       		.uleb128 0x1
  4110 110e 51       		.byte	0x51
  4111 110f 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 107
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 107
 
 
  4112 1110 30       		.byte	0x30
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4166 116a 51       		.byte	0x51
  4167 116b 05       		.uleb128 0x5
  4168 116c 03       		.byte	0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 108
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 108
 
 
  4169 116d 00000000 		.4byte	.LANCHOR1
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4223 11c1 22       		.uleb128 0x22
  4224 11c2 8E000000 		.4byte	.LVL49
  4225 11c6 B40D0000 		.4byte	0xdb4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 109
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 109
 
 
  4226 11ca D9110000 		.4byte	0x11d9
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4280 1221 B40D0000 		.4byte	0xdb4
  4281 1225 34120000 		.4byte	0x1234
  4282 1229 23       		.uleb128 0x23
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 110
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 110
 
 
  4283 122a 01       		.uleb128 0x1
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4337 1284 01       		.uleb128 0x1
  4338 1285 35       		.byte	0x35
  4339 1286 23       		.uleb128 0x23
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 111
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 111
 
 
  4340 1287 01       		.uleb128 0x1
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4394 12df 9C       		.byte	0x9c
  4395 12e0 01130000 		.4byte	0x1301
  4396 12e4 2B       		.uleb128 0x2b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 112
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 112
 
 
  4397 12e5 6B070000 		.4byte	.LASF247
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4451 1362 570C0000 		.4byte	.LASF252
  4452 1366 01       		.byte	0x1
  4453 1367 F201     		.2byte	0x1f2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 113
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 113
 
 
  4454 1369 FD060000 		.4byte	0x6fd
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4508 13d1 33       		.byte	0x33
  4509 13d2 24       		.byte	0x24
  4510 13d3 74       		.byte	0x74
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 114
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 114
 
 
  4511 13d4 00       		.sleb128 0
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4565 1435 C202     		.2byte	0x2c2
  4566 1437 13140000 		.4byte	0x1413
  4567 143b 84060000 		.4byte	.LLST58
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 115
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 115
 
 
  4568 143f 2D       		.uleb128 0x2d
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4622 14c4 23       		.uleb128 0x23
  4623 14c5 01       		.uleb128 0x1
  4624 14c6 51       		.byte	0x51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 116
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 116
 
 
  4625 14c7 02       		.uleb128 0x2
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4679 1518 50       		.byte	0x50
  4680 1519 01       		.uleb128 0x1
  4681 151a 32       		.byte	0x32
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 117
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 117
 
 
  4682 151b 23       		.uleb128 0x23
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4736 1575 50       		.byte	0x50
  4737 1576 01       		.uleb128 0x1
  4738 1577 39       		.byte	0x39
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 118
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 118
 
 
  4739 1578 23       		.uleb128 0x23
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4793 15d4 01       		.uleb128 0x1
  4794 15d5 51       		.byte	0x51
  4795 15d6 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 119
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 119
 
 
  4796 15d7 37       		.byte	0x37
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4850 1639 00       		.byte	0
  4851 163a 24       		.uleb128 0x24
  4852 163b 2E000000 		.4byte	.LVL168
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 120
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 120
 
 
  4853 163f B40D0000 		.4byte	0xdb4
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4907 16c0 380C0000 		.4byte	0xc38
  4908 16c4 1B090000 		.4byte	.LLST73
  4909 16c8 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 121
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 121
 
 
  4910 16c9 2F       		.uleb128 0x2f
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  4964 1762 02000000 		.4byte	.LBE96-.LBB96
  4965 1766 01       		.byte	0x1
  4966 1767 C603     		.2byte	0x3c6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 122
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 122
 
 
  4967 1769 89170000 		.4byte	0x1789
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5021 17de 27       		.uleb128 0x27
  5022 17df 3A000000 		.4byte	.LVL181
  5023 17e3 8C100000 		.4byte	0x108c
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 123
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 123
 
 
  5024 17e7 00       		.byte	0
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5078 187b B30A0000 		.4byte	.LLST92
  5079 187f 21       		.uleb128 0x21
  5080 1880 440C0000 		.4byte	0xc44
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 124
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 124
 
 
  5081 1884 C70A0000 		.4byte	.LLST93
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5135 191d 9B0B0000 		.4byte	.LLST103
  5136 1921 00       		.byte	0
  5137 1922 2F       		.uleb128 0x2f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 125
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 125
 
 
  5138 1923 2B0C0000 		.4byte	0xc2b
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5192 19b5 01       		.uleb128 0x1
  5193 19b6 50       		.byte	0x50
  5194 19b7 02       		.uleb128 0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 126
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 126
 
 
  5195 19b8 08       		.byte	0x8
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5249 1a12 50       		.byte	0x50
  5250 1a13 01       		.uleb128 0x1
  5251 1a14 35       		.byte	0x35
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 127
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 127
 
 
  5252 1a15 23       		.uleb128 0x23
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5306 1a6f 50       		.byte	0x50
  5307 1a70 01       		.uleb128 0x1
  5308 1a71 35       		.byte	0x35
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 128
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 128
 
 
  5309 1a72 23       		.uleb128 0x23
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5363 1acf 26       		.uleb128 0x26
  5364 1ad0 AB080000 		.4byte	.LASF265
  5365 1ad4 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 129
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 129
 
 
  5366 1ad5 54       		.byte	0x54
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5420 1b4b 07       		.byte	0x7
  5421 1b4c A7       		.byte	0xa7
  5422 1b4d 511B0000 		.4byte	0x1b51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 130
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 130
 
 
  5423 1b51 12       		.uleb128 0x12
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5477 1bc9 07       		.uleb128 0x7
  5478 1bca CF000000 		.4byte	0xcf
  5479 1bce 32       		.uleb128 0x32
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 131
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 131
 
 
  5480 1bcf 61070000 		.4byte	.LASF279
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5534 1c4a 33       		.uleb128 0x33
  5535 1c4b CB000000 		.4byte	.LASF286
  5536 1c4f CB000000 		.4byte	.LASF286
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 132
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 132
 
 
  5537 1c53 14       		.byte	0x14
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5591 0018 3E       		.uleb128 0x3e
  5592 0019 0B       		.uleb128 0xb
  5593 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 133
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 133
 
 
  5594 001b 08       		.uleb128 0x8
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5648 0051 13       		.uleb128 0x13
  5649 0052 00       		.byte	0
  5650 0053 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 134
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 134
 
 
  5651 0054 09       		.uleb128 0x9
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5705 008a 01       		.byte	0x1
  5706 008b 0B       		.uleb128 0xb
  5707 008c 05       		.uleb128 0x5
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 135
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 135
 
 
  5708 008d 3A       		.uleb128 0x3a
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5762 00c3 03       		.uleb128 0x3
  5763 00c4 0E       		.uleb128 0xe
  5764 00c5 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 136
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 136
 
 
  5765 00c6 0B       		.uleb128 0xb
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5819 00fc 17       		.uleb128 0x17
  5820 00fd 0D       		.uleb128 0xd
  5821 00fe 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 137
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 137
 
 
  5822 00ff 03       		.uleb128 0x3
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5876 0135 00       		.byte	0
  5877 0136 1B       		.uleb128 0x1b
  5878 0137 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 138
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 138
 
 
  5879 0138 00       		.byte	0
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5933 016e 11       		.uleb128 0x11
  5934 016f 01       		.uleb128 0x1
  5935 0170 12       		.uleb128 0x12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 139
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 139
 
 
  5936 0171 06       		.uleb128 0x6
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  5990 01aa 01       		.uleb128 0x1
  5991 01ab 31       		.uleb128 0x31
  5992 01ac 13       		.uleb128 0x13
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 140
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 140
 
 
  5993 01ad 01       		.uleb128 0x1
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6047 01e9 3A       		.uleb128 0x3a
  6048 01ea 0B       		.uleb128 0xb
  6049 01eb 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 141
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 141
 
 
  6050 01ec 0B       		.uleb128 0xb
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6104 0225 02       		.uleb128 0x2
  6105 0226 17       		.uleb128 0x17
  6106 0227 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 142
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 142
 
 
  6107 0228 00       		.byte	0
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6161 025f 00       		.byte	0
  6162 0260 00       		.byte	0
  6163 0261 2D       		.uleb128 0x2d
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 143
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 143
 
 
  6164 0262 05       		.uleb128 0x5
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6218 0298 05       		.uleb128 0x5
  6219 0299 49       		.uleb128 0x49
  6220 029a 13       		.uleb128 0x13
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 144
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 144
 
 
  6221 029b 3F       		.uleb128 0x3f
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6275 02d1 0B       		.uleb128 0xb
  6276 02d2 00       		.byte	0
  6277 02d3 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 145
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 145
 
 
  6278 02d4 34       		.uleb128 0x34
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6332 0034 0100     		.2byte	0x1
  6333 0036 56       		.byte	0x56
  6334 0037 34000000 		.4byte	.LVL11
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 146
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 146
 
 
  6335 003b 38000000 		.4byte	.LFE655
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6389 00be 00000000 		.4byte	0
  6390              	.LLST7:
  6391 00c2 1C000000 		.4byte	.LVL5
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 147
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 147
 
 
  6392 00c6 1E000000 		.4byte	.LVL6
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6446 014e 00000000 		.4byte	0
  6447 0152 00000000 		.4byte	0
  6448              	.LLST14:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 148
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 148
 
 
  6449 0156 2E000000 		.4byte	.LVL9
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6503 01db 00000000 		.4byte	.LVL15
  6504 01df 11000000 		.4byte	.LVL19-1
  6505 01e3 0100     		.2byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 149
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 149
 
 
  6506 01e5 51       		.byte	0x51
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6560 026c 0600     		.2byte	0x6
  6561 026e 0C       		.byte	0xc
  6562 026f 00063240 		.4byte	0x40320600
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 150
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 150
 
 
  6563 0273 9F       		.byte	0x9f
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6617 02fc 02000000 		.4byte	.LVL26
  6618 0300 08000000 		.4byte	.LVL27
  6619 0304 0200     		.2byte	0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 151
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 151
 
 
  6620 0306 30       		.byte	0x30
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6674              	.LLST38:
  6675 0390 0E000000 		.4byte	.LVL28
  6676 0394 12000000 		.4byte	.LVL29
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 152
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 152
 
 
  6677 0398 0200     		.2byte	0x2
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6731 0420 00000000 		.4byte	0
  6732              	.LLST45:
  6733 0424 1C000000 		.4byte	.LVL31
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 153
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 153
 
 
  6734 0428 1E000000 		.4byte	.LVL32
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6788 04b4 9F       		.byte	0x9f
  6789 04b5 0A010000 		.4byte	.LVL66
  6790 04b9 18010000 		.4byte	.LFE659
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 154
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 154
 
 
  6791 04bd 0100     		.2byte	0x1
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6845 0545 00000000 		.4byte	0
  6846              	.LLST53:
  6847 0549 24000000 		.4byte	.LVL77
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 155
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 155
 
 
  6848 054d 2A000000 		.4byte	.LVL78
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6902 05d9 00000000 		.4byte	0
  6903 05dd 00000000 		.4byte	0
  6904              	.LLST55:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 156
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 156
 
 
  6905 05e1 08000000 		.4byte	.LVL70
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  6959 065a 0200     		.2byte	0x2
  6960 065c 70       		.byte	0x70
  6961 065d 00       		.sleb128 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 157
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 157
 
 
  6962 065e 1E000000 		.4byte	.LVL75
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7016 06f4 0200     		.2byte	0x2
  7017 06f6 30       		.byte	0x30
  7018 06f7 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 158
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 158
 
 
  7019 06f8 5C000000 		.4byte	.LVL119
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7073 0785 00000000 		.4byte	0
  7074 0789 00000000 		.4byte	0
  7075              	.LLST63:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 159
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 159
 
 
  7076 078d 60000000 		.4byte	.LVL121
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7130 0805 9F       		.byte	0x9f
  7131 0806 CE010000 		.4byte	.LVL140
  7132 080a D2010000 		.4byte	.LVL141
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 160
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 160
 
 
  7133 080e 0600     		.2byte	0x6
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7187 0885 00000000 		.4byte	0
  7188              	.LLST67:
  7189 0889 02000000 		.4byte	.LVL162
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 161
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 161
 
 
  7190 088d 06000000 		.4byte	.LVL163
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7244 0917 00000000 		.4byte	0
  7245              	.LLST73:
  7246 091b 12000000 		.4byte	.LVL172
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 162
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 162
 
 
  7247 091f 18000000 		.4byte	.LVL173
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7301 09aa 9F       		.byte	0x9f
  7302 09ab 00000000 		.4byte	0
  7303 09af 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 163
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 163
 
 
  7304              	.LLST80:
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7358 0a3d 30       		.byte	0x30
  7359 0a3e 9F       		.byte	0x9f
  7360 0a3f 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 164
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 164
 
 
  7361 0a43 00000000 		.4byte	0
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7415 0acf 0200     		.2byte	0x2
  7416 0ad1 34       		.byte	0x34
  7417 0ad2 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 165
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 165
 
 
  7418 0ad3 00000000 		.4byte	0
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7472 0b5f 86000000 		.4byte	.LVL202
  7473 0b63 0600     		.2byte	0x6
  7474 0b65 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 166
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 166
 
 
  7475 0b66 00063240 		.4byte	0x40320600
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7529              	.LLST107:
  7530 0bf3 94000000 		.4byte	.LVL205
  7531 0bf7 96000000 		.4byte	.LVL206
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 167
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 167
 
 
  7532 0bfb 0200     		.2byte	0x2
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7586 0070 00000000 		.4byte	0
  7587 0074 00000000 		.4byte	0
  7588              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 168
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 168
 
 
  7589              	.Ldebug_ranges0:
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7628      5F434155 
  7628      53453300 
  7629              	.LASF170:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 169
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 169
 
 
  7630 0041 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7652 00f0 70657269 		.ascii	"periBase\000"
  7652      42617365 
  7652      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 170
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 170
 
 
  7653              	.LASF129:
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7676 01a1 424D495F 		.ascii	"BMI_I2C_context\000"
  7676      4932435F 
  7676      636F6E74 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 171
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 171
 
 
  7676      65787400 
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7700      53697A65 
  7700      00
  7701              	.LASF110:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 172
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 172
 
 
  7702 0250 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7724 02f9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  7724      43313120 
  7724      352E342E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 173
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 173
 
 
  7724      31203230 
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7743      54696D65 
  7743      7253746F 
  7743      7000
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 174
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 174
 
 
  7744              	.LASF162:
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7768              	.LASF289:
  7769 04cc 43795F53 		.ascii	"Cy_SysLib_Delay\000"
  7769      79734C69 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 175
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 175
 
 
  7769      625F4465 
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7791      494E4B5F 
  7791      53657454 
  7791      656D7046 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 176
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 176
 
 
  7791      6163746F 
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7813 0631 4346475F 		.ascii	"CFG_OUT\000"
  7813      4F555400 
  7814              	.LASF185:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 177
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 177
 
 
  7815 0639 72785374 		.ascii	"rxStatus\000"
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7839 06cf 50765F45 		.ascii	"Pv_EINK_PartialStageHandler\000"
  7839      494E4B5F 
  7839      50617274 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 178
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 178
 
 
  7839      69616C53 
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7863      65724E75 
  7863      6D427974 
  7863      657300
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 179
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 179
 
 
  7864              	.LASF262:
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7885      737900
  7886              	.LASF237:
  7887 081d 64617461 		.ascii	"data\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 180
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 180
 
 
  7887      00
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7911      00
  7912              	.LASF114:
  7913 08b8 70657269 		.ascii	"periDiv16_5CtlOffset\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 181
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 181
 
 
  7913      44697631 
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7934      576F726B 
  7934      73706163 
  7934      6550726F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 182
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 182
 
 
  7934      6A657432 
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7958      6E674275 
  7958      66486561 
  7958      6400
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 183
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 183
 
 
  7959              	.LASF72:
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  7982 0b10 50765F45 		.ascii	"Pv_EINK_InitDriver\000"
  7982      494E4B5F 
  7982      496E6974 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 184
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 184
 
 
  7982      44726976 
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8006      42617365 
  8006      00
  8007              	.LASF47:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 185
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 185
 
 
  8008 0bb2 5644445F 		.ascii	"VDD_INTR_SET\000"
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8030 0c57 7363616E 		.ascii	"scanlineNumber\000"
  8030      6C696E65 
  8030      4E756D62 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 186
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 186
 
 
  8030      657200
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8051              	.LASF285:
  8052 0d02 43795F45 		.ascii	"Cy_EINK_TimerInit\000"
  8052      494E4B5F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 187
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 187
 
 
  8052      54696D65 
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8074      494E5F47 
  8074      50494F35 
  8074      5600
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 188
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 188
 
 
  8075              	.LASF284:
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8096 0e51 494E5452 		.ascii	"INTR_MASKED\000"
  8096      5F4D4153 
  8096      4B454400 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 189
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 189
 
 
  8097              	.LASF127:
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8118      5F7400
  8119              	.LASF50:
  8120 0f0b 4750494F 		.ascii	"GPIO_Type\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 190
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 190
 
 
  8120      5F547970 
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8143              	.LASF245:
  8144 0fb4 6C6F6F70 		.ascii	"loopCounter\000"
  8144      436F756E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 191
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 191
 
 
  8144      74657200 
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8167              	.LASF101:
  8168 105f 64774368 		.ascii	"dwChCtlPreemptablePos\000"
  8168      43746C50 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 192
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 192
 
 
  8168      7265656D 
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8190      6F6E7465 
  8191              	.LASF97:
  8192 1111 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 193
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 193
 
 
  8192      6843746C 
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 1
  8214      6653697A 
  8214      6500
  8215              	.LASF207:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccB1WbfA.s 			page 194
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccv1dFM4.s 			page 194
 
 
  8216 11c0 73746172 		.ascii	"startInput\000"

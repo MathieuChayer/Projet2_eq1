@@ -88,9 +88,9 @@ void MotionSensor_ConfigAnyMotionIntr(void)
    //***SENSIBILITÉ de l'intteruption***//
     
    // na - any-motion duration. This is the consecutive datapoints -> see datasheet pg32 section 2.6.1 <int_anym_dur> and pg78
-   int_config.int_type_cfg.acc_any_motion_int.anymotion_dur = 2;            
+   int_config.int_type_cfg.acc_any_motion_int.anymotion_dur = 15;            
    // na - An interrupt will be generated if the absolute value of two consecutive accelation signal exceeds the threshold value -> see datasheet pg32 section 2.6.1 <int_anym_th> and pg78 INT_MOTION[1] 
-   int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 1;          
+   int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 8;          
    // na - (2-g range) -> (anymotion_thr) * 3.91 mg, (4-g range) -> (anymotion_thr) * 7.81 mg, (8-g range) ->(anymotion_thr) * 15.63 mg, (16-g range) -> (anymotion_thr) * 31.25 mg
 
     

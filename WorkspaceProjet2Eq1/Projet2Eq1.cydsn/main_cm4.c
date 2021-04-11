@@ -194,9 +194,7 @@ int main(void)
     __enable_irq(); /* Enable global interrupts. */
     
     /* Clear any pending interrupts */
-    NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
-    Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
-    NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
+
         
     
     UART_Start(); 
@@ -208,6 +206,10 @@ int main(void)
         printf("%d\r\n",i);
         Cy_SysLib_Delay(1000);   
     }
+    
+    NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
+    Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
+    NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
     
     
     /* Initialize emWin Graphics */

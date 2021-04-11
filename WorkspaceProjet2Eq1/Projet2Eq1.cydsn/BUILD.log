@@ -1,4 +1,4 @@
---------------- Build Started: 04/07/2021 13:26:13 Project: Projet2Eq1, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 04/10/2021 20:33:21 Project: Projet2Eq1, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 The compile step is up to date, no work needs to be done.
 The link step is up to date, no work needs to be done.
@@ -16,6 +16,10 @@ In file included from c:\program files (x86)\cypress\psoc creator\4.4\psoc creat
 c:\program files (x86)\cypress\psoc creator\4.4\psoc creator\import\gnu\arm\5.4.1\arm-none-eabi\include\machine\endian.h:17:0: note: this is the location of the previous definition
  #define LITTLE_ENDIAN _LITTLE_ENDIAN
  ^
+communication.c: In function 'MotionSensor_ConfigAnyMotionIntr':
+communication.c:91:63: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+    int_config.int_type_cfg.acc_any_motion_int.anymotion_dur = 15;            
+                                                               ^
 communication.c: In function 'MAX_reset':
 communication.c:395:37: warning: passing argument 2 of 'MAX_WriteBytes' makes pointer from integer without a cast [-Wint-conversion]
      MAX_WriteBytes(REG_MODE_CONFIG, 0x40);
@@ -45,5 +49,5 @@ Checksum calculated and stored in ELF section .cymeta
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 "C:\Program Files (x86)\Cypress\PDL\3.1.3\tools\win\elf\cymcuelftool.exe" -A C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\CortexM4\ARM_GCC_541\Debug\Projet2Eq1.elf
-code:84872	sram:86204
---------------- Build Succeeded: 04/07/2021 13:26:19 ---------------
+code:84904	sram:94204
+--------------- Build Succeeded: 04/10/2021 20:33:25 ---------------
