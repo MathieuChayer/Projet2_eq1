@@ -21,14 +21,26 @@
 
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
+    #define SW2_isr__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t SW2_isr_cfg;
+
+    #define MAX_I2C_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t MAX_I2C_SCB_IRQ_cfg;
+
+    #define BMI_I2C_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t BMI_I2C_SCB_IRQ_cfg;
+
+    #define UART_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t UART_SCB_IRQ_cfg;
+
     #define CY_EINK_SPIM_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg;
 
-    #define adc_int__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t adc_int_cfg;
+    #define CapSense_ISR__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t CapSense_ISR_cfg;
 
-    #define ADC_IRQ__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t ADC_IRQ_cfg;
+    #define SysInt_AnyMotionINT__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t SysInt_AnyMotionINT_cfg;
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */
 
