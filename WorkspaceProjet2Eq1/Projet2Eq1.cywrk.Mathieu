@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Header Files\communication.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\TopDesign">
 <ExpandedNodeIds>
 <v>Projet2Eq1</v>
 <v>Projet2Eq1\Projet2Eq1</v>
@@ -96,6 +96,12 @@
 <v>Projet2Eq1\Projet2Eq1\Generated_Source\PSoC6</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Projet2Eq1</v>
+<v>Projet2Eq1\Projet2Eq1</v>
+<v>Projet2Eq1\Projet2Eq1\TopDesign</v>
+<v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr</v>
+<v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr\Pins</v>
+<v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr\Analog</v>
 <v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr\DMA</v>
 <v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr\Clocks</v>
 <v>Projet2Eq1\Projet2Eq1\Projet2Eq1.cydwr\Interrupts</v>
@@ -122,12 +128,6 @@
 <v>Projet2Eq1\Projet2Eq1\CM0p (Core 0)\Source Files\main_cm0p.c</v>
 <v>Projet2Eq1\Projet2Eq1\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
 <v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM GCC Generic</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM IAR Generic</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM MDK Generic</v>
-<v>Projet2Eq1\Projet2Eq1\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -387,11 +387,10 @@
 <OpenDocs>
 <name v=".\Projet2Eq1.cydsn\main_cm4.c" />
 <name v=".\Projet2Eq1.cydsn\interface.c" />
-<name v=".\Projet2Eq1.cydsn\interface.h" />
+<name v=".\Projet2Eq1.cydsn\Projet2Eq1.rpt" />
+<name v=".\Projet2Eq1.cydsn\Projet2Eq1.cydwr" />
+<name v=".\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Projet2Eq1.cydsn\communication.c" />
-<name v=".\BMI160\bmi160.c" />
-<name v=".\max30102.h" />
-<name v=".\Projet2Eq1.cydsn\communication.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -399,7 +398,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="743, 463" SelectedTabbedMdiWindow="45b24529-ccd6-478f-ad11-9e8324f24e6b"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="45b24529-ccd6-478f-ad11-9e8324f24e6b" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\interface.c" Guid="2ff5160e-7dcf-404e-a22b-95255bb730c7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\interface.h" Guid="ae38247b-824a-4493-9f67-3c25a4127787" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.c" Guid="e4e57f05-885f-4526-a5db-13341b1fd3c3" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\BMI160\bmi160.c" Guid="334ed78a-09e1-4ba6-a84f-a445d1316241" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\max30102.h" Guid="0715bb3f-e6db-465c-8b0d-a766a60c0f5e" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.h" Guid="53826116-e16d-48a4-a88f-34e8ca84b2dc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="743, 463" SelectedTabbedMdiWindow="d9592c34-20e1-4e95-81be-9eb8a09b6a27"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="6407f157-84c2-4127-865b-8f2003b0f6fd" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\interface.c" Guid="0a7a3550-df7b-46a0-a135-6b1af74bc51d" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.rpt" Guid="6da21c9d-dfb2-40ec-9711-450feebcee2d" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\Projet2Eq1.cydwr" Guid="f5580245-45f4-4946-bd22-ca25a9ac7ca9" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="1851823d-2a03-429f-a33c-22237d8c89b4" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.c" Guid="d9592c34-20e1-4e95-81be-9eb8a09b6a27" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

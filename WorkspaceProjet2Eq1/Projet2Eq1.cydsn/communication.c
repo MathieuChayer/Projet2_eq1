@@ -538,7 +538,7 @@ void set_LED_current(uint8 current_LED1,uint8 current_LED2)
 
 void Start_Oxymeter(void)
 {
-    Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
+    //Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
     
     //Initialisation I2C MAX30102
     MAX_I2C_Start();  

@@ -57,7 +57,7 @@ void Task_principal(void)
            MAX_ReadFIFO(&IR_data, &RED_data); //Lecture du FIFO --> 1000 samples@200sps = 5 secs
             
            //On allume la LED verte et on ferme les deux autres
-           Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
+           //Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
            Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,1);
            Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,1);
        
@@ -84,12 +84,12 @@ void Task_principal(void)
                 if(HR_max_alarm<HR || HR_min_alarm>HR || SPO2_min_alarm > SPO2)
                 {
                     Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,0);
-                    Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,1);
+                    //Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,1);
                 }
                 else
                 {
                     Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,1);  
-                    Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
+                    //Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
                 }
             
             }
@@ -101,7 +101,7 @@ void Task_principal(void)
             //On remet la LED verte dans le menu et on éteint les deux autres
             Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,1);
             Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,1);
-            Cy_GPIO_Write(GreenLED_0_PORT,RedLED_0_NUM,0); 
+            //Cy_GPIO_Write(GreenLED_0_PORT,RedLED_0_NUM,0); 
             
             if(FLAG_menu==1)
             {   draw_MenuPrincipal();

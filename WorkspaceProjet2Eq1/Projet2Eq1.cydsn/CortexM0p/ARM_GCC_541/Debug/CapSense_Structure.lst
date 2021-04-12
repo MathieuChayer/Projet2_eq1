@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
   29:Generated_Source\PSoC6/CapSense_Structure.c **** * Cypress reserves the right to make changes without further notice to the
   30:Generated_Source\PSoC6/CapSense_Structure.c **** * materials described herein. Cypress does not assume any liability arising out
   31:Generated_Source\PSoC6/CapSense_Structure.c **** * of the application or use of any product or circuit described herein. Cypress
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 2
 
 
   32:Generated_Source\PSoC6/CapSense_Structure.c **** * does not authorize its products for use as critical components in life-support
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
   86:Generated_Source\PSoC6/CapSense_Structure.c **** static uint8 CapSense_debounceButton0[CapSense_BUTTON0_NUM_SENSORS];
   87:Generated_Source\PSoC6/CapSense_Structure.c **** 
   88:Generated_Source\PSoC6/CapSense_Structure.c **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 3
 
 
   89:Generated_Source\PSoC6/CapSense_Structure.c **** /***************************************************************************//**
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  143:Generated_Source\PSoC6/CapSense_Structure.c ****             (SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT *)0u,
  144:Generated_Source\PSoC6/CapSense_Structure.c ****             0u,
  145:Generated_Source\PSoC6/CapSense_Structure.c ****         },
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 4
 
 
  146:Generated_Source\PSoC6/CapSense_Structure.c ****         { /* Button0 */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  200:Generated_Source\PSoC6/CapSense_Structure.c ****         CapSense_Rx_1_PORT,
  201:Generated_Source\PSoC6/CapSense_Structure.c ****         (uint8)CapSense_Rx_1_NUM,
  202:Generated_Source\PSoC6/CapSense_Structure.c ****     },
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 5
 
 
  203:Generated_Source\PSoC6/CapSense_Structure.c ****     { /* 8: Button0_Tx */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  257:Generated_Source\PSoC6/CapSense_Structure.c ****         CapSense_BUTTON0_HYSTERESIS,
  258:Generated_Source\PSoC6/CapSense_Structure.c ****         CapSense_BUTTON0_ON_DEBOUNCE,
  259:Generated_Source\PSoC6/CapSense_Structure.c ****         CapSense_BUTTON0_LOW_BSLN_RST,
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 6
 
 
  260:Generated_Source\PSoC6/CapSense_Structure.c ****         {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  314:Generated_Source\PSoC6/CapSense_Structure.c **** 
  315:Generated_Source\PSoC6/CapSense_Structure.c **** 
  316:Generated_Source\PSoC6/CapSense_Structure.c **** /* Defines PARAM_ID structure */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 7
 
 
  317:Generated_Source\PSoC6/CapSense_Structure.c **** typedef struct
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  371:Generated_Source\PSoC6/CapSense_Structure.c ****          (CapSense_ENABLE == CapSense_CSX_SKIP_OVSMPL_SPECIFIC_NODES))
  372:Generated_Source\PSoC6/CapSense_Structure.c ****         uint16 subConvNumber;
  373:Generated_Source\PSoC6/CapSense_Structure.c ****     #endif
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 8
 
 
  374:Generated_Source\PSoC6/CapSense_Structure.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  428:Generated_Source\PSoC6/CapSense_Structure.c ****         ptrFlashWdgt = CapSense_dsFlash.wdgtArray;
  429:Generated_Source\PSoC6/CapSense_Structure.c **** 
  430:Generated_Source\PSoC6/CapSense_Structure.c ****         for (wdgtId = CapSense_TOTAL_WIDGETS; wdgtId-- > 0u; )
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 9
 
 
  431:Generated_Source\PSoC6/CapSense_Structure.c ****         {
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  485:Generated_Source\PSoC6/CapSense_Structure.c ****     /*******************************************************************************
  486:Generated_Source\PSoC6/CapSense_Structure.c ****     * Function Name: CapSense_AdcDsInitialize
  487:Generated_Source\PSoC6/CapSense_Structure.c ****     ****************************************************************************//**
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 10
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 10
 
 
  488:Generated_Source\PSoC6/CapSense_Structure.c ****     *
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  530:Generated_Source\PSoC6/CapSense_Structure.c **** 
  531:Generated_Source\PSoC6/CapSense_Structure.c ****         uint32 i;
  532:Generated_Source\PSoC6/CapSense_Structure.c ****         uint32 actualCrc = 0u;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 11
 
 
  533:Generated_Source\PSoC6/CapSense_Structure.c ****         uint32 crcIndex;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  557:Generated_Source\PSoC6/CapSense_Structure.c **** 
  558:Generated_Source\PSoC6/CapSense_Structure.c ****         /* Add bits 28..32 */
  559:Generated_Source\PSoC6/CapSense_Structure.c ****         crcIndex = actualCrc ^ ((paramId >> 4u) & 0x0Fu);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 12
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 12
 
 
  560:Generated_Source\PSoC6/CapSense_Structure.c ****         actualCrc = crcTable[crcIndex];
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
   72              		.loc 1 610 0
   73 0032 A32D     		cmp	r5, #163
   74 0034 09D8     		bhi	.L9
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 13
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 13
 
 
  522:Generated_Source\PSoC6/CapSense_Structure.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  105              		.loc 1 631 0
  106 0050 0028     		cmp	r0, #0
  107 0052 11D1     		bne	.L5
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 14
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 14
 
 
  632:Generated_Source\PSoC6/CapSense_Structure.c ****     {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  138              	.L14:
  646:Generated_Source\PSoC6/CapSense_Structure.c ****             }
  139              		.loc 1 646 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 15
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 15
 
 
  140 0076 0120     		movs	r0, #1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  183 0018 144B     		ldr	r3, .L21+8
  184 001a A380     		strh	r3, [r4, #4]
  388:Generated_Source\PSoC6/CapSense_Structure.c **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 16
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 16
 
 
  185              		.loc 1 388 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  228 004c 0A32     		adds	r2, r2, #10
  229              	.LVL20:
  434:Generated_Source\PSoC6/CapSense_Structure.c ****             {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 17
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 17
 
 
  230              		.loc 1 434 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  665:Generated_Source\PSoC6/CapSense_Structure.c **** *
  666:Generated_Source\PSoC6/CapSense_Structure.c **** * \brief
  667:Generated_Source\PSoC6/CapSense_Structure.c **** *  Gets the specified parameter value from the \ref group_structures.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 18
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 18
 
 
  668:Generated_Source\PSoC6/CapSense_Structure.c **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  285 0002 83B0     		sub	sp, sp, #12
  286              		.cfi_def_cfa_offset 24
  287 0004 0D00     		movs	r5, r1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 19
 
 
  712:Generated_Source\PSoC6/CapSense_Structure.c ****     PARAM_ID_STRUCT pData;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  314 0024 1B88     		ldrh	r3, [r3]
  315              	.LVL33:
  316 0026 D318     		adds	r3, r2, r3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 20
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 20
 
 
  740:Generated_Source\PSoC6/CapSense_Structure.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  760:Generated_Source\PSoC6/CapSense_Structure.c **** 
  761:Generated_Source\PSoC6/CapSense_Structure.c ****     return result;
  762:Generated_Source\PSoC6/CapSense_Structure.c **** }
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 21
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 21
 
 
  351              		.loc 1 762 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  792:Generated_Source\PSoC6/CapSense_Structure.c **** *    8. M,L - the parameter offset MSB and LSB accordingly in:
  793:Generated_Source\PSoC6/CapSense_Structure.c **** *      - Flash Data Structure if W bit is 0.
  794:Generated_Source\PSoC6/CapSense_Structure.c **** *      - RAM Data Structure if W bit is 1.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 22
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 22
 
 
  795:Generated_Source\PSoC6/CapSense_Structure.c **** *
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  393              	.LVL41:
  394 000c 041E     		subs	r4, r0, #0
  395              	.LVL42:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 23
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 23
 
 
  832:Generated_Source\PSoC6/CapSense_Structure.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  855:Generated_Source\PSoC6/CapSense_Structure.c ****         }
  856:Generated_Source\PSoC6/CapSense_Structure.c ****         else if (DS_PARAM_TYPE_UINT16 == pData.type)
  427              		.loc 1 856 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 24
 
 
  428 0034 022A     		cmp	r2, #2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  889:Generated_Source\PSoC6/CapSense_Structure.c ****             }
  890:Generated_Source\PSoC6/CapSense_Structure.c ****         #endif /* (CapSense_ENABLE == (CapSense_TST_WDGT_CRC_EN || CapSense_TST_GLOBAL_CRC_EN)) */
  891:Generated_Source\PSoC6/CapSense_Structure.c ****     }
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 25
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 25
 
 
  892:Generated_Source\PSoC6/CapSense_Structure.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  917:Generated_Source\PSoC6/CapSense_Structure.c ****     uint32 result = 0Lu;
  918:Generated_Source\PSoC6/CapSense_Structure.c ****     uint32 wdWord;
  919:Generated_Source\PSoC6/CapSense_Structure.c **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 26
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 26
 
 
  920:Generated_Source\PSoC6/CapSense_Structure.c ****     for (wdWord = CapSense_WDGT_STATUS_WORDS; wdWord-- > 0u;)
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  928:Generated_Source\PSoC6/CapSense_Structure.c **** 
  929:Generated_Source\PSoC6/CapSense_Structure.c **** /*******************************************************************************
  930:Generated_Source\PSoC6/CapSense_Structure.c **** * Function Name: CapSense_IsWidgetActive
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 27
 
 
  931:Generated_Source\PSoC6/CapSense_Structure.c **** ****************************************************************************//**
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  545 001a 00E0     		b	.L47
  546              	.LVL58:
  547              	.L48:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 28
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 28
 
 
  957:Generated_Source\PSoC6/CapSense_Structure.c ****     uint32 result = 0Lu;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  993:Generated_Source\PSoC6/CapSense_Structure.c **** *  CapSense Configuration header file defined as
  994:Generated_Source\PSoC6/CapSense_Structure.c **** *  CapSense_<WidgetName>_SNS<SensorNumber>_ID.
  995:Generated_Source\PSoC6/CapSense_Structure.c **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 29
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 29
 
 
  996:Generated_Source\PSoC6/CapSense_Structure.c **** * \return
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  599              	.L53:
 1007:Generated_Source\PSoC6/CapSense_Structure.c **** 
  600              		.loc 1 1007 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 30
 
 
  601 0020 0020     		movs	r0, #0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
 1047:Generated_Source\PSoC6/CapSense_Structure.c **** *  defined as CapSense_<WidgetName>_WDGT_ID
 1048:Generated_Source\PSoC6/CapSense_Structure.c **** *
 1049:Generated_Source\PSoC6/CapSense_Structure.c **** * \return
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 31
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 31
 
 
 1050:Generated_Source\PSoC6/CapSense_Structure.c **** *  Returns the touch detection status of the sensors in the specified matrix
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
 1104:Generated_Source\PSoC6/CapSense_Structure.c ****             case CapSense_SENSE_METHOD_CSD_E:
 1105:Generated_Source\PSoC6/CapSense_Structure.c ****                 wdCsdMatrix = ptrFlashWdgt->ptr2WdgtRam;
 1106:Generated_Source\PSoC6/CapSense_Structure.c **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 32
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 32
 
 
 1107:Generated_Source\PSoC6/CapSense_Structure.c ****                 result = CapSense_MATRIX_BUTTONS_TOUCHED |
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
 1161:Generated_Source\PSoC6/CapSense_Structure.c **** *    - Bits [31..2] are reserved.
 1162:Generated_Source\PSoC6/CapSense_Structure.c **** *    - Bit [1] indicates that a touch is detected.
 1163:Generated_Source\PSoC6/CapSense_Structure.c **** *    - Bit [0] indicates that a proximity is detected.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 33
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 33
 
 
 1164:Generated_Source\PSoC6/CapSense_Structure.c **** *
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  631              		@ frame_needed = 0, uses_anonymous_args = 0
  632              		@ link register save eliminated.
  633              	.LVL67:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 34
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 34
 
 
 1215:Generated_Source\PSoC6/CapSense_Structure.c ****     uint32 result = CapSense_SLIDER_NO_TOUCH;
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  671              		.loc 1 1229 0
  672              		@ sp needed
  673 002a 7047     		bx	lr
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 35
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 35
 
 
  674              	.L62:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  728 004e 01       		.byte	1
  729 004f 02       		.byte	2
  730 0050 01       		.byte	1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 36
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 36
 
 
  731 0051 01       		.byte	1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  785 00b6 28       		.byte	40
  786 00b7 28       		.byte	40
  787 00b8 0A       		.byte	10
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 37
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 37
 
 
  788 00b9 03       		.byte	3
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  835      00000000 
  835      00000000 
  836              		.type	CapSense_debounceButton0, %object
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 38
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 38
 
 
  837              		.size	CapSense_debounceButton0, 1
@@ -2251,17 +2251,17 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  864 0006 00000000 		.4byte	.Ldebug_abbrev0
  865 000a 04       		.byte	0x4
  866 000b 01       		.uleb128 0x1
- 867 000c 84070000 		.4byte	.LASF178
+ 867 000c 2F070000 		.4byte	.LASF178
  868 0010 0C       		.byte	0xc
- 869 0011 21020000 		.4byte	.LASF179
- 870 0015 E6000000 		.4byte	.LASF180
+ 869 0011 CC010000 		.4byte	.LASF179
+ 870 0015 33090000 		.4byte	.LASF180
  871 0019 00000000 		.4byte	.Ldebug_ranges0+0
  872 001d 00000000 		.4byte	0
  873 0021 00000000 		.4byte	.Ldebug_line0
  874 0025 02       		.uleb128 0x2
  875 0026 01       		.byte	0x1
  876 0027 06       		.byte	0x6
- 877 0028 E5010000 		.4byte	.LASF0
+ 877 0028 90010000 		.4byte	.LASF0
  878 002c 03       		.uleb128 0x3
  879 002d 63000000 		.4byte	.LASF3
  880 0031 02       		.byte	0x2
@@ -2270,15 +2270,15 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  883 0037 02       		.uleb128 0x2
  884 0038 01       		.byte	0x1
  885 0039 08       		.byte	0x8
- 886 003a 0C090000 		.4byte	.LASF1
+ 886 003a B7080000 		.4byte	.LASF1
  887 003e 02       		.uleb128 0x2
  888 003f 02       		.byte	0x2
  889 0040 05       		.byte	0x5
- 890 0041 C6040000 		.4byte	.LASF2
+ 890 0041 71040000 		.4byte	.LASF2
  891 0045 03       		.uleb128 0x3
- 892 0046 7D080000 		.4byte	.LASF4
+ 892 0046 28080000 		.4byte	.LASF4
  893 004a 02       		.byte	0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 39
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 39
 
 
  894 004b 2B       		.byte	0x2b
@@ -2286,24 +2286,24 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  896 0050 02       		.uleb128 0x2
  897 0051 02       		.byte	0x2
  898 0052 07       		.byte	0x7
- 899 0053 CF020000 		.4byte	.LASF5
+ 899 0053 7A020000 		.4byte	.LASF5
  900 0057 02       		.uleb128 0x2
  901 0058 04       		.byte	0x4
  902 0059 05       		.byte	0x5
- 903 005a 18020000 		.4byte	.LASF6
+ 903 005a C3010000 		.4byte	.LASF6
  904 005e 03       		.uleb128 0x3
- 905 005f F4020000 		.4byte	.LASF7
+ 905 005f 9F020000 		.4byte	.LASF7
  906 0063 02       		.byte	0x2
  907 0064 41       		.byte	0x41
  908 0065 69000000 		.4byte	0x69
  909 0069 02       		.uleb128 0x2
  910 006a 04       		.byte	0x4
  911 006b 07       		.byte	0x7
- 912 006c C7030000 		.4byte	.LASF8
+ 912 006c 72030000 		.4byte	.LASF8
  913 0070 02       		.uleb128 0x2
  914 0071 08       		.byte	0x8
  915 0072 05       		.byte	0x5
- 916 0073 D7010000 		.4byte	.LASF9
+ 916 0073 82010000 		.4byte	.LASF9
  917 0077 02       		.uleb128 0x2
  918 0078 08       		.byte	0x8
  919 0079 07       		.byte	0x7
@@ -2315,37 +2315,37 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  925 0085 02       		.uleb128 0x2
  926 0086 04       		.byte	0x4
  927 0087 07       		.byte	0x7
- 928 0088 6E030000 		.4byte	.LASF11
+ 928 0088 19030000 		.4byte	.LASF11
  929 008c 03       		.uleb128 0x3
- 930 008d A2080000 		.4byte	.LASF12
+ 930 008d 4D080000 		.4byte	.LASF12
  931 0091 03       		.byte	0x3
  932 0092 18       		.byte	0x18
  933 0093 2C000000 		.4byte	0x2c
  934 0097 03       		.uleb128 0x3
- 935 0098 85020000 		.4byte	.LASF13
+ 935 0098 30020000 		.4byte	.LASF13
  936 009c 03       		.byte	0x3
  937 009d 24       		.byte	0x24
  938 009e 45000000 		.4byte	0x45
  939 00a2 03       		.uleb128 0x3
- 940 00a3 72070000 		.4byte	.LASF14
+ 940 00a3 1D070000 		.4byte	.LASF14
  941 00a7 03       		.byte	0x3
  942 00a8 30       		.byte	0x30
  943 00a9 5E000000 		.4byte	0x5e
  944 00ad 02       		.uleb128 0x2
  945 00ae 08       		.byte	0x8
  946 00af 04       		.byte	0x4
- 947 00b0 1B080000 		.4byte	.LASF15
+ 947 00b0 C6070000 		.4byte	.LASF15
  948 00b4 05       		.uleb128 0x5
  949 00b5 A2000000 		.4byte	0xa2
  950 00b9 06       		.uleb128 0x6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 40
 
 
  951 00ba B4000000 		.4byte	0xb4
  952 00be 02       		.uleb128 0x2
  953 00bf 04       		.byte	0x4
  954 00c0 07       		.byte	0x7
- 955 00c1 8B050000 		.4byte	.LASF16
+ 955 00c1 36050000 		.4byte	.LASF16
  956 00c5 07       		.uleb128 0x7
  957 00c6 B9000000 		.4byte	0xb9
  958 00ca D5000000 		.4byte	0xd5
@@ -2365,19 +2365,19 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  972 00e4 B4000000 		.4byte	0xb4
  973 00e8 00       		.byte	0
  974 00e9 0B       		.uleb128 0xb
- 975 00ea 03060000 		.4byte	.LASF17
+ 975 00ea AE050000 		.4byte	.LASF17
  976 00ee 04       		.byte	0x4
  977 00ef 24       		.byte	0x24
  978 00f0 B4000000 		.4byte	0xb4
  979 00f4 04       		.byte	0x4
  980 00f5 0B       		.uleb128 0xb
- 981 00f6 88080000 		.4byte	.LASF18
+ 981 00f6 33080000 		.4byte	.LASF18
  982 00fa 04       		.byte	0x4
  983 00fb 25       		.byte	0x25
  984 00fc B4000000 		.4byte	0xb4
  985 0100 08       		.byte	0x8
  986 0101 0B       		.uleb128 0xb
- 987 0102 97030000 		.4byte	.LASF19
+ 987 0102 42030000 		.4byte	.LASF19
  988 0106 04       		.byte	0x4
  989 0107 26       		.byte	0x26
  990 0108 B4000000 		.4byte	0xb4
@@ -2389,34 +2389,34 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  996 0113 B9000000 		.4byte	0xb9
  997 0117 10       		.byte	0x10
  998 0118 0B       		.uleb128 0xb
- 999 0119 E3050000 		.4byte	.LASF20
+ 999 0119 8E050000 		.4byte	.LASF20
  1000 011d 04       		.byte	0x4
  1001 011e 28       		.byte	0x28
  1002 011f B4000000 		.4byte	0xb4
  1003 0123 14       		.byte	0x14
  1004 0124 0B       		.uleb128 0xb
- 1005 0125 E3090000 		.4byte	.LASF21
+ 1005 0125 E5090000 		.4byte	.LASF21
  1006 0129 04       		.byte	0x4
  1007 012a 29       		.byte	0x29
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 41
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 41
 
 
  1008 012b B4000000 		.4byte	0xb4
  1009 012f 18       		.byte	0x18
  1010 0130 0B       		.uleb128 0xb
- 1011 0131 2F040000 		.4byte	.LASF22
+ 1011 0131 DA030000 		.4byte	.LASF22
  1012 0135 04       		.byte	0x4
  1013 0136 2A       		.byte	0x2a
  1014 0137 B9000000 		.4byte	0xb9
  1015 013b 1C       		.byte	0x1c
  1016 013c 0B       		.uleb128 0xb
- 1017 013d 40050000 		.4byte	.LASF23
+ 1017 013d EB040000 		.4byte	.LASF23
  1018 0141 04       		.byte	0x4
  1019 0142 2B       		.byte	0x2b
  1020 0143 B4000000 		.4byte	0xb4
  1021 0147 20       		.byte	0x20
  1022 0148 0B       		.uleb128 0xb
- 1023 0149 CE010000 		.4byte	.LASF24
+ 1023 0149 79010000 		.4byte	.LASF24
  1024 014d 04       		.byte	0x4
  1025 014e 2C       		.byte	0x2c
  1026 014f B4000000 		.4byte	0xb4
@@ -2428,40 +2428,40 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1032 015b B4000000 		.4byte	0xb4
  1033 015f 28       		.byte	0x28
  1034 0160 0B       		.uleb128 0xb
- 1035 0161 E4030000 		.4byte	.LASF25
+ 1035 0161 8F030000 		.4byte	.LASF25
  1036 0165 04       		.byte	0x4
  1037 0166 2E       		.byte	0x2e
  1038 0167 B4000000 		.4byte	0xb4
  1039 016b 2C       		.byte	0x2c
  1040 016c 0B       		.uleb128 0xb
- 1041 016d DB090000 		.4byte	.LASF26
+ 1041 016d DD090000 		.4byte	.LASF26
  1042 0171 04       		.byte	0x4
  1043 0172 2F       		.byte	0x2f
  1044 0173 B4000000 		.4byte	0xb4
  1045 0177 30       		.byte	0x30
  1046 0178 0B       		.uleb128 0xb
- 1047 0179 72060000 		.4byte	.LASF27
+ 1047 0179 1D060000 		.4byte	.LASF27
  1048 017d 04       		.byte	0x4
  1049 017e 30       		.byte	0x30
  1050 017f B4000000 		.4byte	0xb4
  1051 0183 34       		.byte	0x34
  1052 0184 0B       		.uleb128 0xb
- 1053 0185 25070000 		.4byte	.LASF28
+ 1053 0185 D0060000 		.4byte	.LASF28
  1054 0189 04       		.byte	0x4
  1055 018a 31       		.byte	0x31
  1056 018b B9000000 		.4byte	0xb9
  1057 018f 38       		.byte	0x38
  1058 0190 0B       		.uleb128 0xb
- 1059 0191 73090000 		.4byte	.LASF29
+ 1059 0191 1E090000 		.4byte	.LASF29
  1060 0195 04       		.byte	0x4
  1061 0196 32       		.byte	0x32
  1062 0197 B4000000 		.4byte	0xb4
  1063 019b 3C       		.byte	0x3c
  1064 019c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 42
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 42
 
 
- 1065 019d 7A060000 		.4byte	.LASF30
+ 1065 019d 25060000 		.4byte	.LASF30
  1066 01a1 04       		.byte	0x4
  1067 01a2 33       		.byte	0x33
  1068 01a3 AE010000 		.4byte	0x1ae
@@ -2488,40 +2488,40 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1089 01ce 49020000 		.4byte	0x249
  1090 01d2 00       		.byte	0
  1091 01d3 0D       		.uleb128 0xd
- 1092 01d4 3F080000 		.4byte	.LASF32
+ 1092 01d4 EA070000 		.4byte	.LASF32
  1093 01d8 04       		.byte	0x4
  1094 01d9 3B       		.byte	0x3b
  1095 01da B9000000 		.4byte	0xb9
  1096 01de 0040     		.2byte	0x4000
  1097 01e0 0D       		.uleb128 0xd
- 1098 01e1 4B080000 		.4byte	.LASF33
+ 1098 01e1 F6070000 		.4byte	.LASF33
  1099 01e5 04       		.byte	0x4
  1100 01e6 3C       		.byte	0x3c
  1101 01e7 B9000000 		.4byte	0xb9
  1102 01eb 0440     		.2byte	0x4004
  1103 01ed 0D       		.uleb128 0xd
- 1104 01ee 57080000 		.4byte	.LASF34
+ 1104 01ee 02080000 		.4byte	.LASF34
  1105 01f2 04       		.byte	0x4
  1106 01f3 3D       		.byte	0x3d
  1107 01f4 B9000000 		.4byte	0xb9
  1108 01f8 0840     		.2byte	0x4008
  1109 01fa 0D       		.uleb128 0xd
- 1110 01fb 63080000 		.4byte	.LASF35
+ 1110 01fb 0E080000 		.4byte	.LASF35
  1111 01ff 04       		.byte	0x4
  1112 0200 3E       		.byte	0x3e
  1113 0201 B9000000 		.4byte	0xb9
  1114 0205 0C40     		.2byte	0x400c
  1115 0207 0D       		.uleb128 0xd
- 1116 0208 5A050000 		.4byte	.LASF36
+ 1116 0208 05050000 		.4byte	.LASF36
  1117 020c 04       		.byte	0x4
  1118 020d 3F       		.byte	0x3f
  1119 020e B9000000 		.4byte	0xb9
  1120 0212 1040     		.2byte	0x4010
  1121 0214 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 43
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 43
 
 
- 1122 0215 69070000 		.4byte	.LASF37
+ 1122 0215 14070000 		.4byte	.LASF37
  1123 0219 04       		.byte	0x4
  1124 021a 40       		.byte	0x40
  1125 021b B4000000 		.4byte	0xb4
@@ -2533,13 +2533,13 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1131 0228 B4000000 		.4byte	0xb4
  1132 022c 1840     		.2byte	0x4018
  1133 022e 0D       		.uleb128 0xd
- 1134 022f BF080000 		.4byte	.LASF39
+ 1134 022f 6A080000 		.4byte	.LASF39
  1135 0233 04       		.byte	0x4
  1136 0234 42       		.byte	0x42
  1137 0235 B9000000 		.4byte	0xb9
  1138 0239 1C40     		.2byte	0x401c
  1139 023b 0D       		.uleb128 0xd
- 1140 023c 02040000 		.4byte	.LASF40
+ 1140 023c AD030000 		.4byte	.LASF40
  1141 0240 04       		.byte	0x4
  1142 0241 43       		.byte	0x43
  1143 0242 B4000000 		.4byte	0xb4
@@ -2553,47 +2553,47 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1151 0257 7F       		.byte	0x7f
  1152 0258 00       		.byte	0
  1153 0259 03       		.uleb128 0x3
- 1154 025a B1050000 		.4byte	.LASF41
+ 1154 025a 5C050000 		.4byte	.LASF41
  1155 025e 04       		.byte	0x4
  1156 025f 44       		.byte	0x44
  1157 0260 BE010000 		.4byte	0x1be
  1158 0264 0E       		.uleb128 0xe
- 1159 0265 6F080000 		.4byte	.LASF42
+ 1159 0265 1A080000 		.4byte	.LASF42
  1160 0269 05       		.byte	0x5
  1161 026a 3106     		.2byte	0x631
  1162 026c B3010000 		.4byte	0x1b3
  1163 0270 0E       		.uleb128 0xe
- 1164 0271 ED090000 		.4byte	.LASF43
+ 1164 0271 EF090000 		.4byte	.LASF43
  1165 0275 05       		.byte	0x5
  1166 0276 3206     		.2byte	0x632
  1167 0278 59020000 		.4byte	0x259
  1168 027c 0E       		.uleb128 0xe
- 1169 027d A8040000 		.4byte	.LASF44
+ 1169 027d 53040000 		.4byte	.LASF44
  1170 0281 06       		.byte	0x6
  1171 0282 F601     		.2byte	0x1f6
  1172 0284 88020000 		.4byte	0x288
  1173 0288 02       		.uleb128 0x2
  1174 0289 01       		.byte	0x1
  1175 028a 08       		.byte	0x8
- 1176 028b 16080000 		.4byte	.LASF45
+ 1176 028b C1070000 		.4byte	.LASF45
  1177 028f 02       		.uleb128 0x2
  1178 0290 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 44
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 44
 
 
  1179 0291 04       		.byte	0x4
- 1180 0292 14060000 		.4byte	.LASF46
+ 1180 0292 BF050000 		.4byte	.LASF46
  1181 0296 02       		.uleb128 0x2
  1182 0297 08       		.byte	0x8
  1183 0298 04       		.byte	0x4
- 1184 0299 8E020000 		.4byte	.LASF47
+ 1184 0299 39020000 		.4byte	.LASF47
  1185 029d 0E       		.uleb128 0xe
- 1186 029e 48010000 		.4byte	.LASF48
+ 1186 029e F3000000 		.4byte	.LASF48
  1187 02a2 06       		.byte	0x6
  1188 02a3 E703     		.2byte	0x3e7
  1189 02a5 A2000000 		.4byte	0xa2
  1190 02a9 0E       		.uleb128 0xe
- 1191 02aa 7F020000 		.4byte	.LASF49
+ 1191 02aa 2A020000 		.4byte	.LASF49
  1192 02ae 06       		.byte	0x6
  1193 02af EA03     		.2byte	0x3ea
  1194 02b1 8C000000 		.4byte	0x8c
@@ -2603,19 +2603,19 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1198 02bb EB03     		.2byte	0x3eb
  1199 02bd 97000000 		.4byte	0x97
  1200 02c1 0E       		.uleb128 0xe
- 1201 02c2 E2020000 		.4byte	.LASF51
+ 1201 02c2 8D020000 		.4byte	.LASF51
  1202 02c6 06       		.byte	0x6
  1203 02c7 EC03     		.2byte	0x3ec
  1204 02c9 A2000000 		.4byte	0xa2
  1205 02cd 0F       		.uleb128 0xf
  1206 02ce 04       		.byte	0x4
  1207 02cf 03       		.uleb128 0x3
- 1208 02d0 93010000 		.4byte	.LASF52
+ 1208 02d0 3E010000 		.4byte	.LASF52
  1209 02d4 07       		.byte	0x7
  1210 02d5 F2       		.byte	0xf2
  1211 02d6 B5020000 		.4byte	0x2b5
  1212 02da 03       		.uleb128 0x3
- 1213 02db 57010000 		.4byte	.LASF53
+ 1213 02db 02010000 		.4byte	.LASF53
  1214 02df 07       		.byte	0x7
  1215 02e0 F6       		.byte	0xf6
  1216 02e1 A9020000 		.4byte	0x2a9
@@ -2625,20 +2625,20 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1220 02e8 6E       		.byte	0x6e
  1221 02e9 42030000 		.4byte	0x342
  1222 02ed 0B       		.uleb128 0xb
- 1223 02ee CB060000 		.4byte	.LASF54
+ 1223 02ee 76060000 		.4byte	.LASF54
  1224 02f2 08       		.byte	0x8
  1225 02f3 73       		.byte	0x73
  1226 02f4 B5020000 		.4byte	0x2b5
  1227 02f8 00       		.byte	0
  1228 02f9 0B       		.uleb128 0xb
- 1229 02fa D2060000 		.4byte	.LASF55
+ 1229 02fa 7D060000 		.4byte	.LASF55
  1230 02fe 08       		.byte	0x8
  1231 02ff 77       		.byte	0x77
  1232 0300 B5020000 		.4byte	0x2b5
  1233 0304 02       		.byte	0x2
  1234 0305 0B       		.uleb128 0xb
- 1235 0306 D9060000 		.4byte	.LASF56
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 45
+ 1235 0306 84060000 		.4byte	.LASF56
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 45
 
 
  1236 030a 08       		.byte	0x8
@@ -2646,32 +2646,32 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1238 030c B5020000 		.4byte	0x2b5
  1239 0310 04       		.byte	0x4
  1240 0311 0B       		.uleb128 0xb
- 1241 0312 E0060000 		.4byte	.LASF57
+ 1241 0312 8B060000 		.4byte	.LASF57
  1242 0316 08       		.byte	0x8
  1243 0317 7F       		.byte	0x7f
  1244 0318 B5020000 		.4byte	0x2b5
  1245 031c 06       		.byte	0x6
  1246 031d 0B       		.uleb128 0xb
- 1247 031e E7060000 		.4byte	.LASF58
+ 1247 031e 92060000 		.4byte	.LASF58
  1248 0322 08       		.byte	0x8
  1249 0323 83       		.byte	0x83
  1250 0324 B5020000 		.4byte	0x2b5
  1251 0328 08       		.byte	0x8
  1252 0329 0B       		.uleb128 0xb
- 1253 032a EE060000 		.4byte	.LASF59
+ 1253 032a 99060000 		.4byte	.LASF59
  1254 032e 08       		.byte	0x8
  1255 032f 87       		.byte	0x87
  1256 0330 A9020000 		.4byte	0x2a9
  1257 0334 0A       		.byte	0xa
  1258 0335 0B       		.uleb128 0xb
- 1259 0336 F5060000 		.4byte	.LASF60
+ 1259 0336 A0060000 		.4byte	.LASF60
  1260 033a 08       		.byte	0x8
  1261 033b 8B       		.byte	0x8b
  1262 033c A9020000 		.4byte	0x2a9
  1263 0340 0B       		.byte	0xb
  1264 0341 00       		.byte	0
  1265 0342 03       		.uleb128 0x3
- 1266 0343 4D060000 		.4byte	.LASF61
+ 1266 0343 F8050000 		.4byte	.LASF61
  1267 0347 08       		.byte	0x8
  1268 0348 8C       		.byte	0x8c
  1269 0349 E5020000 		.4byte	0x2e5
@@ -2682,29 +2682,29 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1274 0354 61       		.byte	0x61
  1275 0355 7E030000 		.4byte	0x37e
  1276 0359 11       		.uleb128 0x11
- 1277 035a 700A0000 		.4byte	.LASF62
+ 1277 035a 720A0000 		.4byte	.LASF62
  1278 035e 01       		.byte	0x1
  1279 035f 11       		.uleb128 0x11
- 1280 0360 B2010000 		.4byte	.LASF63
+ 1280 0360 5D010000 		.4byte	.LASF63
  1281 0364 02       		.byte	0x2
  1282 0365 11       		.uleb128 0x11
- 1283 0366 31060000 		.4byte	.LASF64
+ 1283 0366 DC050000 		.4byte	.LASF64
  1284 036a 03       		.byte	0x3
  1285 036b 11       		.uleb128 0x11
- 1286 036c 37030000 		.4byte	.LASF65
+ 1286 036c E2020000 		.4byte	.LASF65
  1287 0370 04       		.byte	0x4
  1288 0371 11       		.uleb128 0x11
- 1289 0372 52070000 		.4byte	.LASF66
+ 1289 0372 FD060000 		.4byte	.LASF66
  1290 0376 05       		.byte	0x5
  1291 0377 11       		.uleb128 0x11
- 1292 0378 1F0A0000 		.4byte	.LASF67
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 46
+ 1292 0378 210A0000 		.4byte	.LASF67
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 46
 
 
  1293 037c 06       		.byte	0x6
  1294 037d 00       		.byte	0
  1295 037e 03       		.uleb128 0x3
- 1296 037f D6080000 		.4byte	.LASF68
+ 1296 037f 81080000 		.4byte	.LASF68
  1297 0383 09       		.byte	0x9
  1298 0384 68       		.byte	0x68
  1299 0385 4D030000 		.4byte	0x34d
@@ -2715,16 +2715,16 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1304 0390 6F       		.byte	0x6f
  1305 0391 AE030000 		.4byte	0x3ae
  1306 0395 11       		.uleb128 0x11
- 1307 0396 6D040000 		.4byte	.LASF69
+ 1307 0396 18040000 		.4byte	.LASF69
  1308 039a 00       		.byte	0
  1309 039b 11       		.uleb128 0x11
- 1310 039c 2E070000 		.4byte	.LASF70
+ 1310 039c D9060000 		.4byte	.LASF70
  1311 03a0 01       		.byte	0x1
  1312 03a1 11       		.uleb128 0x11
  1313 03a2 7E000000 		.4byte	.LASF71
  1314 03a6 02       		.byte	0x2
  1315 03a7 11       		.uleb128 0x11
- 1316 03a8 07030000 		.4byte	.LASF72
+ 1316 03a8 B2020000 		.4byte	.LASF72
  1317 03ac 03       		.byte	0x3
  1318 03ad 00       		.byte	0
  1319 03ae 07       		.uleb128 0x7
@@ -2740,58 +2740,58 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1329 03c1 DA       		.byte	0xda
  1330 03c2 6A040000 		.4byte	0x46a
  1331 03c6 0B       		.uleb128 0xb
- 1332 03c7 97080000 		.4byte	.LASF73
+ 1332 03c7 42080000 		.4byte	.LASF73
  1333 03cb 09       		.byte	0x9
  1334 03cc E0       		.byte	0xe0
  1335 03cd B5020000 		.4byte	0x2b5
  1336 03d1 00       		.byte	0
  1337 03d2 0B       		.uleb128 0xb
- 1338 03d3 100A0000 		.4byte	.LASF74
+ 1338 03d3 120A0000 		.4byte	.LASF74
  1339 03d7 09       		.byte	0x9
  1340 03d8 E5       		.byte	0xe5
  1341 03d9 CF020000 		.4byte	0x2cf
  1342 03dd 02       		.byte	0x2
  1343 03de 0B       		.uleb128 0xb
- 1344 03df 850A0000 		.4byte	.LASF75
+ 1344 03df 870A0000 		.4byte	.LASF75
  1345 03e3 09       		.byte	0x9
  1346 03e4 EA       		.byte	0xea
  1347 03e5 A9020000 		.4byte	0x2a9
  1348 03e9 04       		.byte	0x4
  1349 03ea 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 47
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 47
 
 
- 1350 03eb A1050000 		.4byte	.LASF76
+ 1350 03eb 4C050000 		.4byte	.LASF76
  1351 03ef 09       		.byte	0x9
  1352 03f0 EF       		.byte	0xef
  1353 03f1 A9020000 		.4byte	0x2a9
  1354 03f5 05       		.byte	0x5
  1355 03f6 0B       		.uleb128 0xb
- 1356 03f7 E9020000 		.4byte	.LASF77
+ 1356 03f7 94020000 		.4byte	.LASF77
  1357 03fb 09       		.byte	0x9
  1358 03fc F4       		.byte	0xf4
  1359 03fd A9020000 		.4byte	0x2a9
  1360 0401 06       		.byte	0x6
  1361 0402 0B       		.uleb128 0xb
- 1362 0403 B4080000 		.4byte	.LASF78
+ 1362 0403 5F080000 		.4byte	.LASF78
  1363 0407 09       		.byte	0x9
  1364 0408 F9       		.byte	0xf9
  1365 0409 A9020000 		.4byte	0x2a9
  1366 040d 07       		.byte	0x7
  1367 040e 12       		.uleb128 0x12
- 1368 040f F7030000 		.4byte	.LASF79
+ 1368 040f A2030000 		.4byte	.LASF79
  1369 0413 09       		.byte	0x9
  1370 0414 0001     		.2byte	0x100
  1371 0416 DA020000 		.4byte	0x2da
  1372 041a 08       		.byte	0x8
  1373 041b 12       		.uleb128 0x12
- 1374 041c 52050000 		.4byte	.LASF80
+ 1374 041c FD040000 		.4byte	.LASF80
  1375 0420 09       		.byte	0x9
  1376 0421 0801     		.2byte	0x108
  1377 0423 AE030000 		.4byte	0x3ae
  1378 0427 09       		.byte	0x9
  1379 0428 12       		.uleb128 0x12
- 1380 0429 90080000 		.4byte	.LASF81
+ 1380 0429 3B080000 		.4byte	.LASF81
  1381 042d 09       		.byte	0x9
  1382 042e 1101     		.2byte	0x111
  1383 0430 B5020000 		.4byte	0x2b5
@@ -2803,22 +2803,22 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1389 043d A9020000 		.4byte	0x2a9
  1390 0441 0C       		.byte	0xc
  1391 0442 12       		.uleb128 0x12
- 1392 0443 4D020000 		.4byte	.LASF83
+ 1392 0443 F8010000 		.4byte	.LASF83
  1393 0447 09       		.byte	0x9
  1394 0448 1D01     		.2byte	0x11d
  1395 044a B5020000 		.4byte	0x2b5
  1396 044e 0E       		.byte	0xe
  1397 044f 12       		.uleb128 0x12
- 1398 0450 AA050000 		.4byte	.LASF84
+ 1398 0450 55050000 		.4byte	.LASF84
  1399 0454 09       		.byte	0x9
  1400 0455 2201     		.2byte	0x122
  1401 0457 B5020000 		.4byte	0x2b5
  1402 045b 10       		.byte	0x10
  1403 045c 12       		.uleb128 0x12
- 1404 045d 9F030000 		.4byte	.LASF85
+ 1404 045d 4A030000 		.4byte	.LASF85
  1405 0461 09       		.byte	0x9
  1406 0462 2701     		.2byte	0x127
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 48
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 48
 
 
  1407 0464 6A040000 		.4byte	0x46a
@@ -2832,7 +2832,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1415 0478 00       		.byte	0
  1416 0479 00       		.byte	0
  1417 047a 0E       		.uleb128 0xe
- 1418 047b 65050000 		.4byte	.LASF86
+ 1418 047b 10050000 		.4byte	.LASF86
  1419 047f 09       		.byte	0x9
  1420 0480 2801     		.2byte	0x128
  1421 0482 BE030000 		.4byte	0x3be
@@ -2842,58 +2842,58 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1425 0489 2D01     		.2byte	0x12d
  1426 048b 2C050000 		.4byte	0x52c
  1427 048f 12       		.uleb128 0x12
- 1428 0490 97080000 		.4byte	.LASF73
+ 1428 0490 42080000 		.4byte	.LASF73
  1429 0494 09       		.byte	0x9
  1430 0495 3301     		.2byte	0x133
  1431 0497 B5020000 		.4byte	0x2b5
  1432 049b 00       		.byte	0
  1433 049c 12       		.uleb128 0x12
- 1434 049d 100A0000 		.4byte	.LASF74
+ 1434 049d 120A0000 		.4byte	.LASF74
  1435 04a1 09       		.byte	0x9
  1436 04a2 3801     		.2byte	0x138
  1437 04a4 CF020000 		.4byte	0x2cf
  1438 04a8 02       		.byte	0x2
  1439 04a9 12       		.uleb128 0x12
- 1440 04aa 850A0000 		.4byte	.LASF75
+ 1440 04aa 870A0000 		.4byte	.LASF75
  1441 04ae 09       		.byte	0x9
  1442 04af 3D01     		.2byte	0x13d
  1443 04b1 A9020000 		.4byte	0x2a9
  1444 04b5 04       		.byte	0x4
  1445 04b6 12       		.uleb128 0x12
- 1446 04b7 A1050000 		.4byte	.LASF76
+ 1446 04b7 4C050000 		.4byte	.LASF76
  1447 04bb 09       		.byte	0x9
  1448 04bc 4201     		.2byte	0x142
  1449 04be A9020000 		.4byte	0x2a9
  1450 04c2 05       		.byte	0x5
  1451 04c3 12       		.uleb128 0x12
- 1452 04c4 E9020000 		.4byte	.LASF77
+ 1452 04c4 94020000 		.4byte	.LASF77
  1453 04c8 09       		.byte	0x9
  1454 04c9 4701     		.2byte	0x147
  1455 04cb A9020000 		.4byte	0x2a9
  1456 04cf 06       		.byte	0x6
  1457 04d0 12       		.uleb128 0x12
- 1458 04d1 B4080000 		.4byte	.LASF78
+ 1458 04d1 5F080000 		.4byte	.LASF78
  1459 04d5 09       		.byte	0x9
  1460 04d6 4C01     		.2byte	0x14c
  1461 04d8 A9020000 		.4byte	0x2a9
  1462 04dc 07       		.byte	0x7
  1463 04dd 12       		.uleb128 0x12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 49
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 49
 
 
- 1464 04de F7030000 		.4byte	.LASF79
+ 1464 04de A2030000 		.4byte	.LASF79
  1465 04e2 09       		.byte	0x9
  1466 04e3 5301     		.2byte	0x153
  1467 04e5 DA020000 		.4byte	0x2da
  1468 04e9 08       		.byte	0x8
  1469 04ea 12       		.uleb128 0x12
- 1470 04eb 52050000 		.4byte	.LASF80
+ 1470 04eb FD040000 		.4byte	.LASF80
  1471 04ef 09       		.byte	0x9
  1472 04f0 5B01     		.2byte	0x15b
  1473 04f2 AE030000 		.4byte	0x3ae
  1474 04f6 09       		.byte	0x9
  1475 04f7 12       		.uleb128 0x12
- 1476 04f8 90080000 		.4byte	.LASF81
+ 1476 04f8 3B080000 		.4byte	.LASF81
  1477 04fc 09       		.byte	0x9
  1478 04fd 6401     		.2byte	0x164
  1479 04ff B5020000 		.4byte	0x2b5
@@ -2905,20 +2905,20 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1485 050c A9020000 		.4byte	0x2a9
  1486 0510 0C       		.byte	0xc
  1487 0511 12       		.uleb128 0x12
- 1488 0512 4D020000 		.4byte	.LASF83
+ 1488 0512 F8010000 		.4byte	.LASF83
  1489 0516 09       		.byte	0x9
  1490 0517 7001     		.2byte	0x170
  1491 0519 B5020000 		.4byte	0x2b5
  1492 051d 0E       		.byte	0xe
  1493 051e 12       		.uleb128 0x12
- 1494 051f AA050000 		.4byte	.LASF84
+ 1494 051f 55050000 		.4byte	.LASF84
  1495 0523 09       		.byte	0x9
  1496 0524 7501     		.2byte	0x175
  1497 0526 B5020000 		.4byte	0x2b5
  1498 052a 10       		.byte	0x10
  1499 052b 00       		.byte	0
  1500 052c 0E       		.uleb128 0xe
- 1501 052d F4040000 		.4byte	.LASF87
+ 1501 052d 9F040000 		.4byte	.LASF87
  1502 0531 09       		.byte	0x9
  1503 0532 7601     		.2byte	0x176
  1504 0534 86040000 		.4byte	0x486
@@ -2928,29 +2928,29 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1508 053b 7C01     		.2byte	0x17c
  1509 053d 69050000 		.4byte	0x569
  1510 0541 12       		.uleb128 0x12
- 1511 0542 020A0000 		.4byte	.LASF88
+ 1511 0542 040A0000 		.4byte	.LASF88
  1512 0546 09       		.byte	0x9
  1513 0547 8101     		.2byte	0x181
  1514 0549 7A040000 		.4byte	0x47a
  1515 054d 00       		.byte	0
  1516 054e 12       		.uleb128 0x12
- 1517 054f F9010000 		.4byte	.LASF89
+ 1517 054f A4010000 		.4byte	.LASF89
  1518 0553 09       		.byte	0x9
  1519 0554 8601     		.2byte	0x186
  1520 0556 2C050000 		.4byte	0x52c
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 50
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 50
 
 
  1521 055a 14       		.byte	0x14
  1522 055b 12       		.uleb128 0x12
- 1523 055c F1010000 		.4byte	.LASF90
+ 1523 055c 9C010000 		.4byte	.LASF90
  1524 0560 09       		.byte	0x9
  1525 0561 8B01     		.2byte	0x18b
  1526 0563 2C050000 		.4byte	0x52c
  1527 0567 26       		.byte	0x26
  1528 0568 00       		.byte	0
  1529 0569 0E       		.uleb128 0xe
- 1530 056a 7B030000 		.4byte	.LASF91
+ 1530 056a 26030000 		.4byte	.LASF91
  1531 056e 09       		.byte	0x9
  1532 056f 8C01     		.2byte	0x18c
  1533 0571 38050000 		.4byte	0x538
@@ -2966,31 +2966,31 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1543 0586 6A040000 		.4byte	0x46a
  1544 058a 00       		.byte	0
  1545 058b 12       		.uleb128 0x12
- 1546 058c FD090000 		.4byte	.LASF92
+ 1546 058c FF090000 		.4byte	.LASF92
  1547 0590 09       		.byte	0x9
  1548 0591 9C01     		.2byte	0x19c
  1549 0593 6A040000 		.4byte	0x46a
  1550 0597 02       		.byte	0x2
  1551 0598 12       		.uleb128 0x12
- 1552 0599 FF020000 		.4byte	.LASF93
+ 1552 0599 AA020000 		.4byte	.LASF93
  1553 059d 09       		.byte	0x9
  1554 059e A201     		.2byte	0x1a2
  1555 05a0 AE030000 		.4byte	0x3ae
  1556 05a4 04       		.byte	0x4
  1557 05a5 12       		.uleb128 0x12
- 1558 05a6 52010000 		.4byte	.LASF94
+ 1558 05a6 FD000000 		.4byte	.LASF94
  1559 05aa 09       		.byte	0x9
  1560 05ab A701     		.2byte	0x1a7
  1561 05ad CF020000 		.4byte	0x2cf
  1562 05b1 06       		.byte	0x6
  1563 05b2 12       		.uleb128 0x12
- 1564 05b3 1A090000 		.4byte	.LASF95
+ 1564 05b3 C5080000 		.4byte	.LASF95
  1565 05b7 09       		.byte	0x9
  1566 05b8 AC01     		.2byte	0x1ac
  1567 05ba CD050000 		.4byte	0x5cd
  1568 05be 08       		.byte	0x8
  1569 05bf 12       		.uleb128 0x12
- 1570 05c0 EC080000 		.4byte	.LASF96
+ 1570 05c0 97080000 		.4byte	.LASF96
  1571 05c4 09       		.byte	0x9
  1572 05c5 B201     		.2byte	0x1b2
  1573 05c7 AE030000 		.4byte	0x3ae
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1575 05cc 00       		.byte	0
  1576 05cd 07       		.uleb128 0x7
  1577 05ce DA020000 		.4byte	0x2da
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 51
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 51
 
 
  1578 05d2 DD050000 		.4byte	0x5dd
@@ -3017,19 +3017,19 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1591 05ec B901     		.2byte	0x1b9
  1592 05ee 1A060000 		.4byte	0x61a
  1593 05f2 12       		.uleb128 0x12
- 1594 05f3 020A0000 		.4byte	.LASF88
+ 1594 05f3 040A0000 		.4byte	.LASF88
  1595 05f7 09       		.byte	0x9
  1596 05f8 BE01     		.2byte	0x1be
  1597 05fa 1A060000 		.4byte	0x61a
  1598 05fe 00       		.byte	0
  1599 05ff 12       		.uleb128 0x12
- 1600 0600 F9010000 		.4byte	.LASF89
+ 1600 0600 A4010000 		.4byte	.LASF89
  1601 0604 09       		.byte	0x9
  1602 0605 C301     		.2byte	0x1c3
  1603 0607 2A060000 		.4byte	0x62a
  1604 060b 32       		.byte	0x32
  1605 060c 12       		.uleb128 0x12
- 1606 060d F1010000 		.4byte	.LASF90
+ 1606 060d 9C010000 		.4byte	.LASF90
  1607 0611 09       		.byte	0x9
  1608 0612 C801     		.2byte	0x1c8
  1609 0614 2A060000 		.4byte	0x62a
@@ -3050,7 +3050,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1624 0638 00       		.byte	0
  1625 0639 00       		.byte	0
  1626 063a 0E       		.uleb128 0xe
- 1627 063b 84060000 		.4byte	.LASF98
+ 1627 063b 2F060000 		.4byte	.LASF98
  1628 063f 09       		.byte	0x9
  1629 0640 C901     		.2byte	0x1c9
  1630 0642 E9050000 		.4byte	0x5e9
@@ -3058,67 +3058,67 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1632 0647 A4       		.byte	0xa4
  1633 0648 09       		.byte	0x9
  1634 0649 CF01     		.2byte	0x1cf
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 52
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 52
 
 
  1635 064b 3A070000 		.4byte	0x73a
  1636 064f 12       		.uleb128 0x12
- 1637 0650 87040000 		.4byte	.LASF99
+ 1637 0650 32040000 		.4byte	.LASF99
  1638 0654 09       		.byte	0x9
  1639 0655 D701     		.2byte	0x1d7
  1640 0657 B5020000 		.4byte	0x2b5
  1641 065b 00       		.byte	0
  1642 065c 12       		.uleb128 0x12
- 1643 065d EB040000 		.4byte	.LASF100
+ 1643 065d 96040000 		.4byte	.LASF100
  1644 0661 09       		.byte	0x9
  1645 0662 DC01     		.2byte	0x1dc
  1646 0664 B5020000 		.4byte	0x2b5
  1647 0668 02       		.byte	0x2
  1648 0669 12       		.uleb128 0x12
- 1649 066a BE050000 		.4byte	.LASF101
+ 1649 066a 69050000 		.4byte	.LASF101
  1650 066e 09       		.byte	0x9
  1651 066f E101     		.2byte	0x1e1
  1652 0671 B5020000 		.4byte	0x2b5
  1653 0675 04       		.byte	0x4
  1654 0676 12       		.uleb128 0x12
- 1655 0677 0B060000 		.4byte	.LASF102
+ 1655 0677 B6050000 		.4byte	.LASF102
  1656 067b 09       		.byte	0x9
  1657 067c E701     		.2byte	0x1e7
  1658 067e B5020000 		.4byte	0x2b5
  1659 0682 06       		.byte	0x6
  1660 0683 12       		.uleb128 0x12
- 1661 0684 E8050000 		.4byte	.LASF103
+ 1661 0684 93050000 		.4byte	.LASF103
  1662 0688 09       		.byte	0x9
  1663 0689 EC01     		.2byte	0x1ec
  1664 068b B5020000 		.4byte	0x2b5
  1665 068f 08       		.byte	0x8
  1666 0690 12       		.uleb128 0x12
- 1667 0691 88090000 		.4byte	.LASF104
+ 1667 0691 8A090000 		.4byte	.LASF104
  1668 0695 09       		.byte	0x9
  1669 0696 F101     		.2byte	0x1f1
  1670 0698 3A070000 		.4byte	0x73a
  1671 069c 0C       		.byte	0xc
  1672 069d 12       		.uleb128 0x12
- 1673 069e D9030000 		.4byte	.LASF105
+ 1673 069e 84030000 		.4byte	.LASF105
  1674 06a2 09       		.byte	0x9
  1675 06a3 F701     		.2byte	0x1f7
  1676 06a5 3F070000 		.4byte	0x73f
  1677 06a9 10       		.byte	0x10
  1678 06aa 12       		.uleb128 0x12
- 1679 06ab 2C030000 		.4byte	.LASF106
+ 1679 06ab D7020000 		.4byte	.LASF106
  1680 06af 09       		.byte	0x9
  1681 06b0 FD01     		.2byte	0x1fd
  1682 06b2 3F070000 		.4byte	0x73f
  1683 06b6 14       		.byte	0x14
  1684 06b7 12       		.uleb128 0x12
- 1685 06b8 0E020000 		.4byte	.LASF107
+ 1685 06b8 B9010000 		.4byte	.LASF107
  1686 06bc 09       		.byte	0x9
  1687 06bd 0F02     		.2byte	0x20f
  1688 06bf 4F070000 		.4byte	0x74f
  1689 06c3 18       		.byte	0x18
  1690 06c4 12       		.uleb128 0x12
- 1691 06c5 AF040000 		.4byte	.LASF108
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 53
+ 1691 06c5 5A040000 		.4byte	.LASF108
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 53
 
 
  1692 06c9 09       		.byte	0x9
@@ -3126,7 +3126,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1694 06cc B5020000 		.4byte	0x2b5
  1695 06d0 1C       		.byte	0x1c
  1696 06d1 12       		.uleb128 0x12
- 1697 06d2 57020000 		.4byte	.LASF109
+ 1697 06d2 02020000 		.4byte	.LASF109
  1698 06d6 09       		.byte	0x9
  1699 06d7 1902     		.2byte	0x219
  1700 06d9 A9020000 		.4byte	0x2a9
@@ -3138,37 +3138,37 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1706 06e6 A9020000 		.4byte	0x2a9
  1707 06ea 1F       		.byte	0x1f
  1708 06eb 12       		.uleb128 0x12
- 1709 06ec 7B070000 		.4byte	.LASF111
+ 1709 06ec 26070000 		.4byte	.LASF111
  1710 06f0 09       		.byte	0x9
  1711 06f1 2302     		.2byte	0x223
  1712 06f3 69050000 		.4byte	0x569
  1713 06f7 20       		.byte	0x20
  1714 06f8 12       		.uleb128 0x12
- 1715 06f9 59030000 		.4byte	.LASF112
+ 1715 06f9 04030000 		.4byte	.LASF112
  1716 06fd 09       		.byte	0x9
  1717 06fe 2802     		.2byte	0x228
  1718 0700 3A060000 		.4byte	0x63a
  1719 0704 58       		.byte	0x58
  1720 0705 12       		.uleb128 0x12
- 1721 0706 A8030000 		.4byte	.LASF113
+ 1721 0706 53030000 		.4byte	.LASF113
  1722 070a 09       		.byte	0x9
  1723 070b 2D02     		.2byte	0x22d
  1724 070d A9020000 		.4byte	0x2a9
  1725 0711 9E       		.byte	0x9e
  1726 0712 12       		.uleb128 0x12
- 1727 0713 72010000 		.4byte	.LASF114
+ 1727 0713 1D010000 		.4byte	.LASF114
  1728 0717 09       		.byte	0x9
  1729 0718 3202     		.2byte	0x232
  1730 071a A9020000 		.4byte	0x2a9
  1731 071e 9F       		.byte	0x9f
  1732 071f 12       		.uleb128 0x12
- 1733 0720 560A0000 		.4byte	.LASF115
+ 1733 0720 580A0000 		.4byte	.LASF115
  1734 0724 09       		.byte	0x9
  1735 0725 3702     		.2byte	0x237
  1736 0727 B5020000 		.4byte	0x2b5
  1737 072b A0       		.byte	0xa0
  1738 072c 12       		.uleb128 0x12
- 1739 072d B6020000 		.4byte	.LASF116
+ 1739 072d 61020000 		.4byte	.LASF116
  1740 0731 09       		.byte	0x9
  1741 0732 3C02     		.2byte	0x23c
  1742 0734 6A040000 		.4byte	0x46a
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1746 073b C1020000 		.4byte	0x2c1
  1747 073f 07       		.uleb128 0x7
  1748 0740 C1020000 		.4byte	0x2c1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 54
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 54
 
 
  1749 0744 4F070000 		.4byte	0x74f
@@ -3194,7 +3194,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1759 075d 02       		.byte	0x2
  1760 075e 00       		.byte	0
  1761 075f 0E       		.uleb128 0xe
- 1762 0760 AB060000 		.4byte	.LASF117
+ 1762 0760 56060000 		.4byte	.LASF117
  1763 0764 09       		.byte	0x9
  1764 0765 3D02     		.2byte	0x23d
  1765 0767 46060000 		.4byte	0x646
@@ -3204,13 +3204,13 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1769 076e 4302     		.2byte	0x243
  1770 0770 8F070000 		.4byte	0x78f
  1771 0774 12       		.uleb128 0x12
- 1772 0775 01020000 		.4byte	.LASF118
+ 1772 0775 AC010000 		.4byte	.LASF118
  1773 0779 09       		.byte	0x9
  1774 077a 4802     		.2byte	0x248
  1775 077c 8F070000 		.4byte	0x78f
  1776 0780 00       		.byte	0
  1777 0781 12       		.uleb128 0x12
- 1778 0782 A1060000 		.4byte	.LASF119
+ 1778 0782 4C060000 		.4byte	.LASF119
  1779 0786 09       		.byte	0x9
  1780 0787 4D02     		.2byte	0x24d
  1781 0789 A9020000 		.4byte	0x2a9
@@ -3220,7 +3220,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1785 0790 04       		.byte	0x4
  1786 0791 64020000 		.4byte	0x264
  1787 0795 0E       		.uleb128 0xe
- 1788 0796 5A090000 		.4byte	.LASF120
+ 1788 0796 05090000 		.4byte	.LASF120
  1789 079a 09       		.byte	0x9
  1790 079b 4E02     		.2byte	0x24e
  1791 079d 6B070000 		.4byte	0x76b
@@ -3230,91 +3230,91 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1795 07a4 7B02     		.2byte	0x27b
  1796 07a6 6E080000 		.4byte	0x86e
  1797 07aa 12       		.uleb128 0x12
- 1798 07ab 3B010000 		.4byte	.LASF121
+ 1798 07ab E6000000 		.4byte	.LASF121
  1799 07af 09       		.byte	0x9
  1800 07b0 8402     		.2byte	0x284
  1801 07b2 6E080000 		.4byte	0x86e
  1802 07b6 00       		.byte	0
  1803 07b7 12       		.uleb128 0x12
- 1804 07b8 BA040000 		.4byte	.LASF122
+ 1804 07b8 65040000 		.4byte	.LASF122
  1805 07bc 09       		.byte	0x9
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 55
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 55
 
 
  1806 07bd 8B02     		.2byte	0x28b
  1807 07bf CD020000 		.4byte	0x2cd
  1808 07c3 04       		.byte	0x4
  1809 07c4 12       		.uleb128 0x12
- 1810 07c5 61020000 		.4byte	.LASF123
+ 1810 07c5 0C020000 		.4byte	.LASF123
  1811 07c9 09       		.byte	0x9
  1812 07ca 9102     		.2byte	0x291
  1813 07cc 75080000 		.4byte	0x875
  1814 07d0 08       		.byte	0x8
  1815 07d1 12       		.uleb128 0x12
- 1816 07d2 15070000 		.4byte	.LASF124
+ 1816 07d2 C0060000 		.4byte	.LASF124
  1817 07d6 09       		.byte	0x9
  1818 07d7 9602     		.2byte	0x296
  1819 07d9 CD020000 		.4byte	0x2cd
  1820 07dd 0C       		.byte	0xc
  1821 07de 12       		.uleb128 0x12
- 1822 07df 34090000 		.4byte	.LASF125
+ 1822 07df DF080000 		.4byte	.LASF125
  1823 07e3 09       		.byte	0x9
  1824 07e4 9D02     		.2byte	0x29d
  1825 07e6 7B080000 		.4byte	0x87b
  1826 07ea 10       		.byte	0x10
  1827 07eb 12       		.uleb128 0x12
- 1828 07ec 94050000 		.4byte	.LASF126
+ 1828 07ec 3F050000 		.4byte	.LASF126
  1829 07f0 09       		.byte	0x9
  1830 07f1 A202     		.2byte	0x2a2
  1831 07f3 C1020000 		.4byte	0x2c1
  1832 07f7 14       		.byte	0x14
  1833 07f8 12       		.uleb128 0x12
- 1834 07f9 28090000 		.4byte	.LASF127
+ 1834 07f9 D3080000 		.4byte	.LASF127
  1835 07fd 09       		.byte	0x9
  1836 07fe A902     		.2byte	0x2a9
  1837 0800 B5020000 		.4byte	0x2b5
  1838 0804 18       		.byte	0x18
  1839 0805 12       		.uleb128 0x12
- 1840 0806 C6050000 		.4byte	.LASF128
+ 1840 0806 71050000 		.4byte	.LASF128
  1841 080a 09       		.byte	0x9
  1842 080b B402     		.2byte	0x2b4
  1843 080d A9020000 		.4byte	0x2a9
  1844 0811 1A       		.byte	0x1a
  1845 0812 12       		.uleb128 0x12
- 1846 0813 EB030000 		.4byte	.LASF129
+ 1846 0813 96030000 		.4byte	.LASF129
  1847 0817 09       		.byte	0x9
  1848 0818 B902     		.2byte	0x2b9
  1849 081a A9020000 		.4byte	0x2a9
  1850 081e 1B       		.byte	0x1b
  1851 081f 12       		.uleb128 0x12
- 1852 0820 83050000 		.4byte	.LASF130
+ 1852 0820 2E050000 		.4byte	.LASF130
  1853 0824 09       		.byte	0x9
  1854 0825 C102     		.2byte	0x2c1
  1855 0827 A9020000 		.4byte	0x2a9
  1856 082b 1C       		.byte	0x1c
  1857 082c 12       		.uleb128 0x12
- 1858 082d 24030000 		.4byte	.LASF131
+ 1858 082d CF020000 		.4byte	.LASF131
  1859 0831 09       		.byte	0x9
  1860 0832 C802     		.2byte	0x2c8
  1861 0834 A9020000 		.4byte	0x2a9
  1862 0838 1D       		.byte	0x1d
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 56
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 56
 
 
  1863 0839 12       		.uleb128 0x12
- 1864 083a 6C020000 		.4byte	.LASF132
+ 1864 083a 17020000 		.4byte	.LASF132
  1865 083e 09       		.byte	0x9
  1866 083f CE02     		.2byte	0x2ce
  1867 0841 B5020000 		.4byte	0x2b5
  1868 0845 1E       		.byte	0x1e
  1869 0846 12       		.uleb128 0x12
- 1870 0847 CF050000 		.4byte	.LASF133
+ 1870 0847 7A050000 		.4byte	.LASF133
  1871 084b 09       		.byte	0x9
  1872 084c D802     		.2byte	0x2d8
  1873 084e C1020000 		.4byte	0x2c1
  1874 0852 20       		.byte	0x20
  1875 0853 12       		.uleb128 0x12
- 1876 0854 B8030000 		.4byte	.LASF134
+ 1876 0854 63030000 		.4byte	.LASF134
  1877 0858 09       		.byte	0x9
  1878 0859 E002     		.2byte	0x2e0
  1879 085b 81080000 		.4byte	0x881
@@ -3340,7 +3340,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1899 0882 04       		.byte	0x4
  1900 0883 42030000 		.4byte	0x342
  1901 0887 0E       		.uleb128 0xe
- 1902 0888 FC060000 		.4byte	.LASF136
+ 1902 0888 A7060000 		.4byte	.LASF136
  1903 088c 09       		.byte	0x9
  1904 088d E602     		.2byte	0x2e6
  1905 088f A1070000 		.4byte	0x7a1
@@ -3350,7 +3350,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1909 0896 EC02     		.2byte	0x2ec
  1910 0898 AA080000 		.4byte	0x8aa
  1911 089c 12       		.uleb128 0x12
- 1912 089d 8F090000 		.4byte	.LASF137
+ 1912 089d 91090000 		.4byte	.LASF137
  1913 08a1 09       		.byte	0x9
  1914 08a2 F102     		.2byte	0x2f1
  1915 08a4 AA080000 		.4byte	0x8aa
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1917 08a9 00       		.byte	0
  1918 08aa 07       		.uleb128 0x7
  1919 08ab 87080000 		.4byte	0x887
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 57
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 57
 
 
  1920 08af BA080000 		.4byte	0x8ba
@@ -3367,7 +3367,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1923 08b8 02       		.byte	0x2
  1924 08b9 00       		.byte	0
  1925 08ba 0E       		.uleb128 0xe
- 1926 08bb 44090000 		.4byte	.LASF138
+ 1926 08bb EF080000 		.4byte	.LASF138
  1927 08bf 09       		.byte	0x9
  1928 08c0 F202     		.2byte	0x2f2
  1929 08c2 93080000 		.4byte	0x893
@@ -3377,13 +3377,13 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1933 08c9 3D01     		.2byte	0x13d
  1934 08cb 2A090000 		.4byte	0x92a
  1935 08cf 12       		.uleb128 0x12
- 1936 08d0 CF080000 		.4byte	.LASF139
+ 1936 08d0 7A080000 		.4byte	.LASF139
  1937 08d4 01       		.byte	0x1
  1938 08d5 3F01     		.2byte	0x13f
  1939 08d7 B5020000 		.4byte	0x2b5
  1940 08db 00       		.byte	0
  1941 08dc 12       		.uleb128 0x12
- 1942 08dd 37050000 		.4byte	.LASF140
+ 1942 08dd E2040000 		.4byte	.LASF140
  1943 08e1 01       		.byte	0x1
  1944 08e2 4001     		.2byte	0x140
  1945 08e4 A9020000 		.4byte	0x2a9
@@ -3413,12 +3413,12 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1969 0917 A9020000 		.4byte	0x2a9
  1970 091b 06       		.byte	0x6
  1971 091c 12       		.uleb128 0x12
- 1972 091d 82040000 		.4byte	.LASF143
+ 1972 091d 2D040000 		.4byte	.LASF143
  1973 0921 01       		.byte	0x1
  1974 0922 4501     		.2byte	0x145
  1975 0924 A9020000 		.4byte	0x2a9
  1976 0928 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 58
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 58
 
 
  1977 0929 00       		.byte	0
@@ -3428,7 +3428,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1981 0930 4601     		.2byte	0x146
  1982 0932 C6080000 		.4byte	0x8c6
  1983 0936 17       		.uleb128 0x17
- 1984 0937 99090000 		.4byte	.LASF181
+ 1984 0937 9B090000 		.4byte	.LASF181
  1985 093b 01       		.byte	0x1
  1986 093c 0802     		.2byte	0x208
  1987 093e 9D020000 		.4byte	0x29d
@@ -3438,20 +3438,20 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  1991 094b 9C       		.byte	0x9c
  1992 094c 7F090000 		.4byte	0x97f
  1993 0950 18       		.uleb128 0x18
- 1994 0951 BB090000 		.4byte	.LASF145
+ 1994 0951 BD090000 		.4byte	.LASF145
  1995 0955 01       		.byte	0x1
  1996 0956 0802     		.2byte	0x208
  1997 0958 C1020000 		.4byte	0x2c1
  1998 095c 00000000 		.4byte	.LLST0
  1999 0960 19       		.uleb128 0x19
- 2000 0961 190A0000 		.4byte	.LASF146
+ 2000 0961 1B0A0000 		.4byte	.LASF146
  2001 0965 01       		.byte	0x1
  2002 0966 0802     		.2byte	0x208
  2003 0968 7F090000 		.4byte	0x97f
  2004 096c 01       		.uleb128 0x1
  2005 096d 51       		.byte	0x51
  2006 096e 1A       		.uleb128 0x1a
- 2007 096f 690A0000 		.4byte	.LASF147
+ 2007 096f 6B0A0000 		.4byte	.LASF147
  2008 0973 01       		.byte	0x1
  2009 0974 0A02     		.2byte	0x20a
  2010 0976 9D020000 		.4byte	0x29d
@@ -3461,7 +3461,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2014 0980 04       		.byte	0x4
  2015 0981 2A090000 		.4byte	0x92a
  2016 0985 1B       		.uleb128 0x1b
- 2017 0986 19040000 		.4byte	.LASF182
+ 2017 0986 C4030000 		.4byte	.LASF182
  2018 098a 01       		.byte	0x1
  2019 098b 6601     		.2byte	0x166
  2020 098d 00000000 		.4byte	.LFB45
@@ -3470,34 +3470,34 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2023 0996 9C       		.byte	0x9c
  2024 0997 2A0A0000 		.4byte	0xa2a
  2025 099b 1A       		.uleb128 0x1a
- 2026 099c F7090000 		.4byte	.LASF148
+ 2026 099c F9090000 		.4byte	.LASF148
  2027 09a0 01       		.byte	0x1
  2028 09a1 6C01     		.2byte	0x16c
  2029 09a3 C1020000 		.4byte	0x2c1
  2030 09a7 6D000000 		.4byte	.LLST2
  2031 09ab 1A       		.uleb128 0x1a
- 2032 09ac AB010000 		.4byte	.LASF149
+ 2032 09ac 56010000 		.4byte	.LASF149
  2033 09b0 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 59
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 59
 
 
  2034 09b1 6D01     		.2byte	0x16d
  2035 09b3 C1020000 		.4byte	0x2c1
  2036 09b7 A1000000 		.4byte	.LLST3
  2037 09bb 1A       		.uleb128 0x1a
- 2038 09bc 0F040000 		.4byte	.LASF150
+ 2038 09bc BA030000 		.4byte	.LASF150
  2039 09c0 01       		.byte	0x1
  2040 09c1 6E01     		.2byte	0x16e
  2041 09c3 75080000 		.4byte	0x875
  2042 09c7 E3000000 		.4byte	.LLST4
  2043 09cb 1A       		.uleb128 0x1a
- 2044 09cc 61030000 		.4byte	.LASF151
+ 2044 09cc 0C030000 		.4byte	.LASF151
  2045 09d0 01       		.byte	0x1
  2046 09d1 6F01     		.2byte	0x16f
  2047 09d3 2A0A0000 		.4byte	0xa2a
  2048 09d7 F6000000 		.4byte	.LLST5
  2049 09db 1A       		.uleb128 0x1a
- 2050 09dc BF060000 		.4byte	.LASF152
+ 2050 09dc 6A060000 		.4byte	.LASF152
  2051 09e0 01       		.byte	0x1
  2052 09e1 7801     		.2byte	0x178
  2053 09e3 350A0000 		.4byte	0xa35
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2088 0a1b 51       		.byte	0x51
  2089 0a1c 05       		.uleb128 0x5
  2090 0a1d 03       		.byte	0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 60
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 60
 
 
  2091 0a1e 8C000000 		.4byte	.LANCHOR1+12
@@ -3571,19 +3571,19 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2118 0a55 9C       		.byte	0x9c
  2119 0a56 190B0000 		.4byte	0xb19
  2120 0a5a 18       		.uleb128 0x18
- 2121 0a5b BB090000 		.4byte	.LASF145
+ 2121 0a5b BD090000 		.4byte	.LASF145
  2122 0a5f 01       		.byte	0x1
  2123 0a60 C602     		.2byte	0x2c6
  2124 0a62 C1020000 		.4byte	0x2c1
  2125 0a66 3C010000 		.4byte	.LLST7
  2126 0a6a 18       		.uleb128 0x18
- 2127 0a6b 53030000 		.4byte	.LASF153
+ 2127 0a6b FE020000 		.4byte	.LASF153
  2128 0a6f 01       		.byte	0x1
  2129 0a70 C602     		.2byte	0x2c6
  2130 0a72 190B0000 		.4byte	0xb19
  2131 0a76 5D010000 		.4byte	.LLST8
  2132 0a7a 20       		.uleb128 0x20
- 2133 0a7b 190A0000 		.4byte	.LASF146
+ 2133 0a7b 1B0A0000 		.4byte	.LASF146
  2134 0a7f 01       		.byte	0x1
  2135 0a80 C802     		.2byte	0x2c8
  2136 0a82 2A090000 		.4byte	0x92a
@@ -3591,14 +3591,14 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2138 0a87 91       		.byte	0x91
  2139 0a88 68       		.sleb128 -24
  2140 0a89 1A       		.uleb128 0x1a
- 2141 0a8a 690A0000 		.4byte	.LASF147
+ 2141 0a8a 6B0A0000 		.4byte	.LASF147
  2142 0a8e 01       		.byte	0x1
  2143 0a8f C902     		.2byte	0x2c9
  2144 0a91 9D020000 		.4byte	0x29d
  2145 0a95 89010000 		.4byte	.LLST9
  2146 0a99 21       		.uleb128 0x21
  2147 0a9a 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 61
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 61
 
 
  2148 0a9b 01       		.byte	0x1
@@ -3610,23 +3610,23 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2154 0aa8 CD02     		.2byte	0x2cd
  2155 0aaa 1F0B0000 		.4byte	0xb1f
  2156 0aae 23       		.uleb128 0x23
- 2157 0aaf A8090000 		.4byte	.LASF154
+ 2157 0aaf AA090000 		.4byte	.LASF154
  2158 0ab3 01       		.byte	0x1
  2159 0ab4 CE02     		.2byte	0x2ce
  2160 0ab6 2B0B0000 		.4byte	0xb2b
  2161 0aba 23       		.uleb128 0x23
- 2162 0abb B1090000 		.4byte	.LASF155
+ 2162 0abb B3090000 		.4byte	.LASF155
  2163 0abf 01       		.byte	0x1
  2164 0ac0 CF02     		.2byte	0x2cf
  2165 0ac2 3B0B0000 		.4byte	0xb3b
  2166 0ac6 23       		.uleb128 0x23
- 2167 0ac7 AA080000 		.4byte	.LASF156
+ 2167 0ac7 55080000 		.4byte	.LASF156
  2168 0acb 01       		.byte	0x1
  2169 0acc D002     		.2byte	0x2d0
  2170 0ace 4B0B0000 		.4byte	0xb4b
  2171 0ad2 00       		.byte	0
  2172 0ad3 1A       		.uleb128 0x1a
- 2173 0ad4 4A070000 		.4byte	.LASF157
+ 2173 0ad4 F5060000 		.4byte	.LASF157
  2174 0ad8 01       		.byte	0x1
  2175 0ad9 D102     		.2byte	0x2d1
  2176 0adb 990A0000 		.4byte	0xa99
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2202 0b0a 05       		.uleb128 0x5
  2203 0b0b 03       		.byte	0x3
  2204 0b0c 00000000 		.4byte	.LC6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 62
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 62
 
 
  2205 0b10 1D       		.uleb128 0x1d
@@ -3708,28 +3708,28 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2249 0b6b 9C       		.byte	0x9c
  2250 0b6c 2B0C0000 		.4byte	0xc2b
  2251 0b70 18       		.uleb128 0x18
- 2252 0b71 BB090000 		.4byte	.LASF145
+ 2252 0b71 BD090000 		.4byte	.LASF145
  2253 0b75 01       		.byte	0x1
  2254 0b76 3203     		.2byte	0x332
  2255 0b78 C1020000 		.4byte	0x2c1
  2256 0b7c C5010000 		.4byte	.LLST11
  2257 0b80 18       		.uleb128 0x18
- 2258 0b81 53030000 		.4byte	.LASF153
+ 2258 0b81 FE020000 		.4byte	.LASF153
  2259 0b85 01       		.byte	0x1
  2260 0b86 3203     		.2byte	0x332
  2261 0b88 C1020000 		.4byte	0x2c1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 63
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 63
 
 
  2262 0b8c E6010000 		.4byte	.LLST12
  2263 0b90 1A       		.uleb128 0x1a
- 2264 0b91 690A0000 		.4byte	.LASF147
+ 2264 0b91 6B0A0000 		.4byte	.LASF147
  2265 0b95 01       		.byte	0x1
  2266 0b96 3403     		.2byte	0x334
  2267 0b98 9D020000 		.4byte	0x29d
  2268 0b9c 44020000 		.4byte	.LLST13
  2269 0ba0 20       		.uleb128 0x20
- 2270 0ba1 190A0000 		.4byte	.LASF146
+ 2270 0ba1 1B0A0000 		.4byte	.LASF146
  2271 0ba5 01       		.byte	0x1
  2272 0ba6 3503     		.2byte	0x335
  2273 0ba8 2A090000 		.4byte	0x92a
@@ -3747,23 +3747,23 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2285 0bbe 3903     		.2byte	0x339
  2286 0bc0 2B0C0000 		.4byte	0xc2b
  2287 0bc4 23       		.uleb128 0x23
- 2288 0bc5 A8090000 		.4byte	.LASF154
+ 2288 0bc5 AA090000 		.4byte	.LASF154
  2289 0bc9 01       		.byte	0x1
  2290 0bca 3A03     		.2byte	0x33a
  2291 0bcc 310C0000 		.4byte	0xc31
  2292 0bd0 23       		.uleb128 0x23
- 2293 0bd1 B1090000 		.4byte	.LASF155
+ 2293 0bd1 B3090000 		.4byte	.LASF155
  2294 0bd5 01       		.byte	0x1
  2295 0bd6 3B03     		.2byte	0x33b
  2296 0bd8 370C0000 		.4byte	0xc37
  2297 0bdc 23       		.uleb128 0x23
- 2298 0bdd AA080000 		.4byte	.LASF156
+ 2298 0bdd 55080000 		.4byte	.LASF156
  2299 0be1 01       		.byte	0x1
  2300 0be2 3C03     		.2byte	0x33c
  2301 0be4 3D0C0000 		.4byte	0xc3d
  2302 0be8 00       		.byte	0
  2303 0be9 25       		.uleb128 0x25
- 2304 0bea 4A070000 		.4byte	.LASF157
+ 2304 0bea F5060000 		.4byte	.LASF157
  2305 0bee 01       		.byte	0x1
  2306 0bef 3D03     		.2byte	0x33d
  2307 0bf1 AF0B0000 		.4byte	0xbaf
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2316 0c06 F3       		.byte	0xf3
  2317 0c07 01       		.uleb128 0x1
  2318 0c08 50       		.byte	0x50
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 64
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 64
 
 
  2319 0c09 1D       		.uleb128 0x1d
@@ -3818,7 +3818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2353 0c3e 04       		.byte	0x4
  2354 0c3f 3A070000 		.4byte	0x73a
  2355 0c43 1F       		.uleb128 0x1f
- 2356 0c44 D0040000 		.4byte	.LASF160
+ 2356 0c44 7B040000 		.4byte	.LASF160
  2357 0c48 01       		.byte	0x1
  2358 0c49 9303     		.2byte	0x393
  2359 0c4b C1020000 		.4byte	0x2c1
@@ -3828,23 +3828,23 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2363 0c58 9C       		.byte	0x9c
  2364 0c59 7E0C0000 		.4byte	0xc7e
  2365 0c5d 1A       		.uleb128 0x1a
- 2366 0c5e 690A0000 		.4byte	.LASF147
+ 2366 0c5e 6B0A0000 		.4byte	.LASF147
  2367 0c62 01       		.byte	0x1
  2368 0c63 9503     		.2byte	0x395
  2369 0c65 C1020000 		.4byte	0x2c1
  2370 0c69 6D020000 		.4byte	.LLST14
  2371 0c6d 1A       		.uleb128 0x1a
- 2372 0c6e 07020000 		.4byte	.LASF161
+ 2372 0c6e B2010000 		.4byte	.LASF161
  2373 0c72 01       		.byte	0x1
  2374 0c73 9603     		.2byte	0x396
  2375 0c75 C1020000 		.4byte	0x2c1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 65
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 65
 
 
  2376 0c79 8C020000 		.4byte	.LLST15
  2377 0c7d 00       		.byte	0
  2378 0c7e 1F       		.uleb128 0x1f
- 2379 0c7f C3090000 		.4byte	.LASF162
+ 2379 0c7f C5090000 		.4byte	.LASF162
  2380 0c83 01       		.byte	0x1
  2381 0c84 BB03     		.2byte	0x3bb
  2382 0c86 C1020000 		.4byte	0x2c1
@@ -3854,20 +3854,20 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2386 0c93 9C       		.byte	0x9c
  2387 0c94 B90C0000 		.4byte	0xcb9
  2388 0c98 18       		.uleb128 0x18
- 2389 0c99 37050000 		.4byte	.LASF140
+ 2389 0c99 E2040000 		.4byte	.LASF140
  2390 0c9d 01       		.byte	0x1
  2391 0c9e BB03     		.2byte	0x3bb
  2392 0ca0 C1020000 		.4byte	0x2c1
  2393 0ca4 C1020000 		.4byte	.LLST16
  2394 0ca8 1A       		.uleb128 0x1a
- 2395 0ca9 690A0000 		.4byte	.LASF147
+ 2395 0ca9 6B0A0000 		.4byte	.LASF147
  2396 0cad 01       		.byte	0x1
  2397 0cae BD03     		.2byte	0x3bd
  2398 0cb0 C1020000 		.4byte	0x2c1
  2399 0cb4 FB020000 		.4byte	.LLST17
  2400 0cb8 00       		.byte	0
  2401 0cb9 1F       		.uleb128 0x1f
- 2402 0cba 90040000 		.4byte	.LASF163
+ 2402 0cba 3B040000 		.4byte	.LASF163
  2403 0cbe 01       		.byte	0x1
  2404 0cbf ED03     		.2byte	0x3ed
  2405 0cc1 C1020000 		.4byte	0x2c1
@@ -3877,28 +3877,28 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2409 0cce 9C       		.byte	0x9c
  2410 0ccf 020D0000 		.4byte	0xd02
  2411 0cd3 18       		.uleb128 0x18
- 2412 0cd4 37050000 		.4byte	.LASF140
+ 2412 0cd4 E2040000 		.4byte	.LASF140
  2413 0cd8 01       		.byte	0x1
  2414 0cd9 ED03     		.2byte	0x3ed
  2415 0cdb C1020000 		.4byte	0x2c1
  2416 0cdf 31030000 		.4byte	.LLST18
  2417 0ce3 19       		.uleb128 0x19
- 2418 0ce4 C6020000 		.4byte	.LASF164
+ 2418 0ce4 71020000 		.4byte	.LASF164
  2419 0ce8 01       		.byte	0x1
  2420 0ce9 ED03     		.2byte	0x3ed
  2421 0ceb C1020000 		.4byte	0x2c1
  2422 0cef 01       		.uleb128 0x1
  2423 0cf0 51       		.byte	0x51
  2424 0cf1 1A       		.uleb128 0x1a
- 2425 0cf2 690A0000 		.4byte	.LASF147
+ 2425 0cf2 6B0A0000 		.4byte	.LASF147
  2426 0cf6 01       		.byte	0x1
  2427 0cf7 EF03     		.2byte	0x3ef
  2428 0cf9 C1020000 		.4byte	0x2c1
  2429 0cfd 84030000 		.4byte	.LLST19
  2430 0d01 00       		.byte	0
  2431 0d02 1F       		.uleb128 0x1f
- 2432 0d03 27080000 		.4byte	.LASF165
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 66
+ 2432 0d03 D2070000 		.4byte	.LASF165
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 66
 
 
  2433 0d07 01       		.byte	0x1
@@ -3910,19 +3910,19 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2439 0d17 9C       		.byte	0x9c
  2440 0d18 4D0D0000 		.4byte	0xd4d
  2441 0d1c 18       		.uleb128 0x18
- 2442 0d1d 37050000 		.4byte	.LASF140
+ 2442 0d1d E2040000 		.4byte	.LASF140
  2443 0d21 01       		.byte	0x1
  2444 0d22 BD04     		.2byte	0x4bd
  2445 0d24 C1020000 		.4byte	0x2c1
  2446 0d28 BA030000 		.4byte	.LLST20
  2447 0d2c 1A       		.uleb128 0x1a
- 2448 0d2d 690A0000 		.4byte	.LASF147
+ 2448 0d2d 6B0A0000 		.4byte	.LASF147
  2449 0d31 01       		.byte	0x1
  2450 0d32 BF04     		.2byte	0x4bf
  2451 0d34 C1020000 		.4byte	0x2c1
  2452 0d38 0D040000 		.4byte	.LLST21
  2453 0d3c 1A       		.uleb128 0x1a
- 2454 0d3d 49050000 		.4byte	.LASF166
+ 2454 0d3d F4040000 		.4byte	.LASF166
  2455 0d41 01       		.byte	0x1
  2456 0d42 C004     		.2byte	0x4c0
  2457 0d44 4D0D0000 		.4byte	0xd4d
@@ -3932,7 +3932,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2461 0d4e 04       		.byte	0x4
  2462 0d4f 7A040000 		.4byte	0x47a
  2463 0d53 26       		.uleb128 0x26
- 2464 0d54 370A0000 		.4byte	.LASF167
+ 2464 0d54 390A0000 		.4byte	.LASF167
  2465 0d58 01       		.byte	0x1
  2466 0d59 54       		.byte	0x54
  2467 0d5a AE030000 		.4byte	0x3ae
@@ -3940,7 +3940,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2469 0d5f 03       		.byte	0x3
  2470 0d60 44000000 		.4byte	CapSense_debounceLinearSlider0
  2471 0d64 26       		.uleb128 0x26
- 2472 0d65 54040000 		.4byte	.LASF168
+ 2472 0d65 FF030000 		.4byte	.LASF168
  2473 0d69 01       		.byte	0x1
  2474 0d6a 55       		.byte	0x55
  2475 0d6b AE030000 		.4byte	0x3ae
@@ -3948,7 +3948,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2477 0d70 03       		.byte	0x3
  2478 0d71 40000000 		.4byte	CapSense_debounceButton1
  2479 0d75 26       		.uleb128 0x26
- 2480 0d76 3B040000 		.4byte	.LASF169
+ 2480 0d76 E6030000 		.4byte	.LASF169
  2481 0d7a 01       		.byte	0x1
  2482 0d7b 56       		.byte	0x56
  2483 0d7c AE030000 		.4byte	0x3ae
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2487 0d86 07       		.uleb128 0x7
  2488 0d87 42030000 		.4byte	0x342
  2489 0d8b 960D0000 		.4byte	0xd96
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 67
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 67
 
 
  2490 0d8f 08       		.uleb128 0x8
@@ -3966,7 +3966,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2492 0d94 04       		.byte	0x4
  2493 0d95 00       		.byte	0
  2494 0d96 26       		.uleb128 0x26
- 2495 0d97 95020000 		.4byte	.LASF170
+ 2495 0d97 40020000 		.4byte	.LASF170
  2496 0d9b 01       		.byte	0x1
  2497 0d9c 5C       		.byte	0x5c
  2498 0d9d 860D0000 		.4byte	0xd86
@@ -3974,7 +3974,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2500 0da2 03       		.byte	0x3
  2501 0da3 00000000 		.4byte	CapSense_noiseEnvlpLinearSlider0
  2502 0da7 27       		.uleb128 0x27
- 2503 0da8 F4050000 		.4byte	.LASF171
+ 2503 0da8 9F050000 		.4byte	.LASF171
  2504 0dac 01       		.byte	0x1
  2505 0dad 4D       		.byte	0x4d
  2506 0dae 5F070000 		.4byte	0x75f
@@ -3982,7 +3982,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2508 0db3 03       		.byte	0x3
  2509 0db4 00000000 		.4byte	CapSense_dsRam
  2510 0db8 27       		.uleb128 0x27
- 2511 0db9 82010000 		.4byte	.LASF172
+ 2511 0db9 2D010000 		.4byte	.LASF172
  2512 0dbd 01       		.byte	0x1
  2513 0dbe 6C       		.byte	0x6c
  2514 0dbf C90D0000 		.4byte	0xdc9
@@ -4001,7 +4001,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2527 0dde 06       		.uleb128 0x6
  2528 0ddf 95070000 		.4byte	0x795
  2529 0de3 27       		.uleb128 0x27
- 2530 0de4 12050000 		.4byte	.LASF173
+ 2530 0de4 BD040000 		.4byte	.LASF173
  2531 0de8 01       		.byte	0x1
  2532 0de9 A9       		.byte	0xa9
  2533 0dea F40D0000 		.4byte	0xdf4
@@ -4011,14 +4011,14 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2537 0df4 06       		.uleb128 0x6
  2538 0df5 CE0D0000 		.4byte	0xdce
  2539 0df9 27       		.uleb128 0x27
- 2540 0dfa 1A060000 		.4byte	.LASF174
+ 2540 0dfa C5050000 		.4byte	.LASF174
  2541 0dfe 01       		.byte	0x1
  2542 0dff D7       		.byte	0xd7
  2543 0e00 0A0E0000 		.4byte	0xe0a
  2544 0e04 05       		.uleb128 0x5
  2545 0e05 03       		.byte	0x3
  2546 0e06 00000000 		.4byte	CapSense_ramWidgetInit
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 68
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 68
 
 
  2547 0e0a 06       		.uleb128 0x6
@@ -4031,7 +4031,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2554 0e1d 06       		.byte	0x6
  2555 0e1e 00       		.byte	0
  2556 0e1f 28       		.uleb128 0x28
- 2557 0e20 22050000 		.4byte	.LASF175
+ 2557 0e20 CD040000 		.4byte	.LASF175
  2558 0e24 01       		.byte	0x1
  2559 0e25 1001     		.2byte	0x110
  2560 0e27 310E0000 		.4byte	0xe31
@@ -4041,14 +4041,14 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2564 0e31 06       		.uleb128 0x6
  2565 0e32 0F0E0000 		.4byte	0xe0f
  2566 0e36 29       		.uleb128 0x29
- 2567 0e37 81090000 		.4byte	.LASF176
- 2568 0e3b 81090000 		.4byte	.LASF176
+ 2567 0e37 2C090000 		.4byte	.LASF176
+ 2568 0e3b 2C090000 		.4byte	.LASF176
  2569 0e3f 29       		.uleb128 0x29
- 2570 0e40 78020000 		.4byte	.LASF177
- 2571 0e44 78020000 		.4byte	.LASF177
+ 2570 0e40 23020000 		.4byte	.LASF177
+ 2571 0e44 23020000 		.4byte	.LASF177
  2572 0e48 2A       		.uleb128 0x2a
- 2573 0e49 F5080000 		.4byte	.LASF183
- 2574 0e4d F5080000 		.4byte	.LASF183
+ 2573 0e49 A0080000 		.4byte	.LASF183
+ 2574 0e4d A0080000 		.4byte	.LASF183
  2575 0e51 06       		.byte	0x6
  2576 0e52 9203     		.2byte	0x392
  2577 0e54 00       		.byte	0
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2601 0015 00       		.byte	0
  2602 0016 0B       		.uleb128 0xb
  2603 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 69
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 69
 
 
  2604 0018 3E       		.uleb128 0x3e
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2658 004e 21       		.uleb128 0x21
  2659 004f 00       		.byte	0
  2660 0050 49       		.uleb128 0x49
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 70
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 70
 
 
  2661 0051 13       		.uleb128 0x13
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2715 0087 0B       		.uleb128 0xb
  2716 0088 3B       		.uleb128 0x3b
  2717 0089 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 71
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 71
 
 
  2718 008a 01       		.uleb128 0x1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2772 00c0 11       		.uleb128 0x11
  2773 00c1 28       		.uleb128 0x28
  2774 00c2 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 72
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 72
 
 
  2775 00c3 03       		.uleb128 0x3
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2829 00f9 49       		.uleb128 0x49
  2830 00fa 13       		.uleb128 0x13
  2831 00fb 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 73
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 73
 
 
  2832 00fc 00       		.byte	0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2886 0133 05       		.uleb128 0x5
  2887 0134 49       		.uleb128 0x49
  2888 0135 13       		.uleb128 0x13
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 74
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 74
 
 
  2889 0136 02       		.uleb128 0x2
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  2943 016f 00       		.byte	0
  2944 0170 1D       		.uleb128 0x1d
  2945 0171 8A8201   		.uleb128 0x410a
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 75
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 75
 
 
  2946 0174 00       		.byte	0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3000 01ae 02       		.uleb128 0x2
  3001 01af 18       		.uleb128 0x18
  3002 01b0 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 76
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 76
 
 
  3003 01b1 00       		.byte	0
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3057 01e7 49       		.uleb128 0x49
  3058 01e8 13       		.uleb128 0x13
  3059 01e9 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 77
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 77
 
 
  3060 01ea 00       		.byte	0
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3114 0220 19       		.uleb128 0x19
  3115 0221 3C       		.uleb128 0x3c
  3116 0222 19       		.uleb128 0x19
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 78
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 78
 
 
  3117 0223 6E       		.uleb128 0x6e
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3171 0043 9F       		.byte	0x9f
  3172 0044 4E000000 		.4byte	.LVL5
  3173 0048 70000000 		.4byte	.LVL7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 79
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 79
 
 
  3174 004c 0100     		.2byte	0x1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3228 00da 9F       		.byte	0x9f
  3229 00db 00000000 		.4byte	0
  3230 00df 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 80
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 80
 
 
  3231              	.LLST4:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3285 0170 0100     		.2byte	0x1
  3286 0172 55       		.byte	0x55
  3287 0173 56000000 		.4byte	.LVL38
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 81
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 81
 
 
  3288 0177 68000000 		.4byte	.LFE47
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3342 0200 34000000 		.4byte	.LVL45
  3343 0204 0400     		.2byte	0x4
  3344 0206 F3       		.byte	0xf3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 82
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 82
 
 
  3345 0207 01       		.uleb128 0x1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3399              	.LLST15:
  3400 028c 00000000 		.4byte	.LVL50
  3401 0290 06000000 		.4byte	.LVL51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 83
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 83
 
 
  3402 0294 0200     		.2byte	0x2
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3456 031a 0200     		.2byte	0x2
  3457 031c 30       		.byte	0x30
  3458 031d 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 84
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 84
 
 
  3459 031e 1E000000 		.4byte	.LVL59
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3513 03a3 0200     		.2byte	0x2
  3514 03a5 30       		.byte	0x30
  3515 03a6 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 85
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 85
 
 
  3516 03a7 26000000 		.4byte	.LVL66
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3570 042a 2A000000 		.4byte	.LVL74
  3571 042e 0400     		.2byte	0x4
  3572 0430 0A       		.byte	0xa
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 86
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 86
 
 
  3573 0431 FFFF     		.2byte	0xffff
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3627 002c 24000000 		.4byte	.LFE50
  3628 0030 00000000 		.4byte	.LFB51
  3629 0034 30000000 		.4byte	.LFE51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 87
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 87
 
 
  3630 0038 00000000 		.4byte	.LFB52
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3656      5F56315F 
  3656      54797065 
  3656      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 88
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 88
 
 
  3657              	.LASF71:
@@ -5249,790 +5249,790 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 1
  3666      6720756E 
  3666      7369676E 
  3666      65642069 
- 3667              	.LASF180:
- 3668 00e6 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Desktop\\Communicatio"
- 3668      73657273 
- 3668      5C4D6174 
- 3668      68696575 
- 3668      5C4F6E65 
- 3669 0114 6E5C576F 		.ascii	"n\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
- 3669      726B7370 
- 3669      61636550 
- 3669      726F6A65 
- 3669      74324571 
- 3670              	.LASF121:
- 3671 013b 70747232 		.ascii	"ptr2SnsFlash\000"
- 3671      536E7346 
- 3671      6C617368 
- 3671      00
- 3672              	.LASF48:
- 3673 0148 63795F73 		.ascii	"cy_status\000"
- 3673      74617475 
- 3673      7300
- 3674              	.LASF94:
- 3675 0152 64696666 		.ascii	"diff\000"
- 3675      00
- 3676              	.LASF53:
- 3677 0157 43617053 		.ascii	"CapSense_LOW_BSLN_RST_TYPE\000"
- 3677      656E7365 
- 3677      5F4C4F57 
- 3677      5F42534C 
- 3677      4E5F5253 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 89
+ 3667              	.LASF121:
+ 3668 00e6 70747232 		.ascii	"ptr2SnsFlash\000"
+ 3668      536E7346 
+ 3668      6C617368 
+ 3668      00
+ 3669              	.LASF48:
+ 3670 00f3 63795F73 		.ascii	"cy_status\000"
+ 3670      74617475 
+ 3670      7300
+ 3671              	.LASF94:
+ 3672 00fd 64696666 		.ascii	"diff\000"
+ 3672      00
+ 3673              	.LASF53:
+ 3674 0102 43617053 		.ascii	"CapSense_LOW_BSLN_RST_TYPE\000"
+ 3674      656E7365 
+ 3674      5F4C4F57 
+ 3674      5F42534C 
+ 3674      4E5F5253 
+ 3675              	.LASF114:
+ 3676 011d 736E7254 		.ascii	"snrTestSensorId\000"
+ 3676      65737453 
+ 3676      656E736F 
+ 3676      72496400 
+ 3677              	.LASF172:
+ 3678 012d 43617053 		.ascii	"CapSense_dsFlash\000"
+ 3678      656E7365 
+ 3678      5F647346 
+ 3678      6C617368 
+ 3678      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 89
 
 
- 3678              	.LASF114:
- 3679 0172 736E7254 		.ascii	"snrTestSensorId\000"
- 3679      65737453 
- 3679      656E736F 
- 3679      72496400 
- 3680              	.LASF172:
- 3681 0182 43617053 		.ascii	"CapSense_dsFlash\000"
- 3681      656E7365 
- 3681      5F647346 
- 3681      6C617368 
- 3681      00
- 3682              	.LASF52:
- 3683 0193 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
- 3683      656E7365 
- 3683      5F544852 
- 3683      4553484F 
- 3683      4C445F54 
- 3684              	.LASF149:
- 3685 01ab 77646774 		.ascii	"wdgtId\000"
- 3685      496400
- 3686              	.LASF63:
- 3687 01b2 43617053 		.ascii	"CapSense_WD_LINEAR_SLIDER_E\000"
- 3687      656E7365 
- 3687      5F57445F 
- 3687      4C494E45 
- 3687      41525F53 
- 3688              	.LASF24:
- 3689 01ce 494E5452 		.ascii	"INTR_CFG\000"
- 3689      5F434647 
- 3689      00
- 3690              	.LASF9:
- 3691 01d7 6C6F6E67 		.ascii	"long long int\000"
- 3691      206C6F6E 
- 3691      6720696E 
- 3691      7400
- 3692              	.LASF0:
- 3693 01e5 7369676E 		.ascii	"signed char\000"
- 3693      65642063 
- 3693      68617200 
- 3694              	.LASF90:
- 3695 01f1 62757474 		.ascii	"button0\000"
- 3695      6F6E3000 
- 3696              	.LASF89:
- 3697 01f9 62757474 		.ascii	"button1\000"
- 3697      6F6E3100 
- 3698              	.LASF118:
- 3699 0201 70635074 		.ascii	"pcPtr\000"
- 3699      7200
- 3700              	.LASF161:
- 3701 0207 7764576F 		.ascii	"wdWord\000"
- 3701      726400
- 3702              	.LASF107:
- 3703 020e 736E7353 		.ascii	"snsStatus\000"
- 3703      74617475 
- 3703      7300
- 3704              	.LASF6:
- 3705 0218 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 90
+ 3679              	.LASF52:
+ 3680 013e 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
+ 3680      656E7365 
+ 3680      5F544852 
+ 3680      4553484F 
+ 3680      4C445F54 
+ 3681              	.LASF149:
+ 3682 0156 77646774 		.ascii	"wdgtId\000"
+ 3682      496400
+ 3683              	.LASF63:
+ 3684 015d 43617053 		.ascii	"CapSense_WD_LINEAR_SLIDER_E\000"
+ 3684      656E7365 
+ 3684      5F57445F 
+ 3684      4C494E45 
+ 3684      41525F53 
+ 3685              	.LASF24:
+ 3686 0179 494E5452 		.ascii	"INTR_CFG\000"
+ 3686      5F434647 
+ 3686      00
+ 3687              	.LASF9:
+ 3688 0182 6C6F6E67 		.ascii	"long long int\000"
+ 3688      206C6F6E 
+ 3688      6720696E 
+ 3688      7400
+ 3689              	.LASF0:
+ 3690 0190 7369676E 		.ascii	"signed char\000"
+ 3690      65642063 
+ 3690      68617200 
+ 3691              	.LASF90:
+ 3692 019c 62757474 		.ascii	"button0\000"
+ 3692      6F6E3000 
+ 3693              	.LASF89:
+ 3694 01a4 62757474 		.ascii	"button1\000"
+ 3694      6F6E3100 
+ 3695              	.LASF118:
+ 3696 01ac 70635074 		.ascii	"pcPtr\000"
+ 3696      7200
+ 3697              	.LASF161:
+ 3698 01b2 7764576F 		.ascii	"wdWord\000"
+ 3698      726400
+ 3699              	.LASF107:
+ 3700 01b9 736E7353 		.ascii	"snsStatus\000"
+ 3700      74617475 
+ 3700      7300
+ 3701              	.LASF6:
+ 3702 01c3 6C6F6E67 		.ascii	"long int\000"
+ 3702      20696E74 
+ 3702      00
+ 3703              	.LASF179:
+ 3704 01cc 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Structure.c\000"
+ 3704      72617465 
+ 3704      645F536F 
+ 3704      75726365 
+ 3704      5C50536F 
+ 3705              	.LASF83:
+ 3706 01f8 66696E67 		.ascii	"fingerCap\000"
+ 3706      65724361 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 90
 
 
- 3705      20696E74 
- 3705      00
- 3706              	.LASF179:
- 3707 0221 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Structure.c\000"
- 3707      72617465 
- 3707      645F536F 
- 3707      75726365 
- 3707      5C50536F 
- 3708              	.LASF83:
- 3709 024d 66696E67 		.ascii	"fingerCap\000"
- 3709      65724361 
- 3709      7000
- 3710              	.LASF109:
- 3711 0257 6D6F6443 		.ascii	"modCsdClk\000"
- 3711      7364436C 
- 3711      6B00
- 3712              	.LASF123:
- 3713 0261 70747232 		.ascii	"ptr2SnsRam\000"
- 3713      536E7352 
- 3713      616D00
- 3714              	.LASF132:
- 3715 026c 78526573 		.ascii	"xResolution\000"
- 3715      6F6C7574 
- 3715      696F6E00 
- 3716              	.LASF177:
- 3717 0278 6D656D63 		.ascii	"memcpy\000"
- 3717      707900
- 3718              	.LASF49:
- 3719 027f 75696E74 		.ascii	"uint8\000"
- 3719      3800
- 3720              	.LASF13:
- 3721 0285 75696E74 		.ascii	"uint16_t\000"
- 3721      31365F74 
- 3721      00
- 3722              	.LASF47:
- 3723 028e 646F7562 		.ascii	"double\000"
- 3723      6C6500
- 3724              	.LASF170:
- 3725 0295 43617053 		.ascii	"CapSense_noiseEnvlpLinearSlider0\000"
- 3725      656E7365 
- 3725      5F6E6F69 
- 3725      7365456E 
- 3725      766C704C 
- 3726              	.LASF116:
- 3727 02b6 736E7254 		.ascii	"snrTestRawCount\000"
- 3727      65737452 
- 3727      6177436F 
- 3727      756E7400 
- 3728              	.LASF164:
- 3729 02c6 73656E73 		.ascii	"sensorId\000"
- 3729      6F724964 
- 3729      00
- 3730              	.LASF5:
- 3731 02cf 73686F72 		.ascii	"short unsigned int\000"
- 3731      7420756E 
- 3731      7369676E 
- 3731      65642069 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 91
+ 3706      7000
+ 3707              	.LASF109:
+ 3708 0202 6D6F6443 		.ascii	"modCsdClk\000"
+ 3708      7364436C 
+ 3708      6B00
+ 3709              	.LASF123:
+ 3710 020c 70747232 		.ascii	"ptr2SnsRam\000"
+ 3710      536E7352 
+ 3710      616D00
+ 3711              	.LASF132:
+ 3712 0217 78526573 		.ascii	"xResolution\000"
+ 3712      6F6C7574 
+ 3712      696F6E00 
+ 3713              	.LASF177:
+ 3714 0223 6D656D63 		.ascii	"memcpy\000"
+ 3714      707900
+ 3715              	.LASF49:
+ 3716 022a 75696E74 		.ascii	"uint8\000"
+ 3716      3800
+ 3717              	.LASF13:
+ 3718 0230 75696E74 		.ascii	"uint16_t\000"
+ 3718      31365F74 
+ 3718      00
+ 3719              	.LASF47:
+ 3720 0239 646F7562 		.ascii	"double\000"
+ 3720      6C6500
+ 3721              	.LASF170:
+ 3722 0240 43617053 		.ascii	"CapSense_noiseEnvlpLinearSlider0\000"
+ 3722      656E7365 
+ 3722      5F6E6F69 
+ 3722      7365456E 
+ 3722      766C704C 
+ 3723              	.LASF116:
+ 3724 0261 736E7254 		.ascii	"snrTestRawCount\000"
+ 3724      65737452 
+ 3724      6177436F 
+ 3724      756E7400 
+ 3725              	.LASF164:
+ 3726 0271 73656E73 		.ascii	"sensorId\000"
+ 3726      6F724964 
+ 3726      00
+ 3727              	.LASF5:
+ 3728 027a 73686F72 		.ascii	"short unsigned int\000"
+ 3728      7420756E 
+ 3728      7369676E 
+ 3728      65642069 
+ 3728      6E7400
+ 3729              	.LASF51:
+ 3730 028d 75696E74 		.ascii	"uint32\000"
+ 3730      333200
+ 3731              	.LASF77:
+ 3732 0294 68797374 		.ascii	"hysteresis\000"
+ 3732      65726573 
+ 3732      697300
+ 3733              	.LASF7:
+ 3734 029f 5F5F7569 		.ascii	"__uint32_t\000"
+ 3734      6E743332 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 91
 
 
- 3731      6E7400
- 3732              	.LASF51:
- 3733 02e2 75696E74 		.ascii	"uint32\000"
- 3733      333200
- 3734              	.LASF77:
- 3735 02e9 68797374 		.ascii	"hysteresis\000"
- 3735      65726573 
- 3735      697300
- 3736              	.LASF7:
- 3737 02f4 5F5F7569 		.ascii	"__uint32_t\000"
- 3737      6E743332 
- 3737      5F7400
- 3738              	.LASF93:
- 3739 02ff 62736C6E 		.ascii	"bslnExt\000"
- 3739      45787400 
- 3740              	.LASF72:
- 3741 0307 43617053 		.ascii	"CapSense_SENSE_METHOD_BIST_E\000"
- 3741      656E7365 
- 3741      5F53454E 
- 3741      53455F4D 
- 3741      4554484F 
- 3742              	.LASF131:
- 3743 0324 6E756D52 		.ascii	"numRows\000"
- 3743      6F777300 
- 3744              	.LASF106:
- 3745 032c 77646774 		.ascii	"wdgtStatus\000"
- 3745      53746174 
- 3745      757300
- 3746              	.LASF65:
- 3747 0337 43617053 		.ascii	"CapSense_WD_MATRIX_BUTTON_E\000"
- 3747      656E7365 
- 3747      5F57445F 
- 3747      4D415452 
- 3747      49585F42 
- 3748              	.LASF153:
- 3749 0353 76616C75 		.ascii	"value\000"
- 3749      6500
- 3750              	.LASF112:
- 3751 0359 736E734C 		.ascii	"snsList\000"
- 3751      69737400 
- 3752              	.LASF151:
- 3753 0361 70747246 		.ascii	"ptrFlashWdgt\000"
- 3753      6C617368 
- 3753      57646774 
- 3753      00
- 3754              	.LASF11:
- 3755 036e 756E7369 		.ascii	"unsigned int\000"
- 3755      676E6564 
- 3755      20696E74 
- 3755      00
- 3756              	.LASF91:
- 3757 037b 43617053 		.ascii	"CapSense_RAM_WD_LIST_STRUCT\000"
- 3757      656E7365 
- 3757      5F52414D 
- 3757      5F57445F 
- 3757      4C495354 
- 3758              	.LASF19:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 92
+ 3734      5F7400
+ 3735              	.LASF93:
+ 3736 02aa 62736C6E 		.ascii	"bslnExt\000"
+ 3736      45787400 
+ 3737              	.LASF72:
+ 3738 02b2 43617053 		.ascii	"CapSense_SENSE_METHOD_BIST_E\000"
+ 3738      656E7365 
+ 3738      5F53454E 
+ 3738      53455F4D 
+ 3738      4554484F 
+ 3739              	.LASF131:
+ 3740 02cf 6E756D52 		.ascii	"numRows\000"
+ 3740      6F777300 
+ 3741              	.LASF106:
+ 3742 02d7 77646774 		.ascii	"wdgtStatus\000"
+ 3742      53746174 
+ 3742      757300
+ 3743              	.LASF65:
+ 3744 02e2 43617053 		.ascii	"CapSense_WD_MATRIX_BUTTON_E\000"
+ 3744      656E7365 
+ 3744      5F57445F 
+ 3744      4D415452 
+ 3744      49585F42 
+ 3745              	.LASF153:
+ 3746 02fe 76616C75 		.ascii	"value\000"
+ 3746      6500
+ 3747              	.LASF112:
+ 3748 0304 736E734C 		.ascii	"snsList\000"
+ 3748      69737400 
+ 3749              	.LASF151:
+ 3750 030c 70747246 		.ascii	"ptrFlashWdgt\000"
+ 3750      6C617368 
+ 3750      57646774 
+ 3750      00
+ 3751              	.LASF11:
+ 3752 0319 756E7369 		.ascii	"unsigned int\000"
+ 3752      676E6564 
+ 3752      20696E74 
+ 3752      00
+ 3753              	.LASF91:
+ 3754 0326 43617053 		.ascii	"CapSense_RAM_WD_LIST_STRUCT\000"
+ 3754      656E7365 
+ 3754      5F52414D 
+ 3754      5F57445F 
+ 3754      4C495354 
+ 3755              	.LASF19:
+ 3756 0342 4F55545F 		.ascii	"OUT_INV\000"
+ 3756      494E5600 
+ 3757              	.LASF85:
+ 3758 034a 706F7369 		.ascii	"position\000"
+ 3758      74696F6E 
+ 3758      00
+ 3759              	.LASF113:
+ 3760 0353 736E7254 		.ascii	"snrTestWidgetId\000"
+ 3760      65737457 
+ 3760      69646765 
+ 3760      74496400 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 92
 
 
- 3759 0397 4F55545F 		.ascii	"OUT_INV\000"
- 3759      494E5600 
- 3760              	.LASF85:
- 3761 039f 706F7369 		.ascii	"position\000"
- 3761      74696F6E 
- 3761      00
- 3762              	.LASF113:
- 3763 03a8 736E7254 		.ascii	"snrTestWidgetId\000"
- 3763      65737457 
- 3763      69646765 
- 3763      74496400 
- 3764              	.LASF134:
- 3765 03b8 70747232 		.ascii	"ptr2NoiseEnvlp\000"
- 3765      4E6F6973 
- 3765      65456E76 
- 3765      6C7000
- 3766              	.LASF8:
- 3767 03c7 6C6F6E67 		.ascii	"long unsigned int\000"
- 3767      20756E73 
- 3767      69676E65 
- 3767      6420696E 
- 3767      7400
- 3768              	.LASF105:
- 3769 03d9 77646774 		.ascii	"wdgtEnable\000"
- 3769      456E6162 
- 3769      6C6500
- 3770              	.LASF25:
- 3771 03e4 4346475F 		.ascii	"CFG_IN\000"
- 3771      494E00
- 3772              	.LASF129:
- 3773 03eb 73656E73 		.ascii	"senseMethod\000"
- 3773      654D6574 
- 3773      686F6400 
- 3774              	.LASF79:
- 3775 03f7 6C6F7742 		.ascii	"lowBslnRst\000"
- 3775      736C6E52 
- 3775      737400
- 3776              	.LASF40:
- 3777 0402 5644445F 		.ascii	"VDD_INTR_SET\000"
- 3777      494E5452 
- 3777      5F534554 
- 3777      00
- 3778              	.LASF150:
- 3779 040f 70747253 		.ascii	"ptrSnsTmp\000"
- 3779      6E73546D 
- 3779      7000
- 3780              	.LASF182:
- 3781 0419 43617053 		.ascii	"CapSense_DsInitialize\000"
- 3781      656E7365 
- 3781      5F447349 
- 3781      6E697469 
- 3781      616C697A 
- 3782              	.LASF22:
- 3783 042f 494E5452 		.ascii	"INTR_MASKED\000"
- 3783      5F4D4153 
- 3783      4B454400 
- 3784              	.LASF169:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 93
+ 3761              	.LASF134:
+ 3762 0363 70747232 		.ascii	"ptr2NoiseEnvlp\000"
+ 3762      4E6F6973 
+ 3762      65456E76 
+ 3762      6C7000
+ 3763              	.LASF8:
+ 3764 0372 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3764      20756E73 
+ 3764      69676E65 
+ 3764      6420696E 
+ 3764      7400
+ 3765              	.LASF105:
+ 3766 0384 77646774 		.ascii	"wdgtEnable\000"
+ 3766      456E6162 
+ 3766      6C6500
+ 3767              	.LASF25:
+ 3768 038f 4346475F 		.ascii	"CFG_IN\000"
+ 3768      494E00
+ 3769              	.LASF129:
+ 3770 0396 73656E73 		.ascii	"senseMethod\000"
+ 3770      654D6574 
+ 3770      686F6400 
+ 3771              	.LASF79:
+ 3772 03a2 6C6F7742 		.ascii	"lowBslnRst\000"
+ 3772      736C6E52 
+ 3772      737400
+ 3773              	.LASF40:
+ 3774 03ad 5644445F 		.ascii	"VDD_INTR_SET\000"
+ 3774      494E5452 
+ 3774      5F534554 
+ 3774      00
+ 3775              	.LASF150:
+ 3776 03ba 70747253 		.ascii	"ptrSnsTmp\000"
+ 3776      6E73546D 
+ 3776      7000
+ 3777              	.LASF182:
+ 3778 03c4 43617053 		.ascii	"CapSense_DsInitialize\000"
+ 3778      656E7365 
+ 3778      5F447349 
+ 3778      6E697469 
+ 3778      616C697A 
+ 3779              	.LASF22:
+ 3780 03da 494E5452 		.ascii	"INTR_MASKED\000"
+ 3780      5F4D4153 
+ 3780      4B454400 
+ 3781              	.LASF169:
+ 3782 03e6 43617053 		.ascii	"CapSense_debounceButton0\000"
+ 3782      656E7365 
+ 3782      5F646562 
+ 3782      6F756E63 
+ 3782      65427574 
+ 3783              	.LASF168:
+ 3784 03ff 43617053 		.ascii	"CapSense_debounceButton1\000"
+ 3784      656E7365 
+ 3784      5F646562 
+ 3784      6F756E63 
+ 3784      65427574 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 93
 
 
- 3785 043b 43617053 		.ascii	"CapSense_debounceButton0\000"
- 3785      656E7365 
- 3785      5F646562 
- 3785      6F756E63 
- 3785      65427574 
- 3786              	.LASF168:
- 3787 0454 43617053 		.ascii	"CapSense_debounceButton1\000"
- 3787      656E7365 
- 3787      5F646562 
- 3787      6F756E63 
- 3787      65427574 
- 3788              	.LASF69:
- 3789 046d 43617053 		.ascii	"CapSense_UNDEFINED_E\000"
- 3789      656E7365 
- 3789      5F554E44 
- 3789      4546494E 
- 3789      45445F45 
- 3790              	.LASF143:
- 3791 0482 74797065 		.ascii	"type\000"
- 3791      00
- 3792              	.LASF99:
- 3793 0487 636F6E66 		.ascii	"configId\000"
- 3793      69674964 
- 3793      00
- 3794              	.LASF163:
- 3795 0490 43617053 		.ascii	"CapSense_IsSensorActive\000"
- 3795      656E7365 
- 3795      5F497353 
- 3795      656E736F 
- 3795      72416374 
- 3796              	.LASF44:
- 3797 04a8 63686172 		.ascii	"char_t\000"
- 3797      5F7400
- 3798              	.LASF108:
- 3799 04af 63736430 		.ascii	"csd0Config\000"
- 3799      436F6E66 
- 3799      696700
- 3800              	.LASF122:
- 3801 04ba 70747232 		.ascii	"ptr2WdgtRam\000"
- 3801      57646774 
- 3801      52616D00 
- 3802              	.LASF2:
- 3803 04c6 73686F72 		.ascii	"short int\000"
- 3803      7420696E 
- 3803      7400
- 3804              	.LASF160:
- 3805 04d0 43617053 		.ascii	"CapSense_IsAnyWidgetActive\000"
- 3805      656E7365 
- 3805      5F497341 
- 3805      6E795769 
- 3805      64676574 
- 3806              	.LASF100:
- 3807 04eb 64657669 		.ascii	"deviceId\000"
- 3807      63654964 
- 3807      00
- 3808              	.LASF87:
- 3809 04f4 43617053 		.ascii	"CapSense_RAM_WD_BUTTON_STRUCT\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 94
+ 3785              	.LASF69:
+ 3786 0418 43617053 		.ascii	"CapSense_UNDEFINED_E\000"
+ 3786      656E7365 
+ 3786      5F554E44 
+ 3786      4546494E 
+ 3786      45445F45 
+ 3787              	.LASF143:
+ 3788 042d 74797065 		.ascii	"type\000"
+ 3788      00
+ 3789              	.LASF99:
+ 3790 0432 636F6E66 		.ascii	"configId\000"
+ 3790      69674964 
+ 3790      00
+ 3791              	.LASF163:
+ 3792 043b 43617053 		.ascii	"CapSense_IsSensorActive\000"
+ 3792      656E7365 
+ 3792      5F497353 
+ 3792      656E736F 
+ 3792      72416374 
+ 3793              	.LASF44:
+ 3794 0453 63686172 		.ascii	"char_t\000"
+ 3794      5F7400
+ 3795              	.LASF108:
+ 3796 045a 63736430 		.ascii	"csd0Config\000"
+ 3796      436F6E66 
+ 3796      696700
+ 3797              	.LASF122:
+ 3798 0465 70747232 		.ascii	"ptr2WdgtRam\000"
+ 3798      57646774 
+ 3798      52616D00 
+ 3799              	.LASF2:
+ 3800 0471 73686F72 		.ascii	"short int\000"
+ 3800      7420696E 
+ 3800      7400
+ 3801              	.LASF160:
+ 3802 047b 43617053 		.ascii	"CapSense_IsAnyWidgetActive\000"
+ 3802      656E7365 
+ 3802      5F497341 
+ 3802      6E795769 
+ 3802      64676574 
+ 3803              	.LASF100:
+ 3804 0496 64657669 		.ascii	"deviceId\000"
+ 3804      63654964 
+ 3804      00
+ 3805              	.LASF87:
+ 3806 049f 43617053 		.ascii	"CapSense_RAM_WD_BUTTON_STRUCT\000"
+ 3806      656E7365 
+ 3806      5F52414D 
+ 3806      5F57445F 
+ 3806      42555454 
+ 3807              	.LASF173:
+ 3808 04bd 43617053 		.ascii	"CapSense_ioList\000"
+ 3808      656E7365 
+ 3808      5F696F4C 
+ 3808      69737400 
+ 3809              	.LASF175:
+ 3810 04cd 43617053 		.ascii	"CapSense_ramIdacInit\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 94
 
 
- 3809      656E7365 
- 3809      5F52414D 
- 3809      5F57445F 
- 3809      42555454 
- 3810              	.LASF173:
- 3811 0512 43617053 		.ascii	"CapSense_ioList\000"
- 3811      656E7365 
- 3811      5F696F4C 
- 3811      69737400 
- 3812              	.LASF175:
- 3813 0522 43617053 		.ascii	"CapSense_ramIdacInit\000"
- 3813      656E7365 
- 3813      5F72616D 
- 3813      49646163 
- 3813      496E6974 
- 3814              	.LASF140:
- 3815 0537 77696467 		.ascii	"widgetId\000"
- 3815      65744964 
- 3815      00
- 3816              	.LASF23:
- 3817 0540 494E5452 		.ascii	"INTR_SET\000"
- 3817      5F534554 
- 3817      00
- 3818              	.LASF166:
- 3819 0549 7764536C 		.ascii	"wdSlider\000"
- 3819      69646572 
- 3819      00
- 3820              	.LASF80:
- 3821 0552 69646163 		.ascii	"idacMod\000"
- 3821      4D6F6400 
- 3822              	.LASF36:
- 3823 055a 5644445F 		.ascii	"VDD_ACTIVE\000"
- 3823      41435449 
- 3823      564500
- 3824              	.LASF86:
- 3825 0565 43617053 		.ascii	"CapSense_RAM_WD_SLIDER_STRUCT\000"
- 3825      656E7365 
- 3825      5F52414D 
- 3825      5F57445F 
- 3825      534C4944 
- 3826              	.LASF130:
- 3827 0583 6E756D43 		.ascii	"numCols\000"
- 3827      6F6C7300 
- 3828              	.LASF16:
- 3829 058b 73697A65 		.ascii	"sizetype\000"
- 3829      74797065 
- 3829      00
- 3830              	.LASF126:
- 3831 0594 73746174 		.ascii	"staticConfig\000"
- 3831      6963436F 
- 3831      6E666967 
- 3831      00
- 3832              	.LASF76:
- 3833 05a1 6E4E6F69 		.ascii	"nNoiseTh\000"
- 3833      73655468 
- 3833      00
- 3834              	.LASF84:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 95
+ 3810      656E7365 
+ 3810      5F72616D 
+ 3810      49646163 
+ 3810      496E6974 
+ 3811              	.LASF140:
+ 3812 04e2 77696467 		.ascii	"widgetId\000"
+ 3812      65744964 
+ 3812      00
+ 3813              	.LASF23:
+ 3814 04eb 494E5452 		.ascii	"INTR_SET\000"
+ 3814      5F534554 
+ 3814      00
+ 3815              	.LASF166:
+ 3816 04f4 7764536C 		.ascii	"wdSlider\000"
+ 3816      69646572 
+ 3816      00
+ 3817              	.LASF80:
+ 3818 04fd 69646163 		.ascii	"idacMod\000"
+ 3818      4D6F6400 
+ 3819              	.LASF36:
+ 3820 0505 5644445F 		.ascii	"VDD_ACTIVE\000"
+ 3820      41435449 
+ 3820      564500
+ 3821              	.LASF86:
+ 3822 0510 43617053 		.ascii	"CapSense_RAM_WD_SLIDER_STRUCT\000"
+ 3822      656E7365 
+ 3822      5F52414D 
+ 3822      5F57445F 
+ 3822      534C4944 
+ 3823              	.LASF130:
+ 3824 052e 6E756D43 		.ascii	"numCols\000"
+ 3824      6F6C7300 
+ 3825              	.LASF16:
+ 3826 0536 73697A65 		.ascii	"sizetype\000"
+ 3826      74797065 
+ 3826      00
+ 3827              	.LASF126:
+ 3828 053f 73746174 		.ascii	"staticConfig\000"
+ 3828      6963436F 
+ 3828      6E666967 
+ 3828      00
+ 3829              	.LASF76:
+ 3830 054c 6E4E6F69 		.ascii	"nNoiseTh\000"
+ 3830      73655468 
+ 3830      00
+ 3831              	.LASF84:
+ 3832 0555 73696750 		.ascii	"sigPFC\000"
+ 3832      464300
+ 3833              	.LASF41:
+ 3834 055c 4750494F 		.ascii	"GPIO_V1_Type\000"
+ 3834      5F56315F 
+ 3834      54797065 
+ 3834      00
+ 3835              	.LASF101:
+ 3836 0569 6877436C 		.ascii	"hwClock\000"
+ 3836      6F636B00 
+ 3837              	.LASF128:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 95
 
 
- 3835 05aa 73696750 		.ascii	"sigPFC\000"
- 3835      464300
- 3836              	.LASF41:
- 3837 05b1 4750494F 		.ascii	"GPIO_V1_Type\000"
- 3837      5F56315F 
- 3837      54797065 
- 3837      00
- 3838              	.LASF101:
- 3839 05be 6877436C 		.ascii	"hwClock\000"
- 3839      6F636B00 
- 3840              	.LASF128:
- 3841 05c6 77646774 		.ascii	"wdgtType\000"
- 3841      54797065 
- 3841      00
- 3842              	.LASF133:
- 3843 05cf 7843656E 		.ascii	"xCentroidMultiplier\000"
- 3843      74726F69 
- 3843      644D756C 
- 3843      7469706C 
- 3843      69657200 
- 3844              	.LASF20:
- 3845 05e3 494E5452 		.ascii	"INTR\000"
- 3845      00
- 3846              	.LASF103:
- 3847 05e8 7363616E 		.ascii	"scanCounter\000"
- 3847      436F756E 
- 3847      74657200 
- 3848              	.LASF171:
- 3849 05f4 43617053 		.ascii	"CapSense_dsRam\000"
- 3849      656E7365 
- 3849      5F647352 
- 3849      616D00
- 3850              	.LASF17:
- 3851 0603 4F55545F 		.ascii	"OUT_CLR\000"
- 3851      434C5200 
- 3852              	.LASF102:
- 3853 060b 74756E65 		.ascii	"tunerCmd\000"
- 3853      72436D64 
- 3853      00
- 3854              	.LASF46:
- 3855 0614 666C6F61 		.ascii	"float\000"
- 3855      7400
- 3856              	.LASF174:
- 3857 061a 43617053 		.ascii	"CapSense_ramWidgetInit\000"
- 3857      656E7365 
- 3857      5F72616D 
- 3857      57696467 
- 3857      6574496E 
- 3858              	.LASF64:
- 3859 0631 43617053 		.ascii	"CapSense_WD_RADIAL_SLIDER_E\000"
- 3859      656E7365 
- 3859      5F57445F 
- 3859      52414449 
- 3859      414C5F53 
- 3860              	.LASF61:
- 3861 064d 534D4152 		.ascii	"SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT\000"
- 3861      5453454E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 96
+ 3838 0571 77646774 		.ascii	"wdgtType\000"
+ 3838      54797065 
+ 3838      00
+ 3839              	.LASF133:
+ 3840 057a 7843656E 		.ascii	"xCentroidMultiplier\000"
+ 3840      74726F69 
+ 3840      644D756C 
+ 3840      7469706C 
+ 3840      69657200 
+ 3841              	.LASF20:
+ 3842 058e 494E5452 		.ascii	"INTR\000"
+ 3842      00
+ 3843              	.LASF103:
+ 3844 0593 7363616E 		.ascii	"scanCounter\000"
+ 3844      436F756E 
+ 3844      74657200 
+ 3845              	.LASF171:
+ 3846 059f 43617053 		.ascii	"CapSense_dsRam\000"
+ 3846      656E7365 
+ 3846      5F647352 
+ 3846      616D00
+ 3847              	.LASF17:
+ 3848 05ae 4F55545F 		.ascii	"OUT_CLR\000"
+ 3848      434C5200 
+ 3849              	.LASF102:
+ 3850 05b6 74756E65 		.ascii	"tunerCmd\000"
+ 3850      72436D64 
+ 3850      00
+ 3851              	.LASF46:
+ 3852 05bf 666C6F61 		.ascii	"float\000"
+ 3852      7400
+ 3853              	.LASF174:
+ 3854 05c5 43617053 		.ascii	"CapSense_ramWidgetInit\000"
+ 3854      656E7365 
+ 3854      5F72616D 
+ 3854      57696467 
+ 3854      6574496E 
+ 3855              	.LASF64:
+ 3856 05dc 43617053 		.ascii	"CapSense_WD_RADIAL_SLIDER_E\000"
+ 3856      656E7365 
+ 3856      5F57445F 
+ 3856      52414449 
+ 3856      414C5F53 
+ 3857              	.LASF61:
+ 3858 05f8 534D4152 		.ascii	"SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT\000"
+ 3858      5453454E 
+ 3858      53455F43 
+ 3858      53445F4E 
+ 3858      4F495345 
+ 3859              	.LASF27:
+ 3860 061d 4346475F 		.ascii	"CFG_SIO\000"
+ 3860      53494F00 
+ 3861              	.LASF30:
+ 3862 0625 52455345 		.ascii	"RESERVED1\000"
+ 3862      52564544 
+ 3862      3100
+ 3863              	.LASF98:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 96
 
 
- 3861      53455F43 
- 3861      53445F4E 
- 3861      4F495345 
- 3862              	.LASF27:
- 3863 0672 4346475F 		.ascii	"CFG_SIO\000"
- 3863      53494F00 
- 3864              	.LASF30:
- 3865 067a 52455345 		.ascii	"RESERVED1\000"
- 3865      52564544 
- 3865      3100
- 3866              	.LASF98:
- 3867 0684 43617053 		.ascii	"CapSense_RAM_SNS_LIST_STRUCT\000"
- 3867      656E7365 
- 3867      5F52414D 
- 3867      5F534E53 
- 3867      5F4C4953 
- 3868              	.LASF119:
- 3869 06a1 70696E4E 		.ascii	"pinNumber\000"
- 3869      756D6265 
- 3869      7200
- 3870              	.LASF117:
- 3871 06ab 43617053 		.ascii	"CapSense_RAM_STRUCT\000"
- 3871      656E7365 
- 3871      5F52414D 
- 3871      5F535452 
- 3871      55435400 
- 3872              	.LASF152:
- 3873 06bf 70747249 		.ascii	"ptrIdacInit\000"
- 3873      64616349 
- 3873      6E697400 
- 3874              	.LASF54:
- 3875 06cb 70617261 		.ascii	"param0\000"
- 3875      6D3000
- 3876              	.LASF55:
- 3877 06d2 70617261 		.ascii	"param1\000"
- 3877      6D3100
- 3878              	.LASF56:
- 3879 06d9 70617261 		.ascii	"param2\000"
- 3879      6D3200
- 3880              	.LASF57:
- 3881 06e0 70617261 		.ascii	"param3\000"
- 3881      6D3300
- 3882              	.LASF58:
- 3883 06e7 70617261 		.ascii	"param4\000"
- 3883      6D3400
- 3884              	.LASF59:
- 3885 06ee 70617261 		.ascii	"param5\000"
- 3885      6D3500
- 3886              	.LASF60:
- 3887 06f5 70617261 		.ascii	"param6\000"
- 3887      6D3600
- 3888              	.LASF136:
- 3889 06fc 43617053 		.ascii	"CapSense_FLASH_WD_STRUCT\000"
- 3889      656E7365 
- 3889      5F464C41 
- 3889      53485F57 
- 3889      445F5354 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 97
+ 3864 062f 43617053 		.ascii	"CapSense_RAM_SNS_LIST_STRUCT\000"
+ 3864      656E7365 
+ 3864      5F52414D 
+ 3864      5F534E53 
+ 3864      5F4C4953 
+ 3865              	.LASF119:
+ 3866 064c 70696E4E 		.ascii	"pinNumber\000"
+ 3866      756D6265 
+ 3866      7200
+ 3867              	.LASF117:
+ 3868 0656 43617053 		.ascii	"CapSense_RAM_STRUCT\000"
+ 3868      656E7365 
+ 3868      5F52414D 
+ 3868      5F535452 
+ 3868      55435400 
+ 3869              	.LASF152:
+ 3870 066a 70747249 		.ascii	"ptrIdacInit\000"
+ 3870      64616349 
+ 3870      6E697400 
+ 3871              	.LASF54:
+ 3872 0676 70617261 		.ascii	"param0\000"
+ 3872      6D3000
+ 3873              	.LASF55:
+ 3874 067d 70617261 		.ascii	"param1\000"
+ 3874      6D3100
+ 3875              	.LASF56:
+ 3876 0684 70617261 		.ascii	"param2\000"
+ 3876      6D3200
+ 3877              	.LASF57:
+ 3878 068b 70617261 		.ascii	"param3\000"
+ 3878      6D3300
+ 3879              	.LASF58:
+ 3880 0692 70617261 		.ascii	"param4\000"
+ 3880      6D3400
+ 3881              	.LASF59:
+ 3882 0699 70617261 		.ascii	"param5\000"
+ 3882      6D3500
+ 3883              	.LASF60:
+ 3884 06a0 70617261 		.ascii	"param6\000"
+ 3884      6D3600
+ 3885              	.LASF136:
+ 3886 06a7 43617053 		.ascii	"CapSense_FLASH_WD_STRUCT\000"
+ 3886      656E7365 
+ 3886      5F464C41 
+ 3886      53485F57 
+ 3886      445F5354 
+ 3887              	.LASF124:
+ 3888 06c0 70747232 		.ascii	"ptr2FltrHistory\000"
+ 3888      466C7472 
+ 3888      48697374 
+ 3888      6F727900 
+ 3889              	.LASF28:
+ 3890 06d0 52455345 		.ascii	"RESERVED\000"
+ 3890      52564544 
+ 3890      00
+ 3891              	.LASF70:
+ 3892 06d9 43617053 		.ascii	"CapSense_SENSE_METHOD_CSD_E\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 97
 
 
- 3890              	.LASF124:
- 3891 0715 70747232 		.ascii	"ptr2FltrHistory\000"
- 3891      466C7472 
- 3891      48697374 
- 3891      6F727900 
- 3892              	.LASF28:
- 3893 0725 52455345 		.ascii	"RESERVED\000"
- 3893      52564544 
- 3893      00
- 3894              	.LASF70:
- 3895 072e 43617053 		.ascii	"CapSense_SENSE_METHOD_CSD_E\000"
- 3895      656E7365 
- 3895      5F53454E 
- 3895      53455F4D 
- 3895      4554484F 
- 3896              	.LASF157:
- 3897 074a 70747244 		.ascii	"ptrData\000"
- 3897      61746100 
- 3898              	.LASF66:
- 3899 0752 43617053 		.ascii	"CapSense_WD_TOUCHPAD_E\000"
- 3899      656E7365 
- 3899      5F57445F 
- 3899      544F5543 
- 3899      48504144 
- 3900              	.LASF37:
- 3901 0769 5644445F 		.ascii	"VDD_INTR\000"
- 3901      494E5452 
- 3901      00
- 3902              	.LASF14:
- 3903 0772 75696E74 		.ascii	"uint32_t\000"
- 3903      33325F74 
- 3903      00
- 3904              	.LASF111:
- 3905 077b 77646774 		.ascii	"wdgtList\000"
- 3905      4C697374 
- 3905      00
- 3906              	.LASF178:
- 3907 0784 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 3907      43313120 
- 3907      352E342E 
- 3907      31203230 
- 3907      31363036 
- 3908 07b7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
- 3908      20726576 
- 3908      6973696F 
- 3908      6E203233 
- 3908      37373135 
- 3909 07ea 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
- 3909      67202D66 
- 3909      66756E63 
- 3909      74696F6E 
- 3909      2D736563 
- 3910              	.LASF45:
- 3911 0816 63686172 		.ascii	"char\000"
- 3911      00
- 3912              	.LASF15:
- 3913 081b 6C6F6E67 		.ascii	"long double\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 98
+ 3892      656E7365 
+ 3892      5F53454E 
+ 3892      53455F4D 
+ 3892      4554484F 
+ 3893              	.LASF157:
+ 3894 06f5 70747244 		.ascii	"ptrData\000"
+ 3894      61746100 
+ 3895              	.LASF66:
+ 3896 06fd 43617053 		.ascii	"CapSense_WD_TOUCHPAD_E\000"
+ 3896      656E7365 
+ 3896      5F57445F 
+ 3896      544F5543 
+ 3896      48504144 
+ 3897              	.LASF37:
+ 3898 0714 5644445F 		.ascii	"VDD_INTR\000"
+ 3898      494E5452 
+ 3898      00
+ 3899              	.LASF14:
+ 3900 071d 75696E74 		.ascii	"uint32_t\000"
+ 3900      33325F74 
+ 3900      00
+ 3901              	.LASF111:
+ 3902 0726 77646774 		.ascii	"wdgtList\000"
+ 3902      4C697374 
+ 3902      00
+ 3903              	.LASF178:
+ 3904 072f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3904      43313120 
+ 3904      352E342E 
+ 3904      31203230 
+ 3904      31363036 
+ 3905 0762 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 3905      20726576 
+ 3905      6973696F 
+ 3905      6E203233 
+ 3905      37373135 
+ 3906 0795 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 3906      67202D66 
+ 3906      66756E63 
+ 3906      74696F6E 
+ 3906      2D736563 
+ 3907              	.LASF45:
+ 3908 07c1 63686172 		.ascii	"char\000"
+ 3908      00
+ 3909              	.LASF15:
+ 3910 07c6 6C6F6E67 		.ascii	"long double\000"
+ 3910      20646F75 
+ 3910      626C6500 
+ 3911              	.LASF165:
+ 3912 07d2 43617053 		.ascii	"CapSense_GetCentroidPos\000"
+ 3912      656E7365 
+ 3912      5F476574 
+ 3912      43656E74 
+ 3912      726F6964 
+ 3913              	.LASF32:
+ 3914 07ea 494E5452 		.ascii	"INTR_CAUSE0\000"
+ 3914      5F434155 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 98
 
 
- 3913      20646F75 
- 3913      626C6500 
- 3914              	.LASF165:
- 3915 0827 43617053 		.ascii	"CapSense_GetCentroidPos\000"
- 3915      656E7365 
- 3915      5F476574 
- 3915      43656E74 
- 3915      726F6964 
- 3916              	.LASF32:
- 3917 083f 494E5452 		.ascii	"INTR_CAUSE0\000"
- 3917      5F434155 
- 3917      53453000 
- 3918              	.LASF33:
- 3919 084b 494E5452 		.ascii	"INTR_CAUSE1\000"
- 3919      5F434155 
- 3919      53453100 
- 3920              	.LASF34:
- 3921 0857 494E5452 		.ascii	"INTR_CAUSE2\000"
- 3921      5F434155 
- 3921      53453200 
- 3922              	.LASF35:
- 3923 0863 494E5452 		.ascii	"INTR_CAUSE3\000"
- 3923      5F434155 
- 3923      53453300 
- 3924              	.LASF42:
- 3925 086f 4750494F 		.ascii	"GPIO_PRT_Type\000"
- 3925      5F505254 
- 3925      5F547970 
- 3925      6500
- 3926              	.LASF4:
- 3927 087d 5F5F7569 		.ascii	"__uint16_t\000"
- 3927      6E743136 
- 3927      5F7400
- 3928              	.LASF18:
- 3929 0888 4F55545F 		.ascii	"OUT_SET\000"
- 3929      53455400 
- 3930              	.LASF81:
- 3931 0890 736E7343 		.ascii	"snsClk\000"
- 3931      6C6B00
- 3932              	.LASF73:
- 3933 0897 7265736F 		.ascii	"resolution\000"
- 3933      6C757469 
- 3933      6F6E00
- 3934              	.LASF12:
- 3935 08a2 75696E74 		.ascii	"uint8_t\000"
- 3935      385F7400 
- 3936              	.LASF156:
- 3937 08aa 70747255 		.ascii	"ptrUint32\000"
- 3937      696E7433 
- 3937      3200
- 3938              	.LASF78:
- 3939 08b4 6F6E4465 		.ascii	"onDebounce\000"
- 3939      626F756E 
- 3939      636500
- 3940              	.LASF39:
- 3941 08bf 5644445F 		.ascii	"VDD_INTR_MASKED\000"
- 3941      494E5452 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 99
+ 3914      53453000 
+ 3915              	.LASF33:
+ 3916 07f6 494E5452 		.ascii	"INTR_CAUSE1\000"
+ 3916      5F434155 
+ 3916      53453100 
+ 3917              	.LASF34:
+ 3918 0802 494E5452 		.ascii	"INTR_CAUSE2\000"
+ 3918      5F434155 
+ 3918      53453200 
+ 3919              	.LASF35:
+ 3920 080e 494E5452 		.ascii	"INTR_CAUSE3\000"
+ 3920      5F434155 
+ 3920      53453300 
+ 3921              	.LASF42:
+ 3922 081a 4750494F 		.ascii	"GPIO_PRT_Type\000"
+ 3922      5F505254 
+ 3922      5F547970 
+ 3922      6500
+ 3923              	.LASF4:
+ 3924 0828 5F5F7569 		.ascii	"__uint16_t\000"
+ 3924      6E743136 
+ 3924      5F7400
+ 3925              	.LASF18:
+ 3926 0833 4F55545F 		.ascii	"OUT_SET\000"
+ 3926      53455400 
+ 3927              	.LASF81:
+ 3928 083b 736E7343 		.ascii	"snsClk\000"
+ 3928      6C6B00
+ 3929              	.LASF73:
+ 3930 0842 7265736F 		.ascii	"resolution\000"
+ 3930      6C757469 
+ 3930      6F6E00
+ 3931              	.LASF12:
+ 3932 084d 75696E74 		.ascii	"uint8_t\000"
+ 3932      385F7400 
+ 3933              	.LASF156:
+ 3934 0855 70747255 		.ascii	"ptrUint32\000"
+ 3934      696E7433 
+ 3934      3200
+ 3935              	.LASF78:
+ 3936 085f 6F6E4465 		.ascii	"onDebounce\000"
+ 3936      626F756E 
+ 3936      636500
+ 3937              	.LASF39:
+ 3938 086a 5644445F 		.ascii	"VDD_INTR_MASKED\000"
+ 3938      494E5452 
+ 3938      5F4D4153 
+ 3938      4B454400 
+ 3939              	.LASF139:
+ 3940 087a 6F666673 		.ascii	"offset\000"
+ 3940      657400
+ 3941              	.LASF68:
+ 3942 0881 43617053 		.ascii	"CapSense_WD_TYPE_ENUM\000"
+ 3942      656E7365 
+ 3942      5F57445F 
+ 3942      54595045 
+ 3942      5F454E55 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 99
 
 
- 3941      5F4D4153 
- 3941      4B454400 
- 3942              	.LASF139:
- 3943 08cf 6F666673 		.ascii	"offset\000"
- 3943      657400
- 3944              	.LASF68:
- 3945 08d6 43617053 		.ascii	"CapSense_WD_TYPE_ENUM\000"
- 3945      656E7365 
- 3945      5F57445F 
- 3945      54595045 
- 3945      5F454E55 
- 3946              	.LASF96:
- 3947 08ec 69646163 		.ascii	"idacComp\000"
- 3947      436F6D70 
- 3947      00
- 3948              	.LASF183:
- 3949 08f5 43795F53 		.ascii	"Cy_SysLib_AssertFailed\000"
- 3949      79734C69 
- 3949      625F4173 
- 3949      73657274 
- 3949      4661696C 
- 3950              	.LASF1:
- 3951 090c 756E7369 		.ascii	"unsigned char\000"
- 3951      676E6564 
- 3951      20636861 
- 3951      7200
- 3952              	.LASF95:
- 3953 091a 6E656742 		.ascii	"negBslnRstCnt\000"
- 3953      736C6E52 
- 3953      7374436E 
- 3953      7400
- 3954              	.LASF127:
- 3955 0928 746F7461 		.ascii	"totalNumSns\000"
- 3955      6C4E756D 
- 3955      536E7300 
- 3956              	.LASF125:
- 3957 0934 70747232 		.ascii	"ptr2DebounceArr\000"
- 3957      4465626F 
- 3957      756E6365 
- 3957      41727200 
- 3958              	.LASF138:
- 3959 0944 43617053 		.ascii	"CapSense_FLASH_STRUCT\000"
- 3959      656E7365 
- 3959      5F464C41 
- 3959      53485F53 
- 3959      54525543 
- 3960              	.LASF120:
- 3961 095a 43617053 		.ascii	"CapSense_FLASH_IO_STRUCT\000"
- 3961      656E7365 
- 3961      5F464C41 
- 3961      53485F49 
- 3961      4F5F5354 
- 3962              	.LASF29:
- 3963 0973 4346475F 		.ascii	"CFG_IN_GPIO5V\000"
- 3963      494E5F47 
- 3963      50494F35 
- 3963      5600
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 100
+ 3943              	.LASF96:
+ 3944 0897 69646163 		.ascii	"idacComp\000"
+ 3944      436F6D70 
+ 3944      00
+ 3945              	.LASF183:
+ 3946 08a0 43795F53 		.ascii	"Cy_SysLib_AssertFailed\000"
+ 3946      79734C69 
+ 3946      625F4173 
+ 3946      73657274 
+ 3946      4661696C 
+ 3947              	.LASF1:
+ 3948 08b7 756E7369 		.ascii	"unsigned char\000"
+ 3948      676E6564 
+ 3948      20636861 
+ 3948      7200
+ 3949              	.LASF95:
+ 3950 08c5 6E656742 		.ascii	"negBslnRstCnt\000"
+ 3950      736C6E52 
+ 3950      7374436E 
+ 3950      7400
+ 3951              	.LASF127:
+ 3952 08d3 746F7461 		.ascii	"totalNumSns\000"
+ 3952      6C4E756D 
+ 3952      536E7300 
+ 3953              	.LASF125:
+ 3954 08df 70747232 		.ascii	"ptr2DebounceArr\000"
+ 3954      4465626F 
+ 3954      756E6365 
+ 3954      41727200 
+ 3955              	.LASF138:
+ 3956 08ef 43617053 		.ascii	"CapSense_FLASH_STRUCT\000"
+ 3956      656E7365 
+ 3956      5F464C41 
+ 3956      53485F53 
+ 3956      54525543 
+ 3957              	.LASF120:
+ 3958 0905 43617053 		.ascii	"CapSense_FLASH_IO_STRUCT\000"
+ 3958      656E7365 
+ 3958      5F464C41 
+ 3958      53485F49 
+ 3958      4F5F5354 
+ 3959              	.LASF29:
+ 3960 091e 4346475F 		.ascii	"CFG_IN_GPIO5V\000"
+ 3960      494E5F47 
+ 3960      50494F35 
+ 3960      5600
+ 3961              	.LASF176:
+ 3962 092c 6D656D73 		.ascii	"memset\000"
+ 3962      657400
+ 3963              	.LASF180:
+ 3964 0933 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Documents\\Repos_Proj"
+ 3964      73657273 
+ 3964      5C4D6174 
+ 3964      68696575 
+ 3964      5C4F6E65 
+ 3965 0961 6574325C 		.ascii	"et2\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
+ 3965      576F726B 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 100
 
 
- 3964              	.LASF176:
- 3965 0981 6D656D73 		.ascii	"memset\000"
- 3965      657400
+ 3965      73706163 
+ 3965      6550726F 
+ 3965      6A657432 
  3966              	.LASF104:
- 3967 0988 73746174 		.ascii	"status\000"
+ 3967 098a 73746174 		.ascii	"status\000"
  3967      757300
  3968              	.LASF137:
- 3969 098f 77646774 		.ascii	"wdgtArray\000"
+ 3969 0991 77646774 		.ascii	"wdgtArray\000"
  3969      41727261 
  3969      7900
  3970              	.LASF181:
- 3971 0999 44735061 		.ascii	"DsParseParamId\000"
+ 3971 099b 44735061 		.ascii	"DsParseParamId\000"
  3971      72736550 
  3971      6172616D 
  3971      496400
  3972              	.LASF154:
- 3973 09a8 70747255 		.ascii	"ptrUint8\000"
+ 3973 09aa 70747255 		.ascii	"ptrUint8\000"
  3973      696E7438 
  3973      00
  3974              	.LASF155:
- 3975 09b1 70747255 		.ascii	"ptrUint16\000"
+ 3975 09b3 70747255 		.ascii	"ptrUint16\000"
  3975      696E7431 
  3975      3600
  3976              	.LASF145:
- 3977 09bb 70617261 		.ascii	"paramId\000"
+ 3977 09bd 70617261 		.ascii	"paramId\000"
  3977      6D496400 
  3978              	.LASF162:
- 3979 09c3 43617053 		.ascii	"CapSense_IsWidgetActive\000"
+ 3979 09c5 43617053 		.ascii	"CapSense_IsWidgetActive\000"
  3979      656E7365 
  3979      5F497357 
  3979      69646765 
  3979      74416374 
  3980              	.LASF26:
- 3981 09db 4346475F 		.ascii	"CFG_OUT\000"
+ 3981 09dd 4346475F 		.ascii	"CFG_OUT\000"
  3981      4F555400 
  3982              	.LASF21:
- 3983 09e3 494E5452 		.ascii	"INTR_MASK\000"
+ 3983 09e5 494E5452 		.ascii	"INTR_MASK\000"
  3983      5F4D4153 
  3983      4B00
  3984              	.LASF43:
- 3985 09ed 4750494F 		.ascii	"GPIO_Type\000"
+ 3985 09ef 4750494F 		.ascii	"GPIO_Type\000"
  3985      5F547970 
  3985      6500
  3986              	.LASF148:
- 3987 09f7 736E7349 		.ascii	"snsId\000"
+ 3987 09f9 736E7349 		.ascii	"snsId\000"
  3987      6400
  3988              	.LASF92:
- 3989 09fd 62736C6E 		.ascii	"bsln\000"
+ 3989 09ff 62736C6E 		.ascii	"bsln\000"
  3989      00
  3990              	.LASF88:
- 3991 0a02 6C696E65 		.ascii	"linearslider0\000"
+ 3991 0a04 6C696E65 		.ascii	"linearslider0\000"
  3991      6172736C 
  3991      69646572 
  3991      3000
  3992              	.LASF74:
- 3993 0a10 66696E67 		.ascii	"fingerTh\000"
+ 3993 0a12 66696E67 		.ascii	"fingerTh\000"
  3993      65725468 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccYC217c.s 			page 101
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccZvgddY.s 			page 101
 
 
  3993      00
  3994              	.LASF146:
- 3995 0a19 70446174 		.ascii	"pData\000"
+ 3995 0a1b 70446174 		.ascii	"pData\000"
  3995      6100
  3996              	.LASF67:
- 3997 0a1f 43617053 		.ascii	"CapSense_WD_PROXIMITY_E\000"
+ 3997 0a21 43617053 		.ascii	"CapSense_WD_PROXIMITY_E\000"
  3997      656E7365 
  3997      5F57445F 
  3997      50524F58 
  3997      494D4954 
  3998              	.LASF167:
- 3999 0a37 43617053 		.ascii	"CapSense_debounceLinearSlider0\000"
+ 3999 0a39 43617053 		.ascii	"CapSense_debounceLinearSlider0\000"
  3999      656E7365 
  3999      5F646562 
  3999      6F756E63 
  3999      654C696E 
  4000              	.LASF115:
- 4001 0a56 736E7254 		.ascii	"snrTestScanCounter\000"
+ 4001 0a58 736E7254 		.ascii	"snrTestScanCounter\000"
  4001      65737453 
  4001      63616E43 
  4001      6F756E74 
  4001      657200
  4002              	.LASF147:
- 4003 0a69 72657375 		.ascii	"result\000"
+ 4003 0a6b 72657375 		.ascii	"result\000"
  4003      6C7400
  4004              	.LASF62:
- 4005 0a70 43617053 		.ascii	"CapSense_WD_BUTTON_E\000"
+ 4005 0a72 43617053 		.ascii	"CapSense_WD_BUTTON_E\000"
  4005      656E7365 
  4005      5F57445F 
  4005      42555454 
  4005      4F4E5F45 
  4006              	.LASF75:
- 4007 0a85 6E6F6973 		.ascii	"noiseTh\000"
+ 4007 0a87 6E6F6973 		.ascii	"noiseTh\000"
  4007      65546800 
  4008              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
