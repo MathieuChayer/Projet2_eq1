@@ -1,0 +1,4747 @@
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"traitement.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.cfi_sections	.debug_frame
+  20              		.section	.text.traitement,"ax",%progbits
+  21              		.align	2
+  22              		.global	traitement
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	traitement, %function
+  26              	traitement:
+  27              	.LFB656:
+  28              		.file 1 "traitement.c"
+   1:traitement.c  **** /* ========================================
+   2:traitement.c  ****  *
+   3:traitement.c  ****  * Copyright YOUR COMPANY, THE YEAR
+   4:traitement.c  ****  * All Rights Reserved
+   5:traitement.c  ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:traitement.c  ****  *
+   7:traitement.c  ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:traitement.c  ****  * WHICH IS THE PROPERTY OF your company.
+   9:traitement.c  ****  *
+  10:traitement.c  ****  * ========================================
+  11:traitement.c  **** */
+  12:traitement.c  **** #include "traitement.h"
+  13:traitement.c  **** 
+  14:traitement.c  **** 
+  15:traitement.c  **** void traitement(uint32_t *signal, int *HR, uint32_t *AC, uint32_t *DC)
+  16:traitement.c  **** {
+  29              		.loc 1 16 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 16008
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  35              		.cfi_def_cfa_offset 24
+  36              		.cfi_offset 4, -24
+  37              		.cfi_offset 5, -20
+  38              		.cfi_offset 6, -16
+  39              		.cfi_offset 7, -12
+  40              		.cfi_offset 8, -8
+  41              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 2
+
+
+  42 0004 ADF57A5D 		sub	sp, sp, #16000
+  43              		.cfi_def_cfa_offset 16024
+  44 0008 82B0     		sub	sp, sp, #8
+  45              		.cfi_def_cfa_offset 16032
+  46 000a 0746     		mov	r7, r0
+  47 000c 0E46     		mov	r6, r1
+  48 000e 1446     		mov	r4, r2
+  49 0010 1D46     		mov	r5, r3
+  17:traitement.c  ****     uint32_t cleaned[2000] = {};
+  50              		.loc 1 17 0
+  51 0012 4FF4FA58 		mov	r8, #8000
+  52 0016 4246     		mov	r2, r8
+  53              	.LVL1:
+  54 0018 0021     		movs	r1, #0
+  55              	.LVL2:
+  56 001a 0DF5FA50 		add	r0, sp, #8000
+  57              	.LVL3:
+  58 001e 0830     		adds	r0, r0, #8
+  59 0020 FFF7FEFF 		bl	memset
+  60              	.LVL4:
+  18:traitement.c  ****     float redressed[2000] = {};   
+  61              		.loc 1 18 0
+  62 0024 4246     		mov	r2, r8
+  63 0026 0021     		movs	r1, #0
+  64 0028 02A8     		add	r0, sp, #8
+  65 002a FFF7FEFF 		bl	memset
+  66              	.LVL5:
+  67              	.LBB2:
+  19:traitement.c  **** 
+  20:traitement.c  ****     //Nettoyer le signal avec une moyenne mobile sur 8 données
+  21:traitement.c  ****     int w = 8; //Window size
+  22:traitement.c  ****     
+  23:traitement.c  ****     for (int i=0;i<2000-w;i++)
+  68              		.loc 1 23 0
+  69 002e 0021     		movs	r1, #0
+  70 0030 19E0     		b	.L2
+  71              	.LVL6:
+  72              	.L3:
+  73              	.LBB3:
+  24:traitement.c  ****     {
+  25:traitement.c  ****         for (int j=1;j<w+1;j++)
+  26:traitement.c  ****         {
+  27:traitement.c  ****             cleaned[i]=cleaned[i]+signal[i+j];
+  74              		.loc 1 27 0 discriminator 3
+  75 0032 0DF5FA5E 		add	lr, sp, #8000
+  76 0036 0EF1080E 		add	lr, lr, #8
+  77 003a 5EF82100 		ldr	r0, [lr, r1, lsl #2]
+  78 003e CA18     		adds	r2, r1, r3
+  79 0040 57F82220 		ldr	r2, [r7, r2, lsl #2]
+  80 0044 0244     		add	r2, r2, r0
+  81 0046 4EF82120 		str	r2, [lr, r1, lsl #2]
+  25:traitement.c  ****         {
+  82              		.loc 1 25 0 discriminator 3
+  83 004a 0133     		adds	r3, r3, #1
+  84              	.LVL7:
+  85 004c 00E0     		b	.L4
+  86              	.LVL8:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 3
+
+
+  87              	.L34:
+  88              	.LBE3:
+  89 004e 0123     		movs	r3, #1
+  90              	.L4:
+  91              	.LVL9:
+  92              	.LBB4:
+  25:traitement.c  ****         {
+  93              		.loc 1 25 0 is_stmt 0 discriminator 1
+  94 0050 082B     		cmp	r3, #8
+  95 0052 EEDD     		ble	.L3
+  96              	.LBE4:
+  28:traitement.c  ****         }
+  29:traitement.c  ****         cleaned[i]=cleaned[i]/w;
+  97              		.loc 1 29 0 is_stmt 1 discriminator 2
+  98 0054 0DF5FA52 		add	r2, sp, #8000
+  99 0058 0832     		adds	r2, r2, #8
+ 100 005a 52F82130 		ldr	r3, [r2, r1, lsl #2]
+ 101              	.LVL10:
+ 102 005e DB08     		lsrs	r3, r3, #3
+ 103 0060 42F82130 		str	r3, [r2, r1, lsl #2]
+  23:traitement.c  ****     {
+ 104              		.loc 1 23 0 discriminator 2
+ 105 0064 0131     		adds	r1, r1, #1
+ 106              	.LVL11:
+ 107              	.L2:
+  23:traitement.c  ****     {
+ 108              		.loc 1 23 0 is_stmt 0 discriminator 1
+ 109 0066 B1F5F96F 		cmp	r1, #1992
+ 110 006a F0DB     		blt	.L34
+ 111 006c 4FF4F963 		mov	r3, #1992
+ 112 0070 07E0     		b	.L5
+ 113              	.LVL12:
+ 114              	.L6:
+ 115              	.LBE2:
+ 116              	.LBB5:
+  30:traitement.c  ****     }
+  31:traitement.c  ****     for (int i=2000-w;i<2000;i++)
+  32:traitement.c  ****     {
+  33:traitement.c  ****         cleaned[i] = signal[i];
+ 117              		.loc 1 33 0 is_stmt 1 discriminator 3
+ 118 0072 57F82310 		ldr	r1, [r7, r3, lsl #2]
+ 119 0076 0DF5FA52 		add	r2, sp, #8000
+ 120 007a 0832     		adds	r2, r2, #8
+ 121 007c 42F82310 		str	r1, [r2, r3, lsl #2]
+  31:traitement.c  ****     {
+ 122              		.loc 1 31 0 discriminator 3
+ 123 0080 0133     		adds	r3, r3, #1
+ 124              	.LVL13:
+ 125              	.L5:
+  31:traitement.c  ****     {
+ 126              		.loc 1 31 0 is_stmt 0 discriminator 1
+ 127 0082 B3F5FA6F 		cmp	r3, #2000
+ 128 0086 F4DB     		blt	.L6
+ 129 0088 0023     		movs	r3, #0
+ 130              	.LVL14:
+ 131 008a 00E0     		b	.L7
+ 132              	.LVL15:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 4
+
+
+ 133              	.L8:
+ 134              	.LBE5:
+ 135              	.LBB6:
+  34:traitement.c  ****     }
+  35:traitement.c  ****     
+  36:traitement.c  ****     for (int i =0;i<2000;i++)
+ 136              		.loc 1 36 0 is_stmt 1 discriminator 3
+ 137 008c 0133     		adds	r3, r3, #1
+ 138              	.LVL16:
+ 139              	.L7:
+ 140              		.loc 1 36 0 is_stmt 0 discriminator 1
+ 141 008e B3F5FA6F 		cmp	r3, #2000
+ 142 0092 FBDB     		blt	.L8
+ 143              	.LVL17:
+ 144              	.LBE6:
+  37:traitement.c  ****     {
+  38:traitement.c  ****         //printf("%d\r\n",cleaned[i]);
+  39:traitement.c  ****     }
+  40:traitement.c  ****     
+  41:traitement.c  ****     //Redresser avec un min/max mobile
+  42:traitement.c  ****     int s = 400; 
+  43:traitement.c  ****     *DC = 0;
+ 145              		.loc 1 43 0 is_stmt 1
+ 146 0094 0023     		movs	r3, #0
+ 147              	.LVL18:
+ 148 0096 2B60     		str	r3, [r5]
+  44:traitement.c  ****     *AC = 0;
+ 149              		.loc 1 44 0
+ 150 0098 2360     		str	r3, [r4]
+ 151              	.LVL19:
+ 152              	.LBB7:
+  45:traitement.c  ****     
+  46:traitement.c  ****     //Fenêtre du min/max mobile : 
+  47:traitement.c  ****     //400 échantillons = 2 secondes à 200 hz
+  48:traitement.c  ****     //Un espacement de plus de 2 secondes entre 2 battements signifie un HR < 30 BPM.
+  49:traitement.c  **** 
+  50:traitement.c  ****     for (int i = 0; i<2000/s;i++)
+ 153              		.loc 1 50 0
+ 154 009a 9C46     		mov	ip, r3
+ 155 009c 40E0     		b	.L9
+ 156              	.LVL20:
+ 157              	.L16:
+ 158              	.LBB8:
+ 159              	.LBB9:
+  51:traitement.c  ****     {
+  52:traitement.c  ****         uint32_t MAX = 0;
+  53:traitement.c  ****         uint32_t MIN = 300000;
+  54:traitement.c  ****         
+  55:traitement.c  ****         for(int j=i*s;j<i*s+s;j++)
+ 160              		.loc 1 55 0
+ 161 009e 4FF4C871 		mov	r1, #400
+ 162 00a2 01FB0CF1 		mul	r1, r1, ip
+ 163              	.LVL21:
+ 164 00a6 0B46     		mov	r3, r1
+ 165              	.LBE9:
+  53:traitement.c  ****         
+ 166              		.loc 1 53 0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 5
+
+
+ 167 00a8 8648     		ldr	r0, .L48
+  52:traitement.c  ****         uint32_t MIN = 300000;
+ 168              		.loc 1 52 0
+ 169 00aa 0027     		movs	r7, #0
+ 170              	.LBB10:
+ 171              		.loc 1 55 0
+ 172 00ac 0BE0     		b	.L10
+ 173              	.LVL22:
+ 174              	.L13:
+  56:traitement.c  ****         {
+  57:traitement.c  ****             if (cleaned[j] >MAX)
+ 175              		.loc 1 57 0
+ 176 00ae 0DF5FA52 		add	r2, sp, #8000
+ 177 00b2 0832     		adds	r2, r2, #8
+ 178 00b4 52F82320 		ldr	r2, [r2, r3, lsl #2]
+ 179 00b8 9742     		cmp	r7, r2
+ 180 00ba 00D2     		bcs	.L11
+  58:traitement.c  ****             {
+  59:traitement.c  ****                 MAX = cleaned[j];
+ 181              		.loc 1 59 0
+ 182 00bc 1746     		mov	r7, r2
+ 183              	.LVL23:
+ 184              	.L11:
+  60:traitement.c  ****             }
+  61:traitement.c  ****              if (cleaned[j] < MIN)
+ 185              		.loc 1 61 0
+ 186 00be 9042     		cmp	r0, r2
+ 187 00c0 00D9     		bls	.L12
+  62:traitement.c  ****             {
+  63:traitement.c  ****                 MIN = cleaned[j];
+ 188              		.loc 1 63 0
+ 189 00c2 1046     		mov	r0, r2
+ 190              	.LVL24:
+ 191              	.L12:
+  55:traitement.c  ****         {
+ 192              		.loc 1 55 0 discriminator 2
+ 193 00c4 0133     		adds	r3, r3, #1
+ 194              	.LVL25:
+ 195              	.L10:
+  55:traitement.c  ****         {
+ 196              		.loc 1 55 0 is_stmt 0 discriminator 1
+ 197 00c6 0CF1010E 		add	lr, ip, #1
+ 198 00ca 4FF4C872 		mov	r2, #400
+ 199 00ce 02FB0EF2 		mul	r2, r2, lr
+ 200 00d2 9342     		cmp	r3, r2
+ 201 00d4 EBDB     		blt	.L13
+ 202 00d6 16E0     		b	.L14
+ 203              	.LVL26:
+ 204              	.L15:
+ 205              	.LBE10:
+ 206              	.LBB11:
+  64:traitement.c  ****             }
+  65:traitement.c  ****             
+  66:traitement.c  ****         }
+  67:traitement.c  ****         
+  68:traitement.c  ****         //printf("MAX = %d\r\n",MAX);
+  69:traitement.c  ****         //printf("MIN = %d\r\n",MIN);
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 6
+
+
+  70:traitement.c  ****         
+  71:traitement.c  ****         for(int j=i*s;j<i*s+s;j++)
+  72:traitement.c  ****         {
+  73:traitement.c  ****            redressed[j] = (float) (cleaned[j]-MIN)/(MAX-MIN);
+ 207              		.loc 1 73 0 is_stmt 1 discriminator 3
+ 208 00d8 0DF5FA53 		add	r3, sp, #8000
+ 209 00dc 0833     		adds	r3, r3, #8
+ 210 00de 53F82130 		ldr	r3, [r3, r1, lsl #2]
+ 211 00e2 1B1A     		subs	r3, r3, r0
+ 212 00e4 07EE903A 		vmov	s15, r3	@ int
+ 213 00e8 F8EE677A 		vcvt.f32.u32	s15, s15
+ 214 00ec 3B1A     		subs	r3, r7, r0
+ 215 00ee 07EE103A 		vmov	s14, r3	@ int
+ 216 00f2 B8EE477A 		vcvt.f32.u32	s14, s14
+ 217 00f6 C7EE876A 		vdiv.f32	s13, s15, s14
+ 218 00fa 02AB     		add	r3, sp, #8
+ 219 00fc 03EB8103 		add	r3, r3, r1, lsl #2
+ 220 0100 C3ED006A 		vstr.32	s13, [r3]
+  71:traitement.c  ****         {
+ 221              		.loc 1 71 0 discriminator 3
+ 222 0104 0131     		adds	r1, r1, #1
+ 223              	.LVL27:
+ 224              	.L14:
+  71:traitement.c  ****         {
+ 225              		.loc 1 71 0 is_stmt 0 discriminator 1
+ 226 0106 9142     		cmp	r1, r2
+ 227 0108 E6DB     		blt	.L15
+ 228              	.LBE11:
+  74:traitement.c  ****            //printf("%f\r\n",redressed[j]);
+  75:traitement.c  ****         }
+  76:traitement.c  **** 
+  77:traitement.c  ****         *DC = *DC + (MAX+MIN)/2;
+ 229              		.loc 1 77 0 is_stmt 1 discriminator 2
+ 230 010a 2B68     		ldr	r3, [r5]
+ 231 010c 3A18     		adds	r2, r7, r0
+ 232 010e 03EB5203 		add	r3, r3, r2, lsr #1
+ 233 0112 2B60     		str	r3, [r5]
+  78:traitement.c  ****         //printf("DC: %d\r\n",DC);
+  79:traitement.c  ****         *AC = *AC + (MAX-MIN)/2;
+ 234              		.loc 1 79 0 discriminator 2
+ 235 0114 2368     		ldr	r3, [r4]
+ 236 0116 381A     		subs	r0, r7, r0
+ 237              	.LVL28:
+ 238 0118 03EB5000 		add	r0, r3, r0, lsr #1
+ 239 011c 2060     		str	r0, [r4]
+ 240              	.LVL29:
+ 241              	.LBE8:
+  50:traitement.c  ****     {
+ 242              		.loc 1 50 0 discriminator 2
+ 243 011e F446     		mov	ip, lr
+ 244              	.LVL30:
+ 245              	.L9:
+  50:traitement.c  ****     {
+ 246              		.loc 1 50 0 is_stmt 0 discriminator 1
+ 247 0120 BCF1040F 		cmp	ip, #4
+ 248 0124 BBDD     		ble	.L16
+ 249              	.LBE7:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 7
+
+
+  80:traitement.c  ****         
+  81:traitement.c  ****     }
+  82:traitement.c  ****     *DC = (uint32_t) *DC/(2000/s);
+ 250              		.loc 1 82 0 is_stmt 1
+ 251 0126 2A68     		ldr	r2, [r5]
+ 252 0128 6749     		ldr	r1, .L48+4
+ 253 012a A1FB0232 		umull	r3, r2, r1, r2
+ 254 012e 9208     		lsrs	r2, r2, #2
+ 255 0130 2A60     		str	r2, [r5]
+  83:traitement.c  ****     *AC = (uint32_t) *AC/(2000/s);
+ 256              		.loc 1 83 0
+ 257 0132 2368     		ldr	r3, [r4]
+ 258 0134 A1FB0323 		umull	r2, r3, r1, r3
+ 259 0138 9B08     		lsrs	r3, r3, #2
+ 260 013a 2360     		str	r3, [r4]
+ 261              	.LVL31:
+ 262              	.LBB12:
+  84:traitement.c  ****     //printf("AC : %d, DC : %d\r\n",AC,DC);
+  85:traitement.c  ****     
+  86:traitement.c  ****     //Arrondir le vecteur redressé pour mettre en valeur les pics
+  87:traitement.c  ****     for(int i=1;i<2000;i++)
+ 263              		.loc 1 87 0
+ 264 013c 0123     		movs	r3, #1
+ 265 013e 18E0     		b	.L17
+ 266              	.LVL32:
+ 267              	.L21:
+  88:traitement.c  ****     {
+  89:traitement.c  ****        if(redressed[i]<0.5)
+ 268              		.loc 1 89 0
+ 269 0140 02AA     		add	r2, sp, #8
+ 270 0142 02EB8302 		add	r2, r2, r3, lsl #2
+ 271 0146 92ED007A 		vldr.32	s14, [r2]
+ 272 014a F6EE007A 		vmov.f32	s15, #5.0e-1
+ 273 014e B4EEE77A 		vcmpe.f32	s14, s15
+ 274 0152 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 275 0156 05D5     		bpl	.L45
+  90:traitement.c  ****        {
+  91:traitement.c  ****             redressed[i] =0;
+ 276              		.loc 1 91 0
+ 277 0158 02AA     		add	r2, sp, #8
+ 278 015a 02EB8302 		add	r2, r2, r3, lsl #2
+ 279 015e 0021     		movs	r1, #0
+ 280 0160 1160     		str	r1, [r2]	@ float
+ 281 0162 05E0     		b	.L20
+ 282              	.L45:
+  92:traitement.c  ****        }
+  93:traitement.c  ****        else
+  94:traitement.c  ****        {
+  95:traitement.c  ****             redressed[i] =1;
+ 283              		.loc 1 95 0
+ 284 0164 02AA     		add	r2, sp, #8
+ 285 0166 02EB8302 		add	r2, r2, r3, lsl #2
+ 286 016a 4FF07E51 		mov	r1, #1065353216
+ 287 016e 1160     		str	r1, [r2]	@ float
+ 288              	.L20:
+  87:traitement.c  ****     {
+ 289              		.loc 1 87 0 discriminator 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 8
+
+
+ 290 0170 0133     		adds	r3, r3, #1
+ 291              	.LVL33:
+ 292              	.L17:
+  87:traitement.c  ****     {
+ 293              		.loc 1 87 0 is_stmt 0 discriminator 1
+ 294 0172 B3F5FA6F 		cmp	r3, #2000
+ 295 0176 E3DB     		blt	.L21
+ 296              	.LVL34:
+ 297              	.LBE12:
+  96:traitement.c  ****        }
+  97:traitement.c  ****        redressed[i] = redressed[i];
+  98:traitement.c  ****        //printf("%f\r\n",redressed[i]);
+  99:traitement.c  ****     }
+ 100:traitement.c  ****        
+ 101:traitement.c  ****     int nb_spike = 0;
+ 102:traitement.c  ****     int last_state_change = 0;
+ 103:traitement.c  ****     int state = 0; //high or low
+ 104:traitement.c  ****     float L = 0; //average length of high pulse
+ 105:traitement.c  ****     
+ 106:traitement.c  ****     state = redressed[0];
+ 298              		.loc 1 106 0 is_stmt 1
+ 299 0178 DDED027A 		vldr.32	s15, [sp, #8]
+ 300 017c FDEEE77A 		vcvt.s32.f32	s15, s15
+ 301 0180 17EE900A 		vmov	r0, s15	@ int
+ 302              	.LVL35:
+ 303 0184 17EE904A 		vmov	r4, s15	@ int
+ 304              	.LVL36:
+ 305              	.LBB13:
+ 107:traitement.c  ****     last_state_change = 0;
+ 108:traitement.c  ****     for(int i=1;i<2000;i++)
+ 306              		.loc 1 108 0
+ 307 0188 0123     		movs	r3, #1
+ 308              	.LVL37:
+ 309              	.LBE13:
+ 104:traitement.c  ****     
+ 310              		.loc 1 104 0
+ 311 018a DFED506A 		vldr.32	s13, .L48+8
+ 107:traitement.c  ****     last_state_change = 0;
+ 312              		.loc 1 107 0
+ 313 018e 0022     		movs	r2, #0
+ 314 0190 0192     		str	r2, [sp, #4]
+ 101:traitement.c  ****     int last_state_change = 0;
+ 315              		.loc 1 101 0
+ 316 0192 1146     		mov	r1, r2
+ 317              	.LBB14:
+ 318              		.loc 1 108 0
+ 319 0194 25E0     		b	.L22
+ 320              	.LVL38:
+ 321              	.L25:
+ 109:traitement.c  ****     {
+ 110:traitement.c  ****         if(redressed[i]==!state)
+ 322              		.loc 1 110 0
+ 323 0196 02AA     		add	r2, sp, #8
+ 324 0198 02EB8302 		add	r2, r2, r3, lsl #2
+ 325 019c D2ED007A 		vldr.32	s15, [r2]
+ 326 01a0 14B9     		cbnz	r4, .L37
+ 327 01a2 B7EE007A 		vmov.f32	s14, #1.0e+0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 9
+
+
+ 328 01a6 01E0     		b	.L23
+ 329              	.L37:
+ 330 01a8 9FED487A 		vldr.32	s14, .L48+8
+ 331              	.L23:
+ 332              		.loc 1 110 0 is_stmt 0 discriminator 4
+ 333 01ac B4EE677A 		vcmp.f32	s14, s15
+ 334 01b0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 335 01b4 14D1     		bne	.L24
+ 111:traitement.c  ****         {
+ 112:traitement.c  ****             state = !state;
+ 336              		.loc 1 112 0 is_stmt 1
+ 337 01b6 002C     		cmp	r4, #0
+ 338 01b8 0CBF     		ite	eq
+ 339 01ba 0124     		moveq	r4, #1
+ 340              	.LVL39:
+ 341 01bc 0024     		movne	r4, #0
+ 342              	.LVL40:
+ 113:traitement.c  ****             if(state == 0)
+ 343              		.loc 1 113 0
+ 344 01be 0ED0     		beq	.L38
+ 114:traitement.c  ****             {
+ 115:traitement.c  ****                 L = L + i - last_state_change;
+ 345              		.loc 1 115 0
+ 346 01c0 07EE903A 		vmov	s15, r3	@ int
+ 347 01c4 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 348 01c8 77EEA66A 		vadd.f32	s13, s15, s13
+ 349              	.LVL41:
+ 350 01cc DDED017A 		vldr.32	s15, [sp, #4]	@ int
+ 351 01d0 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 352 01d4 76EEE76A 		vsub.f32	s13, s13, s15
+ 353              	.LVL42:
+ 116:traitement.c  ****                 nb_spike +=1;
+ 354              		.loc 1 116 0
+ 355 01d8 0131     		adds	r1, r1, #1
+ 356              	.LVL43:
+ 117:traitement.c  ****                 
+ 118:traitement.c  ****             }
+ 119:traitement.c  ****             last_state_change = i;
+ 357              		.loc 1 119 0
+ 358 01da 0193     		str	r3, [sp, #4]
+ 359              	.LVL44:
+ 360 01dc 00E0     		b	.L24
+ 361              	.LVL45:
+ 362              	.L38:
+ 363 01de 0193     		str	r3, [sp, #4]
+ 364              	.LVL46:
+ 365              	.L24:
+ 108:traitement.c  ****     {
+ 366              		.loc 1 108 0 discriminator 2
+ 367 01e0 0133     		adds	r3, r3, #1
+ 368              	.LVL47:
+ 369              	.L22:
+ 108:traitement.c  ****     {
+ 370              		.loc 1 108 0 is_stmt 0 discriminator 1
+ 371 01e2 B3F5FA6F 		cmp	r3, #2000
+ 372 01e6 D6DB     		blt	.L25
+ 373              	.LBE14:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 10
+
+
+ 120:traitement.c  ****             
+ 121:traitement.c  ****         }
+ 122:traitement.c  ****     }
+ 123:traitement.c  ****     if(redressed[1999]==1 && state ==1)
+ 374              		.loc 1 123 0 is_stmt 1
+ 375 01e8 0DF5FA53 		add	r3, sp, #8000
+ 376              	.LVL48:
+ 377 01ec 0433     		adds	r3, r3, #4
+ 378 01ee 93ED006A 		vldr.32	s12, [r3]
+ 379 01f2 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 380 01f6 B4EE676A 		vcmp.f32	s12, s15
+ 381 01fa F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 382 01fe 0CD1     		bne	.L26
+ 383              		.loc 1 123 0 is_stmt 0 discriminator 1
+ 384 0200 012C     		cmp	r4, #1
+ 385 0202 0AD1     		bne	.L26
+ 124:traitement.c  ****     {
+ 125:traitement.c  ****         L = L + 1999 - last_state_change;
+ 386              		.loc 1 125 0 is_stmt 1
+ 387 0204 DFED327A 		vldr.32	s15, .L48+12
+ 388 0208 76EEA76A 		vadd.f32	s13, s13, s15
+ 389              	.LVL49:
+ 390 020c DDED017A 		vldr.32	s15, [sp, #4]	@ int
+ 391 0210 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 392 0214 76EEE76A 		vsub.f32	s13, s13, s15
+ 393              	.LVL50:
+ 126:traitement.c  ****         nb_spike +=1;
+ 394              		.loc 1 126 0
+ 395 0218 0131     		adds	r1, r1, #1
+ 396              	.LVL51:
+ 397              	.L26:
+ 127:traitement.c  ****     }
+ 128:traitement.c  ****     
+ 129:traitement.c  ****     L = L/nb_spike;
+ 398              		.loc 1 129 0
+ 399 021a 07EE901A 		vmov	s15, r1	@ int
+ 400 021e B8EEE77A 		vcvt.f32.s32	s14, s15
+ 401 0222 C6EE877A 		vdiv.f32	s15, s13, s14
+ 402              	.LVL52:
+ 130:traitement.c  ****     L = L/2;
+ 403              		.loc 1 130 0
+ 404 0226 F6EE006A 		vmov.f32	s13, #5.0e-1
+ 405 022a 67EEA66A 		vmul.f32	s13, s15, s13
+ 406              	.LVL53:
+ 407              	.LBB15:
+ 131:traitement.c  ****     //printf("%f\r\n",L);
+ 132:traitement.c  ****     
+ 133:traitement.c  ****     state = redressed[0];
+ 134:traitement.c  ****     last_state_change = 0;
+ 135:traitement.c  ****     for(int i=0;i<2000;i++)
+ 408              		.loc 1 135 0
+ 409 022e 0023     		movs	r3, #0
+ 410              	.LBE15:
+ 134:traitement.c  ****     for(int i=0;i<2000;i++)
+ 411              		.loc 1 134 0
+ 412 0230 1C46     		mov	r4, r3
+ 413              	.LBB16:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 11
+
+
+ 414              		.loc 1 135 0
+ 415 0232 25E0     		b	.L27
+ 416              	.LVL54:
+ 417              	.L31:
+ 136:traitement.c  ****     {
+ 137:traitement.c  ****         if(redressed[i]==!state)
+ 418              		.loc 1 137 0
+ 419 0234 02AA     		add	r2, sp, #8
+ 420 0236 02EB8302 		add	r2, r2, r3, lsl #2
+ 421 023a D2ED007A 		vldr.32	s15, [r2]
+ 422 023e 10B9     		cbnz	r0, .L39
+ 423 0240 B7EE007A 		vmov.f32	s14, #1.0e+0
+ 424 0244 01E0     		b	.L28
+ 425              	.L39:
+ 426 0246 9FED217A 		vldr.32	s14, .L48+8
+ 427              	.L28:
+ 428              		.loc 1 137 0 is_stmt 0 discriminator 4
+ 429 024a B4EE677A 		vcmp.f32	s14, s15
+ 430 024e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 431 0252 14D1     		bne	.L29
+ 138:traitement.c  ****         {
+ 139:traitement.c  ****             state = !state;
+ 432              		.loc 1 139 0 is_stmt 1
+ 433 0254 0028     		cmp	r0, #0
+ 434 0256 0CBF     		ite	eq
+ 435 0258 0120     		moveq	r0, #1
+ 436              	.LVL55:
+ 437 025a 0020     		movne	r0, #0
+ 438              	.LVL56:
+ 140:traitement.c  ****             
+ 141:traitement.c  ****             if(state == 0 && i-last_state_change < L)
+ 439              		.loc 1 141 0
+ 440 025c 0CD0     		beq	.L40
+ 441              		.loc 1 141 0 is_stmt 0 discriminator 1
+ 442 025e 1C1B     		subs	r4, r3, r4
+ 443              	.LVL57:
+ 444 0260 07EE904A 		vmov	s15, r4	@ int
+ 445 0264 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 446 0268 F4EEE76A 		vcmpe.f32	s13, s15
+ 447 026c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 448 0270 04DD     		ble	.L46
+ 142:traitement.c  ****             {
+ 143:traitement.c  ****                 nb_spike -=1;
+ 449              		.loc 1 143 0 is_stmt 1
+ 450 0272 0139     		subs	r1, r1, #1
+ 451              	.LVL58:
+ 144:traitement.c  ****             }
+ 145:traitement.c  ****             last_state_change = i;
+ 452              		.loc 1 145 0
+ 453 0274 1C46     		mov	r4, r3
+ 454 0276 02E0     		b	.L29
+ 455              	.LVL59:
+ 456              	.L40:
+ 457 0278 1C46     		mov	r4, r3
+ 458              	.LVL60:
+ 459 027a 00E0     		b	.L29
+ 460              	.L46:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 12
+
+
+ 461 027c 1C46     		mov	r4, r3
+ 462              	.L29:
+ 463              	.LVL61:
+ 135:traitement.c  ****     {
+ 464              		.loc 1 135 0 discriminator 2
+ 465 027e 0133     		adds	r3, r3, #1
+ 466              	.LVL62:
+ 467              	.L27:
+ 135:traitement.c  ****     {
+ 468              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 469 0280 B3F5FA6F 		cmp	r3, #2000
+ 470 0284 D6DB     		blt	.L31
+ 471              	.LBE16:
+ 146:traitement.c  ****         }
+ 147:traitement.c  ****     }
+ 148:traitement.c  ****     
+ 149:traitement.c  ****     if(redressed[1999]==1 && state ==1 && 1999 - last_state_change < L)
+ 472              		.loc 1 149 0 is_stmt 1
+ 473 0286 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 474 028a B4EE676A 		vcmp.f32	s12, s15
+ 475 028e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 476 0292 0ED1     		bne	.L32
+ 477              		.loc 1 149 0 is_stmt 0 discriminator 1
+ 478 0294 0128     		cmp	r0, #1
+ 479 0296 0CD1     		bne	.L32
+ 480              		.loc 1 149 0 discriminator 2
+ 481 0298 C4F5F964 		rsb	r4, r4, #1992
+ 482              	.LVL63:
+ 483 029c 0734     		adds	r4, r4, #7
+ 484 029e 07EE904A 		vmov	s15, r4	@ int
+ 485 02a2 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 486 02a6 F4EEE76A 		vcmpe.f32	s13, s15
+ 487 02aa F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 488 02ae 00DD     		ble	.L32
+ 150:traitement.c  ****     {
+ 151:traitement.c  ****         nb_spike -=1;
+ 489              		.loc 1 151 0 is_stmt 1
+ 490 02b0 0139     		subs	r1, r1, #1
+ 491              	.LVL64:
+ 492              	.L32:
+ 152:traitement.c  ****     }
+ 153:traitement.c  ****     *HR = nb_spike;
+ 493              		.loc 1 153 0
+ 494 02b2 3160     		str	r1, [r6]
+ 154:traitement.c  ****     printf("HR:%d\r\n",*HR);
+ 495              		.loc 1 154 0
+ 496 02b4 0748     		ldr	r0, .L48+16
+ 497              	.LVL65:
+ 498 02b6 FFF7FEFF 		bl	printf
+ 499              	.LVL66:
+ 155:traitement.c  **** 
+ 156:traitement.c  **** }
+ 500              		.loc 1 156 0
+ 501 02ba 0DF57A5D 		add	sp, sp, #16000
+ 502 02be 02B0     		add	sp, sp, #8
+ 503              		.cfi_def_cfa_offset 24
+ 504              		@ sp needed
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 13
+
+
+ 505 02c0 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 506              	.LVL67:
+ 507              	.L49:
+ 508              		.align	2
+ 509              	.L48:
+ 510 02c4 E0930400 		.word	300000
+ 511 02c8 CDCCCCCC 		.word	-858993459
+ 512 02cc 00000000 		.word	0
+ 513 02d0 00E0F944 		.word	1157226496
+ 514 02d4 00000000 		.word	.LC0
+ 515              		.cfi_endproc
+ 516              	.LFE656:
+ 517              		.size	traitement, .-traitement
+ 518              		.section	.text.interpretation,"ax",%progbits
+ 519              		.align	2
+ 520              		.global	interpretation
+ 521              		.thumb
+ 522              		.thumb_func
+ 523              		.type	interpretation, %function
+ 524              	interpretation:
+ 525              	.LFB657:
+ 157:traitement.c  **** 
+ 158:traitement.c  **** 
+ 159:traitement.c  **** void interpretation(int HR_RED, int HR_IR, uint32_t AC_RED, uint32_t DC_RED, uint32_t DC_IR, uint32
+ 160:traitement.c  **** {
+ 526              		.loc 1 160 0
+ 527              		.cfi_startproc
+ 528              		@ args = 16, pretend = 0, frame = 0
+ 529              		@ frame_needed = 0, uses_anonymous_args = 0
+ 530              		@ link register save eliminated.
+ 531              	.LVL68:
+ 532 0000 F0B4     		push	{r4, r5, r6, r7}
+ 533              		.cfi_def_cfa_offset 16
+ 534              		.cfi_offset 4, -16
+ 535              		.cfi_offset 5, -12
+ 536              		.cfi_offset 6, -8
+ 537              		.cfi_offset 7, -4
+ 538 0002 07EE102A 		vmov	s14, r2	@ int
+ 539 0006 049A     		ldr	r2, [sp, #16]
+ 540              	.LVL69:
+ 541 0008 069C     		ldr	r4, [sp, #24]
+ 542 000a 079D     		ldr	r5, [sp, #28]
+ 161:traitement.c  ****     
+ 162:traitement.c  ****     //HR 
+ 163:traitement.c  ****     if(DC_RED < 1000 && DC_IR > 1000)
+ 543              		.loc 1 163 0
+ 544 000c B3F57A7F 		cmp	r3, #1000
+ 545 0010 06D2     		bcs	.L51
+ 546              		.loc 1 163 0 is_stmt 0 discriminator 1
+ 547 0012 B2F57A7F 		cmp	r2, #1000
+ 548 0016 03D9     		bls	.L51
+ 164:traitement.c  ****     {
+ 165:traitement.c  ****         *HR = HR_IR*6;
+ 549              		.loc 1 165 0 is_stmt 1
+ 550 0018 01EB4107 		add	r7, r1, r1, lsl #1
+ 551 001c 7E00     		lsls	r6, r7, #1
+ 552 001e 2660     		str	r6, [r4]
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 14
+
+
+ 553              	.L51:
+ 166:traitement.c  ****     }
+ 167:traitement.c  ****     if(DC_RED > 1000 && DC_IR < 1000)
+ 554              		.loc 1 167 0
+ 555 0020 B3F57A7F 		cmp	r3, #1000
+ 556 0024 06D9     		bls	.L52
+ 557              		.loc 1 167 0 is_stmt 0 discriminator 1
+ 558 0026 B2F57A7F 		cmp	r2, #1000
+ 559 002a 03D2     		bcs	.L52
+ 168:traitement.c  ****     {
+ 169:traitement.c  ****         *HR = HR_RED*6;
+ 560              		.loc 1 169 0 is_stmt 1
+ 561 002c 00EB4007 		add	r7, r0, r0, lsl #1
+ 562 0030 7E00     		lsls	r6, r7, #1
+ 563 0032 2660     		str	r6, [r4]
+ 564              	.L52:
+ 170:traitement.c  ****     }
+ 171:traitement.c  ****     if(DC_RED > 1000 && DC_IR > 1000)
+ 565              		.loc 1 171 0
+ 566 0034 B3F57A7F 		cmp	r3, #1000
+ 567 0038 08D9     		bls	.L53
+ 568              		.loc 1 171 0 is_stmt 0 discriminator 1
+ 569 003a B2F57A7F 		cmp	r2, #1000
+ 570 003e 05D9     		bls	.L53
+ 172:traitement.c  ****     {
+ 173:traitement.c  ****         *HR = (HR_RED + HR_IR)*6/2; //Moyenne
+ 571              		.loc 1 173 0 is_stmt 1
+ 572 0040 0844     		add	r0, r0, r1
+ 573              	.LVL70:
+ 574 0042 00EB4000 		add	r0, r0, r0, lsl #1
+ 575 0046 4100     		lsls	r1, r0, #1
+ 576              	.LVL71:
+ 577 0048 4910     		asrs	r1, r1, #1
+ 578 004a 2160     		str	r1, [r4]
+ 579              	.L53:
+ 174:traitement.c  ****     }
+ 175:traitement.c  ****     if(DC_RED < 1000 && DC_IR < 1000)
+ 580              		.loc 1 175 0
+ 581 004c B3F57A7F 		cmp	r3, #1000
+ 582 0050 04D2     		bcs	.L54
+ 583              		.loc 1 175 0 is_stmt 0 discriminator 1
+ 584 0052 B2F57A7F 		cmp	r2, #1000
+ 585 0056 01D2     		bcs	.L54
+ 176:traitement.c  ****     {
+ 177:traitement.c  ****         *HR = 0; //Moyenne
+ 586              		.loc 1 177 0 is_stmt 1
+ 587 0058 0021     		movs	r1, #0
+ 588 005a 2160     		str	r1, [r4]
+ 589              	.L54:
+ 178:traitement.c  ****     }
+ 179:traitement.c  ****         
+ 180:traitement.c  ****     //SPO2
+ 181:traitement.c  ****     float R = ((float)AC_RED/(float)DC_RED)/((float)AC_IR/(float)DC_IR);
+ 590              		.loc 1 181 0
+ 591 005c B8EE477A 		vcvt.f32.u32	s14, s14
+ 592              	.LVL72:
+ 593 0060 07EE903A 		vmov	s15, r3	@ int
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 15
+
+
+ 594 0064 F8EE677A 		vcvt.f32.u32	s15, s15
+ 595 0068 C7EE275A 		vdiv.f32	s11, s14, s15
+ 596 006c DDED057A 		vldr.32	s15, [sp, #20]	@ int
+ 597 0070 B8EE677A 		vcvt.f32.u32	s14, s15
+ 598 0074 07EE902A 		vmov	s15, r2	@ int
+ 599 0078 F8EE677A 		vcvt.f32.u32	s15, s15
+ 600 007c 87EE276A 		vdiv.f32	s12, s14, s15
+ 601 0080 C5EE866A 		vdiv.f32	s13, s11, s12
+ 602              	.LVL73:
+ 182:traitement.c  ****     float a = 1.5958422;
+ 183:traitement.c  ****     float b = -34.6596622;
+ 184:traitement.c  ****     float c = 112.6898759;
+ 185:traitement.c  ****     
+ 186:traitement.c  ****     *SPO2 = a*R*R+b*R+c;
+ 603              		.loc 1 186 0
+ 604 0084 9FED117A 		vldr.32	s14, .L59
+ 605 0088 66EE877A 		vmul.f32	s15, s13, s14
+ 606 008c 26EEA77A 		vmul.f32	s14, s13, s15
+ 607 0090 DFED0F7A 		vldr.32	s15, .L59+4
+ 608 0094 66EEA77A 		vmul.f32	s15, s13, s15
+ 609 0098 77EE277A 		vadd.f32	s15, s14, s15
+ 610 009c 9FED0D7A 		vldr.32	s14, .L59+8
+ 611 00a0 77EE877A 		vadd.f32	s15, s15, s14
+ 612 00a4 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 613 00a8 17EE903A 		vmov	r3, s15	@ int
+ 614              	.LVL74:
+ 615 00ac C5ED007A 		vstr.32	s15, [r5]	@ int
+ 187:traitement.c  ****     
+ 188:traitement.c  ****     //Interprétation des cas extrêmes 
+ 189:traitement.c  ****     //Si une valeur n'a pas de sens physiologiquement, le paramètre sera mis à 0.
+ 190:traitement.c  ****     
+ 191:traitement.c  ****     //Gestion si HR < 27 BPM ou >220 BPM (données incohérentes)
+ 192:traitement.c  ****     if(*HR<27 && *HR>220)
+ 193:traitement.c  ****     {
+ 194:traitement.c  ****        *HR = 0;
+ 195:traitement.c  ****     }
+ 196:traitement.c  ****     //Gestion si SPO2>100 ou <85% (plus faible que le minimum de la littérature)
+ 197:traitement.c  ****     if(*SPO2>100)
+ 616              		.loc 1 197 0
+ 617 00b0 642B     		cmp	r3, #100
+ 618 00b2 01D9     		bls	.L55
+ 198:traitement.c  ****     {
+ 199:traitement.c  ****         *SPO2=0;
+ 619              		.loc 1 199 0
+ 620 00b4 0023     		movs	r3, #0
+ 621 00b6 2B60     		str	r3, [r5]
+ 622              	.L55:
+ 200:traitement.c  ****     }
+ 201:traitement.c  ****    
+ 202:traitement.c  ****    //Gestion si un des deux paramètres est nul
+ 203:traitement.c  ****     if(*HR==0 || *SPO2 ==0)
+ 623              		.loc 1 203 0
+ 624 00b8 2368     		ldr	r3, [r4]
+ 625 00ba 0BB1     		cbz	r3, .L56
+ 626              		.loc 1 203 0 is_stmt 0 discriminator 1
+ 627 00bc 2B68     		ldr	r3, [r5]
+ 628 00be 13B9     		cbnz	r3, .L50
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 16
+
+
+ 629              	.L56:
+ 204:traitement.c  ****     {
+ 205:traitement.c  ****         *SPO2 = 0;
+ 630              		.loc 1 205 0 is_stmt 1
+ 631 00c0 0023     		movs	r3, #0
+ 632 00c2 2B60     		str	r3, [r5]
+ 206:traitement.c  ****         *HR = 0;
+ 633              		.loc 1 206 0
+ 634 00c4 2360     		str	r3, [r4]
+ 635              	.L50:
+ 207:traitement.c  ****     }
+ 208:traitement.c  **** 
+ 209:traitement.c  **** }
+ 636              		.loc 1 209 0
+ 637 00c6 F0BC     		pop	{r4, r5, r6, r7}
+ 638              		.cfi_restore 7
+ 639              		.cfi_restore 6
+ 640              		.cfi_restore 5
+ 641              		.cfi_restore 4
+ 642              		.cfi_def_cfa_offset 0
+ 643              	.LVL75:
+ 644 00c8 7047     		bx	lr
+ 645              	.L60:
+ 646 00ca 00BF     		.align	2
+ 647              	.L59:
+ 648 00cc 8F44CC3F 		.word	1070351503
+ 649 00d0 7EA30AC2 		.word	-1039490178
+ 650 00d4 3761E142 		.word	1122066743
+ 651              		.cfi_endproc
+ 652              	.LFE657:
+ 653              		.size	interpretation, .-interpretation
+ 654              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 655              		.align	2
+ 656              	.LC0:
+ 657 0000 48523A25 		.ascii	"HR:%d\015\012\000"
+ 657      640D0A00 
+ 658              		.text
+ 659              	.Letext0:
+ 660              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 661              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 662              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 663              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_i2c.h"
+ 664              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
+ 665              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_uart.h"
+ 666              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+ 667              		.file 9 "Generated_Source\\PSoC6\\pdl\\cmsis/include/core_cm4.h"
+ 668              		.file 10 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
+ 669              		.file 11 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
+ 670              		.file 12 "Generated_Source\\PSoC6/UART.h"
+ 671              		.file 13 "Generated_Source\\PSoC6/MAX_I2C.h"
+ 672              		.file 14 "Generated_Source\\PSoC6/BMI_I2C.h"
+ 673              		.file 15 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 674              		.section	.debug_info,"",%progbits
+ 675              	.Ldebug_info0:
+ 676 0000 C70C0000 		.4byte	0xcc7
+ 677 0004 0400     		.2byte	0x4
+ 678 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 17
+
+
+ 679 000a 04       		.byte	0x4
+ 680 000b 01       		.uleb128 0x1
+ 681 000c 1A070000 		.4byte	.LASF203
+ 682 0010 0C       		.byte	0xc
+ 683 0011 310A0000 		.4byte	.LASF204
+ 684 0015 4E040000 		.4byte	.LASF205
+ 685 0019 60000000 		.4byte	.Ldebug_ranges0+0x60
+ 686 001d 00000000 		.4byte	0
+ 687 0021 00000000 		.4byte	.Ldebug_line0
+ 688 0025 02       		.uleb128 0x2
+ 689 0026 02       		.byte	0x2
+ 690 0027 05       		.byte	0x5
+ 691 0028 C6050000 		.4byte	.LASF0
+ 692 002c 02       		.uleb128 0x2
+ 693 002d 01       		.byte	0x1
+ 694 002e 06       		.byte	0x6
+ 695 002f 140C0000 		.4byte	.LASF1
+ 696 0033 03       		.uleb128 0x3
+ 697 0034 9D000000 		.4byte	.LASF3
+ 698 0038 02       		.byte	0x2
+ 699 0039 1D       		.byte	0x1d
+ 700 003a 3E000000 		.4byte	0x3e
+ 701 003e 02       		.uleb128 0x2
+ 702 003f 01       		.byte	0x1
+ 703 0040 08       		.byte	0x8
+ 704 0041 3B080000 		.4byte	.LASF2
+ 705 0045 03       		.uleb128 0x3
+ 706 0046 D1030000 		.4byte	.LASF4
+ 707 004a 02       		.byte	0x2
+ 708 004b 29       		.byte	0x29
+ 709 004c 25000000 		.4byte	0x25
+ 710 0050 03       		.uleb128 0x3
+ 711 0051 EB090000 		.4byte	.LASF5
+ 712 0055 02       		.byte	0x2
+ 713 0056 2B       		.byte	0x2b
+ 714 0057 5B000000 		.4byte	0x5b
+ 715 005b 02       		.uleb128 0x2
+ 716 005c 02       		.byte	0x2
+ 717 005d 07       		.byte	0x7
+ 718 005e 7B0A0000 		.4byte	.LASF6
+ 719 0062 03       		.uleb128 0x3
+ 720 0063 090A0000 		.4byte	.LASF7
+ 721 0067 02       		.byte	0x2
+ 722 0068 3F       		.byte	0x3f
+ 723 0069 6D000000 		.4byte	0x6d
+ 724 006d 02       		.uleb128 0x2
+ 725 006e 04       		.byte	0x4
+ 726 006f 05       		.byte	0x5
+ 727 0070 F8020000 		.4byte	.LASF8
+ 728 0074 03       		.uleb128 0x3
+ 729 0075 B1030000 		.4byte	.LASF9
+ 730 0079 02       		.byte	0x2
+ 731 007a 41       		.byte	0x41
+ 732 007b 7F000000 		.4byte	0x7f
+ 733 007f 02       		.uleb128 0x2
+ 734 0080 04       		.byte	0x4
+ 735 0081 07       		.byte	0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 18
+
+
+ 736 0082 CD040000 		.4byte	.LASF10
+ 737 0086 02       		.uleb128 0x2
+ 738 0087 08       		.byte	0x8
+ 739 0088 05       		.byte	0x5
+ 740 0089 EE010000 		.4byte	.LASF11
+ 741 008d 02       		.uleb128 0x2
+ 742 008e 08       		.byte	0x8
+ 743 008f 07       		.byte	0x7
+ 744 0090 22010000 		.4byte	.LASF12
+ 745 0094 04       		.uleb128 0x4
+ 746 0095 04       		.byte	0x4
+ 747 0096 05       		.byte	0x5
+ 748 0097 696E7400 		.ascii	"int\000"
+ 749 009b 02       		.uleb128 0x2
+ 750 009c 04       		.byte	0x4
+ 751 009d 07       		.byte	0x7
+ 752 009e 22040000 		.4byte	.LASF13
+ 753 00a2 03       		.uleb128 0x3
+ 754 00a3 800B0000 		.4byte	.LASF14
+ 755 00a7 03       		.byte	0x3
+ 756 00a8 18       		.byte	0x18
+ 757 00a9 33000000 		.4byte	0x33
+ 758 00ad 03       		.uleb128 0x3
+ 759 00ae E6010000 		.4byte	.LASF15
+ 760 00b2 03       		.byte	0x3
+ 761 00b3 20       		.byte	0x20
+ 762 00b4 45000000 		.4byte	0x45
+ 763 00b8 03       		.uleb128 0x3
+ 764 00b9 44030000 		.4byte	.LASF16
+ 765 00bd 03       		.byte	0x3
+ 766 00be 24       		.byte	0x24
+ 767 00bf 50000000 		.4byte	0x50
+ 768 00c3 03       		.uleb128 0x3
+ 769 00c4 33080000 		.4byte	.LASF17
+ 770 00c8 03       		.byte	0x3
+ 771 00c9 2C       		.byte	0x2c
+ 772 00ca 62000000 		.4byte	0x62
+ 773 00ce 03       		.uleb128 0x3
+ 774 00cf 750C0000 		.4byte	.LASF18
+ 775 00d3 03       		.byte	0x3
+ 776 00d4 30       		.byte	0x30
+ 777 00d5 74000000 		.4byte	0x74
+ 778 00d9 02       		.uleb128 0x2
+ 779 00da 04       		.byte	0x4
+ 780 00db 07       		.byte	0x7
+ 781 00dc 52060000 		.4byte	.LASF19
+ 782 00e0 05       		.uleb128 0x5
+ 783 00e1 CE000000 		.4byte	0xce
+ 784 00e5 02       		.uleb128 0x2
+ 785 00e6 08       		.byte	0x8
+ 786 00e7 04       		.byte	0x4
+ 787 00e8 6C060000 		.4byte	.LASF20
+ 788 00ec 06       		.uleb128 0x6
+ 789 00ed B8       		.byte	0xb8
+ 790 00ee 04       		.byte	0x4
+ 791 00ef 34       		.byte	0x34
+ 792 00f0 FD040000 		.4byte	0x4fd
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 19
+
+
+ 793 00f4 07       		.uleb128 0x7
+ 794 00f5 F8000000 		.4byte	.LASF21
+ 795 00f9 04       		.byte	0x4
+ 796 00fa 37       		.byte	0x37
+ 797 00fb CE000000 		.4byte	0xce
+ 798 00ff 00       		.byte	0
+ 799 0100 07       		.uleb128 0x7
+ 800 0101 A6030000 		.4byte	.LASF22
+ 801 0105 04       		.byte	0x4
+ 802 0106 38       		.byte	0x38
+ 803 0107 CE000000 		.4byte	0xce
+ 804 010b 04       		.byte	0x4
+ 805 010c 07       		.uleb128 0x7
+ 806 010d 2A030000 		.4byte	.LASF23
+ 807 0111 04       		.byte	0x4
+ 808 0112 39       		.byte	0x39
+ 809 0113 CE000000 		.4byte	0xce
+ 810 0117 08       		.byte	0x8
+ 811 0118 07       		.uleb128 0x7
+ 812 0119 1C080000 		.4byte	.LASF24
+ 813 011d 04       		.byte	0x4
+ 814 011e 3A       		.byte	0x3a
+ 815 011f CE000000 		.4byte	0xce
+ 816 0123 0C       		.byte	0xc
+ 817 0124 07       		.uleb128 0x7
+ 818 0125 D0050000 		.4byte	.LASF25
+ 819 0129 04       		.byte	0x4
+ 820 012a 3B       		.byte	0x3b
+ 821 012b CE000000 		.4byte	0xce
+ 822 012f 10       		.byte	0x10
+ 823 0130 07       		.uleb128 0x7
+ 824 0131 BA020000 		.4byte	.LASF26
+ 825 0135 04       		.byte	0x4
+ 826 0136 3C       		.byte	0x3c
+ 827 0137 CE000000 		.4byte	0xce
+ 828 013b 14       		.byte	0x14
+ 829 013c 07       		.uleb128 0x7
+ 830 013d C60A0000 		.4byte	.LASF27
+ 831 0141 04       		.byte	0x4
+ 832 0142 3D       		.byte	0x3d
+ 833 0143 CE000000 		.4byte	0xce
+ 834 0147 18       		.byte	0x18
+ 835 0148 07       		.uleb128 0x7
+ 836 0149 78000000 		.4byte	.LASF28
+ 837 014d 04       		.byte	0x4
+ 838 014e 3E       		.byte	0x3e
+ 839 014f CE000000 		.4byte	0xce
+ 840 0153 1C       		.byte	0x1c
+ 841 0154 07       		.uleb128 0x7
+ 842 0155 200C0000 		.4byte	.LASF29
+ 843 0159 04       		.byte	0x4
+ 844 015a 3F       		.byte	0x3f
+ 845 015b CE000000 		.4byte	0xce
+ 846 015f 20       		.byte	0x20
+ 847 0160 07       		.uleb128 0x7
+ 848 0161 0D060000 		.4byte	.LASF30
+ 849 0165 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 20
+
+
+ 850 0166 40       		.byte	0x40
+ 851 0167 CE000000 		.4byte	0xce
+ 852 016b 24       		.byte	0x24
+ 853 016c 07       		.uleb128 0x7
+ 854 016d 45060000 		.4byte	.LASF31
+ 855 0171 04       		.byte	0x4
+ 856 0172 43       		.byte	0x43
+ 857 0173 A2000000 		.4byte	0xa2
+ 858 0177 28       		.byte	0x28
+ 859 0178 07       		.uleb128 0x7
+ 860 0179 5B000000 		.4byte	.LASF32
+ 861 017d 04       		.byte	0x4
+ 862 017e 44       		.byte	0x44
+ 863 017f A2000000 		.4byte	0xa2
+ 864 0183 29       		.byte	0x29
+ 865 0184 07       		.uleb128 0x7
+ 866 0185 1A0A0000 		.4byte	.LASF33
+ 867 0189 04       		.byte	0x4
+ 868 018a 45       		.byte	0x45
+ 869 018b A2000000 		.4byte	0xa2
+ 870 018f 2A       		.byte	0x2a
+ 871 0190 07       		.uleb128 0x7
+ 872 0191 EE060000 		.4byte	.LASF34
+ 873 0195 04       		.byte	0x4
+ 874 0196 46       		.byte	0x46
+ 875 0197 A2000000 		.4byte	0xa2
+ 876 019b 2B       		.byte	0x2b
+ 877 019c 07       		.uleb128 0x7
+ 878 019d 6F050000 		.4byte	.LASF35
+ 879 01a1 04       		.byte	0x4
+ 880 01a2 47       		.byte	0x47
+ 881 01a3 A2000000 		.4byte	0xa2
+ 882 01a7 2C       		.byte	0x2c
+ 883 01a8 07       		.uleb128 0x7
+ 884 01a9 240A0000 		.4byte	.LASF36
+ 885 01ad 04       		.byte	0x4
+ 886 01ae 48       		.byte	0x48
+ 887 01af A2000000 		.4byte	0xa2
+ 888 01b3 2D       		.byte	0x2d
+ 889 01b4 07       		.uleb128 0x7
+ 890 01b5 6D020000 		.4byte	.LASF37
+ 891 01b9 04       		.byte	0x4
+ 892 01ba 49       		.byte	0x49
+ 893 01bb A2000000 		.4byte	0xa2
+ 894 01bf 2E       		.byte	0x2e
+ 895 01c0 07       		.uleb128 0x7
+ 896 01c1 CD070000 		.4byte	.LASF38
+ 897 01c5 04       		.byte	0x4
+ 898 01c6 4A       		.byte	0x4a
+ 899 01c7 A2000000 		.4byte	0xa2
+ 900 01cb 2F       		.byte	0x2f
+ 901 01cc 07       		.uleb128 0x7
+ 902 01cd 8B010000 		.4byte	.LASF39
+ 903 01d1 04       		.byte	0x4
+ 904 01d2 4B       		.byte	0x4b
+ 905 01d3 A2000000 		.4byte	0xa2
+ 906 01d7 30       		.byte	0x30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 21
+
+
+ 907 01d8 07       		.uleb128 0x7
+ 908 01d9 1D050000 		.4byte	.LASF40
+ 909 01dd 04       		.byte	0x4
+ 910 01de 4E       		.byte	0x4e
+ 911 01df A2000000 		.4byte	0xa2
+ 912 01e3 31       		.byte	0x31
+ 913 01e4 07       		.uleb128 0x7
+ 914 01e5 8F000000 		.4byte	.LASF41
+ 915 01e9 04       		.byte	0x4
+ 916 01ea 4F       		.byte	0x4f
+ 917 01eb A2000000 		.4byte	0xa2
+ 918 01ef 32       		.byte	0x32
+ 919 01f0 07       		.uleb128 0x7
+ 920 01f1 28050000 		.4byte	.LASF42
+ 921 01f5 04       		.byte	0x4
+ 922 01f6 50       		.byte	0x50
+ 923 01f7 A2000000 		.4byte	0xa2
+ 924 01fb 33       		.byte	0x33
+ 925 01fc 07       		.uleb128 0x7
+ 926 01fd B3000000 		.4byte	.LASF43
+ 927 0201 04       		.byte	0x4
+ 928 0202 51       		.byte	0x51
+ 929 0203 A2000000 		.4byte	0xa2
+ 930 0207 34       		.byte	0x34
+ 931 0208 07       		.uleb128 0x7
+ 932 0209 B90A0000 		.4byte	.LASF44
+ 933 020d 04       		.byte	0x4
+ 934 020e 52       		.byte	0x52
+ 935 020f AD000000 		.4byte	0xad
+ 936 0213 36       		.byte	0x36
+ 937 0214 07       		.uleb128 0x7
+ 938 0215 36090000 		.4byte	.LASF45
+ 939 0219 04       		.byte	0x4
+ 940 021a 53       		.byte	0x53
+ 941 021b AD000000 		.4byte	0xad
+ 942 021f 38       		.byte	0x38
+ 943 0220 07       		.uleb128 0x7
+ 944 0221 460B0000 		.4byte	.LASF46
+ 945 0225 04       		.byte	0x4
+ 946 0226 54       		.byte	0x54
+ 947 0227 AD000000 		.4byte	0xad
+ 948 022b 3A       		.byte	0x3a
+ 949 022c 07       		.uleb128 0x7
+ 950 022d AB020000 		.4byte	.LASF47
+ 951 0231 04       		.byte	0x4
+ 952 0232 55       		.byte	0x55
+ 953 0233 A2000000 		.4byte	0xa2
+ 954 0237 3C       		.byte	0x3c
+ 955 0238 07       		.uleb128 0x7
+ 956 0239 69030000 		.4byte	.LASF48
+ 957 023d 04       		.byte	0x4
+ 958 023e 56       		.byte	0x56
+ 959 023f A2000000 		.4byte	0xa2
+ 960 0243 3D       		.byte	0x3d
+ 961 0244 07       		.uleb128 0x7
+ 962 0245 0F000000 		.4byte	.LASF49
+ 963 0249 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 22
+
+
+ 964 024a 57       		.byte	0x57
+ 965 024b A2000000 		.4byte	0xa2
+ 966 024f 3E       		.byte	0x3e
+ 967 0250 07       		.uleb128 0x7
+ 968 0251 09010000 		.4byte	.LASF50
+ 969 0255 04       		.byte	0x4
+ 970 0256 58       		.byte	0x58
+ 971 0257 A2000000 		.4byte	0xa2
+ 972 025b 3F       		.byte	0x3f
+ 973 025c 07       		.uleb128 0x7
+ 974 025d FC060000 		.4byte	.LASF51
+ 975 0261 04       		.byte	0x4
+ 976 0262 59       		.byte	0x59
+ 977 0263 A2000000 		.4byte	0xa2
+ 978 0267 40       		.byte	0x40
+ 979 0268 07       		.uleb128 0x7
+ 980 0269 BC030000 		.4byte	.LASF52
+ 981 026d 04       		.byte	0x4
+ 982 026e 5A       		.byte	0x5a
+ 983 026f A2000000 		.4byte	0xa2
+ 984 0273 41       		.byte	0x41
+ 985 0274 07       		.uleb128 0x7
+ 986 0275 AE060000 		.4byte	.LASF53
+ 987 0279 04       		.byte	0x4
+ 988 027a 5B       		.byte	0x5b
+ 989 027b A2000000 		.4byte	0xa2
+ 990 027f 42       		.byte	0x42
+ 991 0280 07       		.uleb128 0x7
+ 992 0281 DA060000 		.4byte	.LASF54
+ 993 0285 04       		.byte	0x4
+ 994 0286 5C       		.byte	0x5c
+ 995 0287 A2000000 		.4byte	0xa2
+ 996 028b 43       		.byte	0x43
+ 997 028c 07       		.uleb128 0x7
+ 998 028d 33030000 		.4byte	.LASF55
+ 999 0291 04       		.byte	0x4
+ 1000 0292 5D       		.byte	0x5d
+ 1001 0293 A2000000 		.4byte	0xa2
+ 1002 0297 44       		.byte	0x44
+ 1003 0298 07       		.uleb128 0x7
+ 1004 0299 7C090000 		.4byte	.LASF56
+ 1005 029d 04       		.byte	0x4
+ 1006 029e 5E       		.byte	0x5e
+ 1007 029f CE000000 		.4byte	0xce
+ 1008 02a3 48       		.byte	0x48
+ 1009 02a4 07       		.uleb128 0x7
+ 1010 02a5 1C030000 		.4byte	.LASF57
+ 1011 02a9 04       		.byte	0x4
+ 1012 02aa 5F       		.byte	0x5f
+ 1013 02ab CE000000 		.4byte	0xce
+ 1014 02af 4C       		.byte	0x4c
+ 1015 02b0 07       		.uleb128 0x7
+ 1016 02b1 7E0C0000 		.4byte	.LASF58
+ 1017 02b5 04       		.byte	0x4
+ 1018 02b6 60       		.byte	0x60
+ 1019 02b7 A2000000 		.4byte	0xa2
+ 1020 02bb 50       		.byte	0x50
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 23
+
+
+ 1021 02bc 07       		.uleb128 0x7
+ 1022 02bd 97010000 		.4byte	.LASF59
+ 1023 02c1 04       		.byte	0x4
+ 1024 02c2 61       		.byte	0x61
+ 1025 02c3 A2000000 		.4byte	0xa2
+ 1026 02c7 51       		.byte	0x51
+ 1027 02c8 07       		.uleb128 0x7
+ 1028 02c9 700B0000 		.4byte	.LASF60
+ 1029 02cd 04       		.byte	0x4
+ 1030 02ce 62       		.byte	0x62
+ 1031 02cf A2000000 		.4byte	0xa2
+ 1032 02d3 52       		.byte	0x52
+ 1033 02d4 07       		.uleb128 0x7
+ 1034 02d5 3E0A0000 		.4byte	.LASF61
+ 1035 02d9 04       		.byte	0x4
+ 1036 02da 63       		.byte	0x63
+ 1037 02db A2000000 		.4byte	0xa2
+ 1038 02df 53       		.byte	0x53
+ 1039 02e0 07       		.uleb128 0x7
+ 1040 02e1 26090000 		.4byte	.LASF62
+ 1041 02e5 04       		.byte	0x4
+ 1042 02e6 64       		.byte	0x64
+ 1043 02e7 A2000000 		.4byte	0xa2
+ 1044 02eb 54       		.byte	0x54
+ 1045 02ec 07       		.uleb128 0x7
+ 1046 02ed D2010000 		.4byte	.LASF63
+ 1047 02f1 04       		.byte	0x4
+ 1048 02f2 65       		.byte	0x65
+ 1049 02f3 A2000000 		.4byte	0xa2
+ 1050 02f7 55       		.byte	0x55
+ 1051 02f8 07       		.uleb128 0x7
+ 1052 02f9 D7090000 		.4byte	.LASF64
+ 1053 02fd 04       		.byte	0x4
+ 1054 02fe 66       		.byte	0x66
+ 1055 02ff A2000000 		.4byte	0xa2
+ 1056 0303 56       		.byte	0x56
+ 1057 0304 07       		.uleb128 0x7
+ 1058 0305 34050000 		.4byte	.LASF65
+ 1059 0309 04       		.byte	0x4
+ 1060 030a 67       		.byte	0x67
+ 1061 030b A2000000 		.4byte	0xa2
+ 1062 030f 57       		.byte	0x57
+ 1063 0310 07       		.uleb128 0x7
+ 1064 0311 27000000 		.4byte	.LASF66
+ 1065 0315 04       		.byte	0x4
+ 1066 0316 68       		.byte	0x68
+ 1067 0317 A2000000 		.4byte	0xa2
+ 1068 031b 58       		.byte	0x58
+ 1069 031c 07       		.uleb128 0x7
+ 1070 031d 49080000 		.4byte	.LASF67
+ 1071 0321 04       		.byte	0x4
+ 1072 0322 69       		.byte	0x69
+ 1073 0323 A2000000 		.4byte	0xa2
+ 1074 0327 59       		.byte	0x59
+ 1075 0328 07       		.uleb128 0x7
+ 1076 0329 5B060000 		.4byte	.LASF68
+ 1077 032d 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 24
+
+
+ 1078 032e 6E       		.byte	0x6e
+ 1079 032f B8000000 		.4byte	0xb8
+ 1080 0333 5A       		.byte	0x5a
+ 1081 0334 07       		.uleb128 0x7
+ 1082 0335 8E0A0000 		.4byte	.LASF69
+ 1083 0339 04       		.byte	0x4
+ 1084 033a 6F       		.byte	0x6f
+ 1085 033b B8000000 		.4byte	0xb8
+ 1086 033f 5C       		.byte	0x5c
+ 1087 0340 07       		.uleb128 0x7
+ 1088 0341 69000000 		.4byte	.LASF70
+ 1089 0345 04       		.byte	0x4
+ 1090 0346 70       		.byte	0x70
+ 1091 0347 A2000000 		.4byte	0xa2
+ 1092 034b 5E       		.byte	0x5e
+ 1093 034c 07       		.uleb128 0x7
+ 1094 034d 06080000 		.4byte	.LASF71
+ 1095 0351 04       		.byte	0x4
+ 1096 0352 71       		.byte	0x71
+ 1097 0353 A2000000 		.4byte	0xa2
+ 1098 0357 5F       		.byte	0x5f
+ 1099 0358 07       		.uleb128 0x7
+ 1100 0359 C9060000 		.4byte	.LASF72
+ 1101 035d 04       		.byte	0x4
+ 1102 035e 72       		.byte	0x72
+ 1103 035f A2000000 		.4byte	0xa2
+ 1104 0363 60       		.byte	0x60
+ 1105 0364 07       		.uleb128 0x7
+ 1106 0365 DF070000 		.4byte	.LASF73
+ 1107 0369 04       		.byte	0x4
+ 1108 036a 73       		.byte	0x73
+ 1109 036b CE000000 		.4byte	0xce
+ 1110 036f 64       		.byte	0x64
+ 1111 0370 07       		.uleb128 0x7
+ 1112 0371 48010000 		.4byte	.LASF74
+ 1113 0375 04       		.byte	0x4
+ 1114 0376 76       		.byte	0x76
+ 1115 0377 B8000000 		.4byte	0xb8
+ 1116 037b 68       		.byte	0x68
+ 1117 037c 07       		.uleb128 0x7
+ 1118 037d BB040000 		.4byte	.LASF75
+ 1119 0381 04       		.byte	0x4
+ 1120 0382 77       		.byte	0x77
+ 1121 0383 B8000000 		.4byte	0xb8
+ 1122 0387 6A       		.byte	0x6a
+ 1123 0388 07       		.uleb128 0x7
+ 1124 0389 52050000 		.4byte	.LASF76
+ 1125 038d 04       		.byte	0x4
+ 1126 038e 78       		.byte	0x78
+ 1127 038f B8000000 		.4byte	0xb8
+ 1128 0393 6C       		.byte	0x6c
+ 1129 0394 07       		.uleb128 0x7
+ 1130 0395 53090000 		.4byte	.LASF77
+ 1131 0399 04       		.byte	0x4
+ 1132 039a 79       		.byte	0x79
+ 1133 039b B8000000 		.4byte	0xb8
+ 1134 039f 6E       		.byte	0x6e
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 25
+
+
+ 1135 03a0 07       		.uleb128 0x7
+ 1136 03a1 B9080000 		.4byte	.LASF78
+ 1137 03a5 04       		.byte	0x4
+ 1138 03a6 7B       		.byte	0x7b
+ 1139 03a7 A2000000 		.4byte	0xa2
+ 1140 03ab 70       		.byte	0x70
+ 1141 03ac 07       		.uleb128 0x7
+ 1142 03ad 31020000 		.4byte	.LASF79
+ 1143 03b1 04       		.byte	0x4
+ 1144 03b2 7C       		.byte	0x7c
+ 1145 03b3 A2000000 		.4byte	0xa2
+ 1146 03b7 71       		.byte	0x71
+ 1147 03b8 07       		.uleb128 0x7
+ 1148 03b9 3A0C0000 		.4byte	.LASF80
+ 1149 03bd 04       		.byte	0x4
+ 1150 03be 7D       		.byte	0x7d
+ 1151 03bf A2000000 		.4byte	0xa2
+ 1152 03c3 72       		.byte	0x72
+ 1153 03c4 07       		.uleb128 0x7
+ 1154 03c5 97060000 		.4byte	.LASF81
+ 1155 03c9 04       		.byte	0x4
+ 1156 03ca 7E       		.byte	0x7e
+ 1157 03cb A2000000 		.4byte	0xa2
+ 1158 03cf 73       		.byte	0x73
+ 1159 03d0 07       		.uleb128 0x7
+ 1160 03d1 41090000 		.4byte	.LASF82
+ 1161 03d5 04       		.byte	0x4
+ 1162 03d6 80       		.byte	0x80
+ 1163 03d7 B8000000 		.4byte	0xb8
+ 1164 03db 74       		.byte	0x74
+ 1165 03dc 07       		.uleb128 0x7
+ 1166 03dd F6090000 		.4byte	.LASF83
+ 1167 03e1 04       		.byte	0x4
+ 1168 03e2 81       		.byte	0x81
+ 1169 03e3 B8000000 		.4byte	0xb8
+ 1170 03e7 76       		.byte	0x76
+ 1171 03e8 07       		.uleb128 0x7
+ 1172 03e9 54030000 		.4byte	.LASF84
+ 1173 03ed 04       		.byte	0x4
+ 1174 03ee 82       		.byte	0x82
+ 1175 03ef B8000000 		.4byte	0xb8
+ 1176 03f3 78       		.byte	0x78
+ 1177 03f4 07       		.uleb128 0x7
+ 1178 03f5 7E080000 		.4byte	.LASF85
+ 1179 03f9 04       		.byte	0x4
+ 1180 03fa 83       		.byte	0x83
+ 1181 03fb B8000000 		.4byte	0xb8
+ 1182 03ff 7A       		.byte	0x7a
+ 1183 0400 07       		.uleb128 0x7
+ 1184 0401 C20B0000 		.4byte	.LASF86
+ 1185 0405 04       		.byte	0x4
+ 1186 0406 86       		.byte	0x86
+ 1187 0407 A2000000 		.4byte	0xa2
+ 1188 040b 7C       		.byte	0x7c
+ 1189 040c 07       		.uleb128 0x7
+ 1190 040d 84050000 		.4byte	.LASF87
+ 1191 0411 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 26
+
+
+ 1192 0412 87       		.byte	0x87
+ 1193 0413 A2000000 		.4byte	0xa2
+ 1194 0417 7D       		.byte	0x7d
+ 1195 0418 07       		.uleb128 0x7
+ 1196 0419 3B000000 		.4byte	.LASF88
+ 1197 041d 04       		.byte	0x4
+ 1198 041e 88       		.byte	0x88
+ 1199 041f A2000000 		.4byte	0xa2
+ 1200 0423 7E       		.byte	0x7e
+ 1201 0424 07       		.uleb128 0x7
+ 1202 0425 8B030000 		.4byte	.LASF89
+ 1203 0429 04       		.byte	0x4
+ 1204 042a 89       		.byte	0x89
+ 1205 042b A2000000 		.4byte	0xa2
+ 1206 042f 7F       		.byte	0x7f
+ 1207 0430 07       		.uleb128 0x7
+ 1208 0431 03040000 		.4byte	.LASF90
+ 1209 0435 04       		.byte	0x4
+ 1210 0436 8A       		.byte	0x8a
+ 1211 0437 A2000000 		.4byte	0xa2
+ 1212 043b 80       		.byte	0x80
+ 1213 043c 07       		.uleb128 0x7
+ 1214 043d F6050000 		.4byte	.LASF91
+ 1215 0441 04       		.byte	0x4
+ 1216 0442 8D       		.byte	0x8d
+ 1217 0443 CE000000 		.4byte	0xce
+ 1218 0447 84       		.byte	0x84
+ 1219 0448 07       		.uleb128 0x7
+ 1220 0449 C4000000 		.4byte	.LASF92
+ 1221 044d 04       		.byte	0x4
+ 1222 044e 8E       		.byte	0x8e
+ 1223 044f CE000000 		.4byte	0xce
+ 1224 0453 88       		.byte	0x88
+ 1225 0454 07       		.uleb128 0x7
+ 1226 0455 AD0B0000 		.4byte	.LASF93
+ 1227 0459 04       		.byte	0x4
+ 1228 045a 8F       		.byte	0x8f
+ 1229 045b CE000000 		.4byte	0xce
+ 1230 045f 8C       		.byte	0x8c
+ 1231 0460 07       		.uleb128 0x7
+ 1232 0461 30060000 		.4byte	.LASF94
+ 1233 0465 04       		.byte	0x4
+ 1234 0466 90       		.byte	0x90
+ 1235 0467 CE000000 		.4byte	0xce
+ 1236 046b 90       		.byte	0x90
+ 1237 046c 07       		.uleb128 0x7
+ 1238 046d E4030000 		.4byte	.LASF95
+ 1239 0471 04       		.byte	0x4
+ 1240 0472 91       		.byte	0x91
+ 1241 0473 CE000000 		.4byte	0xce
+ 1242 0477 94       		.byte	0x94
+ 1243 0478 07       		.uleb128 0x7
+ 1244 0479 57020000 		.4byte	.LASF96
+ 1245 047d 04       		.byte	0x4
+ 1246 047e 92       		.byte	0x92
+ 1247 047f CE000000 		.4byte	0xce
+ 1248 0483 98       		.byte	0x98
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 27
+
+
+ 1249 0484 07       		.uleb128 0x7
+ 1250 0485 F50B0000 		.4byte	.LASF97
+ 1251 0489 04       		.byte	0x4
+ 1252 048a 93       		.byte	0x93
+ 1253 048b CE000000 		.4byte	0xce
+ 1254 048f 9C       		.byte	0x9c
+ 1255 0490 07       		.uleb128 0x7
+ 1256 0491 62010000 		.4byte	.LASF98
+ 1257 0495 04       		.byte	0x4
+ 1258 0496 94       		.byte	0x94
+ 1259 0497 CE000000 		.4byte	0xce
+ 1260 049b A0       		.byte	0xa0
+ 1261 049c 07       		.uleb128 0x7
+ 1262 049d 78020000 		.4byte	.LASF99
+ 1263 04a1 04       		.byte	0x4
+ 1264 04a2 95       		.byte	0x95
+ 1265 04a3 B8000000 		.4byte	0xb8
+ 1266 04a7 A4       		.byte	0xa4
+ 1267 04a8 07       		.uleb128 0x7
+ 1268 04a9 5B0B0000 		.4byte	.LASF100
+ 1269 04ad 04       		.byte	0x4
+ 1270 04ae 96       		.byte	0x96
+ 1271 04af B8000000 		.4byte	0xb8
+ 1272 04b3 A6       		.byte	0xa6
+ 1273 04b4 07       		.uleb128 0x7
+ 1274 04b5 FA070000 		.4byte	.LASF101
+ 1275 04b9 04       		.byte	0x4
+ 1276 04ba 97       		.byte	0x97
+ 1277 04bb B8000000 		.4byte	0xb8
+ 1278 04bf A8       		.byte	0xa8
+ 1279 04c0 07       		.uleb128 0x7
+ 1280 04c1 93080000 		.4byte	.LASF102
+ 1281 04c5 04       		.byte	0x4
+ 1282 04c6 98       		.byte	0x98
+ 1283 04c7 B8000000 		.4byte	0xb8
+ 1284 04cb AA       		.byte	0xaa
+ 1285 04cc 07       		.uleb128 0x7
+ 1286 04cd 61050000 		.4byte	.LASF103
+ 1287 04d1 04       		.byte	0x4
+ 1288 04d2 99       		.byte	0x99
+ 1289 04d3 B8000000 		.4byte	0xb8
+ 1290 04d7 AC       		.byte	0xac
+ 1291 04d8 07       		.uleb128 0x7
+ 1292 04d9 81000000 		.4byte	.LASF104
+ 1293 04dd 04       		.byte	0x4
+ 1294 04de 9A       		.byte	0x9a
+ 1295 04df B8000000 		.4byte	0xb8
+ 1296 04e3 AE       		.byte	0xae
+ 1297 04e4 07       		.uleb128 0x7
+ 1298 04e5 A10A0000 		.4byte	.LASF105
+ 1299 04e9 04       		.byte	0x4
+ 1300 04ea 9D       		.byte	0x9d
+ 1301 04eb B8000000 		.4byte	0xb8
+ 1302 04ef B0       		.byte	0xb0
+ 1303 04f0 07       		.uleb128 0x7
+ 1304 04f1 6A080000 		.4byte	.LASF106
+ 1305 04f5 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 28
+
+
+ 1306 04f6 9E       		.byte	0x9e
+ 1307 04f7 CE000000 		.4byte	0xce
+ 1308 04fb B4       		.byte	0xb4
+ 1309 04fc 00       		.byte	0
+ 1310 04fd 03       		.uleb128 0x3
+ 1311 04fe 9D050000 		.4byte	.LASF107
+ 1312 0502 04       		.byte	0x4
+ 1313 0503 9F       		.byte	0x9f
+ 1314 0504 EC000000 		.4byte	0xec
+ 1315 0508 02       		.uleb128 0x2
+ 1316 0509 01       		.byte	0x1
+ 1317 050a 08       		.byte	0x8
+ 1318 050b CB090000 		.4byte	.LASF108
+ 1319 050f 02       		.uleb128 0x2
+ 1320 0510 04       		.byte	0x4
+ 1321 0511 04       		.byte	0x4
+ 1322 0512 D9070000 		.4byte	.LASF109
+ 1323 0516 02       		.uleb128 0x2
+ 1324 0517 08       		.byte	0x8
+ 1325 0518 04       		.byte	0x4
+ 1326 0519 4D030000 		.4byte	.LASF110
+ 1327 051d 08       		.uleb128 0x8
+ 1328 051e 04       		.byte	0x4
+ 1329 051f CE000000 		.4byte	0xce
+ 1330 0523 09       		.uleb128 0x9
+ 1331 0524 04       		.byte	0x4
+ 1332 0525 02       		.uleb128 0x2
+ 1333 0526 01       		.byte	0x1
+ 1334 0527 02       		.byte	0x2
+ 1335 0528 680C0000 		.4byte	.LASF111
+ 1336 052c 0A       		.uleb128 0xa
+ 1337 052d 01       		.byte	0x1
+ 1338 052e 3E000000 		.4byte	0x3e
+ 1339 0532 05       		.byte	0x5
+ 1340 0533 2402     		.2byte	0x224
+ 1341 0535 46050000 		.4byte	0x546
+ 1342 0539 0B       		.uleb128 0xb
+ 1343 053a BA060000 		.4byte	.LASF112
+ 1344 053e 00       		.byte	0
+ 1345 053f 0B       		.uleb128 0xb
+ 1346 0540 0D030000 		.4byte	.LASF113
+ 1347 0544 01       		.byte	0x1
+ 1348 0545 00       		.byte	0
+ 1349 0546 0C       		.uleb128 0xc
+ 1350 0547 18060000 		.4byte	.LASF114
+ 1351 054b 05       		.byte	0x5
+ 1352 054c 2702     		.2byte	0x227
+ 1353 054e 2C050000 		.4byte	0x52c
+ 1354 0552 0C       		.uleb128 0xc
+ 1355 0553 DA020000 		.4byte	.LASF115
+ 1356 0557 05       		.byte	0x5
+ 1357 0558 3902     		.2byte	0x239
+ 1358 055a 5E050000 		.4byte	0x55e
+ 1359 055e 08       		.uleb128 0x8
+ 1360 055f 04       		.byte	0x4
+ 1361 0560 64050000 		.4byte	0x564
+ 1362 0564 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 29
+
+
+ 1363 0565 6F050000 		.4byte	0x56f
+ 1364 0569 0E       		.uleb128 0xe
+ 1365 056a CE000000 		.4byte	0xce
+ 1366 056e 00       		.byte	0
+ 1367 056f 0C       		.uleb128 0xc
+ 1368 0570 D9080000 		.4byte	.LASF116
+ 1369 0574 05       		.byte	0x5
+ 1370 0575 4402     		.2byte	0x244
+ 1371 0577 7B050000 		.4byte	0x57b
+ 1372 057b 08       		.uleb128 0x8
+ 1373 057c 04       		.byte	0x4
+ 1374 057d 81050000 		.4byte	0x581
+ 1375 0581 0F       		.uleb128 0xf
+ 1376 0582 46050000 		.4byte	0x546
+ 1377 0586 90050000 		.4byte	0x590
+ 1378 058a 0E       		.uleb128 0xe
+ 1379 058b CE000000 		.4byte	0xce
+ 1380 058f 00       		.byte	0
+ 1381 0590 10       		.uleb128 0x10
+ 1382 0591 BB010000 		.4byte	.LASF140
+ 1383 0595 4C       		.byte	0x4c
+ 1384 0596 05       		.byte	0x5
+ 1385 0597 C302     		.2byte	0x2c3
+ 1386 0599 AF060000 		.4byte	0x6af
+ 1387 059d 11       		.uleb128 0x11
+ 1388 059e AF0A0000 		.4byte	.LASF117
+ 1389 05a2 05       		.byte	0x5
+ 1390 05a3 C602     		.2byte	0x2c6
+ 1391 05a5 25050000 		.4byte	0x525
+ 1392 05a9 00       		.byte	0
+ 1393 05aa 11       		.uleb128 0x11
+ 1394 05ab 48050000 		.4byte	.LASF118
+ 1395 05af 05       		.byte	0x5
+ 1396 05b0 C702     		.2byte	0x2c7
+ 1397 05b2 25050000 		.4byte	0x525
+ 1398 05b6 01       		.byte	0x1
+ 1399 05b7 11       		.uleb128 0x11
+ 1400 05b8 D4020000 		.4byte	.LASF119
+ 1401 05bc 05       		.byte	0x5
+ 1402 05bd C902     		.2byte	0x2c9
+ 1403 05bf E0000000 		.4byte	0xe0
+ 1404 05c3 04       		.byte	0x4
+ 1405 05c4 11       		.uleb128 0x11
+ 1406 05c5 78010000 		.4byte	.LASF120
+ 1407 05c9 05       		.byte	0x5
+ 1408 05ca CB02     		.2byte	0x2cb
+ 1409 05cc E0000000 		.4byte	0xe0
+ 1410 05d0 08       		.byte	0x8
+ 1411 05d1 11       		.uleb128 0x11
+ 1412 05d2 CD080000 		.4byte	.LASF121
+ 1413 05d6 05       		.byte	0x5
+ 1414 05d7 CC02     		.2byte	0x2cc
+ 1415 05d9 25050000 		.4byte	0x525
+ 1416 05dd 0C       		.byte	0xc
+ 1417 05de 11       		.uleb128 0x11
+ 1418 05df 01030000 		.4byte	.LASF122
+ 1419 05e3 05       		.byte	0x5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 30
+
+
+ 1420 05e4 CD02     		.2byte	0x2cd
+ 1421 05e6 25050000 		.4byte	0x525
+ 1422 05ea 0D       		.byte	0xd
+ 1423 05eb 11       		.uleb128 0x11
+ 1424 05ec 4E000000 		.4byte	.LASF123
+ 1425 05f0 05       		.byte	0x5
+ 1426 05f1 CF02     		.2byte	0x2cf
+ 1427 05f3 AF060000 		.4byte	0x6af
+ 1428 05f7 10       		.byte	0x10
+ 1429 05f8 11       		.uleb128 0x11
+ 1430 05f9 A8080000 		.4byte	.LASF124
+ 1431 05fd 05       		.byte	0x5
+ 1432 05fe D002     		.2byte	0x2d0
+ 1433 0600 CE000000 		.4byte	0xce
+ 1434 0604 14       		.byte	0x14
+ 1435 0605 11       		.uleb128 0x11
+ 1436 0606 78060000 		.4byte	.LASF125
+ 1437 060a 05       		.byte	0x5
+ 1438 060b D102     		.2byte	0x2d1
+ 1439 060d E0000000 		.4byte	0xe0
+ 1440 0611 18       		.byte	0x18
+ 1441 0612 11       		.uleb128 0x11
+ 1442 0613 06090000 		.4byte	.LASF126
+ 1443 0617 05       		.byte	0x5
+ 1444 0618 D202     		.2byte	0x2d2
+ 1445 061a E0000000 		.4byte	0xe0
+ 1446 061e 1C       		.byte	0x1c
+ 1447 061f 11       		.uleb128 0x11
+ 1448 0620 A7000000 		.4byte	.LASF127
+ 1449 0624 05       		.byte	0x5
+ 1450 0625 D402     		.2byte	0x2d4
+ 1451 0627 E0000000 		.4byte	0xe0
+ 1452 062b 20       		.byte	0x20
+ 1453 062c 11       		.uleb128 0x11
+ 1454 062d A5040000 		.4byte	.LASF128
+ 1455 0631 05       		.byte	0x5
+ 1456 0632 D502     		.2byte	0x2d5
+ 1457 0634 B5060000 		.4byte	0x6b5
+ 1458 0638 24       		.byte	0x24
+ 1459 0639 11       		.uleb128 0x11
+ 1460 063a DD0A0000 		.4byte	.LASF129
+ 1461 063e 05       		.byte	0x5
+ 1462 063f D702     		.2byte	0x2d7
+ 1463 0641 AF060000 		.4byte	0x6af
+ 1464 0645 28       		.byte	0x28
+ 1465 0646 11       		.uleb128 0x11
+ 1466 0647 EB0A0000 		.4byte	.LASF130
+ 1467 064b 05       		.byte	0x5
+ 1468 064c D802     		.2byte	0x2d8
+ 1469 064e CE000000 		.4byte	0xce
+ 1470 0652 2C       		.byte	0x2c
+ 1471 0653 11       		.uleb128 0x11
+ 1472 0654 3D040000 		.4byte	.LASF131
+ 1473 0658 05       		.byte	0x5
+ 1474 0659 D902     		.2byte	0x2d9
+ 1475 065b E0000000 		.4byte	0xe0
+ 1476 065f 30       		.byte	0x30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 31
+
+
+ 1477 0660 11       		.uleb128 0x11
+ 1478 0661 15090000 		.4byte	.LASF132
+ 1479 0665 05       		.byte	0x5
+ 1480 0666 DA02     		.2byte	0x2da
+ 1481 0668 E0000000 		.4byte	0xe0
+ 1482 066c 34       		.byte	0x34
+ 1483 066d 11       		.uleb128 0x11
+ 1484 066e E8050000 		.4byte	.LASF133
+ 1485 0672 05       		.byte	0x5
+ 1486 0673 DC02     		.2byte	0x2dc
+ 1487 0675 AF060000 		.4byte	0x6af
+ 1488 0679 38       		.byte	0x38
+ 1489 067a 11       		.uleb128 0x11
+ 1490 067b A9010000 		.4byte	.LASF134
+ 1491 067f 05       		.byte	0x5
+ 1492 0680 DD02     		.2byte	0x2dd
+ 1493 0682 CE000000 		.4byte	0xce
+ 1494 0686 3C       		.byte	0x3c
+ 1495 0687 11       		.uleb128 0x11
+ 1496 0688 09070000 		.4byte	.LASF135
+ 1497 068c 05       		.byte	0x5
+ 1498 068d DE02     		.2byte	0x2de
+ 1499 068f E0000000 		.4byte	0xe0
+ 1500 0693 40       		.byte	0x40
+ 1501 0694 11       		.uleb128 0x11
+ 1502 0695 7B050000 		.4byte	.LASF136
+ 1503 0699 05       		.byte	0x5
+ 1504 069a E402     		.2byte	0x2e4
+ 1505 069c 52050000 		.4byte	0x552
+ 1506 06a0 44       		.byte	0x44
+ 1507 06a1 11       		.uleb128 0x11
+ 1508 06a2 9F030000 		.4byte	.LASF137
+ 1509 06a6 05       		.byte	0x5
+ 1510 06a7 EB02     		.2byte	0x2eb
+ 1511 06a9 6F050000 		.4byte	0x56f
+ 1512 06ad 48       		.byte	0x48
+ 1513 06ae 00       		.byte	0
+ 1514 06af 08       		.uleb128 0x8
+ 1515 06b0 04       		.byte	0x4
+ 1516 06b1 A2000000 		.4byte	0xa2
+ 1517 06b5 05       		.uleb128 0x5
+ 1518 06b6 25050000 		.4byte	0x525
+ 1519 06ba 0C       		.uleb128 0xc
+ 1520 06bb 95090000 		.4byte	.LASF138
+ 1521 06bf 05       		.byte	0x5
+ 1522 06c0 EE02     		.2byte	0x2ee
+ 1523 06c2 90050000 		.4byte	0x590
+ 1524 06c6 0C       		.uleb128 0xc
+ 1525 06c7 8D020000 		.4byte	.LASF139
+ 1526 06cb 06       		.byte	0x6
+ 1527 06cc F201     		.2byte	0x1f2
+ 1528 06ce 5E050000 		.4byte	0x55e
+ 1529 06d2 10       		.uleb128 0x10
+ 1530 06d3 1A020000 		.4byte	.LASF141
+ 1531 06d7 24       		.byte	0x24
+ 1532 06d8 06       		.byte	0x6
+ 1533 06d9 7402     		.2byte	0x274
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 32
+
+
+ 1534 06db 55070000 		.4byte	0x755
+ 1535 06df 11       		.uleb128 0x11
+ 1536 06e0 A1080000 		.4byte	.LASF142
+ 1537 06e4 06       		.byte	0x6
+ 1538 06e5 7702     		.2byte	0x277
+ 1539 06e7 E0000000 		.4byte	0xe0
+ 1540 06eb 00       		.byte	0
+ 1541 06ec 11       		.uleb128 0x11
+ 1542 06ed D70A0000 		.4byte	.LASF143
+ 1543 06f1 06       		.byte	0x6
+ 1544 06f2 7902     		.2byte	0x279
+ 1545 06f4 23050000 		.4byte	0x523
+ 1546 06f8 04       		.byte	0x4
+ 1547 06f9 11       		.uleb128 0x11
+ 1548 06fa 1D000000 		.4byte	.LASF144
+ 1549 06fe 06       		.byte	0x6
+ 1550 06ff 7A02     		.2byte	0x27a
+ 1551 0701 CE000000 		.4byte	0xce
+ 1552 0705 08       		.byte	0x8
+ 1553 0706 11       		.uleb128 0x11
+ 1554 0707 DB030000 		.4byte	.LASF145
+ 1555 070b 06       		.byte	0x6
+ 1556 070c 7B02     		.2byte	0x27b
+ 1557 070e E0000000 		.4byte	0xe0
+ 1558 0712 0C       		.byte	0xc
+ 1559 0713 11       		.uleb128 0x11
+ 1560 0714 85010000 		.4byte	.LASF146
+ 1561 0718 06       		.byte	0x6
+ 1562 0719 7D02     		.2byte	0x27d
+ 1563 071b 23050000 		.4byte	0x523
+ 1564 071f 10       		.byte	0x10
+ 1565 0720 11       		.uleb128 0x11
+ 1566 0721 F9030000 		.4byte	.LASF147
+ 1567 0725 06       		.byte	0x6
+ 1568 0726 7E02     		.2byte	0x27e
+ 1569 0728 CE000000 		.4byte	0xce
+ 1570 072c 14       		.byte	0x14
+ 1571 072d 11       		.uleb128 0x11
+ 1572 072e 8F0C0000 		.4byte	.LASF148
+ 1573 0732 06       		.byte	0x6
+ 1574 0733 7F02     		.2byte	0x27f
+ 1575 0735 E0000000 		.4byte	0xe0
+ 1576 0739 18       		.byte	0x18
+ 1577 073a 11       		.uleb128 0x11
+ 1578 073b 7B050000 		.4byte	.LASF136
+ 1579 073f 06       		.byte	0x6
+ 1580 0740 8502     		.2byte	0x285
+ 1581 0742 C6060000 		.4byte	0x6c6
+ 1582 0746 1C       		.byte	0x1c
+ 1583 0747 11       		.uleb128 0x11
+ 1584 0748 CF0A0000 		.4byte	.LASF149
+ 1585 074c 06       		.byte	0x6
+ 1586 074d 8802     		.2byte	0x288
+ 1587 074f CE000000 		.4byte	0xce
+ 1588 0753 20       		.byte	0x20
+ 1589 0754 00       		.byte	0
+ 1590 0755 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 33
+
+
+ 1591 0756 AD050000 		.4byte	.LASF150
+ 1592 075a 06       		.byte	0x6
+ 1593 075b 8B02     		.2byte	0x28b
+ 1594 075d D2060000 		.4byte	0x6d2
+ 1595 0761 0C       		.uleb128 0xc
+ 1596 0762 F1040000 		.4byte	.LASF151
+ 1597 0766 07       		.byte	0x7
+ 1598 0767 D901     		.2byte	0x1d9
+ 1599 0769 5E050000 		.4byte	0x55e
+ 1600 076d 10       		.uleb128 0x10
+ 1601 076e 500C0000 		.4byte	.LASF152
+ 1602 0772 38       		.byte	0x38
+ 1603 0773 07       		.byte	0x7
+ 1604 0774 7502     		.2byte	0x275
+ 1605 0776 31080000 		.4byte	0x831
+ 1606 077a 11       		.uleb128 0x11
+ 1607 077b 0B0C0000 		.4byte	.LASF153
+ 1608 077f 07       		.byte	0x7
+ 1609 0780 7802     		.2byte	0x278
+ 1610 0782 E0000000 		.4byte	0xe0
+ 1611 0786 00       		.byte	0
+ 1612 0787 11       		.uleb128 0x11
+ 1613 0788 E5060000 		.4byte	.LASF154
+ 1614 078c 07       		.byte	0x7
+ 1615 078d 7902     		.2byte	0x279
+ 1616 078f E0000000 		.4byte	0xe0
+ 1617 0793 04       		.byte	0x4
+ 1618 0794 11       		.uleb128 0x11
+ 1619 0795 58010000 		.4byte	.LASF155
+ 1620 0799 07       		.byte	0x7
+ 1621 079a 7B02     		.2byte	0x27b
+ 1622 079c 23050000 		.4byte	0x523
+ 1623 07a0 08       		.byte	0x8
+ 1624 07a1 11       		.uleb128 0x11
+ 1625 07a2 2F040000 		.4byte	.LASF156
+ 1626 07a6 07       		.byte	0x7
+ 1627 07a7 7C02     		.2byte	0x27c
+ 1628 07a9 CE000000 		.4byte	0xce
+ 1629 07ad 0C       		.byte	0xc
+ 1630 07ae 11       		.uleb128 0x11
+ 1631 07af 500A0000 		.4byte	.LASF157
+ 1632 07b3 07       		.byte	0x7
+ 1633 07b4 7D02     		.2byte	0x27d
+ 1634 07b6 E0000000 		.4byte	0xe0
+ 1635 07ba 10       		.byte	0x10
+ 1636 07bb 11       		.uleb128 0x11
+ 1637 07bc E70B0000 		.4byte	.LASF158
+ 1638 07c0 07       		.byte	0x7
+ 1639 07c1 7E02     		.2byte	0x27e
+ 1640 07c3 E0000000 		.4byte	0xe0
+ 1641 07c7 14       		.byte	0x14
+ 1642 07c8 11       		.uleb128 0x11
+ 1643 07c9 D70A0000 		.4byte	.LASF143
+ 1644 07cd 07       		.byte	0x7
+ 1645 07ce 8002     		.2byte	0x280
+ 1646 07d0 23050000 		.4byte	0x523
+ 1647 07d4 18       		.byte	0x18
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 34
+
+
+ 1648 07d5 11       		.uleb128 0x11
+ 1649 07d6 1D000000 		.4byte	.LASF144
+ 1650 07da 07       		.byte	0x7
+ 1651 07db 8102     		.2byte	0x281
+ 1652 07dd CE000000 		.4byte	0xce
+ 1653 07e1 1C       		.byte	0x1c
+ 1654 07e2 11       		.uleb128 0x11
+ 1655 07e3 DB030000 		.4byte	.LASF145
+ 1656 07e7 07       		.byte	0x7
+ 1657 07e8 8202     		.2byte	0x282
+ 1658 07ea E0000000 		.4byte	0xe0
+ 1659 07ee 20       		.byte	0x20
+ 1660 07ef 11       		.uleb128 0x11
+ 1661 07f0 85010000 		.4byte	.LASF146
+ 1662 07f4 07       		.byte	0x7
+ 1663 07f5 8402     		.2byte	0x284
+ 1664 07f7 23050000 		.4byte	0x523
+ 1665 07fb 24       		.byte	0x24
+ 1666 07fc 11       		.uleb128 0x11
+ 1667 07fd F9030000 		.4byte	.LASF147
+ 1668 0801 07       		.byte	0x7
+ 1669 0802 8502     		.2byte	0x285
+ 1670 0804 CE000000 		.4byte	0xce
+ 1671 0808 28       		.byte	0x28
+ 1672 0809 11       		.uleb128 0x11
+ 1673 080a 46020000 		.4byte	.LASF159
+ 1674 080e 07       		.byte	0x7
+ 1675 080f 8602     		.2byte	0x286
+ 1676 0811 E0000000 		.4byte	0xe0
+ 1677 0815 2C       		.byte	0x2c
+ 1678 0816 11       		.uleb128 0x11
+ 1679 0817 7B050000 		.4byte	.LASF136
+ 1680 081b 07       		.byte	0x7
+ 1681 081c 8B02     		.2byte	0x28b
+ 1682 081e 61070000 		.4byte	0x761
+ 1683 0822 30       		.byte	0x30
+ 1684 0823 11       		.uleb128 0x11
+ 1685 0824 CF0A0000 		.4byte	.LASF149
+ 1686 0828 07       		.byte	0x7
+ 1687 0829 8E02     		.2byte	0x28e
+ 1688 082b CE000000 		.4byte	0xce
+ 1689 082f 34       		.byte	0x34
+ 1690 0830 00       		.byte	0
+ 1691 0831 0C       		.uleb128 0xc
+ 1692 0832 FD0A0000 		.4byte	.LASF160
+ 1693 0836 07       		.byte	0x7
+ 1694 0837 9102     		.2byte	0x291
+ 1695 0839 6D070000 		.4byte	0x76d
+ 1696 083d 12       		.uleb128 0x12
+ 1697 083e 60090000 		.4byte	.LASF161
+ 1698 0842 4C       		.byte	0x4c
+ 1699 0843 08       		.byte	0x8
+ 1700 0844 2F       		.byte	0x2f
+ 1701 0845 2E090000 		.4byte	0x92e
+ 1702 0849 07       		.uleb128 0x7
+ 1703 084a 02010000 		.4byte	.LASF162
+ 1704 084e 08       		.byte	0x8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 35
+
+
+ 1705 084f 31       		.byte	0x31
+ 1706 0850 CE000000 		.4byte	0xce
+ 1707 0854 00       		.byte	0
+ 1708 0855 07       		.uleb128 0x7
+ 1709 0856 39010000 		.4byte	.LASF163
+ 1710 085a 08       		.byte	0x8
+ 1711 085b 33       		.byte	0x33
+ 1712 085c CE000000 		.4byte	0xce
+ 1713 0860 04       		.byte	0x4
+ 1714 0861 07       		.uleb128 0x7
+ 1715 0862 07000000 		.4byte	.LASF164
+ 1716 0866 08       		.byte	0x8
+ 1717 0867 34       		.byte	0x34
+ 1718 0868 CE000000 		.4byte	0xce
+ 1719 086c 08       		.byte	0x8
+ 1720 086d 07       		.uleb128 0x7
+ 1721 086e DB000000 		.4byte	.LASF165
+ 1722 0872 08       		.byte	0x8
+ 1723 0873 35       		.byte	0x35
+ 1724 0874 CE000000 		.4byte	0xce
+ 1725 0878 0C       		.byte	0xc
+ 1726 0879 07       		.uleb128 0x7
+ 1727 087a F5080000 		.4byte	.LASF166
+ 1728 087e 08       		.byte	0x8
+ 1729 087f 37       		.byte	0x37
+ 1730 0880 CE000000 		.4byte	0xce
+ 1731 0884 10       		.byte	0x10
+ 1732 0885 07       		.uleb128 0x7
+ 1733 0886 AE090000 		.4byte	.LASF167
+ 1734 088a 08       		.byte	0x8
+ 1735 088b 38       		.byte	0x38
+ 1736 088c CE000000 		.4byte	0xce
+ 1737 0890 14       		.byte	0x14
+ 1738 0891 07       		.uleb128 0x7
+ 1739 0892 B7090000 		.4byte	.LASF168
+ 1740 0896 08       		.byte	0x8
+ 1741 0897 39       		.byte	0x39
+ 1742 0898 CE000000 		.4byte	0xce
+ 1743 089c 18       		.byte	0x18
+ 1744 089d 07       		.uleb128 0x7
+ 1745 089e DF040000 		.4byte	.LASF169
+ 1746 08a2 08       		.byte	0x8
+ 1747 08a3 3A       		.byte	0x3a
+ 1748 08a4 25050000 		.4byte	0x525
+ 1749 08a8 1C       		.byte	0x1c
+ 1750 08a9 07       		.uleb128 0x7
+ 1751 08aa 5E0A0000 		.4byte	.LASF170
+ 1752 08ae 08       		.byte	0x8
+ 1753 08af 3C       		.byte	0x3c
+ 1754 08b0 CE000000 		.4byte	0xce
+ 1755 08b4 20       		.byte	0x20
+ 1756 08b5 07       		.uleb128 0x7
+ 1757 08b6 74030000 		.4byte	.LASF171
+ 1758 08ba 08       		.byte	0x8
+ 1759 08bb 3D       		.byte	0x3d
+ 1760 08bc CE000000 		.4byte	0xce
+ 1761 08c0 24       		.byte	0x24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 36
+
+
+ 1762 08c1 07       		.uleb128 0x7
+ 1763 08c2 15010000 		.4byte	.LASF172
+ 1764 08c6 08       		.byte	0x8
+ 1765 08c7 3F       		.byte	0x3f
+ 1766 08c8 CE000000 		.4byte	0xce
+ 1767 08cc 28       		.byte	0x28
+ 1768 08cd 07       		.uleb128 0x7
+ 1769 08ce D70B0000 		.4byte	.LASF173
+ 1770 08d2 08       		.byte	0x8
+ 1771 08d3 40       		.byte	0x40
+ 1772 08d4 CE000000 		.4byte	0xce
+ 1773 08d8 2C       		.byte	0x2c
+ 1774 08d9 07       		.uleb128 0x7
+ 1775 08da 6F0A0000 		.4byte	.LASF174
+ 1776 08de 08       		.byte	0x8
+ 1777 08df 42       		.byte	0x42
+ 1778 08e0 CE000000 		.4byte	0xce
+ 1779 08e4 30       		.byte	0x30
+ 1780 08e5 07       		.uleb128 0x7
+ 1781 08e6 24080000 		.4byte	.LASF175
+ 1782 08ea 08       		.byte	0x8
+ 1783 08eb 43       		.byte	0x43
+ 1784 08ec CE000000 		.4byte	0xce
+ 1785 08f0 34       		.byte	0x34
+ 1786 08f1 07       		.uleb128 0x7
+ 1787 08f2 980C0000 		.4byte	.LASF176
+ 1788 08f6 08       		.byte	0x8
+ 1789 08f7 45       		.byte	0x45
+ 1790 08f8 CE000000 		.4byte	0xce
+ 1791 08fc 38       		.byte	0x38
+ 1792 08fd 07       		.uleb128 0x7
+ 1793 08fe EA000000 		.4byte	.LASF177
+ 1794 0902 08       		.byte	0x8
+ 1795 0903 46       		.byte	0x46
+ 1796 0904 CE000000 		.4byte	0xce
+ 1797 0908 3C       		.byte	0x3c
+ 1798 0909 07       		.uleb128 0x7
+ 1799 090a 970A0000 		.4byte	.LASF178
+ 1800 090e 08       		.byte	0x8
+ 1801 090f 48       		.byte	0x48
+ 1802 0910 CE000000 		.4byte	0xce
+ 1803 0914 40       		.byte	0x40
+ 1804 0915 07       		.uleb128 0x7
+ 1805 0916 D9050000 		.4byte	.LASF179
+ 1806 091a 08       		.byte	0x8
+ 1807 091b 49       		.byte	0x49
+ 1808 091c CE000000 		.4byte	0xce
+ 1809 0920 44       		.byte	0x44
+ 1810 0921 07       		.uleb128 0x7
+ 1811 0922 C0090000 		.4byte	.LASF180
+ 1812 0926 08       		.byte	0x8
+ 1813 0927 4B       		.byte	0x4b
+ 1814 0928 CE000000 		.4byte	0xce
+ 1815 092c 48       		.byte	0x48
+ 1816 092d 00       		.byte	0
+ 1817 092e 03       		.uleb128 0x3
+ 1818 092f FC010000 		.4byte	.LASF181
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 37
+
+
+ 1819 0933 08       		.byte	0x8
+ 1820 0934 4C       		.byte	0x4c
+ 1821 0935 3D080000 		.4byte	0x83d
+ 1822 0939 13       		.uleb128 0x13
+ 1823 093a 17040000 		.4byte	.LASF187
+ 1824 093e 01       		.byte	0x1
+ 1825 093f 0F       		.byte	0xf
+ 1826 0940 00000000 		.4byte	.LFB656
+ 1827 0944 D8020000 		.4byte	.LFE656-.LFB656
+ 1828 0948 01       		.uleb128 0x1
+ 1829 0949 9C       		.byte	0x9c
+ 1830 094a 680B0000 		.4byte	0xb68
+ 1831 094e 14       		.uleb128 0x14
+ 1832 094f 8E090000 		.4byte	.LASF182
+ 1833 0953 01       		.byte	0x1
+ 1834 0954 0F       		.byte	0xf
+ 1835 0955 1D050000 		.4byte	0x51d
+ 1836 0959 00000000 		.4byte	.LLST0
+ 1837 095d 15       		.uleb128 0x15
+ 1838 095e 485200   		.ascii	"HR\000"
+ 1839 0961 01       		.byte	0x1
+ 1840 0962 0F       		.byte	0xf
+ 1841 0963 680B0000 		.4byte	0xb68
+ 1842 0967 2C000000 		.4byte	.LLST1
+ 1843 096b 15       		.uleb128 0x15
+ 1844 096c 414300   		.ascii	"AC\000"
+ 1845 096f 01       		.byte	0x1
+ 1846 0970 0F       		.byte	0xf
+ 1847 0971 1D050000 		.4byte	0x51d
+ 1848 0975 58000000 		.4byte	.LLST2
+ 1849 0979 15       		.uleb128 0x15
+ 1850 097a 444300   		.ascii	"DC\000"
+ 1851 097d 01       		.byte	0x1
+ 1852 097e 0F       		.byte	0xf
+ 1853 097f 1D050000 		.4byte	0x51d
+ 1854 0983 84000000 		.4byte	.LLST3
+ 1855 0987 16       		.uleb128 0x16
+ 1856 0988 95050000 		.4byte	.LASF183
+ 1857 098c 01       		.byte	0x1
+ 1858 098d 11       		.byte	0x11
+ 1859 098e 6E0B0000 		.4byte	0xb6e
+ 1860 0992 03       		.uleb128 0x3
+ 1861 0993 91       		.byte	0x91
+ 1862 0994 A841     		.sleb128 -8024
+ 1863 0996 16       		.uleb128 0x16
+ 1864 0997 1E0B0000 		.4byte	.LASF184
+ 1865 099b 01       		.byte	0x1
+ 1866 099c 12       		.byte	0x12
+ 1867 099d 7F0B0000 		.4byte	0xb7f
+ 1868 09a1 04       		.uleb128 0x4
+ 1869 09a2 91       		.byte	0x91
+ 1870 09a3 E8827F   		.sleb128 -16024
+ 1871 09a6 17       		.uleb128 0x17
+ 1872 09a7 7700     		.ascii	"w\000"
+ 1873 09a9 01       		.byte	0x1
+ 1874 09aa 15       		.byte	0x15
+ 1875 09ab 94000000 		.4byte	0x94
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 38
+
+
+ 1876 09af 08       		.byte	0x8
+ 1877 09b0 18       		.uleb128 0x18
+ 1878 09b1 7300     		.ascii	"s\000"
+ 1879 09b3 01       		.byte	0x1
+ 1880 09b4 2A       		.byte	0x2a
+ 1881 09b5 94000000 		.4byte	0x94
+ 1882 09b9 9001     		.2byte	0x190
+ 1883 09bb 19       		.uleb128 0x19
+ 1884 09bc 280B0000 		.4byte	.LASF185
+ 1885 09c0 01       		.byte	0x1
+ 1886 09c1 65       		.byte	0x65
+ 1887 09c2 94000000 		.4byte	0x94
+ 1888 09c6 B0000000 		.4byte	.LLST4
+ 1889 09ca 19       		.uleb128 0x19
+ 1890 09cb 280C0000 		.4byte	.LASF186
+ 1891 09cf 01       		.byte	0x1
+ 1892 09d0 66       		.byte	0x66
+ 1893 09d1 94000000 		.4byte	0x94
+ 1894 09d5 CF000000 		.4byte	.LLST5
+ 1895 09d9 19       		.uleb128 0x19
+ 1896 09da D4020000 		.4byte	.LASF119
+ 1897 09de 01       		.byte	0x1
+ 1898 09df 67       		.byte	0x67
+ 1899 09e0 94000000 		.4byte	0x94
+ 1900 09e4 2C010000 		.4byte	.LLST6
+ 1901 09e8 1A       		.uleb128 0x1a
+ 1902 09e9 4C00     		.ascii	"L\000"
+ 1903 09eb 01       		.byte	0x1
+ 1904 09ec 68       		.byte	0x68
+ 1905 09ed 0F050000 		.4byte	0x50f
+ 1906 09f1 77010000 		.4byte	.LLST7
+ 1907 09f5 1B       		.uleb128 0x1b
+ 1908 09f6 2E000000 		.4byte	.LBB2
+ 1909 09fa 44000000 		.4byte	.LBE2-.LBB2
+ 1910 09fe 230A0000 		.4byte	0xa23
+ 1911 0a02 1A       		.uleb128 0x1a
+ 1912 0a03 6900     		.ascii	"i\000"
+ 1913 0a05 01       		.byte	0x1
+ 1914 0a06 17       		.byte	0x17
+ 1915 0a07 94000000 		.4byte	0x94
+ 1916 0a0b CB010000 		.4byte	.LLST8
+ 1917 0a0f 1C       		.uleb128 0x1c
+ 1918 0a10 00000000 		.4byte	.Ldebug_ranges0+0
+ 1919 0a14 1A       		.uleb128 0x1a
+ 1920 0a15 6A00     		.ascii	"j\000"
+ 1921 0a17 01       		.byte	0x1
+ 1922 0a18 19       		.byte	0x19
+ 1923 0a19 94000000 		.4byte	0x94
+ 1924 0a1d EA010000 		.4byte	.LLST9
+ 1925 0a21 00       		.byte	0
+ 1926 0a22 00       		.byte	0
+ 1927 0a23 1B       		.uleb128 0x1b
+ 1928 0a24 72000000 		.4byte	.LBB5
+ 1929 0a28 1A000000 		.4byte	.LBE5-.LBB5
+ 1930 0a2c 3E0A0000 		.4byte	0xa3e
+ 1931 0a30 1A       		.uleb128 0x1a
+ 1932 0a31 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 39
+
+
+ 1933 0a33 01       		.byte	0x1
+ 1934 0a34 1F       		.byte	0x1f
+ 1935 0a35 94000000 		.4byte	0x94
+ 1936 0a39 08020000 		.4byte	.LLST10
+ 1937 0a3d 00       		.byte	0
+ 1938 0a3e 1B       		.uleb128 0x1b
+ 1939 0a3f 8C000000 		.4byte	.LBB6
+ 1940 0a43 08000000 		.4byte	.LBE6-.LBB6
+ 1941 0a47 590A0000 		.4byte	0xa59
+ 1942 0a4b 1A       		.uleb128 0x1a
+ 1943 0a4c 6900     		.ascii	"i\000"
+ 1944 0a4e 01       		.byte	0x1
+ 1945 0a4f 24       		.byte	0x24
+ 1946 0a50 94000000 		.4byte	0x94
+ 1947 0a54 1B020000 		.4byte	.LLST11
+ 1948 0a58 00       		.byte	0
+ 1949 0a59 1B       		.uleb128 0x1b
+ 1950 0a5a 9A000000 		.4byte	.LBB7
+ 1951 0a5e 8C000000 		.4byte	.LBE7-.LBB7
+ 1952 0a62 CA0A0000 		.4byte	0xaca
+ 1953 0a66 1A       		.uleb128 0x1a
+ 1954 0a67 6900     		.ascii	"i\000"
+ 1955 0a69 01       		.byte	0x1
+ 1956 0a6a 32       		.byte	0x32
+ 1957 0a6b 94000000 		.4byte	0x94
+ 1958 0a6f 2E020000 		.4byte	.LLST12
+ 1959 0a73 1D       		.uleb128 0x1d
+ 1960 0a74 9E000000 		.4byte	.LBB8
+ 1961 0a78 80000000 		.4byte	.LBE8-.LBB8
+ 1962 0a7c 1A       		.uleb128 0x1a
+ 1963 0a7d 4D415800 		.ascii	"MAX\000"
+ 1964 0a81 01       		.byte	0x1
+ 1965 0a82 34       		.byte	0x34
+ 1966 0a83 CE000000 		.4byte	0xce
+ 1967 0a87 63020000 		.4byte	.LLST13
+ 1968 0a8b 1A       		.uleb128 0x1a
+ 1969 0a8c 4D494E00 		.ascii	"MIN\000"
+ 1970 0a90 01       		.byte	0x1
+ 1971 0a91 35       		.byte	0x35
+ 1972 0a92 CE000000 		.4byte	0xce
+ 1973 0a96 82020000 		.4byte	.LLST14
+ 1974 0a9a 1E       		.uleb128 0x1e
+ 1975 0a9b 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1976 0a9f B10A0000 		.4byte	0xab1
+ 1977 0aa3 1A       		.uleb128 0x1a
+ 1978 0aa4 6A00     		.ascii	"j\000"
+ 1979 0aa6 01       		.byte	0x1
+ 1980 0aa7 37       		.byte	0x37
+ 1981 0aa8 94000000 		.4byte	0x94
+ 1982 0aac A5020000 		.4byte	.LLST15
+ 1983 0ab0 00       		.byte	0
+ 1984 0ab1 1D       		.uleb128 0x1d
+ 1985 0ab2 D8000000 		.4byte	.LBB11
+ 1986 0ab6 32000000 		.4byte	.LBE11-.LBB11
+ 1987 0aba 1A       		.uleb128 0x1a
+ 1988 0abb 6A00     		.ascii	"j\000"
+ 1989 0abd 01       		.byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 40
+
+
+ 1990 0abe 47       		.byte	0x47
+ 1991 0abf 94000000 		.4byte	0x94
+ 1992 0ac3 C3020000 		.4byte	.LLST16
+ 1993 0ac7 00       		.byte	0
+ 1994 0ac8 00       		.byte	0
+ 1995 0ac9 00       		.byte	0
+ 1996 0aca 1B       		.uleb128 0x1b
+ 1997 0acb 3C010000 		.4byte	.LBB12
+ 1998 0acf 3C000000 		.4byte	.LBE12-.LBB12
+ 1999 0ad3 E50A0000 		.4byte	0xae5
+ 2000 0ad7 1A       		.uleb128 0x1a
+ 2001 0ad8 6900     		.ascii	"i\000"
+ 2002 0ada 01       		.byte	0x1
+ 2003 0adb 57       		.byte	0x57
+ 2004 0adc 94000000 		.4byte	0x94
+ 2005 0ae0 D6020000 		.4byte	.LLST17
+ 2006 0ae4 00       		.byte	0
+ 2007 0ae5 1E       		.uleb128 0x1e
+ 2008 0ae6 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 2009 0aea FC0A0000 		.4byte	0xafc
+ 2010 0aee 1A       		.uleb128 0x1a
+ 2011 0aef 6900     		.ascii	"i\000"
+ 2012 0af1 01       		.byte	0x1
+ 2013 0af2 6C       		.byte	0x6c
+ 2014 0af3 94000000 		.4byte	0x94
+ 2015 0af7 F5020000 		.4byte	.LLST18
+ 2016 0afb 00       		.byte	0
+ 2017 0afc 1E       		.uleb128 0x1e
+ 2018 0afd 48000000 		.4byte	.Ldebug_ranges0+0x48
+ 2019 0b01 130B0000 		.4byte	0xb13
+ 2020 0b05 1A       		.uleb128 0x1a
+ 2021 0b06 6900     		.ascii	"i\000"
+ 2022 0b08 01       		.byte	0x1
+ 2023 0b09 87       		.byte	0x87
+ 2024 0b0a 94000000 		.4byte	0x94
+ 2025 0b0e 14030000 		.4byte	.LLST19
+ 2026 0b12 00       		.byte	0
+ 2027 0b13 1F       		.uleb128 0x1f
+ 2028 0b14 24000000 		.4byte	.LVL4
+ 2029 0b18 B60C0000 		.4byte	0xcb6
+ 2030 0b1c 330B0000 		.4byte	0xb33
+ 2031 0b20 20       		.uleb128 0x20
+ 2032 0b21 01       		.uleb128 0x1
+ 2033 0b22 50       		.byte	0x50
+ 2034 0b23 03       		.uleb128 0x3
+ 2035 0b24 91       		.byte	0x91
+ 2036 0b25 A841     		.sleb128 -8024
+ 2037 0b27 20       		.uleb128 0x20
+ 2038 0b28 01       		.uleb128 0x1
+ 2039 0b29 51       		.byte	0x51
+ 2040 0b2a 01       		.uleb128 0x1
+ 2041 0b2b 30       		.byte	0x30
+ 2042 0b2c 20       		.uleb128 0x20
+ 2043 0b2d 01       		.uleb128 0x1
+ 2044 0b2e 52       		.byte	0x52
+ 2045 0b2f 02       		.uleb128 0x2
+ 2046 0b30 78       		.byte	0x78
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 41
+
+
+ 2047 0b31 00       		.sleb128 0
+ 2048 0b32 00       		.byte	0
+ 2049 0b33 1F       		.uleb128 0x1f
+ 2050 0b34 2E000000 		.4byte	.LVL5
+ 2051 0b38 B60C0000 		.4byte	0xcb6
+ 2052 0b3c 540B0000 		.4byte	0xb54
+ 2053 0b40 20       		.uleb128 0x20
+ 2054 0b41 01       		.uleb128 0x1
+ 2055 0b42 50       		.byte	0x50
+ 2056 0b43 04       		.uleb128 0x4
+ 2057 0b44 91       		.byte	0x91
+ 2058 0b45 E8827F   		.sleb128 -16024
+ 2059 0b48 20       		.uleb128 0x20
+ 2060 0b49 01       		.uleb128 0x1
+ 2061 0b4a 51       		.byte	0x51
+ 2062 0b4b 01       		.uleb128 0x1
+ 2063 0b4c 30       		.byte	0x30
+ 2064 0b4d 20       		.uleb128 0x20
+ 2065 0b4e 01       		.uleb128 0x1
+ 2066 0b4f 52       		.byte	0x52
+ 2067 0b50 02       		.uleb128 0x2
+ 2068 0b51 78       		.byte	0x78
+ 2069 0b52 00       		.sleb128 0
+ 2070 0b53 00       		.byte	0
+ 2071 0b54 21       		.uleb128 0x21
+ 2072 0b55 BA020000 		.4byte	.LVL66
+ 2073 0b59 BF0C0000 		.4byte	0xcbf
+ 2074 0b5d 20       		.uleb128 0x20
+ 2075 0b5e 01       		.uleb128 0x1
+ 2076 0b5f 50       		.byte	0x50
+ 2077 0b60 05       		.uleb128 0x5
+ 2078 0b61 03       		.byte	0x3
+ 2079 0b62 00000000 		.4byte	.LC0
+ 2080 0b66 00       		.byte	0
+ 2081 0b67 00       		.byte	0
+ 2082 0b68 08       		.uleb128 0x8
+ 2083 0b69 04       		.byte	0x4
+ 2084 0b6a 94000000 		.4byte	0x94
+ 2085 0b6e 22       		.uleb128 0x22
+ 2086 0b6f CE000000 		.4byte	0xce
+ 2087 0b73 7F0B0000 		.4byte	0xb7f
+ 2088 0b77 23       		.uleb128 0x23
+ 2089 0b78 D9000000 		.4byte	0xd9
+ 2090 0b7c CF07     		.2byte	0x7cf
+ 2091 0b7e 00       		.byte	0
+ 2092 0b7f 22       		.uleb128 0x22
+ 2093 0b80 0F050000 		.4byte	0x50f
+ 2094 0b84 900B0000 		.4byte	0xb90
+ 2095 0b88 23       		.uleb128 0x23
+ 2096 0b89 D9000000 		.4byte	0xd9
+ 2097 0b8d CF07     		.2byte	0x7cf
+ 2098 0b8f 00       		.byte	0
+ 2099 0b90 13       		.uleb128 0x13
+ 2100 0b91 88060000 		.4byte	.LASF188
+ 2101 0b95 01       		.byte	0x1
+ 2102 0b96 9F       		.byte	0x9f
+ 2103 0b97 00000000 		.4byte	.LFB657
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 42
+
+
+ 2104 0b9b D8000000 		.4byte	.LFE657-.LFB657
+ 2105 0b9f 01       		.uleb128 0x1
+ 2106 0ba0 9C       		.byte	0x9c
+ 2107 0ba1 530C0000 		.4byte	0xc53
+ 2108 0ba5 14       		.uleb128 0x14
+ 2109 0ba6 6E0C0000 		.4byte	.LASF189
+ 2110 0baa 01       		.byte	0x1
+ 2111 0bab 9F       		.byte	0x9f
+ 2112 0bac 94000000 		.4byte	0x94
+ 2113 0bb0 33030000 		.4byte	.LLST20
+ 2114 0bb4 14       		.uleb128 0x14
+ 2115 0bb5 85030000 		.4byte	.LASF190
+ 2116 0bb9 01       		.byte	0x1
+ 2117 0bba 9F       		.byte	0x9f
+ 2118 0bbb 94000000 		.4byte	0x94
+ 2119 0bbf 54030000 		.4byte	.LLST21
+ 2120 0bc3 14       		.uleb128 0x14
+ 2121 0bc4 130A0000 		.4byte	.LASF191
+ 2122 0bc8 01       		.byte	0x1
+ 2123 0bc9 9F       		.byte	0x9f
+ 2124 0bca CE000000 		.4byte	0xce
+ 2125 0bce 75030000 		.4byte	.LLST22
+ 2126 0bd2 14       		.uleb128 0x14
+ 2127 0bd3 D0090000 		.4byte	.LASF192
+ 2128 0bd7 01       		.byte	0x1
+ 2129 0bd8 9F       		.byte	0x9f
+ 2130 0bd9 CE000000 		.4byte	0xce
+ 2131 0bdd A2030000 		.4byte	.LLST23
+ 2132 0be1 14       		.uleb128 0x14
+ 2133 0be2 B5040000 		.4byte	.LASF193
+ 2134 0be6 01       		.byte	0x1
+ 2135 0be7 9F       		.byte	0x9f
+ 2136 0be8 CE000000 		.4byte	0xce
+ 2137 0bec C3030000 		.4byte	.LLST24
+ 2138 0bf0 14       		.uleb128 0x14
+ 2139 0bf1 66060000 		.4byte	.LASF194
+ 2140 0bf5 01       		.byte	0x1
+ 2141 0bf6 9F       		.byte	0x9f
+ 2142 0bf7 CE000000 		.4byte	0xce
+ 2143 0bfb E3030000 		.4byte	.LLST25
+ 2144 0bff 15       		.uleb128 0x15
+ 2145 0c00 485200   		.ascii	"HR\000"
+ 2146 0c03 01       		.byte	0x1
+ 2147 0c04 9F       		.byte	0x9f
+ 2148 0c05 1D050000 		.4byte	0x51d
+ 2149 0c09 03040000 		.4byte	.LLST26
+ 2150 0c0d 14       		.uleb128 0x14
+ 2151 0c0e CC030000 		.4byte	.LASF195
+ 2152 0c12 01       		.byte	0x1
+ 2153 0c13 9F       		.byte	0x9f
+ 2154 0c14 1D050000 		.4byte	0x51d
+ 2155 0c18 23040000 		.4byte	.LLST27
+ 2156 0c1c 24       		.uleb128 0x24
+ 2157 0c1d 5200     		.ascii	"R\000"
+ 2158 0c1f 01       		.byte	0x1
+ 2159 0c20 B5       		.byte	0xb5
+ 2160 0c21 0F050000 		.4byte	0x50f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 43
+
+
+ 2161 0c25 02       		.uleb128 0x2
+ 2162 0c26 90       		.byte	0x90
+ 2163 0c27 4D       		.uleb128 0x4d
+ 2164 0c28 25       		.uleb128 0x25
+ 2165 0c29 6100     		.ascii	"a\000"
+ 2166 0c2b 01       		.byte	0x1
+ 2167 0c2c B6       		.byte	0xb6
+ 2168 0c2d 0F050000 		.4byte	0x50f
+ 2169 0c31 04       		.byte	0x4
+ 2170 0c32 8F44CC3F 		.4byte	0x3fcc448f
+ 2171 0c36 25       		.uleb128 0x25
+ 2172 0c37 6200     		.ascii	"b\000"
+ 2173 0c39 01       		.byte	0x1
+ 2174 0c3a B7       		.byte	0xb7
+ 2175 0c3b 0F050000 		.4byte	0x50f
+ 2176 0c3f 04       		.byte	0x4
+ 2177 0c40 7EA30AC2 		.4byte	0xc20aa37e
+ 2178 0c44 25       		.uleb128 0x25
+ 2179 0c45 6300     		.ascii	"c\000"
+ 2180 0c47 01       		.byte	0x1
+ 2181 0c48 B8       		.byte	0xb8
+ 2182 0c49 0F050000 		.4byte	0x50f
+ 2183 0c4d 04       		.byte	0x4
+ 2184 0c4e 3761E142 		.4byte	0x42e16137
+ 2185 0c52 00       		.byte	0
+ 2186 0c53 26       		.uleb128 0x26
+ 2187 0c54 5D080000 		.4byte	.LASF196
+ 2188 0c58 09       		.byte	0x9
+ 2189 0c59 F907     		.2byte	0x7f9
+ 2190 0c5b 5F0C0000 		.4byte	0xc5f
+ 2191 0c5f 05       		.uleb128 0x5
+ 2192 0c60 C3000000 		.4byte	0xc3
+ 2193 0c64 27       		.uleb128 0x27
+ 2194 0c65 F0070000 		.4byte	.LASF197
+ 2195 0c69 04       		.byte	0x4
+ 2196 0c6a A7       		.byte	0xa7
+ 2197 0c6b 6F0C0000 		.4byte	0xc6f
+ 2198 0c6f 08       		.uleb128 0x8
+ 2199 0c70 04       		.byte	0x4
+ 2200 0c71 750C0000 		.4byte	0xc75
+ 2201 0c75 28       		.uleb128 0x28
+ 2202 0c76 FD040000 		.4byte	0x4fd
+ 2203 0c7a 27       		.uleb128 0x27
+ 2204 0c7b 310B0000 		.4byte	.LASF198
+ 2205 0c7f 0A       		.byte	0xa
+ 2206 0c80 5E       		.byte	0x5e
+ 2207 0c81 55070000 		.4byte	0x755
+ 2208 0c85 27       		.uleb128 0x27
+ 2209 0c86 980B0000 		.4byte	.LASF199
+ 2210 0c8a 0B       		.byte	0xb
+ 2211 0c8b 1F       		.byte	0x1f
+ 2212 0c8c 900C0000 		.4byte	0xc90
+ 2213 0c90 28       		.uleb128 0x28
+ 2214 0c91 2E090000 		.4byte	0x92e
+ 2215 0c95 27       		.uleb128 0x27
+ 2216 0c96 10050000 		.4byte	.LASF200
+ 2217 0c9a 0C       		.byte	0xc
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 44
+
+
+ 2218 0c9b 87       		.byte	0x87
+ 2219 0c9c 31080000 		.4byte	0x831
+ 2220 0ca0 27       		.uleb128 0x27
+ 2221 0ca1 C4020000 		.4byte	.LASF201
+ 2222 0ca5 0D       		.byte	0xd
+ 2223 0ca6 7F       		.byte	0x7f
+ 2224 0ca7 BA060000 		.4byte	0x6ba
+ 2225 0cab 27       		.uleb128 0x27
+ 2226 0cac 880B0000 		.4byte	.LASF202
+ 2227 0cb0 0E       		.byte	0xe
+ 2228 0cb1 7F       		.byte	0x7f
+ 2229 0cb2 BA060000 		.4byte	0x6ba
+ 2230 0cb6 29       		.uleb128 0x29
+ 2231 0cb7 170B0000 		.4byte	.LASF206
+ 2232 0cbb 170B0000 		.4byte	.LASF206
+ 2233 0cbf 2A       		.uleb128 0x2a
+ 2234 0cc0 00000000 		.4byte	.LASF207
+ 2235 0cc4 00000000 		.4byte	.LASF207
+ 2236 0cc8 0F       		.byte	0xf
+ 2237 0cc9 BB       		.byte	0xbb
+ 2238 0cca 00       		.byte	0
+ 2239              		.section	.debug_abbrev,"",%progbits
+ 2240              	.Ldebug_abbrev0:
+ 2241 0000 01       		.uleb128 0x1
+ 2242 0001 11       		.uleb128 0x11
+ 2243 0002 01       		.byte	0x1
+ 2244 0003 25       		.uleb128 0x25
+ 2245 0004 0E       		.uleb128 0xe
+ 2246 0005 13       		.uleb128 0x13
+ 2247 0006 0B       		.uleb128 0xb
+ 2248 0007 03       		.uleb128 0x3
+ 2249 0008 0E       		.uleb128 0xe
+ 2250 0009 1B       		.uleb128 0x1b
+ 2251 000a 0E       		.uleb128 0xe
+ 2252 000b 55       		.uleb128 0x55
+ 2253 000c 17       		.uleb128 0x17
+ 2254 000d 11       		.uleb128 0x11
+ 2255 000e 01       		.uleb128 0x1
+ 2256 000f 10       		.uleb128 0x10
+ 2257 0010 17       		.uleb128 0x17
+ 2258 0011 00       		.byte	0
+ 2259 0012 00       		.byte	0
+ 2260 0013 02       		.uleb128 0x2
+ 2261 0014 24       		.uleb128 0x24
+ 2262 0015 00       		.byte	0
+ 2263 0016 0B       		.uleb128 0xb
+ 2264 0017 0B       		.uleb128 0xb
+ 2265 0018 3E       		.uleb128 0x3e
+ 2266 0019 0B       		.uleb128 0xb
+ 2267 001a 03       		.uleb128 0x3
+ 2268 001b 0E       		.uleb128 0xe
+ 2269 001c 00       		.byte	0
+ 2270 001d 00       		.byte	0
+ 2271 001e 03       		.uleb128 0x3
+ 2272 001f 16       		.uleb128 0x16
+ 2273 0020 00       		.byte	0
+ 2274 0021 03       		.uleb128 0x3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 45
+
+
+ 2275 0022 0E       		.uleb128 0xe
+ 2276 0023 3A       		.uleb128 0x3a
+ 2277 0024 0B       		.uleb128 0xb
+ 2278 0025 3B       		.uleb128 0x3b
+ 2279 0026 0B       		.uleb128 0xb
+ 2280 0027 49       		.uleb128 0x49
+ 2281 0028 13       		.uleb128 0x13
+ 2282 0029 00       		.byte	0
+ 2283 002a 00       		.byte	0
+ 2284 002b 04       		.uleb128 0x4
+ 2285 002c 24       		.uleb128 0x24
+ 2286 002d 00       		.byte	0
+ 2287 002e 0B       		.uleb128 0xb
+ 2288 002f 0B       		.uleb128 0xb
+ 2289 0030 3E       		.uleb128 0x3e
+ 2290 0031 0B       		.uleb128 0xb
+ 2291 0032 03       		.uleb128 0x3
+ 2292 0033 08       		.uleb128 0x8
+ 2293 0034 00       		.byte	0
+ 2294 0035 00       		.byte	0
+ 2295 0036 05       		.uleb128 0x5
+ 2296 0037 35       		.uleb128 0x35
+ 2297 0038 00       		.byte	0
+ 2298 0039 49       		.uleb128 0x49
+ 2299 003a 13       		.uleb128 0x13
+ 2300 003b 00       		.byte	0
+ 2301 003c 00       		.byte	0
+ 2302 003d 06       		.uleb128 0x6
+ 2303 003e 13       		.uleb128 0x13
+ 2304 003f 01       		.byte	0x1
+ 2305 0040 0B       		.uleb128 0xb
+ 2306 0041 0B       		.uleb128 0xb
+ 2307 0042 3A       		.uleb128 0x3a
+ 2308 0043 0B       		.uleb128 0xb
+ 2309 0044 3B       		.uleb128 0x3b
+ 2310 0045 0B       		.uleb128 0xb
+ 2311 0046 01       		.uleb128 0x1
+ 2312 0047 13       		.uleb128 0x13
+ 2313 0048 00       		.byte	0
+ 2314 0049 00       		.byte	0
+ 2315 004a 07       		.uleb128 0x7
+ 2316 004b 0D       		.uleb128 0xd
+ 2317 004c 00       		.byte	0
+ 2318 004d 03       		.uleb128 0x3
+ 2319 004e 0E       		.uleb128 0xe
+ 2320 004f 3A       		.uleb128 0x3a
+ 2321 0050 0B       		.uleb128 0xb
+ 2322 0051 3B       		.uleb128 0x3b
+ 2323 0052 0B       		.uleb128 0xb
+ 2324 0053 49       		.uleb128 0x49
+ 2325 0054 13       		.uleb128 0x13
+ 2326 0055 38       		.uleb128 0x38
+ 2327 0056 0B       		.uleb128 0xb
+ 2328 0057 00       		.byte	0
+ 2329 0058 00       		.byte	0
+ 2330 0059 08       		.uleb128 0x8
+ 2331 005a 0F       		.uleb128 0xf
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 46
+
+
+ 2332 005b 00       		.byte	0
+ 2333 005c 0B       		.uleb128 0xb
+ 2334 005d 0B       		.uleb128 0xb
+ 2335 005e 49       		.uleb128 0x49
+ 2336 005f 13       		.uleb128 0x13
+ 2337 0060 00       		.byte	0
+ 2338 0061 00       		.byte	0
+ 2339 0062 09       		.uleb128 0x9
+ 2340 0063 0F       		.uleb128 0xf
+ 2341 0064 00       		.byte	0
+ 2342 0065 0B       		.uleb128 0xb
+ 2343 0066 0B       		.uleb128 0xb
+ 2344 0067 00       		.byte	0
+ 2345 0068 00       		.byte	0
+ 2346 0069 0A       		.uleb128 0xa
+ 2347 006a 04       		.uleb128 0x4
+ 2348 006b 01       		.byte	0x1
+ 2349 006c 0B       		.uleb128 0xb
+ 2350 006d 0B       		.uleb128 0xb
+ 2351 006e 49       		.uleb128 0x49
+ 2352 006f 13       		.uleb128 0x13
+ 2353 0070 3A       		.uleb128 0x3a
+ 2354 0071 0B       		.uleb128 0xb
+ 2355 0072 3B       		.uleb128 0x3b
+ 2356 0073 05       		.uleb128 0x5
+ 2357 0074 01       		.uleb128 0x1
+ 2358 0075 13       		.uleb128 0x13
+ 2359 0076 00       		.byte	0
+ 2360 0077 00       		.byte	0
+ 2361 0078 0B       		.uleb128 0xb
+ 2362 0079 28       		.uleb128 0x28
+ 2363 007a 00       		.byte	0
+ 2364 007b 03       		.uleb128 0x3
+ 2365 007c 0E       		.uleb128 0xe
+ 2366 007d 1C       		.uleb128 0x1c
+ 2367 007e 0B       		.uleb128 0xb
+ 2368 007f 00       		.byte	0
+ 2369 0080 00       		.byte	0
+ 2370 0081 0C       		.uleb128 0xc
+ 2371 0082 16       		.uleb128 0x16
+ 2372 0083 00       		.byte	0
+ 2373 0084 03       		.uleb128 0x3
+ 2374 0085 0E       		.uleb128 0xe
+ 2375 0086 3A       		.uleb128 0x3a
+ 2376 0087 0B       		.uleb128 0xb
+ 2377 0088 3B       		.uleb128 0x3b
+ 2378 0089 05       		.uleb128 0x5
+ 2379 008a 49       		.uleb128 0x49
+ 2380 008b 13       		.uleb128 0x13
+ 2381 008c 00       		.byte	0
+ 2382 008d 00       		.byte	0
+ 2383 008e 0D       		.uleb128 0xd
+ 2384 008f 15       		.uleb128 0x15
+ 2385 0090 01       		.byte	0x1
+ 2386 0091 27       		.uleb128 0x27
+ 2387 0092 19       		.uleb128 0x19
+ 2388 0093 01       		.uleb128 0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 47
+
+
+ 2389 0094 13       		.uleb128 0x13
+ 2390 0095 00       		.byte	0
+ 2391 0096 00       		.byte	0
+ 2392 0097 0E       		.uleb128 0xe
+ 2393 0098 05       		.uleb128 0x5
+ 2394 0099 00       		.byte	0
+ 2395 009a 49       		.uleb128 0x49
+ 2396 009b 13       		.uleb128 0x13
+ 2397 009c 00       		.byte	0
+ 2398 009d 00       		.byte	0
+ 2399 009e 0F       		.uleb128 0xf
+ 2400 009f 15       		.uleb128 0x15
+ 2401 00a0 01       		.byte	0x1
+ 2402 00a1 27       		.uleb128 0x27
+ 2403 00a2 19       		.uleb128 0x19
+ 2404 00a3 49       		.uleb128 0x49
+ 2405 00a4 13       		.uleb128 0x13
+ 2406 00a5 01       		.uleb128 0x1
+ 2407 00a6 13       		.uleb128 0x13
+ 2408 00a7 00       		.byte	0
+ 2409 00a8 00       		.byte	0
+ 2410 00a9 10       		.uleb128 0x10
+ 2411 00aa 13       		.uleb128 0x13
+ 2412 00ab 01       		.byte	0x1
+ 2413 00ac 03       		.uleb128 0x3
+ 2414 00ad 0E       		.uleb128 0xe
+ 2415 00ae 0B       		.uleb128 0xb
+ 2416 00af 0B       		.uleb128 0xb
+ 2417 00b0 3A       		.uleb128 0x3a
+ 2418 00b1 0B       		.uleb128 0xb
+ 2419 00b2 3B       		.uleb128 0x3b
+ 2420 00b3 05       		.uleb128 0x5
+ 2421 00b4 01       		.uleb128 0x1
+ 2422 00b5 13       		.uleb128 0x13
+ 2423 00b6 00       		.byte	0
+ 2424 00b7 00       		.byte	0
+ 2425 00b8 11       		.uleb128 0x11
+ 2426 00b9 0D       		.uleb128 0xd
+ 2427 00ba 00       		.byte	0
+ 2428 00bb 03       		.uleb128 0x3
+ 2429 00bc 0E       		.uleb128 0xe
+ 2430 00bd 3A       		.uleb128 0x3a
+ 2431 00be 0B       		.uleb128 0xb
+ 2432 00bf 3B       		.uleb128 0x3b
+ 2433 00c0 05       		.uleb128 0x5
+ 2434 00c1 49       		.uleb128 0x49
+ 2435 00c2 13       		.uleb128 0x13
+ 2436 00c3 38       		.uleb128 0x38
+ 2437 00c4 0B       		.uleb128 0xb
+ 2438 00c5 00       		.byte	0
+ 2439 00c6 00       		.byte	0
+ 2440 00c7 12       		.uleb128 0x12
+ 2441 00c8 13       		.uleb128 0x13
+ 2442 00c9 01       		.byte	0x1
+ 2443 00ca 03       		.uleb128 0x3
+ 2444 00cb 0E       		.uleb128 0xe
+ 2445 00cc 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 48
+
+
+ 2446 00cd 0B       		.uleb128 0xb
+ 2447 00ce 3A       		.uleb128 0x3a
+ 2448 00cf 0B       		.uleb128 0xb
+ 2449 00d0 3B       		.uleb128 0x3b
+ 2450 00d1 0B       		.uleb128 0xb
+ 2451 00d2 01       		.uleb128 0x1
+ 2452 00d3 13       		.uleb128 0x13
+ 2453 00d4 00       		.byte	0
+ 2454 00d5 00       		.byte	0
+ 2455 00d6 13       		.uleb128 0x13
+ 2456 00d7 2E       		.uleb128 0x2e
+ 2457 00d8 01       		.byte	0x1
+ 2458 00d9 3F       		.uleb128 0x3f
+ 2459 00da 19       		.uleb128 0x19
+ 2460 00db 03       		.uleb128 0x3
+ 2461 00dc 0E       		.uleb128 0xe
+ 2462 00dd 3A       		.uleb128 0x3a
+ 2463 00de 0B       		.uleb128 0xb
+ 2464 00df 3B       		.uleb128 0x3b
+ 2465 00e0 0B       		.uleb128 0xb
+ 2466 00e1 27       		.uleb128 0x27
+ 2467 00e2 19       		.uleb128 0x19
+ 2468 00e3 11       		.uleb128 0x11
+ 2469 00e4 01       		.uleb128 0x1
+ 2470 00e5 12       		.uleb128 0x12
+ 2471 00e6 06       		.uleb128 0x6
+ 2472 00e7 40       		.uleb128 0x40
+ 2473 00e8 18       		.uleb128 0x18
+ 2474 00e9 9742     		.uleb128 0x2117
+ 2475 00eb 19       		.uleb128 0x19
+ 2476 00ec 01       		.uleb128 0x1
+ 2477 00ed 13       		.uleb128 0x13
+ 2478 00ee 00       		.byte	0
+ 2479 00ef 00       		.byte	0
+ 2480 00f0 14       		.uleb128 0x14
+ 2481 00f1 05       		.uleb128 0x5
+ 2482 00f2 00       		.byte	0
+ 2483 00f3 03       		.uleb128 0x3
+ 2484 00f4 0E       		.uleb128 0xe
+ 2485 00f5 3A       		.uleb128 0x3a
+ 2486 00f6 0B       		.uleb128 0xb
+ 2487 00f7 3B       		.uleb128 0x3b
+ 2488 00f8 0B       		.uleb128 0xb
+ 2489 00f9 49       		.uleb128 0x49
+ 2490 00fa 13       		.uleb128 0x13
+ 2491 00fb 02       		.uleb128 0x2
+ 2492 00fc 17       		.uleb128 0x17
+ 2493 00fd 00       		.byte	0
+ 2494 00fe 00       		.byte	0
+ 2495 00ff 15       		.uleb128 0x15
+ 2496 0100 05       		.uleb128 0x5
+ 2497 0101 00       		.byte	0
+ 2498 0102 03       		.uleb128 0x3
+ 2499 0103 08       		.uleb128 0x8
+ 2500 0104 3A       		.uleb128 0x3a
+ 2501 0105 0B       		.uleb128 0xb
+ 2502 0106 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 49
+
+
+ 2503 0107 0B       		.uleb128 0xb
+ 2504 0108 49       		.uleb128 0x49
+ 2505 0109 13       		.uleb128 0x13
+ 2506 010a 02       		.uleb128 0x2
+ 2507 010b 17       		.uleb128 0x17
+ 2508 010c 00       		.byte	0
+ 2509 010d 00       		.byte	0
+ 2510 010e 16       		.uleb128 0x16
+ 2511 010f 34       		.uleb128 0x34
+ 2512 0110 00       		.byte	0
+ 2513 0111 03       		.uleb128 0x3
+ 2514 0112 0E       		.uleb128 0xe
+ 2515 0113 3A       		.uleb128 0x3a
+ 2516 0114 0B       		.uleb128 0xb
+ 2517 0115 3B       		.uleb128 0x3b
+ 2518 0116 0B       		.uleb128 0xb
+ 2519 0117 49       		.uleb128 0x49
+ 2520 0118 13       		.uleb128 0x13
+ 2521 0119 02       		.uleb128 0x2
+ 2522 011a 18       		.uleb128 0x18
+ 2523 011b 00       		.byte	0
+ 2524 011c 00       		.byte	0
+ 2525 011d 17       		.uleb128 0x17
+ 2526 011e 34       		.uleb128 0x34
+ 2527 011f 00       		.byte	0
+ 2528 0120 03       		.uleb128 0x3
+ 2529 0121 08       		.uleb128 0x8
+ 2530 0122 3A       		.uleb128 0x3a
+ 2531 0123 0B       		.uleb128 0xb
+ 2532 0124 3B       		.uleb128 0x3b
+ 2533 0125 0B       		.uleb128 0xb
+ 2534 0126 49       		.uleb128 0x49
+ 2535 0127 13       		.uleb128 0x13
+ 2536 0128 1C       		.uleb128 0x1c
+ 2537 0129 0B       		.uleb128 0xb
+ 2538 012a 00       		.byte	0
+ 2539 012b 00       		.byte	0
+ 2540 012c 18       		.uleb128 0x18
+ 2541 012d 34       		.uleb128 0x34
+ 2542 012e 00       		.byte	0
+ 2543 012f 03       		.uleb128 0x3
+ 2544 0130 08       		.uleb128 0x8
+ 2545 0131 3A       		.uleb128 0x3a
+ 2546 0132 0B       		.uleb128 0xb
+ 2547 0133 3B       		.uleb128 0x3b
+ 2548 0134 0B       		.uleb128 0xb
+ 2549 0135 49       		.uleb128 0x49
+ 2550 0136 13       		.uleb128 0x13
+ 2551 0137 1C       		.uleb128 0x1c
+ 2552 0138 05       		.uleb128 0x5
+ 2553 0139 00       		.byte	0
+ 2554 013a 00       		.byte	0
+ 2555 013b 19       		.uleb128 0x19
+ 2556 013c 34       		.uleb128 0x34
+ 2557 013d 00       		.byte	0
+ 2558 013e 03       		.uleb128 0x3
+ 2559 013f 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 50
+
+
+ 2560 0140 3A       		.uleb128 0x3a
+ 2561 0141 0B       		.uleb128 0xb
+ 2562 0142 3B       		.uleb128 0x3b
+ 2563 0143 0B       		.uleb128 0xb
+ 2564 0144 49       		.uleb128 0x49
+ 2565 0145 13       		.uleb128 0x13
+ 2566 0146 02       		.uleb128 0x2
+ 2567 0147 17       		.uleb128 0x17
+ 2568 0148 00       		.byte	0
+ 2569 0149 00       		.byte	0
+ 2570 014a 1A       		.uleb128 0x1a
+ 2571 014b 34       		.uleb128 0x34
+ 2572 014c 00       		.byte	0
+ 2573 014d 03       		.uleb128 0x3
+ 2574 014e 08       		.uleb128 0x8
+ 2575 014f 3A       		.uleb128 0x3a
+ 2576 0150 0B       		.uleb128 0xb
+ 2577 0151 3B       		.uleb128 0x3b
+ 2578 0152 0B       		.uleb128 0xb
+ 2579 0153 49       		.uleb128 0x49
+ 2580 0154 13       		.uleb128 0x13
+ 2581 0155 02       		.uleb128 0x2
+ 2582 0156 17       		.uleb128 0x17
+ 2583 0157 00       		.byte	0
+ 2584 0158 00       		.byte	0
+ 2585 0159 1B       		.uleb128 0x1b
+ 2586 015a 0B       		.uleb128 0xb
+ 2587 015b 01       		.byte	0x1
+ 2588 015c 11       		.uleb128 0x11
+ 2589 015d 01       		.uleb128 0x1
+ 2590 015e 12       		.uleb128 0x12
+ 2591 015f 06       		.uleb128 0x6
+ 2592 0160 01       		.uleb128 0x1
+ 2593 0161 13       		.uleb128 0x13
+ 2594 0162 00       		.byte	0
+ 2595 0163 00       		.byte	0
+ 2596 0164 1C       		.uleb128 0x1c
+ 2597 0165 0B       		.uleb128 0xb
+ 2598 0166 01       		.byte	0x1
+ 2599 0167 55       		.uleb128 0x55
+ 2600 0168 17       		.uleb128 0x17
+ 2601 0169 00       		.byte	0
+ 2602 016a 00       		.byte	0
+ 2603 016b 1D       		.uleb128 0x1d
+ 2604 016c 0B       		.uleb128 0xb
+ 2605 016d 01       		.byte	0x1
+ 2606 016e 11       		.uleb128 0x11
+ 2607 016f 01       		.uleb128 0x1
+ 2608 0170 12       		.uleb128 0x12
+ 2609 0171 06       		.uleb128 0x6
+ 2610 0172 00       		.byte	0
+ 2611 0173 00       		.byte	0
+ 2612 0174 1E       		.uleb128 0x1e
+ 2613 0175 0B       		.uleb128 0xb
+ 2614 0176 01       		.byte	0x1
+ 2615 0177 55       		.uleb128 0x55
+ 2616 0178 17       		.uleb128 0x17
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 51
+
+
+ 2617 0179 01       		.uleb128 0x1
+ 2618 017a 13       		.uleb128 0x13
+ 2619 017b 00       		.byte	0
+ 2620 017c 00       		.byte	0
+ 2621 017d 1F       		.uleb128 0x1f
+ 2622 017e 898201   		.uleb128 0x4109
+ 2623 0181 01       		.byte	0x1
+ 2624 0182 11       		.uleb128 0x11
+ 2625 0183 01       		.uleb128 0x1
+ 2626 0184 31       		.uleb128 0x31
+ 2627 0185 13       		.uleb128 0x13
+ 2628 0186 01       		.uleb128 0x1
+ 2629 0187 13       		.uleb128 0x13
+ 2630 0188 00       		.byte	0
+ 2631 0189 00       		.byte	0
+ 2632 018a 20       		.uleb128 0x20
+ 2633 018b 8A8201   		.uleb128 0x410a
+ 2634 018e 00       		.byte	0
+ 2635 018f 02       		.uleb128 0x2
+ 2636 0190 18       		.uleb128 0x18
+ 2637 0191 9142     		.uleb128 0x2111
+ 2638 0193 18       		.uleb128 0x18
+ 2639 0194 00       		.byte	0
+ 2640 0195 00       		.byte	0
+ 2641 0196 21       		.uleb128 0x21
+ 2642 0197 898201   		.uleb128 0x4109
+ 2643 019a 01       		.byte	0x1
+ 2644 019b 11       		.uleb128 0x11
+ 2645 019c 01       		.uleb128 0x1
+ 2646 019d 31       		.uleb128 0x31
+ 2647 019e 13       		.uleb128 0x13
+ 2648 019f 00       		.byte	0
+ 2649 01a0 00       		.byte	0
+ 2650 01a1 22       		.uleb128 0x22
+ 2651 01a2 01       		.uleb128 0x1
+ 2652 01a3 01       		.byte	0x1
+ 2653 01a4 49       		.uleb128 0x49
+ 2654 01a5 13       		.uleb128 0x13
+ 2655 01a6 01       		.uleb128 0x1
+ 2656 01a7 13       		.uleb128 0x13
+ 2657 01a8 00       		.byte	0
+ 2658 01a9 00       		.byte	0
+ 2659 01aa 23       		.uleb128 0x23
+ 2660 01ab 21       		.uleb128 0x21
+ 2661 01ac 00       		.byte	0
+ 2662 01ad 49       		.uleb128 0x49
+ 2663 01ae 13       		.uleb128 0x13
+ 2664 01af 2F       		.uleb128 0x2f
+ 2665 01b0 05       		.uleb128 0x5
+ 2666 01b1 00       		.byte	0
+ 2667 01b2 00       		.byte	0
+ 2668 01b3 24       		.uleb128 0x24
+ 2669 01b4 34       		.uleb128 0x34
+ 2670 01b5 00       		.byte	0
+ 2671 01b6 03       		.uleb128 0x3
+ 2672 01b7 08       		.uleb128 0x8
+ 2673 01b8 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 52
+
+
+ 2674 01b9 0B       		.uleb128 0xb
+ 2675 01ba 3B       		.uleb128 0x3b
+ 2676 01bb 0B       		.uleb128 0xb
+ 2677 01bc 49       		.uleb128 0x49
+ 2678 01bd 13       		.uleb128 0x13
+ 2679 01be 02       		.uleb128 0x2
+ 2680 01bf 18       		.uleb128 0x18
+ 2681 01c0 00       		.byte	0
+ 2682 01c1 00       		.byte	0
+ 2683 01c2 25       		.uleb128 0x25
+ 2684 01c3 34       		.uleb128 0x34
+ 2685 01c4 00       		.byte	0
+ 2686 01c5 03       		.uleb128 0x3
+ 2687 01c6 08       		.uleb128 0x8
+ 2688 01c7 3A       		.uleb128 0x3a
+ 2689 01c8 0B       		.uleb128 0xb
+ 2690 01c9 3B       		.uleb128 0x3b
+ 2691 01ca 0B       		.uleb128 0xb
+ 2692 01cb 49       		.uleb128 0x49
+ 2693 01cc 13       		.uleb128 0x13
+ 2694 01cd 1C       		.uleb128 0x1c
+ 2695 01ce 0A       		.uleb128 0xa
+ 2696 01cf 00       		.byte	0
+ 2697 01d0 00       		.byte	0
+ 2698 01d1 26       		.uleb128 0x26
+ 2699 01d2 34       		.uleb128 0x34
+ 2700 01d3 00       		.byte	0
+ 2701 01d4 03       		.uleb128 0x3
+ 2702 01d5 0E       		.uleb128 0xe
+ 2703 01d6 3A       		.uleb128 0x3a
+ 2704 01d7 0B       		.uleb128 0xb
+ 2705 01d8 3B       		.uleb128 0x3b
+ 2706 01d9 05       		.uleb128 0x5
+ 2707 01da 49       		.uleb128 0x49
+ 2708 01db 13       		.uleb128 0x13
+ 2709 01dc 3F       		.uleb128 0x3f
+ 2710 01dd 19       		.uleb128 0x19
+ 2711 01de 3C       		.uleb128 0x3c
+ 2712 01df 19       		.uleb128 0x19
+ 2713 01e0 00       		.byte	0
+ 2714 01e1 00       		.byte	0
+ 2715 01e2 27       		.uleb128 0x27
+ 2716 01e3 34       		.uleb128 0x34
+ 2717 01e4 00       		.byte	0
+ 2718 01e5 03       		.uleb128 0x3
+ 2719 01e6 0E       		.uleb128 0xe
+ 2720 01e7 3A       		.uleb128 0x3a
+ 2721 01e8 0B       		.uleb128 0xb
+ 2722 01e9 3B       		.uleb128 0x3b
+ 2723 01ea 0B       		.uleb128 0xb
+ 2724 01eb 49       		.uleb128 0x49
+ 2725 01ec 13       		.uleb128 0x13
+ 2726 01ed 3F       		.uleb128 0x3f
+ 2727 01ee 19       		.uleb128 0x19
+ 2728 01ef 3C       		.uleb128 0x3c
+ 2729 01f0 19       		.uleb128 0x19
+ 2730 01f1 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 53
+
+
+ 2731 01f2 00       		.byte	0
+ 2732 01f3 28       		.uleb128 0x28
+ 2733 01f4 26       		.uleb128 0x26
+ 2734 01f5 00       		.byte	0
+ 2735 01f6 49       		.uleb128 0x49
+ 2736 01f7 13       		.uleb128 0x13
+ 2737 01f8 00       		.byte	0
+ 2738 01f9 00       		.byte	0
+ 2739 01fa 29       		.uleb128 0x29
+ 2740 01fb 2E       		.uleb128 0x2e
+ 2741 01fc 00       		.byte	0
+ 2742 01fd 3F       		.uleb128 0x3f
+ 2743 01fe 19       		.uleb128 0x19
+ 2744 01ff 3C       		.uleb128 0x3c
+ 2745 0200 19       		.uleb128 0x19
+ 2746 0201 6E       		.uleb128 0x6e
+ 2747 0202 0E       		.uleb128 0xe
+ 2748 0203 03       		.uleb128 0x3
+ 2749 0204 0E       		.uleb128 0xe
+ 2750 0205 00       		.byte	0
+ 2751 0206 00       		.byte	0
+ 2752 0207 2A       		.uleb128 0x2a
+ 2753 0208 2E       		.uleb128 0x2e
+ 2754 0209 00       		.byte	0
+ 2755 020a 3F       		.uleb128 0x3f
+ 2756 020b 19       		.uleb128 0x19
+ 2757 020c 3C       		.uleb128 0x3c
+ 2758 020d 19       		.uleb128 0x19
+ 2759 020e 6E       		.uleb128 0x6e
+ 2760 020f 0E       		.uleb128 0xe
+ 2761 0210 03       		.uleb128 0x3
+ 2762 0211 0E       		.uleb128 0xe
+ 2763 0212 3A       		.uleb128 0x3a
+ 2764 0213 0B       		.uleb128 0xb
+ 2765 0214 3B       		.uleb128 0x3b
+ 2766 0215 0B       		.uleb128 0xb
+ 2767 0216 00       		.byte	0
+ 2768 0217 00       		.byte	0
+ 2769 0218 00       		.byte	0
+ 2770              		.section	.debug_loc,"",%progbits
+ 2771              	.Ldebug_loc0:
+ 2772              	.LLST0:
+ 2773 0000 00000000 		.4byte	.LVL0
+ 2774 0004 1E000000 		.4byte	.LVL3
+ 2775 0008 0100     		.2byte	0x1
+ 2776 000a 50       		.byte	0x50
+ 2777 000b 1E000000 		.4byte	.LVL3
+ 2778 000f 9E000000 		.4byte	.LVL20
+ 2779 0013 0100     		.2byte	0x1
+ 2780 0015 57       		.byte	0x57
+ 2781 0016 9E000000 		.4byte	.LVL20
+ 2782 001a D8020000 		.4byte	.LFE656
+ 2783 001e 0400     		.2byte	0x4
+ 2784 0020 F3       		.byte	0xf3
+ 2785 0021 01       		.uleb128 0x1
+ 2786 0022 50       		.byte	0x50
+ 2787 0023 9F       		.byte	0x9f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 54
+
+
+ 2788 0024 00000000 		.4byte	0
+ 2789 0028 00000000 		.4byte	0
+ 2790              	.LLST1:
+ 2791 002c 00000000 		.4byte	.LVL0
+ 2792 0030 1A000000 		.4byte	.LVL2
+ 2793 0034 0100     		.2byte	0x1
+ 2794 0036 51       		.byte	0x51
+ 2795 0037 1A000000 		.4byte	.LVL2
+ 2796 003b C4020000 		.4byte	.LVL67
+ 2797 003f 0100     		.2byte	0x1
+ 2798 0041 56       		.byte	0x56
+ 2799 0042 C4020000 		.4byte	.LVL67
+ 2800 0046 D8020000 		.4byte	.LFE656
+ 2801 004a 0400     		.2byte	0x4
+ 2802 004c F3       		.byte	0xf3
+ 2803 004d 01       		.uleb128 0x1
+ 2804 004e 51       		.byte	0x51
+ 2805 004f 9F       		.byte	0x9f
+ 2806 0050 00000000 		.4byte	0
+ 2807 0054 00000000 		.4byte	0
+ 2808              	.LLST2:
+ 2809 0058 00000000 		.4byte	.LVL0
+ 2810 005c 18000000 		.4byte	.LVL1
+ 2811 0060 0100     		.2byte	0x1
+ 2812 0062 52       		.byte	0x52
+ 2813 0063 18000000 		.4byte	.LVL1
+ 2814 0067 88010000 		.4byte	.LVL36
+ 2815 006b 0100     		.2byte	0x1
+ 2816 006d 54       		.byte	0x54
+ 2817 006e 88010000 		.4byte	.LVL36
+ 2818 0072 D8020000 		.4byte	.LFE656
+ 2819 0076 0400     		.2byte	0x4
+ 2820 0078 F3       		.byte	0xf3
+ 2821 0079 01       		.uleb128 0x1
+ 2822 007a 52       		.byte	0x52
+ 2823 007b 9F       		.byte	0x9f
+ 2824 007c 00000000 		.4byte	0
+ 2825 0080 00000000 		.4byte	0
+ 2826              	.LLST3:
+ 2827 0084 00000000 		.4byte	.LVL0
+ 2828 0088 23000000 		.4byte	.LVL4-1
+ 2829 008c 0100     		.2byte	0x1
+ 2830 008e 53       		.byte	0x53
+ 2831 008f 23000000 		.4byte	.LVL4-1
+ 2832 0093 C4020000 		.4byte	.LVL67
+ 2833 0097 0100     		.2byte	0x1
+ 2834 0099 55       		.byte	0x55
+ 2835 009a C4020000 		.4byte	.LVL67
+ 2836 009e D8020000 		.4byte	.LFE656
+ 2837 00a2 0400     		.2byte	0x4
+ 2838 00a4 F3       		.byte	0xf3
+ 2839 00a5 01       		.uleb128 0x1
+ 2840 00a6 53       		.byte	0x53
+ 2841 00a7 9F       		.byte	0x9f
+ 2842 00a8 00000000 		.4byte	0
+ 2843 00ac 00000000 		.4byte	0
+ 2844              	.LLST4:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 55
+
+
+ 2845 00b0 78010000 		.4byte	.LVL34
+ 2846 00b4 96010000 		.4byte	.LVL38
+ 2847 00b8 0200     		.2byte	0x2
+ 2848 00ba 30       		.byte	0x30
+ 2849 00bb 9F       		.byte	0x9f
+ 2850 00bc 96010000 		.4byte	.LVL38
+ 2851 00c0 B9020000 		.4byte	.LVL66-1
+ 2852 00c4 0100     		.2byte	0x1
+ 2853 00c6 51       		.byte	0x51
+ 2854 00c7 00000000 		.4byte	0
+ 2855 00cb 00000000 		.4byte	0
+ 2856              	.LLST5:
+ 2857 00cf 78010000 		.4byte	.LVL34
+ 2858 00d3 96010000 		.4byte	.LVL38
+ 2859 00d7 0200     		.2byte	0x2
+ 2860 00d9 30       		.byte	0x30
+ 2861 00da 9F       		.byte	0x9f
+ 2862 00db 96010000 		.4byte	.LVL38
+ 2863 00df DC010000 		.4byte	.LVL44
+ 2864 00e3 0400     		.2byte	0x4
+ 2865 00e5 91       		.byte	0x91
+ 2866 00e6 E4827F   		.sleb128 -16028
+ 2867 00e9 DE010000 		.4byte	.LVL45
+ 2868 00ed 2E020000 		.4byte	.LVL53
+ 2869 00f1 0400     		.2byte	0x4
+ 2870 00f3 91       		.byte	0x91
+ 2871 00f4 E4827F   		.sleb128 -16028
+ 2872 00f7 2E020000 		.4byte	.LVL53
+ 2873 00fb 34020000 		.4byte	.LVL54
+ 2874 00ff 0200     		.2byte	0x2
+ 2875 0101 30       		.byte	0x30
+ 2876 0102 9F       		.byte	0x9f
+ 2877 0103 34020000 		.4byte	.LVL54
+ 2878 0107 60020000 		.4byte	.LVL57
+ 2879 010b 0100     		.2byte	0x1
+ 2880 010d 54       		.byte	0x54
+ 2881 010e 78020000 		.4byte	.LVL59
+ 2882 0112 7A020000 		.4byte	.LVL60
+ 2883 0116 0100     		.2byte	0x1
+ 2884 0118 54       		.byte	0x54
+ 2885 0119 7E020000 		.4byte	.LVL61
+ 2886 011d 9C020000 		.4byte	.LVL63
+ 2887 0121 0100     		.2byte	0x1
+ 2888 0123 54       		.byte	0x54
+ 2889 0124 00000000 		.4byte	0
+ 2890 0128 00000000 		.4byte	0
+ 2891              	.LLST6:
+ 2892 012c 78010000 		.4byte	.LVL34
+ 2893 0130 84010000 		.4byte	.LVL35
+ 2894 0134 0200     		.2byte	0x2
+ 2895 0136 30       		.byte	0x30
+ 2896 0137 9F       		.byte	0x9f
+ 2897 0138 84010000 		.4byte	.LVL35
+ 2898 013c 96010000 		.4byte	.LVL38
+ 2899 0140 0100     		.2byte	0x1
+ 2900 0142 50       		.byte	0x50
+ 2901 0143 96010000 		.4byte	.LVL38
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 56
+
+
+ 2902 0147 BC010000 		.4byte	.LVL39
+ 2903 014b 0100     		.2byte	0x1
+ 2904 014d 54       		.byte	0x54
+ 2905 014e BE010000 		.4byte	.LVL40
+ 2906 0152 2E020000 		.4byte	.LVL53
+ 2907 0156 0100     		.2byte	0x1
+ 2908 0158 54       		.byte	0x54
+ 2909 0159 2E020000 		.4byte	.LVL53
+ 2910 015d 5A020000 		.4byte	.LVL55
+ 2911 0161 0100     		.2byte	0x1
+ 2912 0163 50       		.byte	0x50
+ 2913 0164 5C020000 		.4byte	.LVL56
+ 2914 0168 B6020000 		.4byte	.LVL65
+ 2915 016c 0100     		.2byte	0x1
+ 2916 016e 50       		.byte	0x50
+ 2917 016f 00000000 		.4byte	0
+ 2918 0173 00000000 		.4byte	0
+ 2919              	.LLST7:
+ 2920 0177 78010000 		.4byte	.LVL34
+ 2921 017b 96010000 		.4byte	.LVL38
+ 2922 017f 0600     		.2byte	0x6
+ 2923 0181 9E       		.byte	0x9e
+ 2924 0182 04       		.uleb128 0x4
+ 2925 0183 00000000 		.4byte	0
+ 2926 0187 96010000 		.4byte	.LVL38
+ 2927 018b CC010000 		.4byte	.LVL41
+ 2928 018f 0200     		.2byte	0x2
+ 2929 0191 90       		.byte	0x90
+ 2930 0192 4D       		.uleb128 0x4d
+ 2931 0193 D8010000 		.4byte	.LVL42
+ 2932 0197 0C020000 		.4byte	.LVL49
+ 2933 019b 0200     		.2byte	0x2
+ 2934 019d 90       		.byte	0x90
+ 2935 019e 4D       		.uleb128 0x4d
+ 2936 019f 18020000 		.4byte	.LVL50
+ 2937 01a3 26020000 		.4byte	.LVL52
+ 2938 01a7 0200     		.2byte	0x2
+ 2939 01a9 90       		.byte	0x90
+ 2940 01aa 4D       		.uleb128 0x4d
+ 2941 01ab 26020000 		.4byte	.LVL52
+ 2942 01af 2E020000 		.4byte	.LVL53
+ 2943 01b3 0200     		.2byte	0x2
+ 2944 01b5 90       		.byte	0x90
+ 2945 01b6 4F       		.uleb128 0x4f
+ 2946 01b7 2E020000 		.4byte	.LVL53
+ 2947 01bb B9020000 		.4byte	.LVL66-1
+ 2948 01bf 0200     		.2byte	0x2
+ 2949 01c1 90       		.byte	0x90
+ 2950 01c2 4D       		.uleb128 0x4d
+ 2951 01c3 00000000 		.4byte	0
+ 2952 01c7 00000000 		.4byte	0
+ 2953              	.LLST8:
+ 2954 01cb 2E000000 		.4byte	.LVL5
+ 2955 01cf 32000000 		.4byte	.LVL6
+ 2956 01d3 0200     		.2byte	0x2
+ 2957 01d5 30       		.byte	0x30
+ 2958 01d6 9F       		.byte	0x9f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 57
+
+
+ 2959 01d7 32000000 		.4byte	.LVL6
+ 2960 01db 72000000 		.4byte	.LVL12
+ 2961 01df 0100     		.2byte	0x1
+ 2962 01e1 51       		.byte	0x51
+ 2963 01e2 00000000 		.4byte	0
+ 2964 01e6 00000000 		.4byte	0
+ 2965              	.LLST9:
+ 2966 01ea 32000000 		.4byte	.LVL6
+ 2967 01ee 4E000000 		.4byte	.LVL8
+ 2968 01f2 0100     		.2byte	0x1
+ 2969 01f4 53       		.byte	0x53
+ 2970 01f5 50000000 		.4byte	.LVL9
+ 2971 01f9 5E000000 		.4byte	.LVL10
+ 2972 01fd 0100     		.2byte	0x1
+ 2973 01ff 53       		.byte	0x53
+ 2974 0200 00000000 		.4byte	0
+ 2975 0204 00000000 		.4byte	0
+ 2976              	.LLST10:
+ 2977 0208 72000000 		.4byte	.LVL12
+ 2978 020c 8A000000 		.4byte	.LVL14
+ 2979 0210 0100     		.2byte	0x1
+ 2980 0212 53       		.byte	0x53
+ 2981 0213 00000000 		.4byte	0
+ 2982 0217 00000000 		.4byte	0
+ 2983              	.LLST11:
+ 2984 021b 8C000000 		.4byte	.LVL15
+ 2985 021f 96000000 		.4byte	.LVL18
+ 2986 0223 0100     		.2byte	0x1
+ 2987 0225 53       		.byte	0x53
+ 2988 0226 00000000 		.4byte	0
+ 2989 022a 00000000 		.4byte	0
+ 2990              	.LLST12:
+ 2991 022e 9A000000 		.4byte	.LVL19
+ 2992 0232 9E000000 		.4byte	.LVL20
+ 2993 0236 0200     		.2byte	0x2
+ 2994 0238 30       		.byte	0x30
+ 2995 0239 9F       		.byte	0x9f
+ 2996 023a 9E000000 		.4byte	.LVL20
+ 2997 023e 1E010000 		.4byte	.LVL29
+ 2998 0242 0100     		.2byte	0x1
+ 2999 0244 5C       		.byte	0x5c
+ 3000 0245 1E010000 		.4byte	.LVL29
+ 3001 0249 20010000 		.4byte	.LVL30
+ 3002 024d 0100     		.2byte	0x1
+ 3003 024f 5E       		.byte	0x5e
+ 3004 0250 20010000 		.4byte	.LVL30
+ 3005 0254 B9020000 		.4byte	.LVL66-1
+ 3006 0258 0100     		.2byte	0x1
+ 3007 025a 5C       		.byte	0x5c
+ 3008 025b 00000000 		.4byte	0
+ 3009 025f 00000000 		.4byte	0
+ 3010              	.LLST13:
+ 3011 0263 9E000000 		.4byte	.LVL20
+ 3012 0267 AE000000 		.4byte	.LVL22
+ 3013 026b 0200     		.2byte	0x2
+ 3014 026d 30       		.byte	0x30
+ 3015 026e 9F       		.byte	0x9f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 58
+
+
+ 3016 026f AE000000 		.4byte	.LVL22
+ 3017 0273 20010000 		.4byte	.LVL30
+ 3018 0277 0100     		.2byte	0x1
+ 3019 0279 57       		.byte	0x57
+ 3020 027a 00000000 		.4byte	0
+ 3021 027e 00000000 		.4byte	0
+ 3022              	.LLST14:
+ 3023 0282 9E000000 		.4byte	.LVL20
+ 3024 0286 AE000000 		.4byte	.LVL22
+ 3025 028a 0600     		.2byte	0x6
+ 3026 028c 0C       		.byte	0xc
+ 3027 028d E0930400 		.4byte	0x493e0
+ 3028 0291 9F       		.byte	0x9f
+ 3029 0292 AE000000 		.4byte	.LVL22
+ 3030 0296 18010000 		.4byte	.LVL28
+ 3031 029a 0100     		.2byte	0x1
+ 3032 029c 50       		.byte	0x50
+ 3033 029d 00000000 		.4byte	0
+ 3034 02a1 00000000 		.4byte	0
+ 3035              	.LLST15:
+ 3036 02a5 A6000000 		.4byte	.LVL21
+ 3037 02a9 AE000000 		.4byte	.LVL22
+ 3038 02ad 0100     		.2byte	0x1
+ 3039 02af 51       		.byte	0x51
+ 3040 02b0 AE000000 		.4byte	.LVL22
+ 3041 02b4 D8000000 		.4byte	.LVL26
+ 3042 02b8 0100     		.2byte	0x1
+ 3043 02ba 53       		.byte	0x53
+ 3044 02bb 00000000 		.4byte	0
+ 3045 02bf 00000000 		.4byte	0
+ 3046              	.LLST16:
+ 3047 02c3 D8000000 		.4byte	.LVL26
+ 3048 02c7 20010000 		.4byte	.LVL30
+ 3049 02cb 0100     		.2byte	0x1
+ 3050 02cd 51       		.byte	0x51
+ 3051 02ce 00000000 		.4byte	0
+ 3052 02d2 00000000 		.4byte	0
+ 3053              	.LLST17:
+ 3054 02d6 3C010000 		.4byte	.LVL31
+ 3055 02da 40010000 		.4byte	.LVL32
+ 3056 02de 0200     		.2byte	0x2
+ 3057 02e0 31       		.byte	0x31
+ 3058 02e1 9F       		.byte	0x9f
+ 3059 02e2 40010000 		.4byte	.LVL32
+ 3060 02e6 8A010000 		.4byte	.LVL37
+ 3061 02ea 0100     		.2byte	0x1
+ 3062 02ec 53       		.byte	0x53
+ 3063 02ed 00000000 		.4byte	0
+ 3064 02f1 00000000 		.4byte	0
+ 3065              	.LLST18:
+ 3066 02f5 84010000 		.4byte	.LVL35
+ 3067 02f9 96010000 		.4byte	.LVL38
+ 3068 02fd 0200     		.2byte	0x2
+ 3069 02ff 31       		.byte	0x31
+ 3070 0300 9F       		.byte	0x9f
+ 3071 0301 96010000 		.4byte	.LVL38
+ 3072 0305 EC010000 		.4byte	.LVL48
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 59
+
+
+ 3073 0309 0100     		.2byte	0x1
+ 3074 030b 53       		.byte	0x53
+ 3075 030c 00000000 		.4byte	0
+ 3076 0310 00000000 		.4byte	0
+ 3077              	.LLST19:
+ 3078 0314 2E020000 		.4byte	.LVL53
+ 3079 0318 34020000 		.4byte	.LVL54
+ 3080 031c 0200     		.2byte	0x2
+ 3081 031e 30       		.byte	0x30
+ 3082 031f 9F       		.byte	0x9f
+ 3083 0320 34020000 		.4byte	.LVL54
+ 3084 0324 B9020000 		.4byte	.LVL66-1
+ 3085 0328 0100     		.2byte	0x1
+ 3086 032a 53       		.byte	0x53
+ 3087 032b 00000000 		.4byte	0
+ 3088 032f 00000000 		.4byte	0
+ 3089              	.LLST20:
+ 3090 0333 00000000 		.4byte	.LVL68
+ 3091 0337 42000000 		.4byte	.LVL70
+ 3092 033b 0100     		.2byte	0x1
+ 3093 033d 50       		.byte	0x50
+ 3094 033e 42000000 		.4byte	.LVL70
+ 3095 0342 D8000000 		.4byte	.LFE657
+ 3096 0346 0400     		.2byte	0x4
+ 3097 0348 F3       		.byte	0xf3
+ 3098 0349 01       		.uleb128 0x1
+ 3099 034a 50       		.byte	0x50
+ 3100 034b 9F       		.byte	0x9f
+ 3101 034c 00000000 		.4byte	0
+ 3102 0350 00000000 		.4byte	0
+ 3103              	.LLST21:
+ 3104 0354 00000000 		.4byte	.LVL68
+ 3105 0358 48000000 		.4byte	.LVL71
+ 3106 035c 0100     		.2byte	0x1
+ 3107 035e 51       		.byte	0x51
+ 3108 035f 48000000 		.4byte	.LVL71
+ 3109 0363 D8000000 		.4byte	.LFE657
+ 3110 0367 0400     		.2byte	0x4
+ 3111 0369 F3       		.byte	0xf3
+ 3112 036a 01       		.uleb128 0x1
+ 3113 036b 51       		.byte	0x51
+ 3114 036c 9F       		.byte	0x9f
+ 3115 036d 00000000 		.4byte	0
+ 3116 0371 00000000 		.4byte	0
+ 3117              	.LLST22:
+ 3118 0375 00000000 		.4byte	.LVL68
+ 3119 0379 08000000 		.4byte	.LVL69
+ 3120 037d 0100     		.2byte	0x1
+ 3121 037f 52       		.byte	0x52
+ 3122 0380 08000000 		.4byte	.LVL69
+ 3123 0384 60000000 		.4byte	.LVL72
+ 3124 0388 0200     		.2byte	0x2
+ 3125 038a 90       		.byte	0x90
+ 3126 038b 4E       		.uleb128 0x4e
+ 3127 038c 60000000 		.4byte	.LVL72
+ 3128 0390 D8000000 		.4byte	.LFE657
+ 3129 0394 0400     		.2byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 60
+
+
+ 3130 0396 F3       		.byte	0xf3
+ 3131 0397 01       		.uleb128 0x1
+ 3132 0398 52       		.byte	0x52
+ 3133 0399 9F       		.byte	0x9f
+ 3134 039a 00000000 		.4byte	0
+ 3135 039e 00000000 		.4byte	0
+ 3136              	.LLST23:
+ 3137 03a2 00000000 		.4byte	.LVL68
+ 3138 03a6 AC000000 		.4byte	.LVL74
+ 3139 03aa 0100     		.2byte	0x1
+ 3140 03ac 53       		.byte	0x53
+ 3141 03ad AC000000 		.4byte	.LVL74
+ 3142 03b1 D8000000 		.4byte	.LFE657
+ 3143 03b5 0400     		.2byte	0x4
+ 3144 03b7 F3       		.byte	0xf3
+ 3145 03b8 01       		.uleb128 0x1
+ 3146 03b9 53       		.byte	0x53
+ 3147 03ba 9F       		.byte	0x9f
+ 3148 03bb 00000000 		.4byte	0
+ 3149 03bf 00000000 		.4byte	0
+ 3150              	.LLST24:
+ 3151 03c3 00000000 		.4byte	.LVL68
+ 3152 03c7 C8000000 		.4byte	.LVL75
+ 3153 03cb 0200     		.2byte	0x2
+ 3154 03cd 91       		.byte	0x91
+ 3155 03ce 00       		.sleb128 0
+ 3156 03cf C8000000 		.4byte	.LVL75
+ 3157 03d3 D8000000 		.4byte	.LFE657
+ 3158 03d7 0200     		.2byte	0x2
+ 3159 03d9 7D       		.byte	0x7d
+ 3160 03da 00       		.sleb128 0
+ 3161 03db 00000000 		.4byte	0
+ 3162 03df 00000000 		.4byte	0
+ 3163              	.LLST25:
+ 3164 03e3 00000000 		.4byte	.LVL68
+ 3165 03e7 C8000000 		.4byte	.LVL75
+ 3166 03eb 0200     		.2byte	0x2
+ 3167 03ed 91       		.byte	0x91
+ 3168 03ee 04       		.sleb128 4
+ 3169 03ef C8000000 		.4byte	.LVL75
+ 3170 03f3 D8000000 		.4byte	.LFE657
+ 3171 03f7 0200     		.2byte	0x2
+ 3172 03f9 7D       		.byte	0x7d
+ 3173 03fa 04       		.sleb128 4
+ 3174 03fb 00000000 		.4byte	0
+ 3175 03ff 00000000 		.4byte	0
+ 3176              	.LLST26:
+ 3177 0403 00000000 		.4byte	.LVL68
+ 3178 0407 C8000000 		.4byte	.LVL75
+ 3179 040b 0200     		.2byte	0x2
+ 3180 040d 91       		.byte	0x91
+ 3181 040e 08       		.sleb128 8
+ 3182 040f C8000000 		.4byte	.LVL75
+ 3183 0413 D8000000 		.4byte	.LFE657
+ 3184 0417 0200     		.2byte	0x2
+ 3185 0419 7D       		.byte	0x7d
+ 3186 041a 08       		.sleb128 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 61
+
+
+ 3187 041b 00000000 		.4byte	0
+ 3188 041f 00000000 		.4byte	0
+ 3189              	.LLST27:
+ 3190 0423 00000000 		.4byte	.LVL68
+ 3191 0427 C8000000 		.4byte	.LVL75
+ 3192 042b 0200     		.2byte	0x2
+ 3193 042d 91       		.byte	0x91
+ 3194 042e 0C       		.sleb128 12
+ 3195 042f C8000000 		.4byte	.LVL75
+ 3196 0433 D8000000 		.4byte	.LFE657
+ 3197 0437 0200     		.2byte	0x2
+ 3198 0439 7D       		.byte	0x7d
+ 3199 043a 0C       		.sleb128 12
+ 3200 043b 00000000 		.4byte	0
+ 3201 043f 00000000 		.4byte	0
+ 3202              		.section	.debug_aranges,"",%progbits
+ 3203 0000 24000000 		.4byte	0x24
+ 3204 0004 0200     		.2byte	0x2
+ 3205 0006 00000000 		.4byte	.Ldebug_info0
+ 3206 000a 04       		.byte	0x4
+ 3207 000b 00       		.byte	0
+ 3208 000c 0000     		.2byte	0
+ 3209 000e 0000     		.2byte	0
+ 3210 0010 00000000 		.4byte	.LFB656
+ 3211 0014 D8020000 		.4byte	.LFE656-.LFB656
+ 3212 0018 00000000 		.4byte	.LFB657
+ 3213 001c D8000000 		.4byte	.LFE657-.LFB657
+ 3214 0020 00000000 		.4byte	0
+ 3215 0024 00000000 		.4byte	0
+ 3216              		.section	.debug_ranges,"",%progbits
+ 3217              	.Ldebug_ranges0:
+ 3218 0000 32000000 		.4byte	.LBB3
+ 3219 0004 4E000000 		.4byte	.LBE3
+ 3220 0008 50000000 		.4byte	.LBB4
+ 3221 000c 54000000 		.4byte	.LBE4
+ 3222 0010 00000000 		.4byte	0
+ 3223 0014 00000000 		.4byte	0
+ 3224 0018 9E000000 		.4byte	.LBB9
+ 3225 001c A8000000 		.4byte	.LBE9
+ 3226 0020 AC000000 		.4byte	.LBB10
+ 3227 0024 D8000000 		.4byte	.LBE10
+ 3228 0028 00000000 		.4byte	0
+ 3229 002c 00000000 		.4byte	0
+ 3230 0030 88010000 		.4byte	.LBB13
+ 3231 0034 8A010000 		.4byte	.LBE13
+ 3232 0038 94010000 		.4byte	.LBB14
+ 3233 003c E8010000 		.4byte	.LBE14
+ 3234 0040 00000000 		.4byte	0
+ 3235 0044 00000000 		.4byte	0
+ 3236 0048 2E020000 		.4byte	.LBB15
+ 3237 004c 30020000 		.4byte	.LBE15
+ 3238 0050 32020000 		.4byte	.LBB16
+ 3239 0054 86020000 		.4byte	.LBE16
+ 3240 0058 00000000 		.4byte	0
+ 3241 005c 00000000 		.4byte	0
+ 3242 0060 00000000 		.4byte	.LFB656
+ 3243 0064 D8020000 		.4byte	.LFE656
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 62
+
+
+ 3244 0068 00000000 		.4byte	.LFB657
+ 3245 006c D8000000 		.4byte	.LFE657
+ 3246 0070 00000000 		.4byte	0
+ 3247 0074 00000000 		.4byte	0
+ 3248              		.section	.debug_line,"",%progbits
+ 3249              	.Ldebug_line0:
+ 3250 0000 82040000 		.section	.debug_str,"MS",%progbits,1
+ 3250      02001B03 
+ 3250      00000201 
+ 3250      FB0E0D00 
+ 3250      01010101 
+ 3251              	.LASF207:
+ 3252 0000 7072696E 		.ascii	"printf\000"
+ 3252      746600
+ 3253              	.LASF164:
+ 3254 0007 72756E4D 		.ascii	"runMode\000"
+ 3254      6F646500 
+ 3255              	.LASF49:
+ 3256 000f 73727373 		.ascii	"srssNumHfroot\000"
+ 3256      4E756D48 
+ 3256      66726F6F 
+ 3256      7400
+ 3257              	.LASF144:
+ 3258 001d 72784275 		.ascii	"rxBufSize\000"
+ 3258      6653697A 
+ 3258      6500
+ 3259              	.LASF66:
+ 3260 0027 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 3260      6843746C 
+ 3260      4D61696E 
+ 3260      57733346 
+ 3260      72657100 
+ 3261              	.LASF88:
+ 3262 003b 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 3262      50727443 
+ 3262      6667496E 
+ 3262      4F666673 
+ 3262      657400
+ 3263              	.LASF123:
+ 3264 004e 6D617374 		.ascii	"masterBuffer\000"
+ 3264      65724275 
+ 3264      66666572 
+ 3264      00
+ 3265              	.LASF32:
+ 3266 005b 63727970 		.ascii	"cryptoVersion\000"
+ 3266      746F5665 
+ 3266      7273696F 
+ 3266      6E00
+ 3267              	.LASF70:
+ 3268 0069 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 3268      43746C50 
+ 3268      72696F50 
+ 3268      6F7300
+ 3269              	.LASF28:
+ 3270 0078 70617373 		.ascii	"passBase\000"
+ 3270      42617365 
+ 3270      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 63
+
+
+ 3271              	.LASF104:
+ 3272 0081 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 3272      7352616D 
+ 3272      3243746C 
+ 3272      3000
+ 3273              	.LASF41:
+ 3274 008f 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 3274      73497063 
+ 3274      4972714E 
+ 3274      7200
+ 3275              	.LASF3:
+ 3276 009d 5F5F7569 		.ascii	"__uint8_t\000"
+ 3276      6E74385F 
+ 3276      7400
+ 3277              	.LASF127:
+ 3278 00a7 736C6176 		.ascii	"slaveStatus\000"
+ 3278      65537461 
+ 3278      74757300 
+ 3279              	.LASF43:
+ 3280 00b3 63707573 		.ascii	"cpussFlashPaSize\000"
+ 3280      73466C61 
+ 3280      73685061 
+ 3280      53697A65 
+ 3280      00
+ 3281              	.LASF92:
+ 3282 00c4 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 3282      73436D34 
+ 3282      436C6F63 
+ 3282      6B43746C 
+ 3282      4F666673 
+ 3283              	.LASF165:
+ 3284 00db 636F756E 		.ascii	"countDirection\000"
+ 3284      74446972 
+ 3284      65637469 
+ 3284      6F6E00
+ 3285              	.LASF177:
+ 3286 00ea 73746F70 		.ascii	"stopInputMode\000"
+ 3286      496E7075 
+ 3286      744D6F64 
+ 3286      6500
+ 3287              	.LASF21:
+ 3288 00f8 63707573 		.ascii	"cpussBase\000"
+ 3288      73426173 
+ 3288      6500
+ 3289              	.LASF162:
+ 3290 0102 70657269 		.ascii	"period\000"
+ 3290      6F6400
+ 3291              	.LASF50:
+ 3292 0109 70657269 		.ascii	"periClockNr\000"
+ 3292      436C6F63 
+ 3292      6B4E7200 
+ 3293              	.LASF172:
+ 3294 0115 63617074 		.ascii	"captureInput\000"
+ 3294      75726549 
+ 3294      6E707574 
+ 3294      00
+ 3295              	.LASF12:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 64
+
+
+ 3296 0122 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3296      206C6F6E 
+ 3296      6720756E 
+ 3296      7369676E 
+ 3296      65642069 
+ 3297              	.LASF163:
+ 3298 0139 636C6F63 		.ascii	"clockPrescaler\000"
+ 3298      6B507265 
+ 3298      7363616C 
+ 3298      657200
+ 3299              	.LASF74:
+ 3300 0148 70657269 		.ascii	"periTrCmdOffset\000"
+ 3300      5472436D 
+ 3300      644F6666 
+ 3300      73657400 
+ 3301              	.LASF155:
+ 3302 0158 72785269 		.ascii	"rxRingBuf\000"
+ 3302      6E674275 
+ 3302      6600
+ 3303              	.LASF98:
+ 3304 0162 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 3304      73537973 
+ 3304      5469636B 
+ 3304      43746C4F 
+ 3304      66667365 
+ 3305              	.LASF120:
+ 3306 0178 6D617374 		.ascii	"masterStatus\000"
+ 3306      65725374 
+ 3306      61747573 
+ 3306      00
+ 3307              	.LASF146:
+ 3308 0185 74784275 		.ascii	"txBuf\000"
+ 3308      6600
+ 3309              	.LASF39:
+ 3310 018b 70726F74 		.ascii	"protVersion\000"
+ 3310      56657273 
+ 3310      696F6E00 
+ 3311              	.LASF59:
+ 3312 0197 666C6173 		.ascii	"flashPipeRequired\000"
+ 3312      68506970 
+ 3312      65526571 
+ 3312      75697265 
+ 3312      6400
+ 3313              	.LASF134:
+ 3314 01a9 736C6176 		.ascii	"slaveRxBufferSize\000"
+ 3314      65527842 
+ 3314      75666665 
+ 3314      7253697A 
+ 3314      6500
+ 3315              	.LASF140:
+ 3316 01bb 63795F73 		.ascii	"cy_stc_scb_i2c_context\000"
+ 3316      74635F73 
+ 3316      63625F69 
+ 3316      32635F63 
+ 3316      6F6E7465 
+ 3317              	.LASF63:
+ 3318 01d2 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 65
+
+
+ 3318      6843746C 
+ 3318      4D61696E 
+ 3318      57733046 
+ 3318      72657100 
+ 3319              	.LASF15:
+ 3320 01e6 696E7431 		.ascii	"int16_t\000"
+ 3320      365F7400 
+ 3321              	.LASF11:
+ 3322 01ee 6C6F6E67 		.ascii	"long long int\000"
+ 3322      206C6F6E 
+ 3322      6720696E 
+ 3322      7400
+ 3323              	.LASF181:
+ 3324 01fc 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 3324      74635F74 
+ 3324      6370776D 
+ 3324      5F636F75 
+ 3324      6E746572 
+ 3325              	.LASF141:
+ 3326 021a 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 3326      74635F73 
+ 3326      63625F73 
+ 3326      70695F63 
+ 3326      6F6E7465 
+ 3327              	.LASF79:
+ 3328 0231 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 3328      44697643 
+ 3328      6D645479 
+ 3328      70655365 
+ 3328      6C506F73 
+ 3329              	.LASF159:
+ 3330 0246 74784C65 		.ascii	"txLeftToTransmit\000"
+ 3330      6674546F 
+ 3330      5472616E 
+ 3330      736D6974 
+ 3330      00
+ 3331              	.LASF96:
+ 3332 0257 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 3332      73547269 
+ 3332      6D52616D 
+ 3332      43746C4F 
+ 3332      66667365 
+ 3333              	.LASF37:
+ 3334 026d 69706356 		.ascii	"ipcVersion\000"
+ 3334      65727369 
+ 3334      6F6E00
+ 3335              	.LASF99:
+ 3336 0278 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 3336      73436D30 
+ 3336      4E6D6943 
+ 3336      746C4F66 
+ 3336      66736574 
+ 3337              	.LASF139:
+ 3338 028d 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 3338      625F7363 
+ 3338      625F7370 
+ 3338      695F6861 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 66
+
+
+ 3338      6E646C65 
+ 3339              	.LASF47:
+ 3340 02ab 73727373 		.ascii	"srssNumClkpath\000"
+ 3340      4E756D43 
+ 3340      6C6B7061 
+ 3340      746800
+ 3341              	.LASF26:
+ 3342 02ba 6873696F 		.ascii	"hsiomBase\000"
+ 3342      6D426173 
+ 3342      6500
+ 3343              	.LASF201:
+ 3344 02c4 4D41585F 		.ascii	"MAX_I2C_context\000"
+ 3344      4932435F 
+ 3344      636F6E74 
+ 3344      65787400 
+ 3345              	.LASF119:
+ 3346 02d4 73746174 		.ascii	"state\000"
+ 3346      6500
+ 3347              	.LASF115:
+ 3348 02da 63795F63 		.ascii	"cy_cb_scb_i2c_handle_events_t\000"
+ 3348      625F7363 
+ 3348      625F6932 
+ 3348      635F6861 
+ 3348      6E646C65 
+ 3349              	.LASF8:
+ 3350 02f8 6C6F6E67 		.ascii	"long int\000"
+ 3350      20696E74 
+ 3350      00
+ 3351              	.LASF122:
+ 3352 0301 6D617374 		.ascii	"masterRdDir\000"
+ 3352      65725264 
+ 3352      44697200 
+ 3353              	.LASF113:
+ 3354 030d 43595F53 		.ascii	"CY_SCB_I2C_NAK\000"
+ 3354      43425F49 
+ 3354      32435F4E 
+ 3354      414B00
+ 3355              	.LASF57:
+ 3356 031c 63727970 		.ascii	"cryptoMemSize\000"
+ 3356      746F4D65 
+ 3356      6D53697A 
+ 3356      6500
+ 3357              	.LASF23:
+ 3358 032a 70657269 		.ascii	"periBase\000"
+ 3358      42617365 
+ 3358      00
+ 3359              	.LASF55:
+ 3360 0333 73797350 		.ascii	"sysPmSimoPresent\000"
+ 3360      6D53696D 
+ 3360      6F507265 
+ 3360      73656E74 
+ 3360      00
+ 3361              	.LASF16:
+ 3362 0344 75696E74 		.ascii	"uint16_t\000"
+ 3362      31365F74 
+ 3362      00
+ 3363              	.LASF110:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 67
+
+
+ 3364 034d 646F7562 		.ascii	"double\000"
+ 3364      6C6500
+ 3365              	.LASF84:
+ 3366 0354 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 3366      44697631 
+ 3366      365F3543 
+ 3366      746C4F66 
+ 3366      66736574 
+ 3367              	.LASF48:
+ 3368 0369 73727373 		.ascii	"srssNumPll\000"
+ 3368      4E756D50 
+ 3368      6C6C00
+ 3369              	.LASF171:
+ 3370 0374 63617074 		.ascii	"captureInputMode\000"
+ 3370      75726549 
+ 3370      6E707574 
+ 3370      4D6F6465 
+ 3370      00
+ 3371              	.LASF190:
+ 3372 0385 48525F49 		.ascii	"HR_IR\000"
+ 3372      5200
+ 3373              	.LASF89:
+ 3374 038b 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 3374      50727443 
+ 3374      66674F75 
+ 3374      744F6666 
+ 3374      73657400 
+ 3375              	.LASF137:
+ 3376 039f 63624164 		.ascii	"cbAddr\000"
+ 3376      647200
+ 3377              	.LASF22:
+ 3378 03a6 666C6173 		.ascii	"flashcBase\000"
+ 3378      68634261 
+ 3378      736500
+ 3379              	.LASF9:
+ 3380 03b1 5F5F7569 		.ascii	"__uint32_t\000"
+ 3380      6E743332 
+ 3380      5F7400
+ 3381              	.LASF52:
+ 3382 03bc 70617373 		.ascii	"passSarChannels\000"
+ 3382      53617243 
+ 3382      68616E6E 
+ 3382      656C7300 
+ 3383              	.LASF195:
+ 3384 03cc 53504F32 		.ascii	"SPO2\000"
+ 3384      00
+ 3385              	.LASF4:
+ 3386 03d1 5F5F696E 		.ascii	"__int16_t\000"
+ 3386      7431365F 
+ 3386      7400
+ 3387              	.LASF145:
+ 3388 03db 72784275 		.ascii	"rxBufIdx\000"
+ 3388      66496478 
+ 3388      00
+ 3389              	.LASF95:
+ 3390 03e4 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 3390      73436D34 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 68
+
+
+ 3390      50777243 
+ 3390      746C4F66 
+ 3390      66736574 
+ 3391              	.LASF147:
+ 3392 03f9 74784275 		.ascii	"txBufSize\000"
+ 3392      6653697A 
+ 3392      6500
+ 3393              	.LASF90:
+ 3394 0403 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 3394      50727443 
+ 3394      66675369 
+ 3394      6F4F6666 
+ 3394      73657400 
+ 3395              	.LASF187:
+ 3396 0417 74726169 		.ascii	"traitement\000"
+ 3396      74656D65 
+ 3396      6E7400
+ 3397              	.LASF13:
+ 3398 0422 756E7369 		.ascii	"unsigned int\000"
+ 3398      676E6564 
+ 3398      20696E74 
+ 3398      00
+ 3399              	.LASF156:
+ 3400 042f 72785269 		.ascii	"rxRingBufSize\000"
+ 3400      6E674275 
+ 3400      6653697A 
+ 3400      6500
+ 3401              	.LASF131:
+ 3402 043d 736C6176 		.ascii	"slaveTxBufferIdx\000"
+ 3402      65547842 
+ 3402      75666665 
+ 3402      72496478 
+ 3402      00
+ 3403              	.LASF205:
+ 3404 044e 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Documents\\Repos_Proj"
+ 3404      73657273 
+ 3404      5C4D6174 
+ 3404      68696575 
+ 3404      5C4F6E65 
+ 3405 047c 6574325C 		.ascii	"et2\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
+ 3405      576F726B 
+ 3405      73706163 
+ 3405      6550726F 
+ 3405      6A657432 
+ 3406              	.LASF128:
+ 3407 04a5 736C6176 		.ascii	"slaveRdBufEmpty\000"
+ 3407      65526442 
+ 3407      7566456D 
+ 3407      70747900 
+ 3408              	.LASF193:
+ 3409 04b5 44435F49 		.ascii	"DC_IR\000"
+ 3409      5200
+ 3410              	.LASF75:
+ 3411 04bb 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 3411      5472436D 
+ 3411      64477253 
+ 3411      656C4D73 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 69
+
+
+ 3411      6B00
+ 3412              	.LASF10:
+ 3413 04cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3413      20756E73 
+ 3413      69676E65 
+ 3413      6420696E 
+ 3413      7400
+ 3414              	.LASF169:
+ 3415 04df 656E6162 		.ascii	"enableCompareSwap\000"
+ 3415      6C65436F 
+ 3415      6D706172 
+ 3415      65537761 
+ 3415      7000
+ 3416              	.LASF151:
+ 3417 04f1 63795F63 		.ascii	"cy_cb_scb_uart_handle_events_t\000"
+ 3417      625F7363 
+ 3417      625F7561 
+ 3417      72745F68 
+ 3417      616E646C 
+ 3418              	.LASF200:
+ 3419 0510 55415254 		.ascii	"UART_context\000"
+ 3419      5F636F6E 
+ 3419      74657874 
+ 3419      00
+ 3420              	.LASF40:
+ 3421 051d 63707573 		.ascii	"cpussIpcNr\000"
+ 3421      73497063 
+ 3421      4E7200
+ 3422              	.LASF42:
+ 3423 0528 63707573 		.ascii	"cpussDwChNr\000"
+ 3423      73447743 
+ 3423      684E7200 
+ 3424              	.LASF65:
+ 3425 0534 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 3425      6843746C 
+ 3425      4D61696E 
+ 3425      57733246 
+ 3425      72657100 
+ 3426              	.LASF118:
+ 3427 0548 75736554 		.ascii	"useTxFifo\000"
+ 3427      78466966 
+ 3427      6F00
+ 3428              	.LASF76:
+ 3429 0552 70657269 		.ascii	"periTrGrOffset\000"
+ 3429      54724772 
+ 3429      4F666673 
+ 3429      657400
+ 3430              	.LASF103:
+ 3431 0561 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 3431      7352616D 
+ 3431      3143746C 
+ 3431      3000
+ 3432              	.LASF35:
+ 3433 056f 6770696F 		.ascii	"gpioVersion\000"
+ 3433      56657273 
+ 3433      696F6E00 
+ 3434              	.LASF136:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 70
+
+
+ 3435 057b 63624576 		.ascii	"cbEvents\000"
+ 3435      656E7473 
+ 3435      00
+ 3436              	.LASF87:
+ 3437 0584 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 3437      50727443 
+ 3437      66674F66 
+ 3437      66736574 
+ 3437      00
+ 3438              	.LASF183:
+ 3439 0595 636C6561 		.ascii	"cleaned\000"
+ 3439      6E656400 
+ 3440              	.LASF107:
+ 3441 059d 63795F73 		.ascii	"cy_stc_device_t\000"
+ 3441      74635F64 
+ 3441      65766963 
+ 3441      655F7400 
+ 3442              	.LASF150:
+ 3443 05ad 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 3443      74635F73 
+ 3443      63625F73 
+ 3443      70695F63 
+ 3443      6F6E7465 
+ 3444              	.LASF0:
+ 3445 05c6 73686F72 		.ascii	"short int\000"
+ 3445      7420696E 
+ 3445      7400
+ 3446              	.LASF25:
+ 3447 05d0 70726F74 		.ascii	"protBase\000"
+ 3447      42617365 
+ 3447      00
+ 3448              	.LASF179:
+ 3449 05d9 636F756E 		.ascii	"countInputMode\000"
+ 3449      74496E70 
+ 3449      75744D6F 
+ 3449      646500
+ 3450              	.LASF133:
+ 3451 05e8 736C6176 		.ascii	"slaveRxBuffer\000"
+ 3451      65527842 
+ 3451      75666665 
+ 3451      7200
+ 3452              	.LASF91:
+ 3453 05f6 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 3453      73436D30 
+ 3453      436C6F63 
+ 3453      6B43746C 
+ 3453      4F666673 
+ 3454              	.LASF30:
+ 3455 060d 63727970 		.ascii	"cryptoBase\000"
+ 3455      746F4261 
+ 3455      736500
+ 3456              	.LASF114:
+ 3457 0618 63795F65 		.ascii	"cy_en_scb_i2c_command_t\000"
+ 3457      6E5F7363 
+ 3457      625F6932 
+ 3457      635F636F 
+ 3457      6D6D616E 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 71
+
+
+ 3458              	.LASF94:
+ 3459 0630 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 3459      73436D30 
+ 3459      53746174 
+ 3459      75734F66 
+ 3459      66736574 
+ 3460              	.LASF31:
+ 3461 0645 63707573 		.ascii	"cpussVersion\000"
+ 3461      73566572 
+ 3461      73696F6E 
+ 3461      00
+ 3462              	.LASF19:
+ 3463 0652 73697A65 		.ascii	"sizetype\000"
+ 3463      74797065 
+ 3463      00
+ 3464              	.LASF68:
+ 3465 065b 64774368 		.ascii	"dwChOffset\000"
+ 3465      4F666673 
+ 3465      657400
+ 3466              	.LASF194:
+ 3467 0666 41435F49 		.ascii	"AC_IR\000"
+ 3467      5200
+ 3468              	.LASF20:
+ 3469 066c 6C6F6E67 		.ascii	"long double\000"
+ 3469      20646F75 
+ 3469      626C6500 
+ 3470              	.LASF125:
+ 3471 0678 6D617374 		.ascii	"masterBufferIdx\000"
+ 3471      65724275 
+ 3471      66666572 
+ 3471      49647800 
+ 3472              	.LASF188:
+ 3473 0688 696E7465 		.ascii	"interpretation\000"
+ 3473      72707265 
+ 3473      74617469 
+ 3473      6F6E00
+ 3474              	.LASF81:
+ 3475 0697 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 3475      44697643 
+ 3475      6D645061 
+ 3475      54797065 
+ 3475      53656C50 
+ 3476              	.LASF53:
+ 3477 06ae 65704D6F 		.ascii	"epMonitorNr\000"
+ 3477      6E69746F 
+ 3477      724E7200 
+ 3478              	.LASF112:
+ 3479 06ba 43595F53 		.ascii	"CY_SCB_I2C_ACK\000"
+ 3479      43425F49 
+ 3479      32435F41 
+ 3479      434B00
+ 3480              	.LASF72:
+ 3481 06c9 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 3481      61747573 
+ 3481      43684964 
+ 3481      78506F73 
+ 3481      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 72
+
+
+ 3482              	.LASF54:
+ 3483 06da 75646250 		.ascii	"udbPresent\000"
+ 3483      72657365 
+ 3483      6E7400
+ 3484              	.LASF154:
+ 3485 06e5 72785374 		.ascii	"rxStatus\000"
+ 3485      61747573 
+ 3485      00
+ 3486              	.LASF34:
+ 3487 06ee 666C6173 		.ascii	"flashcVersion\000"
+ 3487      68635665 
+ 3487      7273696F 
+ 3487      6E00
+ 3488              	.LASF51:
+ 3489 06fc 736D6966 		.ascii	"smifDeviceNr\000"
+ 3489      44657669 
+ 3489      63654E72 
+ 3489      00
+ 3490              	.LASF135:
+ 3491 0709 736C6176 		.ascii	"slaveRxBufferIdx\000"
+ 3491      65527842 
+ 3491      75666665 
+ 3491      72496478 
+ 3491      00
+ 3492              	.LASF203:
+ 3493 071a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3493      43313120 
+ 3493      352E342E 
+ 3493      31203230 
+ 3493      31363036 
+ 3494 074d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 3494      20726576 
+ 3494      6973696F 
+ 3494      6E203233 
+ 3494      37373135 
+ 3495 0780 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 3495      70202D6D 
+ 3495      6670753D 
+ 3495      66707634 
+ 3495      2D73702D 
+ 3496 07b3 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 3496      6F6E7320 
+ 3496      2D666661 
+ 3496      742D6C74 
+ 3496      6F2D6F62 
+ 3497              	.LASF38:
+ 3498 07cd 70657269 		.ascii	"periVersion\000"
+ 3498      56657273 
+ 3498      696F6E00 
+ 3499              	.LASF109:
+ 3500 07d9 666C6F61 		.ascii	"float\000"
+ 3500      7400
+ 3501              	.LASF73:
+ 3502 07df 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 3502      61747573 
+ 3502      43684964 
+ 3502      784D736B 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 73
+
+
+ 3502      00
+ 3503              	.LASF197:
+ 3504 07f0 63795F64 		.ascii	"cy_device\000"
+ 3504      65766963 
+ 3504      6500
+ 3505              	.LASF101:
+ 3506 07fa 63707573 		.ascii	"cpussRomCtl\000"
+ 3506      73526F6D 
+ 3506      43746C00 
+ 3507              	.LASF71:
+ 3508 0806 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 3508      43746C50 
+ 3508      7265656D 
+ 3508      70746162 
+ 3508      6C65506F 
+ 3509              	.LASF24:
+ 3510 081c 75646242 		.ascii	"udbBase\000"
+ 3510      61736500 
+ 3511              	.LASF175:
+ 3512 0824 73746172 		.ascii	"startInputMode\000"
+ 3512      74496E70 
+ 3512      75744D6F 
+ 3512      646500
+ 3513              	.LASF17:
+ 3514 0833 696E7433 		.ascii	"int32_t\000"
+ 3514      325F7400 
+ 3515              	.LASF2:
+ 3516 083b 756E7369 		.ascii	"unsigned char\000"
+ 3516      676E6564 
+ 3516      20636861 
+ 3516      7200
+ 3517              	.LASF67:
+ 3518 0849 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 3518      6843746C 
+ 3518      4D61696E 
+ 3518      57733446 
+ 3518      72657100 
+ 3519              	.LASF196:
+ 3520 085d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3520      52784275 
+ 3520      66666572 
+ 3520      00
+ 3521              	.LASF106:
+ 3522 086a 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 3522      6F636B53 
+ 3522      74617475 
+ 3522      734F6666 
+ 3522      73657400 
+ 3523              	.LASF85:
+ 3524 087e 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 3524      44697632 
+ 3524      345F3543 
+ 3524      746C4F66 
+ 3524      66736574 
+ 3525              	.LASF102:
+ 3526 0893 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 3526      7352616D 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 74
+
+
+ 3526      3043746C 
+ 3526      3000
+ 3527              	.LASF142:
+ 3528 08a1 73746174 		.ascii	"status\000"
+ 3528      757300
+ 3529              	.LASF124:
+ 3530 08a8 6D617374 		.ascii	"masterBufferSize\000"
+ 3530      65724275 
+ 3530      66666572 
+ 3530      53697A65 
+ 3530      00
+ 3531              	.LASF78:
+ 3532 08b9 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 3532      44697643 
+ 3532      6D644469 
+ 3532      7653656C 
+ 3532      4D736B00 
+ 3533              	.LASF121:
+ 3534 08cd 6D617374 		.ascii	"masterPause\000"
+ 3534      65725061 
+ 3534      75736500 
+ 3535              	.LASF116:
+ 3536 08d9 63795F63 		.ascii	"cy_cb_scb_i2c_handle_addr_t\000"
+ 3536      625F7363 
+ 3536      625F6932 
+ 3536      635F6861 
+ 3536      6E646C65 
+ 3537              	.LASF166:
+ 3538 08f5 636F6D70 		.ascii	"compareOrCapture\000"
+ 3538      6172654F 
+ 3538      72436170 
+ 3538      74757265 
+ 3538      00
+ 3539              	.LASF126:
+ 3540 0906 6D617374 		.ascii	"masterNumBytes\000"
+ 3540      65724E75 
+ 3540      6D427974 
+ 3540      657300
+ 3541              	.LASF132:
+ 3542 0915 736C6176 		.ascii	"slaveTxBufferCnt\000"
+ 3542      65547842 
+ 3542      75666665 
+ 3542      72436E74 
+ 3542      00
+ 3543              	.LASF62:
+ 3544 0926 666C6173 		.ascii	"flashEraseDelay\000"
+ 3544      68457261 
+ 3544      73654465 
+ 3544      6C617900 
+ 3545              	.LASF45:
+ 3546 0936 63707573 		.ascii	"cpussFmIrq\000"
+ 3546      73466D49 
+ 3546      727100
+ 3547              	.LASF82:
+ 3548 0941 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 3548      44697638 
+ 3548      43746C4F 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 75
+
+
+ 3548      66667365 
+ 3548      7400
+ 3549              	.LASF77:
+ 3550 0953 70657269 		.ascii	"periTrGrSize\000"
+ 3550      54724772 
+ 3550      53697A65 
+ 3550      00
+ 3551              	.LASF161:
+ 3552 0960 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 3552      74635F74 
+ 3552      6370776D 
+ 3552      5F636F75 
+ 3552      6E746572 
+ 3553              	.LASF56:
+ 3554 097c 70726F74 		.ascii	"protBusMasterMask\000"
+ 3554      4275734D 
+ 3554      61737465 
+ 3554      724D6173 
+ 3554      6B00
+ 3555              	.LASF182:
+ 3556 098e 7369676E 		.ascii	"signal\000"
+ 3556      616C00
+ 3557              	.LASF138:
+ 3558 0995 63795F73 		.ascii	"cy_stc_scb_i2c_context_t\000"
+ 3558      74635F73 
+ 3558      63625F69 
+ 3558      32635F63 
+ 3558      6F6E7465 
+ 3559              	.LASF167:
+ 3560 09ae 636F6D70 		.ascii	"compare0\000"
+ 3560      61726530 
+ 3560      00
+ 3561              	.LASF168:
+ 3562 09b7 636F6D70 		.ascii	"compare1\000"
+ 3562      61726531 
+ 3562      00
+ 3563              	.LASF180:
+ 3564 09c0 636F756E 		.ascii	"countInput\000"
+ 3564      74496E70 
+ 3564      757400
+ 3565              	.LASF108:
+ 3566 09cb 63686172 		.ascii	"char\000"
+ 3566      00
+ 3567              	.LASF192:
+ 3568 09d0 44435F52 		.ascii	"DC_RED\000"
+ 3568      454400
+ 3569              	.LASF64:
+ 3570 09d7 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 3570      6843746C 
+ 3570      4D61696E 
+ 3570      57733146 
+ 3570      72657100 
+ 3571              	.LASF5:
+ 3572 09eb 5F5F7569 		.ascii	"__uint16_t\000"
+ 3572      6E743136 
+ 3572      5F7400
+ 3573              	.LASF83:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 76
+
+
+ 3574 09f6 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 3574      44697631 
+ 3574      3643746C 
+ 3574      4F666673 
+ 3574      657400
+ 3575              	.LASF7:
+ 3576 0a09 5F5F696E 		.ascii	"__int32_t\000"
+ 3576      7433325F 
+ 3576      7400
+ 3577              	.LASF191:
+ 3578 0a13 41435F52 		.ascii	"AC_RED\000"
+ 3578      454400
+ 3579              	.LASF33:
+ 3580 0a1a 64775665 		.ascii	"dwVersion\000"
+ 3580      7273696F 
+ 3580      6E00
+ 3581              	.LASF36:
+ 3582 0a24 6873696F 		.ascii	"hsiomVersion\000"
+ 3582      6D566572 
+ 3582      73696F6E 
+ 3582      00
+ 3583              	.LASF204:
+ 3584 0a31 74726169 		.ascii	"traitement.c\000"
+ 3584      74656D65 
+ 3584      6E742E63 
+ 3584      00
+ 3585              	.LASF61:
+ 3586 0a3e 666C6173 		.ascii	"flashProgramDelay\000"
+ 3586      6850726F 
+ 3586      6772616D 
+ 3586      44656C61 
+ 3586      7900
+ 3587              	.LASF157:
+ 3588 0a50 72785269 		.ascii	"rxRingBufHead\000"
+ 3588      6E674275 
+ 3588      66486561 
+ 3588      6400
+ 3589              	.LASF170:
+ 3590 0a5e 696E7465 		.ascii	"interruptSources\000"
+ 3590      72727570 
+ 3590      74536F75 
+ 3590      72636573 
+ 3590      00
+ 3591              	.LASF174:
+ 3592 0a6f 72656C6F 		.ascii	"reloadInput\000"
+ 3592      6164496E 
+ 3592      70757400 
+ 3593              	.LASF6:
+ 3594 0a7b 73686F72 		.ascii	"short unsigned int\000"
+ 3594      7420756E 
+ 3594      7369676E 
+ 3594      65642069 
+ 3594      6E7400
+ 3595              	.LASF69:
+ 3596 0a8e 64774368 		.ascii	"dwChSize\000"
+ 3596      53697A65 
+ 3596      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 77
+
+
+ 3597              	.LASF178:
+ 3598 0a97 73746F70 		.ascii	"stopInput\000"
+ 3598      496E7075 
+ 3598      7400
+ 3599              	.LASF105:
+ 3600 0aa1 69706353 		.ascii	"ipcStructSize\000"
+ 3600      74727563 
+ 3600      7453697A 
+ 3600      6500
+ 3601              	.LASF117:
+ 3602 0aaf 75736552 		.ascii	"useRxFifo\000"
+ 3602      78466966 
+ 3602      6F00
+ 3603              	.LASF44:
+ 3604 0ab9 63707573 		.ascii	"cpussIpc0Irq\000"
+ 3604      73497063 
+ 3604      30497271 
+ 3604      00
+ 3605              	.LASF27:
+ 3606 0ac6 6770696F 		.ascii	"gpioBase\000"
+ 3606      42617365 
+ 3606      00
+ 3607              	.LASF149:
+ 3608 0acf 696E6974 		.ascii	"initKey\000"
+ 3608      4B657900 
+ 3609              	.LASF143:
+ 3610 0ad7 72784275 		.ascii	"rxBuf\000"
+ 3610      6600
+ 3611              	.LASF129:
+ 3612 0add 736C6176 		.ascii	"slaveTxBuffer\000"
+ 3612      65547842 
+ 3612      75666665 
+ 3612      7200
+ 3613              	.LASF130:
+ 3614 0aeb 736C6176 		.ascii	"slaveTxBufferSize\000"
+ 3614      65547842 
+ 3614      75666665 
+ 3614      7253697A 
+ 3614      6500
+ 3615              	.LASF160:
+ 3616 0afd 63795F73 		.ascii	"cy_stc_scb_uart_context_t\000"
+ 3616      74635F73 
+ 3616      63625F75 
+ 3616      6172745F 
+ 3616      636F6E74 
+ 3617              	.LASF206:
+ 3618 0b17 6D656D73 		.ascii	"memset\000"
+ 3618      657400
+ 3619              	.LASF184:
+ 3620 0b1e 72656472 		.ascii	"redressed\000"
+ 3620      65737365 
+ 3620      6400
+ 3621              	.LASF185:
+ 3622 0b28 6E625F73 		.ascii	"nb_spike\000"
+ 3622      70696B65 
+ 3622      00
+ 3623              	.LASF198:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 78
+
+
+ 3624 0b31 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 3624      494E4B5F 
+ 3624      5350494D 
+ 3624      5F636F6E 
+ 3624      74657874 
+ 3625              	.LASF46:
+ 3626 0b46 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 3626      734E6F74 
+ 3626      436F6E6E 
+ 3626      65637465 
+ 3626      64497271 
+ 3627              	.LASF100:
+ 3628 0b5b 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 3628      73436D34 
+ 3628      4E6D6943 
+ 3628      746C4F66 
+ 3628      66736574 
+ 3629              	.LASF60:
+ 3630 0b70 666C6173 		.ascii	"flashWriteDelay\000"
+ 3630      68577269 
+ 3630      74654465 
+ 3630      6C617900 
+ 3631              	.LASF14:
+ 3632 0b80 75696E74 		.ascii	"uint8_t\000"
+ 3632      385F7400 
+ 3633              	.LASF202:
+ 3634 0b88 424D495F 		.ascii	"BMI_I2C_context\000"
+ 3634      4932435F 
+ 3634      636F6E74 
+ 3634      65787400 
+ 3635              	.LASF199:
+ 3636 0b98 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 3636      494E4B5F 
+ 3636      54696D65 
+ 3636      725F636F 
+ 3636      6E666967 
+ 3637              	.LASF93:
+ 3638 0bad 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 3638      73436D34 
+ 3638      53746174 
+ 3638      75734F66 
+ 3638      66736574 
+ 3639              	.LASF86:
+ 3640 0bc2 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 3640      50727449 
+ 3640      6E747243 
+ 3640      66674F66 
+ 3640      66736574 
+ 3641              	.LASF173:
+ 3642 0bd7 72656C6F 		.ascii	"reloadInputMode\000"
+ 3642      6164496E 
+ 3642      7075744D 
+ 3642      6F646500 
+ 3643              	.LASF158:
+ 3644 0be7 72785269 		.ascii	"rxRingBufTail\000"
+ 3644      6E674275 
+ 3644      66546169 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 79
+
+
+ 3644      6C00
+ 3645              	.LASF97:
+ 3646 0bf5 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 3646      73547269 
+ 3646      6D526F6D 
+ 3646      43746C4F 
+ 3646      66667365 
+ 3647              	.LASF153:
+ 3648 0c0b 74785374 		.ascii	"txStatus\000"
+ 3648      61747573 
+ 3648      00
+ 3649              	.LASF1:
+ 3650 0c14 7369676E 		.ascii	"signed char\000"
+ 3650      65642063 
+ 3650      68617200 
+ 3651              	.LASF29:
+ 3652 0c20 69706342 		.ascii	"ipcBase\000"
+ 3652      61736500 
+ 3653              	.LASF186:
+ 3654 0c28 6C617374 		.ascii	"last_state_change\000"
+ 3654      5F737461 
+ 3654      74655F63 
+ 3654      68616E67 
+ 3654      6500
+ 3655              	.LASF80:
+ 3656 0c3a 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 3656      44697643 
+ 3656      6D645061 
+ 3656      44697653 
+ 3656      656C506F 
+ 3657              	.LASF152:
+ 3658 0c50 63795F73 		.ascii	"cy_stc_scb_uart_context\000"
+ 3658      74635F73 
+ 3658      63625F75 
+ 3658      6172745F 
+ 3658      636F6E74 
+ 3659              	.LASF111:
+ 3660 0c68 5F426F6F 		.ascii	"_Bool\000"
+ 3660      6C00
+ 3661              	.LASF189:
+ 3662 0c6e 48525F52 		.ascii	"HR_RED\000"
+ 3662      454400
+ 3663              	.LASF18:
+ 3664 0c75 75696E74 		.ascii	"uint32_t\000"
+ 3664      33325F74 
+ 3664      00
+ 3665              	.LASF58:
+ 3666 0c7e 666C6173 		.ascii	"flashRwwRequired\000"
+ 3666      68527777 
+ 3666      52657175 
+ 3666      69726564 
+ 3666      00
+ 3667              	.LASF148:
+ 3668 0c8f 74784275 		.ascii	"txBufIdx\000"
+ 3668      66496478 
+ 3668      00
+ 3669              	.LASF176:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 80
+
+
+ 3670 0c98 73746172 		.ascii	"startInput\000"
+ 3670      74496E70 
+ 3670      757400
+ 3671              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

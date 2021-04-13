@@ -437,10 +437,10 @@ void MAX_init(void)
     value = 0x2B; // 0x27 -->100HZ // 0x2B --> 200Hz
     MAX_WriteBytes(REG_SPO2_CONFIG,&value); // SPO2_ADC range = 4096nA, SPO2 sample rate (200 Hz), 18 bit resolution
     
-    value = 0x15;
+    value = 0x20;
     MAX_WriteBytes(REG_LED1_PA,&value); //Current LED1 (rouge)
     
-    value = 0x15;
+    value = 0x20;
     MAX_WriteBytes(REG_LED2_PA,&value); //Current LED2 (IR)
 
 }

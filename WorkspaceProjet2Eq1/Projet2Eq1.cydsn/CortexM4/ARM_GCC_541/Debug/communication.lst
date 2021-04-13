@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 2
 
 
   33 0000 08B5     		push	{r3, lr}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   33:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *   (provide specific values) or \ref Cy_GPIO_Pin_Init (provide a filled
   34:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *   cy_stc_gpio_pin_config_t structure).
   35:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * - An entire port can be configured using \ref Cy_GPIO_Port_Init. Provide a filled 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 3
 
 
   36:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *   cy_stc_gpio_prt_config_t structure. The values in the structure are 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   90:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *     <td>A</td>
   91:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *     <td>A cast should not be performed between a pointer to object type and
   92:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *         a different pointer to object type.</td>
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 4
 
 
   93:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *     <td> This code is safe because the elements of both GPIO_PRT_V1_Type and GPIO_PRT_V2_Type 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  147:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * </table>
  148:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
  149:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \defgroup group_gpio_macros Macros
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 5
 
 
  150:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \defgroup group_gpio_functions Functions
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  204:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /** AMux switch open/close config */
  205:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** typedef enum
  206:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 6
 
 
  207:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_GPIO_AMUX_OPENALL,   /**< Open ground switch. Open right switch. Open left switch */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  261:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     uint32_t slewRate;       /**< Output buffer slew rate */
  262:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     uint32_t driveSel;       /**< Drive strength */
  263:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     uint32_t vregEn;         /**< SIO pair output buffer mode */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 7
 
 
  264:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     uint32_t ibufMode;       /**< SIO pair input buffer mode */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  318:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_INTR_FILT_OFFSET               (18UL)     /**< Offset for filtered interrupt config
  319:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_CFG_SIO_OFFSET                 (2UL)      /**< Offset for SIO config */
  320:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 8
 
 
  321:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /* Parameter validation constants */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  375:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_SEL_ACT_VALID(selActive)    (0U == ((selActive) & (uint32_t)~CY_GPIO_PRT_SEL_ACT
  376:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
  377:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_GPIO_IS_AMUX_SPLIT_VALID(switchCtrl)       (((uint32_t) (switchCtrl)) < GPIO_MAX_SPLIT_C
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 9
 
 
  378:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  432:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /**
  433:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \defgroup group_gpio_slewRate Slew Rate Mode
  434:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \{
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 10
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 10
 
 
  435:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Constants to be used for setting the slew rate of the pin.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  489:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** #define CY_SIO_VTRIP_0_4VDDIO_1_0VREF          (0x01UL) /**< 0.4xVddio or 0.4xVoh (differential) */
  490:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /** \} */
  491:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 11
 
 
  492:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /**
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  546:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \{
  547:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** */
  548:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 12
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 12
 
 
  549:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** void Cy_GPIO_SetAmuxSplit(cy_en_amux_split_t switchCtrl, cy_en_gpio_amuxconnect_t amuxConnect, cy_e
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  603:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_GetInterruptCause0(void);
  604:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_GetInterruptCause1(void);
  605:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_GetInterruptCause2(void);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 13
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 13
 
 
  606:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_GetInterruptCause3(void);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  660:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     {
  661:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****         pinNum -= CY_GPIO_PRT_HALF;
  662:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****         tempReg = HSIOM_PRT_PORT_SEL1(portAddrHSIOM) & ~(CY_GPIO_HSIOM_MASK << (pinNum << CY_GPIO_H
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 14
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 14
 
 
  663:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****         HSIOM_PRT_PORT_SEL1(portAddrHSIOM) = tempReg | ((value & CY_GPIO_HSIOM_MASK) << (pinNum << 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  717:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
  718:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * This is a helper function to calculate the port base address when given a port
  719:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * number. It is to be used when pin access needs to be calculated at runtime.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 15
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 15
 
 
  720:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  774:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *******************************************************************************/
  775:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_Read(GPIO_PRT_Type* base, uint32_t pinNum)
  776:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 16
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 16
 
 
  777:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_ASSERT_L2(CY_GPIO_IS_FILTER_PIN_VALID(pinNum));
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   60              	.LVL3:
   61              	.LBE63:
   62              	.LBE62:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 17
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 17
 
 
   63              	.LBB64:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  870:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
  871:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     
  872:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     GPIO_PRT_OUT_SET(base) = CY_GPIO_OUT_MASK << pinNum;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 18
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 18
 
 
  873:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  927:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     GPIO_PRT_OUT_INV(base) = CY_GPIO_OUT_MASK << pinNum;
  928:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** }
  929:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 19
 
 
  930:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  984:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
  985:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \return
  986:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Pin drive mode. Options are detailed in \ref group_gpio_driveModes macros
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 20
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 20
 
 
  987:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1041:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param base
 1042:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Pointer to the pin's port register base address
 1043:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 21
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 21
 
 
 1044:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param pinNum
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1098:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** }
 1099:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
 1100:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 22
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 22
 
 
 1101:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /*******************************************************************************
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1155:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
 1156:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
 1157:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_ASSERT_L2(CY_GPIO_IS_DRIVE_SEL_VALID(value));
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 23
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 23
 
 
 1158:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1212:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
 1213:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param value
 1214:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * SIO pair output buffer regulator mode. Options are detailed in \ref group_gpio_sioVreg macros
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 24
 
 
 1215:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1269:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** ****************************************************************************//**
 1270:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
 1271:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Configures the SIO pin pair input buffer mode.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 25
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 25
 
 
 1272:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1326:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *******************************************************************************/
 1327:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE uint32_t Cy_GPIO_GetIbufMode(GPIO_PRT_Type* base, uint32_t pinNum)
 1328:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 26
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 26
 
 
 1329:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     CY_ASSERT_L2(CY_GPIO_IS_PIN_VALID(pinNum));
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1383:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Pointer to the pin's port register base address
 1384:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
 1385:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * \param pinNum
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 27
 
 
 1386:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Position of the pin bit-field within the port register
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1440:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
 1441:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
 1442:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** /*******************************************************************************
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 28
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 28
 
 
 1443:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * Function Name: Cy_GPIO_GetVrefSel
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1497:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
 1498:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *******************************************************************************/
 1499:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** __STATIC_INLINE void Cy_GPIO_SetVohSel(GPIO_PRT_Type* base, uint32_t pinNum, uint32_t value)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 29
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 29
 
 
 1500:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** {
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1554:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * The core processor's NVIC is triggered by the masked interrupt bits. This 
 1555:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * function allows reading the unmasked interrupt state. Whether the bit
 1556:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** * positions actually trigger the interrupt are defined by the interrupt mask bits.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 30
 
 
 1557:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** *
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   70 0020 5A61     		str	r2, [r3, #20]
 1606:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** 
 1607:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     /* This read ensures that the initial write has been flushed out to the hardware */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 31
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 31
 
 
 1608:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h ****     (void)GPIO_PRT_INTR(base);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   36:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #ifdef __cplusplus
   37:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****  extern "C" {
   38:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #endif
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 32
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 32
 
 
   39:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   93:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****       #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESEN
   94:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****       #define __FPU_USED       0U
   95:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     #endif
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 33
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 33
 
 
   96:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   #else
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  150:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     #if defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)
  151:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****       #define __FPU_USED       1U
  152:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     #else
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 34
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 34
 
 
  153:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  207:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
  208:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* IO definitions (access restrictions to peripheral registers) */
  209:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /**
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 35
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 35
 
 
  210:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     \defgroup CMSIS_glob_defs CMSIS Global Defines
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  264:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags */
  265:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t _reserved1:7;               /*!< bit: 20..26  Reserved */
  266:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 36
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 36
 
 
  267:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  321:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t _reserved0:1;               /*!< bit:      9  Reserved */
  322:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t ICI_IT_1:6;                 /*!< bit: 10..15  ICI/IT part 1 */
  323:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 37
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 37
 
 
  324:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t _reserved1:4;               /*!< bit: 20..23  Reserved */
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  378:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****     uint32_t _reserved0:29;              /*!< bit:  3..31  Reserved */
  379:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   } b;                                   /*!< Structure used for bit  access */
  380:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   uint32_t w;                            /*!< Type      used for word access */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 38
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 38
 
 
  381:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** } CONTROL_Type;
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  435:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****  */
  436:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
  437:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /**
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 39
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 39
 
 
  438:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \brief  Structure type to access the System Control Block (SCB).
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  492:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_ICSR_PENDSTSET_Msk             (1UL << SCB_ICSR_PENDSTSET_Pos)                /*!< SCB 
  493:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
  494:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Pos             25U                                            /*!< SCB 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 40
 
 
  495:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Msk             (1UL << SCB_ICSR_PENDSTCLR_Pos)                /*!< SCB 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  549:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CCR_STKALIGN_Pos                9U                                            /*!< SCB 
  550:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CCR_STKALIGN_Msk               (1UL << SCB_CCR_STKALIGN_Pos)                  /*!< SCB 
  551:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 41
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 41
 
 
  552:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CCR_BFHFNMIGN_Pos               8U                                            /*!< SCB 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  606:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
  607:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Pos           0U                                            /*!< SCB 
  608:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Msk          (1UL /*<< SCB_SHCSR_MEMFAULTACT_Pos*/)         /*!< SCB 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 42
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 42
 
 
  609:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  663:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CFSR_DIVBYZERO_Msk            (1UL << SCB_CFSR_DIVBYZERO_Pos)                 /*!< SCB 
  664:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
  665:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Pos            (SCB_CFSR_USGFAULTSR_Pos + 8U)                  /*!< SCB 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 43
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 43
 
 
  666:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Msk            (1UL << SCB_CFSR_UNALIGNED_Pos)                 /*!< SCB 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  720:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** {
  721:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****         uint32_t RESERVED0[1U];
  722:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IM  uint32_t ICTR;                   /*!< Offset: 0x004 (R/ )  Interrupt Controller Type Regist
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 44
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 44
 
 
  723:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IOM uint32_t ACTLR;                  /*!< Offset: 0x008 (R/W)  Auxiliary Control Register */
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  777:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SysTick_CTRL_ENABLE_Pos             0U                                            /*!< SysT
  778:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define SysTick_CTRL_ENABLE_Msk            (1UL /*<< SysTick_CTRL_ENABLE_Pos*/)           /*!< SysT
  779:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 45
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 45
 
 
  780:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* SysTick Reload Register Definitions */
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  834:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IM  uint32_t PID5;                   /*!< Offset: 0xFD4 (R/ )  ITM Peripheral Identification Re
  835:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IM  uint32_t PID6;                   /*!< Offset: 0xFD8 (R/ )  ITM Peripheral Identification Re
  836:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IM  uint32_t PID7;                   /*!< Offset: 0xFDC (R/ )  ITM Peripheral Identification Re
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 46
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 46
 
 
  837:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IM  uint32_t PID0;                   /*!< Offset: 0xFE0 (R/ )  ITM Peripheral Identification Re
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  891:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* ITM Lock Status Register Definitions */
  892:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define ITM_LSR_ByteAcc_Pos                 2U                                            /*!< ITM 
  893:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define ITM_LSR_ByteAcc_Msk                (1UL << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 47
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 47
 
 
  894:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  948:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define DWT_CTRL_NOEXTTRIG_Pos             26U                                         /*!< DWT CTR
  949:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define DWT_CTRL_NOEXTTRIG_Msk             (0x1UL << DWT_CTRL_NOEXTTRIG_Pos)           /*!< DWT CTR
  950:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 48
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 48
 
 
  951:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define DWT_CTRL_NOCYCCNT_Pos              25U                                         /*!< DWT CTR
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1005:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define DWT_SLEEPCNT_SLEEPCNT_Pos           0U                                         /*!< DWT SLE
 1006:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define DWT_SLEEPCNT_SLEEPCNT_Msk          (0xFFUL /*<< DWT_SLEEPCNT_SLEEPCNT_Pos*/)   /*!< DWT SLE
 1007:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 49
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 49
 
 
 1008:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* DWT LSU Count Register Definitions */
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1062:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** {
 1063:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IOM uint32_t SSPSR;                  /*!< Offset: 0x000 (R/ )  Supported Parallel Port Size Reg
 1064:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   __IOM uint32_t CSPSR;                  /*!< Offset: 0x004 (R/W)  Current Parallel Port Size Regis
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 50
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 50
 
 
 1065:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****         uint32_t RESERVED0[2U];
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1119:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1120:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* TPI TRIGGER Register Definitions */
 1121:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define TPI_TRIGGER_TRIGGER_Pos             0U                                         /*!< TPI TRI
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 51
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 51
 
 
 1122:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define TPI_TRIGGER_TRIGGER_Msk            (0x1UL /*<< TPI_TRIGGER_TRIGGER_Pos*/)      /*!< TPI TRI
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1176:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /* TPI Integration Mode Control Register Definitions */
 1177:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define TPI_ITCTRL_Mode_Pos                 0U                                         /*!< TPI ITC
 1178:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define TPI_ITCTRL_Mode_Msk                (0x1UL /*<< TPI_ITCTRL_Mode_Pos*/)          /*!< TPI ITC
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 52
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 52
 
 
 1179:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1233:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** } MPU_Type;
 1234:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1235:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define MPU_TYPE_RALIASES                  4U
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 53
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 53
 
 
 1236:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1290:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define MPU_RASR_B_Pos                     16U                                            /*!< MPU 
 1291:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define MPU_RASR_B_Msk                     (1UL << MPU_RASR_B_Pos)                        /*!< MPU 
 1292:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 54
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 54
 
 
 1293:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define MPU_RASR_SRD_Pos                    8U                                            /*!< MPU 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1347:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1348:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU_FPCCR_USER_Pos                  1U                                            /*!< FPCC
 1349:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU_FPCCR_USER_Msk                 (1UL << FPU_FPCCR_USER_Pos)                    /*!< FPCC
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 55
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 55
 
 
 1350:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1404:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU_MVFR1_D_NaN_mode_Msk           (0xFUL << FPU_MVFR1_D_NaN_mode_Pos)            /*!< MVFR
 1405:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1406:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Pos              0U                                            /*!< MVFR
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 56
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 56
 
 
 1407:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Msk             (0xFUL /*<< FPU_MVFR1_FtZ_mode_Pos*/)          /*!< MVFR
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1461:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1U                                            /*!< Core
 1462:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1UL << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
 1463:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 57
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 57
 
 
 1464:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Pos       0U                                            /*!< Core
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1518:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \ingroup    CMSIS_core_register
 1519:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \defgroup   CMSIS_core_bitfield     Core register bit field macros
 1520:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \brief      Macros for use with bit field definitions (xxx_Pos, xxx_Msk).
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 58
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 58
 
 
 1521:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   @{
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1575:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define FPU                 ((FPU_Type       *)     FPU_BASE      )   /*!< Floating Point Unit */
 1576:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1577:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** /*@} */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 59
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 59
 
 
 1578:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1632:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
 1633:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** #define NVIC_USER_IRQ_OFFSET          16
 1634:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 60
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 60
 
 
 1635:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h **** 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1689:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
 1690:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \return             0  Interrupt is not enabled.
 1691:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \return             1  Interrupt is enabled.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 61
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 61
 
 
 1692:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \note    IRQn must not be negative.
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1746:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \brief   Set Pending Interrupt
 1747:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \details Sets the pending bit of a device specific interrupt in the NVIC pending register.
 1748:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 62
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 62
 
 
 1749:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   \note    IRQn must not be negative.
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  115              		.thumb_func
  116              		.type	BMI_WriteBytes, %function
  117              	BMI_WriteBytes:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 63
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 63
 
 
  118              	.LFB663:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   92:communication.c ****    // na - An interrupt will be generated if the absolute value of two consecutive accelation signa
   93:communication.c ****    int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 8;          
   94:communication.c ****    // na - (2-g range) -> (anymotion_thr) * 3.91 mg, (4-g range) -> (anymotion_thr) * 7.81 mg, (8-g
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 64
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 64
 
 
   95:communication.c **** 
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  149:communication.c **** * Nom: BMI_WriteBytes()
  150:communication.c **** ********************************************************************************
  151:communication.c **** * Résumé:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 65
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 65
 
 
  152:communication.c **** *  Fonction d'écriture I2C pour le capteur BMI160
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  150 001e 0195     		str	r5, [sp, #4]
  175:communication.c ****     {  
  176:communication.c ****         .slaveAddress = (uint32)Address,
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 66
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 66
 
 
  177:communication.c ****         .buffer =  tempBuff,
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   42:Generated_Source\PSoC6/BMI_I2C.h **** * \addtogroup group_general
   43:Generated_Source\PSoC6/BMI_I2C.h **** * @{
   44:Generated_Source\PSoC6/BMI_I2C.h **** */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 67
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 67
 
 
   45:Generated_Source\PSoC6/BMI_I2C.h **** /* Component only APIs. */
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   99:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE cy_en_scb_i2c_status_t BMI_I2C_MasterRead(cy_stc_scb_i2c_master_xfer_config_t *xfer
  100:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE void BMI_I2C_MasterAbortRead(void);
  101:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE cy_en_scb_i2c_status_t BMI_I2C_MasterWrite(cy_stc_scb_i2c_master_xfer_config_t *xfe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 68
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 68
 
 
  102:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE void BMI_I2C_MasterAbortWrite(void);
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  156:Generated_Source\PSoC6/BMI_I2C.h **** /** @} group_macros */
  157:Generated_Source\PSoC6/BMI_I2C.h **** 
  158:Generated_Source\PSoC6/BMI_I2C.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 69
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 69
 
 
  159:Generated_Source\PSoC6/BMI_I2C.h **** /***************************************
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  213:Generated_Source\PSoC6/BMI_I2C.h **** 
  214:Generated_Source\PSoC6/BMI_I2C.h **** 
  215:Generated_Source\PSoC6/BMI_I2C.h **** /*******************************************************************************
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 70
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 70
 
 
  216:Generated_Source\PSoC6/BMI_I2C.h **** * Function Name: BMI_I2C_SetDataRate
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  270:Generated_Source\PSoC6/BMI_I2C.h **** * Function Name: BMI_I2C_IsBusBusy
  271:Generated_Source\PSoC6/BMI_I2C.h **** ****************************************************************************//**
  272:Generated_Source\PSoC6/BMI_I2C.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 71
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 71
 
 
  273:Generated_Source\PSoC6/BMI_I2C.h **** * Invokes the Cy_SCB_I2C_IsBusBusy() PDL driver function.
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  327:Generated_Source\PSoC6/BMI_I2C.h **** *
  328:Generated_Source\PSoC6/BMI_I2C.h **** *******************************************************************************/
  329:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE uint32_t BMI_I2C_SlaveGetAddressMask(void)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 72
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 72
 
 
  330:Generated_Source\PSoC6/BMI_I2C.h **** {
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  384:Generated_Source\PSoC6/BMI_I2C.h **** __STATIC_INLINE void BMI_I2C_SlaveConfigReadBuf(uint8_t *buffer, uint32_t size)
  385:Generated_Source\PSoC6/BMI_I2C.h **** {
  386:Generated_Source\PSoC6/BMI_I2C.h ****     Cy_SCB_I2C_SlaveConfigReadBuf(BMI_I2C_HW, buffer, size, &BMI_I2C_context);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 73
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 73
 
 
  387:Generated_Source\PSoC6/BMI_I2C.h **** }
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  441:Generated_Source\PSoC6/BMI_I2C.h **** 
  442:Generated_Source\PSoC6/BMI_I2C.h **** /*******************************************************************************
  443:Generated_Source\PSoC6/BMI_I2C.h **** * Function Name: BMI_I2C_SlaveAbortWrite
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 74
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 74
 
 
  444:Generated_Source\PSoC6/BMI_I2C.h **** ****************************************************************************//**
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  498:Generated_Source\PSoC6/BMI_I2C.h **** ****************************************************************************//**
  499:Generated_Source\PSoC6/BMI_I2C.h **** *
  500:Generated_Source\PSoC6/BMI_I2C.h **** * Invokes the Cy_SCB_I2C_MasterRead() PDL driver function.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 75
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 75
 
 
  501:Generated_Source\PSoC6/BMI_I2C.h **** *
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  186:communication.c ****     return status;
  187:communication.c **** }
  177              		.loc 1 187 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 76
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 76
 
 
  178 0042 2046     		mov	r0, r4
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  214 0002 87B0     		sub	sp, sp, #28
  215              		.cfi_def_cfa_offset 48
  216 0004 0546     		mov	r5, r0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 77
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 77
 
 
  217 0006 1746     		mov	r7, r2
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  255 003a E368     		ldr	r3, [r4, #12]
  256 003c 8BB9     		cbnz	r3, .L11
  222:communication.c ****     {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 78
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 78
 
 
  223:communication.c ****         config.slaveAddress = (uint32)Address;
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  299 0074 00000000 		.word	.LANCHOR0
  300 0078 00000000 		.word	xSemaphoreI2C_BMI
  301              		.cfi_endproc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 79
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 79
 
 
  302              	.LFE664:
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  331 0010 4FF48171 		mov	r1, #258
  332 0014 0D48     		ldr	r0, .L19+4
  333 0016 FFF7FEFF 		bl	Cy_SysLib_AssertFailed
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 80
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 80
 
 
  334              	.LVL34:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  380              		.section	.text.MAX_I2C_Callback,"ax",%progbits
  381              		.align	2
  382              		.global	MAX_I2C_Callback
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 81
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 81
 
 
  383              		.thumb
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  316:communication.c **** * Résumé:
  317:communication.c **** *  Fonction d'écriture I2C pour le capteur MAX30102
  318:communication.c **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 82
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 82
 
 
  319:communication.c **** * Paramètres:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  394              		.cfi_def_cfa_offset 4
  395              		.cfi_offset 14, -4
  396 0002 83B0     		sub	sp, sp, #12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 83
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 83
 
 
  397              		.cfi_def_cfa_offset 16
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  435              	@ 382 "communication.c" 1
  436 003c BFF36F8F 		isb
  437              	@ 0 "" 2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 84
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 84
 
 
  438              		.thumb
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  484              		.loc 1 68 0
  485 0018 03F0FD03 		and	r3, r3, #253
   72:communication.c ****     /* 2.5 millisecond latched output */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 85
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 85
 
 
  486              		.loc 1 72 0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  531              	.L27:
  532              	.LBE75:
  533              	.LBE74:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 86
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 86
 
 
  104:communication.c **** 
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  581 0014 0D4B     		ldr	r3, .L34+12
  582 0016 6362     		str	r3, [r4, #36]
  125:communication.c ****         
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 87
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 87
 
 
  583              		.loc 1 125 0
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  628              		.type	MAX_ReadBytes, %function
  629              	MAX_ReadBytes:
  630              	.LFB666:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 88
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 88
 
 
  283:communication.c **** 	/* Variable used for status of I2C operation */
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   19:Generated_Source\PSoC6/MAX_I2C.h **** #include "scb/cy_scb_i2c.h"
   20:Generated_Source\PSoC6/MAX_I2C.h **** 
   21:Generated_Source\PSoC6/MAX_I2C.h **** #if defined(__cplusplus)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 89
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 89
 
 
   22:Generated_Source\PSoC6/MAX_I2C.h **** extern "C" {
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   76:Generated_Source\PSoC6/MAX_I2C.h **** 
   77:Generated_Source\PSoC6/MAX_I2C.h **** /* Bus status. */
   78:Generated_Source\PSoC6/MAX_I2C.h **** __STATIC_INLINE bool     MAX_I2C_IsBusBusy(void);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 90
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 90
 
 
   79:Generated_Source\PSoC6/MAX_I2C.h **** 
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  133:Generated_Source\PSoC6/MAX_I2C.h **** ***************************************/
  134:Generated_Source\PSoC6/MAX_I2C.h **** /**
  135:Generated_Source\PSoC6/MAX_I2C.h **** * \addtogroup group_macros
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 91
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 91
 
 
  136:Generated_Source\PSoC6/MAX_I2C.h **** * @{
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  190:Generated_Source\PSoC6/MAX_I2C.h **** * Function Name: MAX_I2C_Enable
  191:Generated_Source\PSoC6/MAX_I2C.h **** ****************************************************************************//**
  192:Generated_Source\PSoC6/MAX_I2C.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 92
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 92
 
 
  193:Generated_Source\PSoC6/MAX_I2C.h **** * Invokes the Cy_SCB_I2C_Enable() PDL driver function.
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  247:Generated_Source\PSoC6/MAX_I2C.h **** *******************************************************************************/
  248:Generated_Source\PSoC6/MAX_I2C.h **** __STATIC_INLINE void MAX_I2C_RegisterEventCallback(cy_cb_scb_i2c_handle_events_t callback)
  249:Generated_Source\PSoC6/MAX_I2C.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 93
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 93
 
 
  250:Generated_Source\PSoC6/MAX_I2C.h ****     Cy_SCB_I2C_RegisterEventCallback(MAX_I2C_HW, callback, &MAX_I2C_context);
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  304:Generated_Source\PSoC6/MAX_I2C.h **** {
  305:Generated_Source\PSoC6/MAX_I2C.h ****     return Cy_SCB_I2C_SlaveGetAddress(MAX_I2C_HW);
  306:Generated_Source\PSoC6/MAX_I2C.h **** }
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 94
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 94
 
 
  307:Generated_Source\PSoC6/MAX_I2C.h **** 
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  361:Generated_Source\PSoC6/MAX_I2C.h **** 
  362:Generated_Source\PSoC6/MAX_I2C.h **** 
  363:Generated_Source\PSoC6/MAX_I2C.h **** #if (MAX_I2C_ENABLE_SLAVE)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 95
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 95
 
 
  364:Generated_Source\PSoC6/MAX_I2C.h **** /*******************************************************************************
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  418:Generated_Source\PSoC6/MAX_I2C.h **** ****************************************************************************//**
  419:Generated_Source\PSoC6/MAX_I2C.h **** *
  420:Generated_Source\PSoC6/MAX_I2C.h **** * Invokes the Cy_SCB_I2C_SlaveClearReadStatus() PDL driver function.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 96
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 96
 
 
  421:Generated_Source\PSoC6/MAX_I2C.h **** *
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  475:Generated_Source\PSoC6/MAX_I2C.h **** __STATIC_INLINE uint32_t MAX_I2C_SlaveClearWriteStatus(void)
  476:Generated_Source\PSoC6/MAX_I2C.h **** {
  477:Generated_Source\PSoC6/MAX_I2C.h ****     return Cy_SCB_I2C_SlaveClearWriteStatus(MAX_I2C_HW, &MAX_I2C_context);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 97
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 97
 
 
  478:Generated_Source\PSoC6/MAX_I2C.h **** }
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  662              		.loc 5 531 0
  663 0020 134A     		ldr	r2, .L39
  664              	.LVL54:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 98
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 98
 
 
  665 0022 02A9     		add	r1, sp, #8
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  709              		.loc 1 308 0
  710 005a 4FF0FF31 		mov	r1, #-1
  711 005e 074B     		ldr	r3, .L39+12
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 99
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 99
 
 
  712 0060 1868     		ldr	r0, [r3]
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  761 000e 0FCB     		ldmia	r3, {r0, r1, r2, r3}
  762              	.LVL65:
  763 0010 8DE80F00 		stmia	sp, {r0, r1, r2, r3}
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 100
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 100
 
 
  764              	.LVL66:
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  393:communication.c **** void MAX_reset(void)
  394:communication.c **** {
  808              		.loc 1 394 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 101
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 101
 
 
  809              		.cfi_startproc
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  848              		.loc 1 409 0
  849 000c FFF7FEFF 		bl	MAX_reset
  850              	.LVL71:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 102
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 102
 
 
  410:communication.c ****     Cy_SysLib_Delay(1000);  //Délais 
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  889              		.loc 1 425 0
  890 0052 8DF80750 		strb	r5, [sp, #7]
  426:communication.c ****     MAX_WriteBytes(REG_OVF_COUNTER,&value); //OVF_COUNTER[4:0]
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 103
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 103
 
 
  891              		.loc 1 426 0
@@ -6162,9 +6162,9 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  917 0082 FFF7FEFF 		bl	MAX_WriteBytes
  918              	.LVL81:
  439:communication.c ****     
- 440:communication.c ****     value = 0x15;
+ 440:communication.c ****     value = 0x20;
  919              		.loc 1 440 0
- 920 0086 1525     		movs	r5, #21
+ 920 0086 2025     		movs	r5, #32
  921 0088 8DF80750 		strb	r5, [sp, #7]
  441:communication.c ****     MAX_WriteBytes(REG_LED1_PA,&value); //Current LED1 (rouge)
  922              		.loc 1 441 0
@@ -6173,12 +6173,12 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  925 0090 FFF7FEFF 		bl	MAX_WriteBytes
  926              	.LVL82:
  442:communication.c ****     
- 443:communication.c ****     value = 0x15;
+ 443:communication.c ****     value = 0x20;
  927              		.loc 1 443 0
  928 0094 8DF80750 		strb	r5, [sp, #7]
  444:communication.c ****     MAX_WriteBytes(REG_LED2_PA,&value); //Current LED2 (IR)
  929              		.loc 1 444 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 104
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 104
 
 
  930 0098 2146     		mov	r1, r4
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  968 000a B3F90030 		ldrsh	r3, [r3]
  969              	.LVL85:
  970              	.LBB82:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 105
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 105
 
 
  971              	.LBB83:
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1019 0044 0024     		movs	r4, #0
  1020 0046 05E0     		b	.L52
  1021              	.LVL91:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 106
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 106
 
 
  1022              	.L53:
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1053              	.LBB91:
  779:Generated_Source\PSoC6\pdl\drivers/peripheral/gpio/cy_gpio.h **** }
  1054              		.loc 2 779 0 discriminator 1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 107
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 107
 
 
  1055 0068 2D4B     		ldr	r3, .L61+8
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1091              		.loc 1 499 0
  1092 009a 9DF80320 		ldrb	r2, [sp, #3]	@ zero_extendqisi2
  1093              	.LVL105:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 108
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 108
 
 
  500:communication.c ****         temp <<= 16;
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1131              	.LBB92:
  1132              	.LBB93:
 1715:Generated_Source\PSoC6\pdl\cmsis/include/core_cm4.h ****   {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 109
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 109
 
 
  1133              		.loc 3 1715 0
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   39:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
   40:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __ASM
   41:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __ASM                                  __asm
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 110
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 110
 
 
   42:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   96:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   97:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   98:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 111
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 111
 
 
   99:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  153:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   uint32_t result;
  154:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  155:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 112
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 112
 
 
  156:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   return(result);
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  210:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   return(result);
  211:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** }
  212:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 113
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 113
 
 
  213:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  267:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   return(result);
  268:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** }
  269:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 114
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 114
 
 
  270:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  324:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  325:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  326:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 115
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 115
 
 
  327:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  381:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
  382:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
  383:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 116
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 116
 
 
  384:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   uint32_t result;
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  438:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
  439:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_fault_irq(void)
  440:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 117
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 117
 
 
  441:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __ASM volatile ("cpsie f" : : : "memory");
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  495:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  496:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  497:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 118
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 118
 
 
  498:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  552:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**
  553:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \brief   Set Fault Mask
  554:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 119
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 119
 
 
  555:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  609:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always.
  610:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
  611:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer Limit (PSPLIM) when in
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 120
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 120
 
 
  612:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \return               PSPLIM Register value
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  666:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** }
  667:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
  668:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 121
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 121
 
 
  669:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  723:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer Limit value to set
  724:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
  725:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSPLIM(uint32_t MainStackPtrLimit)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 122
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 122
 
 
  726:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** {
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  780:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   return(result);
  781:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
  782:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #else
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 123
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 123
 
 
  783:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   return(0U);
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  837:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \details No Operation does nothing. This instruction can be used for code alignment purposes.
  838:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
  839:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #define __NOP()                             __ASM volatile ("nop")
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 124
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 124
 
 
  840:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  871:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** }
  1159              		.loc 6 871 0
  1160              		.syntax unified
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 125
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 125
 
 
  1161              	@ 871 "Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h" 1
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  519:communication.c ****         
  520:communication.c **** }
  1208              		.loc 1 520 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 126
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 126
 
 
  1209 0114 03B0     		add	sp, sp, #12
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1249 0012 FFF7FEFF 		bl	MAX_WriteBytes
  1250              	.LVL125:
  535:communication.c ****     MAX_WriteBytes(REG_LED2_PA,&current_LED2);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 127
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 127
 
 
  1251              		.loc 1 535 0
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
    9:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Copyright 2016-2018, Cypress Semiconductor Corporation.  All rights reserved.
   10:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * You may use this file only in accordance with the license, terms, conditions,
   11:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * disclaimers, and limitations in the end user license agreement accompanying
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 128
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 128
 
 
   12:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * the software package with which this file was provided.
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
   66:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * For master modes, parameters lowPhaseDutyCycle, highPhaseDutyCycle and 
   67:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * enableDigitalFilter can be used to define output data rate (refer to section 
   68:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * \ref group_scb_i2c_data_rate for more information).
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 129
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 129
 
 
   69:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * For slave mode, provide the slaveAddress and slaveAddressMask. The other 
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  123:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * digital filter. This function sets SCL low and high phase settings based on 
  124:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * source clock frequency.
  125:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 130
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 130
 
 
  126:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * \snippet SCB_CompDatasheet_sut_01_revA.cydsn\i2c_snippets.c I2C_CFG_DATA_RATE_MASTER
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  180:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * \ref group_scb_i2c_master_low_level_functions. Therefore, there are two
  181:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * methods for initiating I2C master transactions using either <b>Low-Level or
  182:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * High-Level</b> API. These two methods are described below. Only one method
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 131
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 131
 
 
  183:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * should be used at a time. <b>They should not be mixed.</b>
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  237:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * To monitor the transaction status, use \ref Cy_SCB_I2C_SlaveGetStatus or
  238:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * use \ref Cy_SCB_I2C_RegisterEventCallback to register a callback function
  239:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * to be notified about \ref group_scb_i2c_macros_callback_events.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 132
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 132
 
 
  240:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  294:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *   <tr>
  295:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *     <td>11.4</td>
  296:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *     <td>A</td>
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 133
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 133
 
 
  297:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *     <td>A cast should not be performed between a pointer to object type and
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  351:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *     <td>Driver library directory-structure simplification.</td>
  352:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *   </tr>
  353:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *   <tr>
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 134
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 134
 
 
  354:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *     <td>Added the enableDigitalFilter, highPhaseDutyCycle and lowPhaseDutyCycle 
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  408:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *         generated after the master completed transferring the data byte.
  409:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *         The SCL line was stretched by the master waiting for the address byte
  410:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *         to be written into the TX FIFO after the ReStart condition generation.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 135
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 135
 
 
  411:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *         The following timeout detection released the bus from the master
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  465:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** extern "C" {
  466:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #endif
  467:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 136
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 136
 
 
  468:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /*******************************************************************************
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  522:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     /**
  523:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * The master transaction was aborted and the slave transaction is on-going
  524:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * because the slave was addressed before the master generated a start.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 137
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 137
 
 
  525:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * Applicable only for the \ref group_scb_i2c_master_low_level_functions
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  579:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** */
  580:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** typedef cy_en_scb_i2c_command_t (* cy_cb_scb_i2c_handle_addr_t)(uint32_t event);
  581:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 138
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 138
 
 
  582:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /** I2C configuration structure */
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  636:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * \n <b>The drawback of enabling useTxFifo</b> is that the abort operation clears
  637:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * the TX FIFO. The TX FIFO clear operation also clears the shift
  638:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * register. As a result the shifter may be cleared in the middle of a byte
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 139
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 139
 
 
  639:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * transaction, corrupting it. The remaining bits to transaction within the
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  693:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * The number of SCB clock cycles in the high phase of SCL. Only applicable 
  694:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     * in master modes. The valid range is 5 to 16.
  695:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 140
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 140
 
 
  696:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h ****     uint32_t highPhaseDutyCycle;
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  750:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** } cy_stc_scb_i2c_context_t;
  751:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
  752:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /** The I2C Master transfer structure */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 141
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 141
 
 
  753:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** typedef struct cy_stc_scb_i2c_master_xfer_config
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  807:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
  808:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** __STATIC_INLINE bool Cy_SCB_I2C_IsBusBusy(CySCB_Type const *base);
  809:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 142
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 142
 
 
  810:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** __STATIC_INLINE void Cy_SCB_I2C_MasterSetLowPhaseDutyCycle (CySCB_Type *base, uint32_t clockCycles)
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  864:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * \{
  865:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** */
  866:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** void Cy_SCB_I2C_Interrupt      (CySCB_Type *base, cy_stc_scb_i2c_context_t *context);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 143
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 143
 
 
  867:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** void Cy_SCB_I2C_SlaveInterrupt (CySCB_Type *base, cy_stc_scb_i2c_context_t *context);
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  921:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_SLAVE_RD_UNDRFL     (0x00000008UL)
  922:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
  923:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /** There is a write transaction in progress */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 144
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 144
 
 
  924:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_SLAVE_WR_BUSY       (0x00000010UL)
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  978:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * The master detected an erroneous start or stop, the transaction was aborted
  979:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** */
  980:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_MASTER_BUS_ERR      (0x00800000UL)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 145
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 145
 
 
  981:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1035:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Indicates the I2C hardware detected an error.
 1036:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Check \ref Cy_SCB_I2C_SlaveGetStatus to determine the source of the error.
 1037:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 146
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 146
 
 
 1038:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_SLAVE_ERR_EVENT             (0x00000040UL)
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1092:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
 1093:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /** \cond INTERNAL */
 1094:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 147
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 147
 
 
 1095:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /* Slave statuses */
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1149:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
 1150:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /* Master states */
 1151:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_MASTER_ACTIVE     (0x00100000UL)
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 148
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 148
 
 
 1152:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_MASTER_WAIT       (0x10100000UL)
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1206:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_MASTER_FSTP_HIGH_PHASE_MIN   (6U)
 1207:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
 1208:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /* SCL low and high time in ns. Takes into account tF and tR */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 149
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 149
 
 
 1209:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** #define CY_SCB_I2C_MASTER_STD_SCL_LOW   (5000U) /* tLOW  + tF = 4700 + 300  */
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1263:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Function Name: Cy_SCB_I2C_Enable
 1264:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** ****************************************************************************//**
 1265:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 150
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 150
 
 
 1266:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Enables the SCB block for the I2C operation
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1320:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
 1321:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** 
 1322:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** /*******************************************************************************
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 151
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 151
 
 
 1323:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * Function Name: Cy_SCB_I2C_SlaveGetAddress
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1377:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * \return
 1378:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * The 8-bit address mask, the upper 7 bits correspond to the slave address.
 1379:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * LSBit must always be 0.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 152
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 152
 
 
 1380:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
 1434:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * cycles in a phase of SCL may violate the I2C specification. Make this
 1435:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** * change only while the block is disabled.
 1436:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 153
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 153
 
 
 1437:Generated_Source\PSoC6\pdl\drivers/peripheral/scb/cy_scb_i2c.h **** *******************************************************************************/
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  545:communication.c ****     MAX_I2C_RegisterEventCallback(MAX_I2C_Callback); 
  546:communication.c **** 	xSemaphoreI2C_MAX = xSemaphoreCreateBinary();
  1296              		.loc 1 546 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 154
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 154
 
 
  1297 000c 0322     		movs	r2, #3
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1339 0040 00000000 		.word	MAX_I2C_Callback
  1340 0044 00000000 		.word	MAX_I2C_context
  1341 0048 00000000 		.word	xSemaphoreI2C_MAX
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 155
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 155
 
 
  1342 004c 00000000 		.word	BMI_I2C_Callback
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1383              	status.23423:
  1384 000c 00000000 		.space	4
  1385              		.type	status.23434, %object
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 156
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 156
 
 
  1386              		.size	status.23434, 4
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1438 002d E6030000 		.4byte	0x3e6
  1439 0031 03       		.uleb128 0x3
  1440 0032 8B210000 		.4byte	.LASF0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 157
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 157
 
 
  1441 0036 71       		.sleb128 -15
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1495 00a2 08       		.byte	0x8
  1496 00a3 04       		.uleb128 0x4
  1497 00a4 B6270000 		.4byte	.LASF19
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 158
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 158
 
 
  1498 00a8 09       		.byte	0x9
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1552 0114 1B       		.byte	0x1b
  1553 0115 04       		.uleb128 0x4
  1554 0116 CA040000 		.4byte	.LASF38
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 159
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 159
 
 
  1555 011a 1C       		.byte	0x1c
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1609 0186 2E       		.byte	0x2e
  1610 0187 04       		.uleb128 0x4
  1611 0188 39260000 		.4byte	.LASF57
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 160
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 160
 
 
  1612 018c 2F       		.byte	0x2f
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1666 01f8 41       		.byte	0x41
  1667 01f9 04       		.uleb128 0x4
  1668 01fa A32D0000 		.4byte	.LASF76
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 161
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 161
 
 
  1669 01fe 42       		.byte	0x42
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1723 026a 54       		.byte	0x54
  1724 026b 04       		.uleb128 0x4
  1725 026c E9020000 		.4byte	.LASF95
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 162
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 162
 
 
  1726 0270 55       		.byte	0x55
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1780 02dc 67       		.byte	0x67
  1781 02dd 04       		.uleb128 0x4
  1782 02de A8020000 		.4byte	.LASF114
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 163
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 163
 
 
  1783 02e2 68       		.byte	0x68
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1837 034e 7A       		.byte	0x7a
  1838 034f 04       		.uleb128 0x4
  1839 0350 E3240000 		.4byte	.LASF133
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 164
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 164
 
 
  1840 0354 7B       		.byte	0x7b
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1894 03c0 8D       		.byte	0x8d
  1895 03c1 04       		.uleb128 0x4
  1896 03c2 DB030000 		.4byte	.LASF152
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 165
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 165
 
 
  1897 03c6 8E       		.byte	0x8e
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  1951 0432 05       		.uleb128 0x5
  1952 0433 02       		.byte	0x2
  1953 0434 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 166
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 166
 
 
  1954 0435 3F2C0000 		.4byte	.LASF166
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2008 04a1 27040000 		.4byte	0x427
  2009 04a5 06       		.uleb128 0x6
  2010 04a6 DF220000 		.4byte	.LASF178
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 167
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 167
 
 
  2011 04aa 0A       		.byte	0xa
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2065 0521 8001     		.2byte	0x180
  2066 0523 0A       		.uleb128 0xa
  2067 0524 D40B0000 		.4byte	.LASF187
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 168
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 168
 
 
  2068 0528 03       		.byte	0x3
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2122 05a2 87050000 		.4byte	0x587
  2123 05a6 17       		.byte	0x17
  2124 05a7 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 169
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 169
 
 
  2125 05a8 0E       		.uleb128 0xe
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2179 0628 0C       		.uleb128 0xc
  2180 0629 03060000 		.4byte	0x603
  2181 062d 38060000 		.4byte	0x638
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 170
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 170
 
 
  2182 0631 0D       		.uleb128 0xd
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2236 06a3 8E050000 		.4byte	0x58e
  2237 06a7 04       		.byte	0x4
  2238 06a8 14       		.uleb128 0x14
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 171
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 171
 
 
  2239 06a9 0F030000 		.4byte	.LASF195
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2293 0714 380E0000 		.4byte	.LASF202
  2294 0718 0B       		.byte	0xb
  2295 0719 2E       		.byte	0x2e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 172
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 172
 
 
  2296 071a 8E050000 		.4byte	0x58e
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2350 0787 63060000 		.4byte	.LASF209
  2351 078b 0B       		.byte	0xb
  2352 078c 3B       		.byte	0x3b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 173
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 173
 
 
  2353 078d 03060000 		.4byte	0x603
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2407 0805 0D       		.uleb128 0xd
  2408 0806 87050000 		.4byte	0x587
  2409 080a 7F       		.byte	0x7f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 174
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 174
 
 
  2410 080b 00       		.byte	0
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2464 0882 0C       		.byte	0xc
  2465 0883 23       		.byte	0x23
  2466 0884 03060000 		.4byte	0x603
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 175
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 175
 
 
  2467 0888 04       		.byte	0x4
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2521 08f4 48       		.byte	0x48
  2522 08f5 14       		.uleb128 0x14
  2523 08f6 56100000 		.4byte	.LASF228
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 176
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 176
 
 
  2524 08fa 0C       		.byte	0xc
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2578 0966 0C       		.byte	0xc
  2579 0967 36       		.byte	0x36
  2580 0968 8E050000 		.4byte	0x58e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 177
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 177
 
 
  2581 096c 0002     		.2byte	0x200
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2635 09e1 0C03     		.2byte	0x30c
  2636 09e3 16       		.uleb128 0x16
  2637 09e4 A9000000 		.4byte	.LASF243
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 178
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 178
 
 
  2638 09e8 0C       		.byte	0xc
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2692 0a5d 0C       		.byte	0xc
  2693 0a5e 49       		.byte	0x49
  2694 0a5f 8E050000 		.4byte	0x58e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 179
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 179
 
 
  2695 0a63 800E     		.2byte	0xe80
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2749 0ad8 D00E     		.2byte	0xed0
  2750 0ada 16       		.uleb128 0x16
  2751 0adb 47030000 		.4byte	.LASF262
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 180
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 180
 
 
  2752 0adf 0C       		.byte	0xc
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2806 0b54 0C       		.byte	0xc
  2807 0b55 5C       		.byte	0x5c
  2808 0b56 5E0C0000 		.4byte	0xc5e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 181
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 181
 
 
  2809 0b5a 500F     		.2byte	0xf50
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2863 0bcf CC0F     		.2byte	0xfcc
  2864 0bd1 00       		.byte	0
  2865 0bd2 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 182
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 182
 
 
  2866 0bd3 08060000 		.4byte	0x608
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2920 0c5a 78060000 		.4byte	0x678
  2921 0c5e 11       		.uleb128 0x11
  2922 0c5f 590C0000 		.4byte	0xc59
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 183
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 183
 
 
  2923 0c63 0E       		.uleb128 0xe
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  2977 0cd5 3A       		.byte	0x3a
  2978 0cd6 B0040000 		.4byte	0x4b0
  2979 0cda 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 184
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 184
 
 
  2980 0cdb 14       		.uleb128 0x14
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3034 0d47 14       		.uleb128 0x14
  3035 0d48 80050000 		.4byte	.LASF299
  3036 0d4c 0E       		.byte	0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 185
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 185
 
 
  3037 0d4d 46       		.byte	0x46
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3091 0db9 51       		.byte	0x51
  3092 0dba 84040000 		.4byte	0x484
  3093 0dbe 34       		.byte	0x34
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 186
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 186
 
 
  3094 0dbf 14       		.uleb128 0x14
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3148 0e2b 14       		.uleb128 0x14
  3149 0e2c FA120000 		.4byte	.LASF318
  3150 0e30 0E       		.byte	0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 187
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 187
 
 
  3151 0e31 5B       		.byte	0x5b
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3205 0e9d 64       		.byte	0x64
  3206 0e9e 84040000 		.4byte	0x484
  3207 0ea2 54       		.byte	0x54
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 188
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 188
 
 
  3208 0ea3 14       		.uleb128 0x14
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3262 0f0f 14       		.uleb128 0x14
  3263 0f10 4D040000 		.4byte	.LASF337
  3264 0f14 0E       		.byte	0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 189
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 189
 
 
  3265 0f15 72       		.byte	0x72
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3319 0f81 7E       		.byte	0x7e
  3320 0f82 84040000 		.4byte	0x484
  3321 0f86 73       		.byte	0x73
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 190
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 190
 
 
  3322 0f87 14       		.uleb128 0x14
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3376 0ff3 14       		.uleb128 0x14
  3377 0ff4 1C0F0000 		.4byte	.LASF356
  3378 0ff8 0E       		.byte	0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 191
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 191
 
 
  3379 0ff9 8D       		.byte	0x8d
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3433 1065 96       		.byte	0x96
  3434 1066 9A040000 		.4byte	0x49a
  3435 106a A6       		.byte	0xa6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 192
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 192
 
 
  3436 106b 14       		.uleb128 0x14
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3490 10d5 4C190000 		.4byte	.LASF375
  3491 10d9 05       		.uleb128 0x5
  3492 10da 08       		.byte	0x8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 193
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 193
 
 
  3493 10db 04       		.byte	0x4
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3547 114b 791E0000 		.4byte	.LASF384
  3548 114f 0120AA00 		.4byte	0xaa2001
  3549 1153 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 194
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 194
 
 
  3550 1154 681C0000 		.4byte	.LASF385
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3604 11dc 1D       		.uleb128 0x1d
  3605 11dd B0040000 		.4byte	0x4b0
  3606 11e1 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 195
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 195
 
 
  3607 11e2 10       		.uleb128 0x10
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3661 1259 30110000 		.4byte	0x1130
  3662 125d 0D       		.byte	0xd
  3663 125e 09       		.uleb128 0x9
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 196
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 196
 
 
  3664 125f 62000000 		.4byte	.LASF404
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3718 12d4 420F0000 		.4byte	.LASF413
  3719 12d8 07       		.byte	0x7
  3720 12d9 DA02     		.2byte	0x2da
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 197
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 197
 
 
  3721 12db 8E050000 		.4byte	0x58e
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3775 1352 00       		.byte	0
  3776 1353 09       		.uleb128 0x9
  3777 1354 3A100000 		.4byte	.LASF423
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 198
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 198
 
 
  3778 1358 07       		.byte	0x7
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3832 13cd 7B02     		.2byte	0x27b
  3833 13cf 8E050000 		.4byte	0x58e
  3834 13d3 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 199
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 199
 
 
  3835 13d4 09       		.uleb128 0x9
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3889 1449 D4250000 		.4byte	.LASF441
  3890 144d 12       		.byte	0x12
  3891 144e 7902     		.2byte	0x279
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 200
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 200
 
 
  3892 1450 8E050000 		.4byte	0x58e
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  3946 14c5 B0040000 		.4byte	0x4b0
  3947 14c9 28       		.byte	0x28
  3948 14ca 09       		.uleb128 0x9
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 201
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 201
 
 
  3949 14cb 0C1F0000 		.4byte	.LASF446
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4003 153b DE2A0000 		.4byte	.LASF453
  4004 153f 13       		.byte	0x13
  4005 1540 37       		.byte	0x37
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 202
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 202
 
 
  4006 1541 B0040000 		.4byte	0x4b0
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4060 15ad B0040000 		.4byte	0x4b0
  4061 15b1 34       		.byte	0x34
  4062 15b2 14       		.uleb128 0x14
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 203
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 203
 
 
  4063 15b3 442F0000 		.4byte	.LASF463
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4117 1622 D6080000 		.4byte	.LASF472
  4118 1626 15       		.byte	0x15
  4119 1627 2E       		.byte	0x2e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 204
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 204
 
 
  4120 1628 2E110000 		.4byte	0x112e
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4174 16a6 02       		.byte	0x2
  4175 16a7 21       		.uleb128 0x21
  4176 16a8 627700   		.ascii	"bw\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 205
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 205
 
 
  4177 16ab 17       		.byte	0x17
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4231 170f 23       		.uleb128 0x23
  4232 1710 951B0000 		.4byte	.LASF489
  4233 1714 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 206
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 206
 
 
  4234 1715 15040000 		.4byte	0x415
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4288 1786 04       		.uleb128 0x4
  4289 1787 85130000 		.4byte	.LASF501
  4290 178b 0A       		.byte	0xa
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 207
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 207
 
 
  4291 178c 04       		.uleb128 0x4
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4345 17f7 01       		.byte	0x1
  4346 17f8 09       		.byte	0x9
  4347 17f9 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 208
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 208
 
 
  4348 17fa 22       		.uleb128 0x22
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4402 185d 17       		.byte	0x17
  4403 185e 1A04     		.2byte	0x41a
  4404 1860 84040000 		.4byte	0x484
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 209
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 209
 
 
  4405 1864 01       		.byte	0x1
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4459 18c4 F20D0000 		.4byte	.LASF525
  4460 18c8 17       		.byte	0x17
  4461 18c9 3A04     		.2byte	0x43a
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 210
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 210
 
 
  4462 18cb 84040000 		.4byte	0x484
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4516 192e 22       		.uleb128 0x22
  4517 192f 3E160000 		.4byte	.LASF532
  4518 1933 17       		.byte	0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 211
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 211
 
 
  4519 1934 5604     		.2byte	0x456
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4573 1998 02       		.byte	0x2
  4574 1999 01       		.byte	0x1
  4575 199a 0D       		.byte	0xd
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 212
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 212
 
 
  4576 199b 00       		.byte	0
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4630 19ff 9A040000 		.4byte	0x49a
  4631 1a03 02       		.byte	0x2
  4632 1a04 02       		.byte	0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 213
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 213
 
 
  4633 1a05 0C       		.byte	0xc
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4687 1a65 22       		.uleb128 0x22
  4688 1a66 F3060000 		.4byte	.LASF552
  4689 1a6a 17       		.byte	0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 214
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 214
 
 
  4690 1a6b B004     		.2byte	0x4b0
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4744 1ad2 17       		.byte	0x17
  4745 1ad3 CC04     		.2byte	0x4cc
  4746 1ad5 84040000 		.4byte	0x484
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 215
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 215
 
 
  4747 1ad9 01       		.byte	0x1
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4801 1b39 06       		.byte	0x6
  4802 1b3a 00       		.byte	0
  4803 1b3b 22       		.uleb128 0x22
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 216
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 216
 
 
  4804 1b3c 30260000 		.4byte	.LASF566
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4858 1ba3 22       		.uleb128 0x22
  4859 1ba4 DA0E0000 		.4byte	.LASF573
  4860 1ba8 17       		.byte	0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 217
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 217
 
 
  4861 1ba9 0B05     		.2byte	0x50b
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4915 1c0d 25       		.uleb128 0x25
  4916 1c0e 6F000000 		.4byte	.LASF579
  4917 1c12 17       		.byte	0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 218
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 218
 
 
  4918 1c13 2C05     		.2byte	0x52c
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  4972 1c90 39170000 		.4byte	0x1739
  4973 1c94 01       		.byte	0x1
  4974 1c95 09       		.uleb128 0x9
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 219
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 219
 
 
  4975 1c96 36020000 		.4byte	.LASF590
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5029 1d04 09       		.uleb128 0x9
  5030 1d05 0B2B0000 		.4byte	.LASF598
  5031 1d09 17       		.byte	0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 220
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 220
 
 
  5032 1d0a 5C05     		.2byte	0x55c
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5086 1d7e 17       		.byte	0x17
  5087 1d7f 7005     		.2byte	0x570
  5088 1d81 84040000 		.4byte	0x484
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 221
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 221
 
 
  5089 1d85 01       		.byte	0x1
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5143 1dfa 18       		.byte	0x18
  5144 1dfb 09       		.uleb128 0x9
  5145 1dfc C1190000 		.4byte	.LASF616
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 222
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 222
 
 
  5146 1e00 17       		.byte	0x17
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5200 1e6f 731E0000 		.4byte	0x1e73
  5201 1e73 11       		.uleb128 0x11
  5202 1e74 900C0000 		.4byte	0xc90
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 223
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 223
 
 
  5203 1e78 17       		.uleb128 0x17
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5257 1ef0 29       		.uleb128 0x29
  5258 1ef1 F70A0000 		.4byte	.LASF632
  5259 1ef5 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 224
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 224
 
 
  5260 1ef6 1102     		.2byte	0x211
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5314 1f70 F701     		.2byte	0x1f7
  5315 1f72 93110000 		.4byte	0x1193
  5316 1f76 03       		.byte	0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 225
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 225
 
 
  5317 1f77 881F0000 		.4byte	0x1f88
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5371 1fec FC1F0000 		.4byte	0x1ffc
  5372 1ff0 2B       		.uleb128 0x2b
  5373 1ff1 AA040000 		.4byte	.LASF622
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 226
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 226
 
 
  5374 1ff5 05       		.byte	0x5
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5428 2082 2E       		.uleb128 0x2e
  5429 2083 B11E0000 		.4byte	0x1eb1
  5430 2087 6C000000 		.4byte	.LLST6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 227
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 227
 
 
  5431 208b 2E       		.uleb128 0x2e
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5485 2103 7D120000 		.4byte	.LASF642
  5486 2107 01       		.byte	0x1
  5487 2108 A3       		.byte	0xa3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 228
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 228
 
 
  5488 2109 84040000 		.4byte	0x484
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5542 2187 30       		.uleb128 0x30
  5543 2188 01       		.uleb128 0x1
  5544 2189 51       		.byte	0x51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 229
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 229
 
 
  5545 218a 02       		.uleb128 0x2
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5599 21e4 9C       		.byte	0x9c
  5600 21e5 D5220000 		.4byte	0x22d5
  5601 21e9 33       		.uleb128 0x33
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 230
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 230
 
 
  5602 21ea 1F080000 		.4byte	.LASF641
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5656 226b 50       		.byte	0x50
  5657 226c 05       		.uleb128 0x5
  5658 226d 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 231
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 231
 
 
  5659 226e 00006440 		.4byte	0x40640000
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5713 22d1 09       		.byte	0x9
  5714 22d2 FF       		.byte	0xff
  5715 22d3 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 232
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 232
 
 
  5716 22d4 00       		.byte	0
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5770 2341 3F2C0000 		.4byte	0x2c3f
  5771 2345 30       		.uleb128 0x30
  5772 2346 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 233
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 233
 
 
  5773 2347 51       		.byte	0x51
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5827 23b3 0A       		.byte	0xa
  5828 23b4 7801     		.2byte	0x178
  5829 23b6 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 234
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 234
 
 
  5830 23b7 31       		.uleb128 0x31
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5884 2420 00000000 		.4byte	sensor
  5885 2424 00       		.byte	0
  5886 2425 31       		.uleb128 0x31
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 235
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 235
 
 
  5887 2426 5C000000 		.4byte	.LVL46
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5941 248d 01       		.uleb128 0x1
  5942 248e 9C       		.byte	0x9c
  5943 248f 77250000 		.4byte	0x2577
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 236
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 236
 
 
  5944 2493 37       		.uleb128 0x37
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  5998 2514 01       		.uleb128 0x1
  5999 2515 51       		.byte	0x51
  6000 2516 02       		.uleb128 0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 237
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 237
 
 
  6001 2517 91       		.byte	0x91
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6055 2578 03090000 		.4byte	.LASF658
  6056 257c 01       		.byte	0x1
  6057 257d 4601     		.2byte	0x146
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 238
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 238
 
 
  6058 257f 72040000 		.4byte	0x472
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6112 2606 50       		.byte	0x50
  6113 2607 05       		.uleb128 0x5
  6114 2608 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 239
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 239
 
 
  6115 2609 00006340 		.4byte	0x40630000
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6169 2668 38       		.uleb128 0x38
  6170 2669 ED060000 		.4byte	.LASF630
  6171 266d 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 240
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 240
 
 
  6172 266e 9701     		.2byte	0x197
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6226 26ca 74       		.byte	0x74
  6227 26cb 00       		.sleb128 0
  6228 26cc 30       		.uleb128 0x30
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 241
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 241
 
 
  6229 26cd 01       		.uleb128 0x1
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6283 271e 5E000000 		.4byte	.LVL78
  6284 2722 77250000 		.4byte	0x2577
  6285 2726 36270000 		.4byte	0x2736
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 242
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 242
 
 
  6286 272a 30       		.uleb128 0x30
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6340 277b 01       		.uleb128 0x1
  6341 277c 51       		.byte	0x51
  6342 277d 02       		.uleb128 0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 243
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 243
 
 
  6343 277e 74       		.byte	0x74
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6397 27de F8100000 		.4byte	0x10f8
  6398 27e2 6A040000 		.4byte	.LLST32
  6399 27e6 38       		.uleb128 0x38
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 244
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 244
 
 
  6400 27e7 34080000 		.4byte	.LASF664
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6454 2876 6900     		.ascii	"i\000"
  6455 2878 01       		.byte	0x1
  6456 2879 D801     		.2byte	0x1d8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 245
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 245
 
 
  6457 287b 6B040000 		.4byte	0x46b
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6511 28ed 37       		.byte	0x37
  6512 28ee 30       		.uleb128 0x30
  6513 28ef 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 246
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 246
 
 
  6514 28f0 51       		.byte	0x51
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6568 2970 2E       		.uleb128 0x2e
  6569 2971 8B1E0000 		.4byte	0x1e8b
  6570 2975 37060000 		.4byte	.LLST45
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 247
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 247
 
 
  6571 2979 00       		.byte	0
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6625 29e8 30       		.uleb128 0x30
  6626 29e9 01       		.uleb128 0x1
  6627 29ea 51       		.byte	0x51
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 248
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 248
 
 
  6628 29eb 02       		.uleb128 0x2
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6682 2a75 04       		.byte	0x4
  6683 2a76 FA       		.byte	0xfa
  6684 2a77 43       		.uleb128 0x43
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 249
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 249
 
 
  6685 2a78 601E0000 		.4byte	0x1e60
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6739 2adb 00       		.byte	0
  6740 2adc 3C       		.uleb128 0x3c
  6741 2add 36000000 		.4byte	.LVL134
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 250
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 250
 
 
  6742 2ae1 3F240000 		.4byte	0x243f
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6796 2b60 45       		.uleb128 0x45
  6797 2b61 EF090000 		.4byte	.LASF677
  6798 2b65 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 251
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 251
 
 
  6799 2b66 7F       		.byte	0x7f
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6853 2bdf 01       		.byte	0x1
  6854 2be0 0D       		.byte	0xd
  6855 2be1 601D0000 		.4byte	0x1d60
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 252
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 252
 
 
  6856 2be5 05       		.uleb128 0x5
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6910 2c67 1E2A0000 		.4byte	.LASF690
  6911 2c6b 1E       		.byte	0x1e
  6912 2c6c 55       		.byte	0x55
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 253
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 253
 
 
  6913 2c6d 4A       		.uleb128 0x4a
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  6967 001f 13       		.uleb128 0x13
  6968 0020 00       		.byte	0
  6969 0021 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 254
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 254
 
 
  6970 0022 03       		.uleb128 0x3
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7024 0058 13       		.uleb128 0x13
  7025 0059 01       		.byte	0x1
  7026 005a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 255
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 255
 
 
  7027 005b 05       		.uleb128 0x5
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7081 0091 0C       		.uleb128 0xc
  7082 0092 01       		.uleb128 0x1
  7083 0093 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 256
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 256
 
 
  7084 0094 49       		.uleb128 0x49
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7138 00ca 0B       		.uleb128 0xb
  7139 00cb 0B       		.uleb128 0xb
  7140 00cc 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 257
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 257
 
 
  7141 00cd 0B       		.uleb128 0xb
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7195 0103 0E       		.uleb128 0xe
  7196 0104 3A       		.uleb128 0x3a
  7197 0105 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 258
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 258
 
 
  7198 0106 3B       		.uleb128 0x3b
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7252 013c 00       		.byte	0
  7253 013d 03       		.uleb128 0x3
  7254 013e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 259
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 259
 
 
  7255 013f 1C       		.uleb128 0x1c
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7309 0175 0B       		.uleb128 0xb
  7310 0176 3B       		.uleb128 0x3b
  7311 0177 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 260
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 260
 
 
  7312 0178 01       		.uleb128 0x1
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7366 01ae 13       		.uleb128 0x13
  7367 01af 00       		.byte	0
  7368 01b0 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 261
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 261
 
 
  7369 01b1 24       		.uleb128 0x24
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7423 01e7 20       		.uleb128 0x20
  7424 01e8 0B       		.uleb128 0xb
  7425 01e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 262
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 262
 
 
  7426 01ea 13       		.uleb128 0x13
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7480 0220 00       		.byte	0
  7481 0221 03       		.uleb128 0x3
  7482 0222 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 263
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 263
 
 
  7483 0223 3A       		.uleb128 0x3a
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7537 025a 13       		.uleb128 0x13
  7538 025b 02       		.uleb128 0x2
  7539 025c 17       		.uleb128 0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 264
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 264
 
 
  7540 025d 00       		.byte	0
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7594 029b 01       		.uleb128 0x1
  7595 029c 13       		.uleb128 0x13
  7596 029d 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 265
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 265
 
 
  7597 029e 00       		.byte	0
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7651 02d4 05       		.uleb128 0x5
  7652 02d5 27       		.uleb128 0x27
  7653 02d6 19       		.uleb128 0x19
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 266
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 266
 
 
  7654 02d7 11       		.uleb128 0x11
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7708 030e 19       		.uleb128 0x19
  7709 030f 49       		.uleb128 0x49
  7710 0310 13       		.uleb128 0x13
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 267
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 267
 
 
  7711 0311 11       		.uleb128 0x11
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7765 034a 03       		.uleb128 0x3
  7766 034b 0E       		.uleb128 0xe
  7767 034c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 268
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 268
 
 
  7768 034d 0B       		.uleb128 0xb
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7822 0383 13       		.uleb128 0x13
  7823 0384 11       		.uleb128 0x11
  7824 0385 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 269
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 269
 
 
  7825 0386 12       		.uleb128 0x12
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7879 03bc 3B       		.uleb128 0x3b
  7880 03bd 0B       		.uleb128 0xb
  7881 03be 49       		.uleb128 0x49
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 270
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 270
 
 
  7882 03bf 13       		.uleb128 0x13
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7936 03f5 3B       		.uleb128 0x3b
  7937 03f6 0B       		.uleb128 0xb
  7938 03f7 6E       		.uleb128 0x6e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 271
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 271
 
 
  7939 03f8 0E       		.uleb128 0xe
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  7993 002c 14000000 		.4byte	.LVL2
  7994 0030 1A000000 		.4byte	.LVL3
  7995 0034 0200     		.2byte	0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 272
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 272
 
 
  7996 0036 30       		.byte	0x30
@@ -16318,7 +16318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8050 00c1 01       		.uleb128 0x1
  8051 00c2 50       		.byte	0x50
  8052 00c3 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 273
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 273
 
 
  8053 00c4 00000000 		.4byte	0
@@ -16378,7 +16378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8107 0149 2A000000 		.4byte	.LVL13
  8108 014d 36000000 		.4byte	.LVL15
  8109 0151 0100     		.2byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 274
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 274
 
 
  8110 0153 5D       		.byte	0x5d
@@ -16438,7 +16438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8164 01d7 6A000000 		.4byte	.LVL30
  8165 01db 7C000000 		.4byte	.LFE664
  8166 01df 0400     		.2byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 275
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 275
 
 
  8167 01e1 F3       		.byte	0xf3
@@ -16498,7 +16498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8221 025e 58       		.sleb128 -40
  8222 025f 9F       		.byte	0x9f
  8223 0260 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 276
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 276
 
 
  8224 0264 00000000 		.4byte	0
@@ -16558,7 +16558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8278 02e4 0100     		.2byte	0x1
  8279 02e6 53       		.byte	0x53
  8280 02e7 6A000000 		.4byte	.LVL48
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 277
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 277
 
 
  8281 02eb 76000000 		.4byte	.LVL49
@@ -16618,7 +16618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8335 0372 0400     		.2byte	0x4
  8336 0374 F3       		.byte	0xf3
  8337 0375 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 278
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 278
 
 
  8338 0376 52       		.byte	0x52
@@ -16678,7 +16678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8392 03fc 0400     		.2byte	0x4
  8393 03fe F3       		.byte	0xf3
  8394 03ff 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 279
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 279
 
 
  8395 0400 50       		.byte	0x50
@@ -16738,7 +16738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8449 0488 0400     		.2byte	0x4
  8450 048a F3       		.byte	0xf3
  8451 048b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 280
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 280
 
 
  8452 048c 51       		.byte	0x51
@@ -16798,7 +16798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8506 04f1 40       		.byte	0x40
  8507 04f2 24       		.byte	0x24
  8508 04f3 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 281
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 281
 
 
  8509 04f4 A8000000 		.4byte	.LVL106
@@ -16858,7 +16858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8563 0563 24000000 		.4byte	.LVL88
  8564 0567 2E000000 		.4byte	.LVL89
  8565 056b 0600     		.2byte	0x6
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 282
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 282
 
 
  8566 056d 0C       		.byte	0xc
@@ -16918,7 +16918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8620 05f8 CC000000 		.4byte	.LVL113
  8621 05fc D6000000 		.4byte	.LVL114
  8622 0600 0100     		.2byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 283
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 283
 
 
  8623 0602 53       		.byte	0x53
@@ -16978,7 +16978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8677 068c 1A000000 		.4byte	.LVL126
  8678 0690 1F000000 		.4byte	.LVL127-1
  8679 0694 0200     		.2byte	0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 284
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 284
 
 
  8680 0696 71       		.byte	0x71
@@ -17038,7 +17038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8734 0014 58000000 		.4byte	.LFE660-.LFB660
  8735 0018 00000000 		.4byte	.LFB663
  8736 001c 58000000 		.4byte	.LFE663-.LFB663
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 285
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 285
 
 
  8737 0020 00000000 		.4byte	.LFB664
@@ -17098,7 +17098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8791 0068 00000000 		.4byte	.LFB673
  8792 006c 58000000 		.4byte	.LFE673
  8793 0070 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 286
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 286
 
 
  8794 0074 00000000 		.4byte	0
@@ -17158,7 +17158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8817      53746174 
  8817      75734F66 
  8817      66736574 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 287
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 287
 
 
  8818              	.LASF660:
@@ -17218,7 +17218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8841      6500
  8842              	.LASF336:
  8843 013d 64774368 		.ascii	"dwChCtlPreemptablePos\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 288
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 288
 
 
  8843      43746C50 
@@ -17278,7 +17278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8865 0205 7461705F 		.ascii	"tap_thr\000"
  8865      74687200 
  8866              	.LASF554:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 289
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 289
 
 
  8867 020d 666C6174 		.ascii	"flat_hold_time\000"
@@ -17338,7 +17338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8888              	.LASF155:
  8889 02c2 7573625F 		.ascii	"usb_interrupt_lo_IRQn\000"
  8889      696E7465 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 290
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 290
 
 
  8889      72727570 
@@ -17398,7 +17398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8915 0360 73727373 		.ascii	"srssNumHfroot\000"
  8915      4E756D48 
  8915      66726F6F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 291
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 291
 
 
  8915      7400
@@ -17458,7 +17458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8935      75744D6F 
  8935      646500
  8936              	.LASF277:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 292
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 292
 
 
  8937 0440 494E5452 		.ascii	"INTR_RX\000"
@@ -17518,7 +17518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8959 04fb 74637077 		.ascii	"tcpwm_0_interrupts_6_IRQn\000"
  8959      6D5F305F 
  8959      696E7465 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 293
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 293
 
 
  8959      72727570 
@@ -17578,7 +17578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  8981 05b5 63707573 		.ascii	"cpuss_interrupts_dw1_3_IRQn\000"
  8981      735F696E 
  8981      74657272 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 294
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 294
 
 
  8981      75707473 
@@ -17638,7 +17638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9006              	.LASF209:
  9007 0663 494E5452 		.ascii	"INTR_CAUSE0\000"
  9007      5F434155 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 295
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 295
 
 
  9007      53453000 
@@ -17698,7 +17698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9030              	.LASF589:
  9031 072d 696E745F 		.ascii	"int_type\000"
  9031      74797065 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 296
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 296
 
 
  9031      00
@@ -17758,7 +17758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9053      74657272 
  9053      75707473 
  9053      5F647731 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 297
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 297
 
 
  9054              	.LASF197:
@@ -17818,7 +17818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9077 08a5 63795F73 		.ascii	"cy_stc_scb_uart_context_t\000"
  9077      74635F73 
  9077      63625F75 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 298
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 298
 
 
  9077      6172745F 
@@ -17878,7 +17878,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9101      36305F61 
  9101      63635F61 
  9101      6E795F6D 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 299
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 299
 
 
  9101      6F745F69 
@@ -17938,7 +17938,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9123 0a14 666C6173 		.ascii	"flashcBase\000"
  9123      68634261 
  9123      736500
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 300
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 300
 
 
  9124              	.LASF414:
@@ -17998,7 +17998,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9148              	.LASF548:
  9149 0ab2 6F726965 		.ascii	"orient_ud_en\000"
  9149      6E745F75 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 301
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 301
 
 
  9149      645F656E 
@@ -18058,7 +18058,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9169      64757200 
  9170              	.LASF302:
  9171 0b6f 69706356 		.ascii	"ipcVersion\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 302
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 302
 
 
  9171      65727369 
@@ -18118,7 +18118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9195      645F4952 
  9196              	.LASF574:
  9197 0c1e 6F757470 		.ascii	"output_type\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 303
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 303
 
 
  9197      75745F74 
@@ -18178,7 +18178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9219      735F696E 
  9219      74657272 
  9219      75707473 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 304
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 304
 
 
  9219      5F697063 
@@ -18238,7 +18238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9241      454C5F42 
  9242              	.LASF620:
  9243 0d98 5F5F4453 		.ascii	"__DSB\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 305
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 305
 
 
  9243      4200
@@ -18298,7 +18298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9267 0e54 736C6176 		.ascii	"slaveRdBufEmpty\000"
  9267      65526442 
  9267      7566456D 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 306
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 306
 
 
  9267      70747900 
@@ -18358,7 +18358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9289      436C6F63 
  9289      6B43746C 
  9289      4F666673 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 307
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 307
 
 
  9290              	.LASF341:
@@ -18418,7 +18418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9311      745F7400 
  9312              	.LASF357:
  9313 0fdc 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 308
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 308
 
 
  9313      73436D34 
@@ -18478,7 +18478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9335      36305F41 
  9335      43435F47 
  9335      59524F5F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 309
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 309
 
 
  9335      4649464F 
@@ -18538,7 +18538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9357      696E7465 
  9357      72727570 
  9357      74735F32 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 310
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 310
 
 
  9357      5F495251 
@@ -18598,7 +18598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9379      61736B61 
  9379      626C6549 
  9379      6E745F49 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 311
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 311
 
 
  9379      52516E00 
@@ -18658,7 +18658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9401      757300
  9402              	.LASF539:
  9403 12ec 6E6F5F6D 		.ascii	"no_motion_dur\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 312
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 312
 
 
  9403      6F74696F 
@@ -18718,7 +18718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9425 13a2 74637077 		.ascii	"tcpwm_1_interrupts_0_IRQn\000"
  9425      6D5F315F 
  9425      696E7465 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 313
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 313
 
 
  9425      72727570 
@@ -18778,7 +18778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9445      5F697063 
  9446              	.LASF563:
  9447 1481 626D6931 		.ascii	"bmi160_acc_high_g_int_cfg\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 314
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 314
 
 
  9447      36305F61 
@@ -18838,7 +18838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9465      4F666673 
  9465      657400
  9466              	.LASF70:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 315
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 315
 
 
  9467 1560 63707573 		.ascii	"cpuss_interrupts_dw0_10_IRQn\000"
@@ -18898,7 +18898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9487 1635 70726F74 		.ascii	"protBase\000"
  9487      42617365 
  9487      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 316
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 316
 
 
  9488              	.LASF532:
@@ -18958,7 +18958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9509      4E595F4D 
  9509      4F54494F 
  9509      4E5F454E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 317
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 317
 
 
  9510              	.LASF203:
@@ -19018,7 +19018,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9531      696E7465 
  9531      72727570 
  9531      74735F31 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 318
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 318
 
 
  9531      315F4952 
@@ -19078,7 +19078,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9554              	.LASF331:
  9555 187e 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
  9555      6843746C 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 319
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 319
 
 
  9555      4D61696E 
@@ -19138,7 +19138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9576              	.LASF340:
  9577 1952 70657269 		.ascii	"periTrCmdGrSelMsk\000"
  9577      5472436D 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 320
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 320
 
 
  9577      64477253 
@@ -19198,7 +19198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9599      5F494E54 
  9600              	.LASF695:
  9601 1a0e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 321
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 321
 
 
  9601      43313120 
@@ -19258,7 +19258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9618 1b33 616E795F 		.ascii	"any_sig_sel\000"
  9618      7369675F 
  9618      73656C00 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 322
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 322
 
 
  9619              	.LASF682:
@@ -19318,7 +19318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9640      70696F5F 
  9641              	.LASF474:
  9642 1c00 626D6931 		.ascii	"bmi160_com_fptr_t\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 323
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 323
 
 
  9642      36305F63 
@@ -19378,7 +19378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9661              	.LASF583:
  9662 1cca 6163635F 		.ascii	"acc_orient_int\000"
  9662      6F726965 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 324
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 324
 
 
  9662      6E745F69 
@@ -19438,7 +19438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9683      576F726B 
  9683      73706163 
  9683      6550726F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 325
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 325
 
 
  9683      6A657432 
@@ -19498,7 +19498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9704              	.LASF270:
  9705 1e97 494E5452 		.ascii	"INTR_S_MASKED\000"
  9705      5F535F4D 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 326
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 326
 
 
  9705      41534B45 
@@ -19558,7 +19558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9727      696C7469 
  9727      6E5F7075 
  9727      747300
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 327
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 327
 
 
  9728              	.LASF624:
@@ -19618,7 +19618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9747      57733246 
  9747      72657100 
  9748              	.LASF159:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 328
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 328
 
 
  9749 2043 5F5F696E 		.ascii	"__int8_t\000"
@@ -19678,7 +19678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9771      746800
  9772              	.LASF177:
  9773 2105 75696E74 		.ascii	"uint16_t\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 329
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 329
 
 
  9773      31365F74 
@@ -19738,7 +19738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9795      313500
  9796              	.LASF271:
  9797 21c2 52455345 		.ascii	"RESERVED16\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 330
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 330
 
 
  9797      52564544 
@@ -19798,7 +19798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9819      6E656C00 
  9820              	.LASF222:
  9821 2282 434D445F 		.ascii	"CMD_RESP_STATUS\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 331
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 331
 
 
  9821      52455350 
@@ -19858,7 +19858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9843      6F726554 
  9843      616B6500 
  9844              	.LASF449:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 332
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 332
 
 
  9845 233c 70657269 		.ascii	"period\000"
@@ -19918,7 +19918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9865      7570745F 
  9865      63727970 
  9866              	.LASF542:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 333
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 333
 
 
  9867 2419 6E6F5F6D 		.ascii	"no_motion_thres\000"
@@ -19978,7 +19978,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9889 24e3 7564625F 		.ascii	"udb_interrupts_1_IRQn\000"
  9889      696E7465 
  9889      72727570 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 334
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 334
 
 
  9889      74735F31 
@@ -20038,7 +20038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9911      65766963 
  9911      6500
  9912              	.LASF282:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 335
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 335
 
 
  9913 25a5 4750494F 		.ascii	"GPIO_PRT_Type\000"
@@ -20098,7 +20098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9937      74657272 
  9937      7570745F 
  9937      4952516E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 336
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 336
 
 
  9938              	.LASF522:
@@ -20158,7 +20158,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9961      5F636D30 
  9962              	.LASF666:
  9963 2705 7365745F 		.ascii	"set_LED_current\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 337
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 337
 
 
  9963      4C45445F 
@@ -20218,7 +20218,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  9983      6770696F 
  9984              	.LASF240:
  9985 27d2 52585F46 		.ascii	"RX_FIFO_CTRL\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 338
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 338
 
 
  9985      49464F5F 
@@ -20278,7 +20278,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10006              	.LASF655:
  10007 2890 696E745F 		.ascii	"int_config\000"
  10007      636F6E66 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 339
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 339
 
 
  10007      696700
@@ -20338,7 +20338,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10029 2958 5644445F 		.ascii	"VDD_INTR_MASK\000"
  10029      494E5452 
  10029      5F4D4153 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 340
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 340
 
 
  10029      4B00
@@ -20398,7 +20398,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10049      75707473 
  10049      5F647731 
  10050              	.LASF54:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 341
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 341
 
 
  10051 2a46 7363625F 		.ascii	"scb_3_interrupt_IRQn\000"
@@ -20458,7 +20458,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10069      7400
  10070              	.LASF598:
  10071 2b0b 6669666F 		.ascii	"fifo_header_enable\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 342
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 342
 
 
  10071      5F686561 
@@ -20518,7 +20518,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10093 2bb5 6669666F 		.ascii	"fifo_time_enable\000"
  10093      5F74696D 
  10093      655F656E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 343
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 343
 
 
  10093      61626C65 
@@ -20578,7 +20578,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10115      735F696E 
  10115      74657272 
  10115      75707473 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 344
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 344
 
 
  10115      5F647730 
@@ -20638,7 +20638,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10136              	.LASF667:
  10137 2d39 63757272 		.ascii	"current_LED1\000"
  10137      656E745F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 345
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 345
 
 
  10137      4C454431 
@@ -20698,7 +20698,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10159 2df6 7363625F 		.ascii	"scb_4_interrupt_IRQn\000"
  10159      345F696E 
  10159      74657272 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 346
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 346
 
 
  10159      7570745F 
@@ -20758,7 +20758,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10179      64657465 
  10180              	.LASF629:
  10181 2ed6 43795F47 		.ascii	"Cy_GPIO_Write\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 347
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 347
 
 
  10181      50494F5F 
@@ -20818,7 +20818,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 1
  10203      4F666673 
  10203      657400
  10204              	.LASF538:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccEhy58l.s 			page 348
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccLyjQtu.s 			page 348
 
 
  10205 2f97 6E6F5F6D 		.ascii	"no_motion_z\000"

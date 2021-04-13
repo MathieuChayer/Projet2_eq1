@@ -13,10 +13,10 @@
 #include "project.h"
 #include "communication.h"
 
-volatile int SPO2 = 99;
-volatile int HR = 70;
-volatile int Current_LED1 = 0x15; 
-volatile int Current_LED2 = 0x15; 
+volatile int SPO2 = 0;
+volatile int HR = 0;
+volatile int Current_LED1 = 0x20; 
+volatile int Current_LED2 = 0x20; 
 volatile int HR_min_alarm = 40; 
 volatile int HR_max_alarm = 100;
 volatile int SPO2_min_alarm = 90;
