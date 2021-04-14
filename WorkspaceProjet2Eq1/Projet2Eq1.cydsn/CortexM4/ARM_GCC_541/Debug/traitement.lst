@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
   39              		.cfi_offset 7, -12
   40              		.cfi_offset 8, -8
   41              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 2
 
 
   42 0004 ADF57A5D 		sub	sp, sp, #16000
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
   84              	.LVL7:
   85 004c 00E0     		b	.L4
   86              	.LVL8:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 3
 
 
   87              	.L34:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  130              	.LVL14:
  131 008a 00E0     		b	.L7
  132              	.LVL15:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 4
 
 
  133              	.L8:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  165              	.LBE9:
   53:traitement.c  ****         
  166              		.loc 1 53 0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 5
 
 
  167 00a8 8648     		ldr	r0, .L48
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
   67:traitement.c  ****         
   68:traitement.c  ****         //printf("MAX = %d\r\n",MAX);
   69:traitement.c  ****         //printf("MIN = %d\r\n",MIN);
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 6
 
 
   70:traitement.c  ****         
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  247 0120 BCF1040F 		cmp	ip, #4
  248 0124 BBDD     		ble	.L16
  249              	.LBE7:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 7
 
 
   80:traitement.c  ****         
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  288              	.L20:
   87:traitement.c  ****     {
  289              		.loc 1 87 0 discriminator 2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 8
 
 
  290 0170 0133     		adds	r3, r3, #1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  325 019c D2ED007A 		vldr.32	s15, [r2]
  326 01a0 14B9     		cbnz	r4, .L37
  327 01a2 B7EE007A 		vmov.f32	s14, #1.0e+0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 9
 
 
  328 01a6 01E0     		b	.L23
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  371 01e2 B3F5FA6F 		cmp	r3, #2000
  372 01e6 D6DB     		blt	.L25
  373              	.LBE14:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 10
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 10
 
 
  120:traitement.c  ****             
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  411              		.loc 1 134 0
  412 0230 1C46     		mov	r4, r3
  413              	.LBB16:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 11
 
 
  414              		.loc 1 135 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  458              	.LVL60:
  459 027a 00E0     		b	.L29
  460              	.L46:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 12
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 12
 
 
  461 027c 1C46     		mov	r4, r3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  502 02be 02B0     		add	sp, sp, #8
  503              		.cfi_def_cfa_offset 24
  504              		@ sp needed
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 13
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 13
 
 
  505 02c0 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
@@ -765,49 +765,51 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  542 000a 079D     		ldr	r5, [sp, #28]
  161:traitement.c  ****     
  162:traitement.c  ****     //HR 
- 163:traitement.c  ****     if(DC_RED < 1000 && DC_IR > 1000)
- 543              		.loc 1 163 0
- 544 000c B3F57A7F 		cmp	r3, #1000
+ 163:traitement.c  ****     
+ 164:traitement.c  ****     //1200 : seuil où je considère que le signal d'entrée n'est que du bruit
+ 165:traitement.c  ****     if(DC_RED < 1200 && DC_IR > 1200)
+ 543              		.loc 1 165 0
+ 544 000c B3F5966F 		cmp	r3, #1200
  545 0010 06D2     		bcs	.L51
- 546              		.loc 1 163 0 is_stmt 0 discriminator 1
- 547 0012 B2F57A7F 		cmp	r2, #1000
+ 546              		.loc 1 165 0 is_stmt 0 discriminator 1
+ 547 0012 B2F5966F 		cmp	r2, #1200
  548 0016 03D9     		bls	.L51
- 164:traitement.c  ****     {
- 165:traitement.c  ****         *HR = HR_IR*6;
- 549              		.loc 1 165 0 is_stmt 1
+ 166:traitement.c  ****     {
+ 167:traitement.c  ****         *HR = HR_IR*6;
+ 549              		.loc 1 167 0 is_stmt 1
  550 0018 01EB4107 		add	r7, r1, r1, lsl #1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 14
+
+
  551 001c 7E00     		lsls	r6, r7, #1
  552 001e 2660     		str	r6, [r4]
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 14
-
-
  553              	.L51:
- 166:traitement.c  ****     }
- 167:traitement.c  ****     if(DC_RED > 1000 && DC_IR < 1000)
- 554              		.loc 1 167 0
- 555 0020 B3F57A7F 		cmp	r3, #1000
+ 168:traitement.c  ****     }
+ 169:traitement.c  ****     if(DC_RED > 1200 && DC_IR < 1200)
+ 554              		.loc 1 169 0
+ 555 0020 B3F5966F 		cmp	r3, #1200
  556 0024 06D9     		bls	.L52
- 557              		.loc 1 167 0 is_stmt 0 discriminator 1
- 558 0026 B2F57A7F 		cmp	r2, #1000
+ 557              		.loc 1 169 0 is_stmt 0 discriminator 1
+ 558 0026 B2F5966F 		cmp	r2, #1200
  559 002a 03D2     		bcs	.L52
- 168:traitement.c  ****     {
- 169:traitement.c  ****         *HR = HR_RED*6;
- 560              		.loc 1 169 0 is_stmt 1
+ 170:traitement.c  ****     {
+ 171:traitement.c  ****         *HR = HR_RED*6;
+ 560              		.loc 1 171 0 is_stmt 1
  561 002c 00EB4007 		add	r7, r0, r0, lsl #1
  562 0030 7E00     		lsls	r6, r7, #1
  563 0032 2660     		str	r6, [r4]
  564              	.L52:
- 170:traitement.c  ****     }
- 171:traitement.c  ****     if(DC_RED > 1000 && DC_IR > 1000)
- 565              		.loc 1 171 0
- 566 0034 B3F57A7F 		cmp	r3, #1000
+ 172:traitement.c  ****     }
+ 173:traitement.c  ****     if(DC_RED > 1200 && DC_IR > 1200)
+ 565              		.loc 1 173 0
+ 566 0034 B3F5966F 		cmp	r3, #1200
  567 0038 08D9     		bls	.L53
- 568              		.loc 1 171 0 is_stmt 0 discriminator 1
- 569 003a B2F57A7F 		cmp	r2, #1000
+ 568              		.loc 1 173 0 is_stmt 0 discriminator 1
+ 569 003a B2F5966F 		cmp	r2, #1200
  570 003e 05D9     		bls	.L53
- 172:traitement.c  ****     {
- 173:traitement.c  ****         *HR = (HR_RED + HR_IR)*6/2; //Moyenne
- 571              		.loc 1 173 0 is_stmt 1
+ 174:traitement.c  ****     {
+ 175:traitement.c  ****         *HR = (HR_RED + HR_IR)*6/2; //Moyenne
+ 571              		.loc 1 175 0 is_stmt 1
  572 0040 0844     		add	r0, r0, r1
  573              	.LVL70:
  574 0042 00EB4000 		add	r0, r0, r0, lsl #1
@@ -816,31 +818,31 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  577 0048 4910     		asrs	r1, r1, #1
  578 004a 2160     		str	r1, [r4]
  579              	.L53:
- 174:traitement.c  ****     }
- 175:traitement.c  ****     if(DC_RED < 1000 && DC_IR < 1000)
- 580              		.loc 1 175 0
- 581 004c B3F57A7F 		cmp	r3, #1000
+ 176:traitement.c  ****     }
+ 177:traitement.c  ****     if(DC_RED < 1200 && DC_IR < 1200)
+ 580              		.loc 1 177 0
+ 581 004c B3F5966F 		cmp	r3, #1200
  582 0050 04D2     		bcs	.L54
- 583              		.loc 1 175 0 is_stmt 0 discriminator 1
- 584 0052 B2F57A7F 		cmp	r2, #1000
+ 583              		.loc 1 177 0 is_stmt 0 discriminator 1
+ 584 0052 B2F5966F 		cmp	r2, #1200
  585 0056 01D2     		bcs	.L54
- 176:traitement.c  ****     {
- 177:traitement.c  ****         *HR = 0; //Moyenne
- 586              		.loc 1 177 0 is_stmt 1
+ 178:traitement.c  ****     {
+ 179:traitement.c  ****         *HR = 0; //Moyenne
+ 586              		.loc 1 179 0 is_stmt 1
  587 0058 0021     		movs	r1, #0
  588 005a 2160     		str	r1, [r4]
  589              	.L54:
- 178:traitement.c  ****     }
- 179:traitement.c  ****         
- 180:traitement.c  ****     //SPO2
- 181:traitement.c  ****     float R = ((float)AC_RED/(float)DC_RED)/((float)AC_IR/(float)DC_IR);
- 590              		.loc 1 181 0
+ 180:traitement.c  ****     }
+ 181:traitement.c  ****         
+ 182:traitement.c  ****     //SPO2
+ 183:traitement.c  ****     float R = ((float)AC_RED/(float)DC_RED)/((float)AC_IR/(float)DC_IR);
+ 590              		.loc 1 183 0
  591 005c B8EE477A 		vcvt.f32.u32	s14, s14
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 15
+
+
  592              	.LVL72:
  593 0060 07EE903A 		vmov	s15, r3	@ int
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 15
-
-
  594 0064 F8EE677A 		vcvt.f32.u32	s15, s15
  595 0068 C7EE275A 		vdiv.f32	s11, s14, s15
  596 006c DDED057A 		vldr.32	s15, [sp, #20]	@ int
@@ -850,12 +852,12 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  600 007c 87EE276A 		vdiv.f32	s12, s14, s15
  601 0080 C5EE866A 		vdiv.f32	s13, s11, s12
  602              	.LVL73:
- 182:traitement.c  ****     float a = 1.5958422;
- 183:traitement.c  ****     float b = -34.6596622;
- 184:traitement.c  ****     float c = 112.6898759;
- 185:traitement.c  ****     
- 186:traitement.c  ****     *SPO2 = a*R*R+b*R+c;
- 603              		.loc 1 186 0
+ 184:traitement.c  ****     float a = 1.5958422;
+ 185:traitement.c  ****     float b = -34.6596622;
+ 186:traitement.c  ****     float c = 112.6898759;
+ 187:traitement.c  ****     
+ 188:traitement.c  ****     *SPO2 = a*R*R+b*R+c;
+ 603              		.loc 1 188 0
  604 0084 9FED117A 		vldr.32	s14, .L59
  605 0088 66EE877A 		vmul.f32	s15, s13, s14
  606 008c 26EEA77A 		vmul.f32	s14, s13, s15
@@ -868,53 +870,53 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  613 00a8 17EE903A 		vmov	r3, s15	@ int
  614              	.LVL74:
  615 00ac C5ED007A 		vstr.32	s15, [r5]	@ int
- 187:traitement.c  ****     
- 188:traitement.c  ****     //Interprétation des cas extrêmes 
- 189:traitement.c  ****     //Si une valeur n'a pas de sens physiologiquement, le paramètre sera mis à 0.
- 190:traitement.c  ****     
- 191:traitement.c  ****     //Gestion si HR < 27 BPM ou >220 BPM (données incohérentes)
- 192:traitement.c  ****     if(*HR<27 && *HR>220)
- 193:traitement.c  ****     {
- 194:traitement.c  ****        *HR = 0;
- 195:traitement.c  ****     }
- 196:traitement.c  ****     //Gestion si SPO2>100 ou <85% (plus faible que le minimum de la littérature)
- 197:traitement.c  ****     if(*SPO2>100)
- 616              		.loc 1 197 0
+ 189:traitement.c  ****     
+ 190:traitement.c  ****     //Interprétation des cas extrêmes 
+ 191:traitement.c  ****     //Si une valeur n'a pas de sens physiologiquement, le paramètre sera mis à 0.
+ 192:traitement.c  ****     
+ 193:traitement.c  ****     //Gestion si HR < 27 BPM ou >220 BPM (données incohérentes)
+ 194:traitement.c  ****     if(*HR<27 && *HR>220)
+ 195:traitement.c  ****     {
+ 196:traitement.c  ****        *HR = 0;
+ 197:traitement.c  ****     }
+ 198:traitement.c  ****     //Gestion si SPO2>100 ou <85% (plus faible que le minimum de la littérature)
+ 199:traitement.c  ****     if(*SPO2>100)
+ 616              		.loc 1 199 0
  617 00b0 642B     		cmp	r3, #100
  618 00b2 01D9     		bls	.L55
- 198:traitement.c  ****     {
- 199:traitement.c  ****         *SPO2=0;
- 619              		.loc 1 199 0
+ 200:traitement.c  ****     {
+ 201:traitement.c  ****         *SPO2=0;
+ 619              		.loc 1 201 0
  620 00b4 0023     		movs	r3, #0
  621 00b6 2B60     		str	r3, [r5]
  622              	.L55:
- 200:traitement.c  ****     }
- 201:traitement.c  ****    
- 202:traitement.c  ****    //Gestion si un des deux paramètres est nul
- 203:traitement.c  ****     if(*HR==0 || *SPO2 ==0)
- 623              		.loc 1 203 0
+ 202:traitement.c  ****     }
+ 203:traitement.c  ****    
+ 204:traitement.c  ****    //Gestion si un des deux paramètres est nul
+ 205:traitement.c  ****     if(*HR==0 || *SPO2 ==0)
+ 623              		.loc 1 205 0
  624 00b8 2368     		ldr	r3, [r4]
  625 00ba 0BB1     		cbz	r3, .L56
- 626              		.loc 1 203 0 is_stmt 0 discriminator 1
+ 626              		.loc 1 205 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 16
+
+
  627 00bc 2B68     		ldr	r3, [r5]
  628 00be 13B9     		cbnz	r3, .L50
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 16
-
-
  629              	.L56:
- 204:traitement.c  ****     {
- 205:traitement.c  ****         *SPO2 = 0;
- 630              		.loc 1 205 0 is_stmt 1
+ 206:traitement.c  ****     {
+ 207:traitement.c  ****         *SPO2 = 0;
+ 630              		.loc 1 207 0 is_stmt 1
  631 00c0 0023     		movs	r3, #0
  632 00c2 2B60     		str	r3, [r5]
- 206:traitement.c  ****         *HR = 0;
- 633              		.loc 1 206 0
+ 208:traitement.c  ****         *HR = 0;
+ 633              		.loc 1 208 0
  634 00c4 2360     		str	r3, [r4]
  635              	.L50:
- 207:traitement.c  ****     }
- 208:traitement.c  **** 
- 209:traitement.c  **** }
- 636              		.loc 1 209 0
+ 209:traitement.c  ****     }
+ 210:traitement.c  **** 
+ 211:traitement.c  **** }
+ 636              		.loc 1 211 0
  637 00c6 F0BC     		pop	{r4, r5, r6, r7}
  638              		.cfi_restore 7
  639              		.cfi_restore 6
@@ -956,11 +958,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  674              		.section	.debug_info,"",%progbits
  675              	.Ldebug_info0:
  676 0000 C70C0000 		.4byte	0xcc7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 17
+
+
  677 0004 0400     		.2byte	0x4
  678 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 17
-
-
  679 000a 04       		.byte	0x4
  680 000b 01       		.uleb128 0x1
  681 000c 1A070000 		.4byte	.LASF203
@@ -1016,11 +1018,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  731 007a 41       		.byte	0x41
  732 007b 7F000000 		.4byte	0x7f
  733 007f 02       		.uleb128 0x2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 18
+
+
  734 0080 04       		.byte	0x4
  735 0081 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 18
-
-
  736 0082 CD040000 		.4byte	.LASF10
  737 0086 02       		.uleb128 0x2
  738 0087 08       		.byte	0x8
@@ -1076,11 +1078,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  788 00ec 06       		.uleb128 0x6
  789 00ed B8       		.byte	0xb8
  790 00ee 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 19
+
+
  791 00ef 34       		.byte	0x34
  792 00f0 FD040000 		.4byte	0x4fd
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 19
-
-
  793 00f4 07       		.uleb128 0x7
  794 00f5 F8000000 		.4byte	.LASF21
  795 00f9 04       		.byte	0x4
@@ -1136,11 +1138,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  845 015b CE000000 		.4byte	0xce
  846 015f 20       		.byte	0x20
  847 0160 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 20
+
+
  848 0161 0D060000 		.4byte	.LASF30
  849 0165 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 20
-
-
  850 0166 40       		.byte	0x40
  851 0167 CE000000 		.4byte	0xce
  852 016b 24       		.byte	0x24
@@ -1196,11 +1198,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  902 01cd 8B010000 		.4byte	.LASF39
  903 01d1 04       		.byte	0x4
  904 01d2 4B       		.byte	0x4b
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 21
+
+
  905 01d3 A2000000 		.4byte	0xa2
  906 01d7 30       		.byte	0x30
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 21
-
-
  907 01d8 07       		.uleb128 0x7
  908 01d9 1D050000 		.4byte	.LASF40
  909 01dd 04       		.byte	0x4
@@ -1256,11 +1258,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  959 023f A2000000 		.4byte	0xa2
  960 0243 3D       		.byte	0x3d
  961 0244 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 22
+
+
  962 0245 0F000000 		.4byte	.LASF49
  963 0249 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 22
-
-
  964 024a 57       		.byte	0x57
  965 024b A2000000 		.4byte	0xa2
  966 024f 3E       		.byte	0x3e
@@ -1316,11 +1318,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1016 02b1 7E0C0000 		.4byte	.LASF58
  1017 02b5 04       		.byte	0x4
  1018 02b6 60       		.byte	0x60
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 23
+
+
  1019 02b7 A2000000 		.4byte	0xa2
  1020 02bb 50       		.byte	0x50
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 23
-
-
  1021 02bc 07       		.uleb128 0x7
  1022 02bd 97010000 		.4byte	.LASF59
  1023 02c1 04       		.byte	0x4
@@ -1376,11 +1378,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1073 0323 A2000000 		.4byte	0xa2
  1074 0327 59       		.byte	0x59
  1075 0328 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 24
+
+
  1076 0329 5B060000 		.4byte	.LASF68
  1077 032d 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 24
-
-
  1078 032e 6E       		.byte	0x6e
  1079 032f B8000000 		.4byte	0xb8
  1080 0333 5A       		.byte	0x5a
@@ -1436,11 +1438,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1130 0395 53090000 		.4byte	.LASF77
  1131 0399 04       		.byte	0x4
  1132 039a 79       		.byte	0x79
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 25
+
+
  1133 039b B8000000 		.4byte	0xb8
  1134 039f 6E       		.byte	0x6e
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 25
-
-
  1135 03a0 07       		.uleb128 0x7
  1136 03a1 B9080000 		.4byte	.LASF78
  1137 03a5 04       		.byte	0x4
@@ -1496,11 +1498,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1187 0407 A2000000 		.4byte	0xa2
  1188 040b 7C       		.byte	0x7c
  1189 040c 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 26
+
+
  1190 040d 84050000 		.4byte	.LASF87
  1191 0411 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 26
-
-
  1192 0412 87       		.byte	0x87
  1193 0413 A2000000 		.4byte	0xa2
  1194 0417 7D       		.byte	0x7d
@@ -1556,11 +1558,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1244 0479 57020000 		.4byte	.LASF96
  1245 047d 04       		.byte	0x4
  1246 047e 92       		.byte	0x92
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 27
+
+
  1247 047f CE000000 		.4byte	0xce
  1248 0483 98       		.byte	0x98
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 27
-
-
  1249 0484 07       		.uleb128 0x7
  1250 0485 F50B0000 		.4byte	.LASF97
  1251 0489 04       		.byte	0x4
@@ -1616,11 +1618,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1301 04eb B8000000 		.4byte	0xb8
  1302 04ef B0       		.byte	0xb0
  1303 04f0 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 28
+
+
  1304 04f1 6A080000 		.4byte	.LASF106
  1305 04f5 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 28
-
-
  1306 04f6 9E       		.byte	0x9e
  1307 04f7 CE000000 		.4byte	0xce
  1308 04fb B4       		.byte	0xb4
@@ -1676,11 +1678,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1358 055a 5E050000 		.4byte	0x55e
  1359 055e 08       		.uleb128 0x8
  1360 055f 04       		.byte	0x4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 29
+
+
  1361 0560 64050000 		.4byte	0x564
  1362 0564 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 29
-
-
  1363 0565 6F050000 		.4byte	0x56f
  1364 0569 0E       		.uleb128 0xe
  1365 056a CE000000 		.4byte	0xce
@@ -1736,11 +1738,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1415 05d9 25050000 		.4byte	0x525
  1416 05dd 0C       		.byte	0xc
  1417 05de 11       		.uleb128 0x11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 30
+
+
  1418 05df 01030000 		.4byte	.LASF122
  1419 05e3 05       		.byte	0x5
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 30
-
-
  1420 05e4 CD02     		.2byte	0x2cd
  1421 05e6 25050000 		.4byte	0x525
  1422 05ea 0D       		.byte	0xd
@@ -1796,11 +1798,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1472 0654 3D040000 		.4byte	.LASF131
  1473 0658 05       		.byte	0x5
  1474 0659 D902     		.2byte	0x2d9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 31
+
+
  1475 065b E0000000 		.4byte	0xe0
  1476 065f 30       		.byte	0x30
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 31
-
-
  1477 0660 11       		.uleb128 0x11
  1478 0661 15090000 		.4byte	.LASF132
  1479 0665 05       		.byte	0x5
@@ -1856,11 +1858,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1529 06d2 10       		.uleb128 0x10
  1530 06d3 1A020000 		.4byte	.LASF141
  1531 06d7 24       		.byte	0x24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 32
+
+
  1532 06d8 06       		.byte	0x6
  1533 06d9 7402     		.2byte	0x274
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 32
-
-
  1534 06db 55070000 		.4byte	0x755
  1535 06df 11       		.uleb128 0x11
  1536 06e0 A1080000 		.4byte	.LASF142
@@ -1916,11 +1918,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1586 074d 8802     		.2byte	0x288
  1587 074f CE000000 		.4byte	0xce
  1588 0753 20       		.byte	0x20
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 33
+
+
  1589 0754 00       		.byte	0
  1590 0755 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 33
-
-
  1591 0756 AD050000 		.4byte	.LASF150
  1592 075a 06       		.byte	0x6
  1593 075b 8B02     		.2byte	0x28b
@@ -1976,11 +1978,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1643 07c9 D70A0000 		.4byte	.LASF143
  1644 07cd 07       		.byte	0x7
  1645 07ce 8002     		.2byte	0x280
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 34
+
+
  1646 07d0 23050000 		.4byte	0x523
  1647 07d4 18       		.byte	0x18
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 34
-
-
  1648 07d5 11       		.uleb128 0x11
  1649 07d6 1D000000 		.4byte	.LASF144
  1650 07da 07       		.byte	0x7
@@ -2036,11 +2038,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1700 0844 2F       		.byte	0x2f
  1701 0845 2E090000 		.4byte	0x92e
  1702 0849 07       		.uleb128 0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 35
+
+
  1703 084a 02010000 		.4byte	.LASF162
  1704 084e 08       		.byte	0x8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 35
-
-
  1705 084f 31       		.byte	0x31
  1706 0850 CE000000 		.4byte	0xce
  1707 0854 00       		.byte	0
@@ -2096,11 +2098,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1757 08b6 74030000 		.4byte	.LASF171
  1758 08ba 08       		.byte	0x8
  1759 08bb 3D       		.byte	0x3d
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 36
+
+
  1760 08bc CE000000 		.4byte	0xce
  1761 08c0 24       		.byte	0x24
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 36
-
-
  1762 08c1 07       		.uleb128 0x7
  1763 08c2 15010000 		.4byte	.LASF172
  1764 08c6 08       		.byte	0x8
@@ -2156,11 +2158,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1814 0928 CE000000 		.4byte	0xce
  1815 092c 48       		.byte	0x48
  1816 092d 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 37
+
+
  1817 092e 03       		.uleb128 0x3
  1818 092f FC010000 		.4byte	.LASF181
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 37
-
-
  1819 0933 08       		.byte	0x8
  1820 0934 4C       		.byte	0x4c
  1821 0935 3D080000 		.4byte	0x83d
@@ -2216,11 +2218,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1871 09a6 17       		.uleb128 0x17
  1872 09a7 7700     		.ascii	"w\000"
  1873 09a9 01       		.byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 38
+
+
  1874 09aa 15       		.byte	0x15
  1875 09ab 94000000 		.4byte	0x94
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 38
-
-
  1876 09af 08       		.byte	0x8
  1877 09b0 18       		.uleb128 0x18
  1878 09b1 7300     		.ascii	"s\000"
@@ -2276,11 +2278,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1928 0a24 72000000 		.4byte	.LBB5
  1929 0a28 1A000000 		.4byte	.LBE5-.LBB5
  1930 0a2c 3E0A0000 		.4byte	0xa3e
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 39
+
+
  1931 0a30 1A       		.uleb128 0x1a
  1932 0a31 6900     		.ascii	"i\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 39
-
-
  1933 0a33 01       		.byte	0x1
  1934 0a34 1F       		.byte	0x1f
  1935 0a35 94000000 		.4byte	0x94
@@ -2336,11 +2338,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  1985 0ab2 D8000000 		.4byte	.LBB11
  1986 0ab6 32000000 		.4byte	.LBE11-.LBB11
  1987 0aba 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 40
+
+
  1988 0abb 6A00     		.ascii	"j\000"
  1989 0abd 01       		.byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 40
-
-
  1990 0abe 47       		.byte	0x47
  1991 0abf 94000000 		.4byte	0x94
  1992 0ac3 C3020000 		.4byte	.LLST16
@@ -2396,11 +2398,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2042 0b2c 20       		.uleb128 0x20
  2043 0b2d 01       		.uleb128 0x1
  2044 0b2e 52       		.byte	0x52
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 41
+
+
  2045 0b2f 02       		.uleb128 0x2
  2046 0b30 78       		.byte	0x78
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 41
-
-
  2047 0b31 00       		.sleb128 0
  2048 0b32 00       		.byte	0
  2049 0b33 1F       		.uleb128 0x1f
@@ -2456,11 +2458,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2099 0b90 13       		.uleb128 0x13
  2100 0b91 88060000 		.4byte	.LASF188
  2101 0b95 01       		.byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 42
+
+
  2102 0b96 9F       		.byte	0x9f
  2103 0b97 00000000 		.4byte	.LFB657
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 42
-
-
  2104 0b9b D8000000 		.4byte	.LFE657-.LFB657
  2105 0b9f 01       		.uleb128 0x1
  2106 0ba0 9C       		.byte	0x9c
@@ -2516,32 +2518,32 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2156 0c1c 24       		.uleb128 0x24
  2157 0c1d 5200     		.ascii	"R\000"
  2158 0c1f 01       		.byte	0x1
- 2159 0c20 B5       		.byte	0xb5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 43
+
+
+ 2159 0c20 B7       		.byte	0xb7
  2160 0c21 0F050000 		.4byte	0x50f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 43
-
-
  2161 0c25 02       		.uleb128 0x2
  2162 0c26 90       		.byte	0x90
  2163 0c27 4D       		.uleb128 0x4d
  2164 0c28 25       		.uleb128 0x25
  2165 0c29 6100     		.ascii	"a\000"
  2166 0c2b 01       		.byte	0x1
- 2167 0c2c B6       		.byte	0xb6
+ 2167 0c2c B8       		.byte	0xb8
  2168 0c2d 0F050000 		.4byte	0x50f
  2169 0c31 04       		.byte	0x4
  2170 0c32 8F44CC3F 		.4byte	0x3fcc448f
  2171 0c36 25       		.uleb128 0x25
  2172 0c37 6200     		.ascii	"b\000"
  2173 0c39 01       		.byte	0x1
- 2174 0c3a B7       		.byte	0xb7
+ 2174 0c3a B9       		.byte	0xb9
  2175 0c3b 0F050000 		.4byte	0x50f
  2176 0c3f 04       		.byte	0x4
  2177 0c40 7EA30AC2 		.4byte	0xc20aa37e
  2178 0c44 25       		.uleb128 0x25
  2179 0c45 6300     		.ascii	"c\000"
  2180 0c47 01       		.byte	0x1
- 2181 0c48 B8       		.byte	0xb8
+ 2181 0c48 BA       		.byte	0xba
  2182 0c49 0F050000 		.4byte	0x50f
  2183 0c4d 04       		.byte	0x4
  2184 0c4e 3761E142 		.4byte	0x42e16137
@@ -2576,11 +2578,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2213 0c90 28       		.uleb128 0x28
  2214 0c91 2E090000 		.4byte	0x92e
  2215 0c95 27       		.uleb128 0x27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 44
+
+
  2216 0c96 10050000 		.4byte	.LASF200
  2217 0c9a 0C       		.byte	0xc
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 44
-
-
  2218 0c9b 87       		.byte	0x87
  2219 0c9c 31080000 		.4byte	0x831
  2220 0ca0 27       		.uleb128 0x27
@@ -2636,11 +2638,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2270 001d 00       		.byte	0
  2271 001e 03       		.uleb128 0x3
  2272 001f 16       		.uleb128 0x16
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 45
+
+
  2273 0020 00       		.byte	0
  2274 0021 03       		.uleb128 0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 45
-
-
  2275 0022 0E       		.uleb128 0xe
  2276 0023 3A       		.uleb128 0x3a
  2277 0024 0B       		.uleb128 0xb
@@ -2696,11 +2698,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2327 0056 0B       		.uleb128 0xb
  2328 0057 00       		.byte	0
  2329 0058 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 46
+
+
  2330 0059 08       		.uleb128 0x8
  2331 005a 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 46
-
-
  2332 005b 00       		.byte	0
  2333 005c 0B       		.uleb128 0xb
  2334 005d 0B       		.uleb128 0xb
@@ -2756,11 +2758,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2384 008f 15       		.uleb128 0x15
  2385 0090 01       		.byte	0x1
  2386 0091 27       		.uleb128 0x27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 47
+
+
  2387 0092 19       		.uleb128 0x19
  2388 0093 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 47
-
-
  2389 0094 13       		.uleb128 0x13
  2390 0095 00       		.byte	0
  2391 0096 00       		.byte	0
@@ -2816,11 +2818,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2441 00c8 13       		.uleb128 0x13
  2442 00c9 01       		.byte	0x1
  2443 00ca 03       		.uleb128 0x3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 48
+
+
  2444 00cb 0E       		.uleb128 0xe
  2445 00cc 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 48
-
-
  2446 00cd 0B       		.uleb128 0xb
  2447 00ce 3A       		.uleb128 0x3a
  2448 00cf 0B       		.uleb128 0xb
@@ -2876,11 +2878,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2498 0102 03       		.uleb128 0x3
  2499 0103 08       		.uleb128 0x8
  2500 0104 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 49
+
+
  2501 0105 0B       		.uleb128 0xb
  2502 0106 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 49
-
-
  2503 0107 0B       		.uleb128 0xb
  2504 0108 49       		.uleb128 0x49
  2505 0109 13       		.uleb128 0x13
@@ -2936,11 +2938,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2555 013b 19       		.uleb128 0x19
  2556 013c 34       		.uleb128 0x34
  2557 013d 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 50
+
+
  2558 013e 03       		.uleb128 0x3
  2559 013f 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 50
-
-
  2560 0140 3A       		.uleb128 0x3a
  2561 0141 0B       		.uleb128 0xb
  2562 0142 3B       		.uleb128 0x3b
@@ -2996,11 +2998,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2612 0174 1E       		.uleb128 0x1e
  2613 0175 0B       		.uleb128 0xb
  2614 0176 01       		.byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 51
+
+
  2615 0177 55       		.uleb128 0x55
  2616 0178 17       		.uleb128 0x17
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 51
-
-
  2617 0179 01       		.uleb128 0x1
  2618 017a 13       		.uleb128 0x13
  2619 017b 00       		.byte	0
@@ -3056,11 +3058,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2669 01b4 34       		.uleb128 0x34
  2670 01b5 00       		.byte	0
  2671 01b6 03       		.uleb128 0x3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 52
+
+
  2672 01b7 08       		.uleb128 0x8
  2673 01b8 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 52
-
-
  2674 01b9 0B       		.uleb128 0xb
  2675 01ba 3B       		.uleb128 0x3b
  2676 01bb 0B       		.uleb128 0xb
@@ -3116,11 +3118,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2726 01ed 3F       		.uleb128 0x3f
  2727 01ee 19       		.uleb128 0x19
  2728 01ef 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 53
+
+
  2729 01f0 19       		.uleb128 0x19
  2730 01f1 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 53
-
-
  2731 01f2 00       		.byte	0
  2732 01f3 28       		.uleb128 0x28
  2733 01f4 26       		.uleb128 0x26
@@ -3176,11 +3178,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2783 001e 0400     		.2byte	0x4
  2784 0020 F3       		.byte	0xf3
  2785 0021 01       		.uleb128 0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 54
+
+
  2786 0022 50       		.byte	0x50
  2787 0023 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 54
-
-
  2788 0024 00000000 		.4byte	0
  2789 0028 00000000 		.4byte	0
  2790              	.LLST1:
@@ -3236,11 +3238,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2840 00a6 53       		.byte	0x53
  2841 00a7 9F       		.byte	0x9f
  2842 00a8 00000000 		.4byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 55
+
+
  2843 00ac 00000000 		.4byte	0
  2844              	.LLST4:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 55
-
-
  2845 00b0 78010000 		.4byte	.LVL34
  2846 00b4 96010000 		.4byte	.LVL38
  2847 00b8 0200     		.2byte	0x2
@@ -3296,11 +3298,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2897 0138 84010000 		.4byte	.LVL35
  2898 013c 96010000 		.4byte	.LVL38
  2899 0140 0100     		.2byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 56
+
+
  2900 0142 50       		.byte	0x50
  2901 0143 96010000 		.4byte	.LVL38
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 56
-
-
  2902 0147 BC010000 		.4byte	.LVL39
  2903 014b 0100     		.2byte	0x1
  2904 014d 54       		.byte	0x54
@@ -3356,11 +3358,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  2954 01cb 2E000000 		.4byte	.LVL5
  2955 01cf 32000000 		.4byte	.LVL6
  2956 01d3 0200     		.2byte	0x2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 57
+
+
  2957 01d5 30       		.byte	0x30
  2958 01d6 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 57
-
-
  2959 01d7 32000000 		.4byte	.LVL6
  2960 01db 72000000 		.4byte	.LVL12
  2961 01df 0100     		.2byte	0x1
@@ -3416,11 +3418,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3011 0263 9E000000 		.4byte	.LVL20
  3012 0267 AE000000 		.4byte	.LVL22
  3013 026b 0200     		.2byte	0x2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 58
+
+
  3014 026d 30       		.byte	0x30
  3015 026e 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 58
-
-
  3016 026f AE000000 		.4byte	.LVL22
  3017 0273 20010000 		.4byte	.LVL30
  3018 0277 0100     		.2byte	0x1
@@ -3476,11 +3478,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3068 02fd 0200     		.2byte	0x2
  3069 02ff 31       		.byte	0x31
  3070 0300 9F       		.byte	0x9f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 59
+
+
  3071 0301 96010000 		.4byte	.LVL38
  3072 0305 EC010000 		.4byte	.LVL48
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 59
-
-
  3073 0309 0100     		.2byte	0x1
  3074 030b 53       		.byte	0x53
  3075 030c 00000000 		.4byte	0
@@ -3536,11 +3538,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3125 038a 90       		.byte	0x90
  3126 038b 4E       		.uleb128 0x4e
  3127 038c 60000000 		.4byte	.LVL72
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 60
+
+
  3128 0390 D8000000 		.4byte	.LFE657
  3129 0394 0400     		.2byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 60
-
-
  3130 0396 F3       		.byte	0xf3
  3131 0397 01       		.uleb128 0x1
  3132 0398 52       		.byte	0x52
@@ -3596,11 +3598,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3182 040f C8000000 		.4byte	.LVL75
  3183 0413 D8000000 		.4byte	.LFE657
  3184 0417 0200     		.2byte	0x2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 61
+
+
  3185 0419 7D       		.byte	0x7d
  3186 041a 08       		.sleb128 8
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 61
-
-
  3187 041b 00000000 		.4byte	0
  3188 041f 00000000 		.4byte	0
  3189              	.LLST27:
@@ -3656,11 +3658,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3239 0054 86020000 		.4byte	.LBE16
  3240 0058 00000000 		.4byte	0
  3241 005c 00000000 		.4byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 62
+
+
  3242 0060 00000000 		.4byte	.LFB656
  3243 0064 D8020000 		.4byte	.LFE656
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 62
-
-
  3244 0068 00000000 		.4byte	.LFB657
  3245 006c D8000000 		.4byte	.LFE657
  3246 0070 00000000 		.4byte	0
@@ -3716,11 +3718,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3268      6F7300
  3269              	.LASF28:
  3270 0078 70617373 		.ascii	"passBase\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 63
+
+
  3270      42617365 
  3270      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 63
-
-
  3271              	.LASF104:
  3272 0081 63707573 		.ascii	"cpussRam2Ctl0\000"
  3272      7352616D 
@@ -3776,11 +3778,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3294 0115 63617074 		.ascii	"captureInput\000"
  3294      75726549 
  3294      6E707574 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 64
+
+
  3294      00
  3295              	.LASF12:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 64
-
-
  3296 0122 6C6F6E67 		.ascii	"long long unsigned int\000"
  3296      206C6F6E 
  3296      6720756E 
@@ -3836,11 +3838,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3316      63625F69 
  3316      32635F63 
  3316      6F6E7465 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 65
+
+
  3317              	.LASF63:
  3318 01d2 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 65
-
-
  3318      6843746C 
  3318      4D61696E 
  3318      57733046 
@@ -3896,11 +3898,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3337              	.LASF139:
  3338 028d 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
  3338      625F7363 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 66
+
+
  3338      625F7370 
  3338      695F6861 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 66
-
-
  3338      6E646C65 
  3339              	.LASF47:
  3340 02ab 73727373 		.ascii	"srssNumClkpath\000"
@@ -3956,11 +3958,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3361              	.LASF16:
  3362 0344 75696E74 		.ascii	"uint16_t\000"
  3362      31365F74 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 67
+
+
  3362      00
  3363              	.LASF110:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 67
-
-
  3364 034d 646F7562 		.ascii	"double\000"
  3364      6C6500
  3365              	.LASF84:
@@ -4016,11 +4018,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3388      66496478 
  3388      00
  3389              	.LASF95:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 68
+
+
  3390 03e4 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
  3390      73436D34 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 68
-
-
  3390      50777243 
  3390      746C4F66 
  3390      66736574 
@@ -4076,11 +4078,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3410              	.LASF75:
  3411 04bb 70657269 		.ascii	"periTrCmdGrSelMsk\000"
  3411      5472436D 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 69
+
+
  3411      64477253 
  3411      656C4D73 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 69
-
-
  3411      6B00
  3412              	.LASF10:
  3413 04cd 6C6F6E67 		.ascii	"long unsigned int\000"
@@ -4136,11 +4138,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3432              	.LASF35:
  3433 056f 6770696F 		.ascii	"gpioVersion\000"
  3433      56657273 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 70
+
+
  3433      696F6E00 
  3434              	.LASF136:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 70
-
-
  3435 057b 63624576 		.ascii	"cbEvents\000"
  3435      656E7473 
  3435      00
@@ -4196,11 +4198,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3457 0618 63795F65 		.ascii	"cy_en_scb_i2c_command_t\000"
  3457      6E5F7363 
  3457      625F6932 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 71
+
+
  3457      635F636F 
  3457      6D6D616E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 71
-
-
  3458              	.LASF94:
  3459 0630 63707573 		.ascii	"cpussCm0StatusOffset\000"
  3459      73436D30 
@@ -4256,11 +4258,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3481 06c9 64775374 		.ascii	"dwStatusChIdxPos\000"
  3481      61747573 
  3481      43684964 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 72
+
+
  3481      78506F73 
  3481      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 72
-
-
  3482              	.LASF54:
  3483 06da 75646250 		.ascii	"udbPresent\000"
  3483      72657365 
@@ -4316,11 +4318,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3501              	.LASF73:
  3502 07df 64775374 		.ascii	"dwStatusChIdxMsk\000"
  3502      61747573 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 73
+
+
  3502      43684964 
  3502      784D736B 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 73
-
-
  3502      00
  3503              	.LASF197:
  3504 07f0 63795F64 		.ascii	"cy_device\000"
@@ -4376,11 +4378,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3524      746C4F66 
  3524      66736574 
  3525              	.LASF102:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 74
+
+
  3526 0893 63707573 		.ascii	"cpussRam0Ctl0\000"
  3526      7352616D 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 74
-
-
  3526      3043746C 
  3526      3000
  3527              	.LASF142:
@@ -4436,11 +4438,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3546      727100
  3547              	.LASF82:
  3548 0941 70657269 		.ascii	"periDiv8CtlOffset\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 75
+
+
  3548      44697638 
  3548      43746C4F 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 75
-
-
  3548      66667365 
  3548      7400
  3549              	.LASF77:
@@ -4496,11 +4498,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3571              	.LASF5:
  3572 09eb 5F5F7569 		.ascii	"__uint16_t\000"
  3572      6E743136 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 76
+
+
  3572      5F7400
  3573              	.LASF83:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 76
-
-
  3574 09f6 70657269 		.ascii	"periDiv16CtlOffset\000"
  3574      44697631 
  3574      3643746C 
@@ -4556,11 +4558,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3594      6E7400
  3595              	.LASF69:
  3596 0a8e 64774368 		.ascii	"dwChSize\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 77
+
+
  3596      53697A65 
  3596      00
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 77
-
-
  3597              	.LASF178:
  3598 0a97 73746F70 		.ascii	"stopInput\000"
  3598      496E7075 
@@ -4616,11 +4618,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3621              	.LASF185:
  3622 0b28 6E625F73 		.ascii	"nb_spike\000"
  3622      70696B65 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 78
+
+
  3622      00
  3623              	.LASF198:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 78
-
-
  3624 0b31 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
  3624      494E4B5F 
  3624      5350494D 
@@ -4676,11 +4678,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3642      6F646500 
  3643              	.LASF158:
  3644 0be7 72785269 		.ascii	"rxRingBufTail\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 79
+
+
  3644      6E674275 
  3644      66546169 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 79
-
-
  3644      6C00
  3645              	.LASF97:
  3646 0bf5 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
@@ -4736,11 +4738,11 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 1
  3667              	.LASF148:
  3668 0c8f 74784275 		.ascii	"txBufIdx\000"
  3668      66496478 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccddlgB4.s 			page 80
+
+
  3668      00
  3669              	.LASF176:
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cc5VMo4t.s 			page 80
-
-
  3670 0c98 73746172 		.ascii	"startInput\000"
  3670      74496E70 
  3670      757400
