@@ -41,7 +41,6 @@ set_io "CY_EINK_Ssel(0)" iocell 12 3
 set_io "BlueLED(0)" iocell 11 1
 set_io "MAX_power(0)" iocell 9 2
 set_io "RedLED(0)" iocell 0 3
-set_io "GreenLED(0)" iocell 1 1
 set_io "\CapSense:Cmod(0)\" iocell 7 7
 set_io "\CapSense:Rx(0)\" iocell 8 2
 set_io "\CapSense:CintB(0)\" iocell 7 2

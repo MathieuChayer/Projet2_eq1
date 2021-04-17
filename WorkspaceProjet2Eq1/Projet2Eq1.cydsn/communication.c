@@ -1,10 +1,11 @@
 /* ========================================
- * communication.c
+ * Communication.c
  * 
  * Auteur : Mathieu
  * ========================================
 */
 #include "communication.h"
+#include "interface.h"
 
 extern SemaphoreHandle_t xSemaphoreI2C_MAX; 
 extern SemaphoreHandle_t xSemaphoreI2C_BMI;
@@ -26,9 +27,9 @@ void AnyMotion_Interrupt(void)
     
     //Désactiver l'interruption quand le capteur n'est pas en contexte de lecture!
     
+    
     //Routine 
     printf("Mouvement detected! \r\n");
-    Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,1);
     Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,0);
     
     /* Clear any pending interrupts */
@@ -50,6 +51,7 @@ void MotionSensor_ConfigAnyMotionIntr(void)
     /* Structure for storing interrupt configuration */
     struct bmi160_int_settg int_config;
 
+    
     /* Map the step interrupt to INT1 pin */
     int_config.int_channel = BMI160_INT_CHANNEL_2;
 
@@ -247,7 +249,8 @@ void BMI_I2C_Callback(uint32_t events)
     BaseType_t xHigherPriorityTaskWoken;
     /**
      * Unblock the task by releasing the semaphore only if no hardware error is 
-     * detected and I2C master read or write is completed */
+     * detected and I2C master read or write is completed
+     */
     if(events & CY_SCB_I2C_MASTER_ERR_EVENT)
     {
         printf("Failure!  : I2C hardware error detected\r\n");
@@ -363,7 +366,8 @@ void MAX_I2C_Callback(uint32_t events)
 	BaseType_t xHigherPriorityTaskWoken;
 	/**
 	 * Unblock the task by releasing the semaphore only if no hardware error is 
-	 * detected and I2C master read or write is completed */
+	 * detected and I2C master read or write is completed
+	 */
 	if(events & CY_SCB_I2C_MASTER_ERR_EVENT)
 	{
 		printf("Failure!  : I2C hardware error detected\r\n");
@@ -509,6 +513,8 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
     NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
 	Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
     NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc); 
+     
+
         
 }
 

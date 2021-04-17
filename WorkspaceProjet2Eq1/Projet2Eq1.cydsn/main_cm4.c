@@ -1,84 +1,91 @@
 /******************************************************************************
-* main_cm4.c
+* File Name: main_cm4.c
 
 ********************************************************************************/
+
 #include "project.h"
 #include "GUI.h"
 #include "pervasive_eink_hardware_driver.h"
 #include "cy_eink_library.h"
 #include "LCDConf.h"
+#include <stdlib.h>
+#include <math.h>
 #include "FreeRTOS.h"
 #include "max30102.h"
 #include "semphr.h"
+#include "max30102.h"
 #include "bmi160.h"
 #include "bmi160_defs.h"
+#include "communication.h"
+#include "interface.h"
+#include "traitement.h"
 #include "string.h"
 #include "task.h"
-
-#include "communication.h"
-#include "traitement.h"
-#include "interface.h"
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 
-volatile uint8_t data = 0; // Variable temporaire de lecture
 
-// Flags contextuels - Interface
-volatile int FLAG_RED    = 1;
+volatile uint8_t data = 0; //Variable temporaire de lecture/éc
+
+
+//Flags contextuels - Interface
+volatile int FLAG_RED = 0;
 volatile int FLAG_option = 1;
-volatile int FLAG_menu   = 0;
-volatile int FLAG_modif  = 0;
+volatile int FLAG_menu = 0;
+volatile int FLAG_modif = 0;
 
 volatile uint32_t AC_RED = 0; 
-volatile uint32_t DC_RED = 0;
-volatile int      HR_RED = 0; // ############################pourquoi des int au lieu de uint? À ENLEVER MAYBE
-volatile uint32_t AC_IR  = 0; 
-volatile uint32_t DC_IR  = 0; 
-volatile int      HR_IR  = 0; // ############################pourquoi des int au lieu de uint? 
+volatile uint32_t DC_RED = 0; 
+volatile int HR_RED = 0;
+volatile uint32_t AC_IR = 0; 
+volatile uint32_t DC_IR = 0; 
+volatile int HR_IR = 0;
 
-// Tâche principale
+
+//Tâche principale
 void Task_principal(void)
 {
+    
     Start_Oxymeter();
     drawWaiting();
+    Cy_SysLib_Delay(2000); //Délais de 2s qui laisse le temps à l'utilisateur de mettre son doigt
 
     for(;;)
 	{  
         if(!FLAG_menu)
         {
-           // On entre dans cette boucle s'il y une modification à faire au courant
+           //On entre dans cette boucle s'il y une modification à faire au courant
            if(FLAG_modif)
            {
                 drawWaiting();
+                Cy_SysLib_Delay(2000); //Délais de 2s qui laisse le temps à l'utilisateur de mettre son doigt
                 set_LED_current(Current_LED1,Current_LED2); 
                 FLAG_modif = 0;
            }
             
-           // 1-Échantillonnage (Mathieu)
-           MAX_ReadFIFO(&IR_data, &RED_data); // Lecture du FIFO --> 2000 samples@200sps = 10 secs
+          
+           //1-Échantillonnage (Mathieu)
+           MAX_ReadFIFO(&IR_data, &RED_data); //Lecture du FIFO --> 1000 samples@200sps = 5 secs
             
-           // On ferme les LED rouge et la LED belu (alarmes)
+           //On ferme les deux LEDs d'alarme 
            Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,1);
            Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,1);
-            
+        
             if(!FLAG_menu)
             {
-                 // 2 - Traitement (Ariane)
+                 //2-Traitement (Ariane)
                 traitement(&RED_data, &HR_RED, &AC_RED, &DC_RED);
-                printf("HR : %d, AC : %d, DC : %d\r\n",HR_RED,AC_RED, DC_RED); // #### test à enlever
+                printf("HR : %d, AC : %d, DC : %d\r\n",HR_RED,AC_RED, DC_RED);
                     
-                traitement(&IR_data, &HR_IR, &AC_IR, &DC_IR);               
-                printf("HR : %d, AC : %d, DC : %d\r\n",HR_IR,AC_IR, DC_IR); // #### test à enlever
+                traitement(&IR_data, &HR_IR, &AC_IR, &DC_IR);
+                printf("HR : %d, AC : %d, DC : %d\r\n",HR_IR,AC_IR, DC_IR);
                     
                 interpretation(HR_RED, HR_IR, AC_RED,DC_RED,DC_IR,AC_IR, &HR, &SPO2);
                 
-                 // 3 - Affichage de la courbe (Andréa)
-            
+                 //3 - Affichage de la courbe (Andréa)
+                
                 drawAffichageCourbe();
             
-                // Vérification des alertes physiologiques 
+                //Vérification des alertes physiologiques 
                 if(HR_max_alarm<HR || HR_min_alarm>HR || SPO2_min_alarm > SPO2)
                 {
                     Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,0);
@@ -90,13 +97,13 @@ void Task_principal(void)
             
             }
             
+   
         }
         else
         {
-            // On ferme les LED rouge et la LED belu (alarmes)
+            //On éteint les deux LEDs d'alarme
             Cy_GPIO_Write(RedLED_0_PORT,RedLED_0_NUM,1);
-            Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,1);
-
+            Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,1);    
             
             if(FLAG_menu==1)
             {   draw_MenuPrincipal();
@@ -133,6 +140,7 @@ void Task_principal(void)
                     if(FLAG_menu >0)
                     {
                         FLAG_menu = FLAG_option+1;
+                     
                     }
                 }
             } 
@@ -149,15 +157,18 @@ void Task_principal(void)
 }
 int main(void)
 {
+    
     __enable_irq(); /* Enable global interrupts. */
     
     UART_Start(); 
-    Cy_GPIO_Write(MAX_power_0_PORT,MAX_power_0_NUM, 1); // Alimentation du MAX30102
+    Cy_GPIO_Write(MAX_power_0_PORT,MAX_power_0_NUM, 1); //Alimentation du MAX30102
 
+    //Interruption de la détection de mouvement
     NVIC_DisableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
     Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
     NVIC_ClearPendingIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
-    
+
+    //Interruption du bouton SW2
     Cy_SysInt_Init(&SW2_isr_cfg, isr_SW2);
     NVIC_ClearPendingIRQ(SW2_isr_cfg.intrSrc);
     NVIC_EnableIRQ(SW2_isr_cfg.intrSrc);

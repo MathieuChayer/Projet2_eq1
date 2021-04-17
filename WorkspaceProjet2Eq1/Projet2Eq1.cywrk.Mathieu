@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\CM4 (Core 1)\Source Files\main_cm4.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projet2Eq1\Projet2Eq1\TopDesign">
 <ExpandedNodeIds>
 <v>Projet2Eq1</v>
 <v>Projet2Eq1\Projet2Eq1</v>
@@ -295,36 +295,6 @@
 <VisibleNodeIds>
 <v>Projet2Eq1</v>
 <v>Projet2Eq1\Projet2Eq1</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\BMI_I2C.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Centroid_LL.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Control.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Filter.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_INT.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Processing.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Sensing.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SensingCSD_LL.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_SensingCSX_LL.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Structure.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CapSense_Tuner.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_SPIM.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_Timer.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
-<v>Projet2Eq1\Projet2Eq1\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -388,7 +358,11 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\Projet2Eq1.cydsn\main_cm4.c" />
 <name v=".\Projet2Eq1.cydsn\traitement.c" />
+<name v=".\Projet2Eq1.cydsn\communication.c" />
+<name v=".\Projet2Eq1.cydsn\interface.c" />
+<name v=".\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -396,7 +370,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="743, 463" SelectedTabbedMdiWindow="1a3f274c-122e-404b-860a-9c7e6eee5a35"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\master_backup+traitement\Projet2Eq1.cydsn\traitement.c" Guid="1a3f274c-122e-404b-860a-9c7e6eee5a35" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="836, 396" SelectedTabbedMdiWindow="6b78925d-7e9d-4d0e-829b-67facd8daacd"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\main_cm4.c" Guid="eb0e64b7-b70f-4de7-b7cc-4cf42d7446aa" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\traitement.c" Guid="4d08d904-cad2-45e8-a2ec-d97964553311" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\communication.c" Guid="537f174d-d469-4d3b-85f1-994927b65779" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\interface.c" Guid="6b78925d-7e9d-4d0e-829b-67facd8daacd" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Documents\Repos_Projet2\WorkspaceProjet2Eq1\Projet2Eq1.cydsn\TopDesign\TopDesign.cysch" Guid="7e071df6-0b9d-4d61-a209-240bd16f9c07" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

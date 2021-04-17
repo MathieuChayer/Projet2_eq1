@@ -1,6 +1,6 @@
 // ======================================================================
 // Projet2Eq1.v generated from TopDesign.cysch
-// 04/17/2021 at 12:46
+// 04/17/2021 at 16:56
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1973,42 +1973,6 @@ module top ;
 		  .fb({tmpFB_0__RedLED_net[0:0]}),
 		  .io({tmpIO_0__RedLED_net[0:0]}),
 		  .siovref(tmpSIOVREF__RedLED_net));
-
-
-	wire [0:0] tmpFB_0__GreenLED_net;
-	wire [0:0] tmpIO_0__GreenLED_net;
-	electrical [0:0] tmpSIOVREF__GreenLED_net;
-
-	cy_mxs40_gpio_v1_0
-		#(.id("7602754b-bc64-438d-880c-8b52a29f1a9b"),
-		  .width(1),
-		  .sio_grp_cnt(0),
-		  .drive_mode("6"),
-		  .ibuf_enabled("0"),
-		  .init_dr_st("1"),
-		  .input_sync("0"),
-		  .intr_mode("0"),
-		  .io_voltage(""),
-		  .output_conn("0"),
-		  .oe_conn("0"),
-		  .output_sync("0"),
-		  .oe_sync("0"),
-		  .drive_strength("0"),
-		  .max_frequency("100"),
-		  .i2c_mode("0"),
-		  .output_current_cap("8"),
-		  .pin_aliases(""),
-		  .pin_mode("O"),
-		  .slew_rate("0"),
-		  .vtrip("0"),
-		  .use_annotation("0"),
-		  .hotswap_needed("0"))
-		GreenLED
-		 (.oe({1'b1}),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__GreenLED_net[0:0]}),
-		  .io({tmpIO_0__GreenLED_net[0:0]}),
-		  .siovref(tmpSIOVREF__GreenLED_net));
 
 
     CapSense_v3_0_5 CapSense ();

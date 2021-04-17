@@ -1,5 +1,5 @@
 # Projet2Eq1
-# 2021-04-17 16:46:20Z
+# 2021-04-17 20:56:59Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -28,7 +28,6 @@ set_io "Pin_AnyMotion_INT(0)" iocell 13 0
 set_io "\BMI_I2C:scl(0)\" iocell 6 0
 set_io "\BMI_I2C:sda(0)\" iocell 6 1
 set_io "RedLED(0)" iocell 0 3
-set_io "GreenLED(0)" iocell 1 1
 set_io "\CapSense:Cmod(0)\" iocell 7 7
 set_io "\CapSense:Rx(0)\" iocell 8 2
 set_io "\CapSense:Rx(1)\" iocell 8 1

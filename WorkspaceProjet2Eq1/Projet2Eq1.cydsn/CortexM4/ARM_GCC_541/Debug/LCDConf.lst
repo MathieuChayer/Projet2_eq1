@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
   27:LCDConf.c     **** ----------------------------------------------------------------------
   28:LCDConf.c     **** Licensing information
   29:LCDConf.c     **** Licensor:                 SEGGER Microcontroller Systems LLC
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 2
 
 
   30:LCDConf.c     **** Licensed to:              Cypress Semiconductor Corp, 198 Champion Ct., San Jose, CA 95134, USA
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
   84:LCDConf.c     **** #ifndef   YSIZE_PHYS
   85:LCDConf.c     ****   #error Physical Y size of display is not defined!
   86:LCDConf.c     **** #endif
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 3
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 3
 
 
   87:LCDConf.c     **** #ifndef   COLOR_CONVERSION
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
   38              		.cfi_def_cfa_offset 16
  132:LCDConf.c     **** 	
  133:LCDConf.c     **** 	GUI_DEVICE * pDevice;
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 4
 
 
  134:LCDConf.c     **** 	CONFIG_BITPLAINS Config;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
   74 0040 4FF48471 		mov	r1, #264
   75 0044 0020     		movs	r0, #0
   76 0046 FFF7FEFF 		bl	LCD_SetSizeEx
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 5
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 5
 
 
   77              	.LVL5:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  172:LCDConf.c     **** * Parameter:
  173:LCDConf.c     **** *   LayerIndex - Index of layer to be configured
  174:LCDConf.c     **** *   Cmd        - Please refer to the details in the switch statement below
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 6
 
 
  175:LCDConf.c     **** *   pData      - Pointer to a LCD_X_DATA structure
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  139              		.thumb_func
  140              		.type	LCD_GetDisplayBuffer, %function
  141              	LCD_GetDisplayBuffer:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 7
 
 
  142              	.LFB134:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  172      00000000 
  172      00000000 
  172      00000000 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 8
 
 
  172      00000000 
@@ -439,8 +439,8 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  187 000b 01       		.uleb128 0x1
  188 000c 94000000 		.4byte	.LASF71
  189 0010 0C       		.byte	0xc
- 190 0011 E7020000 		.4byte	.LASF72
- 191 0015 8F010000 		.4byte	.LASF73
+ 190 0011 90020000 		.4byte	.LASF72
+ 191 0015 A7030000 		.4byte	.LASF73
  192 0019 00000000 		.4byte	.Ldebug_ranges0+0
  193 001d 00000000 		.4byte	0
  194 0021 00000000 		.4byte	.Ldebug_line0
@@ -451,23 +451,23 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  199 002c 03       		.uleb128 0x3
  200 002d 04       		.byte	0x4
  201 002e 07       		.byte	0x7
- 202 002f 3C030000 		.4byte	.LASF0
+ 202 002f E5020000 		.4byte	.LASF0
  203 0033 03       		.uleb128 0x3
  204 0034 08       		.byte	0x8
  205 0035 05       		.byte	0x5
- 206 0036 48020000 		.4byte	.LASF1
+ 206 0036 F1010000 		.4byte	.LASF1
  207 003a 03       		.uleb128 0x3
  208 003b 08       		.byte	0x8
  209 003c 04       		.byte	0x4
- 210 003d DB020000 		.4byte	.LASF2
+ 210 003d 84020000 		.4byte	.LASF2
  211 0041 03       		.uleb128 0x3
  212 0042 01       		.byte	0x1
  213 0043 06       		.byte	0x6
- 214 0044 FA020000 		.4byte	.LASF3
+ 214 0044 A3020000 		.4byte	.LASF3
  215 0048 03       		.uleb128 0x3
  216 0049 01       		.byte	0x1
  217 004a 08       		.byte	0x8
- 218 004b C4020000 		.4byte	.LASF4
+ 218 004b 6D020000 		.4byte	.LASF4
  219 004f 03       		.uleb128 0x3
  220 0050 02       		.byte	0x2
  221 0051 05       		.byte	0x5
@@ -475,10 +475,10 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  223 0056 03       		.uleb128 0x3
  224 0057 02       		.byte	0x2
  225 0058 07       		.byte	0x7
- 226 0059 B0030000 		.4byte	.LASF6
+ 226 0059 59030000 		.4byte	.LASF6
  227 005d 04       		.uleb128 0x4
  228 005e 34040000 		.4byte	.LASF8
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 9
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 9
 
 
  229 0062 02       		.byte	0x2
@@ -487,7 +487,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  232 0068 03       		.uleb128 0x3
  233 0069 04       		.byte	0x4
  234 006a 05       		.byte	0x5
- 235 006b 71020000 		.4byte	.LASF7
+ 235 006b 1A020000 		.4byte	.LASF7
  236 006f 04       		.uleb128 0x4
  237 0070 47010000 		.4byte	.LASF9
  238 0074 02       		.byte	0x2
@@ -500,14 +500,14 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  245 0081 03       		.uleb128 0x3
  246 0082 08       		.byte	0x8
  247 0083 07       		.byte	0x7
- 248 0084 06030000 		.4byte	.LASF11
+ 248 0084 AF020000 		.4byte	.LASF11
  249 0088 04       		.uleb128 0x4
- 250 0089 9D030000 		.4byte	.LASF12
+ 250 0089 46030000 		.4byte	.LASF12
  251 008d 03       		.byte	0x3
  252 008e 2C       		.byte	0x2c
  253 008f 5D000000 		.4byte	0x5d
  254 0093 04       		.uleb128 0x4
- 255 0094 1D030000 		.4byte	.LASF13
+ 255 0094 C6020000 		.4byte	.LASF13
  256 0098 03       		.byte	0x3
  257 0099 30       		.byte	0x30
  258 009a 6F000000 		.4byte	0x6f
@@ -522,11 +522,11 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  267 00ac 03       		.uleb128 0x3
  268 00ad 01       		.byte	0x1
  269 00ae 08       		.byte	0x8
- 270 00af 78030000 		.4byte	.LASF15
+ 270 00af 21030000 		.4byte	.LASF15
  271 00b3 03       		.uleb128 0x3
  272 00b4 04       		.byte	0x4
  273 00b5 04       		.byte	0x4
- 274 00b6 22020000 		.4byte	.LASF16
+ 274 00b6 CB010000 		.4byte	.LASF16
  275 00ba 03       		.uleb128 0x3
  276 00bb 08       		.byte	0x8
  277 00bc 04       		.byte	0x4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  283 00c8 7A000000 		.4byte	0x7a
  284 00cc 07       		.uleb128 0x7
  285 00cd 08       		.byte	0x8
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 10
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 10
 
 
  286 00ce 04       		.byte	0x4
@@ -570,7 +570,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  312 00ff 06       		.byte	0x6
  313 0100 00       		.byte	0
  314 0101 04       		.uleb128 0x4
- 315 0102 F1020000 		.4byte	.LASF19
+ 315 0102 9A020000 		.4byte	.LASF19
  316 0106 04       		.byte	0x4
  317 0107 71       		.byte	0x71
  318 0108 CC000000 		.4byte	0xcc
@@ -597,8 +597,8 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  339 013b C1000000 		.4byte	0xc1
  340 013f 00       		.byte	0
  341 0140 04       		.uleb128 0x4
- 342 0141 5C020000 		.4byte	.LASF22
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 11
+ 342 0141 05020000 		.4byte	.LASF22
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 11
 
 
  343 0145 04       		.byte	0x4
@@ -649,16 +649,16 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  388 01a5 93       		.byte	0x93
  389 01a6 F3010000 		.4byte	0x1f3
  390 01aa 0E       		.uleb128 0xe
- 391 01ab 6A030000 		.4byte	.LASF25
+ 391 01ab 13030000 		.4byte	.LASF25
  392 01af 04       		.byte	0x4
  393 01b0 94       		.byte	0x94
  394 01b1 F3010000 		.4byte	0x1f3
  395 01b5 00       		.byte	0
  396 01b6 0E       		.uleb128 0xe
- 397 01b7 2E030000 		.4byte	.LASF26
+ 397 01b7 D7020000 		.4byte	.LASF26
  398 01bb 04       		.byte	0x4
  399 01bc 95       		.byte	0x95
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 12
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 12
 
 
  400 01bd F9010000 		.4byte	0x1f9
@@ -670,13 +670,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  406 01c9 FF010000 		.4byte	0x1ff
  407 01cd 08       		.byte	0x8
  408 01ce 0E       		.uleb128 0xe
- 409 01cf 26030000 		.4byte	.LASF28
+ 409 01cf CF020000 		.4byte	.LASF28
  410 01d3 04       		.byte	0x4
  411 01d4 97       		.byte	0x97
  412 01d5 25000000 		.4byte	0x25
  413 01d9 0C       		.byte	0xc
  414 01da 0E       		.uleb128 0xe
- 415 01db E6010000 		.4byte	.LASF29
+ 415 01db 8F010000 		.4byte	.LASF29
  416 01df 04       		.byte	0x4
  417 01e0 98       		.byte	0x98
  418 01e1 05020000 		.4byte	0x205
@@ -704,7 +704,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  440 020c 04       		.byte	0x4
  441 020d 50010000 		.4byte	0x150
  442 0211 04       		.uleb128 0x4
- 443 0212 8A020000 		.4byte	.LASF31
+ 443 0212 33020000 		.4byte	.LASF31
  444 0216 04       		.byte	0x4
  445 0217 9A       		.byte	0x9a
  446 0218 A2010000 		.4byte	0x1a2
@@ -712,13 +712,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  448 021d 04       		.byte	0x4
  449 021e 01010000 		.4byte	0x101
  450 0222 0F       		.uleb128 0xf
- 451 0223 A5030000 		.4byte	.LASF32
+ 451 0223 4E030000 		.4byte	.LASF32
  452 0227 04       		.byte	0x4
  453 0228 4301     		.2byte	0x143
  454 022a 2E020000 		.4byte	0x22e
  455 022e 10       		.uleb128 0x10
- 456 022f A5030000 		.4byte	.LASF32
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 13
+ 456 022f 4E030000 		.4byte	.LASF32
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 13
 
 
  457 0233 1C       		.byte	0x1c
@@ -726,13 +726,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  459 0235 B0       		.byte	0xb0
  460 0236 8D020000 		.4byte	0x28d
  461 023a 0E       		.uleb128 0xe
- 462 023b 56020000 		.4byte	.LASF33
+ 462 023b FF010000 		.4byte	.LASF33
  463 023f 05       		.byte	0x5
  464 0240 B4       		.byte	0xb4
  465 0241 96030000 		.4byte	0x396
  466 0245 00       		.byte	0
  467 0246 0E       		.uleb128 0xe
- 468 0247 0A020000 		.4byte	.LASF34
+ 468 0247 B3010000 		.4byte	.LASF34
  469 024b 05       		.byte	0x5
  470 024c B5       		.byte	0xb5
  471 024d 96030000 		.4byte	0x396
@@ -756,13 +756,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  489 026f 4D030000 		.4byte	0x34d
  490 0273 10       		.byte	0x10
  491 0274 0E       		.uleb128 0xe
- 492 0275 1C020000 		.4byte	.LASF37
+ 492 0275 C5010000 		.4byte	.LASF37
  493 0279 05       		.byte	0x5
  494 027a C2       		.byte	0xc2
  495 027b 56000000 		.4byte	0x56
  496 027f 14       		.byte	0x14
  497 0280 0E       		.uleb128 0xe
- 498 0281 3D020000 		.4byte	.LASF38
+ 498 0281 E6010000 		.4byte	.LASF38
  499 0285 05       		.byte	0x5
  500 0286 C3       		.byte	0xc3
  501 0287 25000000 		.4byte	0x25
@@ -778,24 +778,24 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  511 029e 34       		.byte	0x34
  512 029f 05       		.byte	0x5
  513 02a0 6A       		.byte	0x6a
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 14
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 14
 
 
  514 02a1 42030000 		.4byte	0x342
  515 02a5 0E       		.uleb128 0xe
- 516 02a6 8C030000 		.4byte	.LASF40
+ 516 02a6 35030000 		.4byte	.LASF40
  517 02aa 05       		.byte	0x5
  518 02ab 6E       		.byte	0x6e
  519 02ac 25000000 		.4byte	0x25
  520 02b0 00       		.byte	0
  521 02b1 0E       		.uleb128 0xe
- 522 02b2 E4030000 		.4byte	.LASF41
+ 522 02b2 8D030000 		.4byte	.LASF41
  523 02b6 05       		.byte	0x5
  524 02b7 72       		.byte	0x72
  525 02b8 A7030000 		.4byte	0x3a7
  526 02bc 04       		.byte	0x4
  527 02bd 0E       		.uleb128 0xe
- 528 02be 10020000 		.4byte	.LASF42
+ 528 02be B9010000 		.4byte	.LASF42
  529 02c2 05       		.byte	0x5
  530 02c3 73       		.byte	0x73
  531 02c4 C7030000 		.4byte	0x3c7
@@ -813,13 +813,13 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  543 02dc EC030000 		.4byte	0x3ec
  544 02e0 10       		.byte	0x10
  545 02e1 0E       		.uleb128 0xe
- 546 02e2 7A020000 		.4byte	.LASF45
+ 546 02e2 23020000 		.4byte	.LASF45
  547 02e6 05       		.byte	0x5
  548 02e7 76       		.byte	0x76
  549 02e8 0B040000 		.4byte	0x40b
  550 02ec 14       		.byte	0x14
  551 02ed 0E       		.uleb128 0xe
- 552 02ee 49030000 		.4byte	.LASF46
+ 552 02ee F2020000 		.4byte	.LASF46
  553 02f2 05       		.byte	0x5
  554 02f3 77       		.byte	0x77
  555 02f4 2B040000 		.4byte	0x42b
@@ -837,8 +837,8 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  567 030c 46040000 		.4byte	0x446
  568 0310 20       		.byte	0x20
  569 0311 0E       		.uleb128 0xe
- 570 0312 F1030000 		.4byte	.LASF49
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 15
+ 570 0312 9A030000 		.4byte	.LASF49
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 15
 
 
  571 0316 05       		.byte	0x5
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  625 038b 0A       		.uleb128 0xa
  626 038c 25000000 		.4byte	0x25
  627 0390 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 16
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 16
 
 
  628 0391 9C030000 		.4byte	0x39c
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  682 040c 04       		.byte	0x4
  683 040d F2030000 		.4byte	0x3f2
  684 0411 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 17
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 17
 
 
  685 0412 2B040000 		.4byte	0x42b
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  739 0490 96030000 		.4byte	0x396
  740 0494 0A       		.uleb128 0xa
  741 0495 25000000 		.4byte	0x25
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 18
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 18
 
 
  742 0499 00       		.byte	0
@@ -1041,12 +1041,12 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  759 04b9 B9       		.byte	0xb9
  760 04ba D5040000 		.4byte	0x4d5
  761 04be 13       		.uleb128 0x13
- 762 04bf D2020000 		.4byte	.LASF53
+ 762 04bf 7B020000 		.4byte	.LASF53
  763 04c3 05       		.byte	0x5
  764 04c4 BA       		.byte	0xba
  765 04c5 68000000 		.4byte	0x68
  766 04c9 13       		.uleb128 0x13
- 767 04ca DB030000 		.4byte	.LASF54
+ 767 04ca 84030000 		.4byte	.LASF54
  768 04ce 05       		.byte	0x5
  769 04cf BB       		.byte	0xbb
  770 04d0 75010000 		.4byte	0x175
@@ -1069,7 +1069,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  787 04f3 00       		.byte	0
  788 04f4 00       		.byte	0
  789 04f5 04       		.uleb128 0x4
- 790 04f6 59030000 		.4byte	.LASF56
+ 790 04f6 02030000 		.4byte	.LASF56
  791 04fa 06       		.byte	0x6
  792 04fb 3A       		.byte	0x3a
  793 04fc E0040000 		.4byte	0x4e0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  796 0505 10050000 		.4byte	0x510
  797 0509 15       		.uleb128 0x15
  798 050a 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 19
 
 
  799 050e 07       		.byte	0x7
@@ -1089,7 +1089,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  804 0513 6E       		.byte	0x6e
  805 0514 25050000 		.4byte	0x525
  806 0518 0E       		.uleb128 0xe
- 807 0519 9D020000 		.4byte	.LASF57
+ 807 0519 46020000 		.4byte	.LASF57
  808 051d 01       		.byte	0x1
  809 051e 6F       		.byte	0x6f
  810 051f 00050000 		.4byte	0x500
@@ -1111,7 +1111,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  826 0541 96030000 		.4byte	0x396
  827 0545 00000000 		.4byte	.LLST0
  828 0549 18       		.uleb128 0x18
- 829 054a BD020000 		.4byte	.LASF59
+ 829 054a 66020000 		.4byte	.LASF59
  830 054e 01       		.byte	0x1
  831 054f 86       		.byte	0x86
  832 0550 F5040000 		.4byte	0x4f5
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  853 0574 EA060000 		.4byte	0x6ea
  854 0578 83050000 		.4byte	0x583
  855 057c 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 20
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 20
 
 
  856 057d 01       		.uleb128 0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  910 05cd 4A000000 		.4byte	.LVL5
  911 05d1 01070000 		.4byte	0x701
  912 05d5 EC050000 		.4byte	0x5ec
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 21
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 21
 
 
  913 05d9 1A       		.uleb128 0x1a
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  967 0623 00       		.byte	0
  968 0624 00       		.byte	0
  969 0625 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 22
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 22
 
 
  970 0626 6A040000 		.4byte	.LASF75
@@ -1271,7 +1271,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  977 0639 9C       		.byte	0x9c
  978 063a 6F060000 		.4byte	0x66f
  979 063e 1E       		.uleb128 0x1e
- 980 063f 3D020000 		.4byte	.LASF38
+ 980 063f E6010000 		.4byte	.LASF38
  981 0643 01       		.byte	0x1
  982 0644 B6       		.byte	0xb6
  983 0645 2C000000 		.4byte	0x2c
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1024 069b 69       		.byte	0x69
  1025 069c 84060000 		.4byte	0x684
  1026 06a0 05       		.uleb128 0x5
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 23
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 23
 
 
  1027 06a1 03       		.byte	0x3
@@ -1344,18 +1344,18 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1047 06ce 9D       		.byte	0x9d
  1048 06cf 53030000 		.4byte	0x353
  1049 06d3 25       		.uleb128 0x25
- 1050 06d4 28020000 		.4byte	.LASF64
+ 1050 06d4 D1010000 		.4byte	.LASF64
  1051 06d8 06       		.byte	0x6
  1052 06d9 49       		.byte	0x49
  1053 06da DB040000 		.4byte	0x4db
  1054 06de 26       		.uleb128 0x26
- 1055 06df A4020000 		.4byte	.LASF65
- 1056 06e3 A4020000 		.4byte	.LASF65
+ 1055 06df 4D020000 		.4byte	.LASF65
+ 1056 06e3 4D020000 		.4byte	.LASF65
  1057 06e7 05       		.byte	0x5
  1058 06e8 2201     		.2byte	0x122
  1059 06ea 27       		.uleb128 0x27
- 1060 06eb C3030000 		.4byte	.LASF66
- 1061 06ef C3030000 		.4byte	.LASF66
+ 1060 06eb 6C030000 		.4byte	.LASF66
+ 1061 06ef 6C030000 		.4byte	.LASF66
  1062 06f3 06       		.byte	0x6
  1063 06f4 5C       		.byte	0x5c
  1064 06f5 26       		.uleb128 0x26
@@ -1369,16 +1369,16 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1072 070a 04       		.byte	0x4
  1073 070b 4902     		.2byte	0x249
  1074 070d 26       		.uleb128 0x26
- 1075 070e 7D030000 		.4byte	.LASF69
- 1076 0712 7D030000 		.4byte	.LASF69
+ 1075 070e 26030000 		.4byte	.LASF69
+ 1076 0712 26030000 		.4byte	.LASF69
  1077 0716 04       		.byte	0x4
  1078 0717 4C02     		.2byte	0x24c
  1079 0719 26       		.uleb128 0x26
- 1080 071a F8010000 		.4byte	.LASF70
- 1081 071e F8010000 		.4byte	.LASF70
+ 1080 071a A1010000 		.4byte	.LASF70
+ 1081 071e A1010000 		.4byte	.LASF70
  1082 0722 04       		.byte	0x4
  1083 0723 4B02     		.2byte	0x24b
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 24
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 24
 
 
  1084 0725 00       		.byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1138 0033 13       		.uleb128 0x13
  1139 0034 00       		.byte	0
  1140 0035 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 25
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 25
 
 
  1141 0036 05       		.uleb128 0x5
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1195 006c 00       		.byte	0
  1196 006d 0A       		.uleb128 0xa
  1197 006e 05       		.uleb128 0x5
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 26
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 26
 
 
  1198 006f 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1252 00a5 49       		.uleb128 0x49
  1253 00a6 13       		.uleb128 0x13
  1254 00a7 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 27
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 27
 
 
  1255 00a8 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1309 00de 01       		.uleb128 0x1
  1310 00df 13       		.uleb128 0x13
  1311 00e0 00       		.byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 28
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 28
 
 
  1312 00e1 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1366 0118 0E       		.uleb128 0xe
  1367 0119 3A       		.uleb128 0x3a
  1368 011a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 29
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 29
 
 
  1369 011b 3B       		.uleb128 0x3b
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1423 015a 0B       		.uleb128 0xb
  1424 015b 3B       		.uleb128 0x3b
  1425 015c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 30
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 30
 
 
  1426 015d 27       		.uleb128 0x27
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1480 0194 0B       		.uleb128 0xb
  1481 0195 49       		.uleb128 0x49
  1482 0196 13       		.uleb128 0x13
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 31
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 31
 
 
  1483 0197 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1537 01ce 35       		.uleb128 0x35
  1538 01cf 00       		.byte	0
  1539 01d0 49       		.uleb128 0x49
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 32
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 32
 
 
  1540 01d1 13       		.uleb128 0x13
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1594 0207 00       		.byte	0
  1595              		.section	.debug_loc,"",%progbits
  1596              	.Ldebug_loc0:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 33
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 33
 
 
  1597              	.LLST0:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1651 0010 00000000 		.4byte	.LFB134
  1652 0014 08000000 		.4byte	.LFE134
  1653 0018 00000000 		.4byte	0
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 34
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 34
 
 
  1654 001c 00000000 		.4byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1679      47657444 
  1679      6973706C 
  1679      61794275 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 35
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 35
 
 
  1679      66666572 
@@ -2093,216 +2093,216 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1698      74496E64 
  1698      65784D61 
  1698      736B00
- 1699              	.LASF73:
- 1700 018f 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Projet_"
- 1700      73657273 
- 1700      5C417269 
- 1700      616E655C 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 36
+ 1699              	.LASF29:
+ 1700 018f 7066436F 		.ascii	"pfColor2IndexBulk\000"
+ 1700      6C6F7232 
+ 1700      496E6465 
+ 1700      7842756C 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 36
 
 
- 1700      446F6375 
- 1701 01bd 6571315C 		.ascii	"eq1\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
- 1701      576F726B 
- 1701      73706163 
- 1701      6550726F 
- 1701      6A657432 
- 1702              	.LASF29:
- 1703 01e6 7066436F 		.ascii	"pfColor2IndexBulk\000"
- 1703      6C6F7232 
- 1703      496E6465 
- 1703      7842756C 
- 1703      6B00
- 1704              	.LASF70:
- 1705 01f8 4C43445F 		.ascii	"LCD_SetVRAMAddrEx\000"
- 1705      53657456 
- 1705      52414D41 
- 1705      64647245 
- 1705      7800
- 1706              	.LASF34:
- 1707 020a 70507265 		.ascii	"pPrev\000"
- 1707      7600
- 1708              	.LASF42:
- 1709 0210 70664472 		.ascii	"pfDrawHLine\000"
- 1709      6177484C 
- 1709      696E6500 
- 1710              	.LASF37:
- 1711 021c 466C6167 		.ascii	"Flags\000"
- 1711      7300
- 1712              	.LASF16:
- 1713 0222 666C6F61 		.ascii	"float\000"
- 1713      7400
- 1714              	.LASF64:
- 1715 0228 47554944 		.ascii	"GUIDRV_BitPlains_API\000"
- 1715      52565F42 
- 1715      6974506C 
- 1715      61696E73 
- 1715      5F415049 
- 1716              	.LASF38:
- 1717 023d 4C617965 		.ascii	"LayerIndex\000"
- 1717      72496E64 
- 1717      657800
- 1718              	.LASF1:
- 1719 0248 6C6F6E67 		.ascii	"long long int\000"
- 1719      206C6F6E 
- 1719      6720696E 
- 1719      7400
- 1720              	.LASF33:
- 1721 0256 704E6578 		.ascii	"pNext\000"
- 1721      7400
- 1722              	.LASF22:
- 1723 025c 744C4344 		.ascii	"tLCDDEV_GetIndexMask\000"
- 1723      4445565F 
- 1723      47657449 
- 1723      6E646578 
- 1723      4D61736B 
- 1724              	.LASF7:
- 1725 0271 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 37
+ 1700      6B00
+ 1701              	.LASF70:
+ 1702 01a1 4C43445F 		.ascii	"LCD_SetVRAMAddrEx\000"
+ 1702      53657456 
+ 1702      52414D41 
+ 1702      64647245 
+ 1702      7800
+ 1703              	.LASF34:
+ 1704 01b3 70507265 		.ascii	"pPrev\000"
+ 1704      7600
+ 1705              	.LASF42:
+ 1706 01b9 70664472 		.ascii	"pfDrawHLine\000"
+ 1706      6177484C 
+ 1706      696E6500 
+ 1707              	.LASF37:
+ 1708 01c5 466C6167 		.ascii	"Flags\000"
+ 1708      7300
+ 1709              	.LASF16:
+ 1710 01cb 666C6F61 		.ascii	"float\000"
+ 1710      7400
+ 1711              	.LASF64:
+ 1712 01d1 47554944 		.ascii	"GUIDRV_BitPlains_API\000"
+ 1712      52565F42 
+ 1712      6974506C 
+ 1712      61696E73 
+ 1712      5F415049 
+ 1713              	.LASF38:
+ 1714 01e6 4C617965 		.ascii	"LayerIndex\000"
+ 1714      72496E64 
+ 1714      657800
+ 1715              	.LASF1:
+ 1716 01f1 6C6F6E67 		.ascii	"long long int\000"
+ 1716      206C6F6E 
+ 1716      6720696E 
+ 1716      7400
+ 1717              	.LASF33:
+ 1718 01ff 704E6578 		.ascii	"pNext\000"
+ 1718      7400
+ 1719              	.LASF22:
+ 1720 0205 744C4344 		.ascii	"tLCDDEV_GetIndexMask\000"
+ 1720      4445565F 
+ 1720      47657449 
+ 1720      6E646578 
+ 1720      4D61736B 
+ 1721              	.LASF7:
+ 1722 021a 6C6F6E67 		.ascii	"long int\000"
+ 1722      20696E74 
+ 1722      00
+ 1723              	.LASF45:
+ 1724 0223 70664765 		.ascii	"pfGetPixelIndex\000"
+ 1724      74506978 
+ 1724      656C496E 
+ 1724      64657800 
+ 1725              	.LASF31:
+ 1726 0233 4C43445F 		.ascii	"LCD_API_COLOR_CONV\000"
+ 1726      4150495F 
+ 1726      434F4C4F 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 37
 
 
- 1725      20696E74 
- 1725      00
- 1726              	.LASF45:
- 1727 027a 70664765 		.ascii	"pfGetPixelIndex\000"
- 1727      74506978 
- 1727      656C496E 
- 1727      64657800 
- 1728              	.LASF31:
- 1729 028a 4C43445F 		.ascii	"LCD_API_COLOR_CONV\000"
- 1729      4150495F 
- 1729      434F4C4F 
- 1729      525F434F 
- 1729      4E5600
- 1730              	.LASF57:
- 1731 029d 61705652 		.ascii	"apVRAM\000"
- 1731      414D00
- 1732              	.LASF65:
- 1733 02a4 4755495F 		.ascii	"GUI_DEVICE_CreateAndLink\000"
- 1733      44455649 
- 1733      43455F43 
- 1733      72656174 
- 1733      65416E64 
- 1734              	.LASF59:
- 1735 02bd 436F6E66 		.ascii	"Config\000"
- 1735      696700
- 1736              	.LASF4:
- 1737 02c4 756E7369 		.ascii	"unsigned char\000"
- 1737      676E6564 
- 1737      20636861 
- 1737      7200
- 1738              	.LASF53:
- 1739 02d2 68436F6E 		.ascii	"hContext\000"
- 1739      74657874 
- 1739      00
- 1740              	.LASF2:
- 1741 02db 6C6F6E67 		.ascii	"long double\000"
- 1741      20646F75 
- 1741      626C6500 
- 1742              	.LASF72:
- 1743 02e7 4C434443 		.ascii	"LCDConf.c\000"
- 1743      6F6E662E 
- 1743      6300
- 1744              	.LASF19:
- 1745 02f1 4C43445F 		.ascii	"LCD_RECT\000"
- 1745      52454354 
- 1745      00
- 1746              	.LASF3:
- 1747 02fa 7369676E 		.ascii	"signed char\000"
- 1747      65642063 
- 1747      68617200 
- 1748              	.LASF11:
- 1749 0306 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1749      206C6F6E 
- 1749      6720756E 
- 1749      7369676E 
- 1749      65642069 
- 1750              	.LASF13:
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 38
+ 1726      525F434F 
+ 1726      4E5600
+ 1727              	.LASF57:
+ 1728 0246 61705652 		.ascii	"apVRAM\000"
+ 1728      414D00
+ 1729              	.LASF65:
+ 1730 024d 4755495F 		.ascii	"GUI_DEVICE_CreateAndLink\000"
+ 1730      44455649 
+ 1730      43455F43 
+ 1730      72656174 
+ 1730      65416E64 
+ 1731              	.LASF59:
+ 1732 0266 436F6E66 		.ascii	"Config\000"
+ 1732      696700
+ 1733              	.LASF4:
+ 1734 026d 756E7369 		.ascii	"unsigned char\000"
+ 1734      676E6564 
+ 1734      20636861 
+ 1734      7200
+ 1735              	.LASF53:
+ 1736 027b 68436F6E 		.ascii	"hContext\000"
+ 1736      74657874 
+ 1736      00
+ 1737              	.LASF2:
+ 1738 0284 6C6F6E67 		.ascii	"long double\000"
+ 1738      20646F75 
+ 1738      626C6500 
+ 1739              	.LASF72:
+ 1740 0290 4C434443 		.ascii	"LCDConf.c\000"
+ 1740      6F6E662E 
+ 1740      6300
+ 1741              	.LASF19:
+ 1742 029a 4C43445F 		.ascii	"LCD_RECT\000"
+ 1742      52454354 
+ 1742      00
+ 1743              	.LASF3:
+ 1744 02a3 7369676E 		.ascii	"signed char\000"
+ 1744      65642063 
+ 1744      68617200 
+ 1745              	.LASF11:
+ 1746 02af 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1746      206C6F6E 
+ 1746      6720756E 
+ 1746      7369676E 
+ 1746      65642069 
+ 1747              	.LASF13:
+ 1748 02c6 75696E74 		.ascii	"uint32_t\000"
+ 1748      33325F74 
+ 1748      00
+ 1749              	.LASF28:
+ 1750 02cf 4E6F416C 		.ascii	"NoAlpha\000"
+ 1750      70686100 
+ 1751              	.LASF26:
+ 1752 02d7 7066496E 		.ascii	"pfIndex2Color\000"
+ 1752      64657832 
+ 1752      436F6C6F 
+ 1752      7200
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 38
 
 
- 1751 031d 75696E74 		.ascii	"uint32_t\000"
- 1751      33325F74 
- 1751      00
- 1752              	.LASF28:
- 1753 0326 4E6F416C 		.ascii	"NoAlpha\000"
- 1753      70686100 
- 1754              	.LASF26:
- 1755 032e 7066496E 		.ascii	"pfIndex2Color\000"
- 1755      64657832 
- 1755      436F6C6F 
- 1755      7200
- 1756              	.LASF0:
- 1757 033c 756E7369 		.ascii	"unsigned int\000"
- 1757      676E6564 
- 1757      20696E74 
- 1757      00
- 1758              	.LASF46:
- 1759 0349 70665365 		.ascii	"pfSetPixelIndex\000"
- 1759      74506978 
- 1759      656C496E 
- 1759      64657800 
- 1760              	.LASF56:
- 1761 0359 434F4E46 		.ascii	"CONFIG_BITPLAINS\000"
- 1761      49475F42 
- 1761      4954504C 
- 1761      41494E53 
- 1761      00
- 1762              	.LASF25:
- 1763 036a 7066436F 		.ascii	"pfColor2Index\000"
- 1763      6C6F7232 
- 1763      496E6465 
- 1763      7800
- 1764              	.LASF15:
- 1765 0378 63686172 		.ascii	"char\000"
- 1765      00
- 1766              	.LASF69:
- 1767 037d 4C43445F 		.ascii	"LCD_SetVSizeEx\000"
- 1767      53657456 
- 1767      53697A65 
- 1767      457800
- 1768              	.LASF40:
- 1769 038c 44657669 		.ascii	"DeviceClassIndex\000"
- 1769      6365436C 
- 1769      61737349 
- 1769      6E646578 
- 1769      00
- 1770              	.LASF12:
- 1771 039d 696E7433 		.ascii	"int32_t\000"
- 1771      325F7400 
- 1772              	.LASF32:
- 1773 03a5 4755495F 		.ascii	"GUI_DEVICE\000"
- 1773      44455649 
- 1773      434500
- 1774              	.LASF6:
- 1775 03b0 73686F72 		.ascii	"short unsigned int\000"
- 1775      7420756E 
- 1775      7369676E 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 39
+ 1753              	.LASF0:
+ 1754 02e5 756E7369 		.ascii	"unsigned int\000"
+ 1754      676E6564 
+ 1754      20696E74 
+ 1754      00
+ 1755              	.LASF46:
+ 1756 02f2 70665365 		.ascii	"pfSetPixelIndex\000"
+ 1756      74506978 
+ 1756      656C496E 
+ 1756      64657800 
+ 1757              	.LASF56:
+ 1758 0302 434F4E46 		.ascii	"CONFIG_BITPLAINS\000"
+ 1758      49475F42 
+ 1758      4954504C 
+ 1758      41494E53 
+ 1758      00
+ 1759              	.LASF25:
+ 1760 0313 7066436F 		.ascii	"pfColor2Index\000"
+ 1760      6C6F7232 
+ 1760      496E6465 
+ 1760      7800
+ 1761              	.LASF15:
+ 1762 0321 63686172 		.ascii	"char\000"
+ 1762      00
+ 1763              	.LASF69:
+ 1764 0326 4C43445F 		.ascii	"LCD_SetVSizeEx\000"
+ 1764      53657456 
+ 1764      53697A65 
+ 1764      457800
+ 1765              	.LASF40:
+ 1766 0335 44657669 		.ascii	"DeviceClassIndex\000"
+ 1766      6365436C 
+ 1766      61737349 
+ 1766      6E646578 
+ 1766      00
+ 1767              	.LASF12:
+ 1768 0346 696E7433 		.ascii	"int32_t\000"
+ 1768      325F7400 
+ 1769              	.LASF32:
+ 1770 034e 4755495F 		.ascii	"GUI_DEVICE\000"
+ 1770      44455649 
+ 1770      434500
+ 1771              	.LASF6:
+ 1772 0359 73686F72 		.ascii	"short unsigned int\000"
+ 1772      7420756E 
+ 1772      7369676E 
+ 1772      65642069 
+ 1772      6E7400
+ 1773              	.LASF66:
+ 1774 036c 47554944 		.ascii	"GUIDRV_BitPlains_Config\000"
+ 1774      52565F42 
+ 1774      6974506C 
+ 1774      61696E73 
+ 1774      5F436F6E 
+ 1775              	.LASF54:
+ 1776 0384 70436F6E 		.ascii	"pContext\000"
+ 1776      74657874 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 39
 
 
- 1775      65642069 
- 1775      6E7400
- 1776              	.LASF66:
- 1777 03c3 47554944 		.ascii	"GUIDRV_BitPlains_Config\000"
- 1777      52565F42 
- 1777      6974506C 
- 1777      61696E73 
- 1777      5F436F6E 
- 1778              	.LASF54:
- 1779 03db 70436F6E 		.ascii	"pContext\000"
- 1779      74657874 
- 1779      00
- 1780              	.LASF41:
- 1781 03e4 70664472 		.ascii	"pfDrawBitmap\000"
- 1781      61774269 
- 1781      746D6170 
- 1781      00
- 1782              	.LASF49:
- 1783 03f1 70664765 		.ascii	"pfGetDevFunc\000"
- 1783      74446576 
- 1783      46756E63 
- 1783      00
+ 1776      00
+ 1777              	.LASF41:
+ 1778 038d 70664472 		.ascii	"pfDrawBitmap\000"
+ 1778      61774269 
+ 1778      746D6170 
+ 1778      00
+ 1779              	.LASF49:
+ 1780 039a 70664765 		.ascii	"pfGetDevFunc\000"
+ 1780      74446576 
+ 1780      46756E63 
+ 1780      00
+ 1781              	.LASF73:
+ 1782 03a7 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Documents\\Repos_Proj"
+ 1782      73657273 
+ 1782      5C4D6174 
+ 1782      68696575 
+ 1782      5C4F6E65 
+ 1783 03d5 6574325C 		.ascii	"et2\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
+ 1783      576F726B 
+ 1783      73706163 
+ 1783      6550726F 
+ 1783      6A657432 
  1784              	.LASF61:
  1785 03fe 5F565241 		.ascii	"_VRAM_Desc\000"
  1785      4D5F4465 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 1
  1799 0452 744C4344 		.ascii	"tLCDDEV_Color2IndexBulk\000"
  1799      4445565F 
  1799      436F6C6F 
-ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccA1Fw3j.s 			page 40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccJxCWwa.s 			page 40
 
 
  1799      7232496E 
