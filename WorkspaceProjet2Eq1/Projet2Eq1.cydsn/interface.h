@@ -1,20 +1,24 @@
 /* ========================================
- * Interface.h
- * ========================================
-*/
+ * interface.h
+ * 
+ * Auteur : Andréa
+ * ========================================*/
 
 #include "project.h"
 #include "GUI.h"
 #include "pervasive_eink_hardware_driver.h"
 #include "cy_eink_library.h"
 #include "LCDConf.h"
-#include <stdlib.h>
-#include <math.h>
 #include "FreeRTOS.h"
 #include "task.h"
+
+#include "communication.h"
+
 #include <stdio.h>
 #include <math.h>
-#include "project.h"
+#include <stdlib.h>
+#include <math.h>
+
 
 extern volatile int FLAG_RED; //On affiche la courbe rouge (1 ou 0)
 extern volatile int FLAG_option; //1;On est à l'option 1 dans le menu principal (de base) Valeur possible : 1 à 6 (options dans le menu).

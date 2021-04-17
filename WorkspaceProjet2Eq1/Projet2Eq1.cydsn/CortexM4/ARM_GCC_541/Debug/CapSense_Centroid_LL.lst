@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
   27:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
   28:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   29:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * Cypress reserves the right to make changes without further notice to the
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 2
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 2
 
 
   30:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * materials described herein. Cypress does not assume any liability arising out
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
   84:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static uint8 localMax[CapSense_NUM_CENTROIDS];
   85:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static CapSense_THRESHOLD_TYPE localDiffArray[CapSense_NUM_CENTROIDS][3u];
   86:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static uint8 localMaxIndex;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 3
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 3
 
 
   87:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  141:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   localDiffArray[][3u], localMaxIndex.
  142:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
  143:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * \details
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 4
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 4
 
 
  144:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   The localMax[] is used to store the index of the maximum/maxima.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  198:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         else
  199:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
  200:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             slope0 = (int32)localPtrSns[i + 1u].diff - (int32)localPtrSns[i].diff;
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 5
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 5
 
 
  201:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  255:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   position calculations.
  256:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
  257:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * \param *ptrSns
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 6
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 6
 
 
  258:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   A pointer to sensor RAM structure of a found local maximum.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  312:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   This API is used in conjunction with CapSense_DpCalcLinearCentroid or
  313:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   CapSense__DpCalcRadialCentroid, because they use shared static data: localMax[],
  314:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   localDiffArray[][3u], localMaxIndex.
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 7
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 7
 
 
  315:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
   53              	.LVL3:
   54              	.L4:
  343:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 8
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 8
 
 
  344:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if ((localPtrSns->diff > fingerThreshold) && (localPtrSns->diff > temp))
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  366:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         #if (CapSense_NUM_CENTROIDS == 0x02u)
  367:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if (localMaxIndex < CapSense_NUM_CENTROIDS)
  368:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 9
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 9
 
 
  369:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         #endif /* (CapSense_NUM_CENTROIDS == 0x02u) */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  400:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                 localDiffArray[i][CapSense_CENTROID_POS_PREV] = ptrSns[snsCount - 1u].diff;
  107              		.loc 1 400 0
  108 0054 01EB8105 		add	r5, r1, r1, lsl #2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 10
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 10
 
 
  109 0058 6C00     		lsls	r4, r5, #1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  153 00a6 1544     		add	r5, r5, r2
  154 00a8 6C00     		lsls	r4, r5, #1
  155 00aa 0A4D     		ldr	r5, .L13
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 11
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 11
 
 
  156 00ac 2C44     		add	r4, r4, r5
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  201              	.LFB133:
  418:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* (CapSense_ENABLE == CapSense_4PTS_LOCAL_MAX_EN) */
  419:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* ((CapSense_ENABLE == CapSense_CENTROID_3X3_CSD_EN) || \
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 12
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 12
 
 
  420:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****           (CapSense_ENABLE  == CapSense_SLIDER_WIDGET_EN)) */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  474:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
  475:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if (curSize > biggestSize)
  476:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             {
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 13
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 13
 
 
  477:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                 biggestSize = curSize;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  531:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     return (uint32)(localMaxIndex);
  532:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** }
  533:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* #if CapSense_TOTAL_DIPLEXED_SLIDERS */
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 14
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 14
 
 
  534:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  216              		.loc 1 573 0
  217 0004 0025     		movs	r5, #0
  218 0006 33E0     		b	.L16
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 15
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 15
 
 
  219              	.LVL18:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  253 003e B6F80C80 		ldrh	r8, [r6, #12]
  594:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                     (int32) localDiffArray[i][CapSense_CENTROID_POS_PREV];
  254              		.loc 1 594 0 discriminator 2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 16
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 16
 
 
  255 0042 B6F808E0 		ldrh	lr, [r6, #8]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  290 0078 2046     		mov	r0, r4
  291              	.LVL26:
  292 007a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 17
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 17
 
 
  293              	.LVL27:
@@ -1005,7 +1005,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  333 000c 64020000 		.4byte	.LASF50
  334 0010 0C       		.byte	0xc
  335 0011 07020000 		.4byte	.LASF51
- 336 0015 4F010000 		.4byte	.LASF52
+ 336 0015 D3000000 		.4byte	.LASF52
  337 0019 00000000 		.4byte	.Ldebug_ranges0+0
  338 001d 00000000 		.4byte	0
  339 0021 00000000 		.4byte	.Ldebug_line0
@@ -1016,9 +1016,9 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  344 002c 03       		.uleb128 0x3
  345 002d 04       		.byte	0x4
  346 002e 07       		.byte	0x7
- 347 002f 08010000 		.4byte	.LASF0
+ 347 002f 5F010000 		.4byte	.LASF0
  348 0033 03       		.uleb128 0x3
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 18
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 18
 
 
  349 0034 08       		.byte	0x8
@@ -1075,10 +1075,10 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  400 0097 03       		.uleb128 0x3
  401 0098 08       		.byte	0x8
  402 0099 07       		.byte	0x7
- 403 009a 21010000 		.4byte	.LASF13
+ 403 009a 78010000 		.4byte	.LASF13
  404 009e 03       		.uleb128 0x3
  405 009f 04       		.byte	0x4
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 19
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 19
 
 
  406 00a0 07       		.byte	0x7
@@ -1088,7 +1088,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  410 00a7 08       		.byte	0x8
  411 00a8 33030000 		.4byte	.LASF15
  412 00ac 04       		.uleb128 0x4
- 413 00ad 38010000 		.4byte	.LASF16
+ 413 00ad 8F010000 		.4byte	.LASF16
  414 00b1 03       		.byte	0x3
  415 00b2 18       		.byte	0x18
  416 00b3 48000000 		.4byte	0x48
@@ -1121,12 +1121,12 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  443 00ec EA03     		.2byte	0x3ea
  444 00ee AC000000 		.4byte	0xac
  445 00f2 05       		.uleb128 0x5
- 446 00f3 D3000000 		.4byte	.LASF23
+ 446 00f3 2A010000 		.4byte	.LASF23
  447 00f7 04       		.byte	0x4
  448 00f8 EB03     		.2byte	0x3eb
  449 00fa B7000000 		.4byte	0xb7
  450 00fe 05       		.uleb128 0x5
- 451 00ff 01010000 		.4byte	.LASF24
+ 451 00ff 58010000 		.4byte	.LASF24
  452 0103 04       		.byte	0x4
  453 0104 EC03     		.2byte	0x3ec
  454 0106 CD000000 		.4byte	0xcd
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  460 0116 04       		.uleb128 0x4
  461 0117 00000000 		.4byte	.LASF26
  462 011b 05       		.byte	0x5
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 20
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 20
 
 
  463 011c F2       		.byte	0xf2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  517 0190 AF010000 		.4byte	.LASF31
  518 0194 06       		.byte	0x6
  519 0195 AC01     		.2byte	0x1ac
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 21
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 21
 
 
  520 0197 AA010000 		.4byte	0x1aa
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  574 0215 6900     		.ascii	"i\000"
  575 0217 01       		.byte	0x1
  576 0218 4B01     		.2byte	0x14b
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 22
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 22
 
 
  577 021a FE000000 		.4byte	0xfe
@@ -1270,7 +1270,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  583 022a FE000000 		.4byte	0xfe
  584 022e 79000000 		.4byte	.LLST3
  585 0232 10       		.uleb128 0x10
- 586 0233 15010000 		.4byte	.LASF38
+ 586 0233 6C010000 		.4byte	.LASF38
  587 0237 01       		.byte	0x1
  588 0238 4F01     		.2byte	0x14f
  589 023a C6010000 		.4byte	0x1c6
@@ -1283,7 +1283,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  596 024e C1000000 		.4byte	.LLST5
  597 0252 00       		.byte	0
  598 0253 0C       		.uleb128 0xc
- 599 0254 E3000000 		.4byte	.LASF41
+ 599 0254 3A010000 		.4byte	.LASF41
  600 0258 01       		.byte	0x1
  601 0259 3702     		.2byte	0x237
  602 025b FE000000 		.4byte	0xfe
@@ -1293,7 +1293,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  606 0268 9C       		.byte	0x9c
  607 0269 D6020000 		.4byte	0x2d6
  608 026d 0D       		.uleb128 0xd
- 609 026e DA000000 		.4byte	.LASF42
+ 609 026e 31010000 		.4byte	.LASF42
  610 0272 01       		.byte	0x1
  611 0273 3702     		.2byte	0x237
  612 0275 2C010000 		.4byte	0x12c
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  631 029f 3702     		.2byte	0x237
  632 02a1 FE000000 		.4byte	0xfe
  633 02a5 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 23
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 23
 
 
  634 02a6 53       		.byte	0x53
@@ -1360,7 +1360,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  670 02fb 02       		.byte	0x2
  671 02fc 00       		.byte	0
  672 02fd 11       		.uleb128 0x11
- 673 02fe 40010000 		.4byte	.LASF48
+ 673 02fe 97010000 		.4byte	.LASF48
  674 0302 01       		.byte	0x1
  675 0303 55       		.byte	0x55
  676 0304 E7020000 		.4byte	0x2e7
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  688 031f 12       		.uleb128 0x12
  689 0320 96000000 		.4byte	.LASF53
  690 0324 07       		.byte	0x7
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 24
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 24
 
 
  691 0325 F907     		.2byte	0x7f9
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  745 002f 0B       		.uleb128 0xb
  746 0030 3B       		.uleb128 0x3b
  747 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 25
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 25
 
 
  748 0032 49       		.uleb128 0x49
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  802 0068 13       		.uleb128 0x13
  803 0069 00       		.byte	0
  804 006a 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 26
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 26
 
 
  805 006b 0A       		.uleb128 0xa
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  859 00a2 13       		.uleb128 0x13
  860 00a3 00       		.byte	0
  861 00a4 00       		.byte	0
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 27
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 27
 
 
  862 00a5 0D       		.uleb128 0xd
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  916 00db 49       		.uleb128 0x49
  917 00dc 13       		.uleb128 0x13
  918 00dd 02       		.uleb128 0x2
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 28
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 28
 
 
  919 00de 17       		.uleb128 0x17
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  973 0016 01       		.uleb128 0x1
  974 0017 50       		.byte	0x50
  975 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 29
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 29
 
 
  976 0019 00000000 		.4byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1030 00a2 50       		.byte	0x50
  1031 00a3 0E000000 		.4byte	.LVL3
  1032 00a7 34000000 		.4byte	.LVL10
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 30
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 30
 
 
  1033 00ab 0100     		.2byte	0x1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1087 0135 56000000 		.4byte	.LVL20
  1088 0139 64000000 		.4byte	.LVL21
  1089 013d 0100     		.2byte	0x1
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 31
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 31
 
 
  1090 013f 5E       		.byte	0x5e
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1144 000c 0000     		.2byte	0
  1145 000e 0000     		.2byte	0
  1146 0010 00000000 		.4byte	.LFB132
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 32
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 32
 
 
  1147 0014 D8000000 		.4byte	.LFE132-.LFB132
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1179              	.LASF3:
  1180 005f 7369676E 		.ascii	"signed char\000"
  1180      65642063 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 33
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 33
 
 
  1180      68617200 
@@ -1962,59 +1962,59 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1200 00c8 5F5F7569 		.ascii	"__uint32_t\000"
  1200      6E743332 
  1200      5F7400
- 1201              	.LASF23:
- 1202 00d3 75696E74 		.ascii	"uint16\000"
- 1202      313600
- 1203              	.LASF42:
- 1204 00da 706F7369 		.ascii	"position\000"
- 1204      74696F6E 
- 1204      00
- 1205              	.LASF41:
- 1206 00e3 43617053 		.ascii	"CapSense_DpCalcLinearCentroid\000"
- 1206      656E7365 
- 1206      5F447043 
- 1206      616C634C 
- 1206      696E6561 
- 1207              	.LASF24:
- 1208 0101 75696E74 		.ascii	"uint32\000"
- 1208      333200
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 34
+ 1201              	.LASF52:
+ 1202 00d3 433A5C55 		.ascii	"C:\\Users\\Ariane\\Documents\\PSoC Creator\\Projet_"
+ 1202      73657273 
+ 1202      5C417269 
+ 1202      616E655C 
+ 1202      446F6375 
+ 1203 0101 6571315C 		.ascii	"eq1\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
+ 1203      576F726B 
+ 1203      73706163 
+ 1203      6550726F 
+ 1203      6A657432 
+ 1204              	.LASF23:
+ 1205 012a 75696E74 		.ascii	"uint16\000"
+ 1205      313600
+ 1206              	.LASF42:
+ 1207 0131 706F7369 		.ascii	"position\000"
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 34
 
 
- 1209              	.LASF0:
- 1210 0108 756E7369 		.ascii	"unsigned int\000"
- 1210      676E6564 
- 1210      20696E74 
- 1210      00
- 1211              	.LASF38:
- 1212 0115 6C6F6361 		.ascii	"localPtrSns\000"
- 1212      6C507472 
- 1212      536E7300 
- 1213              	.LASF13:
- 1214 0121 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1214      206C6F6E 
- 1214      6720756E 
- 1214      7369676E 
- 1214      65642069 
- 1215              	.LASF16:
- 1216 0138 75696E74 		.ascii	"uint8_t\000"
- 1216      385F7400 
- 1217              	.LASF48:
- 1218 0140 6C6F6361 		.ascii	"localDiffArray\000"
- 1218      6C446966 
- 1218      66417272 
- 1218      617900
- 1219              	.LASF52:
- 1220 014f 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Documents\\Repos_Proj"
- 1220      73657273 
- 1220      5C4D6174 
- 1220      68696575 
- 1220      5C4F6E65 
- 1221 017d 6574325C 		.ascii	"et2\\WorkspaceProjet2Eq1\\Projet2Eq1.cydsn\000"
- 1221      576F726B 
- 1221      73706163 
- 1221      6550726F 
- 1221      6A657432 
+ 1207      74696F6E 
+ 1207      00
+ 1208              	.LASF41:
+ 1209 013a 43617053 		.ascii	"CapSense_DpCalcLinearCentroid\000"
+ 1209      656E7365 
+ 1209      5F447043 
+ 1209      616C634C 
+ 1209      696E6561 
+ 1210              	.LASF24:
+ 1211 0158 75696E74 		.ascii	"uint32\000"
+ 1211      333200
+ 1212              	.LASF0:
+ 1213 015f 756E7369 		.ascii	"unsigned int\000"
+ 1213      676E6564 
+ 1213      20696E74 
+ 1213      00
+ 1214              	.LASF38:
+ 1215 016c 6C6F6361 		.ascii	"localPtrSns\000"
+ 1215      6C507472 
+ 1215      536E7300 
+ 1216              	.LASF13:
+ 1217 0178 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1217      206C6F6E 
+ 1217      6720756E 
+ 1217      7369676E 
+ 1217      65642069 
+ 1218              	.LASF16:
+ 1219 018f 75696E74 		.ascii	"uint8_t\000"
+ 1219      385F7400 
+ 1220              	.LASF48:
+ 1221 0197 6C6F6361 		.ascii	"localDiffArray\000"
+ 1221      6C446966 
+ 1221      66417272 
+ 1221      617900
  1222              	.LASF47:
  1223 01a6 6C6F6361 		.ascii	"localMax\000"
  1223      6C4D6178 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1233 01d1 6C6F6E67 		.ascii	"long long int\000"
  1233      206C6F6E 
  1233      6720696E 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 35
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 35
 
 
  1233      7400
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 1
  1254      6F6E7320 
  1254      2D666661 
  1254      742D6C74 
-ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\ccY3mLMt.s 			page 36
+ARM GAS  C:\Users\Ariane\AppData\Local\Temp\ccXVyFIA.s 			page 36
 
 
  1254      6F2D6F62 

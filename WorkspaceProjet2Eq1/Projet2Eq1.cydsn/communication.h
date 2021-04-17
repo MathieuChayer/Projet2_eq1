@@ -1,6 +1,5 @@
 /* ========================================
- *
- * Communication.h
+ * communication.h
  * 
  * Auteur : Mathieu
  * ========================================*/
@@ -9,12 +8,15 @@
 #include "project.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include <stdio.h>
 #include "semphr.h"
 #include "max30102.h"
 #include "bmi160.h"
 #include "bmi160_defs.h"
 #include "string.h"
+
+#include "interface.h"
+
+#include <stdio.h>
 
 #define I2C_BUFFER_SIZE (10u)
 SemaphoreHandle_t xSemaphoreI2C_MAX; 

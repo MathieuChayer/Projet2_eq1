@@ -1,17 +1,11 @@
 /* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * interface.c
+ * 
+ * Auteur : Andréa
  * ========================================
 */
 #include "interface.h"
-#include "project.h"
-#include "communication.h"
+
 
 volatile int SPO2 = 0;
 volatile int HR = 0;
@@ -93,7 +87,7 @@ void DrawSignal(uint32_t *signal)
     uint32_t max = 0;
     uint32_t min = 300000;
 
-    for(int i = 0; i<2000;i++)
+    for(int i = 0; i < 2000; i++)
     {
       if(max< signal[i])
       {
@@ -107,10 +101,10 @@ void DrawSignal(uint32_t *signal)
     
     //On affiche un échantillon sur 8 
     int k = 8;
-    for (int j =0;j<249;j++)
+    for (int j = 0; j < 249; j++)
     {
        GUI_DrawLine(j+7,124 - (124-32)*(signal[k-8]-min)/(max-min),j+8,124 - (124-32)*(signal[k]-min)/(max-min));
-       k+=8;
+       k += 8;
     }   
 }
 
@@ -179,31 +173,31 @@ void drawAffichageCourbe(void)
     GUI_DispStringAt("R", 140, 8);
     GUI_DispStringAt("IR", 200, 8);
    
-    //Sélecteur de courbe
+    // Sélecteur de courbe
     if(FLAG_RED ==1)
     {
         GUI_FillRect(127,10,135,18);
         GUI_DrawRect(187,10,195,18);
         
-        DrawSignal(&RED_data);//Affichage du signal non-filtré R
+        DrawSignal(&RED_data);// Affichage du signal non-filtré R
         
     }
     else
     {
         GUI_DrawRect(127,10,135,18);
         GUI_FillRect(187,10,195,18);
-        DrawSignal(&IR_data); //Affichage du signal non-filtré IR
+        DrawSignal(&IR_data); // Affichage du signal non-filtré IR
     }
     
-    GUI_DrawRect(7,28,257,128); //graphique
+    GUI_DrawRect(7,28,257,128); // graphique
     
-    GUI_DrawRect(7,132,132,172); //HR
+    GUI_DrawRect(7,132,132,172); // HR
     GUI_DispStringAt("HR (BPM) : ", 36, 138);
     
-    GUI_DrawRect(137,132,257,172); //SPO2
+    GUI_DrawRect(137,132,257,172); // SPO2
     GUI_DispStringAt("SpO2 (%) : ", 167, 138);
         
-    //Valeur des paramètres
+    // Valeur des paramètres
     GUI_SetFont(GUI_FONT_13_1);
     char str_param[40];
     sprintf(str_param,"%d",HR);
@@ -658,11 +652,11 @@ void draw_SousMenu(void)
             {
                 Current_LED2 = slider_pos*0xFF/100;
             }
-            if (Current_LED2 > 0xFF) //Empêche le courant d'être plus grand que 0xFF
+            if (Current_LED2 > 0xFF) // Empêche le courant d'être plus grand que 0xFF
             {
                 Current_LED2 = 0xFF;
             }
-            if (Current_LED2 < 0x00) //Empêche le courant d'être négatif
+            if (Current_LED2 < 0x00) // Empêche le courant d'être négatif
             {
                 Current_LED2 = 0x00;
             }
@@ -694,11 +688,11 @@ void isr_SW2(void)
     Cy_GPIO_ClearInterrupt(SW2_0_PORT,SW2_0_NUM);
     NVIC_ClearPendingIRQ(SW2_isr_cfg.intrSrc);
     
-    Cy_SysLib_Delay(100); //Délai pour debouncing
+    Cy_SysLib_Delay(100); // Délai pour debouncing
     
     FLAG_modif = FLAG_menu; // On garde en mémoire le FLAG_menu
     
-    FLAG_menu = !FLAG_menu; //On inverse le FLAG menu
+    FLAG_menu = !FLAG_menu; // On inverse le FLAG menu
     
     Cy_GPIO_ClearInterrupt(SW2_0_PORT,SW2_0_NUM);
     NVIC_ClearPendingIRQ(SW2_isr_cfg.intrSrc);
