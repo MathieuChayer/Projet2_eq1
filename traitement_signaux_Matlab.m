@@ -9,6 +9,7 @@ clc       ;
 signal_normal   = loadSignal('SpO2_signal_normal_BPM');
 signal_high     = loadSignal('SpO2_signal_high_BPM');
 signal_noisy    = loadSignal('SpO2_signal_noisy');
+signal_capteur  = 
 
 Fs = 250 ;         % frequence d'echantillonage du signal
 
