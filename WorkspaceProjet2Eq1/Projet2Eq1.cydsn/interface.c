@@ -1,12 +1,7 @@
 /* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * interface.c
+ * 
+ * Auteur : Andréa
  * ========================================
 */
 #include "interface.h"
@@ -24,18 +19,13 @@ volatile int SPO2_min_alarm = 90;
 uint8 imageBufferCache[CY_EINK_FRAME_SIZE] = {0};
 
 /*******************************************************************************
-* Function Name: void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
+* Nom: UpdateDisplay()
 ********************************************************************************
+* Résumé: This function updates the eink display with the buffer
 *
-* Summary: This function updates the eink display with the buffer
-*
-* Parameters:
+* Paramètres:
 *  cy_eink_update_t updateMethod
 *  bool powerCycle
-*
-* Return:
-*  None
-*
 *******************************************************************************/
 void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
 {
@@ -52,17 +42,12 @@ void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
 }
 
 /*******************************************************************************
-* Function Name: void ClearScreen(void)
+* Nom: ClearScreen()
 ********************************************************************************
+* Résumé: This function clears the screen
 *
-* Summary: This function clears the screen
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void ClearScreen(void)
 {
@@ -73,29 +58,24 @@ void ClearScreen(void)
 }
 
 /*******************************************************************************
-* Function Name: void DrawSignal(uint32_t *signal)
+* Nom: DrawSignal()
 ********************************************************************************
+* Résumé: Fonction de dessin du signal
 *
-* Summary: Fonction de dessin du signal
-*
-* Parameters:
-*  uint32_t *signal
-*
-* Return:
-*  None
-*
+* Paramètre:
+*  uint32_t *signal     - Pointeur vers la variable contenant le signal
 *******************************************************************************/
 void DrawSignal(uint32_t *signal)
 {
-    //Espace du graphique : GUI_DrawRect(7,28,257,128) --> 250x100
+    // Espace du graphique : GUI_DrawRect(7,28,257,128) --> 250x100
     
-    //Max et min du signal
+    // Max et min du signal
     uint32_t max = 0;
     uint32_t min = 300000;
 
-    for(int i = 0; i<2000;i++)
+    for(int i = 0; i < 2000; i++)
     {
-      if(max< signal[i])
+      if(max < signal[i])
       {
          max = signal[i];
       }
@@ -105,31 +85,25 @@ void DrawSignal(uint32_t *signal)
       }
     }
     
-    //On affiche un échantillon sur 8 
+    // On affiche un échantillon sur 8 
     int k = 8;
-    for (int j =0;j<249;j++)
+    for (int j = 0; j < 249; j++)
     {
        GUI_DrawLine(j+7,124 - (124-32)*(signal[k-8]-min)/(max-min),j+8,124 - (124-32)*(signal[k]-min)/(max-min));
-       k+=8;
+       k += 8;
     }   
 }
 
 /*******************************************************************************
-* Function Name: void drawWaiting(void)
+* Nom: drawWaiting()
 ********************************************************************************
+* Résumé: Affichage d'un écran d'attente
 *
-* Summary: Affichage d'un écran d'attente
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void drawWaiting(void)
 {
-  
     GUI_Clear();
     GUI_SetFont(GUI_FONT_13B_1);
     GUI_SetPenSize(2);
@@ -139,37 +113,29 @@ void drawWaiting(void)
     GUI_DispStringAt("R", 140, 8);
     GUI_DispStringAt("IR", 200, 8);
     
-    GUI_DrawRect(7,28,257,128); //graphique
+    GUI_DrawRect(7,28,257,128); // Graphique
     GUI_DispStringAt("Mettez votre doigt sur le capteur ", 20,50);
     GUI_DispStringAt("Veuillez patienter....", 20, 90);
     
-    GUI_DrawRect(7,132,132,172); //HR
+    GUI_DrawRect(7,132,132,172); // HR
     GUI_DispStringAt("HR (BPM) : ", 36, 138);
     
-    GUI_DrawRect(137,132,257,172); //SPO2
+    GUI_DrawRect(137,132,257,172); // SPO2
     GUI_DispStringAt("SpO2 (%) : ", 167, 138);
        
-    
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
-
 }
 
 /*******************************************************************************
-* Function Name: void drawAffichageCourbe(void)
+* Nom: drawAffichageCourbe()
 ********************************************************************************
+* Résumé: Affichage de la courbe choisie et des paramètres vitaux 
 *
-* Summary: Affichage de la courbe choisie et des paramètres vitaux 
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void drawAffichageCourbe(void)
 {
-    
     GUI_Clear();
     GUI_SetFont(GUI_FONT_13B_1);
     GUI_SetPenSize(2);
@@ -179,31 +145,31 @@ void drawAffichageCourbe(void)
     GUI_DispStringAt("R", 140, 8);
     GUI_DispStringAt("IR", 200, 8);
    
-    //Sélecteur de courbe
+    // Sélecteur de courbe
     if(FLAG_RED ==1)
     {
         GUI_FillRect(127,10,135,18);
         GUI_DrawRect(187,10,195,18);
         
-        DrawSignal(&RED_data);//Affichage du signal non-filtré R
+        DrawSignal(&RED_data); // Affichage du signal non-filtré R
         
     }
     else
     {
         GUI_DrawRect(127,10,135,18);
         GUI_FillRect(187,10,195,18);
-        DrawSignal(&IR_data); //Affichage du signal non-filtré IR
+        DrawSignal(&IR_data); // Affichage du signal non-filtré IR
     }
     
-    GUI_DrawRect(7,28,257,128); //graphique
+    GUI_DrawRect(7,28,257,128); // Graphique
     
-    GUI_DrawRect(7,132,132,172); //HR
+    GUI_DrawRect(7,132,132,172); // HR
     GUI_DispStringAt("HR (BPM) : ", 36, 138);
     
-    GUI_DrawRect(137,132,257,172); //SPO2
+    GUI_DrawRect(137,132,257,172); // SPO2
     GUI_DispStringAt("SpO2 (%) : ", 167, 138);
         
-    //Valeur des paramètres
+    // Valeur des paramètres
     GUI_SetFont(GUI_FONT_13_1);
     char str_param[40];
     sprintf(str_param,"%d",HR);
@@ -215,17 +181,12 @@ void drawAffichageCourbe(void)
 }
 
 /*******************************************************************************
-* Function Name:void draw_MenuPrincipal(void)
+* Nom: draw_MenuPrincipal()
 ********************************************************************************
+* Résumé: Affichage du menu principal
 *
-* Summary: Affichage du menu principal
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void draw_MenuPrincipal(void)
 {
@@ -261,7 +222,7 @@ void draw_MenuPrincipal(void)
     GUI_DrawRect(10,152,30,164);
     GUI_DispStringAt("Courant de la DEL 2 (infrarouge)", 60, 152);
     
-    //Choix de l'option 
+    // Choix de l'option 
        
     switch (FLAG_option)
     {
@@ -288,25 +249,18 @@ void draw_MenuPrincipal(void)
         case 6:
         GUI_FillRect(10,152,30,164);
         break;
-
     }
 
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
-
 }
 
 /*******************************************************************************
-* Function Name:void draw_SousMenu(void)
+* Nom: draw_SousMenu()
 ********************************************************************************
+* Résumé: Affichage des sous-menus
 *
-* Summary: Affichage des sous-menus
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void draw_SousMenu(void)
 {
@@ -486,7 +440,7 @@ void draw_SousMenu(void)
         break;
                 
         case 5:
-            
+
             GUI_DrawRect(22,4,242,30);
             GUI_SetFont(GUI_FONT_16B_1);
             GUI_DispStringAt("Borne inferieure SPO2", 55, 8);
@@ -571,7 +525,6 @@ void draw_SousMenu(void)
    
             UpdateDisplay(CY_EINK_FULL_4STAGE, true);
             
-      
             while(slider_pos >=0xFFFF && button0_pressed == 0 && button1_pressed == 0 && FLAG_menu > 0){
                     
                 CapSense_ScanAllWidgets();
@@ -658,51 +611,40 @@ void draw_SousMenu(void)
             {
                 Current_LED2 = slider_pos*0xFF/100;
             }
-            if (Current_LED2 > 0xFF) //Empêche le courant d'être plus grand que 0xFF
+            if (Current_LED2 > 0xFF) // Empêche le courant d'être plus grand que 0xFF
             {
                 Current_LED2 = 0xFF;
             }
-            if (Current_LED2 < 0x00) //Empêche le courant d'être négatif
+            if (Current_LED2 < 0x00) // Empêche le courant d'être négatif
             {
                 Current_LED2 = 0x00;
             }
-              
         break;
-
     }
     UpdateDisplay(CY_EINK_FULL_4STAGE, true);
-
-
 }
 
 /*******************************************************************************
-* Function Name:void isr_SW2(void)
+* Nom: isr_SW2()
 ********************************************************************************
+* Résumé: Routine d'interruption du bouton SW2
 *
-* Summary: Routine d'interruption du bouton SW2
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
+* Paramètres:
+*  Aucun
 *******************************************************************************/
 void isr_SW2(void)
 {    
-  
     Cy_GPIO_ClearInterrupt(SW2_0_PORT,SW2_0_NUM);
     NVIC_ClearPendingIRQ(SW2_isr_cfg.intrSrc);
     
-    Cy_SysLib_Delay(100); //Délai pour debouncing
+    Cy_SysLib_Delay(100);   // Délai pour debouncing
     
     FLAG_modif = FLAG_menu; // On garde en mémoire le FLAG_menu
     
-    FLAG_menu = !FLAG_menu; //On inverse le FLAG menu
+    FLAG_menu = !FLAG_menu; // On inverse le FLAG menu
     
     Cy_GPIO_ClearInterrupt(SW2_0_PORT,SW2_0_NUM);
     NVIC_ClearPendingIRQ(SW2_isr_cfg.intrSrc);
-
 }
 
 /* [] END OF FILE */

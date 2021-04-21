@@ -1,5 +1,5 @@
 /* ========================================
- * Communication.c
+ * communication.c
  * 
  * Auteur : Mathieu
  * ========================================
@@ -10,7 +10,7 @@
 extern SemaphoreHandle_t xSemaphoreI2C_MAX; 
 extern SemaphoreHandle_t xSemaphoreI2C_BMI;
 
-struct bmi160_dev sensor; //structure de configuration du BMI160
+struct bmi160_dev sensor; // structure de configuration du BMI160
 
 /*******************************************************************************
 * Nom: AnyMotion_Interrupt()
@@ -23,12 +23,11 @@ struct bmi160_dev sensor; //structure de configuration du BMI160
 *******************************************************************************/
 void AnyMotion_Interrupt(void)
 {
-    Cy_SysLib_Delay(200);//Debounce
+    Cy_SysLib_Delay(200);// Debounce
     
-    //Désactiver l'interruption quand le capteur n'est pas en contexte de lecture!
+    // Désactiver l'interruption quand le capteur n'est pas en contexte de lecture!
     
-    
-    //Routine 
+    // Routine 
     printf("Mouvement detected! \r\n");
     Cy_GPIO_Write(BlueLED_0_PORT,BlueLED_0_NUM,0);
     
@@ -50,7 +49,6 @@ void MotionSensor_ConfigAnyMotionIntr(void)
 {
     /* Structure for storing interrupt configuration */
     struct bmi160_int_settg int_config;
-
     
     /* Map the step interrupt to INT1 pin */
     int_config.int_channel = BMI160_INT_CHANNEL_2;
@@ -91,7 +89,6 @@ void MotionSensor_ConfigAnyMotionIntr(void)
    // na - An interrupt will be generated if the absolute value of two consecutive accelation signal exceeds the threshold value -> see datasheet pg32 section 2.6.1 <int_anym_th> and pg78 INT_MOTION[1] 
    int_config.int_type_cfg.acc_any_motion_int.anymotion_thr = 8;          
    // na - (2-g range) -> (anymotion_thr) * 3.91 mg, (4-g range) -> (anymotion_thr) * 7.81 mg, (8-g range) ->(anymotion_thr) * 15.63 mg, (16-g range) -> (anymotion_thr) * 31.25 mg
-
     
     /* Set the Step Detector interrupt */
     bmi160_set_int_config(&int_config, &sensor);
@@ -99,7 +96,6 @@ void MotionSensor_ConfigAnyMotionIntr(void)
     /* Initialize and enable Orientation Interrupt*/
     Cy_SysInt_Init(&SysInt_AnyMotionINT_cfg, AnyMotion_Interrupt);
     NVIC_EnableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
-
 }
 
 /*******************************************************************************
@@ -141,7 +137,6 @@ void MotionSensor_Init(void)
 
     /* Set the sensor configuration */
     bmi160_set_sens_conf(&sensor);
-    
 }
 
 /*******************************************************************************
@@ -403,12 +398,12 @@ void MAX_reset(void)
 void MAX_init(void)
 {
     
-    uint8_t value = 0; //Variable temporaire de passage
+    uint8_t value = 0; // Variable temporaire de passage
        
-    MAX_reset(); //Remise à 0 du capteur
-    Cy_SysLib_Delay(1000);  //Délais 
+    MAX_reset(); // Remise à 0 du capteur
+    Cy_SysLib_Delay(1000);  // Délais 
     
-    MAX_ReadBytes(REG_INTR_STATUS_1,&value,1); //Clear interrupts
+    MAX_ReadBytes(REG_INTR_STATUS_1,&value,1); // Clear interrupts
     MAX_ReadBytes(REG_INTR_STATUS_2,&value,1);
     
     
@@ -419,28 +414,28 @@ void MAX_init(void)
     MAX_WriteBytes(REG_INTR_ENABLE_2,&value); // INTR setting
     
     value = 0x00;
-    MAX_WriteBytes(REG_FIFO_WR_PTR,&value); //FIFO_WR_PTR[4:0]
+    MAX_WriteBytes(REG_FIFO_WR_PTR,&value); // FIFO_WR_PTR[4:0]
     
     value = 0x00;
-    MAX_WriteBytes(REG_OVF_COUNTER,&value); //OVF_COUNTER[4:0]
+    MAX_WriteBytes(REG_OVF_COUNTER,&value); // OVF_COUNTER[4:0]
     
     value = 0x00;
-    MAX_WriteBytes(REG_FIFO_RD_PTR,&value); //FIFO_RD_PTR[4:0]
+    MAX_WriteBytes(REG_FIFO_RD_PTR,&value); // FIFO_RD_PTR[4:0]
     
-    //value = 0x00;
-    //MAX_WriteBytes(REG_FIFO_CONFIG,&value); //sample avg = 1, fifo rollover=false, fifo almost full = 17
+    // value = 0x00;
+    // MAX_WriteBytes(REG_FIFO_CONFIG,&value); // sample avg = 1, fifo rollover=false, fifo almost full = 17
     
     value = 0x03;
-    MAX_WriteBytes(REG_MODE_CONFIG,&value); //0x02 for Red only, 0x03 for SpO2 mode 0x07 multimode LED
+    MAX_WriteBytes(REG_MODE_CONFIG,&value); // 0x02 for Red only, 0x03 for SpO2 mode 0x07 multimode LED
     
     value = 0x2B; // 0x27 -->100HZ // 0x2B --> 200Hz
     MAX_WriteBytes(REG_SPO2_CONFIG,&value); // SPO2_ADC range = 4096nA, SPO2 sample rate (200 Hz), 18 bit resolution
     
     value = 0x20;
-    MAX_WriteBytes(REG_LED1_PA,&value); //Current LED1 (rouge)
+    MAX_WriteBytes(REG_LED1_PA,&value); // Current LED1 (rouge)
     
     value = 0x20;
-    MAX_WriteBytes(REG_LED2_PA,&value); //Current LED2 (IR)
+    MAX_WriteBytes(REG_LED2_PA,&value); // Current LED2 (IR)
 
 }
 
@@ -460,9 +455,9 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
     Cy_GPIO_ClearInterrupt(Pin_AnyMotion_INT_PORT, Pin_AnyMotion_INT_NUM);
     NVIC_EnableIRQ(SysInt_AnyMotionINT_cfg.intrSrc);
     
-    uint8_t temp_data_buffer[6]; //Stockage temporaire des bytes du FIFO
+    uint8_t temp_data_buffer[6]; // Stockage temporaire des bytes du FIFO
  
-    uint32_t temp; //Stockage temporaire d'un échantillon (3 bytes) du FIFO
+    uint32_t temp; // Stockage temporaire d'un échantillon (3 bytes) du FIFO
     
     
     
@@ -483,7 +478,7 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
         
         MAX_ReadBytes(REG_FIFO_DATA,&temp_data_buffer,6);
         
-        //RED SIGNAL
+        // RED SIGNAL
         temp = temp_data_buffer[0];
         temp <<= 16;
         RED_data[i] += temp;
@@ -494,7 +489,7 @@ void MAX_ReadFIFO(uint32_t *IR_data, uint32_t *RED_data)
         RED_data[i] += temp;
         RED_data[i] &= 0x03FFFF;
         
-        //IR SIGNAL
+        // IR SIGNAL
         temp = temp_data_buffer[3];
         temp <<= 16;
         IR_data[i] += temp;
@@ -537,25 +532,24 @@ void set_LED_current(uint8 current_LED1,uint8 current_LED2)
 
 void Start_Oxymeter(void)
 {
-    //Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
+    // Cy_GPIO_Write(GreenLED_0_PORT,GreenLED_0_NUM,0);
     
-    //Initialisation I2C MAX30102
+    // Initialisation I2C MAX30102
     MAX_I2C_Start();  
     MAX_I2C_RegisterEventCallback(MAX_I2C_Callback); 
 	xSemaphoreI2C_MAX = xSemaphoreCreateBinary();
   
-    //Initialisation I2C BMI160
+    // Initialisation I2C BMI160
     BMI_I2C_Start();
     BMI_I2C_RegisterEventCallback(BMI_I2C_Callback);
     xSemaphoreI2C_BMI = xSemaphoreCreateBinary();
     
-    //Initialisation du BMI160
+    // Initialisation du BMI160
     MotionSensor_Init();
     MotionSensor_ConfigAnyMotionIntr();
     
-    //Initialisation du MAX30102
+    // Initialisation du MAX30102
     MAX_init();
 }
-
 
 /* [] END OF FILE */

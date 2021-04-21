@@ -1,10 +1,9 @@
 /* ========================================
  *
- * Communication.h
+ * communication.h
  * 
  * Auteur : Mathieu
  * ========================================*/
-
 
 #include "project.h"
 #include "FreeRTOS.h"
@@ -20,8 +19,8 @@
 SemaphoreHandle_t xSemaphoreI2C_MAX; 
 SemaphoreHandle_t xSemaphoreI2C_BMI;
 
-volatile uint32_t IR_data[2000]; //Buffer de la LED IR
-volatile uint32_t RED_data[2000]; //Buffer de la LED RED
+volatile uint32_t IR_data[2000];  // Buffer de la LED IR
+volatile uint32_t RED_data[2000]; // Buffer de la LED RED
 
 unsigned int BMI_WriteBytes(uint8_t Address, uint8_t RegisterAddr, uint8_t *RegisterValue, uint8_t RegisterLen);
 unsigned int BMI_ReadBytes(uint8_t Address, uint8_t RegisterAddr, uint8_t *RegisterValue, uint8_t RegisterLen);

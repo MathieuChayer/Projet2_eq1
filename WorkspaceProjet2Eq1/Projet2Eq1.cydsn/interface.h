@@ -1,8 +1,9 @@
 /* ========================================
- * Interface.h
- * ========================================
-*/
-
+ *
+ * interface.h
+ * 
+ * Auteur : Andréa
+ * ========================================*/
 #include "project.h"
 #include "GUI.h"
 #include "pervasive_eink_hardware_driver.h"
@@ -16,14 +17,13 @@
 #include <math.h>
 #include "project.h"
 
-extern volatile int FLAG_RED; //On affiche la courbe rouge (1 ou 0)
-extern volatile int FLAG_option; //1;On est à l'option 1 dans le menu principal (de base) Valeur possible : 1 à 6 (options dans le menu).
-extern volatile int FLAG_menu; //0;On est à l'affichage de la courbe par défaut. Valeur possible : 0 à 7 (8 affichages possibles; courbe, menu principal et 6 sous-menus).
+extern volatile int FLAG_RED;       // On affiche la courbe rouge (1 ou 0)
+extern volatile int FLAG_option;    // 1; On est à l'option 1 dans le menu principal (de base) Valeur possible : 1 à 6 (options dans le menu).
+extern volatile int FLAG_menu;      // 0; On est à l'affichage de la courbe par défaut. Valeur possible : 0 à 7 (8 affichages possibles; courbe, menu principal et 6 sous-menus).
 extern volatile int FLAG_modif;
 
-extern volatile int SPO2; //paramètre à afficher; sera déclaré dans Traitement
-extern volatile int HR; //paramètre à afficher; sera déclaré dans Traitement
-
+extern volatile int SPO2;           // Paramètre à afficher; sera déclaré dans Traitement
+extern volatile int HR;             // Paramètre à afficher; sera déclaré dans Traitement
 
 extern volatile int Current_LED1;
 extern volatile int Current_LED2;
@@ -41,6 +41,5 @@ void isr_SW2(void);
 void draw_SousMenu(void);
 void draw_MenuPrincipal(void);
 void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle);
-
 
 /* [] END OF FILE */
